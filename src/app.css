@@ -1,0 +1,236 @@
+/*
+  Global site styles.
+  These styles are shared across all SvelteKit pages and components.
+  Colours and fonts follow the palette and typography requested for the toolbox.
+*/
+:root {
+  --green-primary: #09bb88;
+  --green-secondary: #41a552;
+  --yellow: #ffcc00;
+  --blue: #1d3d8f;
+  --dark: #0A2E36;
+
+  --white: #ffffff;
+  --light-bg: #f7f7f2;
+  --surface: #ffffff;
+  --soft-border: #d8ddd8;
+  --muted: #637173;
+  --text: #1f2a2e;
+  --shadow: 0 16px 32px rgba(10, 46, 54, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  color: var(--text);
+  background-color: var(--light-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/*
+  Shared layout container.
+  Used by pages and components to keep content aligned.
+*/
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/*
+  Title typography.
+  Bahnschrift is a practical web-safe fallback for the requested title direction.
+*/
+h1,
+h2,
+h3,
+.site-logo {
+  font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+}
+
+/*
+  Subtitle/accent typography.
+  Bree Serif can be added later if a licensed web font is available.
+*/
+.eyebrow,
+.hero-text,
+.section-intro p,
+.subpage-intro {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.eyebrow {
+  color: var(--green-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.primary-button,
+.secondary-button,
+.download-button,
+.reset-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 2px solid var(--dark);
+  cursor: pointer;
+}
+
+.primary-button,
+.download-button.primary {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.secondary-button,
+.download-button.secondary,
+.reset-button {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+.primary-button:hover,
+.download-button.primary:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+}
+
+.secondary-button:hover,
+.download-button.secondary:hover,
+.reset-button:hover {
+  background-color: var(--yellow);
+}
+
+.section-intro {
+  max-width: 760px;
+  margin-bottom: 44px;
+}
+
+.section-intro h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/*
+  Page hero styling used on the front page and subpages.
+*/
+.hero,
+.subpage-hero {
+  background:
+    linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
+    var(--light-bg);
+}
+
+.hero {
+  padding: 50px 0 50px;
+}
+
+.hero-content,
+.subpage-content {
+  max-width: 820px;
+}
+
+.hero h1,
+.subpage-content h1 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  line-height: 0.95;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+
+.hero-text,
+.subpage-intro {
+  font-size: 1.25rem;
+  max-width: 720px;
+  margin-bottom: 36px;
+}
+
+.modules-section,
+.library-section,
+.sectors-section {
+  padding: 50px 0;
+  background-color: var(--white);
+}
+
+.about-section {
+  padding: 72px 0;
+  background-color: var(--light-bg);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-content h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  text-transform: uppercase;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 32px;
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid currentColor;
+}
+
+.back-link:hover {
+  color: var(--green-primary);
+}
+
+.download-buttons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero,
+  .subpage-hero {
+    padding: 72px 0;
+  }
+}

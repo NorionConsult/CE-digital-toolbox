@@ -1,0 +1,110 @@
+<script>
+  /*
+    Reusable card for a journey module.
+    The component receives module data as a prop and renders a consistent card.
+  */
+  import { base } from '$app/paths';
+  import { site } from '$lib/content/site.js';
+
+  export let module;
+</script>
+
+<article class="module-card {module.colourClass}">
+  <div>
+    <div class="module-number">{module.shortName}</div>
+    <h3>{module.title}</h3>
+    <p>{module.description}</p>
+  </div>
+
+  <a href="{base}/modules/{module.slug}/" class="module-link">{site.labels.viewModule}</a>
+</article>
+
+<style>
+  .module-card {
+    min-height: 320px;
+    padding: 32px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .module-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+
+  .module-number {
+    font-weight: 700;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+  }
+
+  .module-card h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .module-card p {
+    margin-bottom: 28px;
+  }
+
+  .module-link {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+    width: fit-content;
+  }
+
+  .module-link:hover {
+    opacity: 0.75;
+  }
+
+  .module-card-green {
+    background-color: var(--green-primary);
+    color: var(--dark);
+  }
+
+  .module-card-lime {
+    background-color: var(--green-secondary);
+    color: var(--white);
+  }
+
+  .module-card-yellow {
+    background-color: var(--yellow);
+    color: var(--dark);
+  }
+
+  .module-card-blue {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+
+  .module-card-dark {
+    background-color: var(--dark);
+    color: var(--white);
+  }
+
+  .module-card-outline {
+    background-color: var(--white);
+    border-color: var(--dark);
+    color: var(--dark);
+  }
+
+  .module-card-lime h3,
+  .module-card-blue h3,
+  .module-card-dark h3 {
+    color: var(--white);
+  }
+
+  @media (max-width: 640px) {
+    .module-card {
+      min-height: 260px;
+    }
+  }
+</style>
