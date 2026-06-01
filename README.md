@@ -55,13 +55,21 @@ src/lib/content/sectors.js
 static/images/
 ```
 
-Library/tool cards:
+Sector package pages:
+
+```text
+src/lib/content/sectors.js
+src/lib/content/sector-page.js
+src/routes/sectors/[slug]/
+```
+
+Catalogue/resource cards and resource subpages:
 
 ```text
 src/lib/content/resources.js
 ```
 
-Library page labels and intro text:
+Catalogue page labels and intro text:
 
 ```text
 src/lib/content/library-page.js
@@ -79,23 +87,17 @@ Colours, fonts and shared visual style:
 src/app.css
 ```
 
-## Add A New Tool Card
+## Add A New Resource Page
 
-1. Add the PDF file to:
-
-```text
-static/downloads/library/
-```
-
-2. Open:
+1. Open:
 
 ```text
 src/lib/content/resources.js
 ```
 
-3. Copy one existing resource block and change the title, description, phase, year, language, provider and file path.
+2. Copy one existing resource block and change the `id`, `cardNumber`, `slug`, title, description, taxonomy fields, page text and tool link.
 
-The library filters are created automatically from the tool cards, so new years, languages and providers appear without editing another file.
+The catalogue filters are created automatically from these resource records, so new sectors, years, languages or providers appear without editing another file.
 
 ## Add A New Module
 
@@ -128,6 +130,16 @@ Then update the matching `image` and `imageAlt` values in:
 ```text
 src/lib/content/sectors.js
 ```
+
+## Edit Sector Pages
+
+Open:
+
+```text
+src/lib/content/sectors.js
+```
+
+Each sector block controls the card, sector page hero, introduction text, checklist items and case example placeholders. The sector page automatically shows catalogue resources where the resource `sector` value matches the sector title.
 
 ## Replace Footer Logos
 

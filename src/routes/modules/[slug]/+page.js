@@ -1,5 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { modules } from '$lib/content/modules.js';
+import { resources } from '$lib/content/resources.js';
 
 /*
   Tells SvelteKit which dynamic module pages should be generated as static HTML.
@@ -18,5 +19,7 @@ export function load({ params }) {
     throw error(404, 'Module not found');
   }
 
-  return { module };
+  const relatedResources = resources.filter((resource) => resource.journeyPhase === module.title);
+
+  return { module, relatedResources };
 }

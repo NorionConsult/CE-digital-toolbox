@@ -6,8 +6,11 @@ export const modulePage = {
   backLink: 'Back to modules',
   moduleDownload: 'Download module PDF',
   catalogueDownload: 'Download tool catalogue',
-  nextEyebrow: 'Library connection',
+  relatedEyebrow: 'Tools in this module',
+  relatedTitle: 'Related catalogue tools',
+  relatedEmpty: 'No catalogue tools have been added for this module yet.',
+  nextEyebrow: 'Catalogue connection',
   nextTitle: 'Find tools for this phase',
-  nextText: 'Use the library to filter placeholder resources by journey phase, year, language and provider source. The library records can be replaced with final PDF files when they are ready.',
-  libraryButton: 'Open library'
+  nextText: 'Use the catalogue to filter resources by journey phase, year, language and provider source. Catalogue records can be replaced with final content when they are ready.',
+  libraryButton: 'Open catalogue'
 };

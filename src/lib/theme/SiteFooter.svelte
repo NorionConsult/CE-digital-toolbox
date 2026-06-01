@@ -5,16 +5,21 @@
 
 <footer id="contact" class="site-footer">
   <div class="container footer-content">
-    <p class="footer-name">{site.name}</p>
-
-    <div class="footer-logos" aria-label="Programme logos">
-      {#each site.footerLogos as logo}
+    {#each site.footerLogos as logo}
+      <div class="footer-logo-cell" style:--logo-width={logo.width}>
         <img src="{base}{logo.src}" alt={logo.alt} />
-      {/each}
-    </div>
+      </div>
+    {/each}
 
-    <p>
-      Contact:
+    <p class="footer-disclaimer">
+      This website was produced with the financial support of the European Union. Its content
+      represents the sole responsibility of the EU4Green Recovery East programme, financed by the
+      European Union. The content of the website belongs to the authors and does not necessarily
+      reflect the vision of the European Union.
+    </p>
+
+    <p class="footer-contact">
+      <strong>Contact:</strong>
       <a href="mailto:{site.contactEmail}">{site.contactEmail}</a>
     </p>
   </div>
@@ -28,43 +33,74 @@
   }
 
   .footer-content {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(170px, auto) minmax(90px, auto) minmax(420px, 1.4fr) minmax(140px, 0.4fr);
     align-items: center;
-    gap: 24px;
+    gap: 32px;
   }
 
-  .footer-name {
-    font-weight: 700;
+  .footer-disclaimer {
+    font-size: 0.78rem;
+    line-height: 1.35;
+    font-weight: 400;
+    max-width: 680px;
   }
 
-  .footer-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 35px;
-    flex: 1;
+  .footer-logo-cell {
+    display: grid;
+    place-items: start;
+    min-width: 0;
   }
 
-  .footer-logos img {
-    max-height: 52px;
-    width: auto;
+  .footer-logo-cell img {
+    width: min(var(--logo-width), 100%);
+    height: auto;
+    max-width: 100%;
     object-fit: contain;
+  }
+
+  .footer-contact {
+    justify-self: end;
+    min-width: 0;
+    max-width: 100%;
+    font-size: clamp(0.74rem, 1.25vw, 0.95rem);
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+
+  .footer-contact strong {
+    display: block;
   }
 
   .site-footer a {
     color: var(--blue);
+    white-space: nowrap;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 960px) {
     .footer-content {
-      flex-direction: column;
-      align-items: flex-start;
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 24px;
     }
 
-    .footer-logos {
-      justify-content: flex-start;
-      flex-wrap: wrap;
+    .footer-disclaimer {
+      max-width: 680px;
+    }
+
+    .footer-contact {
+      justify-self: start;
+      font-size: clamp(0.72rem, 3.4vw, 0.9rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .site-footer {
+      padding: 28px 0;
+    }
+
+    .footer-contact {
+      font-size: clamp(0.68rem, 3.2vw, 0.82rem);
     }
   }
 </style>

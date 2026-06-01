@@ -9,7 +9,7 @@ export const home = {
     title: 'Find relevant digital tools',
     text: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs. The toolbox is organised into six modules, sector packages and a catalogue. Each module contains relevant introduction and structured content that presents selected tools that provide methods, guidance, and resources for a wider audience. Get started by exploring the contents below.',
     primaryButton: 'Explore modules',
-    secondaryButton: 'Open library'
+    secondaryButton: 'Open catalogue'
   },
   modulesSection: {
     eyebrow: 'For a structured approach',

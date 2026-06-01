@@ -1,15 +1,17 @@
 <script>
   /*
-    The PDF link points to the file path in src/lib/content/resources.js.
-    Replace placeholder PDFs in static/downloads/library with final files using the same filenames.
+    The page link points to the resource slug in src/lib/content/resources.js.
   */
   import { base } from '$app/paths';
+  import { getJourneyPhaseClass } from '$lib/content/journey-phases.js';
   import { site } from '$lib/content/site.js';
 
   export let resource;
+
+  $: journeyPhaseClass = getJourneyPhaseClass(resource.journeyPhase);
 </script>
 
-<article class="resource-card">
+<article class="resource-card {journeyPhaseClass}">
   <div>
     <p class="resource-phase">{resource.journeyPhase}</p>
     <h3>{resource.title}</h3>
@@ -26,16 +28,22 @@
       <dd>{resource.language}</dd>
     </div>
     <div>
+      <dt>Sector</dt>
+      <dd>{resource.sector}</dd>
+    </div>
+    <div>
       <dt>Provider</dt>
       <dd>{resource.provider}</dd>
     </div>
   </dl>
 
-  <a href="{base}{resource.file}" class="download-link" download>{site.labels.downloadPdf}</a>
+  <a href="{base}/library/{resource.slug}/" class="resource-link">{site.labels.viewResource}</a>
 </article>
 
 <style>
   .resource-card {
+    position: relative;
+    overflow: hidden;
     background-color: var(--white);
     border: 1px solid var(--soft-border);
     border-radius: 22px;
@@ -47,8 +55,16 @@
     box-shadow: 0 8px 24px rgba(10, 46, 54, 0.06);
   }
 
+  .resource-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 22px;
+    background-color: var(--module-accent);
+  }
+
   .resource-phase {
-    color: var(--green-secondary);
+    color: var(--muted);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -91,7 +107,7 @@
     text-align: right;
   }
 
-  .download-link {
+  .resource-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -103,7 +119,7 @@
     font-weight: 700;
   }
 
-  .download-link:hover {
+  .resource-link:hover {
     background-color: var(--blue);
   }
 </style>

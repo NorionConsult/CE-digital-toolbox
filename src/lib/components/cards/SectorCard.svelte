@@ -1,7 +1,7 @@
 <script>
   /*
     Reusable card for sector packages.
-    These currently link to the library with a query placeholder, but can later link to dedicated sector pages.
+    These link to dedicated sector pages.
   */
   import { base } from '$app/paths';
   import { site } from '$lib/content/site.js';
@@ -14,7 +14,7 @@
   <p class="sector-number">{sector.number}</p>
   <h3>{sector.title}</h3>
   <p>{sector.description}</p>
-  <a href="{base}/library/" class="sector-link">{site.labels.viewTools}</a>
+  <a href="{base}/sectors/{sector.slug}/" class="sector-link">{site.labels.viewSector}</a>
 </article>
 
 <style>

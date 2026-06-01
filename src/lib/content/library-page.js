@@ -1,16 +1,17 @@
 /*
-  Edit this file for library page labels and intro text.
+  Edit this file for catalogue page labels and intro text.
   Tool cards themselves are edited in resources.js.
 */
 export const libraryPage = {
-  pageTitle: 'Library | CE Digital Toolbox',
-  eyebrow: 'Tool library',
-  title: 'Find tools and files',
-  intro: 'Browse the digital toolbox library and filter placeholder PDF records by journey phase, year, language and provider source. Replace the filler files and metadata when the final library content is available.',
+  pageTitle: 'Catalogue | CE Digital Toolbox',
+  eyebrow: 'Tool catalogue',
+  title: 'Find tools and resources',
+  intro: 'Browse the digital toolbox catalogue and filter resource pages by journey phase, sector, year, language and provider source. Replace the placeholder text and links when the final resource content is available.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by title, description or provider',
-  filtersLabel: 'Library filters',
+  filtersLabel: 'Catalogue filters',
   phaseLabel: 'Journey phase',
+  sectorLabel: 'Sector',
   yearLabel: 'Year',
   languageLabel: 'Language',
   providerLabel: 'Provider source',

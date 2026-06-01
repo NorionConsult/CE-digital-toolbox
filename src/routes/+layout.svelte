@@ -7,6 +7,7 @@
   import { site } from '$lib/content/site.js';
   import SiteHeader from '$lib/theme/SiteHeader.svelte';
   import SiteFooter from '$lib/theme/SiteFooter.svelte';
+  import StardustCursor from '$lib/components/cursor/StardustCursor.svelte';
 </script>
 
 <svelte:head>
@@ -18,3 +19,8 @@
   <slot />
 </main>
 <SiteFooter />
+<!--
+  Global cursor effect.
+  Placing it here makes it active on all pages.
+-->
+<StardustCursor />

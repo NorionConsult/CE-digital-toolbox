@@ -27,7 +27,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 2px solid transparent;
+    background-color: var(--module-bg);
+    border: 2px solid var(--module-border);
+    color: var(--module-text);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
@@ -47,6 +49,7 @@
     font-size: 2.4rem;
     text-transform: uppercase;
     margin-bottom: 16px;
+    color: inherit;
   }
 
   .module-card p {
@@ -63,43 +66,6 @@
 
   .module-link:hover {
     opacity: 0.75;
-  }
-
-  .module-card-green {
-    background-color: var(--green-primary);
-    color: var(--dark);
-  }
-
-  .module-card-lime {
-    background-color: var(--green-secondary);
-    color: var(--white);
-  }
-
-  .module-card-yellow {
-    background-color: var(--yellow);
-    color: var(--dark);
-  }
-
-  .module-card-blue {
-    background-color: var(--blue);
-    color: var(--white);
-  }
-
-  .module-card-dark {
-    background-color: var(--dark);
-    color: var(--white);
-  }
-
-  .module-card-outline {
-    background-color: var(--white);
-    border-color: var(--dark);
-    color: var(--dark);
-  }
-
-  .module-card-lime h3,
-  .module-card-blue h3,
-  .module-card-dark h3 {
-    color: var(--white);
   }
 
   @media (max-width: 640px) {
