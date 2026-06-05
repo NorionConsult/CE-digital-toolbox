@@ -89,7 +89,7 @@
       <h2>{modulePage.nextTitle}</h2>
     </div>
     <p>{modulePage.nextText}</p>
-    <a href="{base}/library/" class="secondary-button">{modulePage.libraryButton}</a>
+    <a href="{base}/catalogue/" class="secondary-button">{modulePage.libraryButton}</a>
   </div>
 </section>
 

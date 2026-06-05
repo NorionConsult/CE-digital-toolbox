@@ -30,7 +30,7 @@ export const site = {
   },
   navigation: [
     { label: 'Modules', href: '/#modules' },
-    { label: 'Catalogue', href: '/library/' },
+    { label: 'Catalogue', href: '/catalogue/' },
     { label: 'Sector packages', href: '/#sectors' },
     { label: 'About', href: '/#about' },
     { label: 'Contact', href: '/#contact' }

@@ -37,7 +37,7 @@
     </div>
   </dl>
 
-  <a href="{base}/library/{resource.slug}/" class="resource-link">{site.labels.viewResource}</a>
+  <a href="{base}/catalogue/{resource.slug}/" class="resource-link">{site.labels.viewResource}</a>
 </article>
 
 <style>
