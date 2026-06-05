@@ -6,7 +6,7 @@ import adapter from '@sveltejs/adapter-static';
   BASE_PATH controls whether the site is deployed at a repository path.
   Examples:
   - Local development: BASE_PATH is empty, so routes are served from /
-  - GitHub project page: BASE_PATH=/digital-toolbox
+  - This GitHub project page: BASE_PATH=/CE-digital-toolbox
   - Custom domain at root, for example https://tools.unido.org: BASE_PATH is empty
 */
 const base = process.env.BASE_PATH ?? '';

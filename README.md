@@ -201,4 +201,32 @@ npm run preview
 
 ## Deployment
 
-The site is configured for static hosting through SvelteKit and can be deployed to GitHub Pages or another static host. PDF files in `static/downloads/` are copied into the final build automatically.
+The site is configured for static hosting through SvelteKit and can be deployed to GitHub Pages or another static host. PDF files and images in `static/` are copied into the final build automatically.
+
+For this repository, GitHub Pages should publish from **GitHub Actions**, not from a manually committed `build/` folder. The workflow is in:
+
+```text
+.github/workflows/deploy.yml
+```
+
+Because the published address is:
+
+```text
+https://norionconsult.github.io/CE-digital-toolbox/
+```
+
+the GitHub build uses this base path:
+
+```text
+BASE_PATH=/CE-digital-toolbox
+```
+
+To publish:
+
+1. Commit the source code on `main`.
+2. Push `main` to GitHub.
+3. In GitHub, open **Settings → Pages**.
+4. Set **Build and deployment → Source** to **GitHub Actions**.
+5. Open the **Actions** tab and confirm that “Deploy to GitHub Pages” finishes successfully.
+
+Do not commit the generated `build/` folder unless the hosting setup is changed to a manual deployment. The workflow builds and uploads it automatically.
