@@ -5,8 +5,8 @@
 export const libraryPage = {
   pageTitle: 'Catalogue | CE Digital Toolbox',
   eyebrow: 'Tool catalogue',
-  title: 'Find tools and resources',
-  intro: 'Browse the digital toolbox catalogue and filter resource pages by journey phase, sector, year, language and provider source. Replace the placeholder text and links when the final resource content is available.',
+  title: 'Tools and resources',
+  intro: 'Browse the digital toolbox catalogue and filter resource pages by journey phase, sector, year, language and provider source.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by title, description or provider',
   filtersLabel: 'Catalogue filters',

@@ -194,6 +194,14 @@ h3,
   margin-bottom: 16px;
 }
 
+.subsection-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
 /*
   Page hero styling used on the front page and subpages.
 */

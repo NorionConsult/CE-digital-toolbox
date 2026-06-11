@@ -16,6 +16,77 @@ const placeholderImages = [
     caption: 'Placeholder caption text for a second supporting module image.'
   }
 ];
+const module2Bodyparagraph = [
+  'Before a business can become more circular, it needs to understand where it stands today.',
+  'This module guides SMEs through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
+  'Rather than jumping straight to solutions, this module builds the factual foundation that makes every subsequent decision more targeted and effective. The module works through three interconnected stages.'
+];
+
+const diagnoseDeepDives = [
+  {
+    id: 'maturity-assessment',
+    number: '1',
+    title: 'Maturity Assessment',
+    description: 'Quick self-diagnosis of how circular your business already is across key dimensions.',
+    keyOutputs: ['CE maturity score', 'Priority areas for focus'],
+    bodyTitle: 'Maturity Assessment',
+    bodyParagraphs: [
+      'The maturity assessment gives SMEs a structured way to understand their current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions.',
+      'The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed.'
+    ],
+    image: {
+      src: '/images/construction.jpg',
+      alt: 'Team reviewing circular economy maturity results',
+      caption: 'Placeholder image: maturity assessment results can be replaced with a final visual later.'
+    },
+    toolSlugs: ['circular-maturity-self-assessment']
+  },
+  {
+    id: 'baseline-mapping',
+    number: '2',
+    title: 'Baseline Mapping',
+    description: 'Map your resource inputs, outputs, waste streams and energy flows systematically.',
+    keyOutputs: ['Input/output inventory', 'Waste stream overview'],
+    bodyTitle: 'Baseline Mapping',
+    bodyParagraphs: [
+      'Baseline mapping documents what enters and leaves the business. This can include materials, water, energy, packaging, products, emissions and waste streams. The purpose is to create a practical picture of the current system.',
+      'A clear baseline makes later decisions more reliable. It helps reveal hidden inefficiencies, repeated losses and areas where circular strategies could reduce cost, waste or environmental impact.'
+    ],
+    image: {
+      src: '/images/food.jpg',
+      alt: 'Resource flow mapping worksheet',
+      caption: 'Placeholder image: replace with a process map, worksheet or resource flow diagram.'
+    },
+    toolSlugs: ['hotspot-mapping-worksheet']
+  },
+  {
+    id: 'hotspot-analysis',
+    number: '3',
+    title: 'Hotspot Analysis',
+    description: 'Pinpoint the most resource-intensive or wasteful activities in your operations.',
+    keyOutputs: ['Hotspot map', 'Priorities for action'],
+    bodyTitle: 'Hotspot Analysis',
+    bodyParagraphs: [
+      'Hotspot analysis uses the baseline to identify where the largest losses, costs or environmental impacts occur. It helps teams focus their effort instead of trying to solve every issue at once.',
+      'The outcome should be a ranked set of hotspots and action areas. These priorities create the bridge to Module 3, where options and circular strategies can be identified.'
+    ],
+    image: {
+      src: '/images/textiles.jpg',
+      alt: 'Hotspot analysis overview',
+      caption: 'Placeholder image: replace with a hotspot map, chart or prioritisation overview.'
+    },
+    toolSlugs: ['hotspot-mapping-worksheet', 'circular-maturity-self-assessment']
+  }
+];
+
+const diagnoseSummaryChecklist = [
+  'Completed the maturity assessment.',
+  'Mapped main material, water and energy inputs.',
+  'Mapped main outputs, emissions and waste streams.',
+  'Identified the most important resource or waste hotspots.',
+  'Selected priority areas for deeper exploration.',
+  'Prepared the findings for Module 3.'
+];
 
 /*
   Edit this file to add or update journey modules.
@@ -52,9 +123,14 @@ export const modules = [
       'This module helps users assess their starting point. It includes tools and guidance for diagnosing circular economy maturity, identifying hotspots and establishing an initial baseline.',
     icon: '/module-icons/icon-diagnose.png',
     iconAlt: 'Diagnose module icon',
-    bodyTitle: 'Module overview',
-    bodyParagraphs: placeholderParagraphs,
-    bodyImages: placeholderImages,
+    bodyTitle: 'Where are you now?',
+    bodyParagraphs: module2Bodyparagraph,
+    bodyImages: [],
+    deepDiveSections: diagnoseDeepDives,
+    summaryTitle: 'Module Summary',
+    summaryText:
+      'Use this checklist to confirm that the diagnose work has created a practical baseline before moving to the options module.',
+    summaryChecklist: diagnoseSummaryChecklist,
     modulePdf: '/downloads/modules/module-2-diagnose.pdf',
     cataloguePdf: '/downloads/tool-catalogue.pdf'
   },

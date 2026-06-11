@@ -75,7 +75,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     sector: 'Cross-sector',
     year: '2024',
-    language: 'Russian',
+    language: 'English',
     provider: 'Norion',
     ...placeholderDetails
   },

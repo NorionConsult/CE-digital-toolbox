@@ -20,6 +20,8 @@ export function load({ params }) {
   }
 
   const relatedResources = resources.filter((resource) => resource.journeyPhase === module.title);
+  const moduleIndex = modules.findIndex((item) => item.slug === module.slug);
+  const nextModule = modules[moduleIndex + 1] ?? null;
 
-  return { module, relatedResources };
+  return { module, relatedResources, nextModule };
 }
