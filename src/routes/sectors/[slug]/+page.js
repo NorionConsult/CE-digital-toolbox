@@ -13,7 +13,12 @@ export function load({ params }) {
     throw error(404, 'Sector not found');
   }
 
-  const relatedResources = resources.filter((resource) => resource.sector === sector.title);
+  const sectorSectionPrefix = `${sector.slug}:`;
+  const relatedResources = resources.filter(
+    (resource) =>
+      resource.placements.sectors.includes(sector.slug) ||
+      resource.placements.sectorSections.some((tag) => tag.startsWith(sectorSectionPrefix))
+  );
 
   return { sector, relatedResources };
 }

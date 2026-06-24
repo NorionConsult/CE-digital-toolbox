@@ -2,13 +2,12 @@
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { libraryPage } from '$lib/content/library-page.js';
-  import { resources, journeyPhases, sectors, years, languages, providers } from '$lib/content/resources.js';
+  import { resources, journeyPhases, sectors, languages, accessOptions } from '$lib/content/resources.js';
 
   let selectedPhase = '';
   let selectedSector = '';
-  let selectedYear = '';
   let selectedLanguage = '';
-  let selectedProvider = '';
+  let selectedAccess = '';
   let searchTerm = '';
 
   $: normalisedSearch = searchTerm.trim().toLowerCase();
@@ -19,23 +18,22 @@
       resource.title.toLowerCase().includes(normalisedSearch) ||
       resource.description.toLowerCase().includes(normalisedSearch) ||
       resource.sector.toLowerCase().includes(normalisedSearch) ||
-      resource.provider.toLowerCase().includes(normalisedSearch);
+      resource.provider.toLowerCase().includes(normalisedSearch) ||
+      resource.access.toLowerCase().includes(normalisedSearch);
 
-    const matchesPhase = !selectedPhase || resource.journeyPhase === selectedPhase;
+    const matchesPhase = !selectedPhase || (resource.journeyPhases ?? [resource.journeyPhase]).includes(selectedPhase);
     const matchesSector = !selectedSector || resource.sector === selectedSector;
-    const matchesYear = !selectedYear || resource.year === selectedYear;
     const matchesLanguage = !selectedLanguage || resource.language === selectedLanguage;
-    const matchesProvider = !selectedProvider || resource.provider === selectedProvider;
+    const matchesAccess = !selectedAccess || resource.access === selectedAccess;
 
-    return matchesSearch && matchesPhase && matchesSector && matchesYear && matchesLanguage && matchesProvider;
+    return matchesSearch && matchesPhase && matchesSector && matchesLanguage && matchesAccess;
   });
 
   function resetFilters() {
     selectedPhase = '';
     selectedSector = '';
-    selectedYear = '';
     selectedLanguage = '';
-    selectedProvider = '';
+    selectedAccess = '';
     searchTerm = '';
   }
 </script>
@@ -67,9 +65,8 @@
 
       <FilterSelect id="phase-filter" label={libraryPage.phaseLabel} bind:value={selectedPhase} options={journeyPhases} />
       <FilterSelect id="sector-filter" label={libraryPage.sectorLabel} bind:value={selectedSector} options={sectors} />
-      <FilterSelect id="year-filter" label={libraryPage.yearLabel} bind:value={selectedYear} options={years} />
       <FilterSelect id="language-filter" label={libraryPage.languageLabel} bind:value={selectedLanguage} options={languages} />
-      <FilterSelect id="provider-filter" label={libraryPage.providerLabel} bind:value={selectedProvider} options={providers} />
+      <FilterSelect id="access-filter" label={libraryPage.accessLabel} bind:value={selectedAccess} options={accessOptions} />
 
       <button type="button" class="reset-button" on:click={resetFilters}>{libraryPage.resetButton}</button>
     </form>
@@ -107,7 +104,7 @@
 
   .filter-panel {
     display: grid;
-    grid-template-columns: 1.5fr repeat(5, 1fr) auto;
+    grid-template-columns: 1.5fr repeat(4, 1fr) auto;
     gap: 16px;
     align-items: end;
     padding: 24px;

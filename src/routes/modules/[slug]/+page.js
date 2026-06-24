@@ -9,6 +9,13 @@ export function entries() {
   return modules.map((module) => ({ slug: module.slug }));
 }
 
+/**
+ * @param {{ journeyPhase?: string; journeyPhases?: string[] }} resource
+ */
+function getJourneyPhases(resource) {
+  return resource.journeyPhases ?? (resource.journeyPhase ? [resource.journeyPhase] : []);
+}
+
 /*
   Loads the correct module based on the URL slug.
 */
@@ -19,7 +26,15 @@ export function load({ params }) {
     throw error(404, 'Module not found');
   }
 
-  const relatedResources = resources.filter((resource) => resource.journeyPhase === module.title);
+  const moduleSubsectionTags = new Set(
+    (module.sections ?? []).map((section) => section.resourceTag).filter(Boolean)
+  );
+
+  const relatedResources = resources.filter(
+    (resource) =>
+      getJourneyPhases(resource).includes(module.title) ||
+      resource.placements.moduleSections.some((tag) => moduleSubsectionTags.has(tag))
+  );
   const moduleIndex = modules.findIndex((item) => item.slug === module.slug);
   const nextModule = modules[moduleIndex + 1] ?? null;
 

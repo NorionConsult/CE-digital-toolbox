@@ -7,22 +7,21 @@
   import { site } from '$lib/content/site.js';
 
   export let resource;
+  export let variant = 'default';
 
   $: journeyPhaseClass = getJourneyPhaseClass(resource.journeyPhase);
+  $: journeyPhaseText = (resource.journeyPhases ?? [resource.journeyPhase]).join(', ');
+  $: isCompact = variant === 'compact';
 </script>
 
-<article class="resource-card {journeyPhaseClass}">
+<article class="tool-card resource-card {journeyPhaseClass}" class:resource-card-compact={isCompact}>
   <div>
-    <p class="resource-phase">{resource.journeyPhase}</p>
+    <p class="resource-phase">{journeyPhaseText}</p>
     <h3>{resource.title}</h3>
     <p class="resource-description">{resource.description}</p>
   </div>
 
   <dl class="resource-meta" aria-label="Resource metadata">
-    <div>
-      <dt>Year</dt>
-      <dd>{resource.year}</dd>
-    </div>
     <div>
       <dt>Language</dt>
       <dd>{resource.language}</dd>
@@ -34,6 +33,10 @@
     <div>
       <dt>Provider</dt>
       <dd>{resource.provider}</dd>
+    </div>
+    <div>
+      <dt>Access</dt>
+      <dd>{resource.access}</dd>
     </div>
   </dl>
 
@@ -73,7 +76,7 @@
   }
 
   .resource-card h3 {
-    font-size: 1.65rem;
+    font-size: var(--tool-card-title-size, 1.65rem);
     line-height: 1.1;
     text-transform: uppercase;
     margin-bottom: 12px;
@@ -111,8 +114,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 18px;
-    border-radius: 999px;
+    padding: var(--action-button-padding);
+    border: 2px solid var(--dark);
+    border-radius: var(--action-button-radius);
     background-color: var(--dark);
     color: var(--white);
     text-decoration: none;
@@ -120,6 +124,32 @@
   }
 
   .resource-link:hover {
+    border-color: var(--blue);
     background-color: var(--blue);
   }
+
+  .resource-card-compact {
+    gap: var(--embedded-tool-card-gap, 16px);
+    min-height: var(--embedded-tool-card-min-height, 280px);
+    padding: var(--embedded-tool-card-padding, 20px);
+    border-radius: var(--embedded-tool-card-radius, 18px);
+  }
+
+  .resource-card-compact::before {
+    height: var(--embedded-tool-card-top-line, 18px);
+  }
+
+  .resource-card-compact .resource-phase {
+    margin-bottom: 8px;
+  }
+
+  .resource-card-compact .resource-meta {
+    gap: 8px;
+  }
+
+  .resource-card-compact .resource-meta div {
+    gap: 10px;
+    padding-top: 8px;
+  }
+
 </style>

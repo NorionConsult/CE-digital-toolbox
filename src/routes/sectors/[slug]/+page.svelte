@@ -60,7 +60,7 @@
     {#if relatedResources.length > 0}
       <div class="sector-resource-grid">
         {#each relatedResources as resource (resource.id)}
-          <ResourceCard {resource} />
+          <ResourceCard {resource} variant="compact" />
         {/each}
       </div>
     {:else}
@@ -166,8 +166,8 @@
 
   .sector-resource-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
   }
 
   .sector-empty-tools {

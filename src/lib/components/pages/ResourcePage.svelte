@@ -6,21 +6,21 @@
   export let resource;
 
   $: journeyPhaseClass = getJourneyPhaseClass(resource.journeyPhase);
+  $: journeyPhaseText = (resource.journeyPhases ?? [resource.journeyPhase]).join(', ');
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
-    ['People needed', resource.peopleNeeded],
     ['Preparation needed', resource.preparationNeeded],
     ['Output', resource.output],
-    ['Best use', resource.bestUse]
+    ['Best for', resource.bestFor]
   ];
 
   $: taxonomyRows = [
-    ['SME journey', resource.journeyPhase],
+    ['SME journey', journeyPhaseText],
     ['Sector', resource.sector],
     ['Language', resource.language],
     ['Provider', resource.provider],
-    ['Year', resource.year]
+    ['Access', resource.access]
   ];
 </script>
 
@@ -34,7 +34,7 @@
 
     <div class="resource-kicker {journeyPhaseClass}">
       <span>{resource.cardNumber}</span>
-      <span>{resource.journeyPhase}</span>
+      <span>{journeyPhaseText}</span>
     </div>
 
     <h1>{resource.title}</h1>
@@ -45,11 +45,6 @@
 <section class="resource-detail-section">
   <div class="container resource-detail-layout">
     <article class="resource-main">
-      <div class="resource-section-heading">
-        <p class="eyebrow">About the tool</p>
-        <h2>What this resource supports</h2>
-      </div>
-
       <p>{resource.about}</p>
 
       <div class="resource-detail-grid">
@@ -91,7 +86,7 @@
   }
 
   .resource-hero-content {
-    max-width: 1120px;
+    max-width: var(--site-container-max);
   }
 
   .resource-kicker {
@@ -146,7 +141,6 @@
     gap: 28px;
   }
 
-  .resource-section-heading h2,
   .resource-taxonomy h2 {
     font-size: clamp(2rem, 4vw, 3.25rem);
     text-transform: uppercase;

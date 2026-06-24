@@ -3,23 +3,43 @@
   import { modulePage } from '$lib/content/module-page.js';
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
+  import M3Questionnaire from '$lib/components/sections/M3Questionnaire.svelte';
+  import MaturityCurve from '$lib/components/sections/MaturityCurve.svelte';
 
   export let data;
   const { module, relatedResources, nextModule } = data;
 
   let checkedSummaryItems = [];
+  /** @type {{ src: string; alt: string; caption?: string } | null} */
+  let zoomedImage = null;
 
-  $: deepDiveSections = module.deepDiveSections ?? [];
+  $: moduleSections = module.sections ?? [];
   $: summaryChecklist = module.summaryChecklist ?? [];
-  $: summaryComplete = summaryChecklist.length > 0 && checkedSummaryItems.length === summaryChecklist.length;
 
   /**
-   * @param {{ toolSlugs?: string[] }} section
+   * @param {{ resourceTag?: string }} section
    */
   function getSectionResources(section) {
-    const slugs = section.toolSlugs ?? [];
+    if (!section.resourceTag) {
+      return [];
+    }
 
-    return relatedResources.filter((resource) => slugs.includes(resource.slug));
+    const resourceTag = section.resourceTag;
+
+    return relatedResources.filter((resource) =>
+      resource.placements.moduleSections.includes(resourceTag)
+    );
+  }
+
+  /**
+   * @param {{ src: string; alt: string; caption?: string }} image
+   */
+  function openZoomedImage(image) {
+    zoomedImage = image;
+  }
+
+  function closeZoomedImage() {
+    zoomedImage = null;
   }
 </script>
 
@@ -41,6 +61,16 @@
 
       <p class="subpage-intro">{module.intro}</p>
 
+      {#if moduleSections.length > 0}
+        <nav class="module-section-navigation" aria-label="{module.title} sections">
+          {#each moduleSections as section}
+            <a href="#{section.id}" class="back-link">
+              {section.navigationLabel ?? section.title}
+            </a>
+          {/each}
+        </nav>
+      {/if}
+
       <!--<div class="download-buttons">
         <a href="{base}{module.modulePdf}" class="download-button primary" download>
           {modulePage.moduleDownload}
@@ -56,8 +86,12 @@
   </div>
 </section>
 
-<section class:module-body-section={deepDiveSections.length === 0} class:module-pathway-section={deepDiveSections.length > 0}>
-  <div class="container module-body-content" class:module-body-content-wide={deepDiveSections.length > 0}>
+<section
+  class={module.colourClass}
+  class:module-body-section={moduleSections.length === 0}
+  class:module-pathway-section={moduleSections.length > 0}
+>
+  <div class="container module-body-content" class:module-body-content-wide={moduleSections.length > 0}>
     <div class="module-body-text">
       <h2>{module.bodyTitle}</h2>
 
@@ -66,9 +100,9 @@
       {/each}
     </div>
 
-    {#if deepDiveSections.length > 0}
+    {#if moduleSections.length > 0}
       <div class="module-pathway-grid">
-        {#each deepDiveSections as section}
+        {#each moduleSections as section}
           <article class="pathway-card">
             <div class="pathway-card-top">
               <span>{section.number}</span>
@@ -87,8 +121,8 @@
                 </ul>
               </div>
 
-              <a href="#{section.id}" class="pathway-link" aria-label="Open {section.title} section">
-                <span>Open section</span>
+              <a href="#{section.id}" class="pathway-link" aria-label="Start {section.title} section">
+                <span>Start</span>
               </a>
             </div>
           </article>
@@ -107,31 +141,221 @@
   </div>
 </section>
 
-{#if deepDiveSections.length > 0}
-  <section class="module-detail-intro" aria-hidden="true">
-    <div class="container">
-      <div></div>
-    </div>
-  </section>
-
-  {#each deepDiveSections as section}
+{#if moduleSections.length > 0}
+  {#each moduleSections as section, sectionIndex}
     {@const sectionResources = getSectionResources(section)}
-    <section class="module-detail-section" id={section.id}>
-      <div class="container module-detail-layout">
-        <article class="module-detail-copy">
+    {@const hasSideContent = section.image}
+    <section
+      class="module-detail-section {module.colourClass}"
+      class:module-detail-section-muted={sectionIndex % 2 === 1}
+      id={section.id}
+    >
+      <div class="container module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
+        <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
           <p class="eyebrow">Step {section.number}</p>
           <h2>{section.bodyTitle}</h2>
 
-          {#each section.bodyParagraphs as paragraph}
+          {#each section.bodyParagraphs as paragraph, paragraphIndex}
             <p>{paragraph}</p>
+
+            {#if section.inlineImage?.afterParagraph === paragraphIndex + 1}
+              <figure class="module-inline-image">
+                {#if section.inlineImage.title}
+                  <h3 class="subsection-title">{section.inlineImage.title}</h3>
+                {/if}
+
+                {#if section.inlineImage.zoomable}
+                  <button
+                    type="button"
+                    class="module-inline-image-button"
+                    aria-label="Open larger image"
+                    on:click={() => section.inlineImage && openZoomedImage(section.inlineImage)}
+                  >
+                    <img src="{base}{section.inlineImage.src}" alt={section.inlineImage.alt} />
+                  </button>
+                {:else}
+                  <img src="{base}{section.inlineImage.src}" alt={section.inlineImage.alt} />
+                {/if}
+
+                {#if section.inlineImage.caption}
+                  <figcaption>{section.inlineImage.caption}</figcaption>
+                {/if}
+              </figure>
+            {/if}
           {/each}
+
+          {#if section.m3Questionnaire}
+            <M3Questionnaire {...section.m3Questionnaire} />
+          {/if}
+
+          {#if section.factbox}
+            <aside class="hotspot-factbox">
+              <h3 class="subsection-title">{section.factbox.title}</h3>
+              <ul>
+                {#each section.factbox.items as item}
+                  <li>{item}</li>
+                {/each}
+              </ul>
+            </aside>
+          {/if}
+
+          {#if section.closingParagraphs}
+            <div class="module-detail-closing">
+              {#each section.closingParagraphs as paragraph}
+                <p>{paragraph}</p>
+              {/each}
+            </div>
+          {/if}
+
+          {#if section.m3WheelWorkshop}
+            <div class="m3-wheel-workshop-highlight">
+              <h3 class="subsection-title">{section.m3WheelWorkshop.subtitle}</h3>
+
+              <div class="m3-wheel-workshop-card-collection">
+                <div class="m3-wheel-workshop-overview-grid">
+                  <article class="m3-wheel-workshop-card m3-wheel-workshop-introduction">
+                    <div class="m3-wheel-workshop-title-row">
+                      <h3>{section.m3WheelWorkshop.title}</h3>
+                      <span
+                        class="m3-wheel-workshop-title-icon"
+                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${section.m3WheelWorkshop.icon}.svg");`}
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                    <p>{section.m3WheelWorkshop.introduction}</p>
+                    <p class="m3-wheel-workshop-outcome">
+                      <strong>Expected outcomes:</strong> {section.m3WheelWorkshop.outcome}
+                    </p>
+                  </article>
+
+                  <article class="m3-wheel-workshop-card m3-wheel-workshop-preparation">
+                    <div class="m3-wheel-workshop-card-heading">
+                      <h3>{section.m3WheelWorkshop.preparation.title}</h3>
+                      <span class="m3-wheel-workshop-time">{section.m3WheelWorkshop.preparation.time}</span>
+                    </div>
+
+                    <p>{section.m3WheelWorkshop.preparation.text}</p>
+
+                    <div class="m3-wheel-workshop-details">
+                      {#each section.m3WheelWorkshop.preparation.details as detail}
+                        <p>{detail}</p>
+                      {/each}
+                    </div>
+
+                    <div>
+                      <strong>{section.m3WheelWorkshop.preparation.listTitle}</strong>
+                      <ul>
+                        {#each section.m3WheelWorkshop.preparation.items as item}
+                          <li>{item}</li>
+                        {/each}
+                      </ul>
+                    </div>
+
+                    <p class="m3-wheel-workshop-link">
+                      <strong>Link:</strong>
+                      <a
+                        href={section.m3WheelWorkshop.preparation.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {section.m3WheelWorkshop.preparation.linkLabel}
+                      </a>
+                    </p>
+                  </article>
+                </div>
+
+                <div class="m3-wheel-workshop-step-grid">
+                  {#each section.m3WheelWorkshop.steps as step}
+                    <article class="m3-wheel-workshop-card m3-wheel-workshop-step-card">
+                      <div class="m3-wheel-workshop-card-heading">
+                        <div>
+                          <p class="m3-wheel-workshop-step-number">Step {step.number}</p>
+                          <h3>{step.title}</h3>
+                        </div>
+                        <span class="m3-wheel-workshop-time">{step.time}</span>
+                      </div>
+
+                      <p>{step.text}</p>
+                      <p><strong>Tip:</strong> {step.tip}</p>
+                    </article>
+                  {/each}
+                </div>
+              </div>
+            </div>
+          {/if}
+
         </article>
 
-        <figure class="module-detail-image">
-          <img src="{base}{section.image.src}" alt={section.image.alt} />
-          <figcaption>{section.image.caption}</figcaption>
-        </figure>
+        {#if section.image}
+          <figure class="module-detail-image">
+            {#if section.image.zoomable}
+              <button
+                type="button"
+                class="module-detail-image-button"
+                aria-label="Open larger image"
+                on:click={() => section.image && openZoomedImage(section.image)}
+              >
+                <img src="{base}{section.image.src}" alt={section.image.alt} />
+              </button>
+            {:else}
+              <img src="{base}{section.image.src}" alt={section.image.alt} />
+            {/if}
+            <figcaption>{section.image.caption}</figcaption>
+          </figure>
+        {/if}
       </div>
+
+      {#if section.businessModelCards}
+        <div class="container business-models-content">
+          {#if section.businessModelsTitle}
+            <h3 class="subsection-title business-models-title">{section.businessModelsTitle}</h3>
+          {/if}
+
+          {#if section.businessModelsIntro}
+            <p class="business-models-intro">{section.businessModelsIntro}</p>
+          {/if}
+
+          <div class="business-model-card-grid">
+            {#each section.businessModelCards as card}
+              <article class="business-model-card">
+                <div class="business-model-card-heading">
+                  <span
+                    class="business-model-card-icon"
+                    style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                    aria-hidden="true"
+                  ></span>
+                  <h3>{card.title}</h3>
+                </div>
+
+                <p>{card.text}</p>
+                <p class="business-model-example"><strong>Example:</strong> {card.example}</p>
+              </article>
+            {/each}
+          </div>
+        </div>
+      {/if}
+
+      {#if section.baselineCards}
+        <div class="container baseline-card-grid">
+          {#each section.baselineCards as card}
+            <div class="baseline-card">
+              <span
+                class="baseline-card-icon"
+                style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                aria-hidden="true"
+              ></span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </div>
+          {/each}
+        </div>
+      {/if}
+
+      {#if module.slug === 'diagnose' && section.id === 'maturity-assessment'}
+        <div class="container">
+          <MaturityCurve />
+        </div>
+      {/if}
 
       <div class="container module-detail-tools">
         <div class="section-intro">
@@ -141,7 +365,7 @@
         {#if sectionResources.length > 0}
           <div class="module-resource-grid">
             {#each sectionResources as resource (resource.id)}
-              <ResourceCard {resource} />
+              <ResourceCard {resource} variant="compact" />
             {/each}
           </div>
         {:else}
@@ -151,12 +375,29 @@
     </section>
   {/each}
 
-  <section class="module-summary-section">
+  <section class="module-summary-section {module.colourClass}">
     <div class="container module-summary-content">
       <div class="module-summary-copy">
         <p class="eyebrow">{module.shortName}</p>
         <h2>{module.summaryTitle}</h2>
-        <p>{module.summaryText}</p>
+
+        <div class="module-summary-text">
+          {#each module.summaryParagraphs ?? [module.summaryText] as paragraph}
+            {#if paragraph}
+              <p>{paragraph}</p>
+            {/if}
+          {/each}
+        </div>
+
+        {#if nextModule}
+          <a
+            href="{base}/modules/{nextModule.slug}/"
+            class="back-link summary-copy-next-link"
+            aria-label="Go to {nextModule.shortName}: {nextModule.title}"
+          >
+            Next module
+          </a>
+        {/if}
       </div>
 
       <div class="module-summary-checklist" aria-label={module.summaryTitle}>
@@ -174,11 +415,6 @@
           {/each}
         </div>
 
-        {#if summaryComplete && nextModule}
-          <a href="{base}/modules/{nextModule.slug}/" class="module-next-button summary-next-link">
-            Continue to {nextModule.shortName}: {nextModule.title}
-          </a>
-        {/if}
       </div>
     </div>
   </section>
@@ -192,7 +428,7 @@
       {#if relatedResources.length > 0}
         <div class="module-resource-grid">
           {#each relatedResources as resource (resource.id)}
-            <ResourceCard {resource} />
+            <ResourceCard {resource} variant="compact" />
           {/each}
         </div>
       {:else}
@@ -202,19 +438,18 @@
   </section>
 {/if}
 
-<section class="module-complete-section">
-  <div class="container">
-    <div class="module-complete-banner">
-      <p>Well done with finishing this module!</p>
-
-      {#if nextModule}
-        <a href="{base}/modules/{nextModule.slug}/" class="module-next-button">
-          Continue to {nextModule.shortName}: {nextModule.title}
-        </a>
+{#if zoomedImage}
+  <div class="image-zoom-modal" role="dialog" aria-modal="true" aria-label="Larger module image" tabindex="-1">
+    <button type="button" class="image-zoom-backdrop" aria-label="Close image" on:click={closeZoomedImage}></button>
+    <div class="image-zoom-content">
+      <button type="button" class="image-zoom-close" aria-label="Close image" on:click={closeZoomedImage}>x</button>
+      <img src="{base}{zoomedImage.src}" alt={zoomedImage.alt} />
+      {#if zoomedImage.caption}
+        <p>{zoomedImage.caption}</p>
       {/if}
     </div>
   </div>
-</section>
+{/if}
 
 <style>
   .subpage-hero {
@@ -222,7 +457,7 @@
   }
 
   .module-hero-content {
-    max-width: 1120px;
+    max-width: var(--site-container-max);
     display: grid;
     grid-template-columns: 200px minmax(0, 820px);
     gap: 56px;
@@ -231,6 +466,17 @@
   .module-hero-content .back-link {
     grid-column: 1 / -1;
     width: fit-content;
+    margin-bottom: 0;
+  }
+
+  .module-section-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px 28px;
+  }
+
+  .module-section-navigation .back-link {
     margin-bottom: 0;
   }
 
@@ -324,13 +570,12 @@
 
   .module-pathway-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 28px;
     margin-top: 40px;
   }
 
   .pathway-card {
-    min-height: 520px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--soft-border);
@@ -343,21 +588,24 @@
   .pathway-card-top {
     display: grid;
     grid-template-columns: auto 1fr;
-    align-items: center;
+    align-items: start;
     gap: 20px;
     padding: 24px 28px;
-    background-color: var(--module-bg);
-    color: var(--module-text);
+    background-color: transparent;
+    color: var(--dark);
   }
 
   .pathway-card-top span {
-    font-size: 2.2rem;
+    color: var(--module-accent);
+    font-size: clamp(1.45rem, 2vw, 2rem);
     font-weight: 700;
+    line-height: 1.1;
   }
 
   .pathway-card-top h3 {
     color: inherit;
     font-size: clamp(1.45rem, 2vw, 2rem);
+    line-height: 1.1;
     text-transform: uppercase;
   }
 
@@ -365,7 +613,7 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 24px;
+    gap: 16px;
     padding: 34px 28px 28px;
   }
 
@@ -375,11 +623,11 @@
   }
 
   .pathway-outputs {
-    margin-top: auto;
+    margin-top: 0;
   }
 
   .pathway-outputs h4 {
-    color: var(--green-secondary);
+    color: var(--module-accent);
     font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -393,32 +641,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     width: fit-content;
-    min-width: 140px;
-    min-height: 58px;
-    padding: 14px 18px;
-    border-radius: 16px;
+    padding: var(--action-button-padding);
+    border: 2px solid var(--dark);
+    border-radius: var(--action-button-radius);
     background-color: var(--dark);
     color: var(--white);
     font-weight: 700;
     text-decoration: none;
+    margin-top: auto;
   }
 
   .pathway-link:hover {
+    border-color: var(--blue);
     background-color: var(--blue);
-  }
-
-  .module-detail-intro {
-    padding: 0;
-    background:
-      linear-gradient(to bottom, var(--light-bg) 0 50%, var(--white) 50% 100%);
-  }
-
-  .module-detail-intro div div {
-    height: 22px;
-    border-radius: 999px;
-    background-color: var(--green-secondary);
   }
 
   .module-detail-section {
@@ -427,7 +663,11 @@
     scroll-margin-top: 110px;
   }
 
-  .module-detail-section:nth-of-type(even) {
+  .module-detail-section .eyebrow {
+    color: var(--module-accent);
+  }
+
+  .module-detail-section-muted {
     background-color: var(--light-bg);
   }
 
@@ -438,12 +678,268 @@
     align-items: start;
   }
 
+  .module-detail-layout-wide {
+    grid-template-columns: minmax(0, 980px);
+  }
+
   .module-detail-copy {
     max-width: 760px;
   }
 
+  .module-detail-copy-wide {
+    max-width: 980px;
+  }
+
   .module-detail-copy p + p {
     margin-top: 18px;
+  }
+
+  .module-inline-image {
+    display: grid;
+    gap: 18px;
+    width: 100%;
+    margin: 32px 0;
+  }
+
+  .module-inline-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .module-inline-image-button {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--white);
+    cursor: zoom-in;
+  }
+
+  .module-inline-image-button img {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+  }
+
+  .module-inline-image-button:hover img,
+  .module-inline-image-button:focus-visible img {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(10, 46, 54, 0.16);
+  }
+
+  .module-inline-image figcaption {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .business-models-content {
+    display: grid;
+    gap: 18px;
+    margin-top: 36px;
+  }
+
+  .business-models-title {
+    width: min(100%, 980px);
+  }
+
+  .business-models-intro {
+    width: min(100%, 980px);
+    color: var(--text);
+  }
+
+  .business-model-card-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .business-model-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+    padding: 24px;
+    border: 2px solid var(--yellow);
+    border-radius: 15px;
+    background-color: var(--white);
+    box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
+  }
+
+  .business-model-card-heading {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 12px;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 4px solid var(--yellow);
+  }
+
+  .business-model-card-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--yellow);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .business-model-card h3 {
+    color: var(--dark);
+    font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .business-model-card p {
+    color: var(--text);
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .business-model-example {
+    margin-top: auto;
+    color: var(--muted) !important;
+    font-style: italic;
+  }
+
+  .m3-wheel-workshop-highlight {
+    display: grid;
+    gap: 22px;
+    width: min(var(--site-container-max), 92vw);
+    margin-top: 42px;
+  }
+
+  .m3-wheel-workshop-card-collection {
+    display: grid;
+    gap: 22px;
+    padding: 22px;
+    border: 2px solid var(--yellow);
+    border-radius: 15px;
+    background-color: var(--yellow);
+  }
+
+  .m3-wheel-workshop-overview-grid,
+  .m3-wheel-workshop-step-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .m3-wheel-workshop-card {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
+    padding: 24px;
+    border: 2px solid var(--yellow);
+    border-radius: 15px;
+    background-color: var(--white);
+    box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
+  }
+
+  .m3-wheel-workshop-card p,
+  .m3-wheel-workshop-card p + p {
+    margin-top: 0;
+    color: var(--text);
+    line-height: 1.45;
+  }
+
+  .m3-wheel-workshop-title-row,
+  .m3-wheel-workshop-card-heading {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    border-bottom: 4px solid var(--yellow);
+  }
+
+  .m3-wheel-workshop-title-row h3,
+  .m3-wheel-workshop-card-heading h3,
+  .m3-wheel-workshop-step-number {
+    color: var(--dark);
+    line-height: 1.08;
+    text-transform: uppercase;
+  }
+
+  .m3-wheel-workshop-title-row h3 {
+    max-width: 520px;
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+  }
+
+  .m3-wheel-workshop-title-icon {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    background-color: var(--dark);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .m3-wheel-workshop-card-heading h3 {
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+  }
+
+  .m3-wheel-workshop-step-number {
+    margin-bottom: 6px;
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    font-weight: 700;
+  }
+
+  .m3-wheel-workshop-step-card .m3-wheel-workshop-card-heading h3 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  .m3-wheel-workshop-outcome {
+    margin-top: auto !important;
+    padding-top: 18px;
+    border-top: 1px solid rgba(10, 46, 54, 0.18);
+  }
+
+  .m3-wheel-workshop-time {
+    flex: 0 0 auto;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: var(--dark);
+    color: var(--yellow);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .m3-wheel-workshop-details {
+    display: grid;
+    gap: 2px;
+  }
+
+  .m3-wheel-workshop-card ul {
+    margin-top: 6px;
+    padding-left: 22px;
+  }
+
+  .m3-wheel-workshop-card li + li {
+    margin-top: 5px;
+  }
+
+  .m3-wheel-workshop-link {
+    margin-top: auto !important;
+  }
+
+  .m3-wheel-workshop-link a {
+    color: var(--dark);
+    font-weight: 700;
+    text-underline-offset: 3px;
+  }
+
+  .m3-wheel-workshop-link a:hover {
+    color: var(--module-accent);
   }
 
   .module-detail-image {
@@ -458,6 +954,30 @@
     border-radius: 20px;
   }
 
+  .module-detail-image-button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 20px;
+    background: transparent;
+    cursor: zoom-in;
+  }
+
+  .module-detail-image-button img {
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    background-color: var(--white);
+    transition: box-shadow 0.18s ease, transform 0.18s ease;
+  }
+
+  .module-detail-image-button:hover img,
+  .module-detail-image-button:focus-visible img {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(10, 46, 54, 0.16);
+  }
+
   .module-detail-image figcaption {
     color: var(--muted);
     font-size: 0.95rem;
@@ -467,10 +987,149 @@
     margin-top: 46px;
   }
 
+  .hotspot-factbox {
+    display: grid;
+    gap: 22px;
+    margin-top: 32px;
+    padding: 28px 32px;
+    border: 2px solid var(--green-secondary);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--muted);
+    box-shadow: 0 16px 32px rgba(10, 46, 54, 0.12);
+  }
+
+  .hotspot-factbox h3 {
+    color: var(--green-secondary);
+  }
+
+  .hotspot-factbox ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 34px;
+    padding-left: 22px;
+  }
+
+  .hotspot-factbox li {
+    padding-left: 8px;
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .hotspot-factbox li::marker {
+    color: var(--blue);
+    font-size: 0.8em;
+  }
+
+  .baseline-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+  }
+
+  .baseline-card {
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+    min-height: 250px;
+    padding: 28px 24px;
+    border: 2px solid var(--green-secondary);
+    border-radius: 8px;
+    background-color: transparent;
+    box-shadow: 0 12px 22px rgba(10, 46, 54, 0.08);
+    text-align: center;
+  }
+
+  .baseline-card-icon {
+    width: 68px;
+    height: 68px;
+    background-color: var(--green-secondary);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .baseline-card h3 {
+    font-family: Tahoma, Arial, sans-serif;
+    color: var(--green-secondary);
+    font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+    line-height: 1.16;
+    text-transform: uppercase;
+  }
+
+  .baseline-card p {
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .module-detail-closing {
+    margin-top: 28px;
+  }
+
+  .image-zoom-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background-color: rgba(10, 46, 54, 0.74);
+  }
+
+  .image-zoom-backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-out;
+  }
+
+  .image-zoom-content {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    width: min(1180px, 94vw);
+    max-height: 92vh;
+  }
+
+  .image-zoom-content img {
+    width: 100%;
+    max-height: 82vh;
+    object-fit: contain;
+    border-radius: 12px;
+    background-color: var(--white);
+  }
+
+  .image-zoom-content p {
+    color: var(--white);
+    font-size: 0.95rem;
+  }
+
+  .image-zoom-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    background-color: rgba(10, 46, 54, 0.82);
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
   .module-resource-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    gap: 18px;
   }
 
   .module-empty-tools {
@@ -479,56 +1138,15 @@
 
   .module-summary-section {
     padding: 72px 0;
-    background-color: var(--light-bg);
-  }
-
-  .module-complete-section {
-    padding: 56px 0 72px;
-    background-color: var(--white);
-  }
-
-  .module-complete-banner {
-    display: grid;
-    place-items: center;
-    gap: 22px;
-    min-height: 140px;
-    padding: 32px;
-    border-radius: 28px;
     background:
-      linear-gradient(120deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0) 38%),
-      linear-gradient(135deg, #d8f4b2, var(--green-primary) 52%, var(--green-secondary));
-    box-shadow: 0 18px 38px rgba(10, 46, 54, 0.14);
-    text-align: center;
+      linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
+      var(--light-bg);
   }
 
-  .module-complete-banner p {
-    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
-    font-size: clamp(1.7rem, 3.6vw, 3rem);
-    line-height: 1.05;
-    text-transform: uppercase;
+  .module-summary-section .eyebrow,
+  .module-summary-section h2,
+  .module-summary-section .module-summary-text p {
     color: var(--dark);
-  }
-
-  .module-next-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    min-height: 48px;
-    padding: 12px 20px;
-    border: 2px solid currentColor;
-    border-radius: 999px;
-    background-color: transparent;
-    color: var(--dark);
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: inset 0 0 0 1px rgba(10, 46, 54, 0.08), 0 8px 20px rgba(10, 46, 54, 0.08);
-    transition: box-shadow 0.18s ease, transform 0.18s ease;
-  }
-
-  .module-next-button:hover {
-    transform: translateY(-2px);
-    box-shadow: inset 0 0 0 2px rgba(10, 46, 54, 0.16), 0 12px 24px rgba(10, 46, 54, 0.14);
   }
 
   .module-summary-content {
@@ -538,8 +1156,20 @@
     align-items: start;
   }
 
-  .module-summary-copy p {
+  .module-summary-text {
+    display: grid;
+    gap: 28px;
     max-width: 640px;
+  }
+
+  .module-summary-text p {
+    margin: 0;
+  }
+
+  .summary-copy-next-link {
+    display: inline-block;
+    margin-top: 44px;
+    margin-bottom: 0;
   }
 
   .module-summary-checklist {
@@ -621,6 +1251,10 @@
       order: 4;
     }
 
+    .module-section-navigation {
+      order: 5;
+    }
+
     /*.module-hero-copy .download-buttons {
       order: 5;
     }*/
@@ -632,14 +1266,56 @@
     }
 
     .module-pathway-grid,
-    .module-resource-grid {
+    .baseline-card-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-model-card-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .m3-wheel-workshop-overview-grid,
+    .m3-wheel-workshop-step-grid {
+      grid-template-columns: 1fr;
     }
   }
 
   @media (max-width: 640px) {
     .module-pathway-grid,
+    .baseline-card-grid {
+      grid-template-columns: 1fr;
+    }
+
     .module-resource-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .business-model-card-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .m3-wheel-workshop-card {
+      padding: 20px;
+    }
+
+    .m3-wheel-workshop-card-collection {
+      padding: 14px;
+    }
+
+    .m3-wheel-workshop-title-icon {
+      width: 48px;
+      height: 48px;
+    }
+
+    .m3-wheel-workshop-card-heading {
+      align-items: flex-start;
+    }
+
+    .hotspot-factbox {
+      padding: 28px 24px;
+    }
+
+    .hotspot-factbox ul {
       grid-template-columns: 1fr;
     }
 

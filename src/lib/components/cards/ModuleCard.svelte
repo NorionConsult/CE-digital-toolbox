@@ -46,7 +46,7 @@
   }
 
   .module-card h3 {
-    font-size: 2.4rem;
+    font-size: var(--home-module-card-title-size, 2.4rem);
     text-transform: uppercase;
     margin-bottom: 16px;
     color: inherit;

@@ -19,6 +19,32 @@
   --monitor-grey-border: #8d9995;
   --text: #1f2a2e;
   --shadow: 0 16px 32px rgba(10, 46, 54, 0.12);
+  --site-container-max: 1280px;
+
+  /*
+    Card controls are intentionally separated by card type:
+    - home module package cards
+    - home sector package cards
+    - tool/resource cards used in the catalogue and inside module/sector pages
+  */
+  --home-module-card-title-size: 2.4rem;
+  --home-sector-card-title-size: 2rem;
+  --tool-card-title-size: 1.65rem;
+
+  /*
+    Embedded tool cards appear inside module and sector pages.
+    These values only change spacing/layout, not typography.
+    Catalogue tool cards keep the larger default spacing.
+  */
+  --embedded-tool-card-padding: 20px;
+  --embedded-tool-card-gap: 16px;
+  --embedded-tool-card-min-height: 280px;
+  --embedded-tool-card-radius: 18px;
+  --embedded-tool-card-top-line: 18px;
+
+  /* Shared dimensions for filled and outlined action buttons. */
+  --action-button-padding: 12px 18px;
+  --action-button-radius: 15px;
 }
 
 /*
@@ -62,10 +88,10 @@
 }
 
 .module-card-outline {
-  --module-bg: var(--monitor-grey);
-  --module-text: var(--dark);
-  --module-border: var(--monitor-grey-border);
-  --module-accent: var(--monitor-grey);
+  --module-bg: #6177b1;
+  --module-text: var(--white);
+  --module-border: transparent;
+  --module-accent: #6177b1;
 }
 
 * {
@@ -105,7 +131,7 @@ a {
   Used by pages and components to keep content aligned.
 */
 .container {
-  width: min(1120px, 92%);
+  width: min(var(--site-container-max), 92%);
   margin: 0 auto;
 }
 
@@ -150,8 +176,8 @@ h3,
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
-  border-radius: 999px;
+  padding: var(--action-button-padding);
+  border-radius: var(--action-button-radius);
   text-decoration: none;
   font-weight: 700;
   border: 2px solid var(--dark);
@@ -218,7 +244,7 @@ h3,
 
 .hero-content,
 .subpage-content {
-  max-width: 1120px;
+  max-width: var(--site-container-max);
 }
 
 .hero h1,

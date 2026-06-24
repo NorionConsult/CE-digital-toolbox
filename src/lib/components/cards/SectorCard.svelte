@@ -37,7 +37,7 @@
 
   .sector-image {
     width: 100%;
-    height: 96px;
+    height: 160px;
     border-radius: 18px;
     object-fit: cover;
     background-color: var(--white);
@@ -49,7 +49,7 @@
   }
 
   .sector-card h3 {
-    font-size: 2rem;
+    font-size: var(--home-sector-card-title-size, 2rem);
     text-transform: uppercase;
   }
 

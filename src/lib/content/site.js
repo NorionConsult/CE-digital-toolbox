@@ -24,14 +24,14 @@ export const site = {
   labels: {
     viewModule: 'View module',
     viewTools: 'View tools',
-    viewSector: 'View sector package',
+    viewSector: 'View package',
     viewResource: 'View resource',
     openTool: 'Open tool'
   },
   navigation: [
     { label: 'Modules', href: '/#modules' },
+    { label: 'Sector Packages', href: '/#sectors' },
     { label: 'Catalogue', href: '/catalogue/' },
-    { label: 'Sector packages', href: '/#sectors' },
     { label: 'About', href: '/#about' },
     { label: 'Contact', href: '/#contact' }
   ]
