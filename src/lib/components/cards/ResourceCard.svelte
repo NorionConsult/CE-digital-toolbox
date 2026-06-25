@@ -3,20 +3,19 @@
     The page link points to the resource slug in src/lib/content/resources.js.
   */
   import { base } from '$app/paths';
-  import { getJourneyPhaseClass } from '$lib/content/journey-phases.js';
+  import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
   import { site } from '$lib/content/site.js';
 
   export let resource;
   export let variant = 'default';
 
-  $: journeyPhaseClass = getJourneyPhaseClass(resource.journeyPhase);
-  $: journeyPhaseText = (resource.journeyPhases ?? [resource.journeyPhase]).join(', ');
+  $: journeyPhases = resource.journeyPhases ?? [resource.journeyPhase];
   $: isCompact = variant === 'compact';
 </script>
 
-<article class="tool-card resource-card {journeyPhaseClass}" class:resource-card-compact={isCompact}>
+<article class="tool-card resource-card" class:resource-card-compact={isCompact}>
   <div>
-    <p class="resource-phase">{journeyPhaseText}</p>
+    <JourneyPhaseBadges phases={journeyPhases} />
     <h3>{resource.title}</h3>
     <p class="resource-description">{resource.description}</p>
   </div>
@@ -56,23 +55,6 @@
     gap: 24px;
     min-height: 330px;
     box-shadow: 0 8px 24px rgba(10, 46, 54, 0.06);
-  }
-
-  .resource-card::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto;
-    height: 22px;
-    background-color: var(--module-accent);
-  }
-
-  .resource-phase {
-    color: var(--muted);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-size: 0.82rem;
-    margin-bottom: 10px;
   }
 
   .resource-card h3 {
@@ -133,14 +115,6 @@
     min-height: var(--embedded-tool-card-min-height, 280px);
     padding: var(--embedded-tool-card-padding, 20px);
     border-radius: var(--embedded-tool-card-radius, 18px);
-  }
-
-  .resource-card-compact::before {
-    height: var(--embedded-tool-card-top-line, 18px);
-  }
-
-  .resource-card-compact .resource-phase {
-    margin-bottom: 8px;
   }
 
   .resource-card-compact .resource-meta {

@@ -28,8 +28,7 @@ const hero = {
 const sectionButtons = [
   { sectionId: 'explore-ce-strategies', label: 'Explore strategies' },
   { sectionId: 'identify-your-options', label: 'Identify options' },
-  { sectionId: 'assess-and-prioritise', label: 'Assess options' },
-  { sectionId: 'prepare-for-business-case', label: 'Prepare business case' }
+  { sectionId: 'assess-and-prioritise', label: 'Assess options' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -68,23 +67,11 @@ const pathwaySection = {
       number: '3',
       title: 'Assess & Prioritise',
       description:
-        'Evaluate your shortlisted options based on impact, feasibility and alignment with your existing operations and goals.',
+        'Evaluate your shortlisted options based on impact, feasibility and alignment with your existing operations and goals and narrow down to one to three priority strategies',
       keyOutputs: [
         'Options plotted on an impact-versus-feasibility matrix',
         'Options screened against six key criteria',
-        'A ranked view of your strongest options'
-      ]
-    },
-    {
-      sectionId: 'prepare-for-business-case',
-      number: '4',
-      title: 'Prepare for the Business Case',
-      description:
-        'Narrow down to one to three priority strategies to take forward for deeper financial and value analysis.',
-      keyOutputs: [
-        'A shortlist of one to three priority strategies',
-        'A completed profile for each shortlisted option',
-        'A clear handoff into the Business Case module'
+        'A shortlist of one to three priority strategies'
       ]
     }
   ]
@@ -111,9 +98,10 @@ const exploreStrategiesSection = {
   inlineImage: {
     afterParagraph: 2,
     title: 'Circular Economy strategies',
-    src: '/downloads/module3/9r-strategies-hierarchy.svg',
+    src: '/downloads/module3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - Frame 13.svg',
     alt: 'The 9R circular economy strategies arranged by value preservation',
     caption: 'The 9R hierarchy of circular economy strategies.',
+    maxWidth: '680px',
     zoomable: true
   },
   /*
@@ -250,10 +238,21 @@ const assessPrioritiseSection = {
     title: 'Screening Your Options',
     introduction:
       'Use these criteria to pressure-test each shortlisted strategy before committing to a business case.',
+    businessModelLabel: 'Circular business model to assess',
+    businessModelPlaceholder: 'Select a circular business model',
+    // These options update automatically when the business model card titles above are edited.
+    businessModelOptions: exploreStrategiesSection.businessModelCards.map((card) => card.title),
+    otherBusinessModelLabel: 'Other',
+    selectBusinessModelText:
+      'Select the circular business model you want to assess, then answer every question to see your result.',
     yesLabel: 'Yes',
     noLabel: 'No',
     resultsTitle: 'Results',
     answeredLabel: 'answered',
+    downloadLabel: 'Download results',
+    downloadingLabel: 'Preparing PDF...',
+    pdfDisclaimer:
+      'These are guiding questions part of Module 3: Options of the CE Digital Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
     incompleteText: 'Answer every question to see your result.',
     positiveResult:
       'There seems to be potential! This strategy should be considered to be tested.',
@@ -315,34 +314,24 @@ const assessPrioritiseSection = {
         ]
       }
     ]
-  }
-};
-
-/* 7. DETAILED SECTION 4 */
-const prepareBusinessCaseSection = {
-  id: 'prepare-for-business-case',
-  title: 'Prepare for the Business Case',
-  resourceTag: 'options:prepare-business-case',
-  paragraphs: [
-    'The final step is to turn the strongest options into a clear shortlist that can be examined in more detail.',
-    'Use this space to explain what information should accompany each shortlisted option before users continue to Module 4.'
+  },
+  closingParagraphs: [
+    'Once you have screened business models to consider, you can now move on to shortlist your priority options. In this step, you can narrow down from 1-3 strategies to develop into a business case. For a template to screen your options, see the tool "Shortlisting options template". These considerations can help you understand and clarify the key aspects that these options bring to support further development of your business case in the next module.'
   ]
 };
 
-/* 8. MODULE SUMMARY */
+/* 7. MODULE SUMMARY */
 const moduleSummary = {
   title: 'Module Summary',
   paragraphs: [
-    'Use this checklist to confirm that you have identified and prioritised the circular options that are most relevant to your business.',
-    'Continue to the Business Case module to test the value, feasibility and transition requirements of your selected options.'
+    'Take your shortlisted options into a structured financial and value analysis, building the case for investment and action.'
   ],
   checklist: [
-    'Reviewed the main circular economy strategy frameworks',
-    'Mapped strategies that are relevant to the business',
-    'Created a long-list of feasible circular options',
-    'Compared options using impact and feasibility criteria',
-    'Selected one to three priority strategies',
-    'Prepared the selected options for business case development'
+    'A clear understanding of the circular strategy landscape (9Rs, business model archetypes)',
+    'Team-generated ideas mapped across the Circular Strategies Wheel',
+    'A structured view of which options are feasible and high-impact for your business',
+    'Options screened against strategic, operational, and environmental criteria',
+    'A shortlist of 1-3 priority strategies, ready for financial and value analysis'
   ]
 };
 
@@ -360,8 +349,7 @@ export const options = defineModulePage({
   detailSections: [
     exploreStrategiesSection,
     identifyOptionsSection,
-    assessPrioritiseSection,
-    prepareBusinessCaseSection
+    assessPrioritiseSection
   ],
   moduleSummary,
   downloads

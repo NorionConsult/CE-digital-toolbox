@@ -159,7 +159,10 @@
             <p>{paragraph}</p>
 
             {#if section.inlineImage?.afterParagraph === paragraphIndex + 1}
-              <figure class="module-inline-image">
+              <figure
+                class="module-inline-image"
+                style:--inline-image-width={section.inlineImage.maxWidth ?? '760px'}
+              >
                 {#if section.inlineImage.title}
                   <h3 class="subsection-title">{section.inlineImage.title}</h3>
                 {/if}
@@ -317,19 +320,22 @@
 
           <div class="business-model-card-grid">
             {#each section.businessModelCards as card}
-              <article class="business-model-card">
-                <div class="business-model-card-heading">
+              <details class="business-model-card">
+                <summary class="business-model-card-heading">
                   <span
                     class="business-model-card-icon"
                     style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
                     aria-hidden="true"
                   ></span>
                   <h3>{card.title}</h3>
-                </div>
+                  <span class="business-model-card-toggle" aria-hidden="true"></span>
+                </summary>
 
-                <p>{card.text}</p>
-                <p class="business-model-example"><strong>Example:</strong> {card.example}</p>
-              </article>
+                <div class="business-model-card-content">
+                  <p>{card.text}</p>
+                  <p class="business-model-example"><strong>Example:</strong> {card.example}</p>
+                </div>
+              </details>
             {/each}
           </div>
         </div>
@@ -363,7 +369,7 @@
         </div>
 
         {#if sectionResources.length > 0}
-          <div class="module-resource-grid">
+          <div class="module-resource-grid embedded-resource-grid">
             {#each sectionResources as resource (resource.id)}
               <ResourceCard {resource} variant="compact" />
             {/each}
@@ -426,7 +432,7 @@
       </div>
 
       {#if relatedResources.length > 0}
-        <div class="module-resource-grid">
+        <div class="module-resource-grid embedded-resource-grid">
           {#each relatedResources as resource (resource.id)}
             <ResourceCard {resource} variant="compact" />
           {/each}
@@ -708,7 +714,7 @@
   }
 
   .module-inline-image-button {
-    width: min(100%, 760px);
+    width: min(100%, var(--inline-image-width));
     margin: 0 auto;
     padding: 0;
     border: 0;
@@ -729,7 +735,7 @@
   }
 
   .module-inline-image figcaption {
-    width: min(100%, 760px);
+    width: min(100%, var(--inline-image-width));
     margin: 0 auto;
     color: var(--muted);
     font-size: 0.95rem;
@@ -754,14 +760,12 @@
   .business-model-card-grid {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
     gap: 22px;
   }
 
   .business-model-card {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
     min-width: 0;
     padding: 24px;
     border: 2px solid var(--yellow);
@@ -772,11 +776,21 @@
 
   .business-model-card-heading {
     display: grid;
-    grid-template-columns: 34px minmax(0, 1fr);
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
     gap: 12px;
     align-items: center;
     padding-bottom: 12px;
-    border-bottom: 4px solid var(--yellow);
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .business-model-card-heading::-webkit-details-marker {
+    display: none;
+  }
+
+  .business-model-card-heading::marker {
+    content: "";
   }
 
   .business-model-card-icon {
@@ -794,6 +808,57 @@
     text-transform: uppercase;
   }
 
+  .business-model-card-toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--dark);
+    border-radius: 50%;
+    transition:
+      background-color 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  .business-model-card-toggle::before,
+  .business-model-card-toggle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--dark);
+    transform: translate(-50%, -50%);
+  }
+
+  .business-model-card-toggle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: transform 0.18s ease;
+  }
+
+  .business-model-card-heading:hover .business-model-card-toggle {
+    background-color: color-mix(in srgb, var(--yellow) 35%, var(--white));
+  }
+
+  .business-model-card[open] .business-model-card-toggle::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  .business-model-card[open] .business-model-card-toggle {
+    transform: rotate(180deg);
+  }
+
+  .business-model-card[open] .business-model-card-heading {
+    border-bottom-color: var(--yellow);
+  }
+
+  .business-model-card-content {
+    display: grid;
+    gap: 18px;
+    padding-top: 18px;
+  }
+
   .business-model-card p {
     color: var(--text);
     font-size: 0.98rem;
@@ -801,7 +866,6 @@
   }
 
   .business-model-example {
-    margin-top: auto;
     color: var(--muted) !important;
     font-style: italic;
   }
@@ -1126,12 +1190,6 @@
     cursor: pointer;
   }
 
-  .module-resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
-    gap: 18px;
-  }
-
   .module-empty-tools {
     color: var(--muted);
   }
@@ -1283,10 +1341,6 @@
   @media (max-width: 640px) {
     .module-pathway-grid,
     .baseline-card-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .module-resource-grid {
       grid-template-columns: 1fr;
     }
 

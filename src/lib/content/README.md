@@ -66,8 +66,55 @@ static/downloads/
 
 Catalogue resources are now pages generated from `resources.js`; they do not need PDF files unless a future resource explicitly links to one.
 
-To control where a catalogue tool appears, edit its `placements` block in
-`resources.js`:
+## Adding Catalogue Resources
+
+To add a resource, open:
+
+```text
+src/lib/content/resources.js
+```
+
+Copy one complete `createResource({ ... })` block and paste it after an existing
+resource. Then:
+
+1. Give the resource a unique `id`, `cardNumber` and `slug`.
+2. Replace the title, descriptions, taxonomy, detail text and `toolLink`.
+3. Set its journey phase badges using `journeyPhase` and `journeyPhases`.
+4. Update `placements` if it should also appear in a module or sector page.
+
+The `slug` becomes the page URL. Use lowercase words separated by hyphens.
+
+### Journey Phase Badge Colours
+
+Badge colours are assigned automatically from the matching module colour.
+Editors do not need to add colour codes or CSS classes.
+
+Use these exact phase names:
+
+```text
+Awareness
+Diagnose
+Options
+Business Case
+Implement
+Monitor
+```
+
+Use `journeyPhase` for the primary phase and include all relevant phases in
+`journeyPhases`:
+
+```js
+journeyPhase: 'Monitor',
+journeyPhases: ['Monitor', 'Business Case', 'Options'],
+```
+
+This example automatically displays three separately coloured badges on the
+Catalogue card, embedded module/sector cards and the resource page. Global
+module colours are maintained in `src/app.css`.
+
+### Placing Cards on Other Pages
+
+To control where a catalogue tool appears, edit its `placements` block:
 
 ```js
 placements: {

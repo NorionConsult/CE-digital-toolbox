@@ -58,7 +58,7 @@
     </div>
 
     {#if relatedResources.length > 0}
-      <div class="sector-resource-grid">
+      <div class="sector-resource-grid embedded-resource-grid">
         {#each relatedResources as resource (resource.id)}
           <ResourceCard {resource} variant="compact" />
         {/each}
@@ -164,12 +164,6 @@
     background-color: var(--light-bg);
   }
 
-  .sector-resource-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-  }
-
   .sector-empty-tools {
     color: var(--muted);
   }
@@ -210,14 +204,12 @@
       grid-template-columns: 1fr;
     }
 
-    .sector-resource-grid,
     .case-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (max-width: 640px) {
-    .sector-resource-grid,
     .case-grid {
       grid-template-columns: 1fr;
     }

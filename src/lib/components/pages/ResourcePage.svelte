@@ -1,12 +1,12 @@
 <script>
   import { base } from '$app/paths';
-  import { getJourneyPhaseClass } from '$lib/content/journey-phases.js';
+  import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
   import { site } from '$lib/content/site.js';
 
   export let resource;
 
-  $: journeyPhaseClass = getJourneyPhaseClass(resource.journeyPhase);
-  $: journeyPhaseText = (resource.journeyPhases ?? [resource.journeyPhase]).join(', ');
+  $: journeyPhases = resource.journeyPhases ?? [resource.journeyPhase];
+  $: journeyPhaseText = journeyPhases.join(', ');
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -32,13 +32,19 @@
   <div class="container resource-hero-content">
     <a href="{base}/catalogue/" class="back-link">Back to catalogue</a>
 
-    <div class="resource-kicker {journeyPhaseClass}">
-      <span>{resource.cardNumber}</span>
-      <span>{journeyPhaseText}</span>
+    <div class="resource-kicker">
+      <span class="resource-card-number">{resource.cardNumber}</span>
+      <JourneyPhaseBadges phases={journeyPhases} variant="hero" />
     </div>
 
     <h1>{resource.title}</h1>
     <p class="resource-summary">{resource.description}</p>
+
+    {#if resource.toolLink}
+      <a class="primary-button resource-tool-link" href={resource.toolLink} target="_blank" rel="noreferrer">
+        {site.labels.openTool}
+      </a>
+    {/if}
   </div>
 </section>
 
@@ -56,11 +62,6 @@
         {/each}
       </div>
 
-      {#if resource.toolLink}
-        <a class="primary-button resource-tool-link" href={resource.toolLink} target="_blank" rel="noreferrer">
-          {site.labels.openTool}
-        </a>
-      {/if}
     </article>
 
     <aside class="resource-taxonomy" aria-label="Resource taxonomy">
@@ -91,24 +92,24 @@
 
   .resource-kicker {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+  }
+
+  .resource-card-number {
+    display: inline-flex;
+    align-items: center;
     width: fit-content;
-    border: 1px solid var(--module-border);
     border-radius: 999px;
     padding: 8px 12px;
-    background-color: var(--module-bg);
-    color: var(--module-text);
+    background-color: var(--white);
+    color: var(--dark);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-size: 0.85rem;
-  }
-
-  .resource-kicker span + span::before {
-    content: "/";
-    margin-right: 10px;
-    opacity: 0.65;
   }
 
   .resource-hero h1 {
@@ -122,6 +123,11 @@
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.25rem;
     max-width: 740px;
+  }
+
+  .resource-hero .resource-tool-link {
+    width: fit-content;
+    margin-top: 28px;
   }
 
   .resource-detail-section {

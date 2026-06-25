@@ -7,7 +7,6 @@
   import { site } from '$lib/content/site.js';
   import SiteHeader from '$lib/theme/SiteHeader.svelte';
   import SiteFooter from '$lib/theme/SiteFooter.svelte';
-  import StardustCursor from '$lib/components/cursor/StardustCursor.svelte';
 </script>
 
 <svelte:head>
@@ -20,7 +19,7 @@
 </main>
 <SiteFooter />
 <!--
-  Global cursor effect.
-  Placing it here makes it active on all pages.
+  The sparkly cursor is intentionally disabled.
+  Its code remains available at:
+  src/lib/components/cursor/StardustCursor.svelte
 -->
-<StardustCursor />

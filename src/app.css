@@ -40,7 +40,8 @@
   --embedded-tool-card-gap: 16px;
   --embedded-tool-card-min-height: 280px;
   --embedded-tool-card-radius: 18px;
-  --embedded-tool-card-top-line: 18px;
+  --embedded-tool-card-width: 376px;
+  --embedded-tool-card-grid-gap: 24px;
 
   /* Shared dimensions for filled and outlined action buttons. */
   --action-button-padding: 12px 18px;
@@ -133,6 +134,24 @@ a {
 .container {
   width: min(var(--site-container-max), 92%);
   margin: 0 auto;
+}
+
+/*
+  Tool-card grids inside module and sector pages.
+  Cards keep a catalogue-sized width instead of stretching when a row is not full.
+  More columns are added automatically whenever the container is wide enough.
+*/
+.embedded-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--embedded-tool-card-width));
+  gap: var(--embedded-tool-card-grid-gap);
+  justify-content: start;
+}
+
+@media (max-width: 640px) {
+  .embedded-resource-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /*

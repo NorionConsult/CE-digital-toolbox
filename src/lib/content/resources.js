@@ -1,14 +1,44 @@
 /*
   Catalogue/resource records.
-  To add a resource, copy one full block, change the slug and replace the text.
+  HOW TO ADD A RESOURCE:
+  1. Copy one complete createResource({ ... }) block below.
+  2. Give it a unique id, cardNumber and slug.
+  3. Replace all visible text, taxonomy values and the toolLink.
+  4. Update journeyPhase and journeyPhases using the instructions below.
+  5. Add a placements block if the card should appear on module or sector pages.
+
+  The slug becomes the resource page URL, so use lowercase words separated
+  with hyphens and do not reuse a slug from another resource.
 
   Taxonomy fields used for catalogue filtering and card information:
-  - journeyPhase: primary phase used for the card colour
-  - journeyPhases: all relevant phases shown in filters and taxonomy
+  - journeyPhase: primary phase retained for compatibility and module matching.
+  - journeyPhases: every relevant phase shown as a separate coloured badge,
+    and used by the Catalogue phase filter and resource taxonomy.
   - sector: Cross-sector, Manufacturing, etc.
   - language: document or tool language
   - provider: source organisation or provider
   - access: Free, Paid, or Sign up
+
+  JOURNEY PHASE BADGE COLOURS:
+  Badge colours are assigned automatically. Editors should only write the
+  phase names; no CSS class or colour code is needed here.
+
+  Use these exact phase names:
+  - Awareness
+  - Diagnose
+  - Options
+  - Business Case
+  - Implement
+  - Monitor
+
+  The website matches each phase name to its module and uses that module's
+  global colour from src/app.css. A resource with several journeyPhases gets
+  several badges automatically, for example:
+
+  journeyPhase: 'Monitor',
+  journeyPhases: ['Monitor', 'Business Case', 'Options'],
+
+  Keep journeyPhase as one primary value and include it in journeyPhases.
 
   WHERE A TOOL CARD APPEARS:
   Add a placements block inside a resource to place it on module or sector pages.

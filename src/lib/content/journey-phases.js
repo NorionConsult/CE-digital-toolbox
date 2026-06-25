@@ -1,8 +1,8 @@
 import { modules } from '$lib/content/modules.js';
 
 /*
-  Resource cards use journeyPhase as the single taxonomy value.
-  This helper finds the matching module colour class automatically.
+  Resource phase badges use the same colour classes as their matching modules.
+  This keeps catalogue cards, embedded cards and resource pages in sync.
 */
 /**
  * @param {string} journeyPhase

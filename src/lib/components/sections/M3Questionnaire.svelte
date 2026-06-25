@@ -1,4 +1,6 @@
 <script>
+  import { base } from '$app/paths';
+
   /**
    * @typedef {{
    *   text: string;
@@ -19,6 +21,16 @@
   /** @type {QuestionnaireCategory[]} */
   export let categories = [];
   /** @type {string} */
+  export let businessModelLabel;
+  /** @type {string} */
+  export let businessModelPlaceholder;
+  /** @type {string[]} */
+  export let businessModelOptions = [];
+  /** @type {string} */
+  export let otherBusinessModelLabel = 'Other';
+  /** @type {string} */
+  export let selectBusinessModelText;
+  /** @type {string} */
   export let yesLabel = 'Yes';
   /** @type {string} */
   export let noLabel = 'No';
@@ -29,12 +41,22 @@
   /** @type {string} */
   export let answeredLabel = 'answered';
   /** @type {string} */
+  export let downloadLabel = 'Download results';
+  /** @type {string} */
+  export let downloadingLabel = 'Preparing PDF...';
+  /** @type {string} */
+  export let pdfDisclaimer;
+  /** @type {string} */
   export let positiveResult;
   /** @type {string} */
   export let negativeResult;
 
   /** @type {(boolean | null)[]} */
   let answers = [];
+  let selectedBusinessModel = '';
+  /** @type {HTMLElement | null} */
+  let pdfDocument = null;
+  let isDownloading = false;
 
   $: questions = categories.flatMap((category) =>
     category.questions.map((question) => ({
@@ -49,7 +71,8 @@
   }
   $: answeredCount = answers.filter((answer) => answer !== null).length;
   $: yesCount = answers.filter((answer) => answer === true).length;
-  $: isComplete = questions.length > 0 && answeredCount === questions.length;
+  $: answersComplete = questions.length > 0 && answeredCount === questions.length;
+  $: isComplete = Boolean(selectedBusinessModel) && answersComplete;
   $: yesPercentage = isComplete ? Math.round((yesCount / questions.length) * 100) : 0;
   $: hasPotential = isComplete && yesPercentage >= 50;
 
@@ -61,6 +84,63 @@
     answers[index] = value;
     answers = [...answers];
   }
+
+  function handleBusinessModelChange() {
+    answers = Array(questions.length).fill(null);
+  }
+
+  /**
+   * @param {string | QuestionnaireQuestion} question
+   * @param {boolean | null} answer
+   */
+  function getAnswerLabel(question, answer) {
+    const selectedYesLabel =
+      typeof question === 'string' ? yesLabel : question.yesLabel ?? yesLabel;
+    const selectedNoLabel =
+      typeof question === 'string' ? noLabel : question.noLabel ?? noLabel;
+
+    return answer === true ? selectedYesLabel : selectedNoLabel;
+  }
+
+  async function downloadResults() {
+    if (!isComplete || !pdfDocument || isDownloading) {
+      return;
+    }
+
+    isDownloading = true;
+
+    try {
+      const html2pdfModule = await import('html2pdf.js');
+      const html2pdf = html2pdfModule.default;
+      /** @type {any} */
+      const pdfOptions = {
+        margin: [10, 10, 12, 10],
+        filename: 'module-3-options-screening-results.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#ffffff'
+        },
+        jsPDF: {
+          unit: 'mm',
+          format: 'a4',
+          orientation: 'portrait'
+        },
+        pagebreak: {
+          mode: ['css', 'legacy'],
+          avoid: ['.m3-questionnaire-pdf-category', '.m3-questionnaire-pdf-result']
+        }
+      };
+
+      await html2pdf()
+        .set(pdfOptions)
+        .from(pdfDocument)
+        .save();
+    } finally {
+      isDownloading = false;
+    }
+  }
 </script>
 
 <section class="m3-questionnaire" aria-labelledby="m3-questionnaire-title">
@@ -68,6 +148,17 @@
     <h3 id="m3-questionnaire-title">{title}</h3>
     <p>{introduction}</p>
   </header>
+
+  <label class="m3-questionnaire-model-selector">
+    <span>{businessModelLabel}</span>
+    <select bind:value={selectedBusinessModel} on:change={handleBusinessModelChange}>
+      <option value="" disabled>{businessModelPlaceholder}</option>
+      {#each businessModelOptions as businessModel}
+        <option value={businessModel}>{businessModel}</option>
+      {/each}
+      <option value={otherBusinessModelLabel}>{otherBusinessModelLabel}</option>
+    </select>
+  </label>
 
   <div class="m3-questionnaire-card">
     {#each categories as category, categoryIndex}
@@ -97,6 +188,7 @@
                   type="button"
                   class:active={answers[answerIndex] === true}
                   aria-pressed={answers[answerIndex] === true}
+                  disabled={!selectedBusinessModel}
                   on:click={() => selectAnswer(answerIndex, true)}
                 >
                   {questionYesLabel}
@@ -105,6 +197,7 @@
                   type="button"
                   class:active={answers[answerIndex] === false}
                   aria-pressed={answers[answerIndex] === false}
+                  disabled={!selectedBusinessModel}
                   on:click={() => selectAnswer(answerIndex, false)}
                 >
                   {questionNoLabel}
@@ -134,9 +227,73 @@
       </p>
       <p class="m3-questionnaire-score">{yesPercentage}% Yes</p>
     {:else}
-      <p class="m3-questionnaire-result-message">{incompleteText}</p>
+      <p class="m3-questionnaire-result-message">
+        {selectedBusinessModel ? incompleteText : selectBusinessModelText}
+      </p>
     {/if}
+
+    <button
+      type="button"
+      class="primary-button m3-questionnaire-download"
+      disabled={!isComplete || isDownloading}
+      on:click={downloadResults}
+    >
+      {isDownloading ? downloadingLabel : downloadLabel}
+    </button>
   </aside>
+
+  <div class="m3-questionnaire-pdf-stage" aria-hidden="true">
+    <article class="m3-questionnaire-pdf" bind:this={pdfDocument}>
+      <header class="m3-questionnaire-pdf-header">
+        <img src="{base}/logos/logo-toolbox.png" alt="" />
+        <div>
+          <h1>{title}</h1>
+          <p>{introduction}</p>
+        </div>
+      </header>
+
+      <section class="m3-questionnaire-pdf-model">
+        <span>{businessModelLabel}</span>
+        <strong>{selectedBusinessModel}</strong>
+      </section>
+
+      <main>
+        {#each categories as category, categoryIndex}
+          <section class="m3-questionnaire-pdf-category">
+            <h2>{category.title}</h2>
+
+            {#each category.questions as question, questionIndex}
+              {@const answerIndex =
+                categories
+                  .slice(0, categoryIndex)
+                  .reduce((total, item) => total + item.questions.length, 0) + questionIndex}
+              {@const questionText = typeof question === 'string' ? question : question.text}
+              <div class="m3-questionnaire-pdf-answer">
+                <p>{questionText}</p>
+                <strong><span>{getAnswerLabel(question, answers[answerIndex])}</span></strong>
+              </div>
+            {/each}
+          </section>
+        {/each}
+
+        <section class="m3-questionnaire-pdf-result">
+          <div>
+            <h2>{resultsTitle}</h2>
+            <strong>{yesPercentage}% Yes</strong>
+          </div>
+          <p>{hasPotential ? positiveResult : negativeResult}</p>
+        </section>
+      </main>
+
+      <footer class="m3-questionnaire-pdf-footer">
+        <div class="m3-questionnaire-pdf-logos">
+          <img src="{base}/logos/EU-logo.png" alt="" />
+          <img src="{base}/logos/EU4Green-logo.png" alt="" />
+        </div>
+        <p>{pdfDisclaimer}</p>
+      </footer>
+    </article>
+  </div>
 </section>
 
 <style>
@@ -160,6 +317,39 @@
 
   .m3-questionnaire-heading p {
     color: var(--muted);
+  }
+
+  .m3-questionnaire-model-selector {
+    display: grid;
+    grid-template-columns: minmax(220px, auto) minmax(260px, 520px);
+    gap: 18px;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    padding: 18px 20px;
+    border-radius: 15px;
+    background-color: var(--light-bg);
+  }
+
+  .m3-questionnaire-model-selector span {
+    color: var(--dark);
+    font-weight: 700;
+  }
+
+  .m3-questionnaire-model-selector select {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 42px 10px 14px;
+    border: 2px solid var(--dark);
+    border-radius: 15px;
+    background-color: var(--white);
+    color: var(--dark);
+    cursor: pointer;
+  }
+
+  .m3-questionnaire-model-selector select:focus {
+    outline: 3px solid color-mix(in srgb, var(--yellow) 40%, transparent);
+    outline-offset: 2px;
   }
 
   .m3-questionnaire-card {
@@ -253,9 +443,17 @@
     color: var(--white);
   }
 
+  .m3-questionnaire-answer-buttons button:disabled {
+    border-color: var(--soft-border);
+    background-color: transparent;
+    color: var(--muted);
+    cursor: not-allowed;
+    opacity: 0.68;
+  }
+
   .m3-questionnaire-results {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 18px 30px;
     align-items: center;
     padding: 22px 24px;
@@ -302,6 +500,203 @@
     grid-column: 2;
   }
 
+  .m3-questionnaire-download {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+    white-space: nowrap;
+  }
+
+  .m3-questionnaire-download:disabled {
+    border-color: var(--soft-border);
+    background-color: var(--soft-border);
+    color: var(--muted);
+    cursor: not-allowed;
+  }
+
+  .m3-questionnaire-pdf-stage {
+    position: fixed;
+    top: 0;
+    left: -100000px;
+    width: 718px;
+    pointer-events: none;
+  }
+
+  .m3-questionnaire-pdf {
+    width: 718px;
+    padding: 38px;
+    background-color: #ffffff;
+    color: #1f2a2e;
+    font-family: Tahoma, Arial, sans-serif;
+    line-height: 1.35;
+  }
+
+  .m3-questionnaire-pdf-header {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding-bottom: 22px;
+    border-bottom: 5px solid #ffcc00;
+  }
+
+  .m3-questionnaire-pdf-header img {
+    width: 72px;
+    height: auto;
+  }
+
+  .m3-questionnaire-pdf h1 {
+    margin: 0 0 8px;
+    color: #0a2e36;
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+    font-size: 34px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .m3-questionnaire-pdf-header p {
+    margin: 0;
+    color: #637173;
+    font-size: 14px;
+  }
+
+  .m3-questionnaire-pdf-model {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    margin-top: 18px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: #f7f7f2;
+  }
+
+  .m3-questionnaire-pdf-model span {
+    color: #637173;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .m3-questionnaire-pdf-model strong {
+    color: #0a2e36;
+    font-size: 14px;
+  }
+
+  .m3-questionnaire-pdf main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .m3-questionnaire-pdf-category {
+    padding: 16px;
+    border-left: 7px solid #ffcc00;
+    border-radius: 10px;
+    background-color: #fff9df;
+    break-inside: avoid;
+  }
+
+  .m3-questionnaire-pdf-category h2,
+  .m3-questionnaire-pdf-result h2 {
+    margin: 0 0 12px;
+    color: #0a2e36;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  .m3-questionnaire-pdf-answer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    align-items: start;
+    padding: 9px 0;
+    border-top: 1px solid #d8ddd8;
+  }
+
+  .m3-questionnaire-pdf-answer p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .m3-questionnaire-pdf-answer strong {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    min-height: 24px;
+    padding: 4px 7px;
+    border-radius: 8px;
+    background-color: #0a2e36;
+    color: #ffffff;
+    font-size: 11px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  /*
+    html2canvas paints the bold font baseline slightly too low even when the
+    badge container is centered. Move only the rendered glyphs upward.
+  */
+  .m3-questionnaire-pdf-answer strong span {
+    display: block;
+    transform: translateY(-2px);
+  }
+
+  .m3-questionnaire-pdf-result {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    padding: 18px;
+    border: 2px solid #41a552;
+    border-radius: 10px;
+    background-color: #f0f8f1;
+    break-inside: avoid;
+  }
+
+  .m3-questionnaire-pdf-result h2 {
+    margin-bottom: 4px;
+  }
+
+  .m3-questionnaire-pdf-result p {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .m3-questionnaire-pdf-footer {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 18px;
+    align-items: center;
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 1px solid #d8ddd8;
+    break-inside: avoid;
+  }
+
+  .m3-questionnaire-pdf-logos {
+    display: grid;
+    grid-template-columns: 88px 88px;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .m3-questionnaire-pdf-logos img {
+    width: 100%;
+    max-height: 52px;
+    object-fit: contain;
+  }
+
+  .m3-questionnaire-pdf-footer p {
+    margin: 0;
+    color: #637173;
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
   @media (max-width: 900px) {
     .m3-questionnaire-card {
       grid-template-columns: 1fr;
@@ -309,6 +704,11 @@
   }
 
   @media (max-width: 640px) {
+    .m3-questionnaire-model-selector {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
     .m3-questionnaire-card {
       padding: 14px;
     }
@@ -332,6 +732,12 @@
 
     .m3-questionnaire-score {
       grid-column: 1;
+    }
+
+    .m3-questionnaire-download {
+      grid-column: 1;
+      grid-row: auto;
+      width: 100%;
     }
   }
 </style>
