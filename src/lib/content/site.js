@@ -26,12 +26,14 @@ export const site = {
     viewTools: 'View tools',
     viewSector: 'View package',
     viewResource: 'View resource',
+    viewCase: 'View case',
     openTool: 'Open tool'
   },
   navigation: [
     { label: 'Modules', href: '/#modules' },
     { label: 'Sector Packages', href: '/#sectors' },
     { label: 'Catalogue', href: '/catalogue/' },
+    { label: 'Cases', href: '/cases/' },
     { label: 'About', href: '/#about' },
     { label: 'Contact', href: '/#contact' }
   ]

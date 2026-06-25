@@ -1,6 +1,7 @@
 import { error } from '@sveltejs/kit';
 import { sectors } from '$lib/content/sectors.js';
 import { resources } from '$lib/content/resources.js';
+import { cases } from '$lib/content/cases.js';
 
 export function entries() {
   return sectors.map((sector) => ({ slug: sector.slug }));
@@ -19,6 +20,9 @@ export function load({ params }) {
       resource.placements.sectors.includes(sector.slug) ||
       resource.placements.sectorSections.some((tag) => tag.startsWith(sectorSectionPrefix))
   );
+  const relatedCases = cases.filter(
+    (caseStudy) => caseStudy.sector.toLowerCase() === sector.title.toLowerCase()
+  );
 
-  return { sector, relatedResources };
+  return { sector, relatedResources, relatedCases };
 }

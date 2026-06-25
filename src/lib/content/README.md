@@ -9,6 +9,8 @@ modules.js           Loads the current language module files
 sectors.js           Loads the current language sector files
 resources.js         Catalogue/resource cards, taxonomy, page text and tool links
 library-page.js      Catalogue page intro, filter labels and empty state text
+cases.js             Case cards, taxonomy and automatically generated case pages
+cases-page.js        Cases page intro, filter labels and empty state text
 module-page.js       Labels shared by all module detail pages
 sector-page.js       Labels shared by all sector package pages
 
@@ -46,7 +48,80 @@ To edit one sector page, open its file:
 src/lib/content/en/sectors/construction.js
 ```
 
-To add a new module or sector, copy an existing file in the relevant folder and add it to that folder's `index.js`.
+Current English sector files:
+
+```text
+src/lib/content/en/sectors/agriculture.js
+src/lib/content/en/sectors/construction.js
+src/lib/content/en/sectors/textiles.js
+src/lib/content/en/sectors/tourism.js
+```
+
+Each sector file follows the order in which content appears on the website:
+
+```text
+1. Sector card and hero
+2. Hero navigation buttons
+3. Introduction to sector
+4. Case examples
+5. Key barriers and opportunities
+6. Best practices
+7. Relevant tools
+8. Network and collaborations
+```
+
+Each section has a sector-specific name such as `textilesIntroSection` or
+`textilesNetworkSection`, making it easy to find the correct content.
+
+### Editing Sector Content
+
+The sector files contain comments above every editable section. In general:
+
+- Edit `paragraphs` to change the Introduction to sector text.
+- Edit `intro`, `barriers` and `opportunities` inside the sector's
+  `BarriersSection`.
+- Edit the `groups` array inside the sector's `BestPracticesSection`. Each group
+  has a title and an `items` list of bullet points.
+- Edit `items` inside the sector's `NetworkSection`. Each network has a `name`,
+  `description` and optional `link`.
+- Edit the final sector object to change the home-page card and hero
+  `description`, image path or image description.
+
+Keep these technical connection values unchanged unless the page structure is
+also being deliberately changed:
+
+```text
+id
+slug
+sectionId
+```
+
+Sector case cards are not written inside the sector file. They are stored in:
+
+```text
+src/lib/content/cases.js
+```
+
+A case appears automatically on a sector page when its `sector` matches the
+sector title, for example:
+
+```js
+sector: 'Agriculture',
+```
+
+Relevant tools are also connected automatically. Edit a tool's `placements`
+inside `resources.js` and add the sector slug:
+
+```js
+placements: {
+  moduleSections: [],
+  sectors: ['agriculture'],
+  sectorSections: []
+}
+```
+
+To add a new module or sector, copy an existing file in the relevant folder and
+add it to that folder's `index.js`.
 
 For future translations, create matching language folders such as:
 
@@ -65,6 +140,33 @@ static/downloads/
 ```
 
 Catalogue resources are now pages generated from `resources.js`; they do not need PDF files unless a future resource explicitly links to one.
+
+## Adding Cases
+
+To add a case, open:
+
+```text
+src/lib/content/cases.js
+```
+
+Copy one complete `createCase({ ... })` block and update its values. Give it a
+unique `id` and `slug`. The `slug` becomes its page URL.
+
+One case record automatically creates:
+
+- a card on the Cases page
+- a detail page at `/cases/the-case-slug/`
+- a card in the Case examples section of the matching sector package
+
+The sector connection uses the case's `sector` value. For example:
+
+```js
+sector: 'Textiles',
+```
+
+Sector badge colours are assigned automatically. Agriculture, Construction,
+Textiles and Tourism have fixed theme colours. New sector names are also
+supported and receive a consistent generated outline colour.
 
 ## Adding Catalogue Resources
 
@@ -120,13 +222,14 @@ To control where a catalogue tool appears, edit its `placements` block:
 placements: {
   moduleSections: ['diagnose:baseline-mapping'],
   sectors: ['construction'],
-  sectorSections: ['construction:materials']
+  sectorSections: ['construction:relevant-tools']
 }
 ```
 
 - `moduleSections` places cards under a particular module subsection.
 - `sectors` places cards in the general Relevant Tools area of a sector page.
-- `sectorSections` is ready for future subsections within sector pages.
+- `sectorSections` places cards in a named sector subsection. The current tool
+  section ID is `relevant-tools`.
 - Several tags can be added when one tool belongs in several places.
 
 Sector images live in:

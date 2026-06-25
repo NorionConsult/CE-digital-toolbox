@@ -1,12 +1,40 @@
+/*
+  Placeholder content shared by sector pages that are still being developed.
+  Replace these values inside each individual sector file when final text is ready.
+*/
 export const placeholderParagraphs = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis, nibh non fermentum porttitor, lorem neque consequat arcu, vitae cursus nibh sem sed lectus. Sed euismod, libero in interdum gravida, urna massa volutpat libero, non luctus erat arcu et nibh.',
-  'Praesent vitae justo sed nibh suscipit tincidunt. Maecenas sit amet augue in erat posuere volutpat. Curabitur sed mauris vel neque tincidunt fermentum. Donec at arcu vel massa dictum blandit, vitae consequat lorem.',
-  'Aliquam erat volutpat. Suspendisse potenti. Etiam posuere, nibh at facilisis porttitor, ligula massa interdum lacus, sed luctus mi mi ac neque. Vivamus luctus, lectus sed aliquet posuere, sapien nibh tristique leo, sed feugiat ipsum justo vel erat.'
+  'Add an introductory paragraph explaining why circular economy practices matter for this sector.',
+  'Add practical context about the main resource flows, business pressures and opportunities for SMEs.',
+  'Add a final paragraph that prepares the reader for the sections that follow.'
 ];
 
-export const placeholderChecklist = [
-  'Review the main material, energy and waste flows for this sector.',
-  'Identify where circular economy practices could reduce cost, risk or resource use.',
-  'Check whether relevant internal data is available for the selected tools.',
-  'Select priority actions and assign an owner for follow-up.'
+export const placeholderBarriers = [
+  'Add a key barrier affecting circular economy adoption in this sector.',
+  'Add another operational, market, regulatory or supply-chain barrier.',
+  'Add a barrier that is particularly relevant to SMEs.'
+];
+
+export const placeholderOpportunities = [
+  'Add a key circular economy opportunity for this sector.',
+  'Add an opportunity connected to new services, products or partnerships.',
+  'Add an opportunity that can reduce cost, waste or business risk.'
+];
+
+export const placeholderBestPracticesGroups = [
+  {
+    title: 'Business practices',
+    items: [
+      'Review the main material, energy and waste flows for this sector.',
+      'Identify where circular practices could reduce cost, risk or resource use.',
+      'Select priority actions and assign an owner for follow-up.'
+    ]
+  }
+];
+
+export const placeholderNetworks = [
+  {
+    name: 'Add a network or collaboration',
+    description: 'Describe why this organisation, network or platform is useful for SMEs in this sector.',
+    link: ''
+  }
 ];

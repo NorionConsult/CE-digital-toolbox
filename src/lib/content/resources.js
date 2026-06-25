@@ -46,12 +46,12 @@
   placements: {
     moduleSections: ['diagnose:baseline-mapping'],
     sectors: ['construction'],
-    sectorSections: ['construction:materials']
+    sectorSections: ['construction:relevant-tools']
   },
 
   - moduleSections: module-slug:section-id
-  - sectors: sector page slug, such as construction, food, textiles or tourism
-  - sectorSections: future sector-slug:section-id tags
+  - sectors: sector page slug, such as construction, agriculture, textiles or tourism
+  - sectorSections: sector-slug:section-id tags, such as textiles:relevant-tools
 
   A resource can contain several tags and appear in several locations.
   Leave a list empty when the resource should not appear in that location.
