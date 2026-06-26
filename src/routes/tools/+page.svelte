@@ -1,5 +1,4 @@
 <script>
-  // Compatibility alias: the main page is now /tools/.
   import ToolsPage from '$lib/components/pages/ToolsPage.svelte';
 </script>
 

@@ -1,1 +1,2 @@
-export { entries, load } from '../../library/[slug]/+page.js';
+// Compatibility alias: resource detail pages now live under /tools/[slug]/.
+export { entries, load } from '../../tools/[slug]/+page.js';

@@ -1,7 +1,7 @@
 <script>
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
-  import { libraryPage } from '$lib/content/library-page.js';
+  import { toolsPage } from '$lib/content/tools-page.js';
   import { resources, journeyPhases, sectors, languages, accessOptions } from '$lib/content/resources.js';
 
   let selectedPhase = '';
@@ -39,45 +39,45 @@
 </script>
 
 <svelte:head>
-  <title>{libraryPage.pageTitle}</title>
+  <title>{toolsPage.pageTitle}</title>
 </svelte:head>
 
-<section class="subpage-hero library-hero">
+<section class="subpage-hero tools-hero">
   <div class="container subpage-content">
-    <p class="eyebrow">{libraryPage.eyebrow}</p>
-    <h1>{libraryPage.title}</h1>
-    <p class="subpage-intro">{libraryPage.intro}</p>
+    <p class="eyebrow">{toolsPage.eyebrow}</p>
+    <h1>{toolsPage.title}</h1>
+    <p class="subpage-intro">{toolsPage.intro}</p>
   </div>
 </section>
 
-<section class="library-section">
+<section class="tools-section">
   <div class="container">
-    <form class="filter-panel" aria-label={libraryPage.filtersLabel} on:submit|preventDefault>
+    <form class="filter-panel" aria-label={toolsPage.filtersLabel} on:submit|preventDefault>
       <label class="search-field" for="resource-search">
-        <span>{libraryPage.searchLabel}</span>
+        <span>{toolsPage.searchLabel}</span>
         <input
           id="resource-search"
           type="search"
           bind:value={searchTerm}
-          placeholder={libraryPage.searchPlaceholder}
+          placeholder={toolsPage.searchPlaceholder}
         />
       </label>
 
-      <FilterSelect id="phase-filter" label={libraryPage.phaseLabel} bind:value={selectedPhase} options={journeyPhases} />
-      <FilterSelect id="sector-filter" label={libraryPage.sectorLabel} bind:value={selectedSector} options={sectors} />
-      <FilterSelect id="language-filter" label={libraryPage.languageLabel} bind:value={selectedLanguage} options={languages} />
-      <FilterSelect id="access-filter" label={libraryPage.accessLabel} bind:value={selectedAccess} options={accessOptions} />
+      <FilterSelect id="phase-filter" label={toolsPage.phaseLabel} bind:value={selectedPhase} options={journeyPhases} />
+      <FilterSelect id="sector-filter" label={toolsPage.sectorLabel} bind:value={selectedSector} options={sectors} />
+      <FilterSelect id="language-filter" label={toolsPage.languageLabel} bind:value={selectedLanguage} options={languages} />
+      <FilterSelect id="access-filter" label={toolsPage.accessLabel} bind:value={selectedAccess} options={accessOptions} />
 
-      <button type="button" class="reset-button" on:click={resetFilters}>{libraryPage.resetButton}</button>
+      <button type="button" class="reset-button" on:click={resetFilters}>{toolsPage.resetButton}</button>
     </form>
 
-    <div class="library-results-bar" aria-live="polite">
+    <div class="tools-results-bar" aria-live="polite">
       <p>
-        {libraryPage.resultPrefix}
+        {toolsPage.resultPrefix}
         <strong>{filteredResources.length}</strong>
-        {libraryPage.resultMiddle}
+        {toolsPage.resultMiddle}
         <strong>{resources.length}</strong>
-        {libraryPage.resultSuffix}
+        {toolsPage.resultSuffix}
       </p>
     </div>
 
@@ -89,16 +89,16 @@
       </div>
     {:else}
       <div class="empty-state">
-        <h2>{libraryPage.emptyTitle}</h2>
-        <p>{libraryPage.emptyText}</p>
-        <button type="button" class="reset-button" on:click={resetFilters}>{libraryPage.resetButton}</button>
+        <h2>{toolsPage.emptyTitle}</h2>
+        <p>{toolsPage.emptyText}</p>
+        <button type="button" class="reset-button" on:click={resetFilters}>{toolsPage.resetButton}</button>
       </div>
     {/if}
   </div>
 </section>
 
 <style>
-  .library-hero {
+  .tools-hero {
     padding: 88px 0 72px;
   }
 
@@ -142,7 +142,7 @@
     min-height: 50px;
   }
 
-  .library-results-bar {
+  .tools-results-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;

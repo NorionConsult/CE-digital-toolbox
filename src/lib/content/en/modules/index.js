@@ -61,7 +61,7 @@ import { options } from './options.js';
  *       tip: string;
  *     }[];
  *   };
- *   m3Questionnaire?: {
+ *   m4Questionnaire?: {
  *     title: string;
  *     introduction: string;
  *     businessModelLabel: string;
@@ -75,6 +75,7 @@ import { options } from './options.js';
  *     answeredLabel: string;
  *     downloadLabel: string;
  *     downloadingLabel: string;
+ *     downloadFilename?: string;
  *     pdfDisclaimer: string;
  *     incompleteText: string;
  *     positiveResult: string;
@@ -109,7 +110,7 @@ import { options } from './options.js';
  *   summaryParagraphs?: string[];
  *   summaryChecklist?: string[];
  *   modulePdf: string;
- *   cataloguePdf: string;
+ *   toolsPdf: string;
  * }} ModuleContent
  */
 

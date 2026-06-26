@@ -22,7 +22,7 @@
 
     <div class="hero-actions">
       <a href="{base}/#modules" class="primary-button">{home.hero.primaryButton}</a>
-      <a href="{base}/catalogue/" class="secondary-button">{home.hero.secondaryButton}</a>
+      <a href="{base}/tools/" class="secondary-button">{home.hero.secondaryButton}</a>
     </div>
   </div>
 </section>

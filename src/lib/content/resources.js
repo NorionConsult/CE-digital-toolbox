@@ -1,5 +1,5 @@
 /*
-  Catalogue/resource records.
+  Tools/resource records.
   HOW TO ADD A RESOURCE:
   1. Copy one complete createResource({ ... }) block below.
   2. Give it a unique id, cardNumber and slug.
@@ -10,10 +10,10 @@
   The slug becomes the resource page URL, so use lowercase words separated
   with hyphens and do not reuse a slug from another resource.
 
-  Taxonomy fields used for catalogue filtering and card information:
+  Taxonomy fields used for Tools page filtering and card information:
   - journeyPhase: primary phase retained for compatibility and module matching.
   - journeyPhases: every relevant phase shown as a separate coloured badge,
-    and used by the Catalogue phase filter and resource taxonomy.
+    and used by the Tools phase filter and resource taxonomy.
   - sector: Cross-sector, Manufacturing, etc.
   - language: document or tool language
   - provider: source organisation or provider

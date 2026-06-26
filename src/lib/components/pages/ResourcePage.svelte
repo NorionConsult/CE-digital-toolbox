@@ -30,7 +30,7 @@
 
 <section class="resource-hero">
   <div class="container resource-hero-content">
-    <a href="{base}/catalogue/" class="back-link">Back to catalogue</a>
+    <a href="{base}/tools/" class="back-link">Back to tools</a>
 
     <div class="resource-kicker">
       <span class="resource-card-number">{resource.cardNumber}</span>

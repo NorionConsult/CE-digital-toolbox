@@ -45,6 +45,8 @@
   /** @type {string} */
   export let downloadingLabel = 'Preparing PDF...';
   /** @type {string} */
+  export let downloadFilename = 'quick-scan-results.pdf';
+  /** @type {string} */
   export let pdfDisclaimer;
   /** @type {string} */
   export let positiveResult;
@@ -115,7 +117,7 @@
       /** @type {any} */
       const pdfOptions = {
         margin: [10, 10, 12, 10],
-        filename: 'module-3-options-screening-results.pdf',
+        filename: downloadFilename,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: {
           scale: 2,
@@ -129,7 +131,7 @@
         },
         pagebreak: {
           mode: ['css', 'legacy'],
-          avoid: ['.m3-questionnaire-pdf-category', '.m3-questionnaire-pdf-result']
+          avoid: ['.m4-questionnaire-pdf-category', '.m4-questionnaire-pdf-result']
         }
       };
 
@@ -143,13 +145,13 @@
   }
 </script>
 
-<section class="m3-questionnaire" aria-labelledby="m3-questionnaire-title">
-  <header class="m3-questionnaire-heading">
-    <h3 id="m3-questionnaire-title">{title}</h3>
+<section class="m4-questionnaire" aria-labelledby="m4-questionnaire-title">
+  <header class="m4-questionnaire-heading">
+    <h3 id="m4-questionnaire-title">{title}</h3>
     <p>{introduction}</p>
   </header>
 
-  <label class="m3-questionnaire-model-selector">
+  <label class="m4-questionnaire-model-selector">
     <span>{businessModelLabel}</span>
     <select bind:value={selectedBusinessModel} on:change={handleBusinessModelChange}>
       <option value="" disabled>{businessModelPlaceholder}</option>
@@ -160,12 +162,12 @@
     </select>
   </label>
 
-  <div class="m3-questionnaire-card">
+  <div class="m4-questionnaire-card">
     {#each categories as category, categoryIndex}
-      <section class="m3-questionnaire-category">
+      <section class="m4-questionnaire-category">
         <h4>{category.title}</h4>
 
-        <div class="m3-questionnaire-questions">
+        <div class="m4-questionnaire-questions">
           {#each category.questions as question, questionIndex}
             {@const answerIndex =
               categories
@@ -177,13 +179,13 @@
             {@const questionNoLabel =
               typeof question === 'string' ? noLabel : question.noLabel ?? noLabel}
             <div
-              class="m3-questionnaire-question"
+              class="m4-questionnaire-question"
               role="group"
-              aria-labelledby={`m3-question-${answerIndex}`}
+              aria-labelledby={`m4-question-${answerIndex}`}
             >
-              <p id={`m3-question-${answerIndex}`}>{questionText}</p>
+              <p id={`m4-question-${answerIndex}`}>{questionText}</p>
 
-              <div class="m3-questionnaire-answer-buttons">
+              <div class="m4-questionnaire-answer-buttons">
                 <button
                   type="button"
                   class:active={answers[answerIndex] === true}
@@ -211,7 +213,7 @@
   </div>
 
   <aside
-    class="m3-questionnaire-results"
+    class="m4-questionnaire-results"
     class:complete={isComplete}
     class:positive={hasPotential}
     aria-live="polite"
@@ -222,19 +224,19 @@
     </div>
 
     {#if isComplete}
-      <p class="m3-questionnaire-result-message">
+      <p class="m4-questionnaire-result-message">
         {hasPotential ? positiveResult : negativeResult}
       </p>
-      <p class="m3-questionnaire-score">{yesPercentage}% Yes</p>
+      <p class="m4-questionnaire-score">{yesPercentage}% Yes</p>
     {:else}
-      <p class="m3-questionnaire-result-message">
+      <p class="m4-questionnaire-result-message">
         {selectedBusinessModel ? incompleteText : selectBusinessModelText}
       </p>
     {/if}
 
     <button
       type="button"
-      class="primary-button m3-questionnaire-download"
+      class="primary-button m4-questionnaire-download"
       disabled={!isComplete || isDownloading}
       on:click={downloadResults}
     >
@@ -242,9 +244,9 @@
     </button>
   </aside>
 
-  <div class="m3-questionnaire-pdf-stage" aria-hidden="true">
-    <article class="m3-questionnaire-pdf" bind:this={pdfDocument}>
-      <header class="m3-questionnaire-pdf-header">
+  <div class="m4-questionnaire-pdf-stage" aria-hidden="true">
+    <article class="m4-questionnaire-pdf" bind:this={pdfDocument}>
+      <header class="m4-questionnaire-pdf-header">
         <img src="{base}/logos/logo-toolbox.png" alt="" />
         <div>
           <h1>{title}</h1>
@@ -252,14 +254,14 @@
         </div>
       </header>
 
-      <section class="m3-questionnaire-pdf-model">
+      <section class="m4-questionnaire-pdf-model">
         <span>{businessModelLabel}</span>
         <strong>{selectedBusinessModel}</strong>
       </section>
 
       <main>
         {#each categories as category, categoryIndex}
-          <section class="m3-questionnaire-pdf-category">
+          <section class="m4-questionnaire-pdf-category">
             <h2>{category.title}</h2>
 
             {#each category.questions as question, questionIndex}
@@ -268,7 +270,7 @@
                   .slice(0, categoryIndex)
                   .reduce((total, item) => total + item.questions.length, 0) + questionIndex}
               {@const questionText = typeof question === 'string' ? question : question.text}
-              <div class="m3-questionnaire-pdf-answer">
+              <div class="m4-questionnaire-pdf-answer">
                 <p>{questionText}</p>
                 <strong><span>{getAnswerLabel(question, answers[answerIndex])}</span></strong>
               </div>
@@ -276,7 +278,7 @@
           </section>
         {/each}
 
-        <section class="m3-questionnaire-pdf-result">
+        <section class="m4-questionnaire-pdf-result">
           <div>
             <h2>{resultsTitle}</h2>
             <strong>{yesPercentage}% Yes</strong>
@@ -285,9 +287,9 @@
         </section>
       </main>
 
-      <footer class="m3-questionnaire-pdf-footer">
-        <div class="m3-questionnaire-pdf-logos">
-          <img src="{base}/logos/EU-logo.png" alt="" />
+      <footer class="m4-questionnaire-pdf-footer">
+        <div class="m4-questionnaire-pdf-logos">
+          <img class="m4-questionnaire-pdf-eu-logo" src="{base}/logos/EU-logo.png" alt="" />
           <img src="{base}/logos/EU4Green-logo.png" alt="" />
         </div>
         <p>{pdfDisclaimer}</p>
@@ -297,29 +299,29 @@
 </section>
 
 <style>
-  .m3-questionnaire {
+  .m4-questionnaire {
     display: grid;
     gap: 22px;
     width: min(var(--site-container-max), 92vw);
     margin-top: 42px;
   }
 
-  .m3-questionnaire-heading {
+  .m4-questionnaire-heading {
     display: grid;
     gap: 10px;
     max-width: 980px;
   }
 
-  .m3-questionnaire-heading h3 {
+  .m4-questionnaire-heading h3 {
     font-size: clamp(1.7rem, 3vw, 2.6rem);
     text-transform: uppercase;
   }
 
-  .m3-questionnaire-heading p {
+  .m4-questionnaire-heading p {
     color: var(--muted);
   }
 
-  .m3-questionnaire-model-selector {
+  .m4-questionnaire-model-selector {
     display: grid;
     grid-template-columns: minmax(220px, auto) minmax(260px, 520px);
     gap: 18px;
@@ -331,12 +333,12 @@
     background-color: var(--light-bg);
   }
 
-  .m3-questionnaire-model-selector span {
+  .m4-questionnaire-model-selector span {
     color: var(--dark);
     font-weight: 700;
   }
 
-  .m3-questionnaire-model-selector select {
+  .m4-questionnaire-model-selector select {
     width: 100%;
     min-height: 48px;
     padding: 10px 42px 10px 14px;
@@ -347,12 +349,12 @@
     cursor: pointer;
   }
 
-  .m3-questionnaire-model-selector select:focus {
-    outline: 3px solid color-mix(in srgb, var(--yellow) 40%, transparent);
+  .m4-questionnaire-model-selector select:focus {
+    outline: 3px solid color-mix(in srgb, var(--module-accent) 40%, transparent);
     outline-offset: 2px;
   }
 
-  .m3-questionnaire-card {
+  .m4-questionnaire-card {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
@@ -361,38 +363,38 @@
     background-color: var(--light-bg);
   }
 
-  .m3-questionnaire-category {
+  .m4-questionnaire-category {
     position: relative;
     display: grid;
     gap: 16px;
     min-width: 0;
     padding: 22px;
     overflow: hidden;
-    border: 1px solid color-mix(in srgb, var(--yellow) 65%, var(--dark));
+    border: 1px solid color-mix(in srgb, var(--module-accent) 65%, var(--dark));
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--yellow) 12%, var(--white));
+    background-color: color-mix(in srgb, var(--module-accent) 12%, var(--white));
   }
 
-  .m3-questionnaire-category::before {
+  .m4-questionnaire-category::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 8px;
-    background-color: var(--yellow);
+    background-color: var(--module-accent);
   }
 
-  .m3-questionnaire-category h4 {
+  .m4-questionnaire-category h4 {
     color: var(--dark);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: 1.45rem;
   }
 
-  .m3-questionnaire-questions {
+  .m4-questionnaire-questions {
     display: grid;
     gap: 14px;
   }
 
-  .m3-questionnaire-question {
+  .m4-questionnaire-question {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 16px;
@@ -402,22 +404,22 @@
     border-top: 1px solid rgba(10, 46, 54, 0.14);
   }
 
-  .m3-questionnaire-question:first-child {
+  .m4-questionnaire-question:first-child {
     padding-top: 0;
     border-top: 0;
   }
 
-  .m3-questionnaire-question p {
+  .m4-questionnaire-question p {
     color: var(--text);
     line-height: 1.35;
   }
 
-  .m3-questionnaire-answer-buttons {
+  .m4-questionnaire-answer-buttons {
     display: flex;
     gap: 8px;
   }
 
-  .m3-questionnaire-answer-buttons button {
+  .m4-questionnaire-answer-buttons button {
     min-width: 64px;
     padding: 9px 14px;
     border: 2px solid var(--dark);
@@ -433,17 +435,17 @@
       transform 0.18s ease;
   }
 
-  .m3-questionnaire-answer-buttons button:hover {
+  .m4-questionnaire-answer-buttons button:hover {
     transform: translateY(-1px);
     background-color: color-mix(in srgb, var(--module-accent) 30%, var(--white));
   }
 
-  .m3-questionnaire-answer-buttons button.active {
+  .m4-questionnaire-answer-buttons button.active {
     background-color: var(--dark);
     color: var(--white);
   }
 
-  .m3-questionnaire-answer-buttons button:disabled {
+  .m4-questionnaire-answer-buttons button:disabled {
     border-color: var(--soft-border);
     background-color: transparent;
     color: var(--muted);
@@ -451,7 +453,7 @@
     opacity: 0.68;
   }
 
-  .m3-questionnaire-results {
+  .m4-questionnaire-results {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 18px 30px;
@@ -462,59 +464,59 @@
     background-color: var(--light-bg);
   }
 
-  .m3-questionnaire-results > div {
+  .m4-questionnaire-results > div {
     display: grid;
     gap: 2px;
   }
 
-  .m3-questionnaire-results h4 {
+  .m4-questionnaire-results h4 {
     color: var(--dark);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: 1.45rem;
     text-transform: uppercase;
   }
 
-  .m3-questionnaire-results > div p,
-  .m3-questionnaire-score {
+  .m4-questionnaire-results > div p,
+  .m4-questionnaire-score {
     color: var(--muted);
     font-size: 0.92rem;
     font-weight: 700;
   }
 
-  .m3-questionnaire-results.complete {
+  .m4-questionnaire-results.complete {
     border-color: var(--blue);
     background-color: color-mix(in srgb, var(--blue) 8%, var(--white));
   }
 
-  .m3-questionnaire-results.complete.positive {
+  .m4-questionnaire-results.complete.positive {
     border-color: var(--green-secondary);
     background-color: color-mix(in srgb, var(--green-secondary) 10%, var(--white));
   }
 
-  .m3-questionnaire-result-message {
+  .m4-questionnaire-result-message {
     color: var(--dark);
     line-height: 1.4;
   }
 
-  .m3-questionnaire-score {
+  .m4-questionnaire-score {
     grid-column: 2;
   }
 
-  .m3-questionnaire-download {
+  .m4-questionnaire-download {
     grid-column: 3;
     grid-row: 1 / span 2;
     align-self: center;
     white-space: nowrap;
   }
 
-  .m3-questionnaire-download:disabled {
+  .m4-questionnaire-download:disabled {
     border-color: var(--soft-border);
     background-color: var(--soft-border);
     color: var(--muted);
     cursor: not-allowed;
   }
 
-  .m3-questionnaire-pdf-stage {
+  .m4-questionnaire-pdf-stage {
     position: fixed;
     top: 0;
     left: -100000px;
@@ -522,7 +524,7 @@
     pointer-events: none;
   }
 
-  .m3-questionnaire-pdf {
+  .m4-questionnaire-pdf {
     width: 718px;
     padding: 38px;
     background-color: #ffffff;
@@ -531,21 +533,21 @@
     line-height: 1.35;
   }
 
-  .m3-questionnaire-pdf-header {
+  .m4-questionnaire-pdf-header {
     display: grid;
     grid-template-columns: 72px minmax(0, 1fr);
     gap: 20px;
     align-items: center;
     padding-bottom: 22px;
-    border-bottom: 5px solid #ffcc00;
+    border-bottom: 5px solid var(--module-accent);
   }
 
-  .m3-questionnaire-pdf-header img {
+  .m4-questionnaire-pdf-header img {
     width: 72px;
     height: auto;
   }
 
-  .m3-questionnaire-pdf h1 {
+  .m4-questionnaire-pdf h1 {
     margin: 0 0 8px;
     color: #0a2e36;
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
@@ -554,13 +556,13 @@
     text-transform: uppercase;
   }
 
-  .m3-questionnaire-pdf-header p {
+  .m4-questionnaire-pdf-header p {
     margin: 0;
     color: #637173;
     font-size: 14px;
   }
 
-  .m3-questionnaire-pdf-model {
+  .m4-questionnaire-pdf-model {
     display: grid;
     grid-template-columns: 210px minmax(0, 1fr);
     gap: 18px;
@@ -571,42 +573,42 @@
     background-color: #f7f7f2;
   }
 
-  .m3-questionnaire-pdf-model span {
+  .m4-questionnaire-pdf-model span {
     color: #637173;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
   }
 
-  .m3-questionnaire-pdf-model strong {
+  .m4-questionnaire-pdf-model strong {
     color: #0a2e36;
     font-size: 14px;
   }
 
-  .m3-questionnaire-pdf main {
+  .m4-questionnaire-pdf main {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px;
     margin-top: 20px;
   }
 
-  .m3-questionnaire-pdf-category {
+  .m4-questionnaire-pdf-category {
     padding: 16px;
-    border-left: 7px solid #ffcc00;
+    border-left: 7px solid var(--module-accent);
     border-radius: 10px;
-    background-color: #fff9df;
+    background-color: color-mix(in srgb, var(--module-accent) 12%, #ffffff);
     break-inside: avoid;
   }
 
-  .m3-questionnaire-pdf-category h2,
-  .m3-questionnaire-pdf-result h2 {
+  .m4-questionnaire-pdf-category h2,
+  .m4-questionnaire-pdf-result h2 {
     margin: 0 0 12px;
     color: #0a2e36;
     font-size: 18px;
     text-transform: uppercase;
   }
 
-  .m3-questionnaire-pdf-answer {
+  .m4-questionnaire-pdf-answer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
@@ -615,12 +617,12 @@
     border-top: 1px solid #d8ddd8;
   }
 
-  .m3-questionnaire-pdf-answer p {
+  .m4-questionnaire-pdf-answer p {
     margin: 0;
     font-size: 12px;
   }
 
-  .m3-questionnaire-pdf-answer strong {
+  .m4-questionnaire-pdf-answer strong {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -639,12 +641,12 @@
     html2canvas paints the bold font baseline slightly too low even when the
     badge container is centered. Move only the rendered glyphs upward.
   */
-  .m3-questionnaire-pdf-answer strong span {
+  .m4-questionnaire-pdf-answer strong span {
     display: block;
     transform: translateY(-2px);
   }
 
-  .m3-questionnaire-pdf-result {
+  .m4-questionnaire-pdf-result {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 160px minmax(0, 1fr);
@@ -657,18 +659,18 @@
     break-inside: avoid;
   }
 
-  .m3-questionnaire-pdf-result h2 {
+  .m4-questionnaire-pdf-result h2 {
     margin-bottom: 4px;
   }
 
-  .m3-questionnaire-pdf-result p {
+  .m4-questionnaire-pdf-result p {
     margin: 0;
     font-size: 13px;
   }
 
-  .m3-questionnaire-pdf-footer {
+  .m4-questionnaire-pdf-footer {
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 330px minmax(0, 1fr);
     gap: 18px;
     align-items: center;
     margin-top: 22px;
@@ -677,20 +679,19 @@
     break-inside: avoid;
   }
 
-  .m3-questionnaire-pdf-logos {
-    display: grid;
-    grid-template-columns: 88px 88px;
+  .m4-questionnaire-pdf-logos {
+    display: flex;
     gap: 10px;
     align-items: center;
   }
 
-  .m3-questionnaire-pdf-logos img {
-    width: 100%;
-    max-height: 52px;
+  .m4-questionnaire-pdf-logos img {
+    width: auto;
+    height: 52px;
     object-fit: contain;
   }
 
-  .m3-questionnaire-pdf-footer p {
+  .m4-questionnaire-pdf-footer p {
     margin: 0;
     color: #637173;
     font-size: 9px;
@@ -698,43 +699,43 @@
   }
 
   @media (max-width: 900px) {
-    .m3-questionnaire-card {
+    .m4-questionnaire-card {
       grid-template-columns: 1fr;
     }
   }
 
   @media (max-width: 640px) {
-    .m3-questionnaire-model-selector {
+    .m4-questionnaire-model-selector {
       grid-template-columns: 1fr;
       width: 100%;
     }
 
-    .m3-questionnaire-card {
+    .m4-questionnaire-card {
       padding: 14px;
     }
 
-    .m3-questionnaire-category {
+    .m4-questionnaire-category {
       padding: 18px;
     }
 
-    .m3-questionnaire-question,
-    .m3-questionnaire-results {
+    .m4-questionnaire-question,
+    .m4-questionnaire-results {
       grid-template-columns: 1fr;
     }
 
-    .m3-questionnaire-answer-buttons {
+    .m4-questionnaire-answer-buttons {
       width: 100%;
     }
 
-    .m3-questionnaire-answer-buttons button {
+    .m4-questionnaire-answer-buttons button {
       flex: 1;
     }
 
-    .m3-questionnaire-score {
+    .m4-questionnaire-score {
       grid-column: 1;
     }
 
-    .m3-questionnaire-download {
+    .m4-questionnaire-download {
       grid-column: 1;
       grid-row: auto;
       width: 100%;

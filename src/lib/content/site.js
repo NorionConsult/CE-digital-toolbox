@@ -31,9 +31,9 @@ export const site = {
   },
   navigation: [
     { label: 'Modules', href: '/#modules' },
-    { label: 'Sector Packages', href: '/#sectors' },
-    { label: 'Catalogue', href: '/catalogue/' },
+    { label: 'Tools', href: '/tools/' },
     { label: 'Cases', href: '/cases/' },
+    { label: 'Sector Packages', href: '/#sectors' },
     { label: 'About', href: '/#about' },
     { label: 'Contact', href: '/#contact' }
   ]

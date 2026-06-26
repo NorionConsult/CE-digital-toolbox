@@ -3,23 +3,41 @@
   import { modulePage } from '$lib/content/module-page.js';
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
-  import M3Questionnaire from '$lib/components/sections/M3Questionnaire.svelte';
+  import M4Questionnaire from '$lib/components/sections/M4Questionnaire.svelte';
   import MaturityCurve from '$lib/components/sections/MaturityCurve.svelte';
 
   export let data;
-  const { module, relatedResources, nextModule } = data;
+  /** @type {any} */
+  let module;
+  /** @type {any[]} */
+  let relatedResources = [];
+  /** @type {any} */
+  let nextModule = null;
+  $: ({ module, relatedResources, nextModule } = data);
 
   let checkedSummaryItems = [];
+  let currentModuleSlug = '';
   /** @type {{ src: string; alt: string; caption?: string } | null} */
   let zoomedImage = null;
 
-  $: moduleSections = module.sections ?? [];
-  $: summaryChecklist = module.summaryChecklist ?? [];
+  $: if (module?.slug && module.slug !== currentModuleSlug) {
+    currentModuleSlug = module.slug;
+    checkedSummaryItems = [];
+  }
+
+  $: moduleSections = module?.sections ?? [];
+  $: summaryChecklist = module?.summaryChecklist ?? [];
+  $: isSummaryComplete =
+    summaryChecklist.length > 0 && checkedSummaryItems.length === summaryChecklist.length;
 
   /**
-   * @param {{ resourceTag?: string }} section
+   * @param {{ resourceTag?: string; showAllModuleTools?: boolean }} section
    */
   function getSectionResources(section) {
+    if (section.showAllModuleTools) {
+      return relatedResources;
+    }
+
     if (!section.resourceTag) {
       return [];
     }
@@ -76,8 +94,8 @@
           {modulePage.moduleDownload}
         </a>
 
-        <a href="{base}{module.cataloguePdf}" class="download-button secondary" download>
-          {modulePage.catalogueDownload}
+        <a href="{base}{module.toolsPdf}" class="download-button secondary" download>
+          {modulePage.toolsDownload}
         </a>
       
       </div>
@@ -187,8 +205,8 @@
             {/if}
           {/each}
 
-          {#if section.m3Questionnaire}
-            <M3Questionnaire {...section.m3Questionnaire} />
+          {#if section.m4Questionnaire}
+            <M4Questionnaire {...section.m4Questionnaire} />
           {/if}
 
           {#if section.factbox}
@@ -287,6 +305,64 @@
             </div>
           {/if}
 
+          {#if section.learningResources}
+            <div class="m1-learning-resource-list" aria-label="Learning resources">
+              {#each section.learningResources.cards as card}
+                <article class="m1-learning-resource-item">
+                  <div class="m1-learning-resource-card">
+                    <div>
+                      <p class="m1-learning-resource-badge">
+                        {section.learningResources.labels?.badge ?? 'Learning resource'}
+                      </p>
+                      <h3>{card.courseTitle}</h3>
+                      <p>{card.shortDescription}</p>
+                    </div>
+
+                    <dl class="m1-learning-resource-meta" aria-label="Course information">
+                      <div>
+                        <dt>Language</dt>
+                        <dd>{card.language}</dd>
+                      </div>
+                      <div>
+                        <dt>Provider</dt>
+                        <dd>{card.provider}</dd>
+                      </div>
+                    </dl>
+
+                    <a href={card.url} class="resource-link" target="_blank" rel="noreferrer">
+                      {card.buttonLabel ?? 'Open resource'}
+                    </a>
+                  </div>
+
+                  <div class="m1-learning-resource-details">
+                    <section>
+                      <h3>{section.learningResources.labels?.about ?? 'What is this?'}</h3>
+                      {#each card.aboutCourse as paragraph}
+                        <p>{paragraph}</p>
+                      {/each}
+                    </section>
+
+                    <section>
+                      <h3>{section.learningResources.labels?.learningGoals ?? 'Learning goals'}</h3>
+                      <ul>
+                        {#each card.learningGoals as goal}
+                          <li>{goal}</li>
+                        {/each}
+                      </ul>
+                    </section>
+
+                    <section>
+                      <h3>{section.learningResources.labels?.whyTakeCourse ?? 'Why should I take this course?'}</h3>
+                      {#each card.whyTakeCourse as paragraph}
+                        <p>{paragraph}</p>
+                      {/each}
+                    </section>
+                  </div>
+                </article>
+              {/each}
+            </div>
+          {/if}
+
         </article>
 
         {#if section.image}
@@ -363,67 +439,96 @@
         </div>
       {/if}
 
-      <div class="container module-detail-tools">
-        <div class="section-intro">
-          <h3 class="subsection-title">{modulePage.relatedTitle}</h3>
-        </div>
-
-        {#if sectionResources.length > 0}
-          <div class="module-resource-grid embedded-resource-grid">
-            {#each sectionResources as resource (resource.id)}
-              <ResourceCard {resource} variant="compact" />
-            {/each}
+      {#if section.showRelevantTools !== false}
+        <div class="container module-detail-tools">
+          <div class="section-intro">
+            <h3 class="subsection-title">{modulePage.relatedTitle}</h3>
           </div>
-        {:else}
-          <p class="module-empty-tools">{modulePage.relatedEmpty}</p>
-        {/if}
-      </div>
+
+          {#if sectionResources.length > 0}
+            <div class="module-resource-grid embedded-resource-grid">
+              {#each sectionResources as resource (resource.id)}
+                <ResourceCard {resource} variant="compact" />
+              {/each}
+            </div>
+          {:else}
+            <p class="module-empty-tools">{modulePage.relatedEmpty}</p>
+          {/if}
+        </div>
+      {/if}
     </section>
   {/each}
 
-  <section class="module-summary-section {module.colourClass}">
-    <div class="container module-summary-content">
-      <div class="module-summary-copy">
-        <p class="eyebrow">{module.shortName}</p>
-        <h2>{module.summaryTitle}</h2>
+  {#if module.summaryTitle}
+    <section class="module-summary-section {module.colourClass}">
+      <div class="container module-summary-content">
+        <div class="module-summary-copy">
+          <p class="eyebrow">{module.shortName}</p>
+          <h2>{module.summaryTitle}</h2>
 
-        <div class="module-summary-text">
-          {#each module.summaryParagraphs ?? [module.summaryText] as paragraph}
-            {#if paragraph}
-              <p>{paragraph}</p>
-            {/if}
-          {/each}
-        </div>
+          <div class="module-summary-text">
+            {#each module.summaryParagraphs ?? [module.summaryText] as paragraph}
+              {#if paragraph}
+                <p>{paragraph}</p>
+              {/if}
+            {/each}
+          </div>
 
-        {#if nextModule}
-          <a
-            href="{base}/modules/{nextModule.slug}/"
-            class="back-link summary-copy-next-link"
-            aria-label="Go to {nextModule.shortName}: {nextModule.title}"
-          >
-            Next module
+          <a href="{base}/#modules" class="back-link summary-copy-next-link">
+            {modulePage.summaryBackLink}
           </a>
-        {/if}
-      </div>
-
-      <div class="module-summary-checklist" aria-label={module.summaryTitle}>
-        <div class="summary-progress">
-          <h3>Checklist</h3>
-          <p>{checkedSummaryItems.length} / {summaryChecklist.length} complete</p>
         </div>
 
-        <div class="summary-items">
-          {#each summaryChecklist as item, index}
-            <label>
-              <input type="checkbox" bind:group={checkedSummaryItems} value={index} />
-              <span>{item}</span>
-            </label>
-          {/each}
-        </div>
+        <div class="module-summary-checklist" aria-label={module.summaryTitle}>
+          <div class="summary-progress">
+            <h3>Checklist</h3>
+            <p>{checkedSummaryItems.length} / {summaryChecklist.length} complete</p>
+          </div>
 
+          <div class="summary-items">
+            {#each summaryChecklist as item, index}
+              <label>
+                <input type="checkbox" bind:group={checkedSummaryItems} value={index} />
+                <span>{item}</span>
+              </label>
+            {/each}
+          </div>
+
+          {#if isSummaryComplete}
+            <div class="summary-completion">
+              {#if module.slug === 'monitor'}
+                <div class="summary-final-message">
+                  <p>{modulePage.finalCongratulations}</p>
+                </div>
+
+                <div class="summary-completion-actions">
+                  <a href="{base}/#sectors" class="secondary-button">
+                    {modulePage.exploreSectors}
+                  </a>
+                  <a href="{base}/cases/" class="secondary-button">
+                    {modulePage.seeCases}
+                  </a>
+                  <a href="{base}/tools/" class="secondary-button">
+                    {modulePage.seeTools}
+                  </a>
+                </div>
+              {:else if nextModule}
+                <div class="summary-completion-actions">
+                  <a
+                    href="{base}/modules/{nextModule.slug}/"
+                    class="pathway-link summary-next-module-link"
+                    aria-label="Go to {nextModule.shortName}: {nextModule.title}"
+                  >
+                    {modulePage.nextModule}
+                  </a>
+                </div>
+              {/if}
+            </div>
+          {/if}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  {/if}
 {:else}
   <section class="module-tools-section">
     <div class="container">
@@ -663,6 +768,10 @@
     background-color: var(--blue);
   }
 
+  .summary-next-module-link {
+    margin-top: 0;
+  }
+
   .module-detail-section {
     padding: 72px 0;
     background-color: var(--white);
@@ -768,7 +877,7 @@
   .business-model-card {
     min-width: 0;
     padding: 24px;
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--module-accent);
     border-radius: 15px;
     background-color: var(--white);
     box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
@@ -796,7 +905,7 @@
   .business-model-card-icon {
     width: 30px;
     height: 30px;
-    background-color: var(--yellow);
+    background-color: var(--module-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
@@ -838,7 +947,7 @@
   }
 
   .business-model-card-heading:hover .business-model-card-toggle {
-    background-color: color-mix(in srgb, var(--yellow) 35%, var(--white));
+    background-color: color-mix(in srgb, var(--module-accent) 25%, var(--white));
   }
 
   .business-model-card[open] .business-model-card-toggle::after {
@@ -850,7 +959,7 @@
   }
 
   .business-model-card[open] .business-model-card-heading {
-    border-bottom-color: var(--yellow);
+    border-bottom-color: var(--module-accent);
   }
 
   .business-model-card-content {
@@ -1049,6 +1158,144 @@
 
   .module-detail-tools {
     margin-top: 46px;
+  }
+
+  .m1-learning-resource-list {
+    display: grid;
+    gap: 28px;
+    width: min(var(--site-container-max), 92vw);
+    margin-top: 36px;
+  }
+
+  .m1-learning-resource-item {
+    display: grid;
+    grid-template-columns: var(--embedded-tool-card-width) minmax(280px, 1fr);
+    gap: 30px;
+    align-items: start;
+    padding: 24px;
+    border-radius: 15px;
+    background-color: color-mix(in srgb, var(--module-accent) 24%, var(--white));
+  }
+
+  .m1-learning-resource-item + .m1-learning-resource-item {
+    margin-top: 0;
+  }
+
+  .m1-learning-resource-card {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--white);
+    border: 1px solid var(--soft-border);
+    border-radius: 22px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    min-height: 330px;
+    box-shadow: 0 8px 24px rgba(10, 46, 54, 0.06);
+  }
+
+  .m1-learning-resource-badge {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    border: 1px solid var(--module-border);
+    border-radius: 999px;
+    background-color: var(--module-bg);
+    color: var(--module-text);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .m1-learning-resource-card h3 {
+    color: var(--dark);
+    font-size: var(--tool-card-title-size, 1.65rem);
+    line-height: 1.1;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .m1-learning-resource-card p {
+    color: var(--muted);
+  }
+
+  .m1-learning-resource-meta {
+    display: grid;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .m1-learning-resource-meta div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    border-top: 1px solid var(--soft-border);
+    padding-top: 10px;
+  }
+
+  .m1-learning-resource-meta dt {
+    color: var(--dark);
+    font-weight: 700;
+  }
+
+  .m1-learning-resource-meta dd {
+    margin: 0;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .m1-learning-resource-card .resource-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--action-button-padding);
+    border: 2px solid var(--dark);
+    border-radius: var(--action-button-radius);
+    background-color: var(--dark);
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .m1-learning-resource-card .resource-link:hover {
+    border-color: var(--blue);
+    background-color: var(--blue);
+  }
+
+  .m1-learning-resource-details {
+    display: grid;
+    gap: 20px;
+    padding: 8px 4px;
+  }
+
+  .m1-learning-resource-details section {
+    display: grid;
+    gap: 6px;
+  }
+
+  .m1-learning-resource-details h3 {
+    color: var(--dark);
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .m1-learning-resource-details p,
+  .m1-learning-resource-details li {
+    color: var(--dark);
+    font-size: 0.98rem;
+    line-height: 1.35;
+  }
+
+  .m1-learning-resource-details ul {
+    margin: 0;
+    padding-left: 22px;
   }
 
   .hotspot-factbox {
@@ -1279,6 +1526,30 @@
     accent-color: var(--green-primary);
   }
 
+  .summary-completion {
+    display: grid;
+    gap: 18px;
+  }
+
+  .summary-final-message {
+    padding: 18px 20px;
+    border-radius: 15px;
+    background-color: color-mix(in srgb, var(--green-secondary) 16%, var(--white));
+    border: 2px solid var(--green-secondary);
+  }
+
+  .summary-final-message p {
+    color: var(--dark);
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .summary-completion-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
   @media (max-width: 900px) {
     .module-hero-content {
       grid-template-columns: 1fr;
@@ -1319,6 +1590,7 @@
 
     .module-body-content,
     .module-detail-layout,
+    .m1-learning-resource-item,
     .module-summary-content {
       grid-template-columns: 1fr;
     }

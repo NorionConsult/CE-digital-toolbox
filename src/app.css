@@ -25,7 +25,7 @@
     Card controls are intentionally separated by card type:
     - home module package cards
     - home sector package cards
-    - tool/resource cards used in the catalogue and inside module/sector pages
+    - tool/resource cards used on the Tools page and inside module/sector pages
   */
   --home-module-card-title-size: 2.4rem;
   --home-sector-card-title-size: 2rem;
@@ -34,7 +34,7 @@
   /*
     Embedded tool cards appear inside module and sector pages.
     These values only change spacing/layout, not typography.
-    Catalogue tool cards keep the larger default spacing.
+    Tools page cards keep the larger default spacing.
   */
   --embedded-tool-card-padding: 20px;
   --embedded-tool-card-gap: 16px;
@@ -50,7 +50,7 @@
 
 /*
   Shared module colour tokens.
-  The module cards, catalogue resource cards and resource pages all use these
+  The module cards, Tools page resource cards and resource pages all use these
   same classes, so changing a module colour only needs to happen here.
 */
 .module-card-green {
@@ -138,7 +138,7 @@ a {
 
 /*
   Tool-card grids inside module and sector pages.
-  Cards keep a catalogue-sized width instead of stretching when a row is not full.
+  Cards keep a Tools-page-sized width instead of stretching when a row is not full.
   More columns are added automatically whenever the container is wide enough.
 */
 .embedded-resource-grid {
@@ -282,7 +282,7 @@ h3,
 }
 
 .modules-section,
-.library-section,
+.tools-section,
 .sectors-section {
   padding: 50px 0;
   background-color: var(--white);

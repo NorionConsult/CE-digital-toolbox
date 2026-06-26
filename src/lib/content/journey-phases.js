@@ -2,7 +2,7 @@ import { modules } from '$lib/content/modules.js';
 
 /*
   Resource phase badges use the same colour classes as their matching modules.
-  This keeps catalogue cards, embedded cards and resource pages in sync.
+  This keeps Tools page cards, embedded cards and resource pages in sync.
 */
 /**
  * @param {string} journeyPhase

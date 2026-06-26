@@ -39,7 +39,7 @@
     </div>
   </dl>
 
-  <a href="{base}/catalogue/{resource.slug}/" class="resource-link">{site.labels.viewResource}</a>
+  <a href="{base}/tools/{resource.slug}/" class="resource-link">{site.labels.viewResource}</a>
 </article>
 
 <style>

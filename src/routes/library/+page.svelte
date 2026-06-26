@@ -1,5 +1,6 @@
 <script>
-  import CataloguePage from '$lib/components/pages/CataloguePage.svelte';
+  // Legacy alias from the early "Library" name. The main page is now /tools/.
+  import ToolsPage from '$lib/components/pages/ToolsPage.svelte';
 </script>
 
-<CataloguePage />
+<ToolsPage />

@@ -119,7 +119,7 @@ const moduleSummary = {
 /* File links normally do not need editing. */
 const downloads = {
   modulePdf: '/downloads/modules/module-5-implement.pdf',
-  cataloguePdf: '/downloads/tool-catalogue.pdf'
+  toolsPdf: '/downloads/tool-catalogue.pdf'
 };
 
 export const implement = defineModulePage({

@@ -7,8 +7,8 @@ site.js              Global site name, header logo, navigation, contact email, f
 home.js              Home page text
 modules.js           Loads the current language module files
 sectors.js           Loads the current language sector files
-resources.js         Catalogue/resource cards, taxonomy, page text and tool links
-library-page.js      Catalogue page intro, filter labels and empty state text
+resources.js         Tools/resource cards, taxonomy, page text and tool links
+tools-page.js        Tools page intro, filter labels and empty state text
 cases.js             Case cards, taxonomy and automatically generated case pages
 cases-page.js        Cases page intro, filter labels and empty state text
 module-page.js       Labels shared by all module detail pages
@@ -41,6 +41,56 @@ Important editing notes:
 - Keep `slug`, `sectionId`, `id`, `resourceTag` and `colourClass` unchanged unless the website structure is also being updated.
 - A pathway card and its detailed section are connected when `sectionId` and `id` contain the same value.
 - `_shared.js` assembles the page data and normally should not be edited.
+
+### Awareness Learning Resource Cards
+
+The Awareness module has a special learning resources section for e-courses and
+introductory learning links. Edit it here:
+
+```text
+src/lib/content/en/modules/awareness.js
+```
+
+Inside `LearningresourcesSection`, edit `learningResources.cards`. Each card is
+shown directly on the Awareness page and does not create a separate subpage.
+Each card creates one green learning-resource container: the card preview on
+the left and the matching explanation text on the right. Copy one complete card
+object to add another course:
+
+```js
+{
+  courseTitle: 'Course title here',
+  shortDescription: 'Short description here.',
+  language: 'English',
+  provider: 'Provider name',
+  url: 'https://example.com',
+  buttonLabel: 'Open resource',
+  aboutCourse: [
+    'Short explanation of the course.'
+  ],
+  learningGoals: [
+    'Objective 1',
+    'Objective 2'
+  ],
+  whyTakeCourse: [
+    'Why this course is useful.'
+  ]
+}
+```
+
+The right-side headings are edited in `learningResources.labels`. Keep the
+current labels `What is this?`, `Learning goals` and
+`Why should I take this course?` if you want the section structure to stay the
+same.
+
+Normal tool cards are still edited in `resources.js`. To place a normal tool in
+the Awareness page's Relevant tools section, add this tag to the tool:
+
+```js
+placements: {
+  moduleSections: ['awareness:relevant-tools']
+}
+```
 
 To edit one sector page, open its file:
 
@@ -139,7 +189,7 @@ PDF files live in:
 static/downloads/
 ```
 
-Catalogue resources are now pages generated from `resources.js`; they do not need PDF files unless a future resource explicitly links to one.
+Tools resources are now pages generated from `resources.js`; they do not need PDF files unless a future resource explicitly links to one.
 
 ## Adding Cases
 
@@ -168,7 +218,7 @@ Sector badge colours are assigned automatically. Agriculture, Construction,
 Textiles and Tourism have fixed theme colours. New sector names are also
 supported and receive a consistent generated outline colour.
 
-## Adding Catalogue Resources
+## Adding Tools Resources
 
 To add a resource, open:
 
@@ -211,12 +261,12 @@ journeyPhases: ['Monitor', 'Business Case', 'Options'],
 ```
 
 This example automatically displays three separately coloured badges on the
-Catalogue card, embedded module/sector cards and the resource page. Global
+Tools card, embedded module/sector cards and the resource page. Global
 module colours are maintained in `src/app.css`.
 
 ### Placing Cards on Other Pages
 
-To control where a catalogue tool appears, edit its `placements` block:
+To control where a tool appears, edit its `placements` block:
 
 ```js
 placements: {

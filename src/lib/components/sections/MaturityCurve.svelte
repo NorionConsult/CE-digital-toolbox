@@ -88,7 +88,7 @@
         { text: 'Recommended next step: use ' },
         { text: 'Module 6', href: '/modules/monitor/' },
         {
-          text: ' (Monitor) to keep improving. Share your experience with us, to inspire others by including you in the case catalogue!'
+          text: ' (Monitor) to keep improving. Share your experience with us, to inspire others by including you in the case collection!'
         }
       ]
     }

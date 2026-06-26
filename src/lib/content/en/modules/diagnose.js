@@ -158,7 +158,7 @@ const moduleSummary = {
   title: 'Module Summary',
   paragraphs: [
     'Use this checklist to confirm that the diagnose work has created a practical baseline before moving to the options module.',
-    'To continue to the next module, click below or go back to home to find the next suitable module, sector, or explore the tool catalogue.'
+    'To continue to the next module, click below or go back to home to find the next suitable module, sector, or explore the tools page.'
   ],
   checklist: [
     'Understood what the Circular Economy is and why it matters for your business.',
@@ -173,7 +173,7 @@ const moduleSummary = {
 /* File links normally do not need editing. */
 const downloads = {
   modulePdf: '/downloads/modules/module-2-diagnose.pdf',
-  cataloguePdf: '/downloads/tool-catalogue.pdf'
+  toolsPdf: '/downloads/tool-catalogue.pdf'
 };
 
 export const diagnose = defineModulePage({

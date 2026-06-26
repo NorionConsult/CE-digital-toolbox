@@ -139,7 +139,7 @@ const moduleSummary = {
 /* File links normally do not need editing. */
 const downloads = {
   modulePdf: '/downloads/modules/module-6-monitor.pdf',
-  cataloguePdf: '/downloads/tool-catalogue.pdf'
+  toolsPdf: '/downloads/tool-catalogue.pdf'
 };
 
 export const monitor = defineModulePage({

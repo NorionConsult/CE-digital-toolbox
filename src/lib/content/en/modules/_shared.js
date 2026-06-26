@@ -27,7 +27,7 @@ export const placeholderImages = [
 /**
  * @param {{
  *   moduleCard: Record<string, any>;
- *   hero: Record<string, any>;
+ *   hero: Record<string, any> & { paragraphs?: string[]; bodyParagraphs?: string[] };
  *   sectionButtons?: { sectionId: string; label: string }[];
  *   pathwaySection?: {
  *     title: string;
@@ -51,7 +51,7 @@ export const placeholderImages = [
  *     paragraphs: string[];
  *     checklist: string[];
  *   } | null;
- *   downloads: { modulePdf: string; cataloguePdf: string };
+ *   downloads: { modulePdf: string; toolsPdf: string };
  * }} config
  * @returns {any}
  */
@@ -95,13 +95,13 @@ export function defineModulePage(config) {
     ...moduleCard,
     ...hero,
     bodyTitle: pathwaySection?.title ?? hero.bodyTitle,
-    bodyParagraphs: pathwaySection?.paragraphs ?? hero.bodyParagraphs ?? [],
+    bodyParagraphs: pathwaySection?.paragraphs ?? hero.paragraphs ?? hero.bodyParagraphs ?? [],
     bodyImages: pathwaySection?.images ?? hero.bodyImages ?? [],
     sections,
     summaryTitle: moduleSummary?.title,
     summaryParagraphs: moduleSummary?.paragraphs,
     summaryChecklist: moduleSummary?.checklist,
     modulePdf: downloads.modulePdf,
-    cataloguePdf: downloads.cataloguePdf
+    toolsPdf: downloads.toolsPdf
   };
 }
