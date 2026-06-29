@@ -126,6 +126,9 @@ export const resources = [
       'The SME Reporting Tool is provided as a free resource to enable SMEs to create a climate report summarizing their annual greenhouse gas emissions, including the actions they are taking and the impact of their emissions reduction effort.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor', 'Business Case', 'Options'],
+    placements: {
+      moduleSections: ['monitor:measuring-success'],
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'SME Climate Hub',
@@ -149,6 +152,9 @@ export const resources = [
       'CircularTracker provides a fast, simple, and standardised way to assess and compare the circularity of your products. Powered by the ISO-compliant Product Circularity Data Sheet (PCDS), it delivers data-driven insights to support sustainable product decisions.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor', 'Diagnose'],
+    placements: {
+      moduleSections: ['monitor:measuring-success'],
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: '+Impakt (a Sweco product)',
@@ -172,6 +178,9 @@ export const resources = [
       'Circulytics is a framework of indicators for tracking circular economy performance. It allows companies to highlight successes in their transition, and identify where to focus efforts for improvement in line with the three principles of a circular economy, all driven by design: eliminate waste and pollution, circulate products and materials, and regenerate nature.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor'],
+     placements: {
+      moduleSections: ['monitor:choosing-indicators']
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Ellen MacArthur Foundation',
@@ -196,6 +205,9 @@ export const resources = [
       'The tool structures data and calculates outcomes, supporting businesses in taking concrete actions towards their circularity goals. It also supports users to reach out to internal stakeholders and value chain partners for data requests that avoid confidentiality issues.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor'],
+    placements: {
+      moduleSections: ['monitor:choosing-indicators']
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'World Business Council for Sustainable Development (WBCSD)',

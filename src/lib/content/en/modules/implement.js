@@ -26,23 +26,22 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'implementation-planning', label: 'Plan implementation' },
+  { sectionId: 'implementation-plan', label: 'Plan implementation' },
   { sectionId: 'roadmap-and-milestones', label: 'Build roadmap' },
   { sectionId: 'tools-and-support', label: 'Find support' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'Actioning circular strategies',
+  title: 'From strategy to action',
   paragraphs: [
-    'This module focuses on how SMEs can put circular strategies into practice. Once circular opportunities and priorities have been identified, the next step is to turn them into concrete actions across the business.',
-    'Implementation involves testing ideas, making operational changes, involving the right people and working with partners where needed.'
+    'This Implement module focuses on how SMEs can put circular strategies into practice. Once circular opportunities and priorities have been identified, the next step is to turn them into concrete actions across the business. Implementation involves testing ideas, making operational changes, involving the right people, and working with partners where needed. For SMEs, this often means taking a step-by-step approach that fits available resources and business needs.'
   ],
   cards: [
     {
-      sectionId: 'implementation-planning',
+      sectionId: 'implementation-plan',
       number: '1',
-      title: 'Implementation Planning',
+      title: 'Implementation Plan',
       description:
         'Build a structured implementation plan that connects your shortlisted circular strategies to concrete actions, owners and timelines.',
       keyOutputs: ['Defined implementation actions', 'Named owners and responsibilities', 'Initial timeline']
@@ -67,10 +66,10 @@ const pathwaySection = {
 };
 
 /* 4. DETAILED SECTION 1 */
-const implementationPlanningSection = {
-  id: 'implementation-planning',
-  title: 'Implementation Planning',
-  resourceTag: 'implement:implementation-planning',
+const implementationPlanSection = {
+  id: 'implementation-plan',
+  title: 'Implementation Plan',
+  resourceTag: 'implement:implementation-plan',
   paragraphs: [
     'Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage.',
     'Use this section to describe scope, actions, responsibilities, required resources, dependencies and expected results.'
@@ -127,7 +126,7 @@ export const implement = defineModulePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [implementationPlanningSection, roadmapMilestonesSection, toolsSupportSection],
+  detailSections: [implementationPlanSection, roadmapMilestonesSection, toolsSupportSection],
   moduleSummary,
   downloads
 });

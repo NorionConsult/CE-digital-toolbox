@@ -37,7 +37,7 @@ const pathwaySection = {
   title: 'Monitoring',
   paragraphs: [
     'To improve circularity in practice, SMEs need to track progress and learn from results over time. This module focuses on how to report on circular activities in a simple and useful way, and how to use feedback to identify what should be improved.',
-    'Reporting can help businesses monitor performance, support decision-making and communicate progress to internal and external stakeholders.'
+    'Reporting can help businesses monitor performance, support decision-making and communicate progress to internal and external stakeholders. Feedback loops make it possible to learn from data, customers, partners, and day-to-day experience.'
   ],
   cards: [
     {
@@ -64,14 +64,6 @@ const pathwaySection = {
         'Understand what your data shows, what is working, what is not and where improvement efforts should be focused.',
       keyOutputs: ['Performance review', 'Identified successes and gaps', 'Prioritised improvement areas']
     },
-    {
-      sectionId: 'continuous-improvement',
-      number: '4',
-      title: 'Continuous Improvement',
-      description:
-        'Use insights from monitoring to strengthen circular practices, adjust plans and build on what works.',
-      keyOutputs: ['Agreed improvement actions', 'Updated targets and plans', 'Documented learning and feedback']
-    }
   ]
 };
 
@@ -81,8 +73,55 @@ const choosingIndicatorsSection = {
   title: 'Choosing Indicators',
   resourceTag: 'monitor:choosing-indicators',
   paragraphs: [
-    'Useful indicators connect circular economy ambitions with observable changes in materials, operations, value creation and environmental performance.',
-    'Use this section to explain how indicators are selected, defined and assigned to responsible people.'
+    "The indicators used to measure circularity should be relevant, practical, and linked to the company's circular goals. The right indicators help SMEs track real progress, support decisions, and identify where improvement is needed. It is often more useful to focus on a small number of clear indicators, such as reuse rates, repair volumes, waste reduction, or product lifetime, than to collect too much data that is difficult to use."
+  ],
+  /*
+    INDICATOR INFO BOXES:
+    Edit the title, icon and item list below to change the four boxes.
+    Icons use Iconify's icon-park-outline library:
+    https://icon-sets.iconify.design/icon-park-outline/
+  */
+  baselineCards: [
+    {
+      title: 'Material Use',
+      icon: 'recycling',
+      items: [
+        '% recycled content in products',
+        'Raw material consumption (kg)',
+        'Virgin material reduction (%)',
+        'Waste generated per unit output'
+      ]
+    },
+    {
+      title: 'Product Life',
+      icon: 'tool',
+      items: [
+        'Product average lifespan',
+        'Repair & maintenance revenue',
+        'Return/take-back rate',
+        'Products sold refurbished vs new'
+      ]
+    },
+    {
+      title: 'Circular Revenue',
+      icon: 'wallet',
+      items: [
+        'Revenue from circular services',
+        'Cost savings from waste reduction',
+        'Circular vs linear revenue ratio',
+        'Customer retention in service models'
+      ]
+    },
+    {
+      title: 'Environmental',
+      icon: 'earth',
+      items: [
+        'CO2 emissions per unit',
+        'Energy from renewable sources',
+        'Water consumption (litres/unit)',
+        'Waste to landfill (tonnes/year)'
+      ]
+    }
   ]
 };
 
@@ -103,20 +142,21 @@ const interpretingResultsSection = {
   title: 'Interpreting Results',
   resourceTag: 'monitor:interpreting-results',
   paragraphs: [
-    'Monitoring creates value when results are discussed, compared with expectations and converted into useful decisions.',
-    'Use this section to explain how teams should review performance, identify causes and communicate findings.'
-  ]
-};
-
-/* 7. DETAILED SECTION 4 */
-const continuousImprovementSection = {
-  id: 'continuous-improvement',
-  title: 'Continuous Improvement',
-  resourceTag: 'monitor:continuous-improvement',
-  paragraphs: [
-    'Continuous improvement closes the loop between implementation, measurement and the next round of decisions.',
-    'Use this section to describe how results, stakeholder feedback and operational learning should update future actions.'
-  ]
+    'Interpreting results is an essential part of managing a circular economy transition. For SMEs, it helps turn monitoring into practical learning by showing whether circular actions are on track, which initiatives are delivering value, and where adjustments are needed. Results should be compared against the milestones and targets set during planning, using a simple status system such as red, amber and green to make progress easy to communicate. Where targets are not being met, SMEs should look beyond the numbers and identify the underlying causes, such as resource gaps, behavioural barriers, operational challenges or dependencies on partners. Equally important is understanding what is working well, so successful approaches can be replicated and scaled. By capturing these insights and sharing them with relevant teams, leadership, customers or funders, SMEs can strengthen accountability, build trust and feed learning into the next cycle of circular improvement.'
+  ],
+  /*
+    RESULT INTERPRETATION VISUAL:
+    Replace src to change the visual. It is clickable/zoomable on the page.
+  */
+  inlineImage: {
+    afterParagraph: 1,
+    title: 'Interpreting monitoring results',
+    src: '/downloads/module6/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - m6-visualisation.svg',
+    alt: 'Visualisation for interpreting circular economy monitoring results',
+    caption: 'A four-step framework for continuous improvement. Use monitoring results to understand progress, gaps and next improvement actions.',
+    maxWidth: '680px',
+    zoomable: true
+  }
 };
 
 /* 8. MODULE SUMMARY */
@@ -151,7 +191,6 @@ export const monitor = defineModulePage({
     choosingIndicatorsSection,
     measuringSuccessSection,
     interpretingResultsSection,
-    continuousImprovementSection
   ],
   moduleSummary,
   downloads

@@ -427,7 +427,15 @@
                 aria-hidden="true"
               ></span>
               <h3>{card.title}</h3>
-              <p>{card.text}</p>
+              {#if card.items}
+                <ul>
+                  {#each card.items as item}
+                    <li>{item}</li>
+                  {/each}
+                </ul>
+              {:else}
+                <p>{card.text}</p>
+              {/if}
             </div>
           {/each}
         </div>
@@ -1335,7 +1343,7 @@
 
   .baseline-card-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     margin-top: 32px;
   }
@@ -1346,7 +1354,7 @@
     gap: 14px;
     min-height: 250px;
     padding: 28px 24px;
-    border: 2px solid var(--green-secondary);
+    border: 2px solid var(--module-accent);
     border-radius: 8px;
     background-color: transparent;
     box-shadow: 0 12px 22px rgba(10, 46, 54, 0.08);
@@ -1356,14 +1364,14 @@
   .baseline-card-icon {
     width: 68px;
     height: 68px;
-    background-color: var(--green-secondary);
+    background-color: var(--module-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
 
   .baseline-card h3 {
     font-family: Tahoma, Arial, sans-serif;
-    color: var(--green-secondary);
+    color: var(--module-accent);
     font-size: clamp(1.08rem, 1.8vw, 1.35rem);
     line-height: 1.16;
     text-transform: uppercase;
@@ -1373,6 +1381,25 @@
     color: var(--muted);
     font-weight: 400;
     line-height: 1.35;
+  }
+
+  .baseline-card ul {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .baseline-card li {
+    color: var(--muted);
+    font-weight: 400;
+    line-height: 1.35;
+  }
+
+  .baseline-card li::marker {
+    color: var(--module-accent);
   }
 
   .module-detail-closing {

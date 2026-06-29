@@ -35,7 +35,7 @@ import { options } from './options.js';
  *   }[];
  *   image?: { src: string; alt: string; caption: string; zoomable?: boolean };
  *   factbox?: { title: string; items: string[] };
- *   baselineCards?: { title: string; text: string; icon: string }[];
+ *   baselineCards?: { title: string; text?: string; items?: string[]; icon: string }[];
  *   closingParagraphs?: string[];
  *   m3WheelWorkshop?: {
  *     subtitle: string;
