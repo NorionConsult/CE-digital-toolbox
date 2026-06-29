@@ -4,6 +4,7 @@
     The component receives module data as a prop and renders a consistent card.
   */
   import { base } from '$app/paths';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { site } from '$lib/content/site.js';
 
   export let module;
@@ -13,7 +14,7 @@
   <div>
     <div class="module-number">{module.shortName}</div>
     <h3>{module.title}</h3>
-    <p>{module.description}</p>
+    <p><InlineText text={module.description} /></p>
   </div>
 
   <a href="{base}/modules/{module.slug}/" class="module-link">{site.labels.viewModule}</a>

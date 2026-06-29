@@ -28,7 +28,7 @@ const hero = {
 const sectionButtons = [
   { sectionId: 'implementation-plan', label: 'Plan implementation' },
   { sectionId: 'roadmap-and-milestones', label: 'Build roadmap' },
-  { sectionId: 'tools-and-support', label: 'Find support' }
+  { sectionId: 'test-and-pilot', label: 'Run your test' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -55,12 +55,12 @@ const pathwaySection = {
       keyOutputs: ['Visual implementation roadmap', 'Agreed milestones', 'Progress review schedule']
     },
     {
-      sectionId: 'tools-and-support',
+      sectionId: 'test-and-pilot',
       number: '3',
-      title: 'Tools & Support',
+      title: 'Test & Pilot',
       description:
-        'Explore practical tools for planning, roadmapping and milestone-setting that are proven to work for SMEs.',
-      keyOutputs: ['Selected implementation tools', 'Identified support needs', 'Partner and stakeholder overview']
+        'Run a small-scale, time-bounded test of your circular strategy before committing to full implementation, using structured tools to design the experiment, map the material flows, and measure what works.',
+      keyOutputs: ['Test results', 'Pilot feedback', 'Lessons learned']
     }
   ]
 };
@@ -88,13 +88,14 @@ const roadmapMilestonesSection = {
 };
 
 /* 6. DETAILED SECTION 3 */
-const toolsSupportSection = {
-  id: 'tools-and-support',
-  title: 'Tools & Support',
-  resourceTag: 'implement:tools-support',
+const testPilotSection = {
+  id: 'test-and-pilot',
+  title: 'Test & Pilot',
+  resourceTag: 'implement:test-pilot',
   paragraphs: [
-    'Implementation often depends on the right combination of internal capabilities, external expertise, partners and practical tools.',
-    'Use this section to introduce supporting resources and explain how users can identify the assistance needed for successful delivery.'
+    'Before you can test a circular strategy in the real world, you need to be able to see it clearly and, so do the partners, suppliers, and colleagues who will need to make it work alongside you. That is where these two tools come in, and they work best used together',
+    'Start with the **Circular Loop Designer**. Use it to map out the material flows your pilot strategy depends on: where inputs come from, how products move through use, and what happens to materials at end of life. The colour-coded arrows help you distinguish what already exists (green), what is traditional and needs to change (red), and what still needs to be built (blue). This is not just a drawing exercise, it is a way of surfacing the gaps, dependencies, and missing partners in your circular model before you commit time and money to testing it. A loop that looks simple in a strategy document often reveals significant complexity once you try to map the actual actors and flows. Better to find that out at the drawing stage than halfway through a pilot.',
+    'Once your loop is mapped, use ecoCEO to stress-test the strategic logic behind it. The game puts you in the position of running a business that must make circular decisions on sourcing, production processes, and revenue models, while responding to the kind of external shocks that real pilots encounter: policy changes, resource scarcity, market disruptions. It makes visible something that a static diagram cannot: that circular strategies do not just need to be well-designed, they need to be resilient. Running through the game as a team before your pilot launches is a low-risk way to rehearse the trade-offs you are likely to face, build shared understanding of why circular choices matter for business performance, and stress-test whether your planned approach holds up under pressure.'
   ]
 };
 
@@ -126,7 +127,7 @@ export const implement = defineModulePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [implementationPlanSection, roadmapMilestonesSection, toolsSupportSection],
+  detailSections: [implementationPlanSection, roadmapMilestonesSection, testPilotSection],
   moduleSummary,
   downloads
 });

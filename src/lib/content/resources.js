@@ -232,6 +232,9 @@ export const resources = [
       'The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.',
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:test-and-pilot'],
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'SME Climate Hub',
@@ -699,6 +702,32 @@ export const resources = [
     format: 'PDF',
     toolLink:
       'https://www.ri.se/en/system-innovation/circular-transition/expertise/future-adaptive-design-for-a-circular-economy'
+  }),
+  createResource({
+    id: 'resource-025',
+    cardNumber: 'Tool card #25',
+    slug: 'milestones-and-action-planning-tool',
+    title: 'Milestones and Action Planning Tool',
+    description:
+      'To develop a clear set of measurable milestones to monitor progress towards CE strategy',
+    about:
+      "A practical milestone-setting framework designed to help organisations break circular strategies into trackable steps. Helps teams identify key actions, assign ownership, and define what 'progress' looks like at each stage.",
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:roadmap-milestones']
+    },
+    sector: 'Across',
+    language: 'English',
+    provider: 'The Good Tribe',
+    access: 'Free',
+    timeRequired: 'Half day workshop',
+    preparationNeeded: 'Clear understanding of the strategies to be implemented, who is responsible for what, desired outcomes.',
+    output: 'Milestones for circular strategy implementation',
+    bestFor: 'SMEs and larger organisations that are about to test or have tested circular initiatives.',
+    format: 'Miro board',
+    toolLink:
+      'https://miro.com/templates/roadmap-to-circular-business/'
   })
 ];
 

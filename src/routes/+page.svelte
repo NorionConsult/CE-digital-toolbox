@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import ModuleCard from '$lib/components/cards/ModuleCard.svelte';
   import SectorCard from '$lib/components/cards/SectorCard.svelte';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
   import { home } from '$lib/content/home.js';
   import { modules } from '$lib/content/modules.js';
@@ -18,7 +19,7 @@
 
     <h1>{home.hero.title}</h1>
 
-    <p class="hero-text">{home.hero.text}</p>
+    <p class="hero-text"><InlineText text={home.hero.text} /></p>
 
     <div class="hero-actions">
       <a href="{base}/#modules" class="primary-button">{home.hero.primaryButton}</a>
@@ -66,7 +67,7 @@
       <h2>{home.aboutSection.title}</h2>
     </div>
 
-    <p>{home.aboutSection.text}</p>
+    <p><InlineText text={home.aboutSection.text} /></p>
   </div>
 </section>
 

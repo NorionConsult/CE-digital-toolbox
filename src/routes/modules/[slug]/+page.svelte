@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { modulePage } from '$lib/content/module-page.js';
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
@@ -77,7 +78,7 @@
       <p class="eyebrow">{module.shortName}</p>
       <h1>{module.title}</h1>
 
-      <p class="subpage-intro">{module.intro}</p>
+      <p class="subpage-intro"><InlineText text={module.intro} /></p>
 
       {#if moduleSections.length > 0}
         <nav class="module-section-navigation" aria-label="{module.title} sections">
@@ -114,7 +115,7 @@
       <h2>{module.bodyTitle}</h2>
 
       {#each module.bodyParagraphs as paragraph}
-        <p>{paragraph}</p>
+        <p><InlineText text={paragraph} /></p>
       {/each}
     </div>
 
@@ -128,7 +129,7 @@
             </div>
 
             <div class="pathway-card-body">
-              <p>{section.description}</p>
+              <p><InlineText text={section.description} /></p>
 
               <div class="pathway-outputs">
                 <h4>Key outputs:</h4>
@@ -174,7 +175,7 @@
           <h2>{section.bodyTitle}</h2>
 
           {#each section.bodyParagraphs as paragraph, paragraphIndex}
-            <p>{paragraph}</p>
+            <p><InlineText text={paragraph} /></p>
 
             {#if section.inlineImage?.afterParagraph === paragraphIndex + 1}
               <figure
@@ -223,7 +224,7 @@
           {#if section.closingParagraphs}
             <div class="module-detail-closing">
               {#each section.closingParagraphs as paragraph}
-                <p>{paragraph}</p>
+                <p><InlineText text={paragraph} /></p>
               {/each}
             </div>
           {/if}
@@ -243,9 +244,9 @@
                         aria-hidden="true"
                       ></span>
                     </div>
-                    <p>{section.m3WheelWorkshop.introduction}</p>
+                    <p><InlineText text={section.m3WheelWorkshop.introduction} /></p>
                     <p class="m3-wheel-workshop-outcome">
-                      <strong>Expected outcomes:</strong> {section.m3WheelWorkshop.outcome}
+                      <strong>Expected outcomes:</strong> <InlineText text={section.m3WheelWorkshop.outcome} />
                     </p>
                   </article>
 
@@ -255,11 +256,11 @@
                       <span class="m3-wheel-workshop-time">{section.m3WheelWorkshop.preparation.time}</span>
                     </div>
 
-                    <p>{section.m3WheelWorkshop.preparation.text}</p>
+                    <p><InlineText text={section.m3WheelWorkshop.preparation.text} /></p>
 
                     <div class="m3-wheel-workshop-details">
                       {#each section.m3WheelWorkshop.preparation.details as detail}
-                        <p>{detail}</p>
+                        <p><InlineText text={detail} /></p>
                       {/each}
                     </div>
 
@@ -267,7 +268,7 @@
                       <strong>{section.m3WheelWorkshop.preparation.listTitle}</strong>
                       <ul>
                         {#each section.m3WheelWorkshop.preparation.items as item}
-                          <li>{item}</li>
+                          <li><InlineText text={item} /></li>
                         {/each}
                       </ul>
                     </div>
@@ -296,8 +297,8 @@
                         <span class="m3-wheel-workshop-time">{step.time}</span>
                       </div>
 
-                      <p>{step.text}</p>
-                      <p><strong>Tip:</strong> {step.tip}</p>
+                      <p><InlineText text={step.text} /></p>
+                      <p><strong>Tip:</strong> <InlineText text={step.tip} /></p>
                     </article>
                   {/each}
                 </div>
@@ -315,7 +316,7 @@
                         {section.learningResources.labels?.badge ?? 'Learning resource'}
                       </p>
                       <h3>{card.courseTitle}</h3>
-                      <p>{card.shortDescription}</p>
+                      <p><InlineText text={card.shortDescription} /></p>
                     </div>
 
                     <dl class="m1-learning-resource-meta" aria-label="Course information">
@@ -338,7 +339,7 @@
                     <section>
                       <h3>{section.learningResources.labels?.about ?? 'What is this?'}</h3>
                       {#each card.aboutCourse as paragraph}
-                        <p>{paragraph}</p>
+                        <p><InlineText text={paragraph} /></p>
                       {/each}
                     </section>
 
@@ -346,7 +347,7 @@
                       <h3>{section.learningResources.labels?.learningGoals ?? 'Learning goals'}</h3>
                       <ul>
                         {#each card.learningGoals as goal}
-                          <li>{goal}</li>
+                          <li><InlineText text={goal} /></li>
                         {/each}
                       </ul>
                     </section>
@@ -354,7 +355,7 @@
                     <section>
                       <h3>{section.learningResources.labels?.whyTakeCourse ?? 'Why should I take this course?'}</h3>
                       {#each card.whyTakeCourse as paragraph}
-                        <p>{paragraph}</p>
+                        <p><InlineText text={paragraph} /></p>
                       {/each}
                     </section>
                   </div>
@@ -408,8 +409,8 @@
                 </summary>
 
                 <div class="business-model-card-content">
-                  <p>{card.text}</p>
-                  <p class="business-model-example"><strong>Example:</strong> {card.example}</p>
+                  <p><InlineText text={card.text} /></p>
+                  <p class="business-model-example"><strong>Example:</strong> <InlineText text={card.example} /></p>
                 </div>
               </details>
             {/each}
@@ -434,7 +435,7 @@
                   {/each}
                 </ul>
               {:else}
-                <p>{card.text}</p>
+                <p><InlineText text={card.text} /></p>
               {/if}
             </div>
           {/each}
@@ -477,7 +478,7 @@
           <div class="module-summary-text">
             {#each module.summaryParagraphs ?? [module.summaryText] as paragraph}
               {#if paragraph}
-                <p>{paragraph}</p>
+                <p><InlineText text={paragraph} /></p>
               {/if}
             {/each}
           </div>

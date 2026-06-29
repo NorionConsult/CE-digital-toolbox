@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { sectorPage } from '$lib/content/sector-page.js';
   import { site } from '$lib/content/site.js';
@@ -39,7 +40,7 @@
     <div class="sector-hero-copy">
       <p class="eyebrow">{sector.number}</p>
       <h1>{sector.title}</h1>
-      <p class="sector-intro">{sector.description}</p>
+      <p class="sector-intro"><InlineText text={sector.description} /></p>
 
       <nav class="sector-section-navigation" aria-label={`${sector.title} page sections`}>
         {#each sector.navigation as item}
@@ -59,7 +60,7 @@
 
     <div class="sector-prose">
       {#each introductionSection.paragraphs as paragraph}
-        <p>{paragraph}</p>
+        <p><InlineText text={paragraph} /></p>
       {/each}
     </div>
   </div>
@@ -70,7 +71,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{casesSection.title}</h2>
-      <p>{casesSection.intro}</p>
+      <p><InlineText text={casesSection.intro} /></p>
     </div>
 
     {#if relatedCases.length > 0}
@@ -92,7 +93,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{barriersSection.title}</h2>
-      <p>{barriersSection.intro}</p>
+      <p><InlineText text={barriersSection.intro} /></p>
     </div>
 
     <div class="barrier-opportunity-grid">
@@ -100,7 +101,7 @@
         <h3>{sectorPage.barriersTitle}</h3>
         <ul>
           {#each barriersSection.barriers as barrier}
-            <li>{barrier}</li>
+            <li><InlineText text={barrier} /></li>
           {/each}
         </ul>
       </section>
@@ -109,7 +110,7 @@
         <h3>{sectorPage.opportunitiesTitle}</h3>
         <ul>
           {#each barriersSection.opportunities as opportunity}
-            <li>{opportunity}</li>
+            <li><InlineText text={opportunity} /></li>
           {/each}
         </ul>
       </section>
@@ -122,7 +123,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{bestPracticesSection.title}</h2>
-      <p>{bestPracticesSection.intro}</p>
+      <p><InlineText text={bestPracticesSection.intro} /></p>
     </div>
 
     <div class="best-practices-grid">
@@ -131,7 +132,7 @@
           <h3>{group.title}</h3>
           <ul>
             {#each group.items as item}
-              <li>{item}</li>
+              <li><InlineText text={item} /></li>
             {/each}
           </ul>
         </section>
@@ -145,7 +146,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{relevantToolsSection.title}</h2>
-      <p>{relevantToolsSection.intro}</p>
+      <p><InlineText text={relevantToolsSection.intro} /></p>
     </div>
 
     {#if relatedResources.length > 0}
@@ -165,14 +166,14 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{networkSection.title}</h2>
-      <p>{networkSection.intro}</p>
+      <p><InlineText text={networkSection.intro} /></p>
     </div>
 
     <div class="network-grid">
       {#each networkSection.items as item}
         <article class="network-item">
           <h3>{item.name}</h3>
-          <p>{item.description}</p>
+          <p><InlineText text={item.description} /></p>
           {#if item.link}
             <a href={item.link} target="_blank" rel="noreferrer">{sectorPage.visitNetwork}</a>
           {/if}

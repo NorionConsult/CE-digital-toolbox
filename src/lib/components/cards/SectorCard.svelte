@@ -4,6 +4,7 @@
     These link to dedicated sector pages.
   */
   import { base } from '$app/paths';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { site } from '$lib/content/site.js';
 
   export let sector;
@@ -13,7 +14,7 @@
   <img class="sector-image" src="{base}{sector.image}" alt={sector.imageAlt} />
   <p class="sector-number">{sector.number}</p>
   <h3>{sector.title}</h3>
-  <p>{sector.description}</p>
+  <p><InlineText text={sector.description} /></p>
   <a href="{base}/sectors/{sector.slug}/" class="sector-link">{site.labels.viewSector}</a>
 </article>
 

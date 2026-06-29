@@ -79,6 +79,16 @@ Colours, fonts and shared visual style:
 src/app.css
 ```
 
+## Format Bold Text
+
+In editable paragraph and description text, wrap only the words that should be bold with double asterisks:
+
+```js
+'Use **Circular Loop Designer** and **ecoCEO** before scaling the idea.'
+```
+
+This will show only those names in bold on the website. This works in module page text, sector page text, and homepage section/card text. Avoid using HTML tags such as `<strong>` in content files, because the `**bold text**` format is easier for editors and future translations.
+
 ## Add A New Tool Card
 
 1. Add the PDF file to:
