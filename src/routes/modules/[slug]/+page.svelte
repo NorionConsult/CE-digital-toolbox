@@ -80,7 +80,7 @@
 
       <p class="subpage-intro"><InlineText text={module.intro} /></p>
 
-      {#if moduleSections.length > 0}
+      {#if moduleSections.length > 0 && !module.hideSectionNavigation}
         <nav class="module-section-navigation" aria-label="{module.title} sections">
           {#each moduleSections as section}
             <a href="#{section.id}" class="back-link">
@@ -119,7 +119,7 @@
       {/each}
     </div>
 
-    {#if moduleSections.length > 0}
+    {#if moduleSections.length > 0 && !module.hidePathwayCards}
       <div class="module-pathway-grid">
         {#each moduleSections as section}
           <article class="pathway-card">
@@ -171,7 +171,9 @@
     >
       <div class="container module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
         <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
-          <p class="eyebrow">Step {section.number}</p>
+          {#if !section.hideStepEyebrow && section.number}
+            <p class="eyebrow">Step {section.number}</p>
+          {/if}
           <h2>{section.bodyTitle}</h2>
 
           {#each section.bodyParagraphs as paragraph, paragraphIndex}

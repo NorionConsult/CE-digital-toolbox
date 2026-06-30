@@ -39,7 +39,7 @@ const pathwaySection = {
   */
   paragraphs: [
     'If you are new to Circular Economy and RECP concepts, you can first and foremost familiarise yourself with the terminology and foundational principles. This section will provide you with a selection of introductory courses to get a comprehensive introduction to the key concepts.',
-    'After you have familiarized yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next module in this CE digital toolbox, exploring relevant sectors or accessing the tools and resources directly.',
+    'After you have familiarised yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next module in this CE digital toolbox, exploring relevant sectors or accessing the tools and resources directly.',
     'The modules are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests.'
   ],
   cards: [

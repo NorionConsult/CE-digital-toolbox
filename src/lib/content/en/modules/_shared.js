@@ -33,7 +33,7 @@ export const placeholderImages = [
  *     title: string;
  *     paragraphs: string[];
  *     images?: { src: string; alt: string; caption: string }[];
- *     cards: {
+ *     cards?: {
  *       sectionId: string;
  *       number: string;
  *       title: string;
@@ -75,17 +75,13 @@ export function defineModulePage(config) {
   const sections = detailSections.map((section) => {
     const pathwayCard = pathwayCards.get(section.id);
 
-    if (!pathwayCard) {
-      throw new Error(`Missing pathway card for module section "${section.id}".`);
-    }
-
     return {
       ...section,
-      number: pathwayCard.number,
-      title: pathwayCard.title,
-      navigationLabel: buttonLabels.get(section.id) ?? pathwayCard.title,
-      description: pathwayCard.description,
-      keyOutputs: pathwayCard.keyOutputs,
+      number: pathwayCard?.number ?? section.number ?? '',
+      title: pathwayCard?.title ?? section.title,
+      navigationLabel: buttonLabels.get(section.id) ?? pathwayCard?.title ?? section.title,
+      description: pathwayCard?.description ?? section.description ?? '',
+      keyOutputs: pathwayCard?.keyOutputs ?? section.keyOutputs ?? [],
       bodyTitle: section.title,
       bodyParagraphs: section.paragraphs
     };
