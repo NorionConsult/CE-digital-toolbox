@@ -28,7 +28,7 @@ const hero = {
 const sectionButtons = [
   { sectionId: 'explore-ce-strategies', label: 'Design principles' },
   { sectionId: 'identify-your-options', label: 'Identify options' },
-  { sectionId: 'assess-and-prioritise', label: 'Redesign process' }
+  { sectionId: 'assess-and-prioritise', label: 'Redesign circular value' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -158,13 +158,8 @@ const identifyOptionsSection = {
   title: 'Identify Your Options',
   resourceTag: 'options:identify-options',
   paragraphs: [
-    'This section helps teams translate broad circular economy strategies into options that relate directly to their products, operations and value chain.',
-    'Use this space to describe the option-generation process, workshop activities and any supporting examples or images.',
-    "The image above shows the '9R strategies' form a hierarchy of circular economy interventions ranked from highest to lowest value preservation.",
-    'At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether.',
-    'Moving down, R1-R2 (Rethink/Reduce) minimise resource use, while R3-R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible.',
-    'R7 (Repurpose) gives materials a new function, R8 (Recycle) recovers raw material value through processing, and R9 (Recover), typically energy recovery through incineration, sits at the bottom of the hierarchy as the lowest value preservation strategy, extracting only calorific value once all other options are exhausted.',
-    "The framework's core principle is that the higher the R, the more embedded economic, social and environmental value is lost."
+    "This section helps teams translate broad circular economy strategies into options that relate directly to their products, operations and value chain. Use this space to describe the option-generation process, workshop activities and any supporting examples or images. The image below shows the '9R strategies' form a hierarchy of circular economy interventions ranked from highest to lowest value preservation. At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether.",
+    "Moving down, R1-R2 (Rethink/Reduce) minimise resource use, while R3-R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible. R7 (Repurpose) gives materials a new function, R8 (Recycle) recovers raw material value through processing, and R9 (Recover), typically energy recovery through incineration, sits at the bottom of the hierarchy as the lowest value preservation strategy, extracting only calorific value once all other options are exhausted. The framework's core principle is that the higher the R, the more embedded economic, social and environmental value is lost."
   ],
   /*
     This image appears after paragraph 2 and before "The image above shows...".
@@ -233,12 +228,13 @@ const identifyOptionsSection = {
 };
 
 /* 6. DETAILED SECTION 3 */
+/*If text needs to be added before the visual, add it in the 'paragraphs' section where there is an empty string. The visual will appear after the last paragraph in the list. To remove text, instead of deleting it, add ""*/
 const assessPrioritiseSection = {
   id: 'assess-and-prioritise',
-  title: 'Redesigning Your Process',
-  resourceTag: 'options:assess-prioritise',
+  title: 'Redesigning Circular Value',
+  resourceTag: 'options:redesign-circular-value',
   paragraphs: [
-    'Use this step to translate selected design options into changes across sourcing, production, products, packaging and recovery.'
+    ""
   ],
   /*
     PROCESS REDESIGN INFO BOX:
@@ -247,7 +243,7 @@ const assessPrioritiseSection = {
   m3ProcessRedesign: {
     title: 'Redesigning Your Processes',
     intro:
-      "Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed.",
+      "'Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed'.",
     footer: 'Material flow loops back — recovery feeds input again',
     columns: [
       {
@@ -298,14 +294,13 @@ const assessPrioritiseSection = {
 const moduleSummary = {
   title: 'Module Summary',
   paragraphs: [
-    'Take your shortlisted options into a structured financial and value analysis, building the case for investment and action.'
+    'Check the boxes below to confirm that you have a basic understanding of the key circular economy principles and are ready to move to the next module.',
   ],
   checklist: [
-    'A clear understanding of the circular strategy landscape and 9R hierarchy',
-    'Team-generated ideas mapped across the Circular Strategies Wheel',
-    'A long-list of possible circular options for your business',
-    'A shortlist of 1-3 priority strategies to take into Module 4',
-    'Clear notes on what needs further feasibility and value analysis'
+    'A clear understanding of the DfX redesign process',
+    'A completed DfX audit',
+    'Design proposal and completion of the Circular strategies wheel workshop',
+    'Awareness of how you can redesign your process'
   ]
 };
 

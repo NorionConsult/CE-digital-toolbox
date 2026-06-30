@@ -17,14 +17,17 @@
       !normalisedSearch ||
       resource.title.toLowerCase().includes(normalisedSearch) ||
       resource.description.toLowerCase().includes(normalisedSearch) ||
-      resource.sector.toLowerCase().includes(normalisedSearch) ||
+      resource.sectorDisplay.toLowerCase().includes(normalisedSearch) ||
+      resource.languageDisplay.toLowerCase().includes(normalisedSearch) ||
       resource.provider.toLowerCase().includes(normalisedSearch) ||
-      resource.access.toLowerCase().includes(normalisedSearch);
+      resource.accessDisplay.toLowerCase().includes(normalisedSearch);
 
-    const matchesPhase = !selectedPhase || (resource.journeyPhases ?? [resource.journeyPhase]).includes(selectedPhase);
-    const matchesSector = !selectedSector || resource.sector === selectedSector;
-    const matchesLanguage = !selectedLanguage || resource.language === selectedLanguage;
-    const matchesAccess = !selectedAccess || resource.access === selectedAccess;
+    const matchesPhase =
+      !selectedPhase || resource.filterValues.journeyPhases.includes(selectedPhase);
+    const matchesSector = !selectedSector || resource.filterValues.sectors.includes(selectedSector);
+    const matchesLanguage =
+      !selectedLanguage || resource.filterValues.languages.includes(selectedLanguage);
+    const matchesAccess = !selectedAccess || resource.filterValues.access.includes(selectedAccess);
 
     return matchesSearch && matchesPhase && matchesSector && matchesLanguage && matchesAccess;
   });

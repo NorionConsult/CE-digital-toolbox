@@ -1,12 +1,12 @@
 <script>
   import { base } from '$app/paths';
-  import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
+  import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/site.js';
 
   export let resource;
 
-  $: journeyPhases = resource.journeyPhases ?? [resource.journeyPhase];
-  $: journeyPhaseText = journeyPhases.join(', ');
+  $: journeyPhases = resource.journeyPhases ?? [];
+  $: journeyPhaseText = journeyPhases.length > 0 ? journeyPhases.join(', ') : 'None';
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -17,10 +17,10 @@
 
   $: taxonomyRows = [
     ['SME journey', journeyPhaseText],
-    ['Sector', resource.sector],
-    ['Language', resource.language],
+    ['Sector', resource.sectorDisplay ?? resource.sector],
+    ['Language', resource.languageDisplay ?? resource.language],
     ['Provider', resource.provider],
-    ['Access', resource.access]
+    ['Access', resource.accessDisplay ?? resource.access]
   ];
 </script>
 
@@ -34,7 +34,7 @@
 
     <div class="resource-kicker">
       <span class="resource-card-number">{resource.cardNumber}</span>
-      <JourneyPhaseBadges phases={journeyPhases} variant="hero" />
+      <ResourceBadges {resource} variant="hero" />
     </div>
 
     <h1>{resource.title}</h1>

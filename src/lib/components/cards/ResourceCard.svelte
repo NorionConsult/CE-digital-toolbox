@@ -3,19 +3,18 @@
     The page link points to the resource slug in src/lib/content/resources.js.
   */
   import { base } from '$app/paths';
-  import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
+  import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/site.js';
 
   export let resource;
   export let variant = 'default';
 
-  $: journeyPhases = resource.journeyPhases ?? [resource.journeyPhase];
   $: isCompact = variant === 'compact';
 </script>
 
 <article class="tool-card resource-card" class:resource-card-compact={isCompact}>
   <div>
-    <JourneyPhaseBadges phases={journeyPhases} />
+    <ResourceBadges {resource} />
     <h3>{resource.title}</h3>
     <p class="resource-description">{resource.description}</p>
   </div>
@@ -23,11 +22,11 @@
   <dl class="resource-meta" aria-label="Resource metadata">
     <div>
       <dt>Language</dt>
-      <dd>{resource.language}</dd>
+      <dd>{resource.languageDisplay ?? resource.language}</dd>
     </div>
     <div>
       <dt>Sector</dt>
-      <dd>{resource.sector}</dd>
+      <dd>{resource.sectorDisplay ?? resource.sector}</dd>
     </div>
     <div>
       <dt>Provider</dt>
@@ -35,7 +34,7 @@
     </div>
     <div>
       <dt>Access</dt>
-      <dd>{resource.access}</dd>
+      <dd>{resource.accessDisplay ?? resource.access}</dd>
     </div>
   </dl>
 

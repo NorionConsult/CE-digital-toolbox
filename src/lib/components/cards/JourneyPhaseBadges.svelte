@@ -3,13 +3,14 @@
 
   /** @type {string[]} */
   export let phases = [];
-  /** @type {'card' | 'hero'} */
+  /** @type {'card' | 'hero' | 'inline'} */
   export let variant = 'card';
 </script>
 
 <div
   class="journey-phase-badges"
   class:journey-phase-badges-hero={variant === 'hero'}
+  class:journey-phase-badges-inline={variant === 'inline'}
   aria-label="Journey phases"
 >
   {#each phases as phase}
@@ -42,6 +43,10 @@
   }
 
   .journey-phase-badges-hero {
+    margin-bottom: 0;
+  }
+
+  .journey-phase-badges-inline {
     margin-bottom: 0;
   }
 

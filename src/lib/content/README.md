@@ -251,6 +251,36 @@ resource. Then:
 
 The `slug` becomes the page URL. Use lowercase words separated by hyphens.
 
+### Filter Values
+
+The Tools page filters are cleaned automatically for editors. This means
+capitalisation does not create duplicate filter options:
+
+```js
+language: 'enGlish'
+```
+
+will still appear as `English` in the filter. The same clean-up applies to:
+
+- `journeyPhase` and `journeyPhases`
+- `sector`
+- `language`
+- `access`
+
+For tools available in more than one language, write the languages as a simple
+comma-separated or slash-separated list:
+
+```js
+language: 'English, Dutch'
+// or
+language: 'English/Dutch'
+```
+
+The filter will show separate `English` and `Dutch` options, and the tool will
+appear under both. If more than three languages are listed, the card displays
+`Multiple` to keep the card readable, but the tool still appears under each
+individual language filter.
+
 ### Journey Phase Badge Colours
 
 Badge colours are assigned automatically from the matching module colour.
@@ -265,7 +295,20 @@ Options
 Business Case
 Implement
 Monitor
+None
 ```
+
+Use `None` when a tool does not belong to one of the six journey modules.
+For example, sector-only tools can use:
+
+```js
+journeyPhase: 'None',
+journeyPhases: [],
+sector: 'Textiles',
+```
+
+The Tools page can filter by `None`, but the card will not show a `None` badge.
+If the sector is set, the card will show a sector badge instead.
 
 Use `journeyPhase` for the primary phase and include all relevant phases in
 `journeyPhases`:

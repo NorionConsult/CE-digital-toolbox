@@ -15,9 +15,18 @@
   - journeyPhases: every relevant phase shown as a separate coloured badge,
     and used by the Tools phase filter and resource taxonomy.
   - sector: Cross-sector, Manufacturing, etc.
-  - language: document or tool language
+  - language: document or tool language. For several languages, separate them
+    with commas or slashes, for example: 'English, Dutch' or 'English/Dutch'.
+    The filter automatically cleans capitalisation and splits them into single
+    filter options. If more than three languages are listed, the card displays
+    "Multiple" but still appears under each individual language filter.
   - provider: source organisation or provider
-  - access: Free, Paid, or Sign up
+  - access: Free, Paid, or Sign up. Capitalisation is cleaned automatically.
+
+  FILTERING NOTE:
+  The Tools filters are not case sensitive. Editors can write "english",
+  "enGlish" or "English" and the filter will show one clean "English" option.
+  This also applies to journey phases, sectors and access values.
 
   JOURNEY PHASE BADGE COLOURS:
   Badge colours are assigned automatically. Editors should only write the
@@ -30,6 +39,7 @@
   - Business Case
   - Implement
   - Monitor
+  - None, when the tool is not assigned to a journey module
 
   The website matches each phase name to its module and uses that module's
   global colour from src/app.css. A resource with several journeyPhases gets
@@ -39,6 +49,8 @@
   journeyPhases: ['Monitor', 'Business Case', 'Options'],
 
   Keep journeyPhase as one primary value and include it in journeyPhases.
+  If journeyPhase is 'None', keep journeyPhases as an empty list: [].
+  The Tools page can filter by None, but no "None" badge is displayed on cards.
 
   WHERE A TOOL CARD APPEARS:
   Add a placements block inside a resource to place it on module or sector pages.
@@ -70,7 +82,7 @@
  *   title: string;
  *   description: string;
  *   about: string;
- *   journeyPhase: string;
+ *   journeyPhase?: string;
  *   journeyPhases?: string[];
  *   placements?: ResourcePlacementsInput;
  *   sector: string;
@@ -87,6 +99,15 @@
  *
  * @typedef {ResourceInput & {
  *   journeyPhases: string[];
+ *   filterValues: {
+ *     journeyPhases: string[];
+ *     sectors: string[];
+ *     languages: string[];
+ *     access: string[];
+ *   };
+ *   sectorDisplay: string;
+ *   languageDisplay: string;
+ *   accessDisplay: string;
  *   placements: {
  *     moduleSections: string[];
  *     sectors: string[];
@@ -95,16 +116,160 @@
  * }} Resource
  */
 
+const LANGUAGE_MULTIPLE_LABEL = 'Multiple';
+
+/** @type {Record<string, Record<string, string>>} */
+const FILTER_LABELS = {
+  journeyPhase: {
+    awareness: 'Awareness',
+    diagnose: 'Diagnose',
+    diagnosis: 'Diagnose',
+    options: 'Options',
+    'business case': 'Business Case',
+    implement: 'Implement',
+    implementation: 'Implement',
+    monitor: 'Monitor',
+    monitoring: 'Monitor',
+    none: 'None',
+    'sector packages': 'None'
+  },
+  sector: {
+    all: 'Cross-sector',
+    across: 'Cross-sector',
+    crosssector: 'Cross-sector',
+    'cross sector': 'Cross-sector',
+    'cross-sector': 'Cross-sector',
+    agriculture: 'Agriculture',
+    construction: 'Construction',
+    textiles: 'Textiles',
+    tourism: 'Tourism',
+    manufacturing: 'Manufacturing',
+    plastics: 'Plastics'
+  },
+  language: {
+    english: 'English',
+    dutch: 'Dutch',
+    ukrainian: 'Ukrainian',
+    russian: 'Russian',
+    portuguese: 'Portuguese',
+    spanish: 'Spanish',
+    georgian: 'Georgian',
+    arabic: 'Arabic',
+    romanian: 'Romanian',
+    armenian: 'Armenian',
+    multiple: LANGUAGE_MULTIPLE_LABEL
+  },
+  access: {
+    free: 'Free',
+    paid: 'Paid',
+    'sign up': 'Sign up',
+    signup: 'Sign up',
+    'sign-up': 'Sign up',
+    register: 'Sign up'
+  }
+};
+
+/**
+ * @param {string} value
+ */
+function titleCase(value) {
+  return value
+    .split(/(\s+|-)/)
+    /** @param {string} part */
+    .map((part) => {
+      if (/^\s+$|^-$/u.test(part)) {
+        return part;
+      }
+
+      return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+    })
+    .join('');
+}
+
+/**
+ * @param {string} value
+ * @param {'journeyPhase' | 'sector' | 'language' | 'access'} type
+ */
+function normalizeFilterValue(value, type) {
+  const cleaned = String(value ?? '').trim().replace(/\s+/g, ' ');
+  const lookupKey = cleaned.toLowerCase().replace(/\s*-\s*/g, '-');
+  const compactKey = lookupKey.replace(/[^a-z0-9]/g, '');
+
+  return (
+    FILTER_LABELS[type]?.[lookupKey] ??
+    FILTER_LABELS[type]?.[compactKey] ??
+    titleCase(cleaned)
+  );
+}
+
+/**
+ * @param {string | string[] | undefined} value
+ * @param {'journeyPhase' | 'sector' | 'language' | 'access'} type
+ */
+function normalizeFilterList(value, type) {
+  const list = Array.isArray(value) ? value : [value ?? ''];
+  const splitPattern = type === 'language' || type === 'journeyPhase' ? /[,/;|]+/ : /[,;|]+/;
+  const normalised = list
+    .flatMap((item) => String(item ?? '').split(splitPattern))
+    .map((item) => normalizeFilterValue(item, type))
+    .filter(Boolean);
+
+  return [...new Set(normalised)];
+}
+
+/**
+ * @param {string} language
+ */
+function getLanguageDisplay(language) {
+  const languages = normalizeFilterList(language, 'language').filter(
+    (item) => item !== LANGUAGE_MULTIPLE_LABEL
+  );
+
+  return languages.length > 3 ? LANGUAGE_MULTIPLE_LABEL : languages.join(', ');
+}
+
+/**
+ * @param {string[]} values
+ */
+function sortFilterValues(values) {
+  return values.sort((a, b) => {
+    if (a === LANGUAGE_MULTIPLE_LABEL) return 1;
+    if (b === LANGUAGE_MULTIPLE_LABEL) return -1;
+    return a.localeCompare(b);
+  });
+}
+
 /**
  * @param {ResourceInput} resource
  * @returns {Resource}
  */
 function createResource(resource) {
-  const journeyPhases = resource.journeyPhases ?? [resource.journeyPhase];
+  const normalisedJourneyPhases = normalizeFilterList(
+    resource.journeyPhases ?? (resource.journeyPhase ? [resource.journeyPhase] : []),
+    'journeyPhase'
+  );
+  const journeyPhases = normalisedJourneyPhases.filter((phase) => phase !== 'None');
+  const journeyPhaseFilterValues = journeyPhases.length > 0 ? journeyPhases : ['None'];
+  const languages = normalizeFilterList(resource.language, 'language');
+  const languageDisplay = getLanguageDisplay(resource.language);
+  const languageFilterValues =
+    languages.length > 3 ? [...languages, LANGUAGE_MULTIPLE_LABEL] : languages;
+  const sectorDisplay = normalizeFilterValue(resource.sector, 'sector');
+  const accessDisplay = normalizeFilterValue(resource.access, 'access');
 
   return {
-    journeyPhases,
     ...resource,
+    journeyPhase: journeyPhases[0] ?? 'None',
+    journeyPhases,
+    sectorDisplay,
+    languageDisplay,
+    accessDisplay,
+    filterValues: {
+      journeyPhases: journeyPhaseFilterValues,
+      sectors: [sectorDisplay],
+      languages: languageFilterValues,
+      access: [accessDisplay]
+    },
     placements: {
       moduleSections: resource.placements?.moduleSections ?? [],
       sectors: resource.placements?.sectors ?? [],
@@ -723,7 +888,7 @@ export const resources = [
     placements: {
       moduleSections: ['implement:roadmap-milestones']
     },
-    sector: 'Across',
+    sector: 'Cross-sector',
     language: 'English',
     provider: 'The Good Tribe',
     access: 'Free',
@@ -749,7 +914,7 @@ export const resources = [
     placements: {
       moduleSections: ['implement:test-and-pilot']
     },
-    sector: 'Across',
+    sector: 'Cross-sector',
     language: 'English, Dutch',
     provider: 'Saxion University of Applied Sciences',
     access: 'Sign up',
@@ -761,7 +926,7 @@ export const resources = [
     toolLink:
       'https://businessmodellab.nl/en/tools/circular-loop-designer'
   }),
-   createResource({
+  createResource({
     id: 'resource-027',
     cardNumber: 'Tool card #27',
     slug: 'ecoCEO',
@@ -775,7 +940,7 @@ export const resources = [
     placements: {
       moduleSections: ['implement:test-and-pilot']
     },
-    sector: 'Across',
+    sector: 'Cross-sector',
     language: 'English',
     provider: 'VITO / EIT Raw Materials',
     access: 'Free',
@@ -786,6 +951,911 @@ export const resources = [
     format: 'Online platform',
     toolLink:
       'https://ecoceo.vito.be/en/ecoceo-game'
+  }),
+  createResource({
+    id: 'resource-028',
+    cardNumber: 'Tool card #28',
+    slug: 'sme-carbon-footprint-calculator',
+    title: 'SME Carbon Footprint Calculator',
+    description:
+      'The openLCA online tool aims to assist users in performing a self-assessment and includes free demo sessions on how to use the tool.',
+    about:
+      'openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.',
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Diagnose', 'Business Case', 'Monitor'],
+    placements: {
+      moduleSections: ['monitor:measuring-success']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'Carbon Trust',
+    access: 'Free',
+    timeRequired: '2-4 hours',
+    preparationNeeded: 'You will need the emissions data of your company.',
+    output: 'A full LCA report',
+    bestFor: 'All SMEs concerned with emissions reduction',
+    format: 'PDF',
+    toolLink: 'https://www.openlca.org/onlinelca/'
+  }),
+  createResource({
+    id: 'resource-029',
+    cardNumber: 'Tool card #29',
+    slug: 'sustainable-procurement-platform',
+    title: 'Sustainable Procurement Platform',
+    description:
+      'A repository of knowledge for procurement across a large variety of sectors, with search filters to guide users to tools suited to their needs.',
+    about:
+      'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by ICLEI\'s Procura+ network, bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
+    journeyPhase: 'Business Case',
+    journeyPhases: ['Options', 'Business Case', 'Implement'],
+    placements: {
+      moduleSections: ['business-case:circular-business-models']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'ICLEI',
+    access: 'Free',
+    timeRequired: 'Continuous',
+    preparationNeeded: 'None',
+    output: 'Procurement guidance, case studies and supporting resources',
+    bestFor: 'Any SME that procures goods and services',
+    format: 'PDF',
+    toolLink: 'https://sustainable-procurement.org/resource-centre/?c=search&language=English&product=textiles'
+  }),
+  createResource({
+    id: 'resource-030',
+    cardNumber: 'Tool card #30',
+    slug: 'packscore',
+    title: 'PackScore',
+    description:
+      'A simplified eco-design tool for early-stage packaging design decisions, showing the recyclability impact of design choices before production begins.',
+    about:
+      'PackScore is a free sustainable design tool for plastic packaging designers. It enables users to assess different design iterations, compare packaging options and understand recyclability impacts using a traffic-light system.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    sector: 'Plastics',
+    language: 'English',
+    provider: 'British Plastics Federation',
+    access: 'Sign up',
+    timeRequired: '10-20 minutes',
+    preparationNeeded: 'Draft packaging concept, including material type, closure, labels and coatings.',
+    output: 'Recyclability rating A-F with a traffic-light path showing the impact of each design decision',
+    bestFor: 'Packaging designers, brand managers and retailers at the early design stage',
+    format: 'Digital tool',
+    toolLink: 'https://www.bpf.co.uk/design/packscore/packscore.aspx'
+  }),
+  createResource({
+    id: 'resource-031',
+    cardNumber: 'Tool card #31',
+    slug: 'circular-packaging-assessment-tool',
+    title: 'Circular Packaging Assessment Tool',
+    description:
+      'A free web tool that assesses packaging across five system-wide dimensions, including design for recyclability, community access and packaging fate.',
+    about:
+      'The tool goes beyond technical recyclability to help brands, retailers and packaging designers understand system-level recyclability, improvement recommendations and EPR compliance guidance.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    sector: 'Plastics',
+    language: 'English',
+    provider: 'The Recycling Partnership',
+    access: 'Sign up',
+    timeRequired: '30-60 minutes',
+    preparationNeeded: 'Know your packaging format, material and design features.',
+    output: 'System-level recyclability assessment, improvement recommendations and EPR compliance guidance',
+    bestFor: 'Brands, retailers and packaging designers',
+    format: 'Digital tool',
+    toolLink: 'https://www.bpf.co.uk/design/packscore/packscore.aspx'
+  }),
+  createResource({
+    id: 'resource-032',
+    cardNumber: 'Tool card #32',
+    slug: 'recyclass-online-class',
+    title: 'RecyClass Online Class',
+    description:
+      'A self-assessment tool for plastic, aluminium and steel packaging that produces a tailored recyclability report.',
+    about:
+      'The RecyClass Online Tool helps industry users assess the recyclability of packaging and provides country-specific insights on collection, sorting and recycling infrastructure in Europe.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    sector: 'Plastics',
+    language: 'English',
+    provider: 'RecyClass',
+    access: 'Sign up',
+    timeRequired: '15-30 minutes per packaging item',
+    preparationNeeded: 'Knowledge of your packaging materials.',
+    output: 'Recyclability class A-C and a downloadable PDF report with improvement recommendations',
+    bestFor: 'Manufacturers, brands and retailers using or designing plastic packaging',
+    format: 'Digital tool',
+    toolLink: 'https://recyclass.eu/testing/online-tool/'
+  }),
+  createResource({
+    id: 'resource-033',
+    cardNumber: 'Tool card #33',
+    slug: 'plasticiq',
+    title: 'PlasticIQ',
+    description:
+      'A data-driven planning tool that calculates the circularity of plastic packaging and helps companies model reduction, reuse, redesign and substitution solutions.',
+    about:
+      'Plastic IQ is a digital tool to help companies improve plastic packaging strategy, reduce plastic waste and build actionable strategies with cost and carbon impact metrics.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    sector: 'Plastics',
+    language: 'English',
+    provider: 'Plastic IQ',
+    access: 'Paid',
+    timeRequired: '1-3 hours',
+    preparationNeeded: 'Packaging data by type, weight and volume, plus current sustainability targets.',
+    output: 'Company-specific dashboard with circularity score, cost and carbon impact, and an actionable strategy',
+    bestFor: 'Manufacturers, brands and retailers using or designing plastic packaging',
+    format: 'Digital tool',
+    toolLink: 'https://recyclass.eu/testing/online-tool/'
+  }),
+  createResource({
+    id: 'resource-034',
+    cardNumber: 'Tool card #34',
+    slug: 'green-key-toolbox',
+    title: 'Green Key Toolbox',
+    description:
+      'A practical toolbox divided into 13 topics that match Green Key criteria and help tourism SMEs prepare for circular and environmental improvements.',
+    about:
+      'The Green Key Toolbox brings together helpful tips, ready-to-use templates and real-world best practice examples for tourism businesses working towards Green Key certification and improved environmental standards.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['tourism'],
+      sectorSections: ['tourism:relevant-tools']
+    },
+    sector: 'Tourism',
+    language: 'English',
+    provider: 'Green Key',
+    access: 'Sign up',
+    timeRequired: '1-2 days',
+    preparationNeeded: 'None',
+    output: 'Better understanding of what it takes to be circular in the tourism sector',
+    bestFor: 'Hotels, resorts and other tourism service industries',
+    format: 'Digital tool',
+    toolLink: 'https://www.greenkey.global/green-key-toolbox-1'
+  }),
+  createResource({
+    id: 'resource-035',
+    cardNumber: 'Tool card #35',
+    slug: 'hcmi-hotel-carbon-measurement-initiative',
+    title: 'HCMI - Hotel Carbon Measurement Initiative',
+    description:
+      'A free standardised methodology and tool for hotels to calculate the carbon footprint of stays and meetings.',
+    about:
+      'HCMI is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['tourism'],
+      sectorSections: ['tourism:relevant-tools']
+    },
+    sector: 'Tourism',
+    language: 'English',
+    provider: 'Sustainable Hospitality Alliance (SHA) & WTTC',
+    access: 'Sign up',
+    timeRequired: 'Ongoing, data input per billing period',
+    preparationNeeded: 'Energy, water and fuel consumption data by property.',
+    output: 'Carbon footprint per occupied room, per meeting space hour and total property',
+    bestFor: 'Hotels and accommodation providers of any size globally',
+    format: 'Digital tool',
+    toolLink: 'http://sustainablehospitalityalliance.org/resource/hotel-carbon-measurement-initiative'
+  }),
+  createResource({
+    id: 'resource-036',
+    cardNumber: 'Tool card #36',
+    slug: 'cross-re-tour-aat-tool',
+    title: 'Cross-Re-Tour AAT Tool',
+    description:
+      'A diagnostic tool for tourism SMEs that profiles progress towards digital and green transformation and identifies opportunities to improve competitiveness.',
+    about:
+      'The Cross-Re-Tour Automated Assessment Tool is a free online diagnostic tool for tourism SMEs. It assesses environmental practices, innovation capacity and strategic orientation to help businesses understand their wider sustainability readiness.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['tourism'],
+      sectorSections: ['tourism:relevant-tools']
+    },
+    sector: 'Tourism',
+    language: 'English',
+    provider: 'Cross-Re-Tour consortium',
+    access: 'Sign up',
+    timeRequired: '20-40 minutes',
+    preparationNeeded: 'No preparation requirements are listed; the tool is designed to be completed from existing business knowledge.',
+    output: 'Profile across strategic orientation, innovation capabilities and sustainable innovation capabilities',
+    bestFor: 'Tourism SMEs looking to understand readiness for digital and green transition',
+    format: 'Digital tool',
+    toolLink: 'https://crossretour.eu/cross-re-tour-aat-tool/'
+  }),
+  createResource({
+    id: 'resource-037',
+    cardNumber: 'Tool card #37',
+    slug: 'circular-tourism-self-assessment',
+    title: 'Circular Tourism Self Assessment',
+    description:
+      'A circular economy management and monitoring tool for tourism businesses and destinations.',
+    about:
+      'The Circular Tourism Tools assess tourism impact from a circular economy perspective at destination and industry level. The assessment produces scores, collaboration ratings and a curated dataset of global best practices.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['tourism'],
+      sectorSections: ['tourism:relevant-tools']
+    },
+    sector: 'Tourism',
+    language: 'English',
+    provider: 'Interreg',
+    access: 'Sign up',
+    timeRequired: '2-4 hours',
+    preparationNeeded: 'Basic awareness of energy, water, waste, sourcing practices and stakeholder relationships is helpful.',
+    output: 'Circularity score, question breakdown, collaboration rating and best-practice dataset',
+    bestFor: 'Hotels, guesthouses and accommodation providers of all sizes',
+    format: 'Digital tool',
+    toolLink: 'https://www.incircle-kp.eu/self-assessment/'
+  }),
+  createResource({
+    id: 'resource-038',
+    cardNumber: 'Tool card #38',
+    slug: 'breeam-in-use-sustainable-standard',
+    title: 'BREEAM In-Use Sustainable Standard',
+    description:
+      'A tool for exploring BREEAM data on certified building assessments and integrating it with websites, tools and software.',
+    about:
+      'The BREEAM API is a RESTful web service that gives developers programmatic access to BREEAM GreenBook data, including current listings and ratings from certified building and infrastructure assessments.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    language: 'English',
+    provider: 'BREEAM',
+    access: 'Paid',
+    timeRequired: '60 minutes',
+    preparationNeeded: 'None',
+    output: 'Deeper understanding of certification assessments and suitable certification options',
+    bestFor: 'All construction SMEs',
+    format: 'Digital tool',
+    toolLink: 'https://breeam.com/tools/api'
+  }),
+  createResource({
+    id: 'resource-039',
+    cardNumber: 'Tool card #39',
+    slug: 'circular-construction-platform',
+    title: 'Circular Construction Platform',
+    description:
+      'An AI-driven platform for pre-demolition auditing, digital material passports and matching reusable construction materials between projects.',
+    about:
+      'Concular digitises building materials before demolition or renovation, identifies what can be reused, matches materials with buyers and helps turn disposal costs into revenue.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    language: 'English',
+    provider: 'Concular',
+    access: 'Paid',
+    timeRequired: 'Variable, with pre-demolition audits typically taking days to weeks',
+    preparationNeeded: 'Building access for on-site or digital material audit.',
+    output: 'Digital building resource passport, reuse potential assessment and material marketplace listing',
+    bestFor: 'Construction SMEs involved in demolition, refurbishment or new build procurement',
+    format: 'Digital tool',
+    toolLink: 'https://concular.de/concular-one/'
+  }),
+  createResource({
+    id: 'resource-040',
+    cardNumber: 'Tool card #40',
+    slug: 'madaster-materials-passport-platform',
+    title: 'Madaster - Materials Passport Platform',
+    description:
+      'An online platform for creating digital material passports for buildings, including composition, origin, circularity score and residual value.',
+    about:
+      'Madaster tracks and traces products and materials throughout their lifecycle, supporting material reuse, recyclability, recovery and compliance with standards such as LEED, BREEAM, EU Taxonomy and digital product passport reporting.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    language: 'English',
+    provider: 'BRE Group (Building Research Establishment)',
+    access: 'Paid',
+    timeRequired: 'Ongoing, registers materials throughout the project lifecycle',
+    preparationNeeded: 'BIM file or Excel spreadsheet with material data.',
+    output: 'Digital material passport, circularity indicator score and embodied carbon report',
+    bestFor: 'Construction SMEs, architects and developers managing new build or renovation',
+    format: 'Digital tool',
+    toolLink: 'https://madaster.com/circularity-insights/'
+  }),
+  createResource({
+    id: 'resource-041',
+    cardNumber: 'Tool card #41',
+    slug: 'bre-smartwaste',
+    title: 'BRE SMARTWaste',
+    description:
+      'A cloud-based construction waste and sustainability tracking platform for waste, materials, carbon, water and transport emissions.',
+    about:
+      'SMARTWaste helps construction SMEs track waste and carbon data in real time, reduce disposal costs and generate audit-quality BREEAM compliance evidence.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    language: 'English',
+    provider: 'BRE Group (Building Research Establishment)',
+    access: 'Sign up',
+    timeRequired: 'Ongoing / per project, with data entry taking minutes per input',
+    preparationNeeded: 'Project registration required; scales from 1 to 100+ projects.',
+    output: 'Project waste reports, carbon calculations and BREEAM evidence packages',
+    bestFor: 'Construction SMEs managing new build, refurbishment or demolition projects',
+    format: 'Digital tool',
+    toolLink: 'https://bregroup.com/products/smartwaste/assessment-tool'
+  }),
+  createResource({
+    id: 'resource-042',
+    cardNumber: 'Tool card #42',
+    slug: 'levels-eu-sustainable-buildings-framework',
+    title: 'Level(s) - EU Sustainable Buildings Framework',
+    description:
+      'A free EU framework for assessing and reporting building sustainability performance across the full lifecycle.',
+    about:
+      'Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    language: 'English',
+    provider: 'European Commission (DG Environment)',
+    access: 'Sign up',
+    timeRequired: 'Variable, used across the full project lifecycle',
+    preparationNeeded: 'None for basic use; building data for full LCA.',
+    output: 'Lifecycle sustainability assessment and compliance report',
+    bestFor: 'Construction SMEs, architects, developers and residential and commercial building projects',
+    format: 'Digital tool',
+    toolLink: 'https://green-forum.ec.europa.eu/green-business/levels_en'
+  }),
+  createResource({
+    id: 'resource-043',
+    cardNumber: 'Tool card #43',
+    slug: 'farm-carbon-toolkit',
+    title: 'Farm Carbon Toolkit',
+    description:
+      'A carbon calculator for farms and growers that produces carbon output reports for farm, product and supply-chain emissions work.',
+    about:
+      'The Farm Carbon Toolkit calculator is designed for farmers and growers, and can also support researchers, agricultural professionals and consultants delivering carbon footprints.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['agriculture'],
+      sectorSections: ['agriculture:relevant-tools']
+    },
+    sector: 'Agriculture',
+    language: 'English',
+    provider: 'Farm Carbon',
+    access: 'Sign up',
+    timeRequired: '3-4 hours',
+    preparationNeeded: 'Overview of your land, produce inputs and outputs.',
+    output: 'Carbon output report',
+    bestFor: 'Farms looking to reduce scope emissions or value-chain emissions',
+    format: 'Digital tool',
+    toolLink: 'https://calculator.farmcarbontoolkit.org.uk/'
+  }),
+  createResource({
+    id: 'resource-044',
+    cardNumber: 'Tool card #44',
+    slug: 'food-circularity-check',
+    title: 'Food Circularity Check',
+    description:
+      'A circularity self-assessment tool designed to help food companies understand their circular economy maturity level.',
+    about:
+      'The Food Circularity Check is an online self-assessment developed for food and agri-food businesses. It gives companies a structured picture of how circular their operations are and where gaps and opportunities exist.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['agriculture'],
+      sectorSections: ['agriculture:relevant-tools']
+    },
+    sector: 'Agriculture',
+    language: 'English',
+    provider: 'Circular Economy for Food',
+    access: 'Free',
+    timeRequired: '30-45 minutes',
+    preparationNeeded: 'Production and supply-chain data needed.',
+    output: 'Downloadable summary showing completion percentage across six categories',
+    bestFor: 'Farms looking to reduce scope emissions or value-chain emissions',
+    format: 'Questionnaire',
+    toolLink: 'https://circulareconomyforfood.eu/en/food-circularity-check/'
+  }),
+  createResource({
+    id: 'resource-045',
+    cardNumber: 'Tool card #45',
+    slug: 'o-farms-circular-toolkit',
+    title: 'O-Farms Circular Toolkit',
+    description:
+      'A set of six practical tools for agri-SMEs, entrepreneur support organisations and practitioners working with circular agribusinesses.',
+    about:
+      'The Circular Toolkit by O-Farms supports SMEs in finding inspiration for circular product development, assessing circularity, discovering opportunities, amplifying impact and increasing revenue.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['agriculture'],
+      sectorSections: ['agriculture:relevant-tools']
+    },
+    sector: 'Agriculture',
+    language: 'English',
+    provider: 'O-farms',
+    access: 'Sign up',
+    timeRequired: '2-3 hours per workshop',
+    preparationNeeded: 'Farm nutrient and input data required.',
+    output: 'Completed worksheets to guide internal decisions and external conversations about circular strategy',
+    bestFor: 'Arable, livestock and mixed-farm SMEs',
+    format: 'Digital tool',
+    toolLink: 'https://circulartoolkit.org/'
+  }),
+  createResource({
+    id: 'resource-046',
+    cardNumber: 'Tool card #46',
+    slug: 'wrap-food-waste-reduction-toolkit',
+    title: 'WRAP Food Waste Reduction Toolkit',
+    description:
+      'Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.',
+    about:
+      'This WRAP data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['agriculture'],
+      sectorSections: ['agriculture:relevant-tools']
+    },
+    sector: 'Agriculture',
+    language: 'English',
+    provider: 'WRAP (Waste & Resources Action Programme)',
+    access: 'Free',
+    timeRequired: 'Self-directed; modular use',
+    preparationNeeded: 'Basic food waste data helpful.',
+    output: 'Waste measurement reports, hotspot analysis and action plan',
+    bestFor: 'Farmers, growers, food manufacturers and retailers',
+    format: 'Digital tool',
+    toolLink: 'https://www.wrap.ngo/resources/tool/food-loss-and-waste-data-capture-sheet'
+  }),
+  createResource({
+    id: 'resource-047',
+    cardNumber: 'Tool card #47',
+    slug: 'circular-toolbox',
+    title: 'Circular Toolbox',
+    description:
+      'A step-by-step toolbox that helps apparel brands adopt circular business models and independently drive circular innovation.',
+    about:
+      'The Circular Toolbox guides apparel brands through a five-step circular innovation process, from team formation and customer understanding to prototyping, fine-tuning and piloting a new concept.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    language: 'English/Dutch',
+    provider: 'Circular Economy',
+    access: 'Sign up',
+    timeRequired: '10-month process',
+    preparationNeeded: 'Leadership sign-off and a cross-functional team.',
+    output: 'Guided five-step circular innovation process from team formation to piloting',
+    bestFor: 'Textile SMEs and brands',
+    format: 'Digital tool',
+    toolLink: 'https://thecirculartoolbox.com/html/the-circular-toolbox-is-a-step-by-step-guide-for-apparel-brands-to-design-and-launch-a-rental-or-resale-pilot-in-10-months-the-toolbox-provides-resources-to-accompany-you-along-your-circular-innovation-journey-5ici.html'
+  }),
+  createResource({
+    id: 'resource-048',
+    cardNumber: 'Tool card #48',
+    slug: 'rehub-eu-textile-recycling',
+    title: 'Re.Hub (EU Textile Recycling)',
+    description:
+      'An EU mapping tool and network for textile collection, sorting and recycling infrastructure.',
+    about:
+      'Re.Hub connects businesses to Europe\'s textile recycling network and helps identify local collection, sorting and recycling partners to close textile material loops.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    language: 'English',
+    provider: 'Re.Hub / European Commission',
+    access: 'Sign up',
+    timeRequired: 'Self-directed browsing',
+    preparationNeeded: 'None',
+    output: 'Map of local recycling partners and routes',
+    bestFor: 'Textiles SMEs seeking recycling solutions',
+    format: 'Digital tool',
+    toolLink: 'https://www.rehubs.eu/_files/ugd/e3cc3f_7d307d9d9c084c82b5b23ee5ebbbd493.pdf'
+  }),
+  createResource({
+    id: 'resource-049',
+    cardNumber: 'Tool card #49',
+    slug: 'fibretrace',
+    title: 'Fibretrace',
+    description:
+      'A fibre traceability platform using embedded tracers and blockchain to authenticate sustainability claims from raw material to finished garment.',
+    about:
+      'Fibretrace gives textile businesses end-to-end visibility of the supply chain, supporting verified sustainability claims from fibre to finished product.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    language: 'English',
+    provider: 'Fibretrace',
+    access: 'Paid',
+    timeRequired: 'Ongoing / integration required',
+    preparationNeeded: 'Platform onboarding needed.',
+    output: 'Real-time supply-chain traceability data',
+    bestFor: 'Textile and apparel SMEs',
+    format: 'Digital tool',
+    toolLink: 'https://www.fibretrace.io/'
+  }),
+  createResource({
+    id: 'resource-050',
+    cardNumber: 'Tool card #50',
+    slug: 'higg-product-tools',
+    title: 'Higg Product Tools',
+    description:
+      'An industry measurement suite for environmental and social sustainability across textile supply chains.',
+    about:
+      'The Higg Product Module and Higg Materials Sustainability Index provide insights into the environmental impacts of materials and products so designers and organisations can assess, compare and communicate impact performance.',
+    journeyPhase: 'None',
+    journeyPhases: [],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    language: 'English',
+    provider: 'Sustainable Apparel Coalition',
+    access: 'Sign up',
+    timeRequired: 'Ongoing / continuous',
+    preparationNeeded: 'None',
+    output: 'Benchmarked sustainability scores and reports',
+    bestFor: 'Textile and apparel SMEs',
+    format: 'Digital tool',
+    toolLink: 'https://cascale.org/tools-programs/higg-index-tools/product-tools/'
+  }),
+  createResource({
+    id: 'resource-051',
+    cardNumber: 'Tool card #51',
+    slug: 'pdca-cycle-planner-sme-toolkit',
+    title: 'PDCA Cycle Planner (SME Toolkit)',
+    description:
+      'A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.',
+    about:
+      'The PDCA Cycle is a continuous improvement framework that works well for circular economy implementation. SMEs can use it to review indicator results, decide what to adjust, set new targets and implement improvements.',
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Options', 'Business Case', 'Monitor'],
+    placements: {
+      moduleSections: ['monitor:interpreting-results']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'ASQ / Open-source (ISO 9001 framework)',
+    access: 'Free',
+    timeRequired: '1-2 hours per review cycle',
+    preparationNeeded: 'Collect indicator data and results from the previous measurement cycle.',
+    output: 'Prioritised action plan for the next circular improvement cycle',
+    bestFor: 'All SMEs that want a repeatable process for ongoing circular improvement',
+    format: 'Digital tool',
+    toolLink: 'http://asq.org/quality-resources/pdca-cycle'
+  }),
+  createResource({
+    id: 'resource-052',
+    cardNumber: 'Tool card #52',
+    slug: 'circulab-business-ecosystem-canvas',
+    title: 'Circulab Business Ecosystem Canvas',
+    description:
+      'A visual canvas tool to map circular ecosystems, review what is and is not working, and redesign a circular business model from real results.',
+    about:
+      'The Circulab Business Ecosystem Canvas guides teams through reviewing a current circular model, identifying which value flows are working, which partners to engage differently and where circular revenue opportunities remain untapped.',
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Diagnose', 'Monitor'],
+    placements: {
+      moduleSections: ['monitor:interpreting-results']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'Circulab',
+    access: 'Free',
+    timeRequired: '2-3 hours',
+    preparationNeeded: 'Gather measurement data and key results from your indicators before the session.',
+    output: 'Updated circular business model canvas with identified improvements',
+    bestFor: 'SMEs already implementing circular actions and ready to refine their model',
+    format: 'Digital tool',
+    toolLink: 'https://circulab.com/toolbox-circular-economy/'
+  }),
+  createResource({
+    id: 'resource-053',
+    cardNumber: 'Tool card #53',
+    slug: 'implementation-canvas-circular-business-development-canvas-pack',
+    title: 'Implementation Canvas (Circular Business Development Canvas Pack)',
+    description:
+      'A canvas for mapping concrete, actionable steps for putting a circular strategy into practice once solutions have been identified.',
+    about:
+      'The Implementation Canvas is part of the Circular Business Development Canvas Pack. It supports teams in turning chosen circular strategies into concrete roadmaps with actions, owners and timelines.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:implementation-plan']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'Miro (Evelina Lundqvist / The Good Tribe)',
+    access: 'Sign up',
+    timeRequired: '60-120 minutes (workshop format)',
+    preparationNeeded: 'A Miro account, your circular strategy or audit outputs, and relevant team members or stakeholders.',
+    output: 'Structured implementation plan with defined actions, owners and timelines',
+    bestFor: 'Teams ready to move from strategy to execution after audit and ideation canvases',
+    format: 'Online collaborative whiteboard (Miro template)',
+    toolLink: 'https://miro.com/templates/circular-businessdevelopment-canvaspack/'
+  }),
+  createResource({
+    id: 'resource-054',
+    cardNumber: 'Tool card #54',
+    slug: 'shortlisting-workshop',
+    title: 'Shortlisting Workshop',
+    description:
+      'A workshop slide that guides teams through narrowing strategic options to a focused shortlist of one to three candidates for business case development.',
+    about:
+      'The workshop template helps teams capture strategy type, key opportunity, target loop, quick-win potential and ownership for each option. It also provides decision guidance for keeping the shortlist focused and practical.',
+    journeyPhase: 'Business Case',
+    journeyPhases: ['Options', 'Business Case'],
+    placements: {
+      moduleSections: ['business-case:quick-scan']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'UNIDO',
+    access: 'Free',
+    timeRequired: '30-45 minutes',
+    preparationNeeded: 'Print out, post-its, pens and people.',
+    output: 'Overview of the circular strategies most relevant to your SME',
+    bestFor: 'All SMEs',
+    format: 'Print out',
+    toolLink: ''
+  }),
+  createResource({
+    id: 'resource-055',
+    cardNumber: 'Tool card #55',
+    slug: 'mapping-of-options-workshop',
+    title: 'Mapping of Options Workshop',
+    description:
+      'A workshop exercise that helps teams prioritise strategic options using an impact-feasibility matrix.',
+    about:
+      'Map Your Options guides teams to plot options against impact and feasibility, discuss the resulting quadrants, and select the top one to three candidates to take forward.',
+    journeyPhase: 'Business Case',
+    journeyPhases: ['Business Case'],
+    placements: {
+      moduleSections: ['business-case:quick-scan']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'UNIDO',
+    access: 'Free',
+    timeRequired: '30-45 minutes',
+    preparationNeeded: 'Print out, post-its, pens and people.',
+    output: 'Overview of the circular strategies most relevant to your SME',
+    bestFor: 'All SMEs',
+    format: 'Print out',
+    toolLink: ''
+  }),
+  createResource({
+    id: 'resource-056',
+    cardNumber: 'Tool card #56',
+    slug: 'shortlisting-of-options',
+    title: 'Shortlisting of Options',
+    description:
+      'A template for shortlisting circular options and assigning responsibility for reviewing feasibility.',
+    about:
+      'This resource helps teams move from screened business models to a shortlist of one to three priority strategies that can be developed into a business case.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['business-case:quick-scan']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'UNIDO',
+    access: 'Free',
+    timeRequired: '15-30 minutes',
+    preparationNeeded: 'Basic knowledge of your options, a pen and the printout.',
+    output: 'Filled-out shortlist of circular options with responsibilities and priorities',
+    bestFor: 'All SMEs that benefit from a quick shortlisting exercise',
+    format: 'Print out',
+    toolLink: ''
+  }),
+  createResource({
+    id: 'resource-057',
+    cardNumber: 'Tool card #57',
+    slug: 'ncm-business-development-toolkit',
+    title: 'NCM business development toolkit',
+    description:
+      'A toolkit for identifying inefficiencies, customer pain points and circular business model opportunities.',
+    about:
+      'The Business Model Development Toolkit guides teams through exercises to assess five linear-model inefficiencies, reflect on customer pain points and explore circular business sub-models before choosing opportunities to develop further.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['business-case:circular-business-models']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'The Nordic Council of Ministers',
+    access: 'Free',
+    timeRequired: '30-60 minutes',
+    preparationNeeded: 'Basic knowledge of company operations, a pen and the playbook printouts.',
+    output: 'Shortlist of 1-2 circular business opportunities ready for further development',
+    bestFor: 'All SMEs exploring which circular business models suit their company',
+    format: 'PDF exercises / printable worksheet',
+    toolLink: 'https://www.nordicinnovation.org/tools/nordic-circular-economy-playbook-toolkit'
+  }),
+  createResource({
+    id: 'resource-058',
+    cardNumber: 'Tool card #58',
+    slug: 'product-design-audit-map',
+    title: 'Product Design Audit Map',
+    description:
+      'A scoring matrix for assessing design flaws in a product lifecycle and identifying circular design improvement suggestions.',
+    about:
+      'The DfX scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:explore-strategies']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'UNIDO',
+    access: 'Free',
+    timeRequired: '45-60 minutes',
+    preparationNeeded: 'Printout of scoring sheet, post-its, pens and product samples or specifications.',
+    output: 'Circular design improvement suggestions for your products',
+    bestFor: 'All SMEs, particularly manufacturing SMEs or businesses with a physical product',
+    format: 'Print out',
+    toolLink: ''
+  }),
+  createResource({
+    id: 'resource-059',
+    cardNumber: 'Tool card #59',
+    slug: 'how-might-we-workshop',
+    title: 'How Might We Workshop',
+    description:
+      'A method for reframing problem insights as open-ended How Might We questions that create a productive starting point for brainstorming.',
+    about:
+      'The How Might We method is a simple reframing technique from design practice. Teams translate insight statements into solution-neutral questions that are broad enough for creativity and specific enough to guide action.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:explore-strategies']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'DTU',
+    access: 'Free',
+    timeRequired: '1 hour',
+    preparationNeeded: 'Existing insight statements from prior research, plus pens and post-its.',
+    output: 'A set of How Might We questions to guide ideation',
+    bestFor: 'Design teams that have gathered user insights and want actionable design challenges',
+    format: 'Print out',
+    toolLink: 'https://universaldesignguide.com/method/how-might-we/'
+  }),
+  createResource({
+    id: 'resource-060',
+    cardNumber: 'Tool card #60',
+    slug: 'bundle-ideas',
+    title: 'Bundle Ideas',
+    description:
+      'A method for moving from a large volume of individual ideas to a smaller set of robust composite solutions.',
+    about:
+      'Bundle Ideas is an IDEO.org method for moving from divergent brainstorming to convergent concept development by clustering, combining and synthesising the strongest elements across concepts.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:explore-strategies']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'IDEO.org (Design Kit)',
+    access: 'Free',
+    timeRequired: '1.5 hours',
+    preparationNeeded: 'A wall or board covered with ideas and drawings from a prior brainstorm session, plus pens and post-its.',
+    output: 'Coherent idea groupings or early-stage solution concepts ready to be developed and shared',
+    bestFor: 'Design teams that have completed a brainstorm and need to converge their thinking',
+    format: 'Print out',
+    toolLink: 'https://www.designkit.org/methods/30.html'
+  }),
+  createResource({
+    id: 'resource-061',
+    cardNumber: 'Tool card #61',
+    slug: 'create-a-concept',
+    title: 'Create a Concept',
+    description:
+      'A method for developing bundled ideas into polished, testable concepts that address the original design challenge.',
+    about:
+      'Create a Concept is an IDEO.org method that bridges ideation and prototyping. Teams turn their strongest idea clusters into coherent concepts that are more complete than raw ideas but not yet final solutions.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:explore-strategies']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'IDEO.org (Design Kit)',
+    access: 'Free',
+    timeRequired: '1.5 hours',
+    preparationNeeded: 'Bundled idea clusters from a prior session, plus pens, post-its and paper.',
+    output: 'One or more robust concept drafts ready to be tested with end users',
+    bestFor: 'Design teams ready to commit to a direction before prototyping',
+    format: 'Print out',
+    toolLink: 'https://www.designkit.org/methods/create-a-concept.html'
+  }),
+  createResource({
+    id: 'resource-062',
+    cardNumber: 'Tool card #62',
+    slug: 'safe-and-circular-product-redesign',
+    title: 'Safe and Circular Product Redesign',
+    description:
+      'A workshop that challenges participants to redesign a commercial carpet tile to be safe and circular.',
+    about:
+      'This Ellen MacArthur Foundation workshop helps users understand the implications of choosing materials for circular products, including the need to design out chemicals of concern and enable material recovery.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:redesign-circular-value']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'Ellen MacArthur Foundation',
+    access: 'Free',
+    timeRequired: '1.5 hours',
+    preparationNeeded: 'Works best with a diverse team from different backgrounds.',
+    output: 'Three redesign concepts documented with a memorable name',
+    bestFor: 'All SMEs that can benefit from a redesign workshop',
+    format: 'Online Workshop',
+    toolLink: 'https://www.designkit.org/methods/3.html'
+  }),
+  createResource({
+    id: 'resource-063',
+    cardNumber: 'Tool card #63',
+    slug: 'circular-design-toolbox',
+    title: 'Circular Design Toolbox',
+    description:
+      'A collection of canvas-based tools for assessing, ideating, developing and communicating circular economy strategies.',
+    about:
+      'The Ecodesign Toolkit by EcoDesign Circle is an open-access collection of downloadable PDFs and interactive Mural boards for circular and ecodesign work across products, services, systems and business models.',
+    journeyPhase: 'Options',
+    journeyPhases: ['Options'],
+    placements: {
+      moduleSections: ['options:redesign-circular-value']
+    },
+    sector: 'Cross-sector',
+    language: 'English',
+    provider: 'EcoDesign Circle / Fraunhofer IZM',
+    access: 'Free',
+    timeRequired: 'Varies by tool; individual canvases can be used in 1-3 hour workshops',
+    preparationNeeded: 'Low; most tools are available as free PDF downloads and/or Mural online boards.',
+    output: 'Completed canvases, design briefs, business model concepts, ecodesign assessments or pitch materials',
+    bestFor: 'SMEs, designers and sustainability professionals integrating circular thinking into product, service and business strategy',
+    format: 'Toolbox',
+    toolLink: 'https://circulardesign.tools/'
   })
 ];
 
@@ -794,8 +1864,14 @@ export const resources = [
   They are derived from the resource list to avoid maintaining filter values twice.
 */
 export const journeyPhases = [
-  ...new Set(resources.flatMap((resource) => resource.journeyPhases ?? [resource.journeyPhase]))
+  ...new Set(resources.flatMap((resource) => resource.filterValues.journeyPhases))
 ];
-export const sectors = [...new Set(resources.map((resource) => resource.sector))].sort();
-export const languages = [...new Set(resources.map((resource) => resource.language))].sort();
-export const accessOptions = [...new Set(resources.map((resource) => resource.access))].sort();
+export const sectors = sortFilterValues([
+  ...new Set(resources.flatMap((resource) => resource.filterValues.sectors))
+]);
+export const languages = sortFilterValues([
+  ...new Set(resources.flatMap((resource) => resource.filterValues.languages))
+]);
+export const accessOptions = sortFilterValues([
+  ...new Set(resources.flatMap((resource) => resource.filterValues.access))
+]);

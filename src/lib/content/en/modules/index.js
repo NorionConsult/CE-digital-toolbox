@@ -123,6 +123,8 @@ import { options } from './options.js';
  *   intro: string;
  *   icon: string;
  *   iconAlt: string;
+ *   hideSectionNavigation?: boolean;
+ *   hidePathwayCards?: boolean;
  *   bodyTitle: string;
  *   bodyParagraphs: string[];
  *   bodyImages: { src: string; alt: string; caption: string }[];

@@ -58,17 +58,18 @@ const pathwaySection = {
         'Evaluate shortlisted circular business model options based on impact, feasibility, risks and alignment with your existing operations and goals.',
       keyOutputs: [
         'Circular business models screened against six criteria',
-        'A clearer view of feasibility and potential impact',
-        'A shortlist of one to three priority strategies'
+        'A clearer view of feasibility and potential impact'
       ]
     },
     {
-      sectionId: 'transition-planning',
+      sectionId: 'business-case',
       number: '3',
-      title: 'Transition Planning',
+      title: 'Business Case',
       description:
         'Understand the barriers, enablers and steps required to move from your current business model to a circular one.',
-      keyOutputs: ['Barrier and SWOT analysis', 'Phased transition roadmap']
+      keyOutputs: [
+        'Barrier and SWOT analysis', 
+        'A shortlist of one to three priority strategies']
     }
   ]
 };

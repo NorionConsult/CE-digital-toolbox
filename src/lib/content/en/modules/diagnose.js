@@ -36,7 +36,7 @@ const pathwaySection = {
   title: 'Where are you now?',
   paragraphs: [
     'Before a business can become more circular, it needs to understand where it stands today.',
-    'This module guides SMEs through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
+    'This module guides you through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
     'Rather than jumping straight to solutions, this module builds the factual foundation that makes every subsequent decision more targeted and effective. The module works through three interconnected stages.'
   ],
   cards: [
@@ -81,7 +81,7 @@ const maturitySection = {
   resourceTag: 'diagnose:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
-    'The maturity assessment gives SMEs a structured way to understand their current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most SMEs fall somewhere along this maturity spectrum.'
+    'The maturity assessment gives you a structured way to understand their current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most SMEs fall somewhere along this maturity spectrum.'
   ]
 };
 
