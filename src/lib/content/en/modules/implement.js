@@ -71,9 +71,49 @@ const implementationPlanSection = {
   title: 'Implementation Plan',
   resourceTag: 'implement:implementation-plan',
   paragraphs: [
-    'Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage.',
-    'Use this section to describe scope, actions, responsibilities, required resources, dependencies and expected results.'
-  ]
+    'An implementation plan helps SMEs translate circular economy ambitions into practical action. It sets out what the business will do, why the action matters, who is responsible, when it will happen, and how progress will be measured. For circular strategies, this is especially important because actions often depend on changes across operations, suppliers, customers and partners. A clear plan makes the transition more manageable by breaking strategic goals into concrete steps, identifying the resources and support needed, and defining milestones that can be followed over time. By clarifying responsibilities, timelines and success measures from the outset, SMEs can move from intention to implementation in a more structured and accountable way.'
+  ],
+  /*
+    IMPLEMENTATION PRINCIPLES INFO BOX:
+    Edit the title, icon names and text below to change this box.
+    Icons use Iconify's icon-park-outline library:
+    https://icon-sets.iconify.design/icon-park-outline/
+  */
+  principleBox: {
+    title: 'Key principles for SMEs',
+    items: [
+      {
+        title: 'Start small',
+        icon: 'zoom-in',
+        text:
+          'Pick one or two circular actions to implement first. Success builds momentum and confidence for the next step.'
+      },
+      {
+        title: 'Involve your team',
+        icon: 'personal-collection',
+        text:
+          'Implementation works best when the people who will carry out the actions have been part of designing them.'
+      },
+      {
+        title: 'Be specific',
+        icon: 'aiming',
+        text:
+          'Assign a named person, a specific date, and a measurable outcome to each action. Ambiguity is the most common reason implementation stalls.'
+      },
+      {
+        title: 'Plan to adapt',
+        icon: 'adjustment',
+        text:
+          'Your first implementation plan will change. Build in regular review points so you can adjust as you learn.'
+      },
+      {
+        title: 'Use external support',
+        icon: 'add-user',
+        text:
+          'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding SMEs can access.'
+      }
+    ]
+  }
 };
 
 /* 5. DETAILED SECTION 2 */
@@ -82,8 +122,7 @@ const roadmapMilestonesSection = {
   title: 'Roadmap & Milestones',
   resourceTag: 'implement:roadmap-milestones',
   paragraphs: [
-    'A roadmap helps teams see how individual actions fit together over time and where important decisions or dependencies occur.',
-    'Use this space to explain the roadmap format, milestone-setting process and how progress reviews should be organised.'
+    'Setting milestones helps SMEs turn circular strategies into manageable steps. Instead of treating implementation as one large change, milestones make it easier to organise actions, track progress, and stay focused on priorities. Milestones also help businesses identify what needs to happen first, who is responsible, and when progress should be reviewed. This makes implementation more practical and allows adjustments to be made if challenges arise. By working with clear milestones, SMEs can keep momentum, measure progress over time, and move towards circular goals in a more structured way.'
   ]
 };
 
@@ -91,7 +130,7 @@ const roadmapMilestonesSection = {
 const testPilotSection = {
   id: 'test-and-pilot',
   title: 'Test & Pilot',
-  resourceTag: 'implement:test-pilot',
+  resourceTag: 'implement:test-and-pilot',
   paragraphs: [
     'Before you can test a circular strategy in the real world, you need to be able to see it clearly and, so do the partners, suppliers, and colleagues who will need to make it work alongside you. That is where these two tools come in, and they work best used together',
     'Start with the **Circular Loop Designer**. Use it to map out the material flows your pilot strategy depends on: where inputs come from, how products move through use, and what happens to materials at end of life. The colour-coded arrows help you distinguish what already exists (green), what is traditional and needs to change (red), and what still needs to be built (blue). This is not just a drawing exercise, it is a way of surfacing the gaps, dependencies, and missing partners in your circular model before you commit time and money to testing it. A loop that looks simple in a strategy document often reveals significant complexity once you try to map the actual actors and flows. Better to find that out at the drawing stage than halfway through a pilot.',

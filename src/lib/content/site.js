@@ -27,7 +27,8 @@ export const site = {
     viewSector: 'View package',
     viewResource: 'View resource',
     viewCase: 'View case',
-    openTool: 'Open tool'
+    openTool: 'Open tool',
+    openCase: 'Open case'
   },
   navigation: [
     { label: 'Modules', href: '/#modules' },

@@ -233,7 +233,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:test-and-pilot'],
+      moduleSections: ['implement:roadmap-milestones'],
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -258,6 +258,9 @@ export const resources = [
       'The Roadmap to Circular Business is a workshop tool that helps organisations turn circular economy ideas into a practical action plan. It supports teams in defining their circular ambition, prioritising actions, assigning responsibilities, and planning next steps. The output is a circular transition roadmap with clear priorities, milestones, and ownership.',
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:implementation-plan']
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'The good tribe',
@@ -282,6 +285,9 @@ export const resources = [
       'A structured road mapping tool developed for manufacturing companies. Guides businesses through mapping their current state, defining ambitions, and building a concrete roadmap with prioritised actions. The tool uses a visual canvas approach with facilitation guidance, making it well suited to use in team workshops. Outputs include a prioritised action plan with owners and timelines.',
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:implementation-plan']
+    },
     sector: 'Manufacturing',
     language: 'English',
     provider: 'Teknologiateollisuus',
@@ -728,6 +734,58 @@ export const resources = [
     format: 'Miro board',
     toolLink:
       'https://miro.com/templates/roadmap-to-circular-business/'
+  }),
+  createResource({
+    id: 'resource-026',
+    cardNumber: 'Tool card #26',
+    slug: 'circular-loop-designer',
+    title: 'The Circular Loop Designer',
+    description:
+      'To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage',
+    about:
+      "The Circular Loop Designer is a free, browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:test-and-pilot']
+    },
+    sector: 'Across',
+    language: 'English, Dutch',
+    provider: 'Saxion University of Applied Sciences',
+    access: 'Sign up',
+    timeRequired: '4 hours',
+    preparationNeeded: 'Low barrier to entry; free online tool, no installation required. A free Businessmodellab account is needed to save designs; beginners can start from one of the built-in examples',
+    output: 'A shareable visual diagram of your circular material loop, exportable as an XML file, showing flows, actors, and the status of each connection (existing, sustainable, or still under development)',
+    bestFor: 'SMEs at starter level who want to make their circular strategy concrete and visual — particularly useful for communicating loop designs to partners, suppliers, or internal stakeholders who need to see the full picture before committing',
+    format: 'Online platform',
+    toolLink:
+      'https://businessmodellab.nl/en/tools/circular-loop-designer'
+  }),
+   createResource({
+    id: 'resource-027',
+    cardNumber: 'Tool card #27',
+    slug: 'ecoCEO',
+    title: 'ecoCEO',
+    description:
+      'To simulate running a circular electronics company making decisions on resource management, production processes, and revenue models, while responding to external disruptions such as policy changes and market shocks that test the resilience of circular vs. linear strategies',
+    about:
+      "ecoCEO is a free, web-based serious game developed by VITO with support from EIT Raw Materials. Players manage a company producing electronic goods (microchips, smartphones, and e-bikes) making decisions on which raw materials to use, which production processes to invest in, and which revenue models to adopt. The game tests those decisions against unforeseen events including policy measures, resource scarcity, and market disruptions, making visible how circular strategies (take-back systems, reuse, design-for-repair, product-service systems) improve business resilience compared to linear approaches.",
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      moduleSections: ['implement:test-and-pilot']
+    },
+    sector: 'Across',
+    language: 'English',
+    provider: 'VITO / EIT Raw Materials',
+    access: 'Free',
+    timeRequired: '1 – 2 Hours',
+    preparationNeeded: 'Low, web-based, no installation or account required for players; teachers/facilitators can create a free account to access supporting materials',
+    output: 'Experiential understanding of how circular business decisions (recycling, take-back, repair, product-service systems) affect company performance and resilience; discussion material for debriefing on CE strategy trade-offs',
+    bestFor: 'SMEs and teams at an introductory stage of CE engagement who benefit from learning through doing; also useful as an icebreaker or warm-up activity before deeper strategy workshop',
+    format: 'Online platform',
+    toolLink:
+      'https://ecoceo.vito.be/en/ecoceo-game'
   })
 ];
 

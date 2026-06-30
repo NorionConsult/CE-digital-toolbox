@@ -35,6 +35,28 @@ import { options } from './options.js';
  *   }[];
  *   image?: { src: string; alt: string; caption: string; zoomable?: boolean };
  *   factbox?: { title: string; items: string[] };
+ *   principleBox?: {
+ *     title: string;
+ *     items: { title: string; icon: string; text: string }[];
+ *   };
+ *   m3DfxFramework?: {
+ *     title: string;
+ *     intro: string;
+ *     source?: string;
+ *     cards: {
+ *       title: string;
+ *       icon: string;
+ *       meaning: string;
+ *       application: string | string[];
+ *       regulation: string;
+ *     }[];
+ *   };
+ *   m3ProcessRedesign?: {
+ *     title: string;
+ *     intro: string;
+ *     footer?: string;
+ *     columns: { title: string; subtitle: string; icon: string; actions: string[] }[];
+ *   };
  *   baselineCards?: { title: string; text?: string; items?: string[]; icon: string }[];
  *   closingParagraphs?: string[];
  *   m3WheelWorkshop?: {

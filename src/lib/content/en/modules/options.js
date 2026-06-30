@@ -26,28 +26,28 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'explore-ce-strategies', label: 'Explore strategies' },
+  { sectionId: 'explore-ce-strategies', label: 'Design principles' },
   { sectionId: 'identify-your-options', label: 'Identify options' },
-  { sectionId: 'assess-and-prioritise', label: 'Assess options' }
+  { sectionId: 'assess-and-prioritise', label: 'Redesign process' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
   title: 'What strategy is best for you?',
   paragraphs: [
-    'The Options module bridges diagnosis with decision-making. Based on what you have learned about your business, you will explore which circular strategies and business models best fit your context, resources and goals.'
+    'The Options module bridges diagnosis with decision-making. Based on what you have learned about your business, you will explore which circular strategies are out there and how to redesign your products for the circular economy.'
   ],
   cards: [
     {
       sectionId: 'explore-ce-strategies',
       number: '1',
-      title: 'Explore CE Strategies',
+      title: 'Understand design principles',
       description:
-        'Understand the range of circular strategies available, from keeping products in use longer to redesigning material flows.',
+        'Explore the core DfX strategies: Design for Longevity, Repairability, Disassembly, and Recyclability,  and how they apply to your products.',
       keyOutputs: [
-        'A clear grasp of the 9R framework and value-preservation hierarchy',
-        'Understanding of inner-loop versus outer-loop strategies',
-        'Awareness of circular strategy areas that may fit your business'
+        'A clear understanding of the design for X principles',
+        'Gain insight of how to apply these strategies to your SME',
+        'An awareness of the regulation surrounding these principles'
       ]
     },
     {
@@ -65,12 +65,12 @@ const pathwaySection = {
     {
       sectionId: 'assess-and-prioritise',
       number: '3',
-      title: 'Prepare for Business Case',
+      title: 'Redesigning for Circular value',
       description:
-        'Prepare the most promising options to take forward into the Business Case module for deeper feasibility and value analysis.',
+        'Apply circular design strategies to generate concrete product or process improvements your team can take forward into a business case.',
       keyOutputs: [
-        'A shortlist of one to three priority options',
-        'A clearer handoff into the Business Case module',
+        'Understand the redesign process',
+        'Begin your redesign journey with the two tools',
         'Notes on what needs further testing'
       ]
     }
@@ -80,14 +80,89 @@ const pathwaySection = {
 /* 4. DETAILED SECTION 1 */
 const exploreStrategiesSection = {
   id: 'explore-ce-strategies',
-  title: 'Explore CE Strategies',
+  title: 'Understand Design Principles',
   resourceTag: 'options:explore-strategies',
   paragraphs: [
-    'Circular economy strategies provide different ways to preserve value, reduce waste and keep products, components and materials in use for longer.',
-    "Use this section to introduce the relevant strategy frameworks and explain how users can recognise which approaches may fit their business context.",
+    'Circular economy strategies provide different ways to preserve value, reduce waste and keep products, components and materials in use for longer. For this end, there are different models and frameworks.',
+    "One of these are the DfX framework, which helps teams translate circular economy ambition into design decisions. DfX stand for 'Design for X' where the X stands for Longevity, Repairability, Disassembly, Recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products. The EU regulation, particularly the ESPR, Right to Repair, and packaging regulations, are based and align with these design principles. This means the design choices of companies will soon affect market access. The visualisation below describe these four design strategies that keep products and materials in use longer and can be applied at different scales and degrees."
+  ],
+  /*
+    DFX FRAMEWORK INFO BOX:
+    Edit the cards below to change the text, icons or source note.
+    Icons use Iconify's icon-park-outline library:
+    https://icon-sets.iconify.design/icon-park-outline/
+  */
+  m3DfxFramework: {
+    title: 'The DfX Framework',
+    intro: 'The DfX Framework',
+    source:
+      'Source: Mesa, Jaime A. (2023). Design for circularity and durability: an integrated approach from DfX guidelines. Research in Engineering Design. 34, 3. 10.1007/s00163-023-00419-1.',
+    cards: [
+      {
+        title: 'Design for Longevity',
+        icon: 'time',
+        meaning:
+          'Products built to last: high durability, quality materials, resistance to wear.',
+        application: [
+          'Use modular components',
+          'Avoid planned obsolescence',
+          'Design timeless aesthetics'
+        ],
+        regulation: 'ESPR durability requirements · Right to Repair Directive'
+      },
+      {
+        title: 'Design for Repairability',
+        icon: 'tool',
+        meaning: 'Products that can be fixed, not thrown away.',
+        application: [
+          'Accessible fasteners',
+          'Spare parts availability',
+          'Clear repair instructions'
+        ],
+        regulation: 'Right to Repair (EU 2024/1799) · Energy-related products'
+      },
+      {
+        title: 'Design for Disassembly',
+        icon: 'screwdriver',
+        meaning: 'Products that can be taken apart efficiently at end of life.',
+        application: [
+          'Reversible connections',
+          'Material compatibility',
+          'Labelled components'
+        ],
+        regulation: 'ESPR 2025-2030 working plan · Electronics & textiles first'
+      },
+      {
+        title: 'Design for Recyclability',
+        icon: 'recycling',
+        meaning: 'Materials that can re-enter the production cycle cleanly.',
+        application: [
+          'Mono-material design',
+          'Avoid hazardous additives',
+          'Clearly marked materials'
+        ],
+        regulation:
+          'Packaging & Packaging Waste Regulation · Critical Raw Materials Act'
+      }
+    ]
+  },
+  /*
+    The circular business model cards were moved to Module 4:
+    src/lib/content/en/modules/business-case.js
+  */
+};
+
+/* 5. DETAILED SECTION 2 */
+const identifyOptionsSection = {
+  id: 'identify-your-options',
+  title: 'Identify Your Options',
+  resourceTag: 'options:identify-options',
+  paragraphs: [
+    'This section helps teams translate broad circular economy strategies into options that relate directly to their products, operations and value chain.',
+    'Use this space to describe the option-generation process, workshop activities and any supporting examples or images.',
     "The image above shows the '9R strategies' form a hierarchy of circular economy interventions ranked from highest to lowest value preservation.",
-    "At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether",
-    "Moving down, R1–R2 (Rethink/Reduce) minimise resource use, while R3–R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible.",
+    'At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether.',
+    'Moving down, R1-R2 (Rethink/Reduce) minimise resource use, while R3-R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible.',
     'R7 (Repurpose) gives materials a new function, R8 (Recycle) recovers raw material value through processing, and R9 (Recover), typically energy recovery through incineration, sits at the bottom of the hierarchy as the lowest value preservation strategy, extracting only calorific value once all other options are exhausted.',
     "The framework's core principle is that the higher the R, the more embedded economic, social and environmental value is lost."
   ],
@@ -104,21 +179,7 @@ const exploreStrategiesSection = {
     maxWidth: '680px',
     zoomable: true
   },
-  /*
-    The circular business model cards were moved to Module 4:
-    src/lib/content/en/modules/business-case.js
-  */
-};
-
-/* 5. DETAILED SECTION 2 */
-const identifyOptionsSection = {
-  id: 'identify-your-options',
-  title: 'Identify Your Options',
-  resourceTag: 'options:identify-options',
-  paragraphs: [
-    'This section helps teams translate broad circular economy strategies into options that relate directly to their products, operations and value chain.',
-    'Use this space to describe the option-generation process, workshop activities and any supporting examples or images.'
-  ],
+  showRelevantTools: false,
   /*
     M3 WHEEL WORKSHOP
     Edit all Module 3 wheel workshop wording, timings, lists and the canvas link below.
@@ -174,12 +235,63 @@ const identifyOptionsSection = {
 /* 6. DETAILED SECTION 3 */
 const assessPrioritiseSection = {
   id: 'assess-and-prioritise',
-  title: 'Prepare for Business Case',
+  title: 'Redesigning Your Process',
   resourceTag: 'options:assess-prioritise',
   paragraphs: [
-    'Use this final step to collect the most promising circular options and prepare them for deeper feasibility and value analysis in Module 4.',
-    'The detailed circular business model screening questionnaire has been moved to Module 4, Step 2: Quick Scan Tool.'
-  ]
+    'Use this step to translate selected design options into changes across sourcing, production, products, packaging and recovery.'
+  ],
+  /*
+    PROCESS REDESIGN INFO BOX:
+    Edit the columns below to change headings, icons, subtitles or actions.
+  */
+  m3ProcessRedesign: {
+    title: 'Redesigning Your Processes',
+    intro:
+      "Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed.",
+    footer: 'Material flow loops back — recovery feeds input again',
+    columns: [
+      {
+        title: 'Input',
+        subtitle: 'Sourcing & Materials',
+        icon: 'recycling',
+        actions: [
+          'Switch to recycled or secondary raw materials',
+          'Source from suppliers with circularity credentials',
+          'Reduce virgin material inputs'
+        ]
+      },
+      {
+        title: 'Process',
+        subtitle: 'Production & Manufacturing',
+        icon: 'tool',
+        actions: [
+          'Lean manufacturing: eliminate process waste',
+          'Closed-loop water and solvent recovery',
+          'Capture and reuse production offcuts'
+        ]
+      },
+      {
+        title: 'Output',
+        subtitle: 'Products & Packaging',
+        icon: 'box',
+        actions: [
+          'Design products for longevity and take-back',
+          'Eliminate single-use or non-recyclable packaging',
+          'Label materials clearly for end-of-life sorting'
+        ]
+      },
+      {
+        title: 'Recovery',
+        subtitle: 'End-of-Life Management',
+        icon: 'recycling',
+        actions: [
+          'Set up a take-back or buy-back scheme',
+          'Partner with reprocessors or recyclers',
+          'Reintroduce recovered materials as inputs'
+        ]
+      }
+    ]
+  }
 };
 
 /* 7. MODULE SUMMARY */

@@ -202,6 +202,21 @@ src/lib/content/cases.js
 Copy one complete `createCase({ ... })` block and update its values. Give it a
 unique `id` and `slug`. The `slug` becomes its page URL.
 
+Each case uses these editor-facing fields:
+
+```js
+companyName: 'Company name',
+country: 'Country',
+clientSegment: 'Client segment',
+sector: 'Textiles',
+description: 'Short text shown on the case card and in the page hero.',
+about: 'Longer text shown on the individual case page.',
+caseLink: 'https://example.com'
+```
+
+The `caseLink` field controls the "Open case" button in the case page hero.
+Leave it as an empty string if there is no external case source yet.
+
 One case record automatically creates:
 
 - a card on the Cases page

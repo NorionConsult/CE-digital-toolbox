@@ -24,7 +24,7 @@ const hero = {
   iconAlt: 'Awareness module icon'
 };
 
-/* 2. HERO SECTION BUTTONS */
+/* 2. HERO SECTION BUTTONS*/
 const sectionButtons = [
   { sectionId: 'learning-resources', label: 'Learning resources' },
   { sectionId: 'relevant-tools', label: 'Relevant tools' }

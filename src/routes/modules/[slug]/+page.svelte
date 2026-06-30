@@ -221,6 +221,122 @@
             </aside>
           {/if}
 
+          {#if section.principleBox}
+            <aside class="module-principle-box">
+              <h3>{section.principleBox.title}</h3>
+
+              <div class="module-principle-list">
+                {#each section.principleBox.items as item}
+                  <article class="module-principle-item">
+                    <span
+                      class="module-principle-icon"
+                      style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${item.icon}.svg");`}
+                      aria-hidden="true"
+                    ></span>
+
+                    <div>
+                      <h4>{item.title}</h4>
+                      <p><InlineText text={item.text} /></p>
+                    </div>
+                  </article>
+                {/each}
+              </div>
+            </aside>
+          {/if}
+
+          {#if section.m3DfxFramework}
+            <aside class="m3-dfx-framework">
+              <div class="m3-dfx-heading">
+                <p><InlineText text={section.m3DfxFramework.intro} /></p>
+              </div>
+
+              <div class="m3-dfx-grid">
+                {#each section.m3DfxFramework.cards as card}
+                  <article class="m3-dfx-card">
+                    <div class="m3-dfx-card-header">
+                      <span
+                        class="m3-dfx-icon"
+                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                        aria-hidden="true"
+                      ></span>
+                      <h4>{card.title}</h4>
+                    </div>
+
+                    <div class="m3-dfx-card-body">
+                      <section>
+                        <h5>What it means</h5>
+                        <p><InlineText text={card.meaning} /></p>
+                      </section>
+
+                      <section>
+                        <h5>How to apply it</h5>
+                        {#if Array.isArray(card.application)}
+                          <ul>
+                            {#each card.application as item}
+                              <li><InlineText text={item} /></li>
+                            {/each}
+                          </ul>
+                        {:else}
+                          <p><InlineText text={card.application} /></p>
+                        {/if}
+                      </section>
+
+                      <section>
+                        <h5>EU regulation</h5>
+                        <p><InlineText text={card.regulation} /></p>
+                      </section>
+                    </div>
+                  </article>
+                {/each}
+              </div>
+
+              {#if section.m3DfxFramework.source}
+                <p class="m3-dfx-source"><InlineText text={section.m3DfxFramework.source} /></p>
+              {/if}
+            </aside>
+          {/if}
+
+          {#if section.m3ProcessRedesign}
+            <aside class="m3-process-redesign">
+              <div class="m3-process-heading">
+                <p><InlineText text={section.m3ProcessRedesign.intro} /></p>
+              </div>
+
+              <div class="m3-process-flow-arrow m3-process-flow-arrow-top" aria-hidden="true"></div>
+
+              <div class="m3-process-grid">
+                {#each section.m3ProcessRedesign.columns as column}
+                  <article class="m3-process-column">
+                    <div class="m3-process-top">
+                      <span
+                        class="m3-process-icon"
+                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${column.icon}.svg");`}
+                        aria-hidden="true"
+                      ></span>
+                      <h4>{column.title}</h4>
+                      <p><InlineText text={column.subtitle} /></p>
+                    </div>
+
+                    <ul>
+                      {#each column.actions as action}
+                        <li><InlineText text={action} /></li>
+                      {/each}
+                    </ul>
+                  </article>
+                {/each}
+              </div>
+
+              <div class="m3-process-flow-arrow" aria-hidden="true"></div>
+
+              {#if section.m3ProcessRedesign.footer}
+                <p class="m3-process-footer">
+                  <span aria-hidden="true">↻</span>
+                  <InlineText text={section.m3ProcessRedesign.footer} />
+                </p>
+              {/if}
+            </aside>
+          {/if}
+
           {#if section.closingParagraphs}
             <div class="module-detail-closing">
               {#each section.closingParagraphs as paragraph}
@@ -1342,6 +1458,332 @@
     font-size: 0.8em;
   }
 
+  .module-principle-box {
+    display: grid;
+    gap: 24px;
+    margin-top: 34px;
+    padding: 32px;
+    border: 2px solid var(--module-accent);
+    border-radius: 15px;
+    background-color: color-mix(in srgb, var(--module-accent) 12%, var(--white));
+    box-shadow: 0 12px 24px rgba(10, 46, 54, 0.08);
+  }
+
+  .module-principle-box h3 {
+    color: var(--module-accent);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+    line-height: 1.12;
+  }
+
+  .module-principle-list {
+    display: grid;
+    gap: 18px;
+  }
+
+  .module-principle-item {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 18px;
+    align-items: start;
+  }
+
+  .module-principle-icon {
+    width: 38px;
+    height: 38px;
+    margin-top: 4px;
+    background-color: var(--module-accent);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .module-principle-item h4 {
+    margin-bottom: 4px;
+    color: var(--module-accent);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    line-height: 1.2;
+  }
+
+  .module-principle-item p {
+    color: var(--dark);
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .m3-dfx-framework,
+  .m3-process-redesign {
+    display: grid;
+    gap: 26px;
+    width: min(var(--site-container-max), 92vw);
+    max-width: calc(100vw - 32px);
+    margin-top: 36px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: var(--module-accent);
+  }
+
+  .m3-dfx-heading,
+  .m3-process-heading {
+    display: grid;
+    gap: 10px;
+  }
+
+  .m3-dfx-heading p,
+  .m3-process-heading p {
+    color: var(--dark);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  .m3-dfx-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .m3-dfx-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: var(--white);
+  }
+
+  .m3-dfx-card-header {
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    min-height: 118px;
+    padding: 22px;
+    background-color: var(--dark);
+    color: var(--white);
+  }
+
+  .m3-dfx-icon {
+    width: 44px;
+    height: 44px;
+    background-color: var(--module-accent);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .m3-dfx-card-header h4 {
+    color: var(--white);
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.12;
+    text-transform: uppercase;
+  }
+
+  .m3-dfx-card-body {
+    display: grid;
+    gap: 0;
+    padding: 22px;
+  }
+
+  .m3-dfx-card-body section {
+    display: grid;
+    gap: 12px;
+    padding: 18px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--module-accent) 55%, var(--white));
+  }
+
+  .m3-dfx-card-body section:first-child {
+    padding-top: 0;
+  }
+
+  .m3-dfx-card-body section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .m3-dfx-card-body h5 {
+    color: var(--dark);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  .m3-dfx-card-body p {
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.28;
+  }
+
+  .m3-dfx-card-body ul {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .m3-dfx-card-body li {
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.28;
+  }
+
+  .m3-dfx-card-body li::marker {
+    color: var(--module-accent);
+    font-size: 0.8em;
+  }
+
+  .m3-dfx-card-body section:last-child p {
+    font-style: italic;
+  }
+
+  .m3-dfx-source {
+    color: color-mix(in srgb, var(--dark) 58%, var(--module-accent));
+    font-size: 0.8rem;
+    font-style: italic;
+    line-height: 1.35;
+  }
+
+  .m3-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    position: relative;
+  }
+
+  .m3-process-column {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    min-height: 390px;
+    padding: 26px;
+    border-radius: 15px;
+    background-color: var(--dark);
+    color: var(--white);
+  }
+
+  .m3-process-top {
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .m3-process-icon {
+    width: 54px;
+    height: 54px;
+    position: relative;
+  }
+
+  .m3-process-icon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--module-accent);
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+
+  .m3-process-top h4 {
+    color: var(--white);
+    font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+    line-height: 1.08;
+    text-transform: uppercase;
+  }
+
+  .m3-process-top p {
+    color: color-mix(in srgb, var(--white) 82%, var(--module-accent));
+    font-style: italic;
+    line-height: 1.25;
+  }
+
+  .m3-process-column ul {
+    display: grid;
+    gap: 22px;
+    margin: 0;
+    padding: 8px 0 0;
+    color: inherit;
+    list-style: none;
+  }
+
+  .m3-process-column li {
+    position: relative;
+    padding-left: 28px;
+    color: inherit;
+    font-size: clamp(1rem, 1.4vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .m3-process-column li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 10px;
+    height: 10px;
+    background-color: var(--module-accent);
+    border-radius: 999px;
+  }
+
+  .m3-process-flow-arrow {
+    position: relative;
+    height: 22px;
+    margin: 24px 24px 8px;
+  }
+
+  .m3-process-flow-arrow-top {
+    margin: 12px 24px 14px;
+  }
+
+  .m3-process-flow-arrow::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 10px;
+    top: 50%;
+    height: 2px;
+    background-color: var(--dark);
+    transform: translateY(-50%);
+  }
+
+  .m3-process-flow-arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid var(--dark);
+    border-bottom: 2px solid var(--dark);
+    transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .m3-process-flow-arrow-top::before {
+    left: 10px;
+    right: 0;
+  }
+
+  .m3-process-flow-arrow-top::after {
+    left: 0;
+    right: auto;
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  .m3-process-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.3;
+  }
+
+  .m3-process-footer span {
+    color: var(--module-accent);
+    font-weight: 700;
+  }
+
   .baseline-card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1624,7 +2066,9 @@
     }
 
     .module-pathway-grid,
-    .baseline-card-grid {
+    .baseline-card-grid,
+    .m3-dfx-grid,
+    .m3-process-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1640,8 +2084,28 @@
 
   @media (max-width: 640px) {
     .module-pathway-grid,
-    .baseline-card-grid {
+    .baseline-card-grid,
+    .m3-dfx-grid,
+    .m3-process-grid {
       grid-template-columns: 1fr;
+    }
+
+    .m3-dfx-framework,
+    .m3-process-redesign {
+      padding: 20px;
+    }
+
+    .m3-dfx-card-header {
+      min-height: auto;
+    }
+
+    .m3-process-column,
+    .m3-process-column ul {
+      min-height: auto;
+    }
+
+    .m3-process-flow-arrow {
+      display: none;
     }
 
     .business-model-card-grid {
