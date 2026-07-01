@@ -1,12 +1,11 @@
 <script>
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
-  import { cases, caseClientSegments, caseCountries, caseSectors } from '$lib/content/cases.js';
+  import { cases, caseCountries, caseSectors } from '$lib/content/cases.js';
   import { casesPage } from '$lib/content/cases-page.js';
 
   let selectedSector = '';
   let selectedCountry = '';
-  let selectedClientSegment = '';
   let searchTerm = '';
 
   $: normalisedSearch = searchTerm.trim().toLowerCase();
@@ -21,15 +20,13 @@
 
     const matchesSector = !selectedSector || caseStudy.sector === selectedSector;
     const matchesCountry = !selectedCountry || caseStudy.country === selectedCountry;
-    const matchesClientSegment = !selectedClientSegment || caseStudy.clientSegment === selectedClientSegment;
 
-    return matchesSearch && matchesSector && matchesCountry && matchesClientSegment;
+    return matchesSearch && matchesSector && matchesCountry;
   });
 
   function resetFilters() {
     selectedSector = '';
     selectedCountry = '';
-    selectedClientSegment = '';
     searchTerm = '';
   }
 </script>
@@ -56,12 +53,6 @@
 
       <FilterSelect id="case-sector-filter" label={casesPage.sectorLabel} bind:value={selectedSector} options={caseSectors} />
       <FilterSelect id="case-country-filter" label={casesPage.countryLabel} bind:value={selectedCountry} options={caseCountries} />
-      <FilterSelect
-        id="case-client-filter"
-        label={casesPage.clientSegmentLabel}
-        bind:value={selectedClientSegment}
-        options={caseClientSegments}
-      />
 
       <button type="button" class="reset-button" on:click={resetFilters}>{casesPage.resetButton}</button>
     </form>
@@ -104,7 +95,7 @@
 
   .filter-panel {
     display: grid;
-    grid-template-columns: 1.5fr repeat(3, 1fr) auto;
+    grid-template-columns: 1.5fr repeat(2, 1fr) auto;
     gap: 16px;
     align-items: end;
     padding: 24px;

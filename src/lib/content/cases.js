@@ -280,4 +280,3 @@ export const cases = [
 /* Filter values are derived automatically, so editors maintain each value once. */
 export const caseSectors = [...new Set(cases.map((caseStudy) => caseStudy.sector))].sort();
 export const caseCountries = [...new Set(cases.map((caseStudy) => caseStudy.country))].sort();
-export const caseClientSegments = [...new Set(cases.map((caseStudy) => caseStudy.clientSegment))].sort();
