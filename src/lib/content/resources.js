@@ -969,9 +969,6 @@ export const resources = [
       'openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Diagnose', 'Business Case', 'Monitor'],
-    placements: {
-      moduleSections: ['monitor:measuring-success']
-    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Carbon Trust',
