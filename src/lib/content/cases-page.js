@@ -5,8 +5,8 @@
 export const casesPage = {
   pageTitle: 'Cases | CE Digital Toolbox',
   eyebrow: 'Case collection',
-  title: 'Circular economy cases',
-  intro: 'Browse practical business cases and filter them by sector, country and client segment.',
+  title: 'Case Catalogue',
+  intro: 'Browse existing Circular Economy business cases and filter them by sector, country and client segment.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by company, sector, country or description',
   filtersLabel: 'Case filters',

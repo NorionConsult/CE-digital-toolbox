@@ -33,7 +33,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'Where are you now?',
+  title: 'How far is my company in the circular journey?',
   paragraphs: [
     'Before a business can become more circular, it needs to understand where it stands today.',
     'This module guides you through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',

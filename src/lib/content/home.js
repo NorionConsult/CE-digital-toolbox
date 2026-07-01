@@ -6,7 +6,7 @@ export const home = {
   pageTitle: 'CE Digital Toolbox | Home',
   hero: {
     eyebrow: 'A practical overview of digital tools',
-    title: 'Find relevant digital tools',
+    title: 'Find digital tools to support your circular economy transition',
     text: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs. The toolbox is organised into six modules, sector packages and a tools page. Each module contains relevant introduction and structured content that presents selected tools that provide methods, guidance, and resources for a wider audience. Get started by exploring the contents below.',
     primaryButton: 'Explore modules',
     secondaryButton: 'Open tools'

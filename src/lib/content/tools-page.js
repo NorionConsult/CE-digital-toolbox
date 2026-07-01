@@ -6,7 +6,7 @@
 export const toolsPage = {
   pageTitle: 'Tools | CE Digital Toolbox',
   eyebrow: 'Tool overview',
-  title: 'Tools',
+  title: 'Tool Catalogue',
   intro: 'Browse the digital toolbox tools and filter resource pages by journey phase, sector, language and access.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by title, purpose, provider or access',
