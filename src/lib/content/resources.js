@@ -477,6 +477,9 @@ export const resources = [
       'A SWOT analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities.',
     journeyPhase: 'Business Case',
     journeyPhases: ['Business Case'],
+    placements: {
+      moduleSections:['business-case:business-case']
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Miro',
@@ -594,6 +597,9 @@ export const resources = [
       'Printable or digital cards covering key CE trends, opportunities, and threats. Designed to facilitate team discussions and feed into SWOT analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting.',
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
+    placements: {
+      moduleSections:['business-case:business-models']
+    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'CIRCit Norden / Rise Research Institutes',
@@ -617,6 +623,9 @@ export const resources = [
       'An ideation tool that helps SMEs explore and identify the most suitable circular pathways for their products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
+    placements: {
+      moduleSections:['business-case:business-models']
+    },
     sector: 'Manufacturing',
     language: 'English',
     provider: 'European Commission / IDEAL&CO',
@@ -937,9 +946,6 @@ export const resources = [
       "ecoCEO is a free, web-based serious game developed by VITO with support from EIT Raw Materials. Players manage a company producing electronic goods (microchips, smartphones, and e-bikes) making decisions on which raw materials to use, which production processes to invest in, and which revenue models to adopt. The game tests those decisions against unforeseen events including policy measures, resource scarcity, and market disruptions, making visible how circular strategies (take-back systems, reuse, design-for-repair, product-service systems) improve business resilience compared to linear approaches.",
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
-    placements: {
-      moduleSections: ['implement:test-and-pilot']
-    },
     sector: 'Cross-sector',
     language: 'English',
     provider: 'VITO / EIT Raw Materials',
@@ -1694,7 +1700,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['business-case:circular-business-models']
+      moduleSections:['business-case:business-case']
     },
     sector: 'Cross-sector',
     language: 'English',

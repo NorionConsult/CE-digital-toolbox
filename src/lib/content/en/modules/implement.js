@@ -60,7 +60,7 @@ const pathwaySection = {
       title: 'Test & Pilot',
       description:
         'Run a small-scale, time-bounded test of your circular strategy before committing to full implementation, using structured tools to design the experiment, map the material flows, and measure what works.',
-      keyOutputs: ['Test results', 'Pilot feedback', 'Lessons learned']
+      keyOutputs: ['Test results', 'Pilot feedback']
     }
   ]
 };
@@ -71,7 +71,9 @@ const implementationPlanSection = {
   title: 'Implementation Plan',
   resourceTag: 'implement:implementation-plan',
   paragraphs: [
-    'An implementation plan helps SMEs translate circular economy ambitions into practical action. It sets out what the business will do, why the action matters, who is responsible, when it will happen, and how progress will be measured. For circular strategies, this is especially important because actions often depend on changes across operations, suppliers, customers and partners. A clear plan makes the transition more manageable by breaking strategic goals into concrete steps, identifying the resources and support needed, and defining milestones that can be followed over time. By clarifying responsibilities, timelines and success measures from the outset, SMEs can move from intention to implementation in a more structured and accountable way.'
+    "Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage.",
+    "Scope defines what the plan covers. Usually the 1-3 prioritised circular opportunities, which parts of the business they affect, the timeframe, and what's deliberately left out of scope for this round. Actions are the concrete, sequenced steps needed to move each solution from idea to reality, separating quick wins from longer structural changes.",
+     "Responsibilities assign clear ownership of each action who leads, who supports, who signs off, and where external partners are needed. Required resources cover the budget, time, equipment, training, and expertise needed to execute your plan, including any funding gaps that need to be addressed. Dependencies will show what each action relies on before it can succeed, helping to show  bottlenecks and inform in what order you should impliment your circular actions. Expected results are the measurable environmental, economic, or operational outcomes you expect to see once actions are complete, tied to the KPI Canvas. In practice, the canvas lays these out as a simple grid per opportunity, so your team can see how each piece connects and revisit it as the plan evolves."
   ],
   /*
     IMPLEMENTATION PRINCIPLES INFO BOX:
@@ -122,7 +124,10 @@ const roadmapMilestonesSection = {
   title: 'Roadmap & Milestones',
   resourceTag: 'implement:roadmap-milestones',
   paragraphs: [
-    'Setting milestones helps SMEs turn circular strategies into manageable steps. Instead of treating implementation as one large change, milestones make it easier to organise actions, track progress, and stay focused on priorities. Milestones also help businesses identify what needs to happen first, who is responsible, and when progress should be reviewed. This makes implementation more practical and allows adjustments to be made if challenges arise. By working with clear milestones, SMEs can keep momentum, measure progress over time, and move towards circular goals in a more structured way.'
+    "Setting milestones helps yous turn circular strategies into manageable steps. Instead of treating implementation as one large change, milestones make it easier to organise actions, track progress, and stay focused on priorities. Milestones also help businesses identify what needs to happen first, who is responsible, and when progress should be reviewed. This makes implementation more practical and allows adjustments to be made if challenges arise. By working with clear milestones, you can keep momentum, measure progress over time, and move towards circular goals in a more structured way.",
+    "Process milestone – A key step in how you work e.g. ‘Suplier audit completed’",
+    "Output milestone – A deliverable produced e.g. ‘Takeback scheme launched’",
+    "Review milestone – A checkpoint for learning e.g. ‘Month 3 progress review’"
   ]
 };
 
@@ -133,8 +138,7 @@ const testPilotSection = {
   resourceTag: 'implement:test-and-pilot',
   paragraphs: [
     'Before you can test a circular strategy in the real world, you need to be able to see it clearly and, so do the partners, suppliers, and colleagues who will need to make it work alongside you. That is where these two tools come in, and they work best used together',
-    'Start with the **Circular Loop Designer**. Use it to map out the material flows your pilot strategy depends on: where inputs come from, how products move through use, and what happens to materials at end of life. The colour-coded arrows help you distinguish what already exists (green), what is traditional and needs to change (red), and what still needs to be built (blue). This is not just a drawing exercise, it is a way of surfacing the gaps, dependencies, and missing partners in your circular model before you commit time and money to testing it. A loop that looks simple in a strategy document often reveals significant complexity once you try to map the actual actors and flows. Better to find that out at the drawing stage than halfway through a pilot.',
-    'Once your loop is mapped, use ecoCEO to stress-test the strategic logic behind it. The game puts you in the position of running a business that must make circular decisions on sourcing, production processes, and revenue models, while responding to the kind of external shocks that real pilots encounter: policy changes, resource scarcity, market disruptions. It makes visible something that a static diagram cannot: that circular strategies do not just need to be well-designed, they need to be resilient. Running through the game as a team before your pilot launches is a low-risk way to rehearse the trade-offs you are likely to face, build shared understanding of why circular choices matter for business performance, and stress-test whether your planned approach holds up under pressure.'
+    'Start with the **Circular Loop Designer**. Use it to map out the material flows your pilot strategy depends on: where inputs come from, how products move through use, and what happens to materials at end of life. The colour-coded arrows help you distinguish what already exists (green), what is traditional and needs to change (red), and what still needs to be built (blue). This is not just a drawing exercise, it is a way of surfacing the gaps, dependencies, and missing partners in your circular model before you commit time and money to testing it. A loop that looks simple in a strategy document often reveals significant complexity once you try to map the actual actors and flows. Better to find that out at the drawing stage than halfway through a pilot.'
   ]
 };
 

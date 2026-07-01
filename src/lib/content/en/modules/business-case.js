@@ -33,7 +33,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'Building your circular business case',
+  title: 'Building a circular business case',
   paragraphs: [
     'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This module helps SMEs identify the right circular business model, build a compelling business case and understand the path forward.'
   ],
@@ -69,7 +69,8 @@ const pathwaySection = {
         'Understand the barriers, enablers and steps required to move from your current business model to a circular one.',
       keyOutputs: [
         'Barrier and SWOT analysis', 
-        'A shortlist of one to three priority strategies']
+        'A shortlist of one to three priority strategies'
+      ]
     }
   ]
 };
@@ -245,12 +246,12 @@ const quickScanSection = {
 
 /* 6. DETAILED SECTION 3 */
 const transitionPlanningSection = {
-  id: 'transition-planning',
-  title: 'Transition Planning',
-  resourceTag: 'business-case:transition-planning',
+  id: 'business-case',
+  title: 'Business Case',
+  resourceTag: 'business-case:business-case',
   paragraphs: [
-    'A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them.',
-    'Use this section to describe barriers, enabling conditions, risks, responsibilities and the phases of the proposed transition.'
+    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. SWOT is a fantastic tool to use when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. SWOT stands for Strengths, Weaknesses, Opportunities, and Threats.",
+    "It's a simple framework for assessing a business, project, or decision by looking at four areas: Strengths and Weaknesses are internal factors (what you're good at, and where you fall short), while Opportunities and Threats are external factors (favourable conditions you could exploit, and risks in your environment you need to watch for). Typically laid out as a 2x2 grid, it helps surface a clear, balanced picture before making strategic decisions."
   ]
 };
 
@@ -267,7 +268,8 @@ const moduleSummary = {
     'Completed a rapid feasibility and impact assessment',
     'Selected a priority model or strategy for further development',
     'Identified key barriers, risks and enabling conditions',
-    'Prepared a phased transition roadmap'
+    'Developed the business model with the NCM toolkit'
+
   ]
 };
 
