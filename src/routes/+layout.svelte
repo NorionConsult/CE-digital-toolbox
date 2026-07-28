@@ -18,8 +18,3 @@
   <slot />
 </main>
 <SiteFooter />
-<!--
-  The sparkly cursor is intentionally disabled.
-  Its code remains available at:
-  src/lib/components/cursor/StardustCursor.svelte
--->

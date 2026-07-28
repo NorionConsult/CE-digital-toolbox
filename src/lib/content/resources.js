@@ -150,6 +150,7 @@ const FILTER_LABELS = {
   language: {
     english: 'English',
     dutch: 'Dutch',
+    chinese: 'Chinese',
     ukrainian: 'Ukrainian',
     russian: 'Russian',
     portuguese: 'Portuguese',
@@ -348,7 +349,7 @@ export const resources = [
       phaseSections: ['monitor:choosing-indicators']
     },
     sector: 'Cross-sector',
-    language: 'English',
+    language: 'English, Chinese, Portuguese, Spanish',
     provider: 'Ellen MacArthur Foundation',
     access: 'Free',
     timeRequired: 'Half a day',

@@ -304,12 +304,6 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-3-options.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const options = defineJourneyPhasePage({
   phaseCard,
   hero,
@@ -320,6 +314,5 @@ export const options = defineJourneyPhasePage({
     identifyOptionsSection,
     assessPrioritiseSection
   ],
-  phaseSummary,
-  downloads
+  phaseSummary
 });

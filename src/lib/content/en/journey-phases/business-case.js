@@ -273,18 +273,11 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-4-business-case.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const businessCase = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,
   pathwaySection,
   detailSections: [businessModelsSection, quickScanSection, transitionPlanningSection],
-  phaseSummary,
-  downloads
+  phaseSummary
 });

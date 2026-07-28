@@ -211,13 +211,14 @@ src/lib/content/ro/journey-phases/
 
 Keep the same filenames and exported fields in each language folder so the page templates can stay global.
 
-PDF files live in:
+Download files used by specific tools live in:
 
 ```text
 static/downloads/
 ```
 
-Tools resources are now pages generated from `resources.js`; they do not need PDF files unless a future resource explicitly links to one.
+Tools are generated as pages from `resources.js`; they do not need PDF files
+unless a specific tool explicitly links to one.
 
 ## Adding Cases
 

@@ -1,15 +1,11 @@
 # Downloads folder
 
-Place downloadable PDF files in this folder.
+Place downloadable files in this folder only when a specific tool or page links
+to that file.
 
-- `tool-catalogue.pdf` is the shared full tools PDF. The filename is kept for now so existing links continue to work.
-- `journey-phases/` contains one PDF per journey phase.
-
-When replacing a PDF, either keep the same filename or update the corresponding path in:
-
-- `src/lib/content/journey-phases.js`
-
-Tools resources are generated as pages from `src/lib/content/resources.js`, not from PDFs.
+Tools are generated as pages from `src/lib/content/resources.js`, not from
+PDF files. Add a PDF here only when a tool's `toolLink` should open or download
+that specific file.
 
 Sector images live in `static/images/`.
 Footer logos live in `static/logos/`.

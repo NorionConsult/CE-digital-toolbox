@@ -36,7 +36,6 @@
     <a href="{base}/tools/" class="back-link">Back to tools</a>
 
     <div class="resource-kicker">
-      <span class="resource-card-number">{resource.cardNumber}</span>
       <ResourceBadges {resource} variant="hero" />
     </div>
 
@@ -105,20 +104,6 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
-  }
-
-  .resource-card-number {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    border-radius: 999px;
-    padding: 8px 12px;
-    background-color: var(--white);
-    color: var(--dark);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-size: 0.85rem;
   }
 
   .resource-hero h1 {

@@ -133,8 +133,6 @@ import { options } from './options.js';
  *   summaryText?: string;
  *   summaryParagraphs?: string[];
  *   summaryChecklist?: string[];
- *   phasePdf: string;
- *   toolsPdf: string;
  * }} JourneyPhaseContent
  */
 

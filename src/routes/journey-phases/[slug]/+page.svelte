@@ -92,17 +92,6 @@
         </nav>
       {/if}
 
-      <!--<div class="download-buttons">
-        <a href="{base}{journeyPhase.phasePdf}" class="download-button primary" download>
-          {journeyPhasePage.phaseDownload}
-        </a>
-
-        <a href="{base}{journeyPhase.toolsPdf}" class="download-button secondary" download>
-          {journeyPhasePage.toolsDownload}
-        </a>
-      
-      </div>
-      -->
     </div>
   </div>
 </section>
@@ -2057,10 +2046,6 @@
     .module-section-navigation {
       order: 5;
     }
-
-    /*.module-hero-copy .download-buttons {
-      order: 5;
-    }*/
 
     .module-body-content,
     .module-detail-layout,

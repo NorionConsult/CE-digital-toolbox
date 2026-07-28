@@ -170,18 +170,11 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-2-diagnose.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const diagnose = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,
   pathwaySection,
   detailSections: [maturitySection, baselineSection, hotspotSection],
-  phaseSummary,
-  downloads
+  phaseSummary
 });

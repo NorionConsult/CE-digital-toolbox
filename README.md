@@ -14,7 +14,7 @@ src/
 └── app.css                # Global colours, fonts, spacing and shared styles
 
 static/
-├── downloads/             # PDF files served as public downloads
+├── downloads/             # Download files linked from specific tools
 ├── images/                # Sector tool images
 └── logos/                 # Footer logos
 ```
@@ -92,37 +92,27 @@ This will show only those names in bold on the website. This works in journey ph
 
 ## Add A New Tool
 
-1. Add the PDF file to:
-
-```text
-static/downloads/
-```
-
-2. Open:
+1. Open:
 
 ```text
 src/lib/content/resources.js
 ```
 
-3. Copy one existing resource block and change the title, description, phase, language, provider, access and link.
+2. Copy one existing resource block and change the title, description, phase, language, provider, access and link.
+
+3. If the tool should download a local PDF, add the file under `static/downloads/tools/` and set `toolLink` to that file path.
 
 The Tools filters are created automatically from the tools, so new languages, providers and access values appear without editing another file.
 
 ## Add A New Journey Phase
 
-1. Add the phase PDF to:
-
-```text
-static/downloads/journey-phases/
-```
-
-2. Open:
+1. Open:
 
 ```text
 src/lib/content/en/journey-phases/
 ```
 
-3. Copy one existing journey phase file and change the text, slug and PDF path.
+2. Copy one existing journey phase file and change the text and slug.
 
 SvelteKit will automatically create the matching journey phase page from the slug.
 

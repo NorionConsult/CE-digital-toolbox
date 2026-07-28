@@ -156,18 +156,11 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-1-learn.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const learn = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,
   pathwaySection,
   detailSections: [LearningresourcesSection],
-  phaseSummary,
-  downloads
+  phaseSummary
 });

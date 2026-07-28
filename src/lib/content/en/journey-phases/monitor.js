@@ -186,12 +186,6 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-6-monitor.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const monitor = defineJourneyPhasePage({
   phaseCard,
   hero,
@@ -202,6 +196,5 @@ export const monitor = defineJourneyPhasePage({
     measuringSuccessSection,
     interpretingResultsSection,
   ],
-  phaseSummary,
-  downloads
+  phaseSummary
 });

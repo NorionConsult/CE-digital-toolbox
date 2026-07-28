@@ -159,18 +159,11 @@ const phaseSummary = {
   ]
 };
 
-/* File links normally do not need editing. */
-const downloads = {
-  phasePdf: '/downloads/journey-phases/phase-5-implement.pdf',
-  toolsPdf: '/downloads/tool-catalogue.pdf'
-};
-
 export const implement = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,
   pathwaySection,
   detailSections: [implementationPlanSection, roadmapMilestonesSection, testPilotSection],
-  phaseSummary,
-  downloads
+  phaseSummary
 });
