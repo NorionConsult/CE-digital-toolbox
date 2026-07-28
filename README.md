@@ -1,13 +1,13 @@
-# CE Digital Toolbox
+# Circular Economy Toolbox
 
-This is a SvelteKit static website for the CE Digital Toolbox. The project is organised like a small theme: content files are separate from shared layout, and the global header and footer have their own clear files.
+This is a SvelteKit static website for the Circular Economy Toolbox. The project is organised like a small theme: content files are separate from shared layout, and the global header and footer have their own clear files.
 
 ## Main Folders
 
 ```text
 src/
 ├── lib/
-│   ├── content/           # Edit website text, modules, sectors and tool cards here
+│   ├── content/           # Edit website text, journey phases, sectors and tools here
 │   ├── theme/             # Edit the global header and footer here
 │   └── components/        # Reusable page building blocks
 ├── routes/                # Website pages and page templates
@@ -15,7 +15,7 @@ src/
 
 static/
 ├── downloads/             # PDF files served as public downloads
-├── images/                # Sector package images
+├── images/                # Sector tool images
 └── logos/                 # Footer logos
 ```
 
@@ -42,35 +42,36 @@ Home page text:
 src/lib/content/home.js
 ```
 
-Journey module cards and module pages:
+Journey phase cards and journey phase pages:
 
 ```text
-src/lib/content/modules.js
+src/lib/content/journey-phases.js
+src/lib/content/en/journey-phases/
 ```
 
-Sector package cards:
+Sector tools:
 
 ```text
 src/lib/content/sectors.js
 static/images/
 ```
 
-Catalogue/tool cards:
+Tools:
 
 ```text
 src/lib/content/resources.js
 ```
 
-Catalogue page labels and intro text:
+Tools page labels and intro text:
 
 ```text
-src/lib/content/library-page.js
+src/lib/content/tools-page.js
 ```
 
-Shared module page labels:
+Shared journey phase page labels:
 
 ```text
-src/lib/content/module-page.js
+src/lib/content/journey-phase-page.js
 ```
 
 Colours, fonts and shared visual style:
@@ -87,14 +88,14 @@ In editable paragraph and description text, wrap only the words that should be b
 'Use **Circular Loop Designer** and **ecoCEO** before scaling the idea.'
 ```
 
-This will show only those names in bold on the website. This works in module page text, sector page text, and homepage section/card text. Avoid using HTML tags such as `<strong>` in content files, because the `**bold text**` format is easier for editors and future translations.
+This will show only those names in bold on the website. This works in journey phase page text, sector page text, and homepage section/card text. Avoid using HTML tags such as `<strong>` in content files, because the `**bold text**` format is easier for editors and future translations.
 
-## Add A New Tool Card
+## Add A New Tool
 
 1. Add the PDF file to:
 
 ```text
-static/downloads/library/
+static/downloads/
 ```
 
 2. Open:
@@ -103,27 +104,27 @@ static/downloads/library/
 src/lib/content/resources.js
 ```
 
-3. Copy one existing resource block and change the title, description, phase, year, language, provider and file path.
+3. Copy one existing resource block and change the title, description, phase, language, provider, access and link.
 
-The library filters are created automatically from the tool cards, so new years, languages and providers appear without editing another file.
+The Tools filters are created automatically from the tools, so new languages, providers and access values appear without editing another file.
 
-## Add A New Module
+## Add A New Journey Phase
 
-1. Add the module PDF to:
+1. Add the phase PDF to:
 
 ```text
-static/downloads/modules/
+static/downloads/journey-phases/
 ```
 
 2. Open:
 
 ```text
-src/lib/content/modules.js
+src/lib/content/en/journey-phases/
 ```
 
-3. Copy one existing module block and change the text, slug and PDF path.
+3. Copy one existing journey phase file and change the text, slug and PDF path.
 
-SvelteKit will automatically create the matching module page from the slug.
+SvelteKit will automatically create the matching journey phase page from the slug.
 
 ## Replace Sector Images
 

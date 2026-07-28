@@ -1,5 +1,5 @@
 <script>
-  import { getJourneyPhaseClass } from '$lib/content/journey-phases.js';
+  import { getJourneyPhaseClass } from '$lib/content/phase-badge-colours.js';
 
   /** @type {string[]} */
   export let phases = [];

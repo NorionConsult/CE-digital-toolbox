@@ -33,7 +33,7 @@
 
 <section class="sector-hero">
   <div class="container sector-hero-content">
-    <a href="{base}/#sectors" class="back-link">{sectorPage.backLink}</a>
+    <a href="{base}/guided-pathways/#sectors" class="back-link">{sectorPage.backLink}</a>
 
     <img class="sector-hero-image" src="{base}{sector.image}" alt={sector.imageAlt} />
 

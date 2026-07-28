@@ -1,13 +1,13 @@
 /*
   Edit this file for Tools page labels and intro text.
-  Tool cards themselves are edited in resources.js.
-  The page was previously called "Catalogue"; old routes are kept only as aliases.
+  Tools themselves are edited in resources.js.
+  Old route aliases are kept only so older links continue to work.
 */
 export const toolsPage = {
-  pageTitle: 'Tools | CE Digital Toolbox',
-  eyebrow: 'Tool overview',
+  pageTitle: 'Tools | Circular Economy Toolbox',
+  eyebrow: 'Selected tools to support SMEs',
   title: 'Tool Catalogue',
-  intro: 'Browse the digital toolbox tools and filter resource pages by journey phase, sector, language and access.',
+  intro: 'Browse the Circular Economy Toolbox tools and filter tool pages by journey phase, sector, language and access.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by title, purpose, provider or access',
   filtersLabel: 'Tools filters',
@@ -18,7 +18,7 @@ export const toolsPage = {
   resetButton: 'Reset filters',
   resultPrefix: 'Showing',
   resultMiddle: 'of',
-  resultSuffix: 'resources',
-  emptyTitle: 'No resources found',
+  resultSuffix: 'tools',
+  emptyTitle: 'No tools found',
   emptyText: 'Try changing or resetting the filters.'
 };

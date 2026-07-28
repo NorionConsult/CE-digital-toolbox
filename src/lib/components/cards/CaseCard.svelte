@@ -31,7 +31,9 @@
     </div>
   </dl>
 
-  <a href="{base}/cases/{caseStudy.slug}/" class="case-link">{site.labels.viewCase}</a>
+  <a href="{base}/cases/{caseStudy.slug}/" class="case-link" target="_blank" rel="noreferrer">
+    {site.labels.viewCase}
+  </a>
 </article>
 
 <style>

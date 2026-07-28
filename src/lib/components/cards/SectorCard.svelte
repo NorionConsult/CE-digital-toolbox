@@ -1,6 +1,6 @@
 <script>
   /*
-    Reusable card for sector packages.
+    Reusable card for sector tools.
     These link to dedicated sector pages.
   */
   import { base } from '$app/paths';

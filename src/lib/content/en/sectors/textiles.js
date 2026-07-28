@@ -126,7 +126,7 @@ export const textiles = {
   number: 'Sector 3',
   slug: 'textiles',
   title: 'Textiles',
-  description: 'This sector package provides tools and guidance for textile SMEs to adopt circular economy practices.',
+  description: 'This sector tool provides tools and guidance for textile SMEs to adopt circular economy practices.',
   image: '/images/textiles.jpg',
   imageAlt: 'Textiles sector',
   navigation: [

@@ -5,13 +5,13 @@
   2. Give it a unique id, cardNumber and slug.
   3. Replace all visible text, taxonomy values and the toolLink.
   4. Update journeyPhase and journeyPhases using the instructions below.
-  5. Add a placements block if the card should appear on module or sector pages.
+  5. Add a placements block if the card should appear on journey phase or sector pages.
 
   The slug becomes the resource page URL, so use lowercase words separated
   with hyphens and do not reuse a slug from another resource.
 
   Taxonomy fields used for Tools page filtering and card information:
-  - journeyPhase: primary phase retained for compatibility and module matching.
+  - journeyPhase: primary phase retained for compatibility and phase matching.
   - journeyPhases: every relevant phase shown as a separate coloured badge,
     and used by the Tools phase filter and resource taxonomy.
   - sector: Cross-sector, Manufacturing, etc.
@@ -33,16 +33,16 @@
   phase names; no CSS class or colour code is needed here.
 
   Use these exact phase names:
-  - Awareness
+  - Learn
   - Diagnose
   - Options
   - Business Case
   - Implement
   - Monitor
-  - None, when the tool is not assigned to a journey module
+  - None, when the tool is not assigned to a journey phase
 
-  The website matches each phase name to its module and uses that module's
-  global colour from src/app.css. A resource with several journeyPhases gets
+  The website matches each phase name to its journey phase and uses the
+  global journey phase colour from src/app.css. A resource with several journeyPhases gets
   several badges automatically, for example:
 
   journeyPhase: 'Monitor',
@@ -53,15 +53,15 @@
   The Tools page can filter by None, but no "None" badge is displayed on cards.
 
   WHERE A TOOL CARD APPEARS:
-  Add a placements block inside a resource to place it on module or sector pages.
+  Add a placements block inside a resource to place it on journey phase or sector pages.
 
   placements: {
-    moduleSections: ['diagnose:baseline-mapping'],
+    phaseSections: ['diagnose:baseline-mapping'],
     sectors: ['construction'],
     sectorSections: ['construction:relevant-tools']
   },
 
-  - moduleSections: module-slug:section-id
+  - phaseSections: journey-phase-slug:section-id
   - sectors: sector page slug, such as construction, agriculture, textiles or tourism
   - sectorSections: sector-slug:section-id tags, such as textiles:relevant-tools
 
@@ -70,7 +70,7 @@
 */
 /**
  * @typedef {{
- *   moduleSections?: string[];
+ *   phaseSections?: string[];
  *   sectors?: string[];
  *   sectorSections?: string[];
  * }} ResourcePlacementsInput
@@ -109,7 +109,7 @@
  *   languageDisplay: string;
  *   accessDisplay: string;
  *   placements: {
- *     moduleSections: string[];
+ *     phaseSections: string[];
  *     sectors: string[];
  *     sectorSections: string[];
  *   };
@@ -121,7 +121,8 @@ const LANGUAGE_MULTIPLE_LABEL = 'Multiple';
 /** @type {Record<string, Record<string, string>>} */
 const FILTER_LABELS = {
   journeyPhase: {
-    awareness: 'Awareness',
+    awareness: 'Learn',
+    learn: 'Learn',
     diagnose: 'Diagnose',
     diagnosis: 'Diagnose',
     options: 'Options',
@@ -131,7 +132,7 @@ const FILTER_LABELS = {
     monitor: 'Monitor',
     monitoring: 'Monitor',
     none: 'None',
-    'sector packages': 'None'
+    'sector tools': 'None'
   },
   sector: {
     all: 'Cross-sector',
@@ -271,7 +272,7 @@ function createResource(resource) {
       access: [accessDisplay]
     },
     placements: {
-      moduleSections: resource.placements?.moduleSections ?? [],
+      phaseSections: resource.placements?.phaseSections ?? [],
       sectors: resource.placements?.sectors ?? [],
       sectorSections: resource.placements?.sectorSections ?? []
     }
@@ -282,7 +283,7 @@ function createResource(resource) {
 export const resources = [
   createResource({
     id: 'resource-001',
-    cardNumber: 'Tool card #1',
+    cardNumber: 'Tool #1',
     slug: 'sme-reporting-tool',
     title: 'SME Reporting Tool',
     description:
@@ -292,7 +293,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor', 'Business Case', 'Options'],
     placements: {
-      moduleSections: ['monitor:measuring-success'],
+      phaseSections: ['monitor:measuring-success'],
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -308,7 +309,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-002',
-    cardNumber: 'Tool card #2',
+    cardNumber: 'Tool #2',
     slug: 'circular-tracker',
     title: 'Circular Tracker',
     description:
@@ -318,7 +319,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor', 'Diagnose'],
     placements: {
-      moduleSections: ['monitor:measuring-success'],
+      phaseSections: ['monitor:measuring-success'],
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -334,7 +335,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-003',
-    cardNumber: 'Tool card #3',
+    cardNumber: 'Tool #3',
     slug: 'circulytics-guide',
     title: 'Circulytics Guide',
     description:
@@ -344,7 +345,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor'],
      placements: {
-      moduleSections: ['monitor:choosing-indicators']
+      phaseSections: ['monitor:choosing-indicators']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -361,7 +362,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-004',
-    cardNumber: 'Tool card #4',
+    cardNumber: 'Tool #4',
     slug: 'circular-transition-indicators',
     title: 'Circular Transition Indicators',
     description:
@@ -371,7 +372,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor'],
     placements: {
-      moduleSections: ['monitor:choosing-indicators']
+      phaseSections: ['monitor:choosing-indicators']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -388,7 +389,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-005',
-    cardNumber: 'Tool card #5',
+    cardNumber: 'Tool #5',
     slug: 'climate-action-planner',
     title: 'Climate and Action Planner',
     description:
@@ -398,7 +399,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:roadmap-milestones'],
+      phaseSections: ['implement:roadmap-milestones'],
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -414,7 +415,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-006',
-    cardNumber: 'Tool card #6',
+    cardNumber: 'Tool #6',
     slug: 'roadmap-to-circular-business',
     title: 'Roadmap to circular business',
     description:
@@ -424,7 +425,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:implementation-plan']
+      phaseSections: ['implement:implementation-plan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -441,7 +442,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-007',
-    cardNumber: 'Tool card #7',
+    cardNumber: 'Tool #7',
     slug: 'implementation-template',
     title: 'Implementation Template',
     description:
@@ -451,7 +452,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:implementation-plan']
+      phaseSections: ['implement:implementation-plan']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -468,7 +469,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-008',
-    cardNumber: 'Tool card #8',
+    cardNumber: 'Tool #8',
     slug: 'miro-swot-analysis-template',
     title: 'Miro SWOT Analysis Template',
     description:
@@ -478,7 +479,7 @@ export const resources = [
     journeyPhase: 'Business Case',
     journeyPhases: ['Business Case'],
     placements: {
-      moduleSections:['business-case:business-case']
+      phaseSections:['business-case:business-case']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -487,13 +488,13 @@ export const resources = [
     timeRequired: '1-2 hours',
     preparationNeeded: 'An understanding of the circular strategy you wish to pursue with your business',
     output: 'Completed SWOT matrix with prioritised actions; exportable for sharing with team or advisors.',
-    bestFor: 'SMEs running the transition readiness workshop from Module 4 with their team.',
+    bestFor: 'SMEs running the transition readiness workshop from Phase 4 with their team.',
     format: 'Either online Miro board or PDF if printed.',
     toolLink: 'https://miro.com/strategic-planning/swot-analysis/'
   }),
   createResource({
     id: 'resource-009',
-    cardNumber: 'Tool card #9',
+    cardNumber: 'Tool #9',
     slug: 'cti-tool-circular-transition-indicators',
     title: 'CTI Tool - Circular Transition Indicators',
     description:
@@ -516,7 +517,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-010',
-    cardNumber: 'Tool card #10',
+    cardNumber: 'Tool #10',
     slug: 'business-model-canvas-for-circular-economy',
     title: 'Business Model Canvas for Circular Economy',
     description:
@@ -540,7 +541,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-011',
-    cardNumber: 'Tool card #11',
+    cardNumber: 'Tool #11',
     slug: 'saxion-quickscan-circular-business-models',
     title: 'Saxion Quickscan Circular Business Models',
     description:
@@ -555,7 +556,7 @@ export const resources = [
     access: 'Free',
     timeRequired: '1-2 hours',
     preparationNeeded:
-      'General knowledge of your business and the opportunities you have identified in the previous module.',
+      'General knowledge of your business and the opportunities you have identified in the previous phase.',
     output: 'Prioritised CBM shortlist; scored overview of options; basis for business case development.',
     bestFor: 'SMEs new to circular business modelling wanting a structured starting point.',
     format: 'Excel',
@@ -564,7 +565,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-012',
-    cardNumber: 'Tool card #12',
+    cardNumber: 'Tool #12',
     slug: 'position-green-sustainability-roi-calculator',
     title: 'Position Green Sustainability ROI Calculator',
     description:
@@ -588,7 +589,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-013',
-    cardNumber: 'Tool card #13',
+    cardNumber: 'Tool #13',
     slug: 'circular-economy-trend-cards',
     title: 'Circular Economy Trend Cards',
     description:
@@ -598,7 +599,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections:['business-case:business-models']
+      phaseSections:['business-case:business-models']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -614,7 +615,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-014',
-    cardNumber: 'Tool card #14',
+    cardNumber: 'Tool #14',
     slug: 'circular-pathfinder',
     title: 'Circular Pathfinder',
     description:
@@ -624,7 +625,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections:['business-case:business-models']
+      phaseSections:['business-case:business-models']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -641,7 +642,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-015',
-    cardNumber: 'Tool card #15',
+    cardNumber: 'Tool #15',
     slug: 'circular-strategies-wheel-workshop',
     title: 'Circular Strategies Wheel Workshop',
     description: 'To identify circular strategies that fit your business',
@@ -662,7 +663,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-016',
-    cardNumber: 'Tool card #16',
+    cardNumber: 'Tool #16',
     slug: 'circular-economy-toolkit',
     title: 'Circular Economy toolkit',
     description: 'To get an overview of how circular your product or service is at this stage',
@@ -671,7 +672,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose', 'Options'],
     placements: {
-      moduleSections: ['diagnose:maturity-assessment']
+      phaseSections: ['diagnose:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -686,7 +687,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-017',
-    cardNumber: 'Tool card #17',
+    cardNumber: 'Tool #17',
     slug: 'up2circ-assessment',
     title: 'Up2Circ Assessment',
     description:
@@ -696,7 +697,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:maturity-assessment']
+      phaseSections: ['diagnose:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -711,7 +712,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-018',
-    cardNumber: 'Tool card #18',
+    cardNumber: 'Tool #18',
     slug: 'smart-circular-economy-assessment-scea',
     title: 'Smart Circular Economy Assessment (SCEA)',
     description: 'Helps SMEs benchmark their current CE level and understand key gaps.',
@@ -720,7 +721,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:maturity-assessment']
+      phaseSections: ['diagnose:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -735,7 +736,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-019',
-    cardNumber: 'Tool card #19',
+    cardNumber: 'Tool #19',
     slug: 'i-go-assessment-tool',
     title: 'I-GO Assessment Tool',
     description: 'Assesses organisational readiness for resource efficiency and circularity.',
@@ -744,7 +745,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose', 'Options'],
     placements: {
-      moduleSections: ['diagnose:maturity-assessment']
+      phaseSections: ['diagnose:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English, Ukrainian, Russian, Portuguese, Spanish, Georgian, Arabic',
@@ -759,7 +760,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-020',
-    cardNumber: 'Tool card #20',
+    cardNumber: 'Tool #20',
     slug: 'material-flow-analysis-mfa-workshop',
     title: 'Material Flow Analysis (MFA) Workshop',
     description:
@@ -769,7 +770,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:baseline-mapping']
+      phaseSections: ['diagnose:baseline-mapping']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -785,7 +786,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-021',
-    cardNumber: 'Tool card #21',
+    cardNumber: 'Tool #21',
     slug: 'stan-tool',
     title: 'STAN Tool',
     description: 'Visualizes the material flow data of your products/services',
@@ -794,7 +795,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:baseline-mapping']
+      phaseSections: ['diagnose:baseline-mapping']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -809,7 +810,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-022',
-    cardNumber: 'Tool card #22',
+    cardNumber: 'Tool #22',
     slug: 'hotspot-analysis-tool-ggkp',
     title: 'Hotspot Analysis Tool (GGKP)',
     description: 'Provides sector profile for each country',
@@ -818,7 +819,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['diagnose:hotspot-analysis']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -834,7 +835,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-023',
-    cardNumber: 'Tool card #23',
+    cardNumber: 'Tool #23',
     slug: 'footprint-calculator',
     title: 'Footprint Calculator',
     description:
@@ -844,7 +845,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['diagnose:hotspot-analysis']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -859,7 +860,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-024',
-    cardNumber: 'Tool card #24',
+    cardNumber: 'Tool #24',
     slug: 'future-adaptive-design-guide',
     title: 'Future Adaptive Design Guide',
     description:
@@ -869,7 +870,7 @@ export const resources = [
     journeyPhase: 'Diagnose',
     journeyPhases: ['Diagnose'],
     placements: {
-      moduleSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['diagnose:hotspot-analysis']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -885,7 +886,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-025',
-    cardNumber: 'Tool card #25',
+    cardNumber: 'Tool #25',
     slug: 'milestones-and-action-planning-tool',
     title: 'Milestones and Action Planning Tool',
     description:
@@ -895,7 +896,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:roadmap-milestones']
+      phaseSections: ['implement:roadmap-milestones']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -911,7 +912,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-026',
-    cardNumber: 'Tool card #26',
+    cardNumber: 'Tool #26',
     slug: 'circular-loop-designer',
     title: 'The Circular Loop Designer',
     description:
@@ -921,7 +922,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:test-and-pilot']
+      phaseSections: ['implement:test-and-pilot']
     },
     sector: 'Cross-sector',
     language: 'English, Dutch',
@@ -937,7 +938,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-027',
-    cardNumber: 'Tool card #27',
+    cardNumber: 'Tool #27',
     slug: 'ecoCEO',
     title: 'ecoCEO',
     description:
@@ -960,7 +961,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-028',
-    cardNumber: 'Tool card #28',
+    cardNumber: 'Tool #28',
     slug: 'sme-carbon-footprint-calculator',
     title: 'SME Carbon Footprint Calculator',
     description:
@@ -982,7 +983,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-029',
-    cardNumber: 'Tool card #29',
+    cardNumber: 'Tool #29',
     slug: 'sustainable-procurement-platform',
     title: 'Sustainable Procurement Platform',
     description:
@@ -992,7 +993,7 @@ export const resources = [
     journeyPhase: 'Business Case',
     journeyPhases: ['Options', 'Business Case', 'Implement'],
     placements: {
-      moduleSections: ['business-case:circular-business-models']
+      phaseSections: ['business-case:circular-business-models']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1007,7 +1008,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-030',
-    cardNumber: 'Tool card #30',
+    cardNumber: 'Tool #30',
     slug: 'packscore',
     title: 'PackScore',
     description:
@@ -1029,7 +1030,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-031',
-    cardNumber: 'Tool card #31',
+    cardNumber: 'Tool #31',
     slug: 'circular-packaging-assessment-tool',
     title: 'Circular Packaging Assessment Tool',
     description:
@@ -1051,7 +1052,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-032',
-    cardNumber: 'Tool card #32',
+    cardNumber: 'Tool #32',
     slug: 'recyclass-online-class',
     title: 'RecyClass Online Class',
     description:
@@ -1073,7 +1074,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-033',
-    cardNumber: 'Tool card #33',
+    cardNumber: 'Tool #33',
     slug: 'plasticiq',
     title: 'PlasticIQ',
     description:
@@ -1095,7 +1096,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-034',
-    cardNumber: 'Tool card #34',
+    cardNumber: 'Tool #34',
     slug: 'green-key-toolbox',
     title: 'Green Key Toolbox',
     description:
@@ -1121,7 +1122,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-035',
-    cardNumber: 'Tool card #35',
+    cardNumber: 'Tool #35',
     slug: 'hcmi-hotel-carbon-measurement-initiative',
     title: 'HCMI - Hotel Carbon Measurement Initiative',
     description:
@@ -1147,7 +1148,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-036',
-    cardNumber: 'Tool card #36',
+    cardNumber: 'Tool #36',
     slug: 'cross-re-tour-aat-tool',
     title: 'Cross-Re-Tour AAT Tool',
     description:
@@ -1173,7 +1174,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-037',
-    cardNumber: 'Tool card #37',
+    cardNumber: 'Tool #37',
     slug: 'circular-tourism-self-assessment',
     title: 'Circular Tourism Self Assessment',
     description:
@@ -1199,7 +1200,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-038',
-    cardNumber: 'Tool card #38',
+    cardNumber: 'Tool #38',
     slug: 'breeam-in-use-sustainable-standard',
     title: 'BREEAM In-Use Sustainable Standard',
     description:
@@ -1225,7 +1226,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-039',
-    cardNumber: 'Tool card #39',
+    cardNumber: 'Tool #39',
     slug: 'circular-construction-platform',
     title: 'Circular Construction Platform',
     description:
@@ -1251,7 +1252,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-040',
-    cardNumber: 'Tool card #40',
+    cardNumber: 'Tool #40',
     slug: 'madaster-materials-passport-platform',
     title: 'Madaster - Materials Passport Platform',
     description:
@@ -1277,7 +1278,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-041',
-    cardNumber: 'Tool card #41',
+    cardNumber: 'Tool #41',
     slug: 'bre-smartwaste',
     title: 'BRE SMARTWaste',
     description:
@@ -1303,7 +1304,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-042',
-    cardNumber: 'Tool card #42',
+    cardNumber: 'Tool #42',
     slug: 'levels-eu-sustainable-buildings-framework',
     title: 'Level(s) - EU Sustainable Buildings Framework',
     description:
@@ -1329,7 +1330,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-043',
-    cardNumber: 'Tool card #43',
+    cardNumber: 'Tool #43',
     slug: 'farm-carbon-toolkit',
     title: 'Farm Carbon Toolkit',
     description:
@@ -1355,7 +1356,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-044',
-    cardNumber: 'Tool card #44',
+    cardNumber: 'Tool #44',
     slug: 'food-circularity-check',
     title: 'Food Circularity Check',
     description:
@@ -1381,7 +1382,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-045',
-    cardNumber: 'Tool card #45',
+    cardNumber: 'Tool #45',
     slug: 'o-farms-circular-toolkit',
     title: 'O-Farms Circular Toolkit',
     description:
@@ -1407,7 +1408,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-046',
-    cardNumber: 'Tool card #46',
+    cardNumber: 'Tool #46',
     slug: 'wrap-food-waste-reduction-toolkit',
     title: 'WRAP Food Waste Reduction Toolkit',
     description:
@@ -1433,7 +1434,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-047',
-    cardNumber: 'Tool card #47',
+    cardNumber: 'Tool #47',
     slug: 'circular-toolbox',
     title: 'Circular Toolbox',
     description:
@@ -1459,7 +1460,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-048',
-    cardNumber: 'Tool card #48',
+    cardNumber: 'Tool #48',
     slug: 'rehub-eu-textile-recycling',
     title: 'Re.Hub (EU Textile Recycling)',
     description:
@@ -1485,7 +1486,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-049',
-    cardNumber: 'Tool card #49',
+    cardNumber: 'Tool #49',
     slug: 'fibretrace',
     title: 'Fibretrace',
     description:
@@ -1511,7 +1512,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-050',
-    cardNumber: 'Tool card #50',
+    cardNumber: 'Tool #50',
     slug: 'higg-product-tools',
     title: 'Higg Product Tools',
     description:
@@ -1537,7 +1538,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-051',
-    cardNumber: 'Tool card #51',
+    cardNumber: 'Tool #51',
     slug: 'pdca-cycle-planner-sme-toolkit',
     title: 'PDCA Cycle Planner (SME Toolkit)',
     description:
@@ -1547,7 +1548,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Options', 'Business Case', 'Monitor'],
     placements: {
-      moduleSections: ['monitor:interpreting-results']
+      phaseSections: ['monitor:interpreting-results']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1562,7 +1563,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-052',
-    cardNumber: 'Tool card #52',
+    cardNumber: 'Tool #52',
     slug: 'circulab-business-ecosystem-canvas',
     title: 'Circulab Business Ecosystem Canvas',
     description:
@@ -1572,7 +1573,7 @@ export const resources = [
     journeyPhase: 'Monitor',
     journeyPhases: ['Diagnose', 'Monitor'],
     placements: {
-      moduleSections: ['monitor:interpreting-results']
+      phaseSections: ['monitor:interpreting-results']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1587,7 +1588,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-053',
-    cardNumber: 'Tool card #53',
+    cardNumber: 'Tool #53',
     slug: 'implementation-canvas-circular-business-development-canvas-pack',
     title: 'Implementation Canvas (Circular Business Development Canvas Pack)',
     description:
@@ -1597,7 +1598,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      moduleSections: ['implement:implementation-plan']
+      phaseSections: ['implement:implementation-plan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1612,7 +1613,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-054',
-    cardNumber: 'Tool card #54',
+    cardNumber: 'Tool #54',
     slug: 'shortlisting-workshop',
     title: 'Shortlisting Workshop',
     description:
@@ -1622,7 +1623,7 @@ export const resources = [
     journeyPhase: 'Business Case',
     journeyPhases: ['Options', 'Business Case'],
     placements: {
-      moduleSections: ['business-case:quick-scan']
+      phaseSections: ['business-case:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1637,7 +1638,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-055',
-    cardNumber: 'Tool card #55',
+    cardNumber: 'Tool #55',
     slug: 'mapping-of-options-workshop',
     title: 'Mapping of Options Workshop',
     description:
@@ -1647,7 +1648,7 @@ export const resources = [
     journeyPhase: 'Business Case',
     journeyPhases: ['Business Case'],
     placements: {
-      moduleSections: ['business-case:quick-scan']
+      phaseSections: ['business-case:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1662,7 +1663,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-056',
-    cardNumber: 'Tool card #56',
+    cardNumber: 'Tool #56',
     slug: 'shortlisting-of-options',
     title: 'Shortlisting of Options',
     description:
@@ -1672,7 +1673,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['business-case:quick-scan']
+      phaseSections: ['business-case:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1683,11 +1684,11 @@ export const resources = [
     output: 'Filled-out shortlist of circular options with responsibilities and priorities',
     bestFor: 'All SMEs that benefit from a quick shortlisting exercise',
     format: 'Print out',
-    toolLink: ''
+    toolLink: '/downloads/tools/Tool-Shortlisting-your-priority-options.pdf'
   }),
   createResource({
     id: 'resource-057',
-    cardNumber: 'Tool card #57',
+    cardNumber: 'Tool #57',
     slug: 'ncm-business-development-toolkit',
     title: 'NCM business development toolkit',
     description:
@@ -1697,7 +1698,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections:['business-case:business-case']
+      phaseSections:['business-case:business-case']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1712,7 +1713,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-058',
-    cardNumber: 'Tool card #58',
+    cardNumber: 'Tool #58',
     slug: 'product-design-audit-map',
     title: 'Product Design Audit Map',
     description:
@@ -1722,7 +1723,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:explore-strategies']
+      phaseSections: ['options:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1733,11 +1734,11 @@ export const resources = [
     output: 'Circular design improvement suggestions for your products',
     bestFor: 'All SMEs, particularly manufacturing SMEs or businesses with a physical product',
     format: 'Print out',
-    toolLink: ''
+    toolLink: '/downloads/tools/Tool-Product%20Design%20Audit%20Map.pdf'
   }),
   createResource({
     id: 'resource-059',
-    cardNumber: 'Tool card #59',
+    cardNumber: 'Tool #59',
     slug: 'how-might-we-workshop',
     title: 'How Might We Workshop',
     description:
@@ -1747,7 +1748,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:explore-strategies']
+      phaseSections: ['options:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1762,7 +1763,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-060',
-    cardNumber: 'Tool card #60',
+    cardNumber: 'Tool #60',
     slug: 'bundle-ideas',
     title: 'Bundle Ideas',
     description:
@@ -1772,7 +1773,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:explore-strategies']
+      phaseSections: ['options:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1787,7 +1788,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-061',
-    cardNumber: 'Tool card #61',
+    cardNumber: 'Tool #61',
     slug: 'create-a-concept',
     title: 'Create a Concept',
     description:
@@ -1797,7 +1798,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:explore-strategies']
+      phaseSections: ['options:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1812,7 +1813,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-062',
-    cardNumber: 'Tool card #62',
+    cardNumber: 'Tool #62',
     slug: 'safe-and-circular-product-redesign',
     title: 'Safe and Circular Product Redesign',
     description:
@@ -1822,7 +1823,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:redesign-circular-value']
+      phaseSections: ['options:redesign-circular-value']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1837,7 +1838,7 @@ export const resources = [
   }),
   createResource({
     id: 'resource-063',
-    cardNumber: 'Tool card #63',
+    cardNumber: 'Tool #63',
     slug: 'circular-design-toolbox',
     title: 'Circular Design Toolbox',
     description:
@@ -1847,7 +1848,7 @@ export const resources = [
     journeyPhase: 'Options',
     journeyPhases: ['Options'],
     placements: {
-      moduleSections: ['options:redesign-circular-value']
+      phaseSections: ['options:redesign-circular-value']
     },
     sector: 'Cross-sector',
     language: 'English',

@@ -3,10 +3,10 @@
   Individual case records are edited in cases.js.
 */
 export const casesPage = {
-  pageTitle: 'Cases | CE Digital Toolbox',
-  eyebrow: 'Case collection',
-  title: 'Case Catalogue',
-  intro: 'Browse existing Circular Economy business cases and filter them by sector and country.',
+  pageTitle: 'Cases | Circular Economy Toolbox',
+  eyebrow: 'Case studies from companies',
+  title: 'Case collection',
+  intro: 'Get concrete examples and inspiration from real-world applications of circular economy practices. Browse existing case studies and filter them by sector and country.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by company, sector, country, client segment or description',
   filtersLabel: 'Case filters',

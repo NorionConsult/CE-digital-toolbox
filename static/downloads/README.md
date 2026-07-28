@@ -3,11 +3,11 @@
 Place downloadable PDF files in this folder.
 
 - `tool-catalogue.pdf` is the shared full tools PDF. The filename is kept for now so existing links continue to work.
-- `modules/` contains one PDF per module.
+- `journey-phases/` contains one PDF per journey phase.
 
 When replacing a PDF, either keep the same filename or update the corresponding path in:
 
-- `src/lib/content/modules.js`
+- `src/lib/content/journey-phases.js`
 
 Tools resources are generated as pages from `src/lib/content/resources.js`, not from PDFs.
 

@@ -144,7 +144,7 @@ export const construction = {
   number: 'Sector 1',
   slug: 'construction',
   title: 'Construction',
-  description: 'This sector package provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
+  description: 'This sector tool provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
   image: '/images/construction.jpg',
   imageAlt: 'Construction sector',
   navigation: [

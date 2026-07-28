@@ -5,6 +5,6 @@ import { tourism } from './tourism.js';
 
 /*
   Edit the individual files in this folder for page text.
-  Keep this list in the order the sector packages should appear on the website.
+  Keep this list in the order the sector tools should appear on the website.
 */
 export const sectors = [construction, agriculture, textiles, tourism];

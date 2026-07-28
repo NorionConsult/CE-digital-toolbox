@@ -15,7 +15,7 @@
 
   /*
     Edit the labels, descriptions and recommendations for the maturity visual here.
-    The page layout and module text are kept separate so this component can be updated on its own.
+    The page layout and phase text are kept separate so this component can be updated on its own.
   */
   /** @type {MaturityLevel[]} */
   const levels = [
@@ -27,8 +27,8 @@
       description: 'No knowledge of CE. Business runs as usual; waste and inefficiency go unnoticed.',
       recommendation: [
         { text: 'Recommended next step: move to ' },
-        { text: 'Module 1', href: '/modules/awareness/' },
-        { text: ' (Awareness)' },
+        { text: 'Phase 1', href: '/journey-phases/learn/' },
+        { text: ' (Learn)' },
         { text: ' before continuing with diagnosis.' }
       ]
     },
@@ -41,8 +41,8 @@
         'Beginning to learn about CE. Some interest in resource efficiency, but no action taken yet.',
       recommendation: [
         { text: 'Recommended next step: move to ' },
-        { text: 'Module 1', href: '/modules/awareness/' },
-        { text: ' (Awareness)' },
+        { text: 'Phase 1', href: '/journey-phases/learn/' },
+        { text: ' (Learn)' },
         { text: ' to build a stronger foundation before continuing.' }
       ]
     },
@@ -54,8 +54,8 @@
       description:
         'First steps taken: basic waste reduction, energy saving measures or recycling in place.',
       recommendation: [
-        { text: 'You are in the correct module! If this module is familiar move to ' },
-        { text: 'Module 3', href: '/modules/options/' },
+        { text: 'You are in the correct phase! If this phase is familiar move to ' },
+        { text: 'Phase 3', href: '/journey-phases/options/' },
         { text: ' (Options)' },
         { text: '.' }
       ]
@@ -69,11 +69,11 @@
         'CE principles embedded in some processes; partnerships formed; some circular revenue.',
       recommendation: [
         { text: 'Recommended next step: continue with ' },
-        { text: 'Module 4', href: '/modules/business-case/' },
+        { text: 'Phase 4', href: '/journey-phases/business-case/' },
         { text: ' (Business Case), ' },
-        { text: 'Module 5', href: '/modules/implement/' },
+        { text: 'Phase 5', href: '/journey-phases/implement/' },
         { text: ' (Implement) and ' },
-        { text: 'Module 6', href: '/modules/monitor/' },
+        { text: 'Phase 6', href: '/journey-phases/monitor/' },
         { text: ' (Monitor)' },
         { text: ' to strengthen, test and track your circular work.' }
       ]
@@ -86,7 +86,7 @@
       description: 'CE is core to the business model. Circular practices measured, reported, and improved.',
       recommendation: [
         { text: 'Recommended next step: use ' },
-        { text: 'Module 6', href: '/modules/monitor/' },
+        { text: 'Phase 6', href: '/journey-phases/monitor/' },
         {
           text: ' (Monitor) to keep improving. Share your experience with us, to inspire others by including you in the case collection!'
         }

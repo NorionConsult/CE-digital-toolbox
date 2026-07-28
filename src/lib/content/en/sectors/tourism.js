@@ -144,7 +144,7 @@ export const tourism = {
   number: 'Sector 4',
   slug: 'tourism',
   title: 'Tourism',
-  description: 'This sector package provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
+  description: 'This sector tool provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
   image: '/images/tourism.jpg',
   imageAlt: 'Tourism sector',
   navigation: [

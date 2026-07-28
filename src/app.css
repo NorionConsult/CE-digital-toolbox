@@ -23,16 +23,16 @@
 
   /*
     Card controls are intentionally separated by card type:
-    - home module package cards
-    - home sector package cards
-    - tool/resource cards used on the Tools page and inside module/sector pages
+    - home journey phase cards
+    - home sector tool cards
+    - tools/resources used on the Tools page and inside journey phase/sector pages
   */
-  --home-module-card-title-size: 2.4rem;
+  --home-journey-phase-card-title-size: 2.4rem;
   --home-sector-card-title-size: 2rem;
   --tool-card-title-size: 1.65rem;
 
   /*
-    Embedded tool cards appear inside module and sector pages.
+    Embedded tools appear inside journey phase and sector pages.
     These values only change spacing/layout, not typography.
     Tools page cards keep the larger default spacing.
   */
@@ -49,9 +49,10 @@
 }
 
 /*
-  Shared module colour tokens.
-  The module cards, Tools page resource cards and resource pages all use these
-  same classes, so changing a module colour only needs to happen here.
+  Shared journey phase colour tokens.
+  These class names are kept as stable CSS styling hooks. The journey phase
+  cards, Tools page resource cards and resource pages all use these same
+  classes, so changing a journey phase colour only needs to happen here.
 */
 .module-card-green {
   --module-bg: var(--green-primary);
@@ -137,7 +138,7 @@ a {
 }
 
 /*
-  Tool-card grids inside module and sector pages.
+  Tool grids inside journey phase and sector pages.
   Cards keep a Tools-page-sized width instead of stretching when a row is not full.
   More columns are added automatically whenever the container is wide enough.
 */
@@ -281,7 +282,7 @@ h3,
   margin-bottom: 36px;
 }
 
-.modules-section,
+.journey-phases-section,
 .tools-section,
 .sectors-section {
   padding: 50px 0;

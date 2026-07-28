@@ -3,10 +3,30 @@
   These values are used by the header, footer and browser page titles.
 */
 export const site = {
-  name: 'CE Digital Toolbox',
+  name: 'Circular Economy Toolbox',
   headerLogo: {
-    src: '/logos/logo-toolbox.png',
-    alt: 'CE Digital Toolbox logo'
+    src: '/logos/logo-toolbox-header.png',
+    alt: 'Circular Economy Toolbox logo'
+  },
+  /*
+    Partner logos shown in the global header menu area on every page.
+    Change these values here once to update them everywhere.
+  */
+  headerPartnerLogos: {
+    enabled: true,
+    logoHeight: 'clamp(18px, 2vw, 26px)',
+    logos: [
+      {
+        src: '/logos/EU-logo-header.png',
+        alt: 'European Union logo',
+        width: 'clamp(112px, 11vw, 150px)'
+      },
+      {
+        src: '/logos/EU4Green-logo-header.png',
+        alt: 'EU4Green logo',
+        width: 'clamp(48px, 5vw, 66px)'
+      }
+    ]
   },
   contactEmail: 'digitaltoolbox@norion.dk',
   footerLogos: [
@@ -22,20 +42,19 @@ export const site = {
     }
   ],
   labels: {
-    viewModule: 'View module',
+    viewPhase: 'View phase',
     viewTools: 'View tools',
-    viewSector: 'View package',
-    viewResource: 'View resource',
+    viewSector: 'View sector tools',
+    viewResource: 'View tool',
     viewCase: 'View case',
     openTool: 'Open tool',
     openCase: 'Open case'
   },
   navigation: [
-    { label: 'Modules', href: '/#modules' },
-    { label: 'Tools', href: '/tools/' },
-    { label: 'Cases', href: '/cases/' },
-    { label: 'Sector Packages', href: '/#sectors' },
-    { label: 'About', href: '/#about' },
-    { label: 'Contact', href: '/#contact' }
+    { label: 'Follow guides', href: '/guided-pathways/' },
+    { label: 'Browse Tools', href: '/tools/' },
+    { label: 'Find Cases', href: '/cases/' },
+    { label: 'About', href: '/about/' },
+    { label: 'Contact', href: '/contact/' }
   ]
 };

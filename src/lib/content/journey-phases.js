@@ -1,14 +1,5 @@
-import { modules } from '$lib/content/modules.js';
-
 /*
-  Resource phase badges use the same colour classes as their matching modules.
-  This keeps Tools page cards, embedded cards and resource pages in sync.
+  Journey phase content currently uses English.
+  Future language folders can mirror src/lib/content/en/journey-phases/.
 */
-/**
- * @param {string} journeyPhase
- */
-export function getJourneyPhaseClass(journeyPhase) {
-  const matchingModule = modules.find((module) => module.title === journeyPhase);
-
-  return matchingModule?.colourClass ?? 'module-card-outline';
-}
+export { journeyPhases } from './en/journey-phases/index.js';

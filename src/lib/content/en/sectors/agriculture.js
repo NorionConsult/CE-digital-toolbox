@@ -139,7 +139,7 @@ export const agriculture = {
   number: 'Sector 2',
   slug: 'agriculture',
   title: 'Agriculture',
-  description: 'This sector package provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
+  description: 'This sector tool provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
   image: '/images/agriculture.jpg',
   imageAlt: 'Agriculture sector',
   navigation: [

@@ -9,7 +9,7 @@
   5. Save the file. The website automatically creates:
      - a card on the Cases page
      - a detail page at /cases/your-slug/
-     - a card in a matching sector package's Case examples section
+     - a card in a matching sector tool's Case examples section
 
   The sector badge colour is assigned automatically from the sector name.
   Existing sector names have fixed theme colours. A new sector name also works:

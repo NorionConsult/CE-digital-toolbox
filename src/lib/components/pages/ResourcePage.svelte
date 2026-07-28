@@ -7,6 +7,9 @@
 
   $: journeyPhases = resource.journeyPhases ?? [];
   $: journeyPhaseText = journeyPhases.length > 0 ? journeyPhases.join(', ') : 'None';
+  $: isLocalToolLink = resource.toolLink?.startsWith('/');
+  $: toolHref = isLocalToolLink ? `${base}${resource.toolLink}` : resource.toolLink;
+  $: shouldDownloadTool = isLocalToolLink && resource.toolLink.toLowerCase().endsWith('.pdf');
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -41,7 +44,13 @@
     <p class="resource-summary">{resource.description}</p>
 
     {#if resource.toolLink}
-      <a class="primary-button resource-tool-link" href={resource.toolLink} target="_blank" rel="noreferrer">
+      <a
+        class="primary-button resource-tool-link"
+        href={toolHref}
+        target={shouldDownloadTool ? undefined : '_blank'}
+        rel={shouldDownloadTool ? undefined : 'noreferrer'}
+        download={shouldDownloadTool ? '' : undefined}
+      >
         {site.labels.openTool}
       </a>
     {/if}

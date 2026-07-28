@@ -3,35 +3,63 @@
 Most day-to-day website edits happen in this folder.
 
 ```text
-site.js              Global site name, header logo, navigation, contact email, footer logos and shared button labels
+site.js              Global site name, header logo, header partner logos, navigation, contact email, footer logos and shared button labels
 home.js              Home page text
-modules.js           Loads the current language module files
+guided-pathways.js   Guided pathways page hero, journey phase cards and sector tool cards
+contact-page.js      Contact page text and form button URLs
+journey-phases.js    Loads the current language journey phase files
 sectors.js           Loads the current language sector files
 resources.js         Tools/resource cards, taxonomy, page text and tool links
 tools-page.js        Tools page intro, filter labels and empty state text
 cases.js             Case cards, taxonomy and automatically generated case pages
 cases-page.js        Cases page intro, filter labels and empty state text
-module-page.js       Labels shared by all module detail pages
-sector-page.js       Labels shared by all sector package pages
+journey-phase-page.js Labels shared by all journey phase detail pages
+sector-page.js       Labels shared by all sector tool pages
 
-en/modules/          English module content, one file per module page
+en/journey-phases/   English journey phase content, one file per journey phase page
 en/sectors/          English sector content, one file per sector page
 ```
 
-To edit one module page, open its file:
+## Editing The Guided Pathways Page
+
+To edit the page shown at `/guided-pathways/`, open:
 
 ```text
-src/lib/content/en/modules/diagnose.js
+src/lib/content/guided-pathways.js
 ```
 
-Each module file follows the order in which content appears on the website:
+This file is organised in the same order as the page:
 
 ```text
-1. Home page module card and module hero
+1. Page hero
+2. Journey phases section intro
+3. Journey phase cards
+4. Sector tools section intro
+5. Sector tool cards
+```
+
+Edit the text, image paths and card descriptions there when changing the
+overview page. The card `slug` values connect each card to its existing page
+URL, so only change a `slug` if the matching page URL is also being changed.
+
+The individual journey phase pages and sector pages are still edited in their
+own files. This keeps detailed page content separate while making the Guided
+pathways overview page editable from one place.
+
+To edit one journey phase page, open its file:
+
+```text
+src/lib/content/en/journey-phases/diagnose.js
+```
+
+Each journey phase file follows the order in which content appears on the website:
+
+```text
+1. Home page journey phase card and journey phase hero
 2. Hero section buttons
 3. Pathway overview and pathway cards
 4. Detailed sections in page order
-5. Module Summary
+5. Phase Summary
 6. Download paths
 ```
 
@@ -42,17 +70,17 @@ Important editing notes:
 - A pathway card and its detailed section are connected when `sectionId` and `id` contain the same value.
 - `_shared.js` assembles the page data and normally should not be edited.
 
-### Awareness Learning Resource Cards
+### Learn Phase Learning Resource Cards
 
-The Awareness module has a special learning resources section for e-courses and
+The Learn phase has a special learning resources section for e-courses and
 introductory learning links. Edit it here:
 
 ```text
-src/lib/content/en/modules/awareness.js
+src/lib/content/en/journey-phases/learn.js
 ```
 
 Inside `LearningresourcesSection`, edit `learningResources.cards`. Each card is
-shown directly on the Awareness page and does not create a separate subpage.
+shown directly on the Learn page and does not create a separate subpage.
 Each card creates one green learning-resource container: the card preview on
 the left and the matching explanation text on the right. Copy one complete card
 object to add another course:
@@ -83,12 +111,12 @@ current labels `What is this?`, `Learning goals` and
 `Why should I take this course?` if you want the section structure to stay the
 same.
 
-Normal tool cards are still edited in `resources.js`. To place a normal tool in
-the Awareness page's Relevant tools section, add this tag to the tool:
+Normal tools are still edited in `resources.js`. To place a normal tool in
+the Learn page's Relevant tools section, add this tag to the tool:
 
 ```js
 placements: {
-  moduleSections: ['awareness:relevant-tools']
+  phaseSections: ['learn:relevant-tools']
 }
 ```
 
@@ -164,21 +192,21 @@ inside `resources.js` and add the sector slug:
 
 ```js
 placements: {
-  moduleSections: [],
+  phaseSections: [],
   sectors: ['agriculture'],
   sectorSections: []
 }
 ```
 
-To add a new module or sector, copy an existing file in the relevant folder and
+To add a new journey phase or sector, copy an existing file in the relevant folder and
 add it to that folder's `index.js`.
 
 For future translations, create matching language folders such as:
 
 ```text
-src/lib/content/hy/modules/
-src/lib/content/uk/modules/
-src/lib/content/ro/modules/
+src/lib/content/hy/journey-phases/
+src/lib/content/uk/journey-phases/
+src/lib/content/ro/journey-phases/
 ```
 
 Keep the same filenames and exported fields in each language folder so the page templates can stay global.
@@ -221,7 +249,7 @@ One case record automatically creates:
 
 - a card on the Cases page
 - a detail page at `/cases/the-case-slug/`
-- a card in the Case examples section of the matching sector package
+- a card in the Case examples section of the matching sector tool
 
 The sector connection uses the case's `sector` value. For example:
 
@@ -247,7 +275,7 @@ resource. Then:
 1. Give the resource a unique `id`, `cardNumber` and `slug`.
 2. Replace the title, descriptions, taxonomy, detail text and `toolLink`.
 3. Set its journey phase badges using `journeyPhase` and `journeyPhases`.
-4. Update `placements` if it should also appear in a module or sector page.
+4. Update `placements` if it should also appear in a journey phase or sector page.
 
 The `slug` becomes the page URL. Use lowercase words separated by hyphens.
 
@@ -283,13 +311,13 @@ individual language filter.
 
 ### Journey Phase Badge Colours
 
-Badge colours are assigned automatically from the matching module colour.
+Badge colours are assigned automatically from the matching journey phase colour.
 Editors do not need to add colour codes or CSS classes.
 
 Use these exact phase names:
 
 ```text
-Awareness
+Learn
 Diagnose
 Options
 Business Case
@@ -298,7 +326,7 @@ Monitor
 None
 ```
 
-Use `None` when a tool does not belong to one of the six journey modules.
+Use `None` when a tool does not belong to one of the six journey phases.
 For example, sector-only tools can use:
 
 ```js
@@ -319,8 +347,8 @@ journeyPhases: ['Monitor', 'Business Case', 'Options'],
 ```
 
 This example automatically displays three separately coloured badges on the
-Tools card, embedded module/sector cards and the resource page. Global
-module colours are maintained in `src/app.css`.
+Tools card, embedded journey phase/sector cards and the resource page. Global
+journey phase colours are maintained in `src/app.css`.
 
 ### Placing Cards on Other Pages
 
@@ -328,15 +356,15 @@ To control where a tool appears, edit its `placements` block:
 
 ```js
 placements: {
-  moduleSections: ['diagnose:baseline-mapping'],
+  phaseSections: ['diagnose:baseline-mapping'],
   sectors: ['construction'],
   sectorSections: ['construction:relevant-tools']
 }
 ```
 
-- `moduleSections` places cards under a particular module subsection.
-- `sectors` places cards in the general Relevant Tools area of a sector page.
-- `sectorSections` places cards in a named sector subsection. The current tool
+- `phaseSections` places tools under a particular journey phase subsection.
+- `sectors` places tools in the general Relevant Tools area of a sector page.
+- `sectorSections` places tools in a named sector subsection. The current tool
   section ID is `relevant-tools`.
 - Several tags can be added when one tool belongs in several places.
 
