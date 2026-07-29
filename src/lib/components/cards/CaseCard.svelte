@@ -7,11 +7,17 @@
   export let variant = 'default';
 
   $: isCompact = variant === 'compact';
+  $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
+  $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
 </script>
 
 <article class="case-card" class:case-card-compact={isCompact}>
   <div class="case-card-heading">
-    <SectorBadge sector={caseStudy.sector} />
+    <div class="case-badges" aria-label="Case sectors">
+      {#each sectorBadges as sector}
+        <SectorBadge {sector} />
+      {/each}
+    </div>
     <h3>{caseStudy.companyName}</h3>
     <p>{caseStudy.description}</p>
   </div>
@@ -23,11 +29,11 @@
     </div>
     <div>
       <dt>Country</dt>
-      <dd>{caseStudy.country}</dd>
+      <dd>{caseStudy.countryDisplay || caseStudy.country}</dd>
     </div>
     <div>
-      <dt>Client segment</dt>
-      <dd>{caseStudy.clientSegment}</dd>
+      <dt>R strategy</dt>
+      <dd>{rStrategyText}</dd>
     </div>
   </dl>
 
@@ -52,6 +58,12 @@
   .case-card-heading {
     display: grid;
     gap: 12px;
+  }
+
+  .case-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   h3 {

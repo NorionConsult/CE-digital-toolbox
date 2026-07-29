@@ -20,8 +20,8 @@ export function load({ params }) {
       resource.placements.sectors.includes(sector.slug) ||
       resource.placements.sectorSections.some((tag) => tag.startsWith(sectorSectionPrefix))
   );
-  const relatedCases = cases.filter(
-    (caseStudy) => caseStudy.sector.toLowerCase() === sector.title.toLowerCase()
+  const relatedCases = cases.filter((caseStudy) =>
+    (caseStudy.filterValues?.sectors ?? []).includes(sector.title)
   );
 
   return { sector, relatedResources, relatedCases };

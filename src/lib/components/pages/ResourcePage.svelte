@@ -73,7 +73,7 @@
     </article>
 
     <aside class="resource-taxonomy" aria-label="Resource taxonomy">
-      <h2>Taxonomy</h2>
+      <h2>About</h2>
       <dl>
         {#each taxonomyRows as row}
           <div>

@@ -235,16 +235,56 @@ Each case uses these editor-facing fields:
 
 ```js
 companyName: 'Company name',
-country: 'Country',
-clientSegment: 'Client segment',
-sector: 'Textiles',
+country: ['Netherlands', 'Denmark'],
+sector: ['Textiles', 'Construction'],
+rStrategies: ['Reuse (R3)', 'Recycle (R8)'],
+rStrategyDescription: 'Optional explanation of how the R strategy applies.',
 description: 'Short text shown on the case card and in the page hero.',
 about: 'Longer text shown on the individual case page.',
-caseLink: 'https://example.com'
+caseLink: 'https://example.com',
+image: '/images/cases/example-image.jpg',
+imageAlt: 'Short description of the image'
 ```
 
-The `caseLink` field controls the "Open case" button in the case page hero.
-Leave it as an empty string if there is no external case source yet.
+Use arrays when a case has more than one country, sector or R strategy. For
+example:
+
+```js
+country: ['Netherlands', 'Denmark'],
+sector: ['Plastics', 'Construction'],
+rStrategies: ['Reuse (R3)', 'Recycle (R8)']
+```
+
+Arrays are the recommended format because they are easiest to read and least
+likely to break. The website also understands comma, semicolon and spaced slash
+separators if older text has been pasted in.
+
+The website automatically shows these as comma-separated values and uses each
+item separately in the filters. This means a case with
+`country: ['Netherlands', 'Denmark']` appears when the user filters for
+`Netherlands`, `Denmark` or `All`.
+
+Filtering is not case-sensitive. If an editor writes `portugal`, the filter
+option is normalised to `Portugal` so duplicate options are avoided.
+
+The `rStrategies` field is a list. Add one or more strategies between square
+brackets. They are shown separated by commas on the case card and in the
+taxonomy box. The Cases page R strategy filter is created automatically from
+these values.
+
+The `rStrategyDescription` field is optional. Leave it as an empty string if
+there is no extra explanation. When it has text, it appears above
+`Description of case` on the individual case page.
+
+The `caseLink` field controls the "Visit company site" button in the case page
+hero. Leave it as an empty string if there is no external case source yet.
+
+The `image` and `imageAlt` fields are optional. If an image path is added, the
+image appears in the case page hero. Store case images in:
+
+```text
+static/images/cases/
+```
 
 One case record automatically creates:
 

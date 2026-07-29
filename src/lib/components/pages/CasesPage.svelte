@@ -1,32 +1,112 @@
 <script>
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
-  import { cases, caseCountries, caseSectors } from '$lib/content/cases.js';
+  import { cases, caseCountries, caseRStrategies, caseSectors } from '$lib/content/cases.js';
   import { casesPage } from '$lib/content/cases-page.js';
 
   let selectedSector = '';
   let selectedCountry = '';
+  let selectedRStrategy = '';
   let searchTerm = '';
 
   $: normalisedSearch = searchTerm.trim().toLowerCase();
-  $: filteredCases = cases.filter((caseStudy) => {
+
+  /**
+   * @param {any} caseStudy
+   * @param {{
+   *   search?: string;
+   *   sector?: string;
+   *   country?: string;
+   *   rStrategy?: string;
+   * }} filters
+   */
+  function caseMatchesFilters(caseStudy, filters) {
+    const caseText = [
+      caseStudy.companyName,
+      caseStudy.description,
+      caseStudy.about,
+      caseStudy.rStrategyDescription,
+      caseStudy.rStrategies.join(' '),
+      caseStudy.sectorDisplay,
+      caseStudy.countryDisplay
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
     const matchesSearch =
-      !normalisedSearch ||
-      caseStudy.companyName.toLowerCase().includes(normalisedSearch) ||
-      caseStudy.description.toLowerCase().includes(normalisedSearch) ||
-      caseStudy.sector.toLowerCase().includes(normalisedSearch) ||
-      caseStudy.country.toLowerCase().includes(normalisedSearch) ||
-      caseStudy.clientSegment.toLowerCase().includes(normalisedSearch);
+      !filters.search || caseText.includes(filters.search);
+    const matchesSector =
+      !filters.sector || (caseStudy.filterValues?.sectors ?? []).includes(filters.sector);
+    const matchesCountry =
+      !filters.country || (caseStudy.filterValues?.countries ?? []).includes(filters.country);
+    const matchesRStrategy =
+      !filters.rStrategy || (caseStudy.filterValues?.rStrategies ?? []).includes(filters.rStrategy);
 
-    const matchesSector = !selectedSector || caseStudy.sector === selectedSector;
-    const matchesCountry = !selectedCountry || caseStudy.country === selectedCountry;
+    return matchesSearch && matchesSector && matchesCountry && matchesRStrategy;
+  }
 
-    return matchesSearch && matchesSector && matchesCountry;
-  });
+  $: casesMatchingNonSectorFilters = cases.filter((caseStudy) =>
+    caseMatchesFilters(caseStudy, {
+      search: normalisedSearch,
+      country: selectedCountry,
+      rStrategy: selectedRStrategy
+    })
+  );
+
+  $: availableSectorSet = new Set(
+    casesMatchingNonSectorFilters.flatMap((caseStudy) => caseStudy.filterValues?.sectors ?? [])
+  );
+
+  $: disabledSectors = caseSectors.filter(
+    (sector) => sector !== selectedSector && !availableSectorSet.has(sector)
+  );
+
+  $: casesMatchingNonRStrategyFilters = cases.filter((caseStudy) =>
+    caseMatchesFilters(caseStudy, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      country: selectedCountry
+    })
+  );
+
+  $: availableRStrategySet = new Set(
+    casesMatchingNonRStrategyFilters.flatMap((caseStudy) => caseStudy.filterValues?.rStrategies ?? [])
+  );
+
+  $: disabledRStrategies = caseRStrategies.filter(
+    (rStrategy) => rStrategy !== selectedRStrategy && !availableRStrategySet.has(rStrategy)
+  );
+
+  $: casesMatchingNonCountryFilters = cases.filter((caseStudy) =>
+    caseMatchesFilters(caseStudy, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      rStrategy: selectedRStrategy
+    })
+  );
+
+  $: availableCountrySet = new Set(
+    casesMatchingNonCountryFilters.flatMap((caseStudy) => caseStudy.filterValues?.countries ?? [])
+  );
+
+  $: disabledCountries = caseCountries.filter(
+    (country) => country !== selectedCountry && !availableCountrySet.has(country)
+  );
+
+  $: filteredCases = cases.filter((caseStudy) =>
+    caseMatchesFilters(caseStudy, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      country: selectedCountry,
+      rStrategy: selectedRStrategy
+    })
+  );
 
   function resetFilters() {
     selectedSector = '';
     selectedCountry = '';
+    selectedRStrategy = '';
     searchTerm = '';
   }
 </script>
@@ -51,8 +131,30 @@
         <input id="case-search" type="search" bind:value={searchTerm} placeholder={casesPage.searchPlaceholder} />
       </label>
 
-      <FilterSelect id="case-sector-filter" label={casesPage.sectorLabel} bind:value={selectedSector} options={caseSectors} />
-      <FilterSelect id="case-country-filter" label={casesPage.countryLabel} bind:value={selectedCountry} options={caseCountries} />
+      <FilterSelect
+        id="case-sector-filter"
+        label={casesPage.sectorLabel}
+        bind:value={selectedSector}
+        options={caseSectors}
+        disabledOptions={disabledSectors}
+        disabledOptionTitle={casesPage.disabledSectorTitle}
+      />
+      <FilterSelect
+        id="case-r-strategy-filter"
+        label={casesPage.rStrategyLabel}
+        bind:value={selectedRStrategy}
+        options={caseRStrategies}
+        disabledOptions={disabledRStrategies}
+        disabledOptionTitle={casesPage.disabledRStrategyTitle}
+      />
+      <FilterSelect
+        id="case-country-filter"
+        label={casesPage.countryLabel}
+        bind:value={selectedCountry}
+        options={caseCountries}
+        disabledOptions={disabledCountries}
+        disabledOptionTitle={casesPage.disabledCountryTitle}
+      />
 
       <button type="button" class="reset-button" on:click={resetFilters}>{casesPage.resetButton}</button>
     </form>
@@ -91,7 +193,7 @@
 
   .filter-panel {
     display: grid;
-    grid-template-columns: 1.5fr repeat(2, 1fr) auto;
+    grid-template-columns: 1.5fr repeat(3, 1fr) auto;
     gap: 16px;
     align-items: end;
     padding: 24px;

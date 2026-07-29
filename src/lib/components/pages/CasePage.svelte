@@ -5,11 +5,22 @@
 
   export let caseStudy;
 
+  function splitParagraphs(text = '') {
+    return String(text)
+      .split(/\n+/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+  }
+
+  $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
+  $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
+  $: aboutParagraphs = splitParagraphs(caseStudy.about);
+  $: rStrategyDescriptionParagraphs = splitParagraphs(caseStudy.rStrategyDescription);
   $: taxonomyRows = [
     ['Company name', caseStudy.companyName],
-    ['Country', caseStudy.country],
-    ['Client segment', caseStudy.clientSegment],
-    ['Sector', caseStudy.sector]
+    ['Country', caseStudy.countryDisplay || caseStudy.country],
+    ['R strategy', rStrategyText],
+    ['Sector', caseStudy.sectorDisplay || caseStudy.sector]
   ];
 
   $: caseLink = caseStudy.caseLink;
@@ -20,16 +31,28 @@
 </svelte:head>
 
 <section class="case-hero">
-  <div class="container case-hero-content">
-    <a href="{base}/cases/" class="back-link">Back to cases</a>
-    <SectorBadge sector={caseStudy.sector} />
-    <h1>{caseStudy.companyName}</h1>
-    <p>{caseStudy.description}</p>
+  <div class="container case-hero-layout" class:case-hero-layout-with-image={caseStudy.image}>
+    <div class="case-hero-content">
+      <a href="{base}/cases/" class="back-link">Back to cases</a>
+      <div class="case-badges" aria-label="Case sectors">
+        {#each sectorBadges as sector}
+          <SectorBadge {sector} />
+        {/each}
+      </div>
+      <h1>{caseStudy.companyName}</h1>
+      <p>{caseStudy.description}</p>
 
-    {#if caseLink}
-      <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
-        {site.labels.openCase}
-      </a>
+      {#if caseLink}
+        <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
+          {site.labels.openCase}
+        </a>
+      {/if}
+    </div>
+
+    {#if caseStudy.image}
+      <figure class="case-hero-image">
+        <img src="{base}{caseStudy.image}" alt={caseStudy.imageAlt || caseStudy.companyName} />
+      </figure>
     {/if}
   </div>
 </section>
@@ -37,11 +60,25 @@
 <section class="case-detail-section">
   <div class="container case-detail-layout">
     <article class="case-main">
-      <p>{caseStudy.about}</p>
+      {#if rStrategyDescriptionParagraphs.length}
+        <section class="case-text-block">
+          <h2>How does this case apply circular strategies?</h2>
+          {#each rStrategyDescriptionParagraphs as paragraph}
+            <p>{paragraph}</p>
+          {/each}
+        </section>
+      {/if}
+
+      <section class="case-text-block">
+        <h2>Description of case</h2>
+        {#each aboutParagraphs as paragraph}
+          <p>{paragraph}</p>
+        {/each}
+      </section>
     </article>
 
     <aside class="case-taxonomy" aria-label="Case taxonomy">
-      <h2>Taxonomy</h2>
+      <h2>About</h2>
       <dl>
         {#each taxonomyRows as row}
           <div>
@@ -62,9 +99,25 @@
       var(--light-bg);
   }
 
+  .case-hero-layout {
+    display: grid;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .case-hero-layout-with-image {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  }
+
   .case-hero-content {
     display: grid;
     justify-items: start;
+  }
+
+  .case-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .case-hero h1 {
@@ -85,6 +138,20 @@
     margin-top: 28px;
   }
 
+  .case-hero-image {
+    overflow: hidden;
+    border-radius: 22px;
+    background-color: var(--white);
+    box-shadow: 0 14px 36px rgba(10, 46, 54, 0.14);
+  }
+
+  .case-hero-image img {
+    display: block;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+  }
+
   .case-detail-section {
     padding: 64px 0;
     background-color: var(--white);
@@ -100,6 +167,16 @@
   .case-main {
     display: grid;
     gap: 36px;
+  }
+
+  .case-text-block {
+    display: grid;
+    gap: 16px;
+  }
+
+  .case-text-block h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
   }
 
   .case-taxonomy h2 {
@@ -138,6 +215,7 @@
   }
 
   @media (max-width: 900px) {
+    .case-hero-layout-with-image,
     .case-detail-layout {
       grid-template-columns: 1fr;
     }

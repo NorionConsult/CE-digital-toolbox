@@ -48,7 +48,7 @@ export const site = {
     viewResource: 'View tool',
     viewCase: 'View case',
     openTool: 'Open tool',
-    openCase: 'Open case'
+    openCase: 'Visit company site'
   },
   navigation: [
     { label: 'Follow guides', href: '/guided-pathways/' },
