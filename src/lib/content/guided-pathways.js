@@ -61,27 +61,27 @@ export const guidedPathways = {
     },
     {
       number: '02',
-      slug: 'diagnose',
+      slug: 'assess',
       shortName: 'Phase 2',
-      title: 'Diagnose',
+      title: 'Assess',
       colourClass: 'module-card-lime',
       description:
         'Provides tools to assess CE adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
     },
     {
       number: '03',
-      slug: 'options',
+      slug: 'explore',
       shortName: 'Phase 3',
-      title: 'Options',
+      title: 'Explore',
       colourClass: 'module-card-yellow',
       description:
-        'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address diagnosed hotspots.'
+        'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.'
     },
     {
       number: '04',
-      slug: 'business-case',
+      slug: 'validate',
       shortName: 'Phase 4',
-      title: 'Business Case',
+      title: 'Validate',
       colourClass: 'module-card-blue',
       description:
         'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.'
@@ -131,12 +131,12 @@ export const guidedPathways = {
     },
     {
       number: 'Sector 2',
-      slug: 'agriculture',
-      title: 'Agriculture',
+      slug: 'food-and-agriculture',
+      title: 'Food and Agriculture',
       description:
-        'This sector guide provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
+        'This sector guide provides tools, cases and practical guidance for food and agriculture SMEs adopting circular economy practices.',
       image: '/images/agriculture.jpg',
-      imageAlt: 'Agriculture sector'
+      imageAlt: 'Food and Agriculture sector'
     },
     {
       number: 'Sector 3',

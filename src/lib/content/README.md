@@ -49,7 +49,7 @@ pathways overview page editable from one place.
 To edit one journey phase page, open its file:
 
 ```text
-src/lib/content/en/journey-phases/diagnose.js
+src/lib/content/en/journey-phases/assess.js
 ```
 
 Each journey phase file follows the order in which content appears on the website:
@@ -129,7 +129,7 @@ src/lib/content/en/sectors/construction.js
 Current English sector files:
 
 ```text
-src/lib/content/en/sectors/agriculture.js
+src/lib/content/en/sectors/food-and-agriculture.js
 src/lib/content/en/sectors/construction.js
 src/lib/content/en/sectors/textiles.js
 src/lib/content/en/sectors/tourism.js
@@ -184,7 +184,7 @@ A case appears automatically on a sector page when its `sector` matches the
 sector title, for example:
 
 ```js
-sector: 'Agriculture',
+sector: 'Food and Agriculture',
 ```
 
 Relevant tools are also connected automatically. Edit a tool's `placements`
@@ -193,7 +193,7 @@ inside `resources.js` and add the sector slug:
 ```js
 placements: {
   phaseSections: [],
-  sectors: ['agriculture'],
+  sectors: ['food-and-agriculture'],
   sectorSections: []
 }
 ```
@@ -258,9 +258,9 @@ The sector connection uses the case's `sector` value. For example:
 sector: 'Textiles',
 ```
 
-Sector badge colours are assigned automatically. Agriculture, Construction,
-Textiles and Tourism have fixed theme colours. New sector names are also
-supported and receive a consistent generated outline colour.
+Sector badge colours are assigned automatically. Food and Agriculture,
+Construction, Textiles and Tourism have fixed theme colours. New sector names
+are also supported and receive a consistent generated outline colour.
 
 ## Adding Tools Resources
 
@@ -319,9 +319,9 @@ Use these exact phase names:
 
 ```text
 Learn
-Diagnose
-Options
-Business Case
+Assess
+Explore
+Validate
 Implement
 Monitor
 None
@@ -344,7 +344,7 @@ Use `journeyPhase` for the primary phase and include all relevant phases in
 
 ```js
 journeyPhase: 'Monitor',
-journeyPhases: ['Monitor', 'Business Case', 'Options'],
+journeyPhases: ['Monitor', 'Validate', 'Explore'],
 ```
 
 This example automatically displays three separately coloured badges on the
@@ -357,7 +357,7 @@ To control where a tool appears, edit its `placements` block:
 
 ```js
 placements: {
-  phaseSections: ['diagnose:baseline-mapping'],
+  phaseSections: ['assess:baseline-mapping'],
   sectors: ['construction'],
   sectorSections: ['construction:relevant-tools']
 }

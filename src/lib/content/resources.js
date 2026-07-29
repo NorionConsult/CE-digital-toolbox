@@ -34,9 +34,9 @@
 
   Use these exact phase names:
   - Learn
-  - Diagnose
-  - Options
-  - Business Case
+  - Assess
+  - Explore
+  - Validate
   - Implement
   - Monitor
   - None, when the tool is not assigned to a journey phase
@@ -46,7 +46,7 @@
   several badges automatically, for example:
 
   journeyPhase: 'Monitor',
-  journeyPhases: ['Monitor', 'Business Case', 'Options'],
+  journeyPhases: ['Monitor', 'Validate', 'Explore'],
 
   Keep journeyPhase as one primary value and include it in journeyPhases.
   If journeyPhase is 'None', keep journeyPhases as an empty list: [].
@@ -56,13 +56,13 @@
   Add a placements block inside a resource to place it on journey phase or sector pages.
 
   placements: {
-    phaseSections: ['diagnose:baseline-mapping'],
+    phaseSections: ['assess:baseline-mapping'],
     sectors: ['construction'],
     sectorSections: ['construction:relevant-tools']
   },
 
   - phaseSections: journey-phase-slug:section-id
-  - sectors: sector page slug, such as construction, agriculture, textiles or tourism
+  - sectors: sector page slug, such as construction, food-and-agriculture, textiles or tourism
   - sectorSections: sector-slug:section-id tags, such as textiles:relevant-tools
 
   A resource can contain several tags and appear in several locations.
@@ -124,10 +124,15 @@ const FILTER_LABELS = {
   journeyPhase: {
     awareness: 'Learn',
     learn: 'Learn',
-    diagnose: 'Diagnose',
-    diagnosis: 'Diagnose',
-    options: 'Options',
-    'business case': 'Business Case',
+    assess: 'Assess',
+    // Legacy labels are kept only so older resource entries are cleaned into the current phase names.
+    diagnose: 'Assess',
+    diagnosis: 'Assess',
+    options: 'Explore',
+    explore: 'Explore',
+    validate: 'Validate',
+    'business case': 'Validate',
+    'business-case': 'Validate',
     implement: 'Implement',
     implementation: 'Implement',
     monitor: 'Monitor',
@@ -141,7 +146,10 @@ const FILTER_LABELS = {
     crosssector: 'Cross-sector',
     'cross sector': 'Cross-sector',
     'cross-sector': 'Cross-sector',
-    agriculture: 'Agriculture',
+    // Legacy sector labels are kept only so older entries are cleaned into the current sector name.
+    agriculture: 'Food and Agriculture',
+    'food and agriculture': 'Food and Agriculture',
+    'food-and-agriculture': 'Food and Agriculture',
     construction: 'Construction',
     textiles: 'Textiles',
     tourism: 'Tourism',
@@ -311,7 +319,7 @@ export const resources = [
     about:
       'The SME Reporting Tool is provided as a free resource to enable SMEs to create a climate report summarizing their annual greenhouse gas emissions, including the actions they are taking and the impact of their emissions reduction effort.',
     journeyPhase: 'Monitor',
-    journeyPhases: ['Monitor', 'Business Case', 'Options'],
+    journeyPhases: ['Monitor', 'Validate', 'Explore'],
     placements: {
       phaseSections: ['monitor:measuring-success'],
     },
@@ -337,7 +345,7 @@ export const resources = [
     about:
       'CircularTracker provides a fast, simple, and standardised way to assess and compare the circularity of your products. Powered by the ISO-compliant Product Circularity Data Sheet (PCDS), it delivers data-driven insights to support sustainable product decisions.',
     journeyPhase: 'Monitor',
-    journeyPhases: ['Monitor', 'Diagnose'],
+    journeyPhases: ['Monitor', 'Assess'],
     placements: {
       phaseSections: ['monitor:measuring-success'],
     },
@@ -496,10 +504,10 @@ export const resources = [
       'Free online collaborative whiteboard with ready-made SWOT templates, sticky notes, real-time team editing, and voting tools.',
     about:
       'A SWOT analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     placements: {
-      phaseSections:['business-case:business-case']
+      phaseSections:['validate:validate-case']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -521,8 +529,8 @@ export const resources = [
       'Free online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
       'The CTI indicators and methodology are one of the main building blocks that GCP uses for circularity metrics and the protocol is designed to align with ISO 59020, ESRS E5, GRI and the Greenhouse Gas Protocol. CTI Tool was developed together with the WBCSD for applying the Circular Transition Indicators in practice. By using CTI Tool you build the material level data and indicators that GCP expects, which means you can reuse your CTI work when you start working with GCP.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'WBCSD / Circular IQ',
@@ -544,8 +552,8 @@ export const resources = [
       'Adapts the classic Business Model Canvas to map circular value creation, delivery, and capture for a chosen circular business model.',
     about:
       'The Circular Business Development Canvas Pack aims to empower businesses to transition from traditional linear models to innovative circular practices. By focusing on reducing waste, enhancing resource efficiency, and closing the loop, these canvases provide a structured approach to embedding circular economy principles into core operations, customers, and revenue. The ultimate goal is to foster a regenerative business model that benefits the environment and drives economic value and social impact.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Ellen MacArthur Foundation / Business Model Lab',
@@ -568,8 +576,8 @@ export const resources = [
       'Helps SMEs rapidly assess which circular business models best fit their situation using a scored matrix approach.',
     about:
       'With the Quickscan CBM you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case', 'Diagnose'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate', 'Assess'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Saxion University of Applied Sciences',
@@ -592,8 +600,8 @@ export const resources = [
       'Online calculator that builds a data-backed business case for circular investment by computing financial return, payback time, and emissions impact using discounted cash flow logic.',
     about:
       'Calculate your sustainability ROI. Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Position Green',
@@ -616,10 +624,10 @@ export const resources = [
       'Provides users with an overview of the current trends in the circular economy space with the aim of inspiring them.',
     about:
       'Printable or digital cards covering key CE trends, opportunities, and threats. Designed to facilitate team discussions and feed into SWOT analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections:['business-case:business-models']
+      phaseSections:['validate:business-models']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -642,10 +650,10 @@ export const resources = [
       'Helps companies identify suitable circular design strategies for their products through a guided decision process.',
     about:
       'An ideation tool that helps SMEs explore and identify the most suitable circular pathways for their products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections:['business-case:business-models']
+      phaseSections:['validate:business-models']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -668,8 +676,8 @@ export const resources = [
     description: 'To identify circular strategies that fit your business',
     about:
       'The Circular Strategies Wheel gives your team a shared visual overview of circular strategies across the three phases of a product or service\'s life: start of life, product life, and end of life. It turns circularity from an abstract idea into something tangible and actionable, helping your team connect relevant strategies to your business context. By working through it together, you identify key opportunities, areas of interest, and practical barriers, creating a grounded, team-owned starting point for building your circular business model.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Circular Strategies Wheel Workshop',
@@ -689,10 +697,10 @@ export const resources = [
     description: 'To get an overview of how circular your product or service is at this stage',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose', 'Options'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess', 'Explore'],
     placements: {
-      phaseSections: ['diagnose:maturity-assessment']
+      phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -714,10 +722,10 @@ export const resources = [
       'Assists SMEs in self evaluating their current standing in their circular journey by asking simple questions and providing insights based on answers.',
     about:
       'This Up2Circ Circularity Assessment Tool will help you to become familiar with the circular economy, score how well you integrate circular strategies into your business, and discover opportunities for improvement and challenges to address.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:maturity-assessment']
+      phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -738,10 +746,10 @@ export const resources = [
     description: 'Helps SMEs benchmark their current CE level and understand key gaps.',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:maturity-assessment']
+      phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -762,10 +770,10 @@ export const resources = [
     description: 'Assesses organisational readiness for resource efficiency and circularity.',
     about:
       'I-GO helps SMEs become more productive, competitive, and resilient by making it easier to access tailored knowledge and support services on resource efficiency. It is the I-GO Assistant tool that guides businesses through self-assessment, suggests practical improvements, and connects them with customised support based on their specific needs.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose', 'Options'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess', 'Explore'],
     placements: {
-      phaseSections: ['diagnose:maturity-assessment']
+      phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
     language: 'English, Ukrainian, Russian, Portuguese, Spanish, Georgian, Arabic',
@@ -787,10 +795,10 @@ export const resources = [
       'Maps materials used in production and helps to showcase material flows of your products',
     about:
       'Material Flow Analysis gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:baseline-mapping']
+      phaseSections: ['assess:baseline-mapping']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -812,10 +820,10 @@ export const resources = [
     description: 'Visualizes the material flow data of your products/services',
     about:
       'STAN allows users to create graphical MFA models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:baseline-mapping']
+      phaseSections: ['assess:baseline-mapping']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -836,10 +844,10 @@ export const resources = [
     description: 'Provides sector profile for each country',
     about:
       'The SCP-HAT Country Profile tool provides an overview of a country\'s environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -862,10 +870,10 @@ export const resources = [
       'Displays carbon footprint and eco-cost results by lifecycle stage, with additional LCIA insights to identify the most impactful processes',
     about:
       'The Circular Strategies Scanner helps manufacturing companies understand, map, and improve their circular economy strategies across products and operations. It is typically used in workshops to identify current initiatives, explore new opportunities for circularity, and support innovation and shared strategic vision.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -887,10 +895,10 @@ export const resources = [
       'Supports circularity and identifies strategies for extending product life while reducing environmental impact.',
     about:
       'Future adaptive design helps companies reduce business risks in circular business models by creating durable, flexible, and upgradeable products that remain useful and attractive over longer lifetimes. The approach provides tools and methods to support circular business innovation, improve profitability, identify strategies for extending product life, and reduce environmental impact.',
-    journeyPhase: 'Diagnose',
-    journeyPhases: ['Diagnose'],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['diagnose:hotspot-analysis']
+      phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Manufacturing',
     language: 'English',
@@ -989,7 +997,7 @@ export const resources = [
     about:
       'openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.',
     journeyPhase: 'Monitor',
-    journeyPhases: ['Diagnose', 'Business Case', 'Monitor'],
+    journeyPhases: ['Assess', 'Validate', 'Monitor'],
     sector: 'Cross-sector',
     language: 'English',
     provider: 'Carbon Trust',
@@ -1010,10 +1018,10 @@ export const resources = [
       'A repository of knowledge for procurement across a large variety of sectors, with search filters to guide users to tools suited to their needs.',
     about:
       'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by ICLEI\'s Procura+ network, bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Options', 'Business Case', 'Implement'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Explore', 'Validate', 'Implement'],
     placements: {
-      phaseSections: ['business-case:circular-business-models']
+      phaseSections: ['validate:circular-business-models']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1360,10 +1368,10 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     placements: {
-      sectors: ['agriculture'],
-      sectorSections: ['agriculture:relevant-tools']
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
     },
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     language: 'English',
     provider: 'Farm Carbon',
     access: 'Sign up',
@@ -1386,10 +1394,10 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     placements: {
-      sectors: ['agriculture'],
-      sectorSections: ['agriculture:relevant-tools']
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
     },
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     language: 'English',
     provider: 'Circular Economy for Food',
     access: 'Free',
@@ -1412,10 +1420,10 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     placements: {
-      sectors: ['agriculture'],
-      sectorSections: ['agriculture:relevant-tools']
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
     },
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     language: 'English',
     provider: 'O-farms',
     access: 'Sign up',
@@ -1438,10 +1446,10 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     placements: {
-      sectors: ['agriculture'],
-      sectorSections: ['agriculture:relevant-tools']
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
     },
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     language: 'English',
     provider: 'WRAP (Waste & Resources Action Programme)',
     access: 'Free',
@@ -1566,7 +1574,7 @@ export const resources = [
     about:
       'The PDCA Cycle is a continuous improvement framework that works well for circular economy implementation. SMEs can use it to review indicator results, decide what to adjust, set new targets and implement improvements.',
     journeyPhase: 'Monitor',
-    journeyPhases: ['Options', 'Business Case', 'Monitor'],
+    journeyPhases: ['Explore', 'Validate', 'Monitor'],
     placements: {
       phaseSections: ['monitor:interpreting-results']
     },
@@ -1591,7 +1599,7 @@ export const resources = [
     about:
       'The Circulab Business Ecosystem Canvas guides teams through reviewing a current circular model, identifying which value flows are working, which partners to engage differently and where circular revenue opportunities remain untapped.',
     journeyPhase: 'Monitor',
-    journeyPhases: ['Diagnose', 'Monitor'],
+    journeyPhases: ['Assess', 'Monitor'],
     placements: {
       phaseSections: ['monitor:interpreting-results']
     },
@@ -1640,10 +1648,10 @@ export const resources = [
       'A workshop slide that guides teams through narrowing strategic options to a focused shortlist of one to three candidates for business case development.',
     about:
       'The workshop template helps teams capture strategy type, key opportunity, target loop, quick-win potential and ownership for each option. It also provides decision guidance for keeping the shortlist focused and practical.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Options', 'Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections: ['business-case:quick-scan']
+      phaseSections: ['validate:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1665,10 +1673,10 @@ export const resources = [
       'A workshop exercise that helps teams prioritise strategic options using an impact-feasibility matrix.',
     about:
       'Map Your Options guides teams to plot options against impact and feasibility, discuss the resulting quadrants, and select the top one to three candidates to take forward.',
-    journeyPhase: 'Business Case',
-    journeyPhases: ['Business Case'],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     placements: {
-      phaseSections: ['business-case:quick-scan']
+      phaseSections: ['validate:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1690,10 +1698,10 @@ export const resources = [
       'A template for shortlisting circular options and assigning responsibility for reviewing feasibility.',
     about:
       'This resource helps teams move from screened business models to a shortlist of one to three priority strategies that can be developed into a business case.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['business-case:quick-scan']
+      phaseSections: ['validate:quick-scan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1715,10 +1723,10 @@ export const resources = [
       'A toolkit for identifying inefficiencies, customer pain points and circular business model opportunities.',
     about:
       'The Business Model Development Toolkit guides teams through exercises to assess five linear-model inefficiencies, reflect on customer pain points and explore circular business sub-models before choosing opportunities to develop further.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections:['business-case:business-case']
+      phaseSections:['validate:validate-case']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1740,10 +1748,10 @@ export const resources = [
       'A scoring matrix for assessing design flaws in a product lifecycle and identifying circular design improvement suggestions.',
     about:
       'The DfX scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:explore-strategies']
+      phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1765,10 +1773,10 @@ export const resources = [
       'A method for reframing problem insights as open-ended How Might We questions that create a productive starting point for brainstorming.',
     about:
       'The How Might We method is a simple reframing technique from design practice. Teams translate insight statements into solution-neutral questions that are broad enough for creativity and specific enough to guide action.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:explore-strategies']
+      phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1790,10 +1798,10 @@ export const resources = [
       'A method for moving from a large volume of individual ideas to a smaller set of robust composite solutions.',
     about:
       'Bundle Ideas is an IDEO.org method for moving from divergent brainstorming to convergent concept development by clustering, combining and synthesising the strongest elements across concepts.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:explore-strategies']
+      phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1815,10 +1823,10 @@ export const resources = [
       'A method for developing bundled ideas into polished, testable concepts that address the original design challenge.',
     about:
       'Create a Concept is an IDEO.org method that bridges ideation and prototyping. Teams turn their strongest idea clusters into coherent concepts that are more complete than raw ideas but not yet final solutions.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:explore-strategies']
+      phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1840,10 +1848,10 @@ export const resources = [
       'A workshop that challenges participants to redesign a commercial carpet tile to be safe and circular.',
     about:
       'This Ellen MacArthur Foundation workshop helps users understand the implications of choosing materials for circular products, including the need to design out chemicals of concern and enable material recovery.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:redesign-circular-value']
+      phaseSections: ['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -1865,10 +1873,10 @@ export const resources = [
       'A collection of canvas-based tools for assessing, ideating, developing and communicating circular economy strategies.',
     about:
       'The Ecodesign Toolkit by EcoDesign Circle is an open-access collection of downloadable PDFs and interactive Mural boards for circular and ecodesign work across products, services, systems and business models.',
-    journeyPhase: 'Options',
-    journeyPhases: ['Options'],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['options:redesign-circular-value']
+      phaseSections: ['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
     language: 'English',

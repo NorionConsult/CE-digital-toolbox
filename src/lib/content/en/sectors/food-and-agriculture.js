@@ -1,34 +1,34 @@
 /*
-  AGRICULTURE SECTOR PAGE
+  FOOD AND AGRICULTURE SECTOR PAGE
 
   EDITING NOTES:
   - The content below follows the same order as the page.
   - Edit text inside quotes and add or remove list entries as needed.
   - To make a paragraph change in the text, add \r\n at the end of the line and continue the paragraph on the next line. Making a space in the code will NOT result in a line break on the page. Use \r\n to create a new paragraph.
   - Keep `id`, `slug` and `sectionId` values unchanged unless the page structure and resource placement tags are also being changed.
-  - Agriculture case cards are edited separately in src/lib/content/cases.js.
+  - Food and Agriculture case cards are edited separately in src/lib/content/cases.js.
 */
 
 // 1. INTRODUCTION TO SECTOR
-export const agricultureIntroSection = {
+export const foodAndAgricultureIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'Agriculture contributes approximately 10% of EU greenhouse gas emissions and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers. The EU Farm to Fork Strategy targets a 50% reduction in pesticide use and 20% reduction in fertiliser use by 2030, while expanding organic farmland to 25% of total agricultural area.\r\n SME farms and agri-food businesses face input cost volatility, soil degradation, biodiversity loss and tightening regulatory requirements, all of which circular economy strategies can address. Circular agriculture closes nutrient loops, returning compost, digestate and recovered nutrients to land rather than losing them as waste or pollution. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.'
+    'The food and agriculture sector contributes approximately 10% of EU greenhouse gas emissions and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers. The EU Farm to Fork Strategy targets a 50% reduction in pesticide use and 20% reduction in fertiliser use by 2030, while expanding organic farmland to 25% of total agricultural area.\r\n SME farms and agri-food businesses face input cost volatility, soil degradation, biodiversity loss and tightening regulatory requirements, all of which circular economy strategies can address. Circular agriculture closes nutrient loops, returning compost, digestate and recovered nutrients to land rather than losing them as waste or pollution. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.'
   ]
 };
 
 // 2. CASE EXAMPLES
-// Case cards shown here are connected automatically through sector: 'Agriculture'
+// Case cards shown here are connected automatically through sector: 'Food and Agriculture'
 // in src/lib/content/cases.js.
-export const agricultureCasesSection = {
+export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
   intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.'
 };
 
 // 3. KEY BARRIERS AND OPPORTUNITIES
-export const agricultureBarriersSection = {
+export const foodAndAgricultureBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Key barriers and opportunities',
   intro: 'Agricultural SMEs face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.',
@@ -52,7 +52,7 @@ export const agricultureBarriersSection = {
 
 // 4. BEST PRACTICES
 // Each object becomes one bullet-point group on the page.
-export const agricultureBestPracticesSection = {
+export const foodAndAgricultureBestPracticesSection = {
   id: 'best-practices',
   title: 'Best practices',
   intro: 'Explore practical actions across new methods, business models, traceability and compliance.',
@@ -86,17 +86,17 @@ export const agricultureBestPracticesSection = {
 };
 
 // 5. RELEVANT TOOLS
-// Tools are not listed here. Add the Agriculture sector slug to a resource's
+// Tools are not listed here. Add the Food and Agriculture sector slug to a resource's
 // placements in src/lib/content/resources.js to display it automatically.
-export const agricultureRelevantToolsSection = {
+export const foodAndAgricultureRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
-  intro: 'Tools tagged for the Agriculture sector appear here automatically.'
+  intro: 'Tools tagged for the Food and Agriculture sector appear here automatically.'
 };
 
 // 6. NETWORK AND COLLABORATIONS
 // Add a URL to `link` when the website should show a Visit website link.
-export const agricultureNetworkSection = {
+export const foodAndAgricultureNetworkSection = {
   id: 'networks-collaborations',
   title: 'Network and collaborations',
   intro: 'These networks can support funding, partnerships, standards, knowledge sharing and practical circular economy action.',
@@ -135,27 +135,27 @@ export const agricultureNetworkSection = {
 };
 
 // SECTOR CARD, HERO AND NAVIGATION
-export const agriculture = {
+export const foodAndAgriculture = {
   number: 'Sector 2',
-  slug: 'agriculture',
-  title: 'Agriculture',
-  description: 'This sector tool provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
+  slug: 'food-and-agriculture',
+  title: 'Food and Agriculture',
+  description: 'This sector tool provides tools, cases and practical guidance for food and agriculture SMEs adopting circular economy practices.',
   image: '/images/agriculture.jpg',
-  imageAlt: 'Agriculture sector',
+  imageAlt: 'Food and Agriculture sector',
   navigation: [
-    { label: 'Introduction', sectionId: agricultureIntroSection.id },
-    { label: 'Cases', sectionId: agricultureCasesSection.id },
-    { label: 'Barriers & opportunities', sectionId: agricultureBarriersSection.id },
-    { label: 'Best practices', sectionId: agricultureBestPracticesSection.id },
-    { label: 'Relevant tools', sectionId: agricultureRelevantToolsSection.id },
-    { label: 'Networks', sectionId: agricultureNetworkSection.id }
+    { label: 'Introduction', sectionId: foodAndAgricultureIntroSection.id },
+    { label: 'Cases', sectionId: foodAndAgricultureCasesSection.id },
+    { label: 'Barriers & opportunities', sectionId: foodAndAgricultureBarriersSection.id },
+    { label: 'Best practices', sectionId: foodAndAgricultureBestPracticesSection.id },
+    { label: 'Relevant tools', sectionId: foodAndAgricultureRelevantToolsSection.id },
+    { label: 'Networks', sectionId: foodAndAgricultureNetworkSection.id }
   ],
   sections: [
-    agricultureIntroSection,
-    agricultureCasesSection,
-    agricultureBarriersSection,
-    agricultureBestPracticesSection,
-    agricultureRelevantToolsSection,
-    agricultureNetworkSection
+    foodAndAgricultureIntroSection,
+    foodAndAgricultureCasesSection,
+    foodAndAgricultureBarriersSection,
+    foodAndAgricultureBestPracticesSection,
+    foodAndAgricultureRelevantToolsSection,
+    foodAndAgricultureNetworkSection
   ]
 };

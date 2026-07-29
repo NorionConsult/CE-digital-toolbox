@@ -551,7 +551,7 @@
         </div>
       {/if}
 
-      {#if journeyPhase.slug === 'diagnose' && section.id === 'maturity-assessment'}
+      {#if journeyPhase.slug === 'assess' && section.id === 'maturity-assessment'}
         <div class="container">
           <MaturityCurve />
         </div>

@@ -29,7 +29,7 @@
         { text: 'Recommended next step: move to ' },
         { text: 'Phase 1', href: '/journey-phases/learn/' },
         { text: ' (Learn)' },
-        { text: ' before continuing with diagnosis.' }
+        { text: ' before continuing with assessment.' }
       ]
     },
     {
@@ -55,8 +55,8 @@
         'First steps taken: basic waste reduction, energy saving measures or recycling in place.',
       recommendation: [
         { text: 'You are in the correct phase! If this phase is familiar move to ' },
-        { text: 'Phase 3', href: '/journey-phases/options/' },
-        { text: ' (Options)' },
+        { text: 'Phase 3', href: '/journey-phases/explore/' },
+        { text: ' (Explore)' },
         { text: '.' }
       ]
     },
@@ -69,8 +69,8 @@
         'CE principles embedded in some processes; partnerships formed; some circular revenue.',
       recommendation: [
         { text: 'Recommended next step: continue with ' },
-        { text: 'Phase 4', href: '/journey-phases/business-case/' },
-        { text: ' (Business Case), ' },
+        { text: 'Phase 4', href: '/journey-phases/validate/' },
+        { text: ' (Validate), ' },
         { text: 'Phase 5', href: '/journey-phases/implement/' },
         { text: ' (Implement) and ' },
         { text: 'Phase 6', href: '/journey-phases/monitor/' },

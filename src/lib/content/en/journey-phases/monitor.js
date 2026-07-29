@@ -174,7 +174,7 @@ const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
     'Use this checklist to confirm that the business can measure circular progress and turn monitoring results into practical improvements.',
-    'Monitoring is an ongoing process. Revisit the Diagnose phase when a new baseline or a broader reassessment is needed.'
+    'Monitoring is an ongoing process. Revisit the Assess phase when a new baseline or a broader reassessment is needed.'
   ],
   checklist: [
     'Selected indicators that connect directly to circular goals',

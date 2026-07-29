@@ -1,7 +1,7 @@
 import { defineJourneyPhasePage } from './_shared.js';
 
 /*
-  PHASE 2: DIAGNOSE
+  PHASE 2: ASSESS
   The editable blocks below follow the same order as the website page.
   Keep sectionId and id values unchanged because they connect links and tools.
 */
@@ -9,9 +9,9 @@ import { defineJourneyPhasePage } from './_shared.js';
 /* 1. HOME PAGE PHASE CARD AND PHASE HERO */
 const phaseCard = {
   number: '02',
-  slug: 'diagnose',
+  slug: 'assess',
   shortName: 'Phase 2',
-  title: 'Diagnose',
+  title: 'Assess',
   colourClass: 'module-card-lime',
   description:
     'Provides tools to assess CE adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
@@ -19,9 +19,9 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase helps users assess their starting point. It includes tools and guidance for diagnosing circular economy maturity, identifying hotspots and establishing an initial baseline.',
-  icon: '/phase-icons/icon-diagnose.png',
-  iconAlt: 'Diagnose phase icon'
+    'This phase helps users assess their starting point. It includes tools and guidance for assessing circular economy maturity, identifying hotspots and establishing an initial baseline.',
+  icon: '/phase-icons/icon-assess.png',
+  iconAlt: 'Assess phase icon'
 };
 
 /* 2. HERO SECTION BUTTONS */
@@ -72,13 +72,13 @@ const pathwaySection = {
 
   RELEVANT TOOLS:
   Edit resources in src/lib/content/resources.js.
-  Add 'diagnose:maturity-assessment' to:
+  Add 'assess:maturity-assessment' to:
   placements.phaseSections
 */
 const maturitySection = {
   id: 'maturity-assessment',
   title: 'Maturity Assessment',
-  resourceTag: 'diagnose:maturity-assessment',
+  resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
     'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most SMEs fall somewhere along this maturity spectrum.'
@@ -88,13 +88,13 @@ const maturitySection = {
 /* 5. DETAILED SECTION 2: BASELINE MAPPING */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/resources.js, add 'diagnose:baseline-mapping' to:
+  In src/lib/content/resources.js, add 'assess:baseline-mapping' to:
   placements.phaseSections
 */
 const baselineSection = {
   id: 'baseline-mapping',
   title: 'Baseline Mapping',
-  resourceTag: 'diagnose:baseline-mapping',
+  resourceTag: 'assess:baseline-mapping',
   paragraphs: [
     'A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time.',
     'Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible.'
@@ -127,13 +127,13 @@ const baselineSection = {
 /* 6. DETAILED SECTION 3: HOTSPOT ANALYSIS */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/resources.js, add 'diagnose:hotspot-analysis' to:
+  In src/lib/content/resources.js, add 'assess:hotspot-analysis' to:
   placements.phaseSections
 */
 const hotspotSection = {
   id: 'hotspot-analysis',
   title: 'Hotspot Analysis',
-  resourceTag: 'diagnose:hotspot-analysis',
+  resourceTag: 'assess:hotspot-analysis',
   paragraphs: [
     'A hotspot is a point in your business where resource use, waste, cost, or environmental impact is disproportionately high. Hotspots are the priority areas where small changes can deliver the greatest circular economy benefits.'
   ],
@@ -149,7 +149,7 @@ const hotspotSection = {
     ]
   },
   closingParagraphs: [
-    'Your hotspot analysis directly feeds into Phase 3 (Options) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them.'
+    'Your hotspot analysis directly feeds into Phase 3 (Explore) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them.'
   ]
 };
 
@@ -157,7 +157,7 @@ const hotspotSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that the diagnose work has created a practical baseline before moving to the options phase.',
+    'Use this checklist to confirm that the assessment work has created a practical baseline before moving to the Explore phase.',
     'To continue to the next phase, click below or go back to home to find the next suitable phase, sector, or explore the tools page.'
   ],
   checklist: [
@@ -170,7 +170,7 @@ const phaseSummary = {
   ]
 };
 
-export const diagnose = defineJourneyPhasePage({
+export const assess = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,

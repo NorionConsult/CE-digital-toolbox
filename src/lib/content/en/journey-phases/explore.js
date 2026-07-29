@@ -1,7 +1,7 @@
 import { defineJourneyPhasePage } from './_shared.js';
 
 /*
-  PHASE 3: OPTIONS
+  PHASE 3: EXPLORE
   The editable blocks below follow the same order as the website page.
   Keep sectionId and id values unchanged because they connect page links.
 */
@@ -9,19 +9,19 @@ import { defineJourneyPhasePage } from './_shared.js';
 /* 1. HOME PAGE PHASE CARD AND PHASE HERO */
 const phaseCard = {
   number: '03',
-  slug: 'options',
+  slug: 'explore',
   shortName: 'Phase 3',
-  title: 'Options',
+  title: 'Explore',
   colourClass: 'module-card-yellow',
   description:
-    'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address diagnosed hotspots.'
+    'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.'
 };
 
 const hero = {
   intro:
-    'This phase supports the identification and comparison of possible circular economy options. It can be used to explore strategies, generate ideas and move from diagnosis to practical opportunities.',
-  icon: '/phase-icons/icon-options.png',
-  iconAlt: 'Options phase icon'
+    'This phase supports the identification and comparison of possible circular economy choices. It can be used to explore strategies, generate ideas and move from assessment to practical opportunities.',
+  icon: '/phase-icons/icon-explore.png',
+  iconAlt: 'Explore phase icon'
 };
 
 /* 2. HERO SECTION BUTTONS */
@@ -35,7 +35,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'What strategy is best for you?',
   paragraphs: [
-    'The Options phase bridges diagnosis with decision-making. Based on what you have learned about your business, you will explore which circular strategies are out there and how to redesign your products for the circular economy.'
+    'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will explore which circular strategies are out there and how to redesign your products for the circular economy.'
   ],
   cards: [
     {
@@ -81,7 +81,7 @@ const pathwaySection = {
 const exploreStrategiesSection = {
   id: 'explore-ce-strategies',
   title: 'Understand Design Principles',
-  resourceTag: 'options:explore-strategies',
+  resourceTag: 'explore:explore-strategies',
   paragraphs: [
     'Circular economy strategies provide different ways to preserve value, reduce waste and keep products, components and materials in use for longer. For this end, there are different models and frameworks.',
     "One of these are the DfX framework, which helps teams translate circular economy ambition into design decisions. DfX stand for 'Design for X' where the X stands for Longevity, Repairability, Disassembly, Recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products. The EU regulation, particularly the ESPR, Right to Repair, and packaging regulations, are based and align with these design principles. This means the design choices of companies will soon affect market access. The visualisation below describe these four design strategies that keep products and materials in use longer and can be applied at different scales and degrees."
@@ -148,7 +148,7 @@ const exploreStrategiesSection = {
   },
   /*
     The circular business model cards were moved to Phase :
-    src/lib/content/en/journey-phases/business-case.js
+    src/lib/content/en/journey-phases/validate.js
   */
 };
 
@@ -156,7 +156,7 @@ const exploreStrategiesSection = {
 const identifyOptionsSection = {
   id: 'identify-your-options',
   title: 'Identify Your Options',
-  resourceTag: 'options:identify-options',
+  resourceTag: 'explore:identify-options',
   paragraphs: [
     "This section helps teams translate broad circular economy strategies into options that relate directly to their products, operations and value chain. Use this space to describe the option-generation process, workshop activities and any supporting examples or images. The image below shows the '9R strategies' form a hierarchy of circular economy interventions ranked from highest to lowest value preservation. At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether.",
     "Moving down, R1-R2 (Rethink/Reduce) minimise resource use, while R3-R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible. R7 (Repurpose) gives materials a new function, R8 (Recycle) recovers raw material value through processing, and R9 (Recover), typically energy recovery through incineration, sits at the bottom of the hierarchy as the lowest value preservation strategy, extracting only calorific value once all other options are exhausted. The framework's core principle is that the higher the R, the more embedded economic, social and environmental value is lost."
@@ -232,7 +232,7 @@ const identifyOptionsSection = {
 const assessPrioritiseSection = {
   id: 'assess-and-prioritise',
   title: 'Redesigning Circular Value',
-  resourceTag: 'options:redesign-circular-value',
+  resourceTag: 'explore:redesign-circular-value',
   paragraphs: [
     ""
   ],
@@ -304,7 +304,7 @@ const phaseSummary = {
   ]
 };
 
-export const options = defineJourneyPhasePage({
+export const explore = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,

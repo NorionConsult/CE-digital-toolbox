@@ -134,7 +134,7 @@ export const cases = [
     companyName: 'Revive Eco',
     country: 'United Kingdom',
     clientSegment: 'Circular ingredients SME',
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     description:
       'Valorises spent coffee grounds collected from cafes and food producers into natural skincare, cleaning and food ingredients.',
     about:
@@ -147,7 +147,7 @@ export const cases = [
     companyName: 'FoodWaste.ch',
     country: 'Switzerland',
     clientSegment: 'Food redistribution platform',
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     description:
       'A digital platform connects agri-food businesses with buyers elsewhere in the value chain, reducing farm-level food waste through redistribution.',
     about:
@@ -160,7 +160,7 @@ export const cases = [
     companyName: 'LettUs Grow',
     country: 'United Kingdom',
     clientSegment: 'Agricultural technology SME',
-    sector: 'Agriculture',
+    sector: 'Food and Agriculture',
     description:
       'Aeroponic vertical farming technology enabling year-round, pesticide-free growing with 95% less water, applicable to urban and peri-urban agri-SMEs.',
     about:

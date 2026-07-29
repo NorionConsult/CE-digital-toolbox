@@ -1,7 +1,7 @@
 import { defineJourneyPhasePage } from './_shared.js';
 
 /*
-  PHASE 4: BUSINESS CASE
+  PHASE 4: VALIDATE
   The editable blocks below follow the same order as the website page.
   Keep sectionId and id values unchanged because they connect page links.
 */
@@ -9,9 +9,9 @@ import { defineJourneyPhasePage } from './_shared.js';
 /* 1. HOME PAGE PHASE CARD AND PHASE HERO */
 const phaseCard = {
   number: '04',
-  slug: 'business-case',
+  slug: 'validate',
   shortName: 'Phase 4',
-  title: 'Business Case',
+  title: 'Validate',
   colourClass: 'module-card-blue',
   description:
     'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.'
@@ -19,9 +19,9 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase focuses on turning circular economy opportunities into a clearer business case. It includes tools that help users consider feasibility, benefits, risks, barriers and potential value creation.',
-  icon: '/phase-icons/icon-business%20case.png',
-  iconAlt: 'Business Case phase icon'
+    'This phase focuses on validating circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
+  icon: '/phase-icons/icon-validate.png',
+  iconAlt: 'Validate phase icon'
 };
 
 /* 2. HERO SECTION BUTTONS */
@@ -33,9 +33,9 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'Building a circular business case',
+  title: 'Validating a circular opportunity',
   paragraphs: [
-    'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This phase helps SMEs identify the right circular business model, build a compelling business case and understand the path forward.'
+    'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This phase helps SMEs identify the right circular business model, validate the strongest opportunities and understand the path forward.'
   ],
   cards: [
     {
@@ -62,9 +62,9 @@ const pathwaySection = {
       ]
     },
     {
-      sectionId: 'business-case',
+      sectionId: 'validate-case',
       number: '3',
-      title: 'Business Case',
+      title: 'Validate the Case',
       description:
         'Understand the barriers, enablers and steps required to move from your current business model to a circular one.',
       keyOutputs: [
@@ -79,7 +79,7 @@ const pathwaySection = {
 const businessModelsSection = {
   id: 'circular-business-models',
   title: 'Circular Business Models',
-  resourceTag: 'business-case:business-models',
+  resourceTag: 'validate:business-models',
   paragraphs: [
     'Circular business models describe how a company can create, deliver and retain value while reducing resource use and waste.',
     'Use this section to explain the model types, provide examples and help users identify which models align with their selected circular opportunities.'
@@ -142,7 +142,7 @@ const businessModelsSection = {
 const quickScanSection = {
   id: 'quick-scan-tool',
   title: 'Quick Scan Tool',
-  resourceTag: 'business-case:quick-scan',
+  resourceTag: 'validate:quick-scan',
   paragraphs: [
     'Not every circular business model will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
     'Use this section to explain the assessment criteria, prioritisation method and how the final ranking should be interpreted.'
@@ -170,9 +170,9 @@ const quickScanSection = {
     answeredLabel: 'answered',
     downloadLabel: 'Download results',
     downloadingLabel: 'Preparing PDF...',
-    downloadFilename: 'phase-4-business-case-quick-scan-results.pdf',
+    downloadFilename: 'phase-4-validate-quick-scan-results.pdf',
     pdfDisclaimer:
-      'These are guiding questions part of Phase 4: Business Case of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
+      'These are guiding questions part of Phase 4: Validate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
     incompleteText: 'Answer every question to see your result.',
     positiveResult:
       'There seems to be potential! This strategy should be considered to be tested.',
@@ -245,10 +245,10 @@ const quickScanSection = {
 };
 
 /* 6. DETAILED SECTION 3 */
-const transitionPlanningSection = {
-  id: 'business-case',
-  title: 'Business Case',
-  resourceTag: 'business-case:business-case',
+const validateCaseSection = {
+  id: 'validate-case',
+  title: 'Validate the Case',
+  resourceTag: 'validate:validate-case',
   paragraphs: [
     "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. SWOT is a fantastic tool to use when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. SWOT stands for Strengths, Weaknesses, Opportunities, and Threats.",
     "It's a simple framework for assessing a business, project, or decision by looking at four areas: Strengths and Weaknesses are internal factors (what you're good at, and where you fall short), while Opportunities and Threats are external factors (favourable conditions you could exploit, and risks in your environment you need to watch for). Typically laid out as a 2x2 grid, it helps surface a clear, balanced picture before making strategic decisions."
@@ -273,11 +273,11 @@ const phaseSummary = {
   ]
 };
 
-export const businessCase = defineJourneyPhasePage({
+export const validate = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [businessModelsSection, quickScanSection, transitionPlanningSection],
+  detailSections: [businessModelsSection, quickScanSection, validateCaseSection],
   phaseSummary
 });
