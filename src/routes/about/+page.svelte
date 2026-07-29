@@ -17,10 +17,6 @@
 </section>
 
 <style>
-  .about-hero {
-    padding: 72px 0;
-  }
-
   .about-hero h1,
   .about-hero .subpage-intro {
     max-width: 900px;

@@ -38,13 +38,6 @@
 </section>
 
 <style>
-  .home-hero {
-    min-height: calc(100vh - 94px);
-    display: flex;
-    align-items: center;
-    padding: 40px 0;
-  }
-
   .home-hero h1 {
     max-width: 1060px;
     font-size: clamp(3.2rem, 6.2vw, 5.6rem);
@@ -79,11 +72,6 @@
   }
 
   @media (max-width: 640px) {
-    .home-hero {
-      min-height: auto;
-      padding: 64px 0;
-    }
-
     .home-hero h1 {
       font-size: clamp(3rem, 15vw, 4.7rem);
     }

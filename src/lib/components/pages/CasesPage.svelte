@@ -84,10 +84,6 @@
 </section>
 
 <style>
-  .cases-hero {
-    padding: 88px 0 72px;
-  }
-
   .cases-section {
     padding: 50px 0;
     background-color: var(--white);

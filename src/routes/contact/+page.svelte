@@ -73,10 +73,6 @@
 </section>
 
 <style>
-  .contact-hero {
-    padding: 72px 0;
-  }
-
   .contact-hero h1,
   .contact-hero .subpage-intro {
     max-width: 980px;

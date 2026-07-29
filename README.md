@@ -80,6 +80,15 @@ Colours, fonts and shared visual style:
 src/app.css
 ```
 
+Hero section padding:
+
+```text
+src/app.css
+```
+
+Change `--page-hero-padding` for desktop hero spacing and
+`--page-hero-padding-mobile` for phone hero spacing.
+
 ## Format Bold Text
 
 In editable paragraph and description text, wrap only the words that should be bold with double asterisks:

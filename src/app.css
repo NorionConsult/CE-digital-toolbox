@@ -22,6 +22,15 @@
   --site-container-max: 1280px;
 
   /*
+    Page hero spacing.
+    Change these values to adjust the top/bottom padding of page hero sections
+    across the site. The current desktop spacing follows the Guided pathways
+    hero: 64px top, 48px bottom.
+  */
+  --page-hero-padding: 64px 0 48px;
+  --page-hero-padding-mobile: 64px 0;
+
+  /*
     Card controls are intentionally separated by card type:
     - home journey phase cards
     - home sector tool cards
@@ -258,8 +267,9 @@ h3,
     var(--light-bg);
 }
 
-.hero {
-  padding: 50px 0 50px;
+.hero,
+.subpage-hero {
+  padding: var(--page-hero-padding);
 }
 
 .hero-content,
@@ -326,8 +336,7 @@ h3,
 }
 
 @media (max-width: 640px) {
-  .hero,
-  .subpage-hero {
-    padding: 72px 0;
+  :root {
+    --page-hero-padding: var(--page-hero-padding-mobile);
   }
 }

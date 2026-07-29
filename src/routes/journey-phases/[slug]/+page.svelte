@@ -681,10 +681,6 @@
 {/if}
 
 <style>
-  .subpage-hero {
-    padding: 50px 0 50px;
-  }
-
   .module-hero-content {
     max-width: var(--site-container-max);
     display: grid;

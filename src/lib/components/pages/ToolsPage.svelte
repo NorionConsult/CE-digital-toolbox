@@ -101,10 +101,6 @@
 </section>
 
 <style>
-  .tools-hero {
-    padding: 88px 0 72px;
-  }
-
   .filter-panel {
     display: grid;
     grid-template-columns: 1.5fr repeat(4, 1fr) auto;

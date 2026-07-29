@@ -19,7 +19,7 @@ export const guidedPathways = {
     eyebrow: 'Guided pathways',
     title: 'Find the right tools',
     text:
-      'Start from the circular economy journey phases or explore tools by selected sectors. Use these guided routes to find tools, examples, and practical steps that fit where you are in the transition.',
+      'The toolbox is organised into journey phases, sector guides, a case study collection, and a tool catalogue. Each journey phase contains relevant introduction and structured content that presents selected tools that provide methods, guidance, and resources for a wider audience. Start from the circular economy journey phases or explore tools by selected sectors. Use these guided routes to find tools, examples, and practical steps that fit where you are in the transition.',
     buttons: [
       {
         label: 'Follow journey phases',

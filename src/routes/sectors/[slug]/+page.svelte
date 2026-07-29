@@ -185,7 +185,7 @@
 
 <style>
   .sector-hero {
-    padding: 50px 0;
+    padding: var(--page-hero-padding);
     background:
       linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
       var(--light-bg);

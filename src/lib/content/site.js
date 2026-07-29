@@ -33,12 +33,12 @@ export const site = {
     {
       src: '/logos/EU-logo.png',
       alt: 'European Union logo',
-      width: 'clamp(170px, 23vw, 300px)'
+      width: '185px'
     },
     {
       src: '/logos/EU4Green-logo.png',
       alt: 'EU4Green logo',
-      width: 'clamp(72px, 8vw, 110px)'
+      width: '72px'
     }
   ],
   labels: {
