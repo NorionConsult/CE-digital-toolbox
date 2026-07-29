@@ -324,11 +324,10 @@ Explore
 Validate
 Implement
 Monitor
-None
 ```
 
-Use `None` when a tool does not belong to one of the six journey phases.
-For example, sector-only tools can use:
+New tools should always be assigned to at least one journey phase. Older
+sector-only tools may still use `None` until they are categorized:
 
 ```js
 journeyPhase: 'None',
@@ -336,8 +335,9 @@ journeyPhases: [],
 sector: 'Textiles',
 ```
 
-The Tools page can filter by `None`, but the card will not show a `None` badge.
-If the sector is set, the card will show a sector badge instead.
+The Tools page does not show `None` as a Journey phase filter option, and the
+card will not show a `None` badge. If the sector is set, the card will show a
+sector badge instead.
 
 Use `journeyPhase` for the primary phase and include all relevant phases in
 `journeyPhases`:

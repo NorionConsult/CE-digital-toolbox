@@ -2,6 +2,9 @@
   Edit this file for Tools page labels and intro text.
   Tools themselves are edited in resources.js.
   Old route aliases are kept only so older links continue to work.
+  The Journey phase, Language and Access filter greying-out behavior is handled in
+  src/lib/components/pages/ToolsPage.svelte, not in this editor text file.
+  "None" is intentionally not shown as a Journey phase filter option.
 */
 export const toolsPage = {
   pageTitle: 'Tools | Circular Economy Toolbox',
@@ -12,9 +15,12 @@ export const toolsPage = {
   searchPlaceholder: 'Search by title, purpose, provider or access',
   filtersLabel: 'Tools filters',
   phaseLabel: 'Journey phase',
+  disabledPhaseTitle: 'No tools available for this filter combination.',
   sectorLabel: 'Sector',
   languageLabel: 'Language',
+  disabledLanguageTitle: 'No tools available for this filter combination.',
   accessLabel: 'Access',
+  disabledAccessTitle: 'No tools available for this filter combination.',
   resetButton: 'Reset filters',
   resultPrefix: 'Showing',
   resultMiddle: 'of',

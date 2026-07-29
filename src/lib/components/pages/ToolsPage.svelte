@@ -12,25 +12,102 @@
 
   $: normalisedSearch = searchTerm.trim().toLowerCase();
 
-  $: filteredResources = resources.filter((resource) => {
+  const NO_PHASE = 'None';
+
+  /**
+   * @param {any} resource
+   * @param {{
+   *   search?: string;
+   *   sector?: string;
+   *   phase?: string;
+   *   language?: string;
+   *   access?: string;
+   * }} filters
+   */
+  function resourceMatchesFilters(resource, filters) {
     const matchesSearch =
-      !normalisedSearch ||
-      resource.title.toLowerCase().includes(normalisedSearch) ||
-      resource.description.toLowerCase().includes(normalisedSearch) ||
-      resource.sectorDisplay.toLowerCase().includes(normalisedSearch) ||
-      resource.languageDisplay.toLowerCase().includes(normalisedSearch) ||
-      resource.provider.toLowerCase().includes(normalisedSearch) ||
-      resource.accessDisplay.toLowerCase().includes(normalisedSearch);
+      !filters.search ||
+      resource.title.toLowerCase().includes(filters.search) ||
+      resource.description.toLowerCase().includes(filters.search) ||
+      resource.sectorDisplay.toLowerCase().includes(filters.search) ||
+      resource.languageDisplay.toLowerCase().includes(filters.search) ||
+      resource.provider.toLowerCase().includes(filters.search) ||
+      resource.accessDisplay.toLowerCase().includes(filters.search);
 
+    const matchesSector =
+      !filters.sector || resource.filterValues.sectors.includes(filters.sector);
     const matchesPhase =
-      !selectedPhase || resource.filterValues.journeyPhases.includes(selectedPhase);
-    const matchesSector = !selectedSector || resource.filterValues.sectors.includes(selectedSector);
+      !filters.phase || resource.filterValues.journeyPhases.includes(filters.phase);
     const matchesLanguage =
-      !selectedLanguage || resource.filterValues.languages.includes(selectedLanguage);
-    const matchesAccess = !selectedAccess || resource.filterValues.access.includes(selectedAccess);
+      !filters.language || resource.filterValues.languages.includes(filters.language);
+    const matchesAccess =
+      !filters.access || resource.filterValues.access.includes(filters.access);
 
-    return matchesSearch && matchesPhase && matchesSector && matchesLanguage && matchesAccess;
-  });
+    return matchesSearch && matchesSector && matchesPhase && matchesLanguage && matchesAccess;
+  }
+
+  $: resourcesMatchingNonPhaseFilters = resources.filter((resource) =>
+    resourceMatchesFilters(resource, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      language: selectedLanguage,
+      access: selectedAccess
+    })
+  );
+
+  $: availableJourneyPhaseSet = new Set(
+    resourcesMatchingNonPhaseFilters
+      .flatMap((resource) => resource.filterValues.journeyPhases)
+      .filter((phase) => phase !== NO_PHASE)
+  );
+
+  $: disabledJourneyPhases = journeyPhases.filter(
+    (phase) => phase !== selectedPhase && !availableJourneyPhaseSet.has(phase)
+  );
+
+  $: resourcesMatchingNonLanguageFilters = resources.filter((resource) =>
+    resourceMatchesFilters(resource, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      phase: selectedPhase,
+      access: selectedAccess
+    })
+  );
+
+  $: availableLanguageSet = new Set(
+    resourcesMatchingNonLanguageFilters.flatMap((resource) => resource.filterValues.languages)
+  );
+
+  $: disabledLanguages = languages.filter(
+    (language) => language !== selectedLanguage && !availableLanguageSet.has(language)
+  );
+
+  $: resourcesMatchingNonAccessFilters = resources.filter((resource) =>
+    resourceMatchesFilters(resource, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      phase: selectedPhase,
+      language: selectedLanguage
+    })
+  );
+
+  $: availableAccessSet = new Set(
+    resourcesMatchingNonAccessFilters.flatMap((resource) => resource.filterValues.access)
+  );
+
+  $: disabledAccessOptions = accessOptions.filter(
+    (access) => access !== selectedAccess && !availableAccessSet.has(access)
+  );
+
+  $: filteredResources = resources.filter((resource) =>
+    resourceMatchesFilters(resource, {
+      search: normalisedSearch,
+      sector: selectedSector,
+      phase: selectedPhase,
+      language: selectedLanguage,
+      access: selectedAccess
+    })
+  );
 
   function resetFilters() {
     selectedPhase = '';
@@ -66,10 +143,31 @@
         />
       </label>
 
-      <FilterSelect id="phase-filter" label={toolsPage.phaseLabel} bind:value={selectedPhase} options={journeyPhases} />
       <FilterSelect id="sector-filter" label={toolsPage.sectorLabel} bind:value={selectedSector} options={sectors} />
-      <FilterSelect id="language-filter" label={toolsPage.languageLabel} bind:value={selectedLanguage} options={languages} />
-      <FilterSelect id="access-filter" label={toolsPage.accessLabel} bind:value={selectedAccess} options={accessOptions} />
+      <FilterSelect
+        id="phase-filter"
+        label={toolsPage.phaseLabel}
+        bind:value={selectedPhase}
+        options={journeyPhases}
+        disabledOptions={disabledJourneyPhases}
+        disabledOptionTitle={toolsPage.disabledPhaseTitle}
+      />
+      <FilterSelect
+        id="language-filter"
+        label={toolsPage.languageLabel}
+        bind:value={selectedLanguage}
+        options={languages}
+        disabledOptions={disabledLanguages}
+        disabledOptionTitle={toolsPage.disabledLanguageTitle}
+      />
+      <FilterSelect
+        id="access-filter"
+        label={toolsPage.accessLabel}
+        bind:value={selectedAccess}
+        options={accessOptions}
+        disabledOptions={disabledAccessOptions}
+        disabledOptionTitle={toolsPage.disabledAccessTitle}
+      />
 
       <button type="button" class="reset-button" on:click={resetFilters}>{toolsPage.resetButton}</button>
     </form>

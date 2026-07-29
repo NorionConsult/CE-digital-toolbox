@@ -39,7 +39,6 @@
   - Validate
   - Implement
   - Monitor
-  - None, when the tool is not assigned to a journey phase
 
   The website matches each phase name to its journey phase and uses the
   global journey phase colour from src/app.css. A resource with several journeyPhases gets
@@ -49,8 +48,11 @@
   journeyPhases: ['Monitor', 'Validate', 'Explore'],
 
   Keep journeyPhase as one primary value and include it in journeyPhases.
-  If journeyPhase is 'None', keep journeyPhases as an empty list: [].
-  The Tools page can filter by None, but no "None" badge is displayed on cards.
+  New tools should always be assigned to one or more journey phases.
+  Older sector-only tools may still use journeyPhase: 'None' with journeyPhases: []
+  until they are categorized.
+  The Tools page does not show "None" as a Journey phase filter option, and no
+  "None" badge is displayed on cards.
 
   WHERE A TOOL CARD APPEARS:
   Add a placements block inside a resource to place it on journey phase or sector pages.
@@ -280,8 +282,6 @@ function createResource(resource) {
   const languages = normalizeFilterList(resource.language, 'language');
   const languageDisplay = getCompactLanguageDisplay(resource.language);
   const languageFullDisplay = getFullLanguageDisplay(resource.language);
-  const languageFilterValues =
-    languages.length > 3 ? [...languages, LANGUAGE_MULTIPLE_LABEL] : languages;
   const sectorDisplay = normalizeFilterValue(resource.sector, 'sector');
   const accessDisplay = normalizeFilterValue(resource.access, 'access');
 
@@ -296,7 +296,7 @@ function createResource(resource) {
     filterValues: {
       journeyPhases: journeyPhaseFilterValues,
       sectors: [sectorDisplay],
-      languages: languageFilterValues,
+      languages,
       access: [accessDisplay]
     },
     placements: {
@@ -343,7 +343,7 @@ export const resources = [
     description:
       'CircularTracker delivers a comprehensive assessment, analyzing key circularity elements such as material recovery, product longevity, reuse potential, and end-of-life strategies empowering data-driven decisions.',
     about:
-      'CircularTracker provides a fast, simple, and standardised way to assess and compare the circularity of your products. Powered by the ISO-compliant Product Circularity Data Sheet (PCDS), it delivers data-driven insights to support sustainable product decisions.',
+      'CircularTracker provides a fast, simple, and standardised way to assess and compare the circularity of your products. Powered by the International Organization for Standardization (ISO) compliant Product Circularity Data Sheet (PCDS), it delivers data-driven insights to support sustainable product decisions.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor', 'Assess'],
     placements: {
@@ -352,7 +352,7 @@ export const resources = [
     sector: 'Cross-sector',
     language: 'English',
     provider: '+Impakt (a Sweco product)',
-    access: 'Free',
+    access: 'Sign up',
     timeRequired: '2-3 hours',
     preparationNeeded:
       'Be ready with your measurable data and metrics to be used within the platform.',
@@ -521,11 +521,11 @@ export const resources = [
     id: 'resource-009',
     cardNumber: 'Tool #9',
     slug: 'cti-tool-circular-transition-indicators',
-    title: 'CTI Tool - Circular Transition Indicators',
+    title: 'Circular Transition Indicators (CTI) Tool',
     description:
-      'Free online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
+      'Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
-      'The CTI indicators and methodology are one of the main building blocks that GCP uses for circularity metrics and the protocol is designed to align with ISO 59020, ESRS E5, GRI and the Greenhouse Gas Protocol. CTI Tool was developed together with the WBCSD for applying the Circular Transition Indicators in practice. By using CTI Tool you build the material level data and indicators that GCP expects, which means you can reuse your CTI work when you start working with GCP.',
+      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that GCP uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. Circular Transition Indicators (CTI) Tool was developed together with the WBCSD for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that GCP expects, which means you can reuse your CTI work when you start working with GCP.',
     journeyPhase: 'Validate',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
@@ -774,7 +774,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English, Ukrainian, Russian, Portuguese, Spanish, Georgian, Arabic',
-    provider: 'International Green Economy Association / GGKP',
+    provider: 'International Green Economy Association / Green Growth Knowledge Partnership (GGKP)',
     access: 'Free',
     timeRequired: '45-60 minutes',
     preparationNeeded: 'Project data, operations info',
@@ -791,7 +791,7 @@ export const resources = [
     description:
       'Maps materials used in production and helps to showcase material flows of your products',
     about:
-      'Material Flow Analysis gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.',
+      'Material Flow Analysis (MFA) gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.',
     journeyPhase: 'Assess',
     journeyPhases: ['Assess'],
     placements: {
@@ -816,7 +816,7 @@ export const resources = [
     title: 'STAN Tool',
     description: 'Visualizes the material flow data of your products/services',
     about:
-      'STAN allows users to create graphical MFA models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.',
+      'STAN allows users to create graphical Material Flow Analysis (MFA) models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.',
     journeyPhase: 'Assess',
     journeyPhases: ['Assess'],
     placements: {
@@ -837,10 +837,10 @@ export const resources = [
     id: 'resource-022',
     cardNumber: 'Tool #22',
     slug: 'hotspot-analysis-tool-ggkp',
-    title: 'Hotspot Analysis Tool (GGKP)',
+    title: 'Hotspot Analysis Tool',
     description: 'Provides sector profile for each country',
     about:
-      'The SCP-HAT Country Profile tool provides an overview of a country\'s environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.',
+      'The Sustainable Consumption and Production Hotspots Analysis Tool (SCP-HAT) Country Profile tool provides an overview of a country\'s environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.',
     journeyPhase: 'Assess',
     journeyPhases: ['Assess'],
     placements: {
@@ -848,7 +848,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'Green Growth Knowledge Platform',
+    provider: 'Green Growth Knowledge Partnership (GGKP)',
     access: 'Free',
     timeRequired: 'Half day',
     preparationNeeded: 'Resource use data, process list',
@@ -1652,7 +1652,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'UNIDO',
+    provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
     timeRequired: '30-45 minutes',
     preparationNeeded: 'Print out, post-its, pens and people.',
@@ -1677,7 +1677,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'UNIDO',
+    provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
     timeRequired: '30-45 minutes',
     preparationNeeded: 'Print out, post-its, pens and people.',
@@ -1702,7 +1702,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'UNIDO',
+    provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
     timeRequired: '15-30 minutes',
     preparationNeeded: 'Basic knowledge of your options, a pen and the printout.',
@@ -1752,7 +1752,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'UNIDO',
+    provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
     timeRequired: '45-60 minutes',
     preparationNeeded: 'Printout of scoring sheet, post-its, pens and product samples or specifications.',
@@ -1890,11 +1890,11 @@ export const resources = [
 
 /*
   Utility arrays for the filter drop-downs.
-  They are derived from the resource list to avoid maintaining filter values twice.
+  Journey phases are fixed so all six phases stay visible in the filter.
+  Sectors, languages and access options are derived from the resource list to
+  avoid maintaining those filter values twice.
 */
-export const journeyPhases = [
-  ...new Set(resources.flatMap((resource) => resource.filterValues.journeyPhases))
-];
+export const journeyPhases = ['Learn', 'Assess', 'Explore', 'Validate', 'Implement', 'Monitor'];
 export const sectors = sortFilterValues([
   ...new Set(resources.flatMap((resource) => resource.filterValues.sectors))
 ]);

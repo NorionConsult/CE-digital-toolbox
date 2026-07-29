@@ -16,20 +16,11 @@
   let nextPhase = null;
   $: ({ journeyPhase, relatedResources, nextPhase } = data);
 
-  let checkedSummaryItems = [];
-  let currentJourneyPhaseSlug = '';
   /** @type {{ src: string; alt: string; caption?: string } | null} */
   let zoomedImage = null;
 
-  $: if (journeyPhase?.slug && journeyPhase.slug !== currentJourneyPhaseSlug) {
-    currentJourneyPhaseSlug = journeyPhase.slug;
-    checkedSummaryItems = [];
-  }
-
   $: phaseSections = journeyPhase?.sections ?? [];
   $: summaryChecklist = journeyPhase?.summaryChecklist ?? [];
-  $: isSummaryComplete =
-    summaryChecklist.length > 0 && checkedSummaryItems.length === summaryChecklist.length;
 
   /**
    * @param {{ resourceTag?: string; showAllPhaseTools?: boolean }} section
@@ -600,49 +591,47 @@
         <div class="module-summary-checklist" aria-label={journeyPhase.summaryTitle}>
           <div class="summary-progress">
             <h3>Checklist</h3>
-            <p>{checkedSummaryItems.length} / {summaryChecklist.length} complete</p>
+            <p>{summaryChecklist.length} / {summaryChecklist.length} complete</p>
           </div>
 
           <div class="summary-items">
-            {#each summaryChecklist as item, index}
-              <label>
-                <input type="checkbox" bind:group={checkedSummaryItems} value={index} />
+            {#each summaryChecklist as item}
+              <div class="summary-item">
+                <input type="checkbox" checked disabled aria-label="Completed" />
                 <span>{item}</span>
-              </label>
+              </div>
             {/each}
           </div>
 
-          {#if isSummaryComplete}
-            <div class="summary-completion">
-              {#if journeyPhase.slug === 'monitor'}
-                <div class="summary-final-message">
-                  <p>{journeyPhasePage.finalCongratulations}</p>
-                </div>
+          <div class="summary-completion">
+            {#if journeyPhase.slug === 'monitor'}
+              <div class="summary-final-message">
+                <p>{journeyPhasePage.finalCongratulations}</p>
+              </div>
 
-                <div class="summary-completion-actions">
-                  <a href="{base}/guided-pathways/#sectors" class="secondary-button">
-                    {journeyPhasePage.exploreSectors}
-                  </a>
-                  <a href="{base}/cases/" class="secondary-button">
-                    {journeyPhasePage.seeCases}
-                  </a>
-                  <a href="{base}/tools/" class="secondary-button">
-                    {journeyPhasePage.seeTools}
-                  </a>
-                </div>
-              {:else if nextPhase}
-                <div class="summary-completion-actions">
-                  <a
-                    href="{base}/journey-phases/{nextPhase.slug}/"
-                    class="pathway-link summary-next-phase-link"
-                    aria-label="Go to {nextPhase.shortName}: {nextPhase.title}"
-                  >
-                    {journeyPhasePage.nextPhase}
-                  </a>
-                </div>
-              {/if}
-            </div>
-          {/if}
+              <div class="summary-completion-actions">
+                <a href="{base}/guided-pathways/#sectors" class="secondary-button">
+                  {journeyPhasePage.exploreSectors}
+                </a>
+                <a href="{base}/cases/" class="secondary-button">
+                  {journeyPhasePage.seeCases}
+                </a>
+                <a href="{base}/tools/" class="secondary-button">
+                  {journeyPhasePage.seeTools}
+                </a>
+              </div>
+            {:else if nextPhase}
+              <div class="summary-completion-actions">
+                <a
+                  href="{base}/journey-phases/{nextPhase.slug}/"
+                  class="pathway-link summary-next-phase-link"
+                  aria-label="Go to {nextPhase.shortName}: {nextPhase.title}"
+                >
+                  {journeyPhasePage.nextPhase}
+                </a>
+              </div>
+            {/if}
+          </div>
         </div>
       </div>
     </section>
@@ -1968,7 +1957,7 @@
     gap: 12px;
   }
 
-  .summary-items label {
+  .summary-item {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 12px;
@@ -1983,6 +1972,7 @@
     height: 18px;
     margin-top: 3px;
     accent-color: var(--green-primary);
+    opacity: 1;
   }
 
   .summary-completion {

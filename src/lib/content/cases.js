@@ -82,9 +82,9 @@ export const cases = [
     clientSegment: 'Textile manufacturer',
     sector: 'Textiles',
     description:
-      "Italian SME producing clothing from recycled cashmere and cotton sourced from industrial offcuts in Prato, one of Europe's oldest textile recycling clusters.",
+      "Italian Small and medium-sized enterprise (SME) producing clothing from recycled cashmere and cotton sourced from industrial offcuts in Prato, one of Europe's oldest textile recycling clusters.",
     about:
-      "Italian SME producing clothing from recycled cashmere and cotton sourced from industrial offcuts in Prato, one of Europe's oldest textile recycling clusters.",
+      "Italian Small and medium-sized enterprise (SME) producing clothing from recycled cashmere and cotton sourced from industrial offcuts in Prato, one of Europe's oldest textile recycling clusters.",
     caseLink: ''
   }),
   createCase({

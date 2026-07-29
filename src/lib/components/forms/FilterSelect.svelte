@@ -11,6 +11,12 @@
   export let value = '';
   /** @type {string[]} */
   export let options = [];
+  /** @type {string[]} */
+  export let disabledOptions = [];
+  /** @type {string} */
+  export let disabledOptionTitle = '';
+
+  $: disabledOptionSet = new Set(disabledOptions);
 </script>
 
 <label class="filter-field" for={id}>
@@ -18,7 +24,13 @@
   <select {id} bind:value>
     <option value="">All</option>
     {#each options as option}
-      <option value={option}>{option}</option>
+      <option
+        value={option}
+        disabled={disabledOptionSet.has(option)}
+        title={disabledOptionSet.has(option) ? disabledOptionTitle : ''}
+      >
+        {option}
+      </option>
     {/each}
   </select>
 </label>
@@ -46,5 +58,10 @@
   select:focus {
     outline: 3px solid rgba(9, 187, 136, 0.25);
     border-color: var(--green-primary);
+  }
+
+  option:disabled {
+    color: var(--muted);
+    background-color: var(--light-bg);
   }
 </style>
