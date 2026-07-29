@@ -13,8 +13,24 @@
   <title>{site.name}</title>
 </svelte:head>
 
-<SiteHeader />
-<main>
-  <slot />
-</main>
-<SiteFooter />
+<div class="site-shell">
+  <SiteHeader />
+  <main class="site-main">
+    <slot />
+  </main>
+  <SiteFooter />
+</div>
+
+<style>
+  .site-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .site-main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+</style>

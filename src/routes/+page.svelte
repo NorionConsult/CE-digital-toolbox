@@ -38,6 +38,10 @@
 </section>
 
 <style>
+  .home-hero {
+    flex: 1 0 auto;
+  }
+
   .home-hero h1 {
     max-width: 1060px;
     font-size: clamp(3.2rem, 6.2vw, 5.6rem);
