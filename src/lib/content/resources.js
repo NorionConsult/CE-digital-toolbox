@@ -453,11 +453,11 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
-      phaseSections: ['implement:implementation-plan']
+      phaseSections: ['implement:roadmap-milestones']
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'The good tribe',
+    provider: 'The Good Tribe',
     access: 'Free',
     timeRequired: '20-30 minutes',
     preparationNeeded:
@@ -479,9 +479,6 @@ export const resources = [
       'A structured road mapping tool developed for manufacturing companies. Guides businesses through mapping their current state, defining ambitions, and building a concrete roadmap with prioritised actions. The tool uses a visual canvas approach with facilitation guidance, making it well suited to use in team workshops. Outputs include a prioritised action plan with owners and timelines.',
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
-    placements: {
-      phaseSections: ['implement:implementation-plan']
-    },
     sector: 'Manufacturing',
     language: 'English',
     provider: 'Teknologiateollisuus',
@@ -912,7 +909,7 @@ export const resources = [
     toolLink:
       'https://www.ri.se/en/system-innovation/circular-transition/expertise/future-adaptive-design-for-a-circular-economy'
   }),
-  createResource({
+  /**createResource({
     id: 'resource-025',
     cardNumber: 'Tool #25',
     slug: 'milestones-and-action-planning-tool',
@@ -937,7 +934,7 @@ export const resources = [
     format: 'Miro board',
     toolLink:
       'https://miro.com/templates/roadmap-to-circular-business/'
-  }),
+  }),*/
   createResource({
     id: 'resource-026',
     cardNumber: 'Tool #26',
@@ -1622,7 +1619,7 @@ export const resources = [
     description:
       'A canvas for mapping concrete, actionable steps for putting a circular strategy into practice once solutions have been identified.',
     about:
-      'The Implementation Canvas is part of the Circular Business Development Canvas Pack. It supports teams in turning chosen circular strategies into concrete roadmaps with actions, owners and timelines.',
+      'This implementation canvas is part of the Circular Business Development Canvas Pack. It supports teams in turning chosen circular strategies into concrete roadmaps with actions, owners and timelines.',
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
@@ -1630,7 +1627,7 @@ export const resources = [
     },
     sector: 'Cross-sector',
     language: 'English',
-    provider: 'Miro (Evelina Lundqvist / The Good Tribe)',
+    provider: 'The Good Tribe',
     access: 'Sign up',
     timeRequired: '60-120 minutes (workshop format)',
     preparationNeeded: 'A Miro account, your circular strategy or audit outputs, and relevant team members or stakeholders.',

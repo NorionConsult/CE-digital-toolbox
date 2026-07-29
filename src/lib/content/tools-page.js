@@ -7,7 +7,7 @@ export const toolsPage = {
   pageTitle: 'Tools | Circular Economy Toolbox',
   eyebrow: 'Selected tools to support SMEs',
   title: 'Tool Catalogue',
-  intro: 'Browse the Circular Economy Toolbox tools and filter tool pages by journey phase, sector, language and access.',
+  intro: 'Browse the Circular Economy Toolbox tools and filter tools by journey phase, sector, language and access. The tools in this catalogue include the tools in the journey phases and sector guides, as well as additional tools that are not included in the guided pathways.',
   searchLabel: 'Search',
   searchPlaceholder: 'Search by title, purpose, provider or access',
   filtersLabel: 'Tools filters',
