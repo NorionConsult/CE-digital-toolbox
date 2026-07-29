@@ -15,6 +15,19 @@
     <p class="eyebrow">{guidedPathways.hero.eyebrow}</p>
     <h1>{guidedPathways.hero.title}</h1>
     <p class="hero-text">{guidedPathways.hero.text}</p>
+
+    <div class="guided-pathways-hero-actions">
+      {#each guidedPathways.hero.buttons as button}
+        <a href={button.href} class={`${button.style}-button`}>
+          <span
+            class="guided-pathways-hero-button-icon"
+            style={`--icon-url: url("https://api.iconify.design/${button.icon}.svg");`}
+            aria-hidden="true"
+          ></span>
+          {button.label}
+        </a>
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -64,6 +77,29 @@
     line-height: 0.95;
     margin-bottom: 24px;
     text-transform: uppercase;
+  }
+
+  .guided-pathways-hero-actions {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 28px;
+  }
+
+  .guided-pathways-hero-actions .primary-button,
+  .guided-pathways-hero-actions .secondary-button {
+    min-height: 58px;
+    padding: 16px 24px;
+    font-size: 1.05rem;
+  }
+
+  .guided-pathways-hero-button-icon {
+    width: 1.25em;
+    height: 1.25em;
+    background-color: currentColor;
+    flex: 0 0 auto;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
   }
 
   .journey-phase-grid {

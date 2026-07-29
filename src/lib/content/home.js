@@ -8,8 +8,8 @@ export const home = {
     eyebrow: 'A practical overview of digital tools',
     title: 'Find digital tools to support your circular economy transition',
     text: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs. The toolbox is organised into six journey phases, sector tools and a tools page. Each journey phase contains relevant introduction and structured content that presents selected tools that provide methods, guidance, and resources for a wider audience. Get started by exploring the contents below.',
-    primaryButton: 'Explore journey phases',
-    secondaryButton: 'Open tools'
+    primaryButton: 'Follow guided pathways',
+    secondaryButton: 'Browse tools freely'
   },
   aboutSection: {
     eyebrow: 'About the toolbox',

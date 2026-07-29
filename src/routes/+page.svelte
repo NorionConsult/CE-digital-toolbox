@@ -17,10 +17,22 @@
     <p class="hero-text"><InlineText text={home.hero.text} /></p>
 
     <div class="hero-actions">
-      <a href="{base}/guided-pathways/#journey-phases" class="primary-button">
+      <a href="{base}/guided-pathways/" class="primary-button">
+        <span
+          class="hero-button-icon"
+          style={`--icon-url: url("https://api.iconify.design/icon-park-outline:map-draw.svg");`}
+          aria-hidden="true"
+        ></span>
         {home.hero.primaryButton}
       </a>
-      <a href="{base}/tools/" class="secondary-button">{home.hero.secondaryButton}</a>
+      <a href="{base}/tools/" class="secondary-button">
+        <span
+          class="hero-button-icon"
+          style={`--icon-url: url("https://api.iconify.design/icon-park-outline:search.svg");`}
+          aria-hidden="true"
+        ></span>
+        {home.hero.secondaryButton}
+      </a>
     </div>
   </div>
 </section>
@@ -55,6 +67,15 @@
     min-height: 58px;
     padding: 16px 24px;
     font-size: 1.05rem;
+  }
+
+  .hero-button-icon {
+    width: 1.25em;
+    height: 1.25em;
+    background-color: currentColor;
+    flex: 0 0 auto;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
   }
 
   @media (max-width: 640px) {

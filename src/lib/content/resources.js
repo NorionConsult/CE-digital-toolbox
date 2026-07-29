@@ -107,6 +107,7 @@
  *   };
  *   sectorDisplay: string;
  *   languageDisplay: string;
+ *   languageFullDisplay: string;
  *   accessDisplay: string;
  *   placements: {
  *     phaseSections: string[];
@@ -222,12 +223,28 @@ function normalizeFilterList(value, type) {
 /**
  * @param {string} language
  */
-function getLanguageDisplay(language) {
-  const languages = normalizeFilterList(language, 'language').filter(
+function getLanguageList(language) {
+  return normalizeFilterList(language, 'language').filter(
     (item) => item !== LANGUAGE_MULTIPLE_LABEL
   );
+}
+
+/**
+ * @param {string} language
+ */
+function getCompactLanguageDisplay(language) {
+  const languages = getLanguageList(language);
 
   return languages.length > 3 ? LANGUAGE_MULTIPLE_LABEL : languages.join(', ');
+}
+
+/**
+ * @param {string} language
+ */
+function getFullLanguageDisplay(language) {
+  const languages = getLanguageList(language);
+
+  return languages.join(', ');
 }
 
 /**
@@ -253,7 +270,8 @@ function createResource(resource) {
   const journeyPhases = normalisedJourneyPhases.filter((phase) => phase !== 'None');
   const journeyPhaseFilterValues = journeyPhases.length > 0 ? journeyPhases : ['None'];
   const languages = normalizeFilterList(resource.language, 'language');
-  const languageDisplay = getLanguageDisplay(resource.language);
+  const languageDisplay = getCompactLanguageDisplay(resource.language);
+  const languageFullDisplay = getFullLanguageDisplay(resource.language);
   const languageFilterValues =
     languages.length > 3 ? [...languages, LANGUAGE_MULTIPLE_LABEL] : languages;
   const sectorDisplay = normalizeFilterValue(resource.sector, 'sector');
@@ -265,6 +283,7 @@ function createResource(resource) {
     journeyPhases,
     sectorDisplay,
     languageDisplay,
+    languageFullDisplay,
     accessDisplay,
     filterValues: {
       journeyPhases: journeyPhaseFilterValues,

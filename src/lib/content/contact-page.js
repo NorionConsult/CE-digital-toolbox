@@ -5,7 +5,7 @@
 export const contactPage = {
   pageTitle: 'Contact | Circular Economy Toolbox',
   eyebrow: 'Contact',
-  title: 'Share feedback or submit your circular economy story',
+  title: 'Share feedback',
   intro:
     'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, or implementation stories. The two forms below will help collect the right information in a structured way.',
   contactDetailsTitle: 'Contact details',

@@ -19,7 +19,21 @@ export const guidedPathways = {
     eyebrow: 'Guided pathways',
     title: 'Find the right tools',
     text:
-      'Start from the circular economy journey phases or explore tools by selected sectors. Use these guided routes to find tools, examples, and practical steps that fit where you are in the transition.'
+      'Start from the circular economy journey phases or explore tools by selected sectors. Use these guided routes to find tools, examples, and practical steps that fit where you are in the transition.',
+    buttons: [
+      {
+        label: 'Follow journey phases',
+        href: '#journey-phases',
+        style: 'primary',
+        icon: 'icon-park-outline:connection-point-two'
+      },
+      {
+        label: 'Follow sector guides',
+        href: '#sectors',
+        style: 'secondary',
+        icon: 'icon-park-outline:handle-round'
+      }
+    ]
   },
 
   /* 2. JOURNEY PHASES SECTION INTRO */
@@ -95,9 +109,9 @@ export const guidedPathways = {
   /* 4. SECTOR TOOLS SECTION INTRO */
   sectorsSection: {
     eyebrow: 'For specific sectors',
-    title: 'Sector tools',
+    title: 'Sector guides',
     text:
-      'Through the EU4Green Recovery East Programme project, four relevant sectors were selected as priority sectors for the region as seen below. Each sector page focuses on a specific industry and contains selected tools, descriptions, cases and practical guidance on how the tools can be applied for the specific challenges and opportunities of that sector.'
+      'Through the EU4Green Recovery East Programme project, four relevant sectors were selected as priority sectors for the region as seen below. Each sector guide focuses on a specific industry and contains selected tools, descriptions, cases and practical guidance on how the tools can be applied for the specific challenges and opportunities of that sector.'
   },
 
   /*
@@ -111,7 +125,7 @@ export const guidedPathways = {
       slug: 'construction',
       title: 'Construction',
       description:
-        'This sector category provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
+        'This sector guide provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
       image: '/images/construction.jpg',
       imageAlt: 'Construction sector'
     },
@@ -120,7 +134,7 @@ export const guidedPathways = {
       slug: 'agriculture',
       title: 'Agriculture',
       description:
-        'This sector category provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
+        'This sector guide provides tools, cases and practical guidance for agriculture and agri-food SMEs adopting circular economy practices.',
       image: '/images/agriculture.jpg',
       imageAlt: 'Agriculture sector'
     },
@@ -129,7 +143,7 @@ export const guidedPathways = {
       slug: 'textiles',
       title: 'Textiles',
       description:
-        'This sector category provides tools and guidance for textile SMEs to adopt circular economy practices.',
+        'This sector guide provides tools and guidance for textile SMEs to adopt circular economy practices.',
       image: '/images/textiles.jpg',
       imageAlt: 'Textiles sector'
     },
@@ -138,7 +152,7 @@ export const guidedPathways = {
       slug: 'tourism',
       title: 'Tourism',
       description:
-        'This sector category provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
+        'This sector guide provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
       image: '/images/tourism.jpg',
       imageAlt: 'Tourism sector'
     }
