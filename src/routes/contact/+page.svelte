@@ -36,12 +36,6 @@
 
 <section class="contact-section">
   <div class="container contact-layout">
-    <aside class="contact-details">
-      <h2>{contactPage.contactDetailsTitle}</h2>
-      <p><InlineText text={contactPage.contactDetails} /></p>
-      <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
-    </aside>
-
     <div class="contact-action-grid">
       <article class="contact-action-card">
         <h2>{contactPage.feedbackForm.title}</h2>
@@ -69,6 +63,12 @@
         </a>
       </article>
     </div>
+
+    <aside class="contact-details">
+      <h2>{contactPage.contactDetailsTitle}</h2>
+      <p><InlineText text={contactPage.contactDetails} /></p>
+      <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+    </aside>
   </div>
 </section>
 
@@ -85,9 +85,7 @@
 
   .contact-layout {
     display: grid;
-    grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.25fr);
-    gap: 32px;
-    align-items: start;
+    gap: 24px;
   }
 
   .contact-details,
@@ -96,6 +94,13 @@
     border-radius: 15px;
     background-color: var(--light-bg);
     padding: 28px;
+  }
+
+  .contact-details {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.6fr) minmax(220px, 0.9fr);
+    gap: 28px;
+    align-items: start;
   }
 
   .contact-details h2,
@@ -108,7 +113,11 @@
 
   .contact-details p,
   .contact-action-card p {
-    margin-bottom: 22px;
+    margin: 0 0 22px;
+  }
+
+  .contact-details p {
+    margin-bottom: 0;
   }
 
   .contact-details a {
@@ -136,9 +145,13 @@
   }
 
   @media (max-width: 900px) {
-    .contact-layout,
-    .contact-action-grid {
+    .contact-action-grid,
+    .contact-details {
       grid-template-columns: 1fr;
+    }
+
+    .contact-details {
+      gap: 14px;
     }
   }
 </style>

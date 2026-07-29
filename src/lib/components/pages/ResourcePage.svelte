@@ -21,6 +21,8 @@
   $: taxonomyRows = [
     ['SME journey', journeyPhaseText],
     ['Sector', resource.sectorDisplay ?? resource.sector],
+    ['Effort', resource.effortDisplay ?? resource.effort],
+    ['Format', resource.format],
     ['Language', resource.languageFullDisplay ?? resource.language],
     ['Provider', resource.provider],
     ['Access', resource.accessDisplay ?? resource.access]

@@ -6,6 +6,7 @@ Most day-to-day website edits happen in this folder.
 site.js              Global site name, header logo, header partner logos, navigation, contact email, footer logos and shared button labels
 home.js              Home page text
 guided-pathways.js   Guided pathways page hero, journey phase cards and sector tool cards
+about-page.js        About page title and text paragraphs
 contact-page.js      Contact page text and form button URLs
 journey-phases.js    Loads the current language journey phase files
 sectors.js           Loads the current language sector files
@@ -320,10 +321,29 @@ resource. Then:
 
 The `slug` becomes the page URL. Use lowercase words separated by hyphens.
 
+### Tool Card Fields
+
+Use `effort` to show how demanding the tool is expected to be:
+
+```js
+effort: 'Low'
+effort: 'Medium'
+effort: 'High'
+```
+
+The effort value appears first on tool cards, where the card previously showed
+Sector. Sector is still stored in the tool record and still appears in the
+taxonomy box on each individual tool page.
+
+The `format` field is also shown in the taxonomy box on each individual tool
+page, directly below Effort. Use a short label such as `PDF`, `Digital tool`,
+`Print out`, `Workshop`, `Miro board` or `E-learning course`.
+
 ### Filter Values
 
-The Tools page filters are cleaned automatically for editors. This means
-capitalisation does not create duplicate filter options:
+The Tools page filter values and the Effort card label are cleaned
+automatically for editors. This means capitalisation does not create duplicate
+filter options:
 
 ```js
 language: 'enGlish'
@@ -333,6 +353,7 @@ will still appear as `English` in the filter. The same clean-up applies to:
 
 - `journeyPhase` and `journeyPhases`
 - `sector`
+- `effort`
 - `language`
 - `access`
 

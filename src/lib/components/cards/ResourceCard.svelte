@@ -21,12 +21,12 @@
 
   <dl class="resource-meta" aria-label="Resource metadata">
     <div>
-      <dt>Language</dt>
-      <dd>{resource.languageDisplay ?? resource.language}</dd>
+      <dt>Effort</dt>
+      <dd>{resource.effortDisplay ?? resource.effort}</dd>
     </div>
     <div>
-      <dt>Sector</dt>
-      <dd>{resource.sectorDisplay ?? resource.sector}</dd>
+      <dt>Language</dt>
+      <dd>{resource.languageDisplay ?? resource.language}</dd>
     </div>
     <div>
       <dt>Provider</dt>

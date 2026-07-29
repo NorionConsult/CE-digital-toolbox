@@ -116,7 +116,7 @@
       const html2pdf = html2pdfModule.default;
       /** @type {any} */
       const pdfOptions = {
-        margin: [10, 10, 12, 10],
+        margin: [9, 12, 11, 12],
         filename: downloadFilename,
         image: { type: 'jpeg', quality: 0.98 },
         html2canvas: {
@@ -520,13 +520,14 @@
     position: fixed;
     top: 0;
     left: -100000px;
-    width: 718px;
+    width: 650px;
     pointer-events: none;
   }
 
   .m4-questionnaire-pdf {
-    width: 718px;
-    padding: 38px;
+    box-sizing: border-box;
+    width: 650px;
+    padding: 30px;
     background-color: #ffffff;
     color: #1f2a2e;
     font-family: Tahoma, Arial, sans-serif;
@@ -535,15 +536,15 @@
 
   .m4-questionnaire-pdf-header {
     display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 20px;
-    align-items: center;
-    padding-bottom: 22px;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+    padding-bottom: 18px;
     border-bottom: 5px solid var(--module-accent);
   }
 
   .m4-questionnaire-pdf-header img {
-    width: 72px;
+    width: 58px;
     height: auto;
   }
 
@@ -551,7 +552,7 @@
     margin: 0 0 8px;
     color: #0a2e36;
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1;
     text-transform: uppercase;
   }
@@ -588,13 +589,13 @@
   .m4-questionnaire-pdf main {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin-top: 20px;
+    gap: 14px;
+    margin-top: 18px;
   }
 
   .m4-questionnaire-pdf-category {
-    padding: 16px;
-    border-left: 7px solid var(--module-accent);
+    padding: 14px;
+    border-left: 6px solid var(--module-accent);
     border-radius: 10px;
     background-color: color-mix(in srgb, var(--module-accent) 12%, #ffffff);
     break-inside: avoid;
@@ -670,8 +671,8 @@
 
   .m4-questionnaire-pdf-footer {
     display: grid;
-    grid-template-columns: 330px minmax(0, 1fr);
-    gap: 18px;
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 16px;
     align-items: center;
     margin-top: 22px;
     padding-top: 16px;
@@ -687,7 +688,7 @@
 
   .m4-questionnaire-pdf-logos img {
     width: auto;
-    height: 52px;
+    height: 44px;
     object-fit: contain;
   }
 

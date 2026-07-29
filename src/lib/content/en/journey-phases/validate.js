@@ -128,13 +128,6 @@ const businessModelsSection = {
         "This is about working upstream rather than downstream, redesigning what comes into your business rather than what happens after a product leaves it. It typically requires closer collaboration with suppliers than a conventional purchasing relationship, since recycled or secondary materials often come with more variability in quality or supply than virgin materials, and managing that variability is usually a shared problem between buyer and supplier. There's often a risk and reliability trade-off in the early stages, since switching to circular inputs can mean accepting some uncertainty while the supply relationship matures. Over time, though, it can reduce exposure to virgin material price volatility and strengthen ties with suppliers who are themselves shifting toward more circular practices.",
       example: 'Switching to recycled feedstock and partnering with a local recycler.'
     },
-    {
-      title: 'Sustainable Procurement',
-      icon: 'shopping-bag',
-      text:
-        "Of all six archetypes, this is the one with the lowest barrier to entry, since it doesn't necessarily require new infrastructure or a new business model, just a different set of criteria applied to decisions you're already making. The leverage point is that procurement choices ripple outward: requiring take-back schemes or recycled content from suppliers effectively pushes circular practices up the supply chain, even to suppliers who haven't otherwise engaged with circularity. It's often a useful starting point for SMEs precisely because it can be implemented incrementally, supplier by supplier or contract by contract, rather than requiring a single large transformation.",
-      example: 'Requiring suppliers to take back packaging after delivery.'
-    }
   ]
 };
 
@@ -145,7 +138,7 @@ const quickScanSection = {
   resourceTag: 'validate:quick-scan',
   paragraphs: [
     'Not every circular business model will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
-    'Use this section to explain the assessment criteria, prioritisation method and how the final ranking should be interpreted.'
+    'Use this section to support the assessment throught criteria and a prioritisation method.  The result can be downloaded. Please use Firefox, Safari of Google Chrome browser if you want the download to work correctly.'
   ],
   /*
     QUICK SCAN QUESTIONNAIRE
@@ -156,7 +149,7 @@ const quickScanSection = {
   m4Questionnaire: {
     title: 'Screening Your Options',
     introduction:
-      'Use these criteria to pressure-test each shortlisted strategy before committing to a business case.',
+      'Use this questionnaire criteria to pressure-test each shortlisted strategy before committing to a business case.',
     businessModelLabel: 'Circular business model to assess',
     businessModelPlaceholder: 'Select a circular business model',
     // These options update automatically when the business model card titles above are edited.

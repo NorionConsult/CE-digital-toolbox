@@ -15,6 +15,10 @@
   - journeyPhases: every relevant phase shown as a separate coloured badge,
     and used by the Tools phase filter and resource taxonomy.
   - sector: Cross-sector, Manufacturing, etc.
+  - effort: Low, Medium or High. This is shown on tool cards and in the tool
+    page taxonomy. Capitalisation is cleaned automatically.
+  - format: PDF, Digital tool, Print out, Workshop, etc. This appears in the
+    taxonomy box on each individual tool page.
   - language: document or tool language. For several languages, separate them
     with commas or slashes, for example: 'English, Dutch' or 'English/Dutch'.
     The filter automatically cleans capitalisation and splits them into single
@@ -88,6 +92,7 @@
  *   journeyPhases?: string[];
  *   placements?: ResourcePlacementsInput;
  *   sector: string;
+ *   effort?: string;
  *   language: string;
  *   provider: string;
  *   access: string;
@@ -108,6 +113,7 @@
  *     access: string[];
  *   };
  *   sectorDisplay: string;
+ *   effortDisplay: string;
  *   languageDisplay: string;
  *   languageFullDisplay: string;
  *   accessDisplay: string;
@@ -231,6 +237,19 @@ function normalizeFilterList(value, type) {
 }
 
 /**
+ * @param {string | undefined} value
+ */
+function normalizeEffortValue(value) {
+  const cleaned = String(value ?? '').trim().toLowerCase();
+
+  if (cleaned === 'low') return 'Low';
+  if (cleaned === 'medium') return 'Medium';
+  if (cleaned === 'high') return 'High';
+
+  return cleaned ? titleCase(cleaned) : 'Not specified';
+}
+
+/**
  * @param {string} language
  */
 function getLanguageList(language) {
@@ -283,6 +302,7 @@ function createResource(resource) {
   const languageDisplay = getCompactLanguageDisplay(resource.language);
   const languageFullDisplay = getFullLanguageDisplay(resource.language);
   const sectorDisplay = normalizeFilterValue(resource.sector, 'sector');
+  const effortDisplay = normalizeEffortValue(resource.effort);
   const accessDisplay = normalizeFilterValue(resource.access, 'access');
 
   return {
@@ -290,6 +310,8 @@ function createResource(resource) {
     journeyPhase: journeyPhases[0] ?? 'None',
     journeyPhases,
     sectorDisplay,
+    effort: effortDisplay,
+    effortDisplay,
     languageDisplay,
     languageFullDisplay,
     accessDisplay,
@@ -324,6 +346,7 @@ export const resources = [
       phaseSections: ['monitor:measuring-success'],
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'SME Climate Hub',
     access: 'Free',
@@ -350,6 +373,7 @@ export const resources = [
       phaseSections: ['monitor:measuring-success'],
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: '+Impakt (a Sweco product)',
     access: 'Sign up',
@@ -376,6 +400,7 @@ export const resources = [
       phaseSections: ['monitor:choosing-indicators']
     },
     sector: 'Cross-sector',
+    effort: 'High',
     language: 'English, Chinese, Portuguese, Spanish',
     provider: 'Ellen MacArthur Foundation',
     access: 'Free',
@@ -387,33 +412,6 @@ export const resources = [
     format: 'PDF',
     toolLink:
       'https://content.ellenmacarthurfoundation.org/web/753ec75d78ad3222/circulytics-indicators/?viewType=grid'
-  }),
-  createResource({
-    id: 'resource-004',
-    cardNumber: 'Tool #4',
-    slug: 'circular-transition-indicators',
-    title: 'Circular Transition Indicators',
-    description:
-      'The CTI Tool helps businesses measure and improve their circular performance by guiding companies through the Circular Transition Indicators (CTI) process.',
-    about:
-      'The tool structures data and calculates outcomes, supporting businesses in taking concrete actions towards their circularity goals. It also supports users to reach out to internal stakeholders and value chain partners for data requests that avoid confidentiality issues.',
-    journeyPhase: 'Monitor',
-    journeyPhases: ['Monitor'],
-    placements: {
-      phaseSections: ['monitor:choosing-indicators']
-    },
-    sector: 'Cross-sector',
-    language: 'English',
-    provider: 'World Business Council for Sustainable Development (WBCSD)',
-    access: 'Paid',
-    timeRequired: '30-45 minutes',
-    preparationNeeded:
-      'Be ready with your measurable data and metrics to be used within the platform.',
-    output:
-      'The tool structures material-level data, calculates circularity outcomes, and generates clear reports for internal steering, investors and regulators, including ESRS E5 and Global Circularity Protocol insights.',
-    bestFor: 'SMEs in all sectors',
-    format: 'Digital tool',
-    toolLink: 'https://ctitool.com/'
   }),
   createResource({
     id: 'resource-005',
@@ -430,6 +428,7 @@ export const resources = [
       phaseSections: ['implement:roadmap-milestones'],
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'SME Climate Hub',
     access: 'Sign up',
@@ -456,6 +455,7 @@ export const resources = [
       phaseSections: ['implement:roadmap-milestones']
     },
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'The Good Tribe',
     access: 'Free',
@@ -480,6 +480,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     sector: 'Manufacturing',
+    effort: 'Low',
     language: 'English',
     provider: 'Teknologiateollisuus',
     access: 'Free',
@@ -507,6 +508,7 @@ export const resources = [
       phaseSections:['validate:validate-case']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Miro',
     access: 'Sign up',
@@ -529,6 +531,7 @@ export const resources = [
     journeyPhase: 'Validate',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'WBCSD / Circular IQ',
     access: 'Paid',
@@ -552,6 +555,7 @@ export const resources = [
     journeyPhase: 'Validate',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Ellen MacArthur Foundation / Business Model Lab',
     access: 'Sign up',
@@ -576,6 +580,7 @@ export const resources = [
     journeyPhase: 'Validate',
     journeyPhases: ['Validate', 'Assess'],
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Saxion University of Applied Sciences',
     access: 'Free',
@@ -600,6 +605,7 @@ export const resources = [
     journeyPhase: 'Validate',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Position Green',
     access: 'Free',
@@ -627,6 +633,7 @@ export const resources = [
       phaseSections:['validate:business-models']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'CIRCit Norden / Rise Research Institutes',
     access: 'Sign up',
@@ -653,6 +660,7 @@ export const resources = [
       phaseSections:['validate:business-models']
     },
     sector: 'Manufacturing',
+    effort: 'Low',
     language: 'English',
     provider: 'European Commission / IDEAL&CO',
     access: 'Free',
@@ -676,6 +684,7 @@ export const resources = [
     journeyPhase: 'Explore',
     journeyPhases: ['Explore'],
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Circular Strategies Wheel Workshop',
     access: 'Free',
@@ -700,6 +709,7 @@ export const resources = [
       phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'Accenture',
     access: 'Free',
@@ -725,6 +735,7 @@ export const resources = [
       phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'Up2Circ',
     access: 'Free',
@@ -749,6 +760,7 @@ export const resources = [
       phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Ellen MacArthur Foundation',
     access: 'Free',
@@ -773,6 +785,7 @@ export const resources = [
       phaseSections: ['assess:maturity-assessment']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English, Ukrainian, Russian, Portuguese, Spanish, Georgian, Arabic',
     provider: 'International Green Economy Association / Green Growth Knowledge Partnership (GGKP)',
     access: 'Free',
@@ -798,6 +811,7 @@ export const resources = [
       phaseSections: ['assess:baseline-mapping']
     },
     sector: 'Manufacturing',
+    effort: 'High',
     language: 'English',
     provider: 'Ready2Loop',
     access: 'Sign up',
@@ -823,6 +837,7 @@ export const resources = [
       phaseSections: ['assess:baseline-mapping']
     },
     sector: 'Manufacturing',
+    effort: 'High',
     language: 'English',
     provider: 'STAN2WEB',
     access: 'Sign up',
@@ -847,6 +862,7 @@ export const resources = [
       phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Cross-sector',
+    effort: 'High',
     language: 'English',
     provider: 'Green Growth Knowledge Partnership (GGKP)',
     access: 'Free',
@@ -873,6 +889,7 @@ export const resources = [
       phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Manufacturing',
+    effort: 'Medium',
     language: 'English',
     provider: 'The footprinters',
     access: 'Free',
@@ -898,6 +915,7 @@ export const resources = [
       phaseSections: ['assess:hotspot-analysis']
     },
     sector: 'Manufacturing',
+    effort: 'Medium',
     language: 'English',
     provider: 'RISE Research',
     access: 'Free',
@@ -943,13 +961,14 @@ export const resources = [
     description:
       'To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage',
     about:
-      "The Circular Loop Designer is a free, browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
+      "The Circular Loop Designer is a browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     placements: {
       phaseSections: ['implement:test-and-pilot']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English, Dutch',
     provider: 'Saxion University of Applied Sciences',
     access: 'Sign up',
@@ -973,6 +992,7 @@ export const resources = [
     journeyPhase: 'Implement',
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'VITO / EIT Raw Materials',
     access: 'Free',
@@ -988,22 +1008,23 @@ export const resources = [
     id: 'resource-028',
     cardNumber: 'Tool #28',
     slug: 'sme-carbon-footprint-calculator',
-    title: 'SME Carbon Footprint Calculator',
+    title: 'Carbon Footprint Calculator',
     description:
-      'The openLCA online tool aims to assist users in performing a self-assessment and includes free demo sessions on how to use the tool.',
+      'The openLCA software tool aims to assist users in performing a self-assessment and includes free demo sessions on how to use the tool.',
     about:
       'openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Assess', 'Validate', 'Monitor'],
     sector: 'Cross-sector',
+    effort: 'High',
     language: 'English',
     provider: 'Carbon Trust',
-    access: 'Free',
-    timeRequired: '2-4 hours',
-    preparationNeeded: 'You will need the emissions data of your company.',
+    access: 'Sign up',
+    timeRequired: 'Days to weeks',
+    preparationNeeded: 'You will need the emissions data of your company and skills to apply LCA methodology.',
     output: 'A full LCA report',
     bestFor: 'All SMEs concerned with emissions reduction',
-    format: 'PDF',
+    format: 'Software',
     toolLink: 'https://www.openlca.org/onlinelca/'
   }),
   createResource({
@@ -1021,6 +1042,7 @@ export const resources = [
       phaseSections: ['validate:circular-business-models']
     },
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'ICLEI',
     access: 'Free',
@@ -1043,6 +1065,7 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     sector: 'Plastics',
+    effort: 'Low',
     language: 'English',
     provider: 'British Plastics Federation',
     access: 'Sign up',
@@ -1065,6 +1088,7 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     sector: 'Plastics',
+    effort: 'Low',
     language: 'English',
     provider: 'The Recycling Partnership',
     access: 'Sign up',
@@ -1087,6 +1111,7 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     sector: 'Plastics',
+    effort: 'Low',
     language: 'English',
     provider: 'RecyClass',
     access: 'Sign up',
@@ -1109,6 +1134,7 @@ export const resources = [
     journeyPhase: 'None',
     journeyPhases: [],
     sector: 'Plastics',
+    effort: 'Medium',
     language: 'English',
     provider: 'Plastic IQ',
     access: 'Paid',
@@ -1135,6 +1161,7 @@ export const resources = [
       sectorSections: ['tourism:relevant-tools']
     },
     sector: 'Tourism',
+    effort: 'High',
     language: 'English',
     provider: 'Green Key',
     access: 'Sign up',
@@ -1161,6 +1188,7 @@ export const resources = [
       sectorSections: ['tourism:relevant-tools']
     },
     sector: 'Tourism',
+    effort: 'Medium',
     language: 'English',
     provider: 'Sustainable Hospitality Alliance (SHA) & WTTC',
     access: 'Sign up',
@@ -1187,6 +1215,7 @@ export const resources = [
       sectorSections: ['tourism:relevant-tools']
     },
     sector: 'Tourism',
+    effort: 'Low',
     language: 'English',
     provider: 'Cross-Re-Tour consortium',
     access: 'Sign up',
@@ -1213,6 +1242,7 @@ export const resources = [
       sectorSections: ['tourism:relevant-tools']
     },
     sector: 'Tourism',
+    effort: 'Medium',
     language: 'English',
     provider: 'Interreg',
     access: 'Sign up',
@@ -1239,6 +1269,7 @@ export const resources = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
+    effort: 'Medium',
     language: 'English',
     provider: 'BREEAM',
     access: 'Paid',
@@ -1265,6 +1296,7 @@ export const resources = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
+    effort: 'High',
     language: 'English',
     provider: 'Concular',
     access: 'Paid',
@@ -1291,6 +1323,7 @@ export const resources = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
+    effort: 'High',
     language: 'English',
     provider: 'BRE Group (Building Research Establishment)',
     access: 'Paid',
@@ -1317,6 +1350,7 @@ export const resources = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
+    effort: 'High',
     language: 'English',
     provider: 'BRE Group (Building Research Establishment)',
     access: 'Sign up',
@@ -1343,6 +1377,7 @@ export const resources = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
+    effort: 'High',
     language: 'English',
     provider: 'European Commission (DG Environment)',
     access: 'Sign up',
@@ -1369,6 +1404,7 @@ export const resources = [
       sectorSections: ['food-and-agriculture:relevant-tools']
     },
     sector: 'Food and Agriculture',
+    effort: 'Medium',
     language: 'English',
     provider: 'Farm Carbon',
     access: 'Sign up',
@@ -1395,6 +1431,7 @@ export const resources = [
       sectorSections: ['food-and-agriculture:relevant-tools']
     },
     sector: 'Food and Agriculture',
+    effort: 'Medium',
     language: 'English',
     provider: 'Circular Economy for Food',
     access: 'Free',
@@ -1421,6 +1458,7 @@ export const resources = [
       sectorSections: ['food-and-agriculture:relevant-tools']
     },
     sector: 'Food and Agriculture',
+    effort: 'Medium',
     language: 'English',
     provider: 'O-farms',
     access: 'Sign up',
@@ -1447,6 +1485,7 @@ export const resources = [
       sectorSections: ['food-and-agriculture:relevant-tools']
     },
     sector: 'Food and Agriculture',
+    effort: 'Medium',
     language: 'English',
     provider: 'WRAP (Waste & Resources Action Programme)',
     access: 'Free',
@@ -1473,6 +1512,7 @@ export const resources = [
       sectorSections: ['textiles:relevant-tools']
     },
     sector: 'Textiles',
+    effort: 'High',
     language: 'English/Dutch',
     provider: 'Circular Economy',
     access: 'Sign up',
@@ -1499,6 +1539,7 @@ export const resources = [
       sectorSections: ['textiles:relevant-tools']
     },
     sector: 'Textiles',
+    effort: 'Low',
     language: 'English',
     provider: 'Re.Hub / European Commission',
     access: 'Sign up',
@@ -1525,6 +1566,7 @@ export const resources = [
       sectorSections: ['textiles:relevant-tools']
     },
     sector: 'Textiles',
+    effort: 'High',
     language: 'English',
     provider: 'Fibretrace',
     access: 'Paid',
@@ -1551,6 +1593,7 @@ export const resources = [
       sectorSections: ['textiles:relevant-tools']
     },
     sector: 'Textiles',
+    effort: 'Medium',
     language: 'English',
     provider: 'Sustainable Apparel Coalition',
     access: 'Sign up',
@@ -1576,6 +1619,7 @@ export const resources = [
       phaseSections: ['monitor:interpreting-results']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'ASQ / Open-source (ISO 9001 framework)',
     access: 'Free',
@@ -1601,6 +1645,7 @@ export const resources = [
       phaseSections: ['monitor:interpreting-results']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Circulab',
     access: 'Free',
@@ -1626,6 +1671,7 @@ export const resources = [
       phaseSections: ['implement:implementation-plan']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'The Good Tribe',
     access: 'Sign up',
@@ -1635,56 +1681,6 @@ export const resources = [
     bestFor: 'Teams ready to move from strategy to execution after audit and ideation canvases',
     format: 'Online collaborative whiteboard (Miro template)',
     toolLink: 'https://miro.com/templates/circular-businessdevelopment-canvaspack/'
-  }),
-  createResource({
-    id: 'resource-054',
-    cardNumber: 'Tool #54',
-    slug: 'shortlisting-workshop',
-    title: 'Shortlisting Workshop',
-    description:
-      'A workshop slide that guides teams through narrowing strategic options to a focused shortlist of one to three candidates for business case development.',
-    about:
-      'The workshop template helps teams capture strategy type, key opportunity, target loop, quick-win potential and ownership for each option. It also provides decision guidance for keeping the shortlist focused and practical.',
-    journeyPhase: 'Validate',
-    journeyPhases: ['Explore', 'Validate'],
-    placements: {
-      phaseSections: ['validate:quick-scan']
-    },
-    sector: 'Cross-sector',
-    language: 'English',
-    provider: 'United Nations Industrial Development Organization (UNIDO)',
-    access: 'Free',
-    timeRequired: '30-45 minutes',
-    preparationNeeded: 'Print out, post-its, pens and people.',
-    output: 'Overview of the circular strategies most relevant to your SME',
-    bestFor: 'All SMEs',
-    format: 'Print out',
-    toolLink: ''
-  }),
-  createResource({
-    id: 'resource-055',
-    cardNumber: 'Tool #55',
-    slug: 'mapping-of-options-workshop',
-    title: 'Mapping of Options Workshop',
-    description:
-      'A workshop exercise that helps teams prioritise strategic options using an impact-feasibility matrix.',
-    about:
-      'Map Your Options guides teams to plot options against impact and feasibility, discuss the resulting quadrants, and select the top one to three candidates to take forward.',
-    journeyPhase: 'Validate',
-    journeyPhases: ['Validate'],
-    placements: {
-      phaseSections: ['validate:quick-scan']
-    },
-    sector: 'Cross-sector',
-    language: 'English',
-    provider: 'United Nations Industrial Development Organization (UNIDO)',
-    access: 'Free',
-    timeRequired: '30-45 minutes',
-    preparationNeeded: 'Print out, post-its, pens and people.',
-    output: 'Overview of the circular strategies most relevant to your SME',
-    bestFor: 'All SMEs',
-    format: 'Print out',
-    toolLink: ''
   }),
   createResource({
     id: 'resource-056',
@@ -1701,6 +1697,7 @@ export const resources = [
       phaseSections: ['validate:quick-scan']
     },
     sector: 'Cross-sector',
+    effort: 'Low',
     language: 'English',
     provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
@@ -1726,6 +1723,7 @@ export const resources = [
       phaseSections:['validate:validate-case']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'The Nordic Council of Ministers',
     access: 'Free',
@@ -1751,6 +1749,7 @@ export const resources = [
       phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'United Nations Industrial Development Organization (UNIDO)',
     access: 'Free',
@@ -1764,25 +1763,26 @@ export const resources = [
   createResource({
     id: 'resource-059',
     cardNumber: 'Tool #59',
-    slug: 'how-might-we-workshop',
-    title: 'How Might We Workshop',
+    slug: 'how-might-we',
+    title: 'How Might We',
     description:
-      'A method for reframing problem insights as open-ended How Might We questions that create a productive starting point for brainstorming.',
+      'Reframe problem insights as open-ended How Might We questions, turning challenges into opportunities and creating a productive launchpad for brainstorming.',
     about:
-      'The How Might We method is a simple reframing technique from design practice. Teams translate insight statements into solution-neutral questions that are broad enough for creativity and specific enough to guide action.',
+      'The How Might We method from DTU\'s Design Kit is a simple but powerful reframing technique used in human-centred design. Teams take insight statements gathered from research and rephrase them as How Might We questions, a format that implies a solution is possible without prescribing what it should be. The method is used in the ideation phase to open creative space before brainstorming. A well-crafted question is neither too narrow, which limits ideas, nor too broad, which makes it hard to act on.',
     journeyPhase: 'Explore',
     journeyPhases: ['Explore'],
     placements: {
       phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'DTU',
     access: 'Free',
     timeRequired: '1 hour',
     preparationNeeded: 'Existing insight statements from prior research, plus pens and post-its.',
     output: 'A set of How Might We questions to guide ideation',
-    bestFor: 'Design teams that have gathered user insights and want actionable design challenges',
+    bestFor: 'Design teams in the ideation phase that have gathered user insights and want solution-neutral design challenges',
     format: 'Print out',
     toolLink: 'https://universaldesignguide.com/method/how-might-we/'
   }),
@@ -1801,6 +1801,7 @@ export const resources = [
       phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'IDEO.org (Design Kit)',
     access: 'Free',
@@ -1826,6 +1827,7 @@ export const resources = [
       phaseSections: ['explore:explore-strategies']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'IDEO.org (Design Kit)',
     access: 'Free',
@@ -1851,6 +1853,7 @@ export const resources = [
       phaseSections: ['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'Ellen MacArthur Foundation',
     access: 'Free',
@@ -1876,6 +1879,7 @@ export const resources = [
       phaseSections: ['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
+    effort: 'Medium',
     language: 'English',
     provider: 'EcoDesign Circle / Fraunhofer IZM',
     access: 'Free',
@@ -1885,6 +1889,448 @@ export const resources = [
     bestFor: 'SMEs, designers and sustainability professionals integrating circular thinking into product, service and business strategy',
     format: 'Toolbox',
     toolLink: 'https://circulardesign.tools/'
+  }),
+  createResource({
+    id: 'resource-064',
+    cardNumber: 'Tool #64',
+    slug: 'bawear-score-lca-calculation-tool',
+    title: 'bAwear Score - LCA Calculation Tool',
+    description:
+      'A streamlined LCA tool for textile and apparel products.',
+    about:
+      'bAwear Score is a textile-dedicated life cycle assessment tool that calculates, validates and communicates the environmental impact of textile products. It offers a self-service Quick Score based on predefined product scenarios and an expert service with customised scenarios, supporting scope 3 reporting and Digital Product Passport preparation.',
+    journeyPhase: '',
+    journeyPhases: [''],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'bAwear (powered by SimaPro)',
+    access: 'Paid',
+    timeRequired: 'N/A',
+    preparationNeeded: 'None',
+    output: 'Impact report covering climate, energy, water and land use per product',
+    bestFor: 'Textile, apparel and footwear brands and suppliers',
+    format: 'Web platform',
+    toolLink: 'https://bawear-score.com/'
+  }),
+  createResource({
+    id: 'resource-065',
+    cardNumber: 'Tool #65',
+    slug: 'wrap-textiles-sorting-and-recycling-database',
+    title: 'WRAP Textiles Sorting and Recycling Database',
+    description:
+      'A database mapping textile sorting and recycling capacity.',
+    about:
+      'This WRAP database maps textile sorting and recycling infrastructure, helping brands, waste managers and local authorities match textile waste streams with suitable sorting and recycling partners. It supports the development of end-of-life routes for used and unwanted textiles.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    effort: 'Low',
+    language: 'English',
+    provider: 'WRAP (Waste and Resources Action Programme)',
+    access: 'Free',
+    timeRequired: 'N/A',
+    preparationNeeded: 'None',
+    output: 'Directory of sorting and recycling providers and capabilities',
+    bestFor: 'Textile brands and waste managers seeking end-of-life partners',
+    format: 'Online database',
+    toolLink: 'https://wrap.ngo/taking-action/textiles'
+  }),
+  createResource({
+    id: 'resource-066',
+    cardNumber: 'Tool #66',
+    slug: 'carbonfact-digital-product-passport-software',
+    title: 'Carbonfact - Digital Product Passport (DPP) Software',
+    description:
+      'Software for building LCA-based Digital Product Passports for fashion and apparel products.',
+    about:
+      'Carbonfact runs product-level life cycle assessments across a brand catalogue and publishes the results as consumer-facing Digital Product Passports with QR codes. It covers 16 PEF environmental indicators and the French Eco-Score, helping brands and suppliers prepare for upcoming EU textile DPP requirements.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    effort: 'High',
+    language: 'English',
+    provider: 'Carbonfact',
+    access: 'Paid',
+    timeRequired: 'N/A',
+    preparationNeeded: 'None',
+    output: 'DPP pages with QR codes and 16 PEF indicators',
+    bestFor: 'Fashion, footwear and apparel brands preparing for EU DPP',
+    format: 'SaaS platform',
+    toolLink: 'https://www.carbonfact.com/digital-product-passport-software'
+  }),
+  createResource({
+    id: 'resource-067',
+    cardNumber: 'Tool #67',
+    slug: 'youcontrol-esg-profile-for-business',
+    title: 'YouControl - ESG Profile for Business',
+    description:
+      'Automates the assessment of ESG factors of Ukrainian companies.',
+    about:
+      'YouControl ESG Profile helps users check Ukrainian companies by name or EDRPOU code, review an ESG profile, and use automated sustainability assessment as a pre-screen before deeper due diligence.',
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Ukrainian, English',
+    provider: 'YouControl (Ukraine)',
+    access: 'Paid',
+    timeRequired: '30-60 minutes for the interface; 2-3 hours to understand the categories',
+    preparationNeeded: 'Company name or EDRPOU code of the entity to be checked',
+    output: 'ESG profile with E&S impact category and sustainability signals',
+    bestFor: 'SMEs applying for bank finance, exporters and procurement teams',
+    format: 'Online module',
+    toolLink: 'https://youcontrol.com.ua/esg-for-business'
+  }),
+  createResource({
+    id: 'resource-068',
+    cardNumber: 'Tool #68',
+    slug: 'saveecobot-esg-profile-of-an-enterprise',
+    title: 'SaveEcoBot - ESG Profile of an Enterprise',
+    description:
+      'Collects and systematises environmental, social and governance data for enterprises.',
+    about:
+      'SaveEcoBot ESG gives users access to a catalogue of company documents, permits, licences, reports, declarations, inspections and environmental records. It supports a standardised ESG compliance check and downloadable PDF extracts for due diligence.',
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Ukrainian, English',
+    provider: 'SaveEcoBot (ESG SaveEcoBot)',
+    access: 'Paid',
+    timeRequired: '1-2 hours to read the document catalogue',
+    preparationNeeded: 'Name or EDRPOU code of the enterprise or sole trader',
+    output: 'ESG profile, automated risk assessment and a PDF extract',
+    bestFor: 'SMEs preparing for bank, investor or buyer E&S due diligence',
+    format: 'Online platform and API access',
+    toolLink: 'https://esg.saveecobot.com/'
+  }),
+  createResource({
+    id: 'resource-069',
+    cardNumber: 'Tool #69',
+    slug: 'recycle-marketplace-for-recyclables',
+    title: 'Recycle - Marketplace for Recyclables',
+    description:
+      'A marketplace for selling sorted recyclables to certified buyers and reducing waste costs.',
+    about:
+      'Recycle allows businesses to register, sort and accumulate recyclable materials, request pickup, and receive payment after carrier weighing. It supports documentation and waste reporting for participating organisations.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Ukrainian, English',
+    provider: 'Recycle (LLC Recycle UA), Ukraine',
+    access: 'Sign up',
+    timeRequired: '10-15 minutes to register, plus time for account confirmation',
+    preparationNeeded: 'Sorted recyclables and a bank account of a company or sole trader',
+    output: 'Income from recyclables, primary documents and waste reports',
+    bestFor: 'SMEs, offices, food service, producers and condominiums',
+    format: 'Mobile app and web account',
+    toolLink: 'https://recycle-app.com/'
+  }),
+  createResource({
+    id: 'resource-070',
+    cardNumber: 'Tool #70',
+    slug: 'ecohub-zero-waste-kharkiv',
+    title: 'EcoHub - Zero Waste Kharkiv',
+    description:
+      'A public space for putting zero waste principles into practice through sorting, reuse and repair.',
+    about:
+      'EcoHub Zero Waste Kharkiv provides sorting rules, a self-service deep sorting station, a Reuse Lab, and paid support services such as re-sorting, consultation and delivery.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Ukrainian',
+    provider: 'NGO Zero Waste Kharkiv',
+    access: 'Free',
+    timeRequired: '20-30 minutes to read sorting rules; 1-2 hours for a first visit',
+    preparationNeeded: 'Clean, dry and pre-sorted waste; reusable items where relevant',
+    output: 'Waste sent to recycling and items reused, repaired or resold',
+    bestFor: 'Micro and small businesses in Kharkiv region, including retail and food service',
+    format: 'Physical hub plus website with sorting rules and guides',
+    toolLink: 'https://zerowastekharkiv.org.ua/ecohub'
+  }),
+  createResource({
+    id: 'resource-071',
+    cardNumber: 'Tool #71',
+    slug: 'cc-yard-circular-construction-yard',
+    title: 'CC Yard - Circular Construction Yard',
+    description:
+      'Supports reuse of building materials salvaged from damaged buildings.',
+    about:
+      'CC Yard and Zero Waste Yard in Kharkiv collect, sort, record and store reusable building materials such as bricks, timber, windows, doors, roofing and sanitary ware so they can return to use in repair and reconstruction.',
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    effort: 'Medium',
+    language: 'Ukrainian',
+    provider: 'NGO Zero Waste Kharkiv with Derhachi city council',
+    access: 'Free',
+    timeRequired: '15 minutes to get oriented',
+    preparationNeeded: 'Contact the team in advance; materials must be fit for reuse',
+    output: 'Reusable bricks, timber, windows, doors and sanitary ware',
+    bestFor: 'Construction SMEs and communities repairing damaged buildings',
+    format: 'Physical sites',
+    toolLink: 'https://zerowastekharkiv.org.ua/'
+  }),
+  createResource({
+    id: 'resource-072',
+    cardNumber: 'Tool #72',
+    slug: 'digital-twin-for-the-reconstruction-of-ukraine',
+    title: 'Digital Twin for the Reconstruction of Ukraine',
+    description:
+      'Supports authorities across the reconstruction cycle with AI-generated city models and scenarios.',
+    about:
+      'This European Commission AI Office initiative is described as an AI platform that can generate a 3D virtual replica of Ukrainian cities, support damage assessment from imagery and reports, compare reconstruction scenarios, and calculate reconstruction costs by damage level, materials and building type.',
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    effort: 'Low',
+    language: 'English',
+    provider: 'AI Office of the European Commission (DG CNECT)',
+    access: 'Sign up',
+    timeRequired: '10-15 minutes to read the description',
+    preparationNeeded: 'N/A',
+    output: 'Damage assessment, reconstruction scenarios and cost estimates',
+    bestFor: 'Municipalities, urban planners and construction sector partners',
+    format: 'AI platform generating a 3D virtual replica of cities',
+    toolLink: 'https://digital-strategy.ec.europa.eu/'
+  }),
+  createResource({
+    id: 'resource-073',
+    cardNumber: 'Tool #73',
+    slug: 'national-map-of-recycling-collection-points',
+    title: 'National Map of Recycling Collection Points',
+    description:
+      'An online map for finding where to hand over sorted recyclables across Ukraine.',
+    about:
+      'The map helps users find nearby recycling collection points, check accepted materials, read sorting guidance, add missing points and report closed points.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'Ukrainian',
+    provider: "Youth movement Let's do it Ukraine, supported by PepsiCo",
+    access: 'Free',
+    timeRequired: '20-30 minutes if reading sorting rules by fraction',
+    preparationNeeded: 'Know which materials you need to hand over',
+    output: 'Address, contacts and accepted materials of the nearest points',
+    bestFor: 'Micro and small businesses, offices and condominiums',
+    format: 'Interactive online map with sorting guidance',
+    toolLink: 'https://recyclingpoints.org/'
+  }),
+  createResource({
+    id: 'resource-074',
+    cardNumber: 'Tool #74',
+    slug: 'calculator-of-waste-from-destruction',
+    title: 'Calculator of Waste from Destruction',
+    description:
+      'Estimates the volume of waste generated by war-related building damage.',
+    about:
+      'The calculator helps users estimate demolition waste by selecting building type, development type, storeys and relevant damage conditions such as fire or asbestos-containing materials.',
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    effort: 'Medium',
+    language: 'Ukrainian, English',
+    provider: 'Ukraine Support Team coalition; methodology by NGO Rethink',
+    access: 'Free',
+    timeRequired: '1-2 hours to read methodology; 5-10 minutes for a first calculation',
+    preparationNeeded: 'Building type, number of storeys and demolition or footprint area',
+    output: 'Estimated quantity of demolition waste for a given building',
+    bestFor: 'Construction and demolition SMEs, communities and utilities',
+    format: 'Online calculator plus PDF methodological recommendations',
+    toolLink: 'https://ustcoalition.com.ua/online-instruments'
+  }),
+  createResource({
+    id: 'resource-075',
+    cardNumber: 'Tool #75',
+    slug: 'guide-waste-management-infrastructure-projects',
+    title: 'Guide: Waste Management Infrastructure Projects',
+    description:
+      'A step-by-step guide showing how waste management infrastructure projects have been delivered.',
+    about:
+      'The guide includes more than 30 practical cases from Ukraine and the EU, covering waste prevention, reuse and repair, separate collection, recycling, composting, recovery, disposal and education.',
+    journeyPhase: 'Learn',
+    journeyPhases: ['Learn'],
+    sector: 'Cross-sector',
+    effort: 'High',
+    language: 'Ukrainian',
+    provider: 'Ukrainian Zero Waste Alliance',
+    access: 'Free',
+    timeRequired: '4-6 hours to read in full',
+    preparationNeeded: 'None',
+    output: '30+ practical cases from Ukraine and the EU with implementation steps',
+    bestFor: 'Communities, utilities and SMEs working with them',
+    format: 'PDF, published via Google Drive',
+    toolLink: 'https://drive.google.com/file/d/1gPIz3KfLrAf--tc9tM4gbL2u2VfKBggH/view'
+  }),
+  createResource({
+    id: 'resource-076',
+    cardNumber: 'Tool #76',
+    slug: 'circulup-embedding-circularity-toolkit',
+    title: 'CirculUP! Embedding Circularity Toolkit',
+    description:
+      'A localized toolkit helping Armenian SMEs apply circular design principles.',
+    about:
+      'CirculUP! provides downloadable resources tailored for Armenian SMEs, incubators and accelerators, including toolkits and Circular Economy Guidelines in Armenian and English.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Armenian, English',
+    provider: 'CirculUP! (Impact Hub Yerevan & Environment and Health NGO)',
+    access: 'Free',
+    timeRequired: '1-2 hours',
+    preparationNeeded: 'None',
+    output: 'Toolkit for incubators and accelerators; CE Guidelines in Armenian and English',
+    bestFor: 'Armenian SMEs, incubators and accelerators',
+    format: 'PDF toolkit',
+    toolLink: 'https://circulup.am/resources'
+  }),
+  createResource({
+    id: 'resource-077',
+    cardNumber: 'Tool #77',
+    slug: 'recycle-it-waste-sorting-logistics-network',
+    title: 'Recycle It! Waste Sorting and Logistics Network',
+    description:
+      'Provides direct access to sorting bins and recyclable pickup for Armenian organisations.',
+    about:
+      'Recycle It! is a practical logistics service that provides sorting bins for plastic, paper, glass and metal, plus routine pickup and transport to local recycling sites.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'ISSD NGO (Innovative Solutions for Sustainable Development)',
+    access: 'Free',
+    timeRequired: '15-20 minutes',
+    preparationNeeded: 'None',
+    output: 'On-site sorting bins and scheduled pickup to recycling sites',
+    bestFor: 'Armenian businesses wanting to start sorting waste',
+    format: 'On-the-ground service; phone/email sign-up',
+    toolLink: 'https://issdngo.com/en/start-sorting'
+  }),
+  createResource({
+    id: 'resource-078',
+    cardNumber: 'Tool #78',
+    slug: 'green-economy-online-training-for-armenia',
+    title: 'Green Economy Online Training for Armenia',
+    description:
+      'An e-learning course on inclusive green economies and resource efficiency.',
+    about:
+      'This localized, interactive course equips SME managers, environmental officers and civil servants with a basic understanding of inclusive green economies and resource efficiency.',
+    journeyPhase: 'Learn',
+    journeyPhases: ['Learn'],
+    sector: 'Cross-sector',
+    effort: 'High',
+    language: 'English',
+    provider: 'American University of Armenia (AUA)',
+    access: 'Free',
+    timeRequired: '1 day',
+    preparationNeeded: 'None',
+    output: 'Completion of an online training course',
+    bestFor: 'SME managers, environmental officers and civil servants',
+    format: 'E-learning course',
+    toolLink: 'https://ilearngreen.aua.am/'
+  }),
+  createResource({
+    id: 'resource-079',
+    cardNumber: 'Tool #79',
+    slug: 'mershenq-undp-gcf-energy-efficient-building-retrofits',
+    title: 'Mershenq - UNDP-GCF Energy Efficient Building Retrofits',
+    description:
+      'Reports and guidelines on building energy efficiency retrofits.',
+    about:
+      'Mershenq provides reports, trainings, guidelines and resources related to building energy efficiency, retrofitting and emissions reduction under a UNDP-GCF project. Materials include guidebooks, energy audit guidance and EMIS training.',
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    effort: 'Medium',
+    language: 'English, Armenian',
+    provider: 'UNDP Armenia',
+    access: 'Free',
+    timeRequired: '1-2 hours per publication',
+    preparationNeeded: 'None',
+    output: 'Guidebooks, training courses and monitoring methodologies',
+    bestFor: 'Facility managers, contractors and municipalities',
+    format: 'PDF guidebooks and training courses',
+    toolLink: 'https://mershenq.am/en/publications'
+  }),
+  createResource({
+    id: 'resource-080',
+    cardNumber: 'Tool #80',
+    slug: 'recp-armenia-resources',
+    title: 'RECP Armenia Resources',
+    description:
+      'Resources supporting Resource Efficient and Cleaner Production implementation.',
+    about:
+      'RECP Armenia resources include primers, leaflets and business cases documenting how Armenian SMEs applied Resource Efficient and Cleaner Production measures across food production, poultry, battery manufacturing, dried fruit processing, lime production, construction and dairy processing.',
+    journeyPhase: 'Learn',
+    journeyPhases: ['Learn'],
+    sector: 'Manufacturing',
+    effort: 'Low',
+    language: 'English',
+    provider: 'EU4Environment',
+    access: 'Free',
+    timeRequired: 'N/A',
+    preparationNeeded: 'None',
+    output: 'RECP toolkit and supporting materials',
+    bestFor: 'Armenian manufacturing and industrial SMEs',
+    format: 'PDF toolkit',
+    toolLink: 'https://recp.am/en/news/recp-materials'
+  }),
+  createResource({
+    id: 'resource-081',
+    cardNumber: 'Tool #81',
+    slug: 'acba-business-club-and-sme-courses',
+    title: 'ACBA Business Club and SME Courses',
+    description:
+      'Networking and free trainings for Armenian SMEs.',
+    about:
+      'ACBA Business Club provides Armenian SME managers with networking opportunities and free business management trainings, including modules covering ESG, strategy and sustainable business adaptation.',
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'Armenian',
+    provider: 'ACBA Bank OJSC',
+    access: 'Free',
+    timeRequired: '2-4 hours',
+    preparationNeeded: 'None',
+    output: 'Free training courses and networking events',
+    bestFor: 'Armenian SME managers',
+    format: 'Online courses and networking events',
+    toolLink: 'https://sme.acba.am/hy/courses'
   })
 ];
 

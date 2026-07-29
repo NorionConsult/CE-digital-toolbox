@@ -41,7 +41,7 @@ export const guidedPathways = {
     eyebrow: 'For a structured approach',
     title: 'The SME journey',
     text:
-      'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contain selected tools, descriptions, target users, links, and practical guidance on how the tools can be applied.'
+      'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contain selected tools and practical guidance.'
   },
 
   /*
@@ -111,7 +111,7 @@ export const guidedPathways = {
     eyebrow: 'For specific sectors',
     title: 'Sector guides',
     text:
-      'Through the EU4Green Recovery East Programme project, four relevant sectors were selected as priority sectors for the region as seen below. Each sector guide focuses on a specific industry and contains selected tools, descriptions, cases and practical guidance on how the tools can be applied for the specific challenges and opportunities of that sector.'
+      'Through the EU4Green Recovery East Programme project, four relevant sectors were selected as priority sectors for the Eastern Partnership region. These are Construction, Food and Agriculture, Textiles, and Tourism. Sector guides are available to support those working specifically in these sectors in identifying relevant tools and cases.'
   },
 
   /*
