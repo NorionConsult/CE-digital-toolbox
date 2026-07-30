@@ -170,7 +170,7 @@ const identifyOptionsSection = {
     title: 'Circular Economy strategies',
     src: '/downloads/phase3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - Frame 13.svg',
     alt: 'The 9R circular economy strategies arranged by value preservation',
-    caption: 'The 9R hierarchy of circular economy strategies.',
+    caption: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
     maxWidth: '680px',
     zoomable: true
   },
@@ -243,7 +243,7 @@ const assessPrioritiseSection = {
   m3ProcessRedesign: {
     title: 'Redesigning Your Processes',
     intro:
-      "'Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed'.",
+      "Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed.",
     footer: 'Material flow loops back — recovery feeds input again',
     columns: [
       {

@@ -1062,8 +1062,8 @@ export const resources = [
       'A simplified eco-design tool for early-stage packaging design decisions, showing the recyclability impact of design choices before production begins.',
     about:
       'PackScore is a free sustainable design tool for plastic packaging designers. It enables users to assess different design iterations, compare packaging options and understand recyclability impacts using a traffic-light system.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     sector: 'Plastics',
     effort: 'Low',
     language: 'English',
@@ -1085,8 +1085,8 @@ export const resources = [
       'A free web tool that assesses packaging across five system-wide dimensions, including design for recyclability, community access and packaging fate.',
     about:
       'The tool goes beyond technical recyclability to help brands, retailers and packaging designers understand system-level recyclability, improvement recommendations and EPR compliance guidance.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     sector: 'Plastics',
     effort: 'Low',
     language: 'English',
@@ -1108,8 +1108,8 @@ export const resources = [
       'A self-assessment tool for plastic, aluminium and steel packaging that produces a tailored recyclability report.',
     about:
       'The RecyClass Online Tool helps industry users assess the recyclability of packaging and provides country-specific insights on collection, sorting and recycling infrastructure in Europe.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     sector: 'Plastics',
     effort: 'Low',
     language: 'English',
@@ -1131,8 +1131,8 @@ export const resources = [
       'A data-driven planning tool that calculates the circularity of plastic packaging and helps companies model reduction, reuse, redesign and substitution solutions.',
     about:
       'Plastic IQ is a digital tool to help companies improve plastic packaging strategy, reduce plastic waste and build actionable strategies with cost and carbon impact metrics.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     sector: 'Plastics',
     effort: 'Medium',
     language: 'English',
@@ -1154,8 +1154,8 @@ export const resources = [
       'A practical toolbox divided into 13 topics that match Green Key criteria and help tourism SMEs prepare for circular and environmental improvements.',
     about:
       'The Green Key Toolbox brings together helpful tips, ready-to-use templates and real-world best practice examples for tourism businesses working towards Green Key certification and improved environmental standards.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['tourism'],
       sectorSections: ['tourism:relevant-tools']
@@ -1181,8 +1181,8 @@ export const resources = [
       'A free standardised methodology and tool for hotels to calculate the carbon footprint of stays and meetings.',
     about:
       'HCMI is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor'],
     placements: {
       sectors: ['tourism'],
       sectorSections: ['tourism:relevant-tools']
@@ -1208,8 +1208,8 @@ export const resources = [
       'A diagnostic tool for tourism SMEs that profiles progress towards digital and green transformation and identifies opportunities to improve competitiveness.',
     about:
       'The Cross-Re-Tour Automated Assessment Tool is a free online diagnostic tool for tourism SMEs. It assesses environmental practices, innovation capacity and strategic orientation to help businesses understand their wider sustainability readiness.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
       sectors: ['tourism'],
       sectorSections: ['tourism:relevant-tools']
@@ -1235,8 +1235,8 @@ export const resources = [
       'A circular economy management and monitoring tool for tourism businesses and destinations.',
     about:
       'The Circular Tourism Tools assess tourism impact from a circular economy perspective at destination and industry level. The assessment produces scores, collaboration ratings and a curated dataset of global best practices.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor', 'Assess'],
     placements: {
       sectors: ['tourism'],
       sectorSections: ['tourism:relevant-tools']
@@ -1262,8 +1262,8 @@ export const resources = [
       'A tool for exploring BREEAM data on certified building assessments and integrating it with websites, tools and software.',
     about:
       'The BREEAM API is a RESTful web service that gives developers programmatic access to BREEAM GreenBook data, including current listings and ratings from certified building and infrastructure assessments.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1289,8 +1289,8 @@ export const resources = [
       'An AI-driven platform for pre-demolition auditing, digital material passports and matching reusable construction materials between projects.',
     about:
       'Concular digitises building materials before demolition or renovation, identifies what can be reused, matches materials with buyers and helps turn disposal costs into revenue.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Implement',
+    journeyPhases: ['Implement'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1316,8 +1316,8 @@ export const resources = [
       'An online platform for creating digital material passports for buildings, including composition, origin, circularity score and residual value.',
     about:
       'Madaster tracks and traces products and materials throughout their lifecycle, supporting material reuse, recyclability, recovery and compliance with standards such as LEED, BREEAM, EU Taxonomy and digital product passport reporting.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1343,8 +1343,8 @@ export const resources = [
       'A cloud-based construction waste and sustainability tracking platform for waste, materials, carbon, water and transport emissions.',
     about:
       'SMARTWaste helps construction SMEs track waste and carbon data in real time, reduce disposal costs and generate audit-quality BREEAM compliance evidence.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1370,8 +1370,8 @@ export const resources = [
       'A free EU framework for assessing and reporting building sustainability performance across the full lifecycle.',
     about:
       'Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1397,8 +1397,8 @@ export const resources = [
       'A carbon calculator for farms and growers that produces carbon output reports for farm, product and supply-chain emissions work.',
     about:
       'The Farm Carbon Toolkit calculator is designed for farmers and growers, and can also support researchers, agricultural professionals and consultants delivering carbon footprints.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
       sectors: ['food-and-agriculture'],
       sectorSections: ['food-and-agriculture:relevant-tools']
@@ -1424,8 +1424,8 @@ export const resources = [
       'A circularity self-assessment tool designed to help food companies understand their circular economy maturity level.',
     about:
       'The Food Circularity Check is an online self-assessment developed for food and agri-food businesses. It gives companies a structured picture of how circular their operations are and where gaps and opportunities exist.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Assess',
+    journeyPhases: ['Assess'],
     placements: {
       sectors: ['food-and-agriculture'],
       sectorSections: ['food-and-agriculture:relevant-tools']
@@ -1451,8 +1451,8 @@ export const resources = [
       'A set of six practical tools for agri-SMEs, entrepreneur support organisations and practitioners working with circular agribusinesses.',
     about:
       'The Circular Toolkit by O-Farms supports SMEs in finding inspiration for circular product development, assessing circularity, discovering opportunities, amplifying impact and increasing revenue.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['food-and-agriculture'],
       sectorSections: ['food-and-agriculture:relevant-tools']
@@ -1478,8 +1478,8 @@ export const resources = [
       'Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.',
     about:
       'This WRAP data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Validate',
+    journeyPhases: ['Validate'],
     placements: {
       sectors: ['food-and-agriculture'],
       sectorSections: ['food-and-agriculture:relevant-tools']
@@ -1505,8 +1505,8 @@ export const resources = [
       'A step-by-step toolbox that helps apparel brands adopt circular business models and independently drive circular innovation.',
     about:
       'The Circular Toolbox guides apparel brands through a five-step circular innovation process, from team formation and customer understanding to prototyping, fine-tuning and piloting a new concept.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['textiles'],
       sectorSections: ['textiles:relevant-tools']
@@ -1532,8 +1532,8 @@ export const resources = [
       'An EU mapping tool and network for textile collection, sorting and recycling infrastructure.',
     about:
       'Re.Hub connects businesses to Europe\'s textile recycling network and helps identify local collection, sorting and recycling partners to close textile material loops.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Explore',
+    journeyPhases: ['Explore'],
     placements: {
       sectors: ['textiles'],
       sectorSections: ['textiles:relevant-tools']
@@ -1559,8 +1559,8 @@ export const resources = [
       'A fibre traceability platform using embedded tracers and blockchain to authenticate sustainability claims from raw material to finished garment.',
     about:
       'Fibretrace gives textile businesses end-to-end visibility of the supply chain, supporting verified sustainability claims from fibre to finished product.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor', 'Assess'],
     placements: {
       sectors: ['textiles'],
       sectorSections: ['textiles:relevant-tools']
@@ -1586,8 +1586,8 @@ export const resources = [
       'An industry measurement suite for environmental and social sustainability across textile supply chains.',
     about:
       'The Higg Product Module and Higg Materials Sustainability Index provide insights into the environmental impacts of materials and products so designers and organisations can assess, compare and communicate impact performance.',
-    journeyPhase: 'None',
-    journeyPhases: [],
+    journeyPhase: 'Monitor',
+    journeyPhases: ['Monitor'],
     placements: {
       sectors: ['textiles'],
       sectorSections: ['textiles:relevant-tools']
@@ -1899,8 +1899,8 @@ export const resources = [
       'A streamlined LCA tool for textile and apparel products.',
     about:
       'bAwear Score is a textile-dedicated life cycle assessment tool that calculates, validates and communicates the environmental impact of textile products. It offers a self-service Quick Score based on predefined product scenarios and an expert service with customised scenarios, supporting scope 3 reporting and Digital Product Passport preparation.',
-    journeyPhase: '',
-    journeyPhases: [''],
+    journeyPhase: 'Learn',
+    journeyPhases: ['Learn'],
     placements: {
       sectors: ['textiles'],
       sectorSections: ['textiles:relevant-tools']
