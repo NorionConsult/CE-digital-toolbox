@@ -55,4 +55,13 @@
     font-size: 0.85rem;
     letter-spacing: 0.08em;
   }
+
+  @media (max-width: 480px) {
+    .journey-phase-badge,
+    .journey-phase-badges-hero .journey-phase-badge {
+      padding: 5px 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+  }
 </style>

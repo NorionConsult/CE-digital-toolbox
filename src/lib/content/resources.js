@@ -391,9 +391,9 @@ export const resources = [
     slug: 'circulytics-guide',
     title: 'Circulytics Guide',
     description:
-      'A guide to show SMEs which analytics to use to best measure the circularity of their operations.',
+      'A guide to show you which analytics to use to best measure the circularity of your operations.',
     about:
-      'Circulytics is a framework of indicators for tracking circular economy performance. It allows companies to highlight successes in their transition, and identify where to focus efforts for improvement in line with the three principles of a circular economy, all driven by design: eliminate waste and pollution, circulate products and materials, and regenerate nature.',
+      'Circulytics is a framework of indicators for tracking circular economy performance. It allows companies to highlight successes in transition, and identify where to focus efforts for improvement in line with the three principles of a circular economy, all driven by design: eliminate waste and pollution, circulate products and materials, and regenerate nature.',
     journeyPhase: 'Monitor',
     journeyPhases: ['Monitor'],
      placements: {
@@ -407,7 +407,7 @@ export const resources = [
     timeRequired: 'Half a day',
     preparationNeeded: 'None',
     output:
-      'SMEs will gain a better understanding of what it means to measure circularity within the value chain.',
+      'You will gain a better understanding of what it means to measure circularity within the value chain.',
     bestFor: 'SMEs in all sectors',
     format: 'PDF',
     toolLink:

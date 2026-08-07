@@ -3,11 +3,11 @@
 Most day-to-day website edits happen in this folder.
 
 ```text
-site.js              Global site name, header logo, header partner logos, navigation, contact email, footer logos and shared button labels
+site.js              Global site name, header logo, header partner logos, navigation, footer logos and shared button labels
 home.js              Home page text
 guided-pathways.js   Guided pathways page hero, journey phase cards and sector tool cards
 about-page.js        About page title and text paragraphs
-contact-page.js      Contact page text and form button URLs
+contact-page.js      Contact page text, form button URLs and contact email links
 journey-phases.js    Loads the current language journey phase files
 sectors.js           Loads the current language sector files
 resources.js         Tools/resource cards, taxonomy, page text and tool links
@@ -20,6 +20,19 @@ sector-page.js       Labels shared by all sector tool pages
 en/journey-phases/   English journey phase content, one file per journey phase page
 en/sectors/          English sector content, one file per sector page
 ```
+
+## Editing Contact Emails
+
+To change the email addresses shown on the Contact page, open:
+
+```text
+src/lib/content/contact-page.js
+```
+
+Edit the `contactEmails` list. Change only the `label` and `email` text unless
+you want to change which contact is highlighted. The website automatically uses
+the `email` value to create the clickable mail link. Country flags are set with
+`flagIcon`; these use the Iconify `circle-flags` icon set.
 
 ## Editing The Guided Pathways Page
 

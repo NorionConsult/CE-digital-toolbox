@@ -1,6 +1,10 @@
 /*
   Edit this file for the Contact page.
   Replace the button URL values once the feedback and testimony forms are ready.
+  To update contact email links, edit only the "email" value below.
+  The Contact page automatically turns each email into a clickable mailto link.
+  The country flag icons use the Iconify circle-flags set. Editors normally
+  only need to update the label and email, not the flagIcon value.
 */
 export const contactPage = {
   pageTitle: 'Contact | Circular Economy Toolbox',
@@ -11,6 +15,28 @@ export const contactPage = {
   contactDetailsTitle: 'Contact us',
   contactDetails:
     'For other questions about the toolbox, contact the project team by email if your inquiry is not covered by one of the forms.',
+  contactEmails: [
+    {
+      label: 'Armenia',
+      email: 'armenia-contact@example.org',
+      flagIcon: 'https://api.iconify.design/circle-flags:am.svg'
+    },
+    {
+      label: 'Moldova',
+      email: 'moldova-contact@example.org',
+      flagIcon: 'https://api.iconify.design/circle-flags:md.svg'
+    },
+    {
+      label: 'Ukraine',
+      email: 'ukraine-contact@example.org',
+      flagIcon: 'https://api.iconify.design/circle-flags:ua.svg'
+    },
+    {
+      label: 'UNIDO',
+      email: 'unido@unido.org',
+      featured: true
+    }
+  ],
   feedbackForm: {
     title: 'Report feedback',
     text:

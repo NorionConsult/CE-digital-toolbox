@@ -1,7 +1,6 @@
 <script>
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { contactPage } from '$lib/content/contact-page.js';
-  import { site } from '$lib/content/site.js';
 
   /**
    * Placeholder links use "#". When editors add real form URLs in
@@ -19,6 +18,13 @@
    */
   function isPlaceholderUrl(url) {
     return !url || url === '#';
+  }
+
+  /**
+   * @param {string} email
+   */
+  function getMailtoHref(email) {
+    return `mailto:${email.trim()}`;
   }
 </script>
 
@@ -65,9 +71,24 @@
     </div>
 
     <aside class="contact-details">
-      <h2>{contactPage.contactDetailsTitle}</h2>
-      <p><InlineText text={contactPage.contactDetails} /></p>
-      <a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a>
+      <div class="contact-details-intro">
+        <h2>{contactPage.contactDetailsTitle}</h2>
+        <p><InlineText text={contactPage.contactDetails} /></p>
+      </div>
+
+      <div class="contact-email-grid" aria-label="Contact email addresses">
+        {#each contactPage.contactEmails as contact}
+          <article class:featured-contact={contact.featured} class="contact-email-card">
+            <h3>
+              {#if contact.flagIcon}
+                <img class="contact-flag" src={contact.flagIcon} alt="" aria-hidden="true" />
+              {/if}
+              <span>{contact.label}</span>
+            </h3>
+            <a href={getMailtoHref(contact.email)}>{contact.email}</a>
+          </article>
+        {/each}
+      </div>
     </aside>
   </div>
 </section>
@@ -98,9 +119,7 @@
 
   .contact-details {
     display: grid;
-    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 1.6fr) minmax(220px, 0.9fr);
-    gap: 28px;
-    align-items: start;
+    gap: 24px;
   }
 
   .contact-details h2,
@@ -116,14 +135,64 @@
     margin: 0 0 22px;
   }
 
+  .contact-details-intro {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.7fr) minmax(0, 2fr);
+    gap: 28px;
+    align-items: start;
+  }
+
   .contact-details p {
     margin-bottom: 0;
   }
 
-  .contact-details a {
+  .contact-email-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .contact-email-card {
+    display: grid;
+    align-content: start;
+    gap: 8px;
+    min-height: 128px;
+    padding: 18px;
+    border: 1px solid var(--soft-border);
+    border-radius: 15px;
+    background-color: var(--white);
+  }
+
+  .contact-email-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.05rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .contact-flag {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 auto;
+  }
+
+  .contact-email-card a {
     color: var(--dark);
     font-weight: 700;
     overflow-wrap: anywhere;
+  }
+
+  .featured-contact {
+    border-color: transparent;
+    background: var(--blue);
+    color: var(--white);
+  }
+
+  .featured-contact h3,
+  .featured-contact a {
+    color: var(--white);
   }
 
   .contact-action-grid {
@@ -146,7 +215,8 @@
 
   @media (max-width: 900px) {
     .contact-action-grid,
-    .contact-details {
+    .contact-details-intro,
+    .contact-email-grid {
       grid-template-columns: 1fr;
     }
 

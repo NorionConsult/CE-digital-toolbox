@@ -22,17 +22,19 @@
     </div>
   {/if}
 
-  <div class="container header-content">
-    <a href="{base}/" class="site-brand">
-      <img class="site-logo-image" src="{base}{site.headerLogo.src}" alt={site.headerLogo.alt} />
-      <span class="site-logo">{site.name}</span>
-    </a>
+  <div class="main-menu-bar">
+    <div class="container header-content">
+      <a href="{base}/" class="site-brand">
+        <img class="site-logo-image" src="{base}{site.headerLogo.src}" alt={site.headerLogo.alt} />
+        <span class="site-logo">{site.name}</span>
+      </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      {#each site.navigation as item}
-        <a href="{base}{item.href}">{item.label}</a>
-      {/each}
-    </nav>
+      <nav class="main-nav" aria-label="Main navigation">
+        {#each site.navigation as item}
+          <a href="{base}{item.href}">{item.label}</a>
+        {/each}
+      </nav>
+    </div>
   </div>
 </header>
 
@@ -54,10 +56,10 @@
   .partner-logo-bar-content {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 16px;
-    min-height: 30px;
-    padding: 8px 0;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 68px;
+    padding: 20px 0;
   }
 
   .partner-logo-bar-content img {
@@ -67,13 +69,17 @@
     object-fit: contain;
   }
 
+  .main-menu-bar {
+    background-color: var(--white);
+    box-shadow: 0 -4px 10px rgba(10, 46, 54, 0.05), 0 4px 10px rgba(10, 46, 54, 0.05);
+  }
+
   .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 0;
     gap: 18px 22px;
-    box-shadow: 0 -4px 10px rgba(10, 46, 54, 0.06);
   }
 
   .site-brand {
@@ -81,8 +87,8 @@
     align-items: center;
     gap: 16px;
     text-decoration: none;
-    white-space: nowrap;
     padding-left: 0;
+    min-width: 0;
   }
 
   .site-logo-image {
@@ -96,6 +102,7 @@
     font-size: clamp(1.55rem, 2vw, 1.9rem);
     line-height: 1;
     text-transform: uppercase;
+    min-width: 0;
   }
 
   .main-nav {
@@ -105,6 +112,7 @@
     justify-content: flex-end;
     align-items: center;
     margin-left: auto;
+    min-width: 0;
   }
 
   .main-nav a {
@@ -121,18 +129,70 @@
 
   @media (max-width: 760px) {
     .partner-logo-bar-content {
+      gap: 16px;
       justify-content: flex-start;
+      min-height: 52px;
+      padding: 10px 0;
+    }
+
+    .partner-logo-bar-content img {
+      height: min(var(--header-partner-logo-height, 26px), 34px);
+      max-width: min(var(--header-partner-logo-width), calc((100% - 16px) / 2));
     }
 
     .header-content {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: stretch;
+      gap: 14px;
+      padding: 16px 0;
+    }
+
+    .site-brand {
+      width: 100%;
+      max-width: 100%;
+      gap: 10px;
+    }
+
+    .site-logo-image {
+      height: clamp(22px, 6vw, 28px);
+    }
+
+    .site-logo {
+      font-size: clamp(1rem, 5vw, 1.3rem);
+      line-height: 0.95;
+      overflow-wrap: anywhere;
     }
 
     .main-nav {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, max-content));
+      width: 100%;
       justify-content: flex-start;
-      gap: 16px;
+      gap: 10px 14px;
       margin-left: 0;
+    }
+
+    .main-nav a {
+      font-size: 0.9rem;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .site-logo {
+      font-size: clamp(0.85rem, 4.5vw, 1rem);
+    }
+
+    .site-logo-image {
+      height: clamp(20px, 5.5vw, 24px);
+    }
+
+    .main-nav {
+      gap: 10px 18px;
+    }
+
+    .main-nav a {
+      font-size: 0.84rem;
     }
   }
 </style>

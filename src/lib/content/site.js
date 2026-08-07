@@ -14,21 +14,20 @@ export const site = {
   */
   headerPartnerLogos: {
     enabled: true,
-    logoHeight: 'clamp(18px, 2vw, 26px)',
+    logoHeight: 'clamp(34px, 4vw, 52px)',
     logos: [
       {
         src: '/logos/EU-logo-header.png',
         alt: 'European Union logo',
-        width: 'clamp(112px, 11vw, 150px)'
+        width: 'clamp(180px, 20vw, 245px)'
       },
       {
         src: '/logos/EU4Green-logo-header.png',
         alt: 'EU4Green logo',
-        width: 'clamp(48px, 5vw, 66px)'
+        width: 'clamp(70px, 8vw, 96px)'
       }
     ]
   },
-  contactEmail: 'digitaltoolbox@norion.dk',
   footerLogos: [
     {
       src: '/logos/EU-logo.png',

@@ -113,6 +113,7 @@
     line-height: 0.95;
     text-transform: uppercase;
     margin-bottom: 24px;
+    overflow-wrap: anywhere;
   }
 
   .resource-summary {
@@ -216,6 +217,21 @@
 
     .resource-taxonomy {
       position: static;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .resource-hero h1 {
+      font-size: clamp(2rem, 9.5vw, 2.9rem);
+      line-height: 0.95;
+    }
+
+    .resource-summary {
+      font-size: 1.08rem;
+    }
+
+    .resource-hero .resource-tool-link {
+      margin-top: 22px;
     }
   }
 </style>

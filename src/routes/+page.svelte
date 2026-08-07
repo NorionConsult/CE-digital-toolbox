@@ -77,7 +77,8 @@
 
   @media (max-width: 640px) {
     .home-hero h1 {
-      font-size: clamp(3rem, 15vw, 4.7rem);
+      font-size: clamp(2rem, 8.5vw, 2.8rem);
+      overflow-wrap: anywhere;
     }
   }
 </style>
