@@ -1,6 +1,6 @@
 /*
   Edit this file for Tools page labels and intro text.
-  Tools themselves are edited in resources.js.
+  Tools themselves are edited in tool-catalogue.js.
   Old route aliases are kept only so older links continue to work.
   The Journey phase, Language and Access filter greying-out behavior is handled in
   src/lib/components/pages/ToolsPage.svelte, not in this editor text file.

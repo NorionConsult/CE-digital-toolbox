@@ -291,8 +291,11 @@ h3,
 .hero-text,
 .subpage-intro {
   font-size: 1.25rem;
+  width: 100%;
   max-width: 720px;
   margin-bottom: 36px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
 }
 
 .journey-phases-section,

@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { sectors } from '$lib/content/sectors.js';
-import { resources } from '$lib/content/resources.js';
+import { resources } from '$lib/content/tool-catalogue.js';
 import { cases } from '$lib/content/cases.js';
 
 export function entries() {
@@ -18,7 +18,9 @@ export function load({ params }) {
   const relatedResources = resources.filter(
     (resource) =>
       resource.placements.sectors.includes(sector.slug) ||
-      resource.placements.sectorSections.some((tag) => tag.startsWith(sectorSectionPrefix))
+      resource.placements.sectorSections.some((/** @type {string} */ tag) =>
+        tag.startsWith(sectorSectionPrefix)
+      )
   );
   const relatedCases = cases.filter((caseStudy) =>
     (caseStudy.filterValues?.sectors ?? []).includes(sector.title)

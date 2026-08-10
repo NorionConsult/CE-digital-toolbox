@@ -1,6 +1,6 @@
 <script>
   /*
-    The page link points to the resource slug in src/lib/content/resources.js.
+    The page link points to the resource slug in src/lib/content/tool-catalogue.js.
   */
   import { base } from '$app/paths';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';

@@ -10,7 +10,7 @@ about-page.js        About page title and text paragraphs
 contact-page.js      Contact page text, form button URLs and contact email links
 journey-phases.js    Loads the current language journey phase files
 sectors.js           Loads the current language sector files
-resources.js         Tools/resource cards, taxonomy, page text and tool links
+tool-catalogue.js    Tools, taxonomy, page text and tool links
 tools-page.js        Tools page intro, filter labels and empty state text
 cases.js             Case cards, taxonomy and automatically generated case pages
 cases-page.js        Cases page intro, filter labels and empty state text
@@ -125,7 +125,7 @@ current labels `What is this?`, `Learning goals` and
 `Why should I take this course?` if you want the section structure to stay the
 same.
 
-Normal tools are still edited in `resources.js`. To place a normal tool in
+Normal tools are still edited in `tool-catalogue.js`. To place a normal tool in
 the Learn page's Relevant tools section, add this tag to the tool:
 
 ```js
@@ -202,7 +202,7 @@ sector: 'Food and Agriculture',
 ```
 
 Relevant tools are also connected automatically. Edit a tool's `placements`
-inside `resources.js` and add the sector slug:
+inside `tool-catalogue.js` and add the sector slug:
 
 ```js
 placements: {
@@ -231,7 +231,7 @@ Download files used by specific tools live in:
 static/downloads/
 ```
 
-Tools are generated as pages from `resources.js`; they do not need PDF files
+Tools are generated as pages from `tool-catalogue.js`; they do not need PDF files
 unless a specific tool explicitly links to one.
 
 ## Adding Cases
@@ -316,23 +316,26 @@ Sector badge colours are assigned automatically. Food and Agriculture,
 Construction, Textiles and Tourism have fixed theme colours. New sector names
 are also supported and receive a consistent generated outline colour.
 
-## Adding Tools Resources
+## Adding Tools
 
-To add a resource, open:
+To add a tool, open:
 
 ```text
-src/lib/content/resources.js
+src/lib/content/tool-catalogue.js
 ```
 
-Copy one complete `createResource({ ... })` block and paste it after an existing
-resource. Then:
+Copy one complete `{ ... }` block and paste it after an existing tool. Then:
 
-1. Give the resource a unique `id`, `cardNumber` and `slug`.
+1. Give the tool a unique `id` and `slug`.
 2. Replace the title, descriptions, taxonomy, detail text and `toolLink`.
-3. Set its journey phase badges using `journeyPhase` and `journeyPhases`.
+3. Set its journey phase badges using `journeyPhases`.
 4. Update `placements` if it should also appear in a journey phase or sector page.
 
 The `slug` becomes the page URL. Use lowercase words separated by hyphens.
+
+The `id` is the stable internal identifier for the tool. It is not shown on the
+website. Keep every `id` unique and avoid changing it after a tool has been
+published, because it gives the tool a stable identity inside the catalogue.
 
 ### Tool Card Fields
 
@@ -364,7 +367,7 @@ language: 'enGlish'
 
 will still appear as `English` in the filter. The same clean-up applies to:
 
-- `journeyPhase` and `journeyPhases`
+- `journeyPhases`
 - `sector`
 - `effort`
 - `language`
@@ -400,24 +403,16 @@ Implement
 Monitor
 ```
 
-New tools should always be assigned to at least one journey phase. Older
-sector-only tools may still use `None` until they are categorized:
+New tools should always be assigned to at least one journey phase:
 
 ```js
-journeyPhase: 'None',
-journeyPhases: [],
-sector: 'Textiles',
+journeyPhases: ['Monitor']
 ```
 
-The Tools page does not show `None` as a Journey phase filter option, and the
-card will not show a `None` badge. If the sector is set, the card will show a
-sector badge instead.
-
-Use `journeyPhase` for the primary phase and include all relevant phases in
-`journeyPhases`:
+For tools that belong to more than one phase, include all relevant phases in
+the same list:
 
 ```js
-journeyPhase: 'Monitor',
 journeyPhases: ['Monitor', 'Validate', 'Explore'],
 ```
 

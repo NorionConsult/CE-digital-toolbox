@@ -92,7 +92,7 @@ export const tourismBestPracticesSection = {
 
 // 5. RELEVANT TOOLS
 // Tools are not listed here. Add the Tourism sector slug to a resource's
-// placements in src/lib/content/resources.js to display it automatically.
+// placements in src/lib/content/tool-catalogue.js to display it automatically.
 export const tourismRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',

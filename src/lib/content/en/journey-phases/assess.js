@@ -71,7 +71,7 @@ const pathwaySection = {
   src/lib/components/sections/MaturityCurve.svelte
 
   RELEVANT TOOLS:
-  Edit resources in src/lib/content/resources.js.
+  Edit resources in src/lib/content/tool-catalogue.js.
   Add 'assess:maturity-assessment' to:
   placements.phaseSections
 */
@@ -88,7 +88,7 @@ const maturitySection = {
 /* 5. DETAILED SECTION 2: BASELINE MAPPING */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/resources.js, add 'assess:baseline-mapping' to:
+  In src/lib/content/tool-catalogue.js, add 'assess:baseline-mapping' to:
   placements.phaseSections
 */
 const baselineSection = {
@@ -127,7 +127,7 @@ const baselineSection = {
 /* 6. DETAILED SECTION 3: HOTSPOT ANALYSIS */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/resources.js, add 'assess:hotspot-analysis' to:
+  In src/lib/content/tool-catalogue.js, add 'assess:hotspot-analysis' to:
   placements.phaseSections
 */
 const hotspotSection = {

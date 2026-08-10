@@ -59,7 +59,7 @@ static/images/
 Tools:
 
 ```text
-src/lib/content/resources.js
+src/lib/content/tool-catalogue.js
 ```
 
 Tools page labels and intro text:
@@ -104,10 +104,10 @@ This will show only those names in bold on the website. This works in journey ph
 1. Open:
 
 ```text
-src/lib/content/resources.js
+src/lib/content/tool-catalogue.js
 ```
 
-2. Copy one existing resource block and change the title, description, phase, language, provider, access and link.
+2. Copy one existing tool block and change the title, description, journey phases, language, provider, access and link.
 
 3. If the tool should download a local PDF, add the file under `static/downloads/tools/` and set `toolLink` to that file path.
 

@@ -47,7 +47,7 @@ export const contactPage = {
   testimonyForm: {
     title: 'Submit testimony',
     text:
-      'The testimony form will capture implementation context, outcomes, lessons, testimony, publication permission, and certificate request information. Use it to share how a tool, journey phase, or sector resource supported circular economy action in practice.',
+      "The testimony form will capture implementation context, outcomes, lessons, testimony, publication permission, and certificate request information. Use it to share how a tool, journey phase, or sector resource supported circular economy action in practice.",  
     buttonLabel: 'Submit testimony',
     url: '#'
   }

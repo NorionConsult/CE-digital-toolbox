@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { resources } from '$lib/content/resources.js';
+import { resources } from '$lib/content/tool-catalogue.js';
 
 export function entries() {
   return resources.map((resource) => ({ slug: resource.slug }));

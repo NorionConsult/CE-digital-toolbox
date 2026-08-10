@@ -7,6 +7,6 @@ export const sectorPage = {
   casesEmpty: 'No cases have been added for this sector yet. Add a matching sector in cases.js to show them here.',
   barriersTitle: 'Key barriers',
   opportunitiesTitle: 'Key opportunities',
-  toolsEmpty: 'No sector-specific tools have been added yet. Add the sector slug to placements.sectors or add a sector:relevant-tools tag in resources.js.',
+  toolsEmpty: 'No sector-specific tools have been added yet. Add the sector slug to placements.sectors or add a sector:relevant-tools tag in tool-catalogue.js.',
   visitNetwork: 'Visit website'
 };

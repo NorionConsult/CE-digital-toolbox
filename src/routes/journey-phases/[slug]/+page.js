@@ -1,19 +1,12 @@
 import { error } from '@sveltejs/kit';
 import { journeyPhases } from '$lib/content/journey-phases.js';
-import { resources } from '$lib/content/resources.js';
+import { resources } from '$lib/content/tool-catalogue.js';
 
 /*
   Tells SvelteKit which dynamic journey phase pages should be generated as static HTML.
 */
 export function entries() {
   return journeyPhases.map((journeyPhase) => ({ slug: journeyPhase.slug }));
-}
-
-/**
- * @param {{ journeyPhase?: string; journeyPhases?: string[] }} resource
- */
-function getJourneyPhases(resource) {
-  return resource.journeyPhases ?? (resource.journeyPhase ? [resource.journeyPhase] : []);
 }
 
 /*
@@ -32,8 +25,10 @@ export function load({ params }) {
 
   const relatedResources = resources.filter(
     (resource) =>
-      getJourneyPhases(resource).includes(journeyPhase.title) ||
-      resource.placements.phaseSections.some((tag) => phaseSubsectionTags.has(tag))
+      resource.journeyPhases.includes(journeyPhase.title) ||
+      resource.placements.phaseSections.some((/** @type {string} */ tag) =>
+        phaseSubsectionTags.has(tag)
+      )
   );
   const phaseIndex = journeyPhases.findIndex((item) => item.slug === journeyPhase.slug);
   const nextPhase = journeyPhases[phaseIndex + 1] ?? null;

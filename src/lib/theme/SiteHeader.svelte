@@ -1,6 +1,8 @@
 <script>
   import { base } from '$app/paths';
   import { site } from '$lib/content/site.js';
+
+  let menuOpen = false;
 </script>
 
 <header class="site-header">
@@ -29,9 +31,22 @@
         <span class="site-logo">{site.name}</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main navigation">
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-expanded={menuOpen}
+        aria-controls="main-navigation"
+        on:click={() => (menuOpen = !menuOpen)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="main-navigation" class:menu-open={menuOpen} class="main-nav" aria-label="Main navigation">
         {#each site.navigation as item}
-          <a href="{base}{item.href}">{item.label}</a>
+          <a href="{base}{item.href}" on:click={() => (menuOpen = false)}>{item.label}</a>
         {/each}
       </nav>
     </div>
@@ -127,6 +142,36 @@
     color: var(--green-primary);
   }
 
+  .menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--dark);
+    border-radius: 15px;
+    background: transparent;
+    padding: 10px;
+    color: var(--dark);
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background-color: currentColor;
+  }
+
+  .menu-toggle span + span {
+    margin-top: 6px;
+  }
+
+  .menu-toggle:hover,
+  .menu-toggle:focus-visible {
+    background-color: rgba(9, 187, 136, 0.12);
+    outline: none;
+  }
+
   @media (max-width: 760px) {
     .partner-logo-bar-content {
       gap: 16px;
@@ -141,14 +186,14 @@
     }
 
     .header-content {
-      flex-direction: column;
-      align-items: stretch;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
       gap: 14px;
       padding: 16px 0;
     }
 
     .site-brand {
-      width: 100%;
       max-width: 100%;
       gap: 10px;
     }
@@ -163,18 +208,33 @@
       overflow-wrap: anywhere;
     }
 
+    .menu-toggle {
+      display: inline-grid;
+      align-content: center;
+      justify-self: end;
+    }
+
     .main-nav {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, max-content));
+      display: none;
+      grid-column: 1 / -1;
       width: 100%;
-      justify-content: flex-start;
-      gap: 10px 14px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
       margin-left: 0;
+      padding-top: 6px;
+      border-top: 1px solid var(--soft-border);
+    }
+
+    .main-nav.menu-open {
+      display: flex;
     }
 
     .main-nav a {
-      font-size: 0.9rem;
-      overflow-wrap: anywhere;
+      display: block;
+      padding: 14px 0;
+      font-size: 1rem;
+      border-bottom: 1px solid rgba(10, 46, 54, 0.08);
     }
   }
 
@@ -185,14 +245,6 @@
 
     .site-logo-image {
       height: clamp(20px, 5.5vw, 24px);
-    }
-
-    .main-nav {
-      gap: 10px 18px;
-    }
-
-    .main-nav a {
-      font-size: 0.84rem;
     }
   }
 </style>

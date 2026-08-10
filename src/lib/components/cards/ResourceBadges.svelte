@@ -2,19 +2,17 @@
   import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
 
-  /** @type {{ journeyPhases?: string[]; journeyPhase?: string; sectorDisplay?: string; sector?: string }} */
+  /** @type {{ journeyPhases?: string[]; sectorDisplay?: string; sector?: string }} */
   export let resource;
   /** @type {'card' | 'hero'} */
   export let variant = 'card';
 
   /**
-   * @param {{ journeyPhases?: string[]; journeyPhase?: string }} item
+   * @param {{ journeyPhases?: string[] }} item
    * @returns {string[]}
    */
   function getPhaseBadges(item) {
-    return (item.journeyPhases ?? (item.journeyPhase ? [item.journeyPhase] : [])).filter(
-      (phase) => phase !== 'None'
-    );
+    return (item.journeyPhases ?? []).filter((phase) => phase !== 'None');
   }
 
   /**

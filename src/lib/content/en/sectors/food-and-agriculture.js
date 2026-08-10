@@ -87,7 +87,7 @@ export const foodAndAgricultureBestPracticesSection = {
 
 // 5. RELEVANT TOOLS
 // Tools are not listed here. Add the Food and Agriculture sector slug to a resource's
-// placements in src/lib/content/resources.js to display it automatically.
+// placements in src/lib/content/tool-catalogue.js to display it automatically.
 export const foodAndAgricultureRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
