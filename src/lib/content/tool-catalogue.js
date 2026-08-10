@@ -685,8 +685,8 @@ const toolCatalogue = [
     provider: 'Carbon Trust',
     access: 'Sign up',
     timeRequired: 'Days to weeks',
-    preparationNeeded: 'You will need the emissions data of your company and skills to apply LCA methodology.',
-    output: 'A full LCA report',
+    preparationNeeded: 'You will need the emissions data of your company and skills to apply Life Cycle Assessment (LCA) methodology.',
+    output: 'A full Life Cycle Assessment (LCA) report',
     bestFor: 'All SMEs concerned with emissions reduction',
     format: 'Software',
     toolLink: 'https://www.openlca.org/onlinelca/'
@@ -1018,7 +1018,7 @@ const toolCatalogue = [
     provider: 'European Commission (DG Environment)',
     access: 'Sign up',
     timeRequired: 'Variable, used across the full project lifecycle',
-    preparationNeeded: 'None for basic use; building data for full LCA.',
+    preparationNeeded: 'None for basic use; building data for full Life Cycle Assessment (LCA).',
     output: 'Lifecycle sustainability assessment and compliance report',
     bestFor: 'Construction SMEs, architects, developers and residential and commercial building projects',
     format: 'Digital tool',
@@ -1491,11 +1491,11 @@ const toolCatalogue = [
   {
     id: 'resource-064',
     slug: 'bawear-score-lca-calculation-tool',
-    title: 'bAwear Score - LCA Calculation Tool',
+    title: 'bAwear Score - Life Cycle Assessment (LCA) Calculation Tool',
     description:
-      'A streamlined LCA tool for textile and apparel products.',
+      'A streamlined Life Cycle Assessment (LCA) tool for textile and apparel products.',
     about:
-      'bAwear Score is a textile-dedicated life cycle assessment tool that calculates, validates and communicates the environmental impact of textile products. It offers a self-service Quick Score based on predefined product scenarios and an expert service with customised scenarios, supporting scope 3 reporting and Digital Product Passport preparation.',
+      'bAwear Score is a textile-dedicated Life Cycle Assessment (LCA) tool that calculates, validates and communicates the environmental impact of textile products. It offers a self-service Quick Score based on predefined product scenarios and an expert service with customised scenarios, supporting scope 3 reporting and Digital Product Passport preparation.',
     journeyPhases: ['Learn'],
     placements: {
       sectors: ['textiles'],

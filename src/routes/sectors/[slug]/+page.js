@@ -3,6 +3,11 @@ import { sectors } from '$lib/content/sectors.js';
 import { resources } from '$lib/content/tool-catalogue.js';
 import { cases } from '$lib/content/cases.js';
 
+/** @type {Record<string, string[]>} */
+const sectorCaseAliases = {
+  'Food and Agriculture': ['Food and Agriculture', 'Agriculture and Food']
+};
+
 export function entries() {
   return sectors.map((sector) => ({ slug: sector.slug }));
 }
@@ -22,8 +27,11 @@ export function load({ params }) {
         tag.startsWith(sectorSectionPrefix)
       )
   );
+  const matchingCaseSectors = sectorCaseAliases[sector.title] ?? [sector.title];
   const relatedCases = cases.filter((caseStudy) =>
-    (caseStudy.filterValues?.sectors ?? []).includes(sector.title)
+    (caseStudy.filterValues?.sectors ?? []).some((caseSector) =>
+      matchingCaseSectors.includes(caseSector)
+    )
   );
 
   return { sector, relatedResources, relatedCases };

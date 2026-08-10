@@ -19,7 +19,7 @@
       {/each}
     </div>
     <h3>{caseStudy.companyName}</h3>
-    <p>{caseStudy.description}</p>
+    <p>{caseStudy.summary}</p>
   </div>
 
   <dl aria-label="Case taxonomy">

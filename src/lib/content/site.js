@@ -28,6 +28,7 @@ export const site = {
       }
     ]
   },
+  /* Footer logos */
   footerLogos: [
     {
       src: '/logos/EU-logo.png',
@@ -40,6 +41,7 @@ export const site = {
       width: '72px'
     }
   ],
+  /* The labels object contains all the text labels used throughout the website. If changed once here, it will update everywhere. */
   labels: {
     viewPhase: 'View phase',
     viewTools: 'View tools',
@@ -49,6 +51,7 @@ export const site = {
     openTool: 'Open tool',
     openCase: 'Visit company site'
   },
+  /* The navigation array controls the main menu labels and links in the header.*/
   navigation: [
     { label: 'Follow guides', href: '/guided-pathways/' },
     { label: 'Browse Tools', href: '/tools/' },

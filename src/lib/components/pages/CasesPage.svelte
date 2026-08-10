@@ -23,8 +23,8 @@
   function caseMatchesFilters(caseStudy, filters) {
     const caseText = [
       caseStudy.companyName,
+      caseStudy.summary,
       caseStudy.description,
-      caseStudy.about,
       caseStudy.rStrategyDescription,
       caseStudy.rStrategies.join(' '),
       caseStudy.sectorDisplay,

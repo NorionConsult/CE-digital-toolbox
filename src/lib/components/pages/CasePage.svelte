@@ -14,7 +14,7 @@
 
   $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
   $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
-  $: aboutParagraphs = splitParagraphs(caseStudy.about);
+  $: descriptionParagraphs = splitParagraphs(caseStudy.description);
   $: rStrategyDescriptionParagraphs = splitParagraphs(caseStudy.rStrategyDescription);
   $: taxonomyRows = [
     ['Company name', caseStudy.companyName],
@@ -40,7 +40,7 @@
         {/each}
       </div>
       <h1>{caseStudy.companyName}</h1>
-      <p>{caseStudy.description}</p>
+      <p>{caseStudy.summary}</p>
 
       {#if caseLink}
         <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
@@ -71,7 +71,7 @@
 
       <section class="case-text-block">
         <h2>Description of case</h2>
-        {#each aboutParagraphs as paragraph}
+        {#each descriptionParagraphs as paragraph}
           <p>{paragraph}</p>
         {/each}
       </section>
