@@ -202,11 +202,11 @@ const toolCatalogue = [
   {
     id: 'resource-008',
     slug: 'miro-swot-analysis-template',
-    title: 'Miro SWOT Analysis Template',
+    title: 'Miro Strengths, Weaknesses, Opportunities and Threats (SWOT) Analysis Template',
     description:
-      'Free online collaborative whiteboard with ready-made SWOT templates, sticky notes, real-time team editing, and voting tools.',
+      'Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) templates, sticky notes, real-time team editing, and voting tools.',
     about:
-      'A SWOT analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities.',
+      'A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities.',
     journeyPhases: ['Validate'],
     placements: {
       phaseSections:['validate:validate-case']
@@ -218,7 +218,7 @@ const toolCatalogue = [
     access: 'Sign up',
     timeRequired: '1-2 hours',
     preparationNeeded: 'An understanding of the circular strategy you wish to pursue with your business',
-    output: 'Completed SWOT matrix with prioritised actions; exportable for sharing with team or advisors.',
+    output: 'Completed Strengths, Weaknesses, Opportunities and Threats (SWOT) matrix with prioritised actions; exportable for sharing with team or advisors.',
     bestFor: 'SMEs running the transition readiness workshop from Phase 4 with their team.',
     format: 'Either online Miro board or PDF if printed.',
     toolLink: 'https://miro.com/strategic-planning/swot-analysis/'
@@ -230,12 +230,12 @@ const toolCatalogue = [
     description:
       'Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
-      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that GCP uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. Circular Transition Indicators (CTI) Tool was developed together with the WBCSD for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that GCP expects, which means you can reuse your CTI work when you start working with GCP.',
+      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. Circular Transition Indicators (CTI) Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the Circular Transition Indicators (CTI) in practice. By using Circular Transition Indicators (CTI) Tool you build the material level data and indicators that the Global Circularity Protocol (GCP) expects, which means you can reuse your Circular Transition Indicators (CTI) work when you start working with the Global Circularity Protocol (GCP).',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'WBCSD / Circular IQ',
+    provider: 'World Business Council for Sustainable Development (WBCSD) / Circular IQ',
     access: 'Paid',
     timeRequired: '2-4 hours',
     preparationNeeded: 'Prepare the relevant business, material flow and resource use data before starting.',
@@ -262,7 +262,7 @@ const toolCatalogue = [
     timeRequired: '2-4 hours (workshop format)',
     preparationNeeded: 'Print out PDF, pens and prepare participants',
     output:
-      'Completed circular BMC; clear view of how the circular business model changes your operations.',
+      'Completed circular Business Model Canvas (BMC); clear view of how the circular business model changes your operations.',
     bestFor: 'SMEs that have identified a preferred circular business model and want to develop it in detail.',
     format: 'PDF',
     toolLink:
@@ -275,7 +275,7 @@ const toolCatalogue = [
     description:
       'Helps SMEs rapidly assess which circular business models best fit their situation using a scored matrix approach.',
     about:
-      'With the Quickscan CBM you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
+      'With the Quickscan Circular Business Model (CBM) you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
     journeyPhases: ['Validate', 'Assess'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -285,7 +285,7 @@ const toolCatalogue = [
     timeRequired: '1-2 hours',
     preparationNeeded:
       'General knowledge of your business and the opportunities you have identified in the previous phase.',
-    output: 'Prioritised CBM shortlist; scored overview of options; basis for business case development.',
+    output: 'Prioritised Circular Business Model (CBM) shortlist; scored overview of options; basis for business case development.',
     bestFor: 'SMEs new to circular business modelling wanting a structured starting point.',
     format: 'Excel',
     toolLink:
@@ -294,11 +294,11 @@ const toolCatalogue = [
   {
     id: 'resource-012',
     slug: 'position-green-sustainability-roi-calculator',
-    title: 'Position Green Sustainability ROI Calculator',
+    title: 'Position Green Sustainability Return on Investment (ROI) Calculator',
     description:
       'Online calculator that builds a data-backed business case for circular investment by computing financial return, payback time, and emissions impact using discounted cash flow logic.',
     about:
-      'Calculate your sustainability ROI. Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.',
+      'Calculate your sustainability Return on Investment (ROI). Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -308,7 +308,7 @@ const toolCatalogue = [
     timeRequired: '30-60 minutes',
     preparationNeeded: 'Prepare relevant investment, cost, savings and emissions data before starting.',
     output:
-      'ROI percentage, payback period, and emissions impact; scenario comparison; board-ready financial summary.',
+      'Return on Investment (ROI) percentage, payback period, and emissions impact; scenario comparison; board-ready financial summary.',
     bestFor:
       'SMEs building a financial case for a circular investment, pilot project, or green finance application.',
     format: 'Digital tool',
@@ -321,7 +321,7 @@ const toolCatalogue = [
     description:
       'Provides users with an overview of the current trends in the circular economy space with the aim of inspiring them.',
     about:
-      'Printable or digital cards covering key CE trends, opportunities, and threats. Designed to facilitate team discussions and feed into SWOT analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting.',
+      'Printable or digital cards covering key circular economy trends, opportunities, and threats. Designed to facilitate team discussions and feed into Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting.',
     journeyPhases: ['Explore'],
     placements: {
       phaseSections:['validate:business-models']
@@ -334,10 +334,10 @@ const toolCatalogue = [
     timeRequired: '1-3 hours',
     preparationNeeded: 'None',
     output:
-      'Identified circular economy trends, opportunities, threats, and discussion inputs for SWOT analysis or future business model ideas.',
+      'Identified circular economy trends, opportunities, threats, and discussion inputs for Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis or future business model ideas.',
     bestFor: 'All SMEs',
     format: 'PDF',
-    toolLink: 'https://circitnord.com/tools/circular-economy-trend-cards/?utm_source=chatgpt.com'
+    toolLink: 'https://circitnord.com/tools/circular-economy-trend-cards/'
   },
   {
     id: 'resource-014',
@@ -436,7 +436,7 @@ const toolCatalogue = [
     id: 'resource-018',
     slug: 'smart-circular-economy-assessment-scea',
     title: 'Smart Circular Economy Assessment (SCEA)',
-    description: 'Helps SMEs benchmark their current CE level and understand key gaps.',
+    description: 'Helps SMEs benchmark their current Circular Economy (CE) level and understand key gaps.',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
     journeyPhases: ['Assess'],
@@ -450,8 +450,8 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '30-45 min',
     preparationNeeded: 'Basic business data',
-    output: 'CE maturity overview across 5 dimensions with visual output and priority recommendations.',
-    bestFor: 'SMEs new to CE want a quick, accessible starting point.',
+    output: 'Circular Economy (CE) maturity overview across 5 dimensions with visual output and priority recommendations.',
+    bestFor: 'SMEs new to circular economy want a quick, accessible starting point.',
     format: 'PDF',
     toolLink: 'http://ellenmacarthurfoundation.org/smart-material-choices'
   },
@@ -521,7 +521,7 @@ const toolCatalogue = [
     access: 'Sign up',
     timeRequired: 'Half-day to a day',
     preparationNeeded: 'Preparing the material data, their quantity and uses.',
-    output: 'MFA graphics',
+    output: 'Material Flow Analysis (MFA) graphics',
     bestFor: 'Advanced users with detailed material data',
     format: 'Digital tool',
     toolLink: 'https://www.stan2web.net/download%20files/software/STAN-2-7-101-EN.zip'
@@ -555,7 +555,7 @@ const toolCatalogue = [
     slug: 'footprint-calculator',
     title: 'Footprint Calculator',
     description:
-      'Displays carbon footprint and eco-cost results by lifecycle stage, with additional LCIA insights to identify the most impactful processes',
+      'Displays carbon footprint and eco-cost results by lifecycle stage, with additional Life Cycle Impact Assessment (LCIA) insights to identify the most impactful processes',
     about:
       'The Circular Strategies Scanner helps manufacturing companies understand, map, and improve their circular economy strategies across products and operations. It is typically used in workshops to identify current initiatives, explore new opportunities for circularity, and support innovation and shared strategic vision.',
     journeyPhases: ['Assess'],
@@ -572,7 +572,7 @@ const toolCatalogue = [
     output: 'Carbon footprint and eco-cost results by lifecycle stage.',
     bestFor: 'Manufacturing SMEs with physical products',
     format: 'Digital tool',
-    toolLink: 'https://footprintcalc.org/?utm_source=chatgpt.com#download'
+    toolLink: 'https://footprintcalc.org/'
   },
   {
     id: 'resource-024',
@@ -604,7 +604,7 @@ const toolCatalogue = [
     slug: 'milestones-and-action-planning-tool',
     title: 'Milestones and Action Planning Tool',
     description:
-      'To develop a clear set of measurable milestones to monitor progress towards CE strategy',
+      'To develop a clear set of measurable milestones to monitor progress towards a circular economy strategy',
     about:
       "A practical milestone-setting framework designed to help organisations break circular strategies into trackable steps. Helps teams identify key actions, assign ownership, and define what 'progress' looks like at each stage.",
     journeyPhases: ['Implement'],
@@ -655,17 +655,17 @@ const toolCatalogue = [
     description:
       'To simulate running a circular electronics company making decisions on resource management, production processes, and revenue models, while responding to external disruptions such as policy changes and market shocks that test the resilience of circular vs. linear strategies',
     about:
-      "ecoCEO is a free, web-based serious game developed by VITO with support from EIT Raw Materials. Players manage a company producing electronic goods (microchips, smartphones, and e-bikes) making decisions on which raw materials to use, which production processes to invest in, and which revenue models to adopt. The game tests those decisions against unforeseen events including policy measures, resource scarcity, and market disruptions, making visible how circular strategies (take-back systems, reuse, design-for-repair, product-service systems) improve business resilience compared to linear approaches.",
+      "ecoCEO is a free, web-based serious game developed by the Flemish Institute for Technological Research (VITO) with support from European Institute of Innovation and Technology (EIT) Raw Materials. Players manage a company producing electronic goods (microchips, smartphones, and e-bikes) making decisions on which raw materials to use, which production processes to invest in, and which revenue models to adopt. The game tests those decisions against unforeseen events including policy measures, resource scarcity, and market disruptions, making visible how circular strategies (take-back systems, reuse, design-for-repair, product-service systems) improve business resilience compared to linear approaches.",
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
     effort: 'Low',
     language: 'English',
-    provider: 'VITO / EIT Raw Materials',
+    provider: 'Flemish Institute for Technological Research (VITO) / European Institute of Innovation and Technology (EIT) Raw Materials',
     access: 'Free',
     timeRequired: '1 – 2 Hours',
     preparationNeeded: 'Low, web-based, no installation or account required for players; teachers/facilitators can create a free account to access supporting materials',
-    output: 'Experiential understanding of how circular business decisions (recycling, take-back, repair, product-service systems) affect company performance and resilience; discussion material for debriefing on CE strategy trade-offs',
-    bestFor: 'SMEs and teams at an introductory stage of CE engagement who benefit from learning through doing; also useful as an icebreaker or warm-up activity before deeper strategy workshop',
+    output: 'Experiential understanding of how circular business decisions (recycling, take-back, repair, product-service systems) affect company performance and resilience; discussion material for debriefing on circular economy strategy trade-offs',
+    bestFor: 'SMEs and teams at an introductory stage of circular economy engagement who benefit from learning through doing; also useful as an icebreaker or warm-up activity before deeper strategy workshop',
     format: 'Online platform',
     toolLink:
       'https://ecoceo.vito.be/en/ecoceo-game'
@@ -698,7 +698,7 @@ const toolCatalogue = [
     description:
       'A repository of knowledge for procurement across a large variety of sectors, with search filters to guide users to tools suited to their needs.',
     about:
-      'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by ICLEI\'s Procura+ network, bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
+      'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by the Procura+ network of the International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI), bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
     journeyPhases: ['Explore', 'Validate', 'Implement'],
     placements: {
       phaseSections: ['validate:circular-business-models']
@@ -706,7 +706,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Low',
     language: 'English',
-    provider: 'ICLEI',
+    provider: 'International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI)',
     access: 'Free',
     timeRequired: 'Continuous',
     preparationNeeded: 'None',
@@ -743,7 +743,7 @@ const toolCatalogue = [
     description:
       'A free web tool that assesses packaging across five system-wide dimensions, including design for recyclability, community access and packaging fate.',
     about:
-      'The tool goes beyond technical recyclability to help brands, retailers and packaging designers understand system-level recyclability, improvement recommendations and EPR compliance guidance.',
+      'The tool goes beyond technical recyclability to help brands, retailers and packaging designers understand system-level recyclability, improvement recommendations and Extended Producer Responsibility (EPR) compliance guidance.',
     journeyPhases: ['Assess'],
     sector: 'Plastics',
     effort: 'Low',
@@ -752,7 +752,7 @@ const toolCatalogue = [
     access: 'Sign up',
     timeRequired: '30-60 minutes',
     preparationNeeded: 'Know your packaging format, material and design features.',
-    output: 'System-level recyclability assessment, improvement recommendations and EPR compliance guidance',
+    output: 'System-level recyclability assessment, improvement recommendations and Extended Producer Responsibility (EPR) compliance guidance',
     bestFor: 'Brands, retailers and packaging designers',
     format: 'Digital tool',
     toolLink: 'https://www.bpf.co.uk/design/packscore/packscore.aspx'
@@ -827,11 +827,11 @@ const toolCatalogue = [
   {
     id: 'resource-035',
     slug: 'hcmi-hotel-carbon-measurement-initiative',
-    title: 'HCMI - Hotel Carbon Measurement Initiative',
+    title: 'Hotel Carbon Measurement Initiative (HCMI)',
     description:
       'A free standardised methodology and tool for hotels to calculate the carbon footprint of stays and meetings.',
     about:
-      'HCMI is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements.',
+      'The Hotel Carbon Measurement Initiative (HCMI) is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements.',
     journeyPhases: ['Monitor'],
     placements: {
       sectors: ['tourism'],
@@ -840,7 +840,7 @@ const toolCatalogue = [
     sector: 'Tourism',
     effort: 'Medium',
     language: 'English',
-    provider: 'Sustainable Hospitality Alliance (SHA) & WTTC',
+    provider: 'Sustainable Hospitality Alliance (SHA) & World Travel & Tourism Council (WTTC)',
     access: 'Sign up',
     timeRequired: 'Ongoing, data input per billing period',
     preparationNeeded: 'Energy, water and fuel consumption data by property.',
@@ -902,11 +902,11 @@ const toolCatalogue = [
   {
     id: 'resource-038',
     slug: 'breeam-in-use-sustainable-standard',
-    title: 'BREEAM In-Use Sustainable Standard',
+    title: 'Building Research Establishment Environmental Assessment Method (BREEAM) In-Use Sustainable Standard',
     description:
-      'A tool for exploring BREEAM data on certified building assessments and integrating it with websites, tools and software.',
+      'A tool for exploring Building Research Establishment Environmental Assessment Method (BREEAM) data on certified building assessments and integrating it with websites, tools and software.',
     about:
-      'The BREEAM API is a RESTful web service that gives developers programmatic access to BREEAM GreenBook data, including current listings and ratings from certified building and infrastructure assessments.',
+      'The Building Research Establishment Environmental Assessment Method (BREEAM) Application Programming Interface (API) is a RESTful web service that gives developers programmatic access to Building Research Establishment Environmental Assessment Method (BREEAM) GreenBook data, including current listings and ratings from certified building and infrastructure assessments.',
     journeyPhases: ['Explore'],
     placements: {
       sectors: ['construction'],
@@ -915,7 +915,7 @@ const toolCatalogue = [
     sector: 'Construction',
     effort: 'Medium',
     language: 'English',
-    provider: 'BREEAM',
+    provider: 'Building Research Establishment Environmental Assessment Method (BREEAM)',
     access: 'Paid',
     timeRequired: '60 minutes',
     preparationNeeded: 'None',
@@ -956,7 +956,7 @@ const toolCatalogue = [
     description:
       'An online platform for creating digital material passports for buildings, including composition, origin, circularity score and residual value.',
     about:
-      'Madaster tracks and traces products and materials throughout their lifecycle, supporting material reuse, recyclability, recovery and compliance with standards such as LEED, BREEAM, EU Taxonomy and digital product passport reporting.',
+      'Madaster tracks and traces products and materials throughout their lifecycle, supporting material reuse, recyclability, recovery and compliance with standards such as Leadership in Energy and Environmental Design (LEED), Building Research Establishment Environmental Assessment Method (BREEAM), EU Taxonomy and Digital Product Passport (DPP) reporting.',
     journeyPhases: ['Monitor'],
     placements: {
       sectors: ['construction'],
@@ -968,7 +968,7 @@ const toolCatalogue = [
     provider: 'BRE Group (Building Research Establishment)',
     access: 'Paid',
     timeRequired: 'Ongoing, registers materials throughout the project lifecycle',
-    preparationNeeded: 'BIM file or Excel spreadsheet with material data.',
+    preparationNeeded: 'Building Information Modelling (BIM) file or Excel spreadsheet with material data.',
     output: 'Digital material passport, circularity indicator score and embodied carbon report',
     bestFor: 'Construction SMEs, architects and developers managing new build or renovation',
     format: 'Digital tool',
@@ -981,7 +981,7 @@ const toolCatalogue = [
     description:
       'A cloud-based construction waste and sustainability tracking platform for waste, materials, carbon, water and transport emissions.',
     about:
-      'SMARTWaste helps construction SMEs track waste and carbon data in real time, reduce disposal costs and generate audit-quality BREEAM compliance evidence.',
+      'SMARTWaste helps construction SMEs track waste and carbon data in real time, reduce disposal costs and generate audit-quality Building Research Establishment Environmental Assessment Method (BREEAM) compliance evidence.',
     journeyPhases: ['Monitor'],
     placements: {
       sectors: ['construction'],
@@ -994,7 +994,7 @@ const toolCatalogue = [
     access: 'Sign up',
     timeRequired: 'Ongoing / per project, with data entry taking minutes per input',
     preparationNeeded: 'Project registration required; scales from 1 to 100+ projects.',
-    output: 'Project waste reports, carbon calculations and BREEAM evidence packages',
+    output: 'Project waste reports, carbon calculations and Building Research Establishment Environmental Assessment Method (BREEAM) evidence packages',
     bestFor: 'Construction SMEs managing new build, refurbishment or demolition projects',
     format: 'Digital tool',
     toolLink: 'https://bregroup.com/products/smartwaste/assessment-tool'
@@ -1102,11 +1102,11 @@ const toolCatalogue = [
   {
     id: 'resource-046',
     slug: 'wrap-food-waste-reduction-toolkit',
-    title: 'WRAP Food Waste Reduction Toolkit',
+    title: 'Waste and Resources Action Programme (WRAP) Food Waste Reduction Toolkit',
     description:
       'Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.',
     about:
-      'This WRAP data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.',
+      'This Waste and Resources Action Programme (WRAP) data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.',
     journeyPhases: ['Validate'],
     placements: {
       sectors: ['food-and-agriculture'],
@@ -1115,7 +1115,7 @@ const toolCatalogue = [
     sector: 'Food and Agriculture',
     effort: 'Medium',
     language: 'English',
-    provider: 'WRAP (Waste & Resources Action Programme)',
+    provider: 'Waste and Resources Action Programme (WRAP)',
     access: 'Free',
     timeRequired: 'Self-directed; modular use',
     preparationNeeded: 'Basic food waste data helpful.',
@@ -1227,11 +1227,11 @@ const toolCatalogue = [
   {
     id: 'resource-051',
     slug: 'pdca-cycle-planner-sme-toolkit',
-    title: 'PDCA Cycle Planner (SME Toolkit)',
+    title: 'Plan, Do, Check, Act (PDCA) Cycle Planner (SME Toolkit)',
     description:
       'A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.',
     about:
-      'The PDCA Cycle is a continuous improvement framework that works well for circular economy implementation. SMEs can use it to review indicator results, decide what to adjust, set new targets and implement improvements.',
+      'The Plan, Do, Check, Act (PDCA) Cycle is a continuous improvement framework that works well for circular economy implementation. SMEs can use it to review indicator results, decide what to adjust, set new targets and implement improvements.',
     journeyPhases: ['Explore', 'Validate', 'Monitor'],
     placements: {
       phaseSections: ['monitor:interpreting-results']
@@ -1239,7 +1239,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'ASQ / Open-source (ISO 9001 framework)',
+    provider: 'ASQ / Open-source (International Organization for Standardization (ISO) 9001 framework)',
     access: 'Free',
     timeRequired: '1-2 hours per review cycle',
     preparationNeeded: 'Collect indicator data and results from the previous measurement cycle.',
@@ -1351,7 +1351,7 @@ const toolCatalogue = [
     description:
       'A scoring matrix for assessing design flaws in a product lifecycle and identifying circular design improvement suggestions.',
     about:
-      'The DfX scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
+      'The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
     journeyPhases: ['Explore'],
     placements: {
       phaseSections: ['explore:explore-strategies']
@@ -1375,7 +1375,7 @@ const toolCatalogue = [
     description:
       'Reframe problem insights as open-ended How Might We questions, turning challenges into opportunities and creating a productive launchpad for brainstorming.',
     about:
-      'The How Might We method from DTU\'s Design Kit is a simple but powerful reframing technique used in human-centred design. Teams take insight statements gathered from research and rephrase them as How Might We questions, a format that implies a solution is possible without prescribing what it should be. The method is used in the ideation phase to open creative space before brainstorming. A well-crafted question is neither too narrow, which limits ideas, nor too broad, which makes it hard to act on.',
+      'The How Might We method from Technical University of Denmark (DTU)\'s Design Kit is a simple but powerful reframing technique used in human-centred design. Teams take insight statements gathered from research and rephrase them as How Might We questions, a format that implies a solution is possible without prescribing what it should be. The method is used in the ideation phase to open creative space before brainstorming. A well-crafted question is neither too narrow, which limits ideas, nor too broad, which makes it hard to act on.',
     journeyPhases: ['Explore'],
     placements: {
       phaseSections: ['explore:explore-strategies']
@@ -1383,7 +1383,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'DTU',
+    provider: 'Technical University of Denmark (DTU)',
     access: 'Free',
     timeRequired: '1 hour',
     preparationNeeded: 'Existing insight statements from prior research, plus pens and post-its.',
@@ -1516,11 +1516,11 @@ const toolCatalogue = [
   {
     id: 'resource-065',
     slug: 'wrap-textiles-sorting-and-recycling-database',
-    title: 'WRAP Textiles Sorting and Recycling Database',
+    title: 'Waste and Resources Action Programme (WRAP) Textiles Sorting and Recycling Database',
     description:
       'A database mapping textile sorting and recycling capacity.',
     about:
-      'This WRAP database maps textile sorting and recycling infrastructure, helping brands, waste managers and local authorities match textile waste streams with suitable sorting and recycling partners. It supports the development of end-of-life routes for used and unwanted textiles.',
+      'This Waste and Resources Action Programme (WRAP) database maps textile sorting and recycling infrastructure, helping brands, waste managers and local authorities match textile waste streams with suitable sorting and recycling partners. It supports the development of end-of-life routes for used and unwanted textiles.',
     journeyPhases: ['Implement'],
     placements: {
       sectors: ['textiles'],
@@ -1529,7 +1529,7 @@ const toolCatalogue = [
     sector: 'Textiles',
     effort: 'Low',
     language: 'English',
-    provider: 'WRAP (Waste and Resources Action Programme)',
+    provider: 'Waste and Resources Action Programme (WRAP)',
     access: 'Free',
     timeRequired: 'N/A',
     preparationNeeded: 'None',
@@ -1543,9 +1543,9 @@ const toolCatalogue = [
     slug: 'carbonfact-digital-product-passport-software',
     title: 'Carbonfact - Digital Product Passport (DPP) Software',
     description:
-      'Software for building LCA-based Digital Product Passports for fashion and apparel products.',
+      'Software for building Life Cycle Assessment (LCA)-based Digital Product Passports for fashion and apparel products.',
     about:
-      'Carbonfact runs product-level life cycle assessments across a brand catalogue and publishes the results as consumer-facing Digital Product Passports with QR codes. It covers 16 PEF environmental indicators and the French Eco-Score, helping brands and suppliers prepare for upcoming EU textile DPP requirements.',
+      'Carbonfact runs product-level life cycle assessments across a brand catalogue and publishes the results as consumer-facing Digital Product Passports with Quick Response (QR) codes. It covers 16 Product Environmental Footprint (PEF) environmental indicators and the French Eco-Score, helping brands and suppliers prepare for upcoming EU textile Digital Product Passport (DPP) requirements.',
     journeyPhases: ['Implement'],
     placements: {
       sectors: ['textiles'],
@@ -1558,19 +1558,19 @@ const toolCatalogue = [
     access: 'Paid',
     timeRequired: 'N/A',
     preparationNeeded: 'None',
-    output: 'DPP pages with QR codes and 16 PEF indicators',
-    bestFor: 'Fashion, footwear and apparel brands preparing for EU DPP',
-    format: 'SaaS platform',
+    output: 'Digital Product Passport (DPP) pages with Quick Response (QR) codes and 16 Product Environmental Footprint (PEF) indicators',
+    bestFor: 'Fashion, footwear and apparel brands preparing for EU Digital Product Passport (DPP)',
+    format: 'Software as a Service (SaaS) platform',
     toolLink: 'https://www.carbonfact.com/digital-product-passport-software'
   },
   {
     id: 'resource-067',
     slug: 'youcontrol-esg-profile-for-business',
-    title: 'YouControl - ESG Profile for Business',
+    title: 'YouControl - Environmental, social and governance (ESG) Profile for Business',
     description:
-      'Automates the assessment of ESG factors of Ukrainian companies.',
+      'Automates the assessment of environmental, social and governance (ESG) factors of Ukrainian companies.',
     about:
-      'YouControl ESG Profile helps users check Ukrainian companies by name or EDRPOU code, review an ESG profile, and use automated sustainability assessment as a pre-screen before deeper due diligence.',
+      'YouControl Environmental, social and governance (ESG) Profile helps users check Ukrainian companies by name or Unified State Register of Enterprises and Organizations of Ukraine (EDRPOU) code, review an environmental, social and governance (ESG) profile, and use automated sustainability assessment as a pre-screen before deeper due diligence.',
     journeyPhases: ['Assess'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1578,8 +1578,8 @@ const toolCatalogue = [
     provider: 'YouControl (Ukraine)',
     access: 'Paid',
     timeRequired: '30-60 minutes for the interface; 2-3 hours to understand the categories',
-    preparationNeeded: 'Company name or EDRPOU code of the entity to be checked',
-    output: 'ESG profile with E&S impact category and sustainability signals',
+    preparationNeeded: 'Company name or Unified State Register of Enterprises and Organizations of Ukraine (EDRPOU) code of the entity to be checked',
+    output: 'Environmental, social and governance (ESG) profile with environmental and social (E&S) impact category and sustainability signals',
     bestFor: 'SMEs applying for bank finance, exporters and procurement teams',
     format: 'Online module',
     toolLink: 'https://youcontrol.com.ua/esg-for-business'
@@ -1587,22 +1587,22 @@ const toolCatalogue = [
   {
     id: 'resource-068',
     slug: 'saveecobot-esg-profile-of-an-enterprise',
-    title: 'SaveEcoBot - ESG Profile of an Enterprise',
+    title: 'SaveEcoBot - Environmental, social and governance (ESG) Profile of an Enterprise',
     description:
       'Collects and systematises environmental, social and governance data for enterprises.',
     about:
-      'SaveEcoBot ESG gives users access to a catalogue of company documents, permits, licences, reports, declarations, inspections and environmental records. It supports a standardised ESG compliance check and downloadable PDF extracts for due diligence.',
+      'SaveEcoBot Environmental, social and governance (ESG) gives users access to a catalogue of company documents, permits, licences, reports, declarations, inspections and environmental records. It supports a standardised environmental, social and governance (ESG) compliance check and downloadable PDF extracts for due diligence.',
     journeyPhases: ['Assess'],
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'Ukrainian, English',
-    provider: 'SaveEcoBot (ESG SaveEcoBot)',
+    provider: 'SaveEcoBot (Environmental, social and governance (ESG) SaveEcoBot)',
     access: 'Paid',
     timeRequired: '1-2 hours to read the document catalogue',
-    preparationNeeded: 'Name or EDRPOU code of the enterprise or sole trader',
-    output: 'ESG profile, automated risk assessment and a PDF extract',
-    bestFor: 'SMEs preparing for bank, investor or buyer E&S due diligence',
-    format: 'Online platform and API access',
+    preparationNeeded: 'Name or Unified State Register of Enterprises and Organizations of Ukraine (EDRPOU) code of the enterprise or sole trader',
+    output: 'Environmental, social and governance (ESG) profile, automated risk assessment and a PDF extract',
+    bestFor: 'SMEs preparing for bank, investor or buyer environmental and social (E&S) due diligence',
+    format: 'Online platform and Application Programming Interface (API) access',
     toolLink: 'https://esg.saveecobot.com/'
   },
   {
@@ -1780,7 +1780,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '1-2 hours',
     preparationNeeded: 'None',
-    output: 'Toolkit for incubators and accelerators; CE Guidelines in Armenian and English',
+    output: 'Toolkit for incubators and accelerators; Circular Economy (CE) Guidelines in Armenian and English',
     bestFor: 'Armenian SMEs, incubators and accelerators',
     format: 'PDF toolkit',
     toolLink: 'https://circulup.am/resources'
@@ -1855,11 +1855,11 @@ const toolCatalogue = [
   {
     id: 'resource-080',
     slug: 'recp-armenia-resources',
-    title: 'RECP Armenia Resources',
+    title: 'Resource Efficient and Cleaner Production (RECP) Armenia Resources',
     description:
       'Resources supporting Resource Efficient and Cleaner Production implementation.',
     about:
-      'RECP Armenia resources include primers, leaflets and business cases documenting how Armenian SMEs applied Resource Efficient and Cleaner Production measures across food production, poultry, battery manufacturing, dried fruit processing, lime production, construction and dairy processing.',
+      'Resource Efficient and Cleaner Production (RECP) Armenia resources include primers, leaflets and business cases documenting how Armenian SMEs applied Resource Efficient and Cleaner Production measures across food production, poultry, battery manufacturing, dried fruit processing, lime production, construction and dairy processing.',
     journeyPhases: ['Learn'],
     sector: 'Manufacturing',
     effort: 'Low',
@@ -1868,7 +1868,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: 'N/A',
     preparationNeeded: 'None',
-    output: 'RECP toolkit and supporting materials',
+    output: 'Resource Efficient and Cleaner Production (RECP) toolkit and supporting materials',
     bestFor: 'Armenian manufacturing and industrial SMEs',
     format: 'PDF toolkit',
     toolLink: 'https://recp.am/en/news/recp-materials'
@@ -1880,7 +1880,7 @@ const toolCatalogue = [
     description:
       'Networking and free trainings for Armenian SMEs.',
     about:
-      'ACBA Business Club provides Armenian SME managers with networking opportunities and free business management trainings, including modules covering ESG, strategy and sustainable business adaptation.',
+      'ACBA Business Club provides Armenian SME managers with networking opportunities and free business management trainings, including modules covering environmental, social and governance (ESG), strategy and sustainable business adaptation.',
     journeyPhases: ['Explore'],
     sector: 'Cross-sector',
     effort: 'Medium',

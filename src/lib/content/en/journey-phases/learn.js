@@ -14,7 +14,7 @@ const phaseCard = {
   title: 'Learn',
   colourClass: 'module-card-green',
   description:
-    'Introduces key CE and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of CE, even without prior knowledge.'
+    'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, even without prior knowledge.'
 };
 
 const hero = {
@@ -124,7 +124,7 @@ const LearningresourcesSection = {
         url: 'https://switch.circle-economy.com/',
         buttonLabel: 'Open resource',
         aboutCourse: [
-          'An interactive, gamified online platform built specifically for Micro, small and medium-sized enterprise (MSME) suppliers in developing countries who are part of global value chains. Users pick a sector track, such as Textiles, Plastics & Packaging, or Electronics & ICT, then work through a series of interactive games and journey phases. Each phase presents sector-relevant circular economy content followed by interactive questions, covering topics like recycling barriers and traceability. A free login is required, which enables personalised progress tracking across tracks.'
+          'An interactive, gamified online platform built specifically for Micro, small and medium-sized enterprise (MSME) suppliers in developing countries who are part of global value chains. Users pick a sector track, such as Textiles, Plastics & Packaging, or Electronics & Information and Communication Technology (ICT), then work through a series of interactive games and journey phases. Each phase presents sector-relevant circular economy content followed by interactive questions, covering topics like recycling barriers and traceability. A free login is required, which enables personalised progress tracking across tracks.'
         ],
         learningGoals: [
           "Identify circular economy opportunities and challenges specific to your sector's value chain, such as textiles, plastics, or electronics",

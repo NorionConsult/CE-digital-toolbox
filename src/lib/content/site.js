@@ -1,6 +1,33 @@
 /*
   Edit this file for global website text.
   These values are used by the header, footer and browser page titles.
+
+  ACRONYM WRITING GUIDE FOR EDITORS
+  When an acronym appears in public website text, write the full term first and keep
+  the acronym in parentheses. After that, the acronym can be used again if the same
+  paragraph or card would otherwise become too long.
+
+  Common acronyms used in this website:
+  CE = Circular Economy (CE)
+  RECP = Resource Efficient and Cleaner Production (RECP)
+  MSME = Micro, small and medium-sized enterprise (MSME)
+  CTI = Circular Transition Indicators (CTI)
+  GCP = Global Circularity Protocol (GCP)
+  WBCSD = World Business Council for Sustainable Development (WBCSD)
+  SCEA = Smart Circular Economy Assessment (SCEA)
+  MFA = Material Flow Analysis (MFA)
+  MCI = Material Circularity Indicator (MCI)
+  GGKP = Green Growth Knowledge Partnership (GGKP)
+  PEF = Product Environmental Footprint (PEF)
+  EDRPOU = Unified State Register of Enterprises and Organizations of Ukraine (EDRPOU)
+  B2B = Business-to-business (B2B)
+  GDP = Gross Domestic Product (GDP)
+  LED = Light-emitting diode (LED)
+  UV = Ultraviolet (UV)
+  API = Application Programming Interface (API)
+  QR = Quick Response (QR)
+  SaaS = Software as a Service (SaaS)
+  E&S = Environmental and social (E&S)
 */
 export const site = {
   name: 'Circular Economy Toolbox',

@@ -68,7 +68,7 @@ const pathwaySection = {
       description:
         'Understand the barriers, enablers and steps required to move from your current business model to a circular one.',
       keyOutputs: [
-        'Barrier and SWOT analysis', 
+        'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis', 
         'A shortlist of one to three priority strategies'
       ]
     }
@@ -243,7 +243,7 @@ const validateCaseSection = {
   title: 'Validate the Case',
   resourceTag: 'validate:validate-case',
   paragraphs: [
-    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. SWOT is a fantastic tool to use when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. SWOT stands for Strengths, Weaknesses, Opportunities, and Threats.",
+    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis is a useful tool when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified.",
     "It's a simple framework for assessing a business, project, or decision by looking at four areas: Strengths and Weaknesses are internal factors (what you're good at, and where you fall short), while Opportunities and Threats are external factors (favourable conditions you could exploit, and risks in your environment you need to watch for). Typically laid out as a 2x2 grid, it helps surface a clear, balanced picture before making strategic decisions."
   ]
 };

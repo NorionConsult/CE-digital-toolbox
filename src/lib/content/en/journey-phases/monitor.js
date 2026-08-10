@@ -116,7 +116,7 @@ const choosingIndicatorsSection = {
       title: 'Environmental',
       icon: 'earth',
       items: [
-        'CO2 emissions per unit',
+        'Carbon dioxide (CO2) emissions per unit',
         'Energy from renewable sources',
         'Water consumption (litres/unit)',
         'Waste to landfill (tonnes/year)'

@@ -15,7 +15,7 @@ export const constructionIntroSection = {
   title: 'Introduction to sector',
   paragraphs: [
     'Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets.',
-    'Buildings are responsible for around 40% of EU energy consumption and 36% of CO2 emissions. Renovation and retrofit therefore represent the sector\'s largest circular economy opportunity.',
+    'Buildings are responsible for around 40% of EU energy consumption and 36% of Carbon dioxide (CO2) emissions. Renovation and retrofit therefore represent the sector\'s largest circular economy opportunity.',
     'SMEs account for over 90% of European construction firms, yet most lack dedicated circular economy knowledge, tools and supply-chain capacity for implementation.',
     'The EU Construction Products Regulation reform and revised Waste Framework Directive are driving new requirements for material traceability and end-of-life planning.',
     'Key circular economy principles for construction include design for disassembly, material reuse and repurposing, adaptive reuse of existing buildings, and digital building material passports.',
@@ -127,7 +127,7 @@ export const constructionNetworkSection = {
       link: ''
     },
     {
-      name: 'ResCom (Regional CE Networks)',
+      name: 'ResCom (Regional Circular Economy (CE) Networks)',
       description: 'Regional resource-sharing and collaboration networks supporting material exchange, knowledge sharing and project collaboration between construction SMEs.',
       link: ''
     },

@@ -43,7 +43,7 @@ const pathwaySection = {
       number: '1',
       title: 'Understand design principles',
       description:
-        'Explore the core DfX strategies: Design for Longevity, Repairability, Disassembly, and Recyclability,  and how they apply to your products.',
+        'Explore the core Design for X (DfX) strategies: Design for Longevity, Repairability, Disassembly, and Recyclability, and how they apply to your products.',
       keyOutputs: [
         'A clear understanding of the design for X principles',
         'Gain insight of how to apply these strategies to your SME',
@@ -84,7 +84,7 @@ const exploreStrategiesSection = {
   resourceTag: 'explore:explore-strategies',
   paragraphs: [
     'Circular economy strategies provide different ways to preserve value, reduce waste and keep products, components and materials in use for longer. For this end, there are different models and frameworks.',
-    "One of these are the DfX framework, which helps teams translate circular economy ambition into design decisions. DfX stand for 'Design for X' where the X stands for Longevity, Repairability, Disassembly, Recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products. The EU regulation, particularly the ESPR, Right to Repair, and packaging regulations, are based and align with these design principles. This means the design choices of companies will soon affect market access. The visualisation below describe these four design strategies that keep products and materials in use longer and can be applied at different scales and degrees."
+    "One of these is the Design for X (DfX) framework, which helps teams translate circular economy ambition into design decisions. Design for X (DfX) means designing for a specific circular outcome, such as longevity, repairability, disassembly or recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products. EU regulation, particularly the Ecodesign for Sustainable Products Regulation (ESPR), Right to Repair, and packaging regulations, is based on and aligned with these design principles. This means the design choices of companies will soon affect market access. The visualisation below describes four design strategies that keep products and materials in use longer and can be applied at different scales and degrees."
   ],
   /*
     DFX FRAMEWORK INFO BOX:
@@ -93,10 +93,10 @@ const exploreStrategiesSection = {
     https://icon-sets.iconify.design/icon-park-outline/
   */
   m3DfxFramework: {
-    title: 'The DfX Framework',
-    intro: 'The DfX Framework',
+    title: 'The Design for X (DfX) Framework',
+    intro: 'The Design for X (DfX) Framework',
     source:
-      'Source: Mesa, Jaime A. (2023). Design for circularity and durability: an integrated approach from DfX guidelines. Research in Engineering Design. 34, 3. 10.1007/s00163-023-00419-1.',
+      'Source: Mesa, Jaime A. (2023). Design for circularity and durability: an integrated approach from Design for X (DfX) guidelines. Research in Engineering Design. 34, 3. 10.1007/s00163-023-00419-1.',
     cards: [
       {
         title: 'Design for Longevity',
@@ -108,7 +108,7 @@ const exploreStrategiesSection = {
           'Avoid planned obsolescence',
           'Design timeless aesthetics'
         ],
-        regulation: 'ESPR durability requirements · Right to Repair Directive'
+        regulation: 'Ecodesign for Sustainable Products Regulation (ESPR) durability requirements · Right to Repair Directive'
       },
       {
         title: 'Design for Repairability',
@@ -130,7 +130,7 @@ const exploreStrategiesSection = {
           'Material compatibility',
           'Labelled components'
         ],
-        regulation: 'ESPR 2025-2030 working plan · Electronics & textiles first'
+        regulation: 'Ecodesign for Sustainable Products Regulation (ESPR) 2025-2030 working plan · Electronics & textiles first'
       },
       {
         title: 'Design for Recyclability',
@@ -297,8 +297,8 @@ const phaseSummary = {
     'Check the boxes below to confirm that you have a basic understanding of the key circular economy principles and are ready to move to the next phase.',
   ],
   checklist: [
-    'A clear understanding of the DfX redesign process',
-    'A completed DfX audit',
+    'A clear understanding of the Design for X (DfX) redesign process',
+    'A completed Design for X (DfX) audit',
     'Design proposal and completion of the Circular strategies wheel workshop',
     'Awareness of how you can redesign your process'
   ]

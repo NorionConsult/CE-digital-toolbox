@@ -107,12 +107,12 @@ export const foodAndAgricultureNetworkSection = {
       link: ''
     },
     {
-      name: 'EIT Food',
+      name: 'European Institute of Innovation and Technology (EIT) Food',
       description: 'EU innovation community connecting agri-food SMEs with research institutions, investors and circular economy accelerators to develop circular food-system solutions.',
       link: ''
     },
     {
-      name: 'IFOAM Organics Europe',
+      name: 'International Federation of Organic Agriculture Movements, now IFOAM Organics International (IFOAM) Organics Europe',
       description: 'European network of organic and agroecological farming organisations providing policy support, knowledge sharing and market access for sustainable agri-SMEs.',
       link: ''
     },

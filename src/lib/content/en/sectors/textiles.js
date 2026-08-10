@@ -10,7 +10,7 @@ export const textilesIntroSection = {
   paragraphs: [
     'The EU textile sector generates approximately 16 kg of textile waste per person annually, with less than 1% recycled back into new fibres.',
     'SMEs represent over 70% of European textile businesses, spanning design, manufacturing, retail, repair and resale.',
-    'The EU Strategy for Sustainable and Circular Textiles (2022) sets binding targets for recyclable design, extended producer responsibility (EPR) and ecodesign by 2030.',
+    'The EU Strategy for Sustainable and Circular Textiles (2022) sets binding targets for recyclable design, Extended Producer Responsibility (EPR) and ecodesign by 2030.',
     'Fast fashion remains dominant, driving overproduction, short product lifespans and high resource consumption - all areas where circular economy practices offer direct alternatives.',
     'Increasing regulatory pressure from the EU Ecodesign for Sustainable Products Regulation (ESPR) and Digital Product Passport (DPP) is reshaping SME obligations.',
     'Key circular economy opportunities include design for durability and disassembly, repair and resale services, fibre-to-fibre recycling, and clothing-as-a-service models.'
@@ -41,7 +41,7 @@ export const textilesBarriersSection = {
     'Digital Product Passports enable traceability and consumer engagement.',
     'Repair cafes and rental or subscription models generate new revenue streams.',
     'Deadstock and surplus fabric upcycling can reduce input material costs.',
-    'B2B textile exchange platforms reduce waste and lower procurement spend.'
+    'Business-to-business (B2B) textile exchange platforms reduce waste and lower procurement spend.'
   ]
 };
 
@@ -110,7 +110,7 @@ export const textilesNetworkSection = {
       link: 'https://www.fashionforgood.com/'
     },
     {
-      name: 'WRAP Textiles 2030 (UK)',
+      name: 'Waste and Resources Action Programme (WRAP) Textiles 2030 (UK)',
       description: 'Industry-wide sustainability commitment with targets on emissions, water and waste, offering tools, guidance and peer learning relevant to textile SMEs.',
       link: 'https://wrap.org.uk/taking-action/textiles/initiatives/textiles-2030'
     },

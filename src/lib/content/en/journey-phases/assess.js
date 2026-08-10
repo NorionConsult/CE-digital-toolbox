@@ -14,7 +14,7 @@ const phaseCard = {
   title: 'Assess',
   colourClass: 'module-card-lime',
   description:
-    'Provides tools to assess CE adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
+    'Provides tools to assess Circular Economy (CE) adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
 };
 
 const hero = {
@@ -45,7 +45,7 @@ const pathwaySection = {
       number: '1',
       title: 'Maturity Assessment',
       description: 'Quick self-diagnosis of how circular your business already is across key dimensions.',
-      keyOutputs: ['CE maturity score', 'Priority areas for focus']
+      keyOutputs: ['Circular Economy (CE) maturity score', 'Priority areas for focus']
     },
     {
       sectionId: 'baseline-mapping',
@@ -162,10 +162,10 @@ const phaseSummary = {
   ],
   checklist: [
     'Understood what the Circular Economy is and why it matters for your business.',
-    'Identified your current CE maturity level (1–5 scale)',
+    'Identified your current Circular Economy (CE) maturity level (1–5 scale)',
     'Mapped your resource inputs, outputs, and waste streams',
     'Identified your main hotspots: energy, materials, water',
-    'Explored practical tools: SCEA, I-GO, ready2LOOP, Material Circularity Indicator (MCI), Saxion Scan',
+    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Material Circularity Indicator (MCI), Saxion Scan',
     'Reviewed a real-world case example and potential savings'
   ]
 };

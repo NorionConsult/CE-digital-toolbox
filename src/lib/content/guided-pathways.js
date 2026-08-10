@@ -57,7 +57,7 @@ export const guidedPathways = {
       title: 'Learn',
       colourClass: 'module-card-green',
       description:
-        'Introduces key CE and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of CE, even without prior knowledge.'
+        'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, even without prior knowledge.'
     },
     {
       number: '02',
@@ -66,7 +66,7 @@ export const guidedPathways = {
       title: 'Assess',
       colourClass: 'module-card-lime',
       description:
-        'Provides tools to assess CE adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
+        'Provides tools to assess Circular Economy (CE) adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
     },
     {
       number: '03',

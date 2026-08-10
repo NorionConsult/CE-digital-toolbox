@@ -14,7 +14,7 @@ export const tourismIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'Tourism contributes almost EUR 1.8 trillion to EU GDP and supports over 23 million jobs, approximately 10% of total economic output.',
+    'Tourism contributes almost EUR 1.8 trillion to EU Gross Domestic Product (GDP) and supports over 23 million jobs, approximately 10% of total economic output.',
     'Europe accounts for 51% of international tourist arrivals globally, making it the world\'s most visited region.',
     'Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems.',
     'Tourism and food services generate waste streams containing approximately 37-72% organic waste, 6-40% paper and 5-15% plastic, with limited recovery systems in most destinations.',
