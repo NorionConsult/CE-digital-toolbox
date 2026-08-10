@@ -91,11 +91,14 @@
   }
 
   dt {
+    flex: 0 0 auto;
     color: var(--dark);
     font-weight: 700;
+    white-space: nowrap;
   }
 
   dd {
+    min-width: 0;
     color: var(--muted);
     text-align: right;
   }

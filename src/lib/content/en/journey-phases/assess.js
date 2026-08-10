@@ -165,7 +165,7 @@ const phaseSummary = {
     'Identified your current Circular Economy (CE) maturity level (1–5 scale)',
     'Mapped your resource inputs, outputs, and waste streams',
     'Identified your main hotspots: energy, materials, water',
-    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Material Circularity Indicator (MCI), Saxion Scan',
+    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Hotspot Analysis Tool, and Footprint Calculator',
     'Reviewed a real-world case example and potential savings'
   ]
 };

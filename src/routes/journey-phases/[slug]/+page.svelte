@@ -18,9 +18,20 @@
 
   /** @type {{ src: string; alt: string; caption?: string } | null} */
   let zoomedImage = null;
+  /** @type {boolean[]} */
+  let summaryChecks = [];
+  let currentSummaryKey = '';
 
   $: phaseSections = journeyPhase?.sections ?? [];
   $: summaryChecklist = journeyPhase?.summaryChecklist ?? [];
+  $: summaryKey = `${journeyPhase?.slug ?? ''}-${summaryChecklist.length}`;
+  $: if (summaryKey !== currentSummaryKey) {
+    currentSummaryKey = summaryKey;
+    summaryChecks = summaryChecklist.map(() => false);
+  }
+  $: summaryCompletedCount = summaryChecks.filter(Boolean).length;
+  $: isSummaryComplete =
+    summaryChecklist.length > 0 && summaryCompletedCount === summaryChecklist.length;
 
   /**
    * @param {{ resourceTag?: string; showAllPhaseTools?: boolean }} section
@@ -50,6 +61,23 @@
 
   function closeZoomedImage() {
     zoomedImage = null;
+  }
+
+  /**
+   * @param {number} index
+   */
+  function toggleSummaryCheck(index) {
+    summaryChecks[index] = !summaryChecks[index];
+    summaryChecks = [...summaryChecks];
+  }
+
+  /**
+   * @param {MouseEvent} event
+   */
+  function preventLockedSummaryNavigation(event) {
+    if (!isSummaryComplete) {
+      event.preventDefault();
+    }
   }
 </script>
 
@@ -151,13 +179,16 @@
       class:module-detail-section-muted={sectionIndex % 2 === 1}
       id={section.id}
     >
-      <div class="container module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
-        <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
+      <div class="container module-detail-content">
+        <header class="module-detail-heading" class:module-detail-heading-wide={!hasSideContent}>
           {#if !section.hideStepEyebrow && section.number}
             <p class="eyebrow">Step {section.number}</p>
           {/if}
           <h2>{section.bodyTitle}</h2>
+        </header>
 
+        <div class="module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
+          <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
           {#each section.bodyParagraphs as paragraph, paragraphIndex}
             <p><InlineText text={paragraph} /></p>
 
@@ -464,7 +495,7 @@
             </div>
           {/if}
 
-        </article>
+          </article>
 
         {#if section.image}
           <figure class="module-detail-image">
@@ -483,6 +514,7 @@
             <figcaption>{section.image.caption}</figcaption>
           </figure>
         {/if}
+        </div>
       </div>
 
       {#if section.businessModelCards}
@@ -591,41 +623,53 @@
         <div class="module-summary-checklist" aria-label={journeyPhase.summaryTitle}>
           <div class="summary-progress">
             <h3>Checklist</h3>
-            <p>{summaryChecklist.length} / {summaryChecklist.length} complete</p>
+            <p>{summaryCompletedCount} / {summaryChecklist.length} complete</p>
           </div>
 
           <div class="summary-items">
-            {#each summaryChecklist as item}
-              <div class="summary-item">
-                <input type="checkbox" checked disabled aria-label="Completed" />
+            {#each summaryChecklist as item, itemIndex}
+              <label class="summary-item">
+                <input
+                  type="checkbox"
+                  checked={summaryChecks[itemIndex]}
+                  aria-label={item}
+                  on:change={() => toggleSummaryCheck(itemIndex)}
+                />
                 <span>{item}</span>
-              </div>
+              </label>
             {/each}
           </div>
 
           <div class="summary-completion">
             {#if journeyPhase.slug === 'monitor'}
-              <div class="summary-final-message">
-                <p>{journeyPhasePage.finalCongratulations}</p>
-              </div>
+              {#if isSummaryComplete}
+                <div class="summary-final-message">
+                  <p>{journeyPhasePage.finalCongratulations}</p>
+                </div>
 
-              <div class="summary-completion-actions">
-                <a href="{base}/guided-pathways/#sectors" class="secondary-button">
-                  {journeyPhasePage.exploreSectors}
-                </a>
-                <a href="{base}/cases/" class="secondary-button">
-                  {journeyPhasePage.seeCases}
-                </a>
-                <a href="{base}/tools/" class="secondary-button">
-                  {journeyPhasePage.seeTools}
-                </a>
-              </div>
+                <div class="summary-completion-actions">
+                  <a href="{base}/guided-pathways/#sectors" class="secondary-button">
+                    {journeyPhasePage.exploreSectors}
+                  </a>
+                  <a href="{base}/cases/" class="secondary-button">
+                    {journeyPhasePage.seeCases}
+                  </a>
+                  <a href="{base}/tools/" class="secondary-button">
+                    {journeyPhasePage.seeTools}
+                  </a>
+                </div>
+              {/if}
             {:else if nextPhase}
               <div class="summary-completion-actions">
                 <a
                   href="{base}/journey-phases/{nextPhase.slug}/"
                   class="pathway-link summary-next-phase-link"
+                  class:summary-action-disabled={!isSummaryComplete}
+                  aria-disabled={!isSummaryComplete}
                   aria-label="Go to {nextPhase.shortName}: {nextPhase.title}"
+                  tabindex={isSummaryComplete ? 0 : -1}
+                  title={isSummaryComplete ? undefined : 'Complete the checklist before moving on'}
+                  on:click={preventLockedSummaryNavigation}
                 >
                   {journeyPhasePage.nextPhase}
                 </a>
@@ -775,10 +819,13 @@
     background-color: var(--light-bg);
   }
 
-  .module-detail-copy h2,
+  .module-detail-heading h2,
   .module-summary-copy h2 {
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-transform: uppercase;
+  }
+
+  .module-summary-copy h2 {
     margin-bottom: 18px;
   }
 
@@ -875,6 +922,20 @@
     margin-top: 0;
   }
 
+  .summary-action-disabled {
+    border-color: var(--soft-border);
+    background-color: color-mix(in srgb, var(--muted) 22%, var(--white));
+    color: var(--muted);
+    cursor: not-allowed;
+    pointer-events: auto;
+  }
+
+  .summary-action-disabled:hover {
+    border-color: var(--soft-border);
+    background-color: color-mix(in srgb, var(--muted) 22%, var(--white));
+    color: var(--muted);
+  }
+
   .module-detail-section {
     padding: 72px 0;
     background-color: var(--white);
@@ -887,6 +948,19 @@
 
   .module-detail-section-muted {
     background-color: var(--light-bg);
+  }
+
+  .module-detail-content {
+    display: grid;
+    gap: 22px;
+  }
+
+  .module-detail-heading {
+    max-width: 760px;
+  }
+
+  .module-detail-heading-wide {
+    max-width: 980px;
   }
 
   .module-detail-layout {
@@ -1965,6 +2039,7 @@
     padding: 14px;
     border-radius: 14px;
     background-color: var(--light-bg);
+    cursor: pointer;
   }
 
   .summary-items input {

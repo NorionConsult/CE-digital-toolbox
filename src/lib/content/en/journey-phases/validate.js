@@ -138,7 +138,7 @@ const quickScanSection = {
   resourceTag: 'validate:quick-scan',
   paragraphs: [
     'Not every circular business model will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
-    'Use this section to support the assessment throught criteria and a prioritisation method.  The result can be downloaded. Please use Firefox, Safari of Google Chrome browser if you want the download to work correctly.'
+    'Use this section to support the assessment through criteria and a prioritisation method.  The result can be downloaded. Please use Firefox, Safari of Google Chrome browser if you want the download to work correctly.'
   ],
   /*
     QUICK SCAN QUESTIONNAIRE
@@ -233,7 +233,7 @@ const quickScanSection = {
     ]
   },
   closingParagraphs: [
-    'Once you have screened business models to consider, you can now move on to shortlist your priority options. In this step, you can narrow down from 1-3 strategies to develop into a business case. For a template to screen your options, see the tool "Shortlisting options template". These considerations can help you understand and clarify the key aspects that these options bring to support further development of your business case in the next phase.'
+    'Once you have screened business models to consider, you can now move on to shortlist your priority options. In this step, you can narrow down from 1-3 strategies to develop into a business case. For a template to screen your options, see the tool "Shortlisting of Options" template. These considerations can help you understand and clarify the key aspects that these options bring to support further development of your business case in the next phase.'
   ]
 };
 

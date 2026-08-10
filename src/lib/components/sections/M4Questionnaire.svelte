@@ -313,8 +313,11 @@
   }
 
   .m4-questionnaire-heading h3 {
-    font-size: clamp(1.7rem, 3vw, 2.6rem);
-    text-transform: uppercase;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--dark);
   }
 
   .m4-questionnaire-heading p {

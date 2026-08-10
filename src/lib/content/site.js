@@ -28,6 +28,15 @@
   QR = Quick Response (QR)
   SaaS = Software as a Service (SaaS)
   E&S = Environmental and social (E&S)
+  HDPE = High-density polyethylene (HDPE)
+  LDPE = Low-density polyethylene (LDPE)
+  PET/PETE = Polyethylene terephthalate (PET/PETE)
+  PP = Polypropylene (PP)
+  PS = Polystyrene (PS)
+  PA = Polyamide (PA)
+  UNDP = United Nations Development Programme (UNDP)
+  GCF = Green Climate Fund (GCF)
+  EMIS = Energy Management Information System (EMIS)
 */
 export const site = {
   name: 'Circular Economy Toolbox',

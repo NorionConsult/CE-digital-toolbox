@@ -131,7 +131,7 @@ const measuringSuccessSection = {
   title: 'Measuring Success',
   resourceTag: 'monitor:measuring-success',
   paragraphs: [
-    'With the right indicators chosen in the exercises above, the next step is to put them to use. The two tools on the following slide help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.',
+    'With the right indicators chosen in the exercises above, the next step is to put them to use. The two tools on the following section help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.',
     "**Track real progress against your circular goals**",
     "The indicators you selected in Exercise 1 and Exercise 2 are directly linked to your circular strategy. Measuring them consistently tells you whether your actions are having the intended effect, and gives you evidence to act on.",
     "**Support smarter decisions inside your business**",

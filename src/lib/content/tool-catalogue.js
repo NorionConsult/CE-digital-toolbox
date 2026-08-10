@@ -902,7 +902,7 @@ const toolCatalogue = [
   {
     id: 'resource-038',
     slug: 'breeam-in-use-sustainable-standard',
-    title: 'Building Research Establishment Environmental Assessment Method (BREEAM) In-Use Sustainable Standard',
+    title: 'BREEAM In-Use Sustainable Standard',
     description:
       'A tool for exploring Building Research Establishment Environmental Assessment Method (BREEAM) data on certified building assessments and integrating it with websites, tools and software.',
     about:
@@ -913,14 +913,14 @@ const toolCatalogue = [
       sectorSections: ['construction:relevant-tools']
     },
     sector: 'Construction',
-    effort: 'Medium',
+    effort: 'High',
     language: 'English',
     provider: 'Building Research Establishment Environmental Assessment Method (BREEAM)',
     access: 'Paid',
-    timeRequired: '60 minutes',
-    preparationNeeded: 'None',
+    timeRequired: 'Days',
+    preparationNeeded: 'Read the documented API endpoints and data structure to understand how to integrate the data into your own systems.',
     output: 'Deeper understanding of certification assessments and suitable certification options',
-    bestFor: 'All construction SMEs',
+    bestFor: 'All construction SMEs with technical capabilities',
     format: 'Digital tool',
     toolLink: 'https://breeam.com/tools/api'
   },
@@ -1311,7 +1311,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Low',
     language: 'English',
-    provider: 'United Nations Industrial Development Organization (UNIDO)',
+    provider: 'EU4GRE',
     access: 'Free',
     timeRequired: '15-30 minutes',
     preparationNeeded: 'Basic knowledge of your options, a pen and the printout.',
@@ -1834,7 +1834,7 @@ const toolCatalogue = [
     description:
       'Reports and guidelines on building energy efficiency retrofits.',
     about:
-      'Mershenq provides reports, trainings, guidelines and resources related to building energy efficiency, retrofitting and emissions reduction under a UNDP-GCF project. Materials include guidebooks, energy audit guidance and EMIS training.',
+      'Mershenq provides reports, trainings, guidelines and resources related to building energy efficiency, retrofitting and emissions reduction under a United Nations Development Programme (UNDP)-Green Climate Fund (GCF) project. Materials include guidebooks, energy audit guidance and Energy Management Information System (EMIS) training.',
     journeyPhases: ['Implement'],
     placements: {
       sectors: ['construction'],

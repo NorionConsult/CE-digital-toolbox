@@ -14,7 +14,7 @@ const phaseCard = {
   title: 'Learn',
   colourClass: 'module-card-green',
   description:
-    'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, even without prior knowledge.'
+    'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, without prior knowledge.'
 };
 
 const hero = {
@@ -63,7 +63,7 @@ const LearningresourcesSection = {
   id: 'learning-resources',
   title: 'E-courses and learning resources',
   paragraphs: [
-    'Use this section to introduce the learning resources that can help users build a basic understanding before they continue into the more practical journey phases.'
+    'Use this section to introduce the learning resources that can help you build a basic understanding before you continue into the more practical journey phases.'
   ],
   hideStepEyebrow: true,
   showRelevantTools: false,
@@ -88,11 +88,11 @@ const LearningresourcesSection = {
         ],
         learningGoals: [
           'Understand the basic difference between a linear and a circular economy',
-          'Grasp why finite resources make the current "take-make-waste" model unsustainable',
+          'Understand why finite resources make the current "take-make-waste" model unsustainable',
           'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms'
         ],
         whyTakeCourse: [
-          "At only a few minutes per video, this is the fastest possible way to build a non-technical understanding of the circular economy before moving into more detailed toolbox content. It's an ideal starting point for staff who have never encountered the concept before and need a plain-language explanation."
+          "At only a few minutes per video, this is a fast way to build a non-technical understanding of the circular economy before moving into more detailed toolbox content. It's an ideal starting point for staff who have never encountered the concept before and need a plain-language explanation."
         ]
       },
       {
@@ -132,7 +132,7 @@ const LearningresourcesSection = {
           'Learn the basics of material traceability for transparency in a circular supply chain'
         ],
         whyTakeCourse: [
-          'Unlike generic introductory resources, this tool is purpose-built for SME suppliers operating within larger value chains, with content tailored to specific sectors rather than circular economy in the abstract. Its game-based, interactive format makes it a practical, hands-on complement to more conceptual resources, well suited for SMEs ready to apply circular thinking directly to their own sector and supply chain role.'
+          "Unlike generic introductory resources, this tool is purpose-built for you as an SME supplier operating within larger value chains, with content tailored to your specific sector rather than the circular economy in the abstract. Its game-based, interactive format makes it a practical, hands-on complement to more conceptual resources - well suited if you\'re ready to apply circular thinking directly to your own sector and supply-chain role."
         ]
       }
     ]

@@ -73,7 +73,7 @@ const implementationPlanSection = {
   paragraphs: [
     "Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage.",
     "Scope defines what the plan covers. Usually the 1-3 prioritised circular opportunities, which parts of the business they affect, the timeframe, and what's deliberately left out of scope for this round. Actions are the concrete, sequenced steps needed to move each solution from idea to reality, separating quick wins from longer structural changes.",
-     "Responsibilities assign clear ownership of each action who leads, who supports, who signs off, and where external partners are needed. Required resources cover the budget, time, equipment, training, and expertise needed to execute your plan, including any funding gaps that need to be addressed. Dependencies will show what each action relies on before it can succeed, helping to show  bottlenecks and inform in what order you should impliment your circular actions. Expected results are the measurable environmental, economic, or operational outcomes you expect to see once actions are complete, tied to the Key Performance Indicator (KPI) Canvas. In practice, the canvas lays these out as a simple grid per opportunity, so your team can see how each piece connects and revisit it as the plan evolves."
+     "Responsibilities assign clear ownership of each action who leads, who supports, who signs off, and where external partners are needed. Required resources cover the budget, time, equipment, training, and expertise needed to execute your plan, including any funding gaps that need to be addressed. Dependencies will show what each action relies on before it can succeed, helping to show  bottlenecks and inform in what order you should implement your circular actions. Expected results are the measurable environmental, economic, or operational outcomes you expect to see once actions are complete, tied to the Key Performance Indicator (KPI) Canvas. In practice, the canvas lays these out as a simple grid per opportunity, so your team can see how each piece connects and revisit it as the plan evolves."
   ],
   /*
     IMPLEMENTATION PRINCIPLES INFO BOX:
@@ -124,7 +124,7 @@ const roadmapMilestonesSection = {
   title: 'Roadmap & Milestones',
   resourceTag: 'implement:roadmap-milestones',
   paragraphs: [
-    "Setting milestones helps yous turn circular strategies into manageable steps. Instead of treating implementation as one large change, milestones make it easier to organise actions, track progress, and stay focused on priorities. Milestones also help businesses identify what needs to happen first, who is responsible, and when progress should be reviewed. This makes implementation more practical and allows adjustments to be made if challenges arise. By working with clear milestones, you can keep momentum, measure progress over time, and move towards circular goals in a more structured way.",
+    "Setting milestones helps you turn circular strategies into manageable steps. Instead of treating implementation as one large change, milestones make it easier to organise actions, track progress, and stay focused on priorities. Milestones also help businesses identify what needs to happen first, who is responsible, and when progress should be reviewed. This makes implementation more practical and allows adjustments to be made if challenges arise. By working with clear milestones, you can keep momentum, measure progress over time, and move towards circular goals in a more structured way.",
     "Process milestone – A key step in how you work e.g. ‘Suplier audit completed’",
     "Output milestone – A deliverable produced e.g. ‘Takeback scheme launched’",
     "Review milestone – A checkpoint for learning e.g. ‘Month 3 progress review’"
@@ -137,7 +137,7 @@ const testPilotSection = {
   title: 'Test & Pilot',
   resourceTag: 'implement:test-and-pilot',
   paragraphs: [
-    'Before you can test a circular strategy in the real world, you need to be able to see it clearly and, so do the partners, suppliers, and colleagues who will need to make it work alongside you. That is where these two tools come in, and they work best used together',
+    'Before you can test a circular strategy in the real world, you need to be able to see it clearly and, so do the partners, suppliers, and colleagues who will need to make it work alongside you.',
     'Start with the **Circular Loop Designer**. Use it to map out the material flows your pilot strategy depends on: where inputs come from, how products move through use, and what happens to materials at end of life. The colour-coded arrows help you distinguish what already exists (green), what is traditional and needs to change (red), and what still needs to be built (blue). This is not just a drawing exercise, it is a way of surfacing the gaps, dependencies, and missing partners in your circular model before you commit time and money to testing it. A loop that looks simple in a strategy document often reveals significant complexity once you try to map the actual actors and flows. Better to find that out at the drawing stage than halfway through a pilot.'
   ]
 };
