@@ -1,21 +1,13 @@
 <script>
   import { base } from '$app/paths';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import { site } from '$lib/content/site.js';
 
   export let caseStudy;
 
-  function splitParagraphs(text = '') {
-    return String(text)
-      .split(/\n+/)
-      .map((paragraph) => paragraph.trim())
-      .filter(Boolean);
-  }
-
   $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
   $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
-  $: descriptionParagraphs = splitParagraphs(caseStudy.description);
-  $: rStrategyDescriptionParagraphs = splitParagraphs(caseStudy.rStrategyDescription);
   $: taxonomyRows = [
     ['Company name', caseStudy.companyName],
     ['Country', caseStudy.countryDisplay || caseStudy.country],
@@ -40,7 +32,7 @@
         {/each}
       </div>
       <h1>{caseStudy.companyName}</h1>
-      <p>{caseStudy.summary}</p>
+      <RichText text={caseStudy.summary} className="case-summary" />
 
       {#if caseLink}
         <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
@@ -60,20 +52,16 @@
 <section class="case-detail-section">
   <div class="container case-detail-layout">
     <article class="case-main">
-      {#if rStrategyDescriptionParagraphs.length}
+      {#if caseStudy.rStrategyDescription}
         <section class="case-text-block">
           <h2>How does this case apply circular strategies?</h2>
-          {#each rStrategyDescriptionParagraphs as paragraph}
-            <p>{paragraph}</p>
-          {/each}
+          <RichText text={caseStudy.rStrategyDescription} />
         </section>
       {/if}
 
       <section class="case-text-block">
         <h2>Description of case</h2>
-        {#each descriptionParagraphs as paragraph}
-          <p>{paragraph}</p>
-        {/each}
+        <RichText text={caseStudy.description} />
       </section>
     </article>
 
@@ -128,7 +116,7 @@
     text-transform: uppercase;
   }
 
-  .case-hero p {
+  :global(.case-summary) {
     max-width: 740px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.25rem;

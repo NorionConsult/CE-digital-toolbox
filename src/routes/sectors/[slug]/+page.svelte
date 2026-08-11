@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { sectorPage } from '$lib/content/sector-page.js';
   import { site } from '$lib/content/site.js';
@@ -38,7 +39,7 @@
     <div class="sector-hero-copy">
       <p class="eyebrow">{sector.number}</p>
       <h1>{sector.title}</h1>
-      <p class="sector-intro"><InlineText text={sector.description} /></p>
+      <RichText text={sector.description} className="sector-intro" />
 
       <nav class="sector-section-navigation" aria-label={`${sector.title} page sections`}>
         {#each sector.navigation as item}
@@ -57,9 +58,7 @@
     </div>
 
     <div class="sector-prose">
-      {#each introductionSection.paragraphs as paragraph}
-        <p><InlineText text={paragraph} /></p>
-      {/each}
+      <RichText text={introductionSection.paragraphs} />
     </div>
   </div>
 </section>
@@ -69,7 +68,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{casesSection.title}</h2>
-      <p><InlineText text={casesSection.intro} /></p>
+      <RichText text={casesSection.intro} />
     </div>
 
     {#if relatedCases.length > 0}
@@ -91,7 +90,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{barriersSection.title}</h2>
-      <p><InlineText text={barriersSection.intro} /></p>
+      <RichText text={barriersSection.intro} />
     </div>
 
     <div class="barrier-opportunity-grid">
@@ -121,7 +120,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{bestPracticesSection.title}</h2>
-      <p><InlineText text={bestPracticesSection.intro} /></p>
+      <RichText text={bestPracticesSection.intro} />
     </div>
 
     <div class="best-practices-grid">
@@ -144,7 +143,7 @@
     <div class="section-intro">
       <p class="eyebrow">{sector.title}</p>
       <h2>{relevantToolsSection.title}</h2>
-      <p><InlineText text={relevantToolsSection.intro} /></p>
+      <RichText text={relevantToolsSection.intro} />
     </div>
 
     {#if relatedResources.length > 0}
@@ -195,7 +194,7 @@
     text-transform: uppercase;
   }
 
-  .sector-intro {
+  :global(.sector-intro) {
     max-width: 720px;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.25rem;

@@ -38,13 +38,13 @@ const sectionButtons = [];
   should be shown again later.
 */
 const pathwaySection = {
-  title: 'Phase overview',
+  title: 'Are you new to circular economy?',
   /*
     Edit the phase overview text here.
     Each quoted line inside the brackets becomes one paragraph on the page.
   */
   paragraphs: [
-    'If you are new to Circular Economy and Resource Efficient and Cleaner Production (RECP) concepts, you can first and foremost familiarise yourself with the terminology and foundational principles. This section will provide you with a selection of introductory courses to get a comprehensive introduction to the key concepts.',
+    'If you are new to Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, you can first and foremost familiarise yourself with the terminology and foundational principles. This section will provide you with a selection of introductory courses to get a comprehensive introduction to the key concepts.',
     'After you have familiarised yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly.',
     'The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests.'
   ],

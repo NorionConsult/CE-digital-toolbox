@@ -1667,7 +1667,7 @@ const toolCatalogue = [
       'A localized toolkit helping Armenian SMEs apply circular design principles.',
     about:
       'CirculUP! provides downloadable resources tailored for Armenian SMEs, incubators and accelerators, including toolkits and Circular Economy Guidelines in Armenian and English.',
-    journeyPhases: ['Implement'],
+    journeyPhases: ['Learn','Implement'],
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'Armenian, English',
@@ -1730,7 +1730,7 @@ const toolCatalogue = [
       'Reports and guidelines on building energy efficiency retrofits.',
     about:
       'Mershenq provides reports, trainings, guidelines and resources related to building energy efficiency, retrofitting and emissions reduction under a United Nations Development Programme (UNDP)-Green Climate Fund (GCF) project. Materials include guidebooks, energy audit guidance and Energy Management Information System (EMIS) training.',
-    journeyPhases: ['Implement'],
+    journeyPhases: ['Assess', 'Implement'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1744,8 +1744,8 @@ const toolCatalogue = [
     preparationNeeded: 'None',
     output: 'Guidebooks, training courses and monitoring methodologies',
     bestFor: 'Facility managers, contractors and municipalities',
-    format: 'PDF guidebooks and training courses',
-    toolLink: 'https://mershenq.am/en/publications'
+    format: 'PDF guidebooks and training courses',  
+    toolLink: 'https://mershenq.am/en/publications/guidelines'
   },
   {
     id: 'resource-080',

@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths';
-  import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/site.js';
   import { isDownloadableToolLink } from '$lib/content/tool-catalogue-utils.js';
@@ -13,7 +13,6 @@
   $: toolHref = isLocalToolLink ? `${base}${resource.toolLink}` : resource.toolLink;
   $: isDownloadableTool = isDownloadableToolLink(resource.toolLink);
   $: shouldDownloadTool = isLocalToolLink && isDownloadableTool;
-  $: aboutBlocks = getAboutBlocks(resource.about);
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -32,53 +31,6 @@
     ['Access', resource.accessDisplay ?? resource.access]
   ];
 
-  /**
-   * Editors can write tool `about` text as one string with `||` between blocks,
-   * or as an array of strings. Blocks starting with `1.`, `2.`, `3.` become a
-   * numbered list. Blocks starting with `-` become a bulleted list.
-   *
-   * @param {string | string[] | undefined} value
-   * @returns {({ type: 'paragraph'; text: string } | { type: 'ordered' | 'unordered'; items: string[] })[]}
-   */
-  function getAboutBlocks(value) {
-    const textBlocks = Array.isArray(value)
-      ? value
-      : String(value ?? '').split(/\s*\|\|\s*|\n\s*\n/g);
-
-    /** @type {({ type: 'paragraph'; text: string } | { type: 'ordered' | 'unordered'; items: string[] })[]} */
-    const blocks = [];
-    /** @type {{ type: 'ordered' | 'unordered'; items: string[] } | null} */
-    let activeList = null;
-
-    for (const textBlock of textBlocks) {
-      const block = String(textBlock ?? '').trim();
-
-      if (!block) {
-        continue;
-      }
-
-      const orderedItem = block.match(/^\d+\.\s+(.+)$/);
-      const unorderedItem = block.match(/^-\s+(.+)$/);
-      const listType = orderedItem ? 'ordered' : unorderedItem ? 'unordered' : null;
-
-      if (listType) {
-        const itemText = orderedItem?.[1] ?? unorderedItem?.[1] ?? '';
-
-        if (!activeList || activeList.type !== listType) {
-          activeList = { type: listType, items: [] };
-          blocks.push(activeList);
-        }
-
-        activeList.items.push(itemText);
-        continue;
-      }
-
-      activeList = null;
-      blocks.push({ type: 'paragraph', text: block });
-    }
-
-    return blocks;
-  }
 </script>
 
 <svelte:head>
@@ -113,25 +65,7 @@
 <section class="resource-detail-section">
   <div class="container resource-detail-layout">
     <article class="resource-main">
-      <div class="resource-about">
-        {#each aboutBlocks as block}
-          {#if block.type === 'paragraph'}
-            <p><InlineText text={block.text} /></p>
-          {:else if block.type === 'ordered'}
-            <ol>
-              {#each block.items as item}
-                <li><InlineText text={item} /></li>
-              {/each}
-            </ol>
-          {:else}
-            <ul>
-              {#each block.items as item}
-                <li><InlineText text={item} /></li>
-              {/each}
-            </ul>
-          {/if}
-        {/each}
-      </div>
+      <RichText text={resource.about} className="resource-about" />
 
       <div class="resource-detail-grid">
         {#each detailRows as row}
@@ -219,26 +153,26 @@
     text-transform: uppercase;
   }
 
-  .resource-about {
+  :global(.resource-about) {
     display: grid;
     gap: 18px;
   }
 
-  .resource-about p,
-  .resource-about ol,
-  .resource-about ul {
+  :global(.resource-about p),
+  :global(.resource-about ol),
+  :global(.resource-about ul) {
     max-width: 760px;
     font-size: 1.08rem;
   }
 
-  .resource-about ol,
-  .resource-about ul {
+  :global(.resource-about ol),
+  :global(.resource-about ul) {
     display: grid;
     gap: 10px;
     padding-left: 26px;
   }
 
-  .resource-about li {
+  :global(.resource-about li) {
     line-height: 1.45;
   }
 

@@ -342,9 +342,18 @@ type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button say
 `Download tool`. Other links say `Open tool`. Editors only need to update
 `toolLink`; there is no separate button text field to maintain.
 
-### Tool About Text
+### Formatting Long Paragraph Text
 
-Use `about` for the longer text on the individual tool page.
+These formatting rules work in long editable text fields, including:
+
+- tool `about` text
+- SME journey phase paragraph fields such as `paragraphs`, `bodyParagraphs`,
+  `closingParagraphs` and `summaryParagraphs`
+- sector guide intro and paragraph fields
+- case `summary`, `description` and `rStrategyDescription`
+
+Do not use these formatting shortcuts in technical fields such as `id`, `slug`,
+`sectionId`, image paths, URLs, taxonomy values, button labels or titles.
 
 To make two paragraphs while keeping the text in one field, write `||` between
 paragraphs:

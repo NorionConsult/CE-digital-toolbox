@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import { journeyPhasePage } from '$lib/content/journey-phase-page.js';
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
@@ -99,7 +100,7 @@
       <p class="eyebrow">{journeyPhase.shortName}</p>
       <h1>{journeyPhase.title}</h1>
 
-      <p class="subpage-intro"><InlineText text={journeyPhase.intro} /></p>
+      <RichText text={journeyPhase.intro} className="subpage-intro" />
 
       {#if phaseSections.length > 0 && !journeyPhase.hideSectionNavigation}
         <nav class="module-section-navigation" aria-label="{journeyPhase.title} sections">
@@ -124,9 +125,7 @@
     <div class="module-body-text">
       <h2>{journeyPhase.bodyTitle}</h2>
 
-      {#each journeyPhase.bodyParagraphs as paragraph}
-        <p><InlineText text={paragraph} /></p>
-      {/each}
+      <RichText text={journeyPhase.bodyParagraphs} />
     </div>
 
     {#if phaseSections.length > 0 && !journeyPhase.hidePathwayCards}
@@ -190,7 +189,7 @@
         <div class="module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
           <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
           {#each section.bodyParagraphs as paragraph, paragraphIndex}
-            <p><InlineText text={paragraph} /></p>
+            <RichText text={paragraph} />
 
             {#if section.inlineImage?.afterParagraph === paragraphIndex + 1}
               <figure
@@ -242,7 +241,7 @@
                       {/each}
                     </ul>
                   {:else}
-                    <p><InlineText text={card.text} /></p>
+                <RichText text={card.text} />
                   {/if}
                 </div>
               {/each}
@@ -275,7 +274,7 @@
 
                     <div>
                       <h4>{item.title}</h4>
-                      <p><InlineText text={item.text} /></p>
+                      <RichText text={item.text} />
                     </div>
                   </article>
                 {/each}
@@ -286,7 +285,7 @@
           {#if section.m3DfxFramework}
             <aside class="m3-dfx-framework">
               <div class="m3-dfx-heading">
-                <p><InlineText text={section.m3DfxFramework.intro} /></p>
+                <RichText text={section.m3DfxFramework.intro} />
               </div>
 
               <div class="m3-dfx-grid">
@@ -304,7 +303,7 @@
                     <div class="m3-dfx-card-body">
                       <section>
                         <h5>What it means</h5>
-                        <p><InlineText text={card.meaning} /></p>
+                        <RichText text={card.meaning} />
                       </section>
 
                       <section>
@@ -316,13 +315,13 @@
                             {/each}
                           </ul>
                         {:else}
-                          <p><InlineText text={card.application} /></p>
+                          <RichText text={card.application} />
                         {/if}
                       </section>
 
                       <section>
                         <h5>EU regulation</h5>
-                        <p><InlineText text={card.regulation} /></p>
+                        <RichText text={card.regulation} />
                       </section>
                     </div>
                   </article>
@@ -330,7 +329,7 @@
               </div>
 
               {#if section.m3DfxFramework.source}
-                <p class="m3-dfx-source"><InlineText text={section.m3DfxFramework.source} /></p>
+                <RichText text={section.m3DfxFramework.source} className="m3-dfx-source" />
               {/if}
             </aside>
           {/if}
@@ -338,7 +337,7 @@
           {#if section.m3ProcessRedesign}
             <aside class="m3-process-redesign">
               <div class="m3-process-heading">
-                <p><InlineText text={section.m3ProcessRedesign.intro} /></p>
+                <RichText text={section.m3ProcessRedesign.intro} />
               </div>
 
               <div class="m3-process-flow-arrow m3-process-flow-arrow-top" aria-hidden="true"></div>
@@ -353,7 +352,7 @@
                         aria-hidden="true"
                       ></span>
                       <h4>{column.title}</h4>
-                      <p><InlineText text={column.subtitle} /></p>
+                      <RichText text={column.subtitle} />
                     </div>
 
                     <ul>
@@ -368,19 +367,17 @@
               <div class="m3-process-flow-arrow" aria-hidden="true"></div>
 
               {#if section.m3ProcessRedesign.footer}
-                <p class="m3-process-footer">
+                <div class="m3-process-footer">
                   <span aria-hidden="true">↻</span>
-                  <InlineText text={section.m3ProcessRedesign.footer} />
-                </p>
+                  <RichText text={section.m3ProcessRedesign.footer} />
+                </div>
               {/if}
             </aside>
           {/if}
 
           {#if section.closingParagraphs}
             <div class="module-detail-closing">
-              {#each section.closingParagraphs as paragraph}
-                <p><InlineText text={paragraph} /></p>
-              {/each}
+              <RichText text={section.closingParagraphs} />
             </div>
           {/if}
 
@@ -399,7 +396,7 @@
                         aria-hidden="true"
                       ></span>
                     </div>
-                    <p><InlineText text={section.m3WheelWorkshop.introduction} /></p>
+                    <RichText text={section.m3WheelWorkshop.introduction} />
                     <p class="m3-wheel-workshop-outcome">
                       <strong>Expected outcomes:</strong> <InlineText text={section.m3WheelWorkshop.outcome} />
                     </p>
@@ -411,11 +408,11 @@
                       <span class="m3-wheel-workshop-time">{section.m3WheelWorkshop.preparation.time}</span>
                     </div>
 
-                    <p><InlineText text={section.m3WheelWorkshop.preparation.text} /></p>
+                    <RichText text={section.m3WheelWorkshop.preparation.text} />
 
                     <div class="m3-wheel-workshop-details">
                       {#each section.m3WheelWorkshop.preparation.details as detail}
-                        <p><InlineText text={detail} /></p>
+                        <RichText text={detail} />
                       {/each}
                     </div>
 
@@ -452,7 +449,7 @@
                         <span class="m3-wheel-workshop-time">{step.time}</span>
                       </div>
 
-                      <p><InlineText text={step.text} /></p>
+                      <RichText text={step.text} />
                       <p><strong>Tip:</strong> <InlineText text={step.tip} /></p>
                     </article>
                   {/each}
@@ -471,7 +468,7 @@
                         {section.learningResources.labels?.badge ?? 'Learning resource'}
                       </p>
                       <h3>{card.courseTitle}</h3>
-                      <p><InlineText text={card.shortDescription} /></p>
+                      <RichText text={card.shortDescription} />
                     </div>
 
                     <dl class="m1-learning-resource-meta" aria-label="Course information">
@@ -493,9 +490,7 @@
                   <div class="m1-learning-resource-details">
                     <section>
                       <h3>{section.learningResources.labels?.about ?? 'What is this?'}</h3>
-                      {#each card.aboutCourse as paragraph}
-                        <p><InlineText text={paragraph} /></p>
-                      {/each}
+                      <RichText text={card.aboutCourse} />
                     </section>
 
                     <section>
@@ -509,9 +504,7 @@
 
                     <section>
                       <h3>{section.learningResources.labels?.whyTakeCourse ?? 'Why should I take this course?'}</h3>
-                      {#each card.whyTakeCourse as paragraph}
-                        <p><InlineText text={paragraph} /></p>
-                      {/each}
+                      <RichText text={card.whyTakeCourse} />
                     </section>
                   </div>
                 </article>
@@ -548,7 +541,7 @@
           {/if}
 
           {#if section.businessModelsIntro}
-            <p class="business-models-intro">{section.businessModelsIntro}</p>
+            <RichText text={section.businessModelsIntro} className="business-models-intro" />
           {/if}
 
           <div class="business-model-card-grid">
@@ -565,7 +558,7 @@
                 </summary>
 
                 <div class="business-model-card-content">
-                  <p><InlineText text={card.text} /></p>
+                  <RichText text={card.text} />
                   <p class="business-model-example"><strong>Example:</strong> <InlineText text={card.example} /></p>
                 </div>
               </details>
@@ -608,11 +601,7 @@
           <h2>{journeyPhase.summaryTitle}</h2>
 
           <div class="module-summary-text">
-            {#each journeyPhase.summaryParagraphs ?? [journeyPhase.summaryText] as paragraph}
-              {#if paragraph}
-                <p><InlineText text={paragraph} /></p>
-              {/if}
-            {/each}
+            <RichText text={journeyPhase.summaryParagraphs ?? [journeyPhase.summaryText]} />
           </div>
 
           <a href="{base}/guided-pathways/#journey-phases" class="back-link summary-copy-next-link">
@@ -781,10 +770,6 @@
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-transform: uppercase;
     margin-bottom: 24px;
-  }
-
-  .module-body-text p + p {
-    margin-top: 18px;
   }
 
   .module-image-grid {
@@ -982,10 +967,6 @@
     max-width: 980px;
   }
 
-  .module-detail-copy p + p {
-    margin-top: 18px;
-  }
-
   .module-inline-image {
     display: grid;
     gap: 18px;
@@ -1038,7 +1019,7 @@
     width: min(100%, 980px);
   }
 
-  .business-models-intro {
+  :global(.business-models-intro) {
     width: min(100%, 980px);
     color: var(--text);
   }
@@ -1191,8 +1172,7 @@
     box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
   }
 
-  .m3-wheel-workshop-card p,
-  .m3-wheel-workshop-card p + p {
+  .m3-wheel-workshop-card p {
     margin-top: 0;
     color: var(--text);
     line-height: 1.45;
@@ -1688,11 +1668,11 @@
     font-size: 0.8em;
   }
 
-  .m3-dfx-card-body section:last-child p {
+  :global(.m3-dfx-card-body section:last-child p) {
     font-style: italic;
   }
 
-  .m3-dfx-source {
+  :global(.m3-dfx-source) {
     color: color-mix(in srgb, var(--dark) 58%, var(--module-accent));
     font-size: 0.8rem;
     font-style: italic;
@@ -1981,7 +1961,8 @@
 
   .module-summary-section .eyebrow,
   .module-summary-section h2,
-  .module-summary-section .module-summary-text p {
+  :global(.module-summary-text p),
+  :global(.module-summary-text li) {
     color: var(--dark);
   }
 
@@ -2109,7 +2090,7 @@
       order: 3;
     }
 
-    .module-hero-copy .subpage-intro {
+    .module-hero-copy :global(.subpage-intro) {
       order: 4;
     }
 

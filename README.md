@@ -113,11 +113,12 @@ src/lib/content/tool-catalogue.js
 
 The tool page button text is automatic. If `toolLink` ends in a downloadable file type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says **Download tool**. Other links say **Open tool**. Editors do not need to add a separate button label.
 
-For the longer tool page text in `about`, write `||` between paragraphs if you
-want a paragraph break inside one text field. Add links with
+For longer paragraph text fields, write `||` between paragraphs if you want a
+paragraph break inside one text field. Add links with
 `[visible link text](https://example.com)`. For lists, write each item after
 `||` and start it with `1.`, `2.`, `3.` for numbered lists or `-` for bullet
-lists.
+lists. This works for tool about text, journey phase paragraphs, sector guide
+paragraphs and case descriptions.
 
 The Tools filters are created automatically from the tools, so new languages, providers and access values appear without editing another file.
 
