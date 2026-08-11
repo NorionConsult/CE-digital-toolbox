@@ -1,7 +1,9 @@
 <script>
   import { base } from '$app/paths';
+  import InlineText from '$lib/components/formatting/InlineText.svelte';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/site.js';
+  import { isDownloadableToolLink } from '$lib/content/tool-catalogue-utils.js';
 
   export let resource;
 
@@ -9,7 +11,9 @@
   $: journeyPhaseText = journeyPhases.length > 0 ? journeyPhases.join(', ') : 'None';
   $: isLocalToolLink = resource.toolLink?.startsWith('/');
   $: toolHref = isLocalToolLink ? `${base}${resource.toolLink}` : resource.toolLink;
-  $: shouldDownloadTool = isLocalToolLink && resource.toolLink.toLowerCase().endsWith('.pdf');
+  $: isDownloadableTool = isDownloadableToolLink(resource.toolLink);
+  $: shouldDownloadTool = isLocalToolLink && isDownloadableTool;
+  $: aboutParagraphs = getAboutParagraphs(resource.about);
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -27,6 +31,21 @@
     ['Provider', resource.provider],
     ['Access', resource.accessDisplay ?? resource.access]
   ];
+
+  /**
+   * Editors can write tool `about` text as:
+   * - one string with `||` between paragraphs, or
+   * - an array of paragraph strings.
+   *
+   * @param {string | string[] | undefined} value
+   */
+  function getAboutParagraphs(value) {
+    const paragraphs = Array.isArray(value)
+      ? value
+      : String(value ?? '').split(/\s*\|\|\s*|\n\s*\n/g);
+
+    return paragraphs.map((paragraph) => paragraph.trim()).filter(Boolean);
+  }
 </script>
 
 <svelte:head>
@@ -52,7 +71,7 @@
         rel={shouldDownloadTool ? undefined : 'noreferrer'}
         download={shouldDownloadTool ? '' : undefined}
       >
-        {site.labels.openTool}
+        {isDownloadableTool ? site.labels.downloadTool : site.labels.openTool}
       </a>
     {/if}
   </div>
@@ -61,7 +80,11 @@
 <section class="resource-detail-section">
   <div class="container resource-detail-layout">
     <article class="resource-main">
-      <p>{resource.about}</p>
+      <div class="resource-about">
+        {#each aboutParagraphs as paragraph}
+          <p><InlineText text={paragraph} /></p>
+        {/each}
+      </div>
 
       <div class="resource-detail-grid">
         {#each detailRows as row}
@@ -149,7 +172,12 @@
     text-transform: uppercase;
   }
 
-  .resource-main > p {
+  .resource-about {
+    display: grid;
+    gap: 18px;
+  }
+
+  .resource-about p {
     max-width: 760px;
     font-size: 1.08rem;
   }

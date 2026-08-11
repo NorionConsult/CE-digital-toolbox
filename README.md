@@ -109,7 +109,13 @@ src/lib/content/tool-catalogue.js
 
 2. Copy one existing tool block and change the title, description, journey phases, language, provider, access and link.
 
-3. If the tool should download a local PDF, add the file under `static/downloads/tools/` and set `toolLink` to that file path.
+3. If the tool should download a local PDF, Word, PowerPoint, Excel, CSV or ZIP file, add the file under `static/downloads/tools/` and set `toolLink` to that file path.
+
+The tool page button text is automatic. If `toolLink` ends in a downloadable file type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says **Download tool**. Other links say **Open tool**. Editors do not need to add a separate button label.
+
+For the longer tool page text in `about`, write `||` between paragraphs if you
+want a paragraph break inside one text field. Add links with
+`[visible link text](https://example.com)`.
 
 The Tools filters are created automatically from the tools, so new languages, providers and access values appear without editing another file.
 

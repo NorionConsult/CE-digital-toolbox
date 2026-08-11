@@ -337,6 +337,43 @@ The `id` is the stable internal identifier for the tool. It is not shown on the
 website. Keep every `id` unique and avoid changing it after a tool has been
 published, because it gives the tool a stable identity inside the catalogue.
 
+The tool page button text is automatic. If `toolLink` ends in a downloadable file
+type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says
+`Download tool`. Other links say `Open tool`. Editors only need to update
+`toolLink`; there is no separate button text field to maintain.
+
+### Tool About Text
+
+Use `about` for the longer text on the individual tool page.
+
+To make two paragraphs while keeping the text in one field, write `||` between
+paragraphs:
+
+```js
+about: 'First paragraph text. || Second paragraph text.'
+```
+
+You can also write it as a list if that feels easier:
+
+```js
+about: [
+  'First paragraph text.',
+  'Second paragraph text.'
+]
+```
+
+To add a link inside the text, use this format:
+
+```js
+about: 'Read the [official guide](https://example.com/guide) before starting.'
+```
+
+Bold text still works with double asterisks:
+
+```js
+about: 'Use **Circular Loop Designer** before scaling the idea.'
+```
+
 ### Tool Card Fields
 
 Use `effort` to show how demanding the tool is expected to be:

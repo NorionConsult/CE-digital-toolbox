@@ -85,6 +85,7 @@ export const site = {
     viewResource: 'View tool',
     viewCase: 'View case',
     openTool: 'Open tool',
+    downloadTool: 'Download tool',
     openCase: 'Visit company site'
   },
   /* The navigation array controls the main menu labels and links in the header.*/

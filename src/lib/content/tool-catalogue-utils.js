@@ -5,6 +5,20 @@
 */
 
 const LANGUAGE_MULTIPLE_LABEL = 'Multiple';
+const DOWNLOADABLE_TOOL_EXTENSIONS = [
+  'pdf',
+  'doc',
+  'docx',
+  'ppt',
+  'pptx',
+  'xls',
+  'xlsx',
+  'csv',
+  'zip',
+  'odt',
+  'ods',
+  'odp'
+];
 
 /** @type {Record<string, Record<string, string>>} */
 const FILTER_LABELS = {
@@ -219,4 +233,21 @@ export function buildToolCatalogue(toolCatalogue) {
       ...new Set(resources.flatMap((resource) => resource.filterValues.access))
     ])
   };
+}
+
+/**
+ * Checks whether a tool link points directly to a downloadable file.
+ * Query strings and hash anchors are ignored, so `tool.pdf?download=1` still works.
+ *
+ * @param {string | undefined} toolLink
+ */
+export function isDownloadableToolLink(toolLink) {
+  if (!toolLink) {
+    return false;
+  }
+
+  const cleanLink = String(toolLink).split(/[?#]/)[0].toLowerCase();
+  const extension = cleanLink.match(/\.([a-z0-9]+)$/)?.[1];
+
+  return extension ? DOWNLOADABLE_TOOL_EXTENSIONS.includes(extension) : false;
 }
