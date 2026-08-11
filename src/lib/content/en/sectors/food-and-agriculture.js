@@ -19,12 +19,17 @@ export const foodAndAgricultureIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Case cards shown here are connected automatically through sector: 'Food and Agriculture'
-// in src/lib/content/cases.js.
+// Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// The names should match the visible company/case names in the case catalogue.
 export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.'
+  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  featuredCaseNames: [
+    'Banca de Alimente Moldova',
+    'Garma-Grup SRL',
+    'Permaculture in Armenia'
+  ]
 };
 
 // 3. KEY BARRIERS AND OPPORTUNITIES

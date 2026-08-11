@@ -20,7 +20,14 @@ export const textilesIntroSection = {
 export const textilesCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.'
+  intro: 'The following examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  // Add exactly three case names from src/lib/content/cases.js.
+  // These names control which cases appear on this sector guide page.
+  featuredCaseNames: [
+    'Unfloria SRL',
+    'By Botany',
+    'The Rug Code'
+  ]
 };
 
 export const textilesBarriersSection = {
@@ -83,7 +90,7 @@ export const textilesRelevantToolsSection = {
   title: 'Relevant tools',
   intro: 'Tools tagged for the Textiles sector appear here automatically.'
 };
-
+//This section "Networks and Collaborations" is currently hidden. If needed it can be re-enabled by editing the src/routes/sectors/[slug\]/+page.svelte file where const hiddenSectorSectionIds = new Set(['networks-collaborations']); This should be const hiddenSectorSectionIds = new Set([]); instead.
 export const textilesNetworkSection = {
   id: 'networks-collaborations',
   title: 'Network and collaborations',

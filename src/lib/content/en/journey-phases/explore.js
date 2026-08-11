@@ -294,7 +294,8 @@ const assessPrioritiseSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Check the boxes below to confirm that you have a basic understanding of the key circular economy principles and are ready to move to the next phase.',
+    'Use this checklist to confirm that you understand the circular design principles and have identified relevant strategies for your business.',
+    'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
     'A clear understanding of the Design for X (DfX) redesign process',

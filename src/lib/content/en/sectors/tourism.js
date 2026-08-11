@@ -24,12 +24,13 @@ export const tourismIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// No Tourism cases were supplied in the source document. Add them in cases.js
-// with sector: 'Tourism' and they will appear here automatically.
+// Add up to three Tourism case names from src/lib/content/cases.js when they are available.
+// Leave this empty until Tourism cases have been added to the case catalogue.
 export const tourismCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'Tourism case examples have not yet been added. New cases can be created in the Cases content file and will appear here automatically.'
+  intro: 'Tourism case examples have not yet been added. New cases can be created in the Cases content file and selected here.',
+  featuredCaseNames: []
 };
 
 // 3. KEY BARRIERS AND OPPORTUNITIES

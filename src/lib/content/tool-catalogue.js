@@ -137,7 +137,7 @@ const toolCatalogue = [
     description:
       'A climate action plan outlines how an organization will reduce greenhouse gas emissions and prepare for the impacts of climate change.',
     about:
-      'The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.',
+      "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.	Register/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clickin on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.	Self-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.	Review recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.	Shortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.	Manage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
     journeyPhases: ['Implement'],
     placements: {
       phaseSections: ['implement:roadmap-milestones'],
@@ -212,11 +212,11 @@ const toolCatalogue = [
   {
     id: 'resource-008',
     slug: 'miro-swot-analysis-template',
-    title: 'Miro Strengths, Weaknesses, Opportunities and Threats (SWOT) Analysis Template',
+    title: 'Strengths, Weaknesses, Opportunities and Threats (SWOT) Analysis Template (Miro)',
     description:
-      'Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) templates, sticky notes, real-time team editing, and voting tools.',
+      'Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) template, sticky notes, real-time team editing, and voting tools for a structured online workshop.',
     about:
-      'A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities.',
+      "A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities. To access Miro templates, you frist need a user. You can create a free user to access the templates, if you do not have a Miro account. Once you can access the templates, you can follow the instructions to use them. || **Step by step guide** || **1.	Set the objective:** Define what you're analysing and keep the scope specific so the analysis stays focused. ||**2.	Gather the right people:** Pull in a small group with different perspectives (ops, sales, finance, etc.). || **3.	List Strengths:** Internal, positive factors: what you do well, unique resources, etc. || **4.	List Weaknesses:** Internal, negative factors: gaps, resource constraints, etc.|| **5.	List Opportunities:** External, positive factors: market trends, gaps you could exploit, emerging needs.|| **6.	List Threats:** External, negative factors: competition, regulatory shifts, etc. || **7.	Rank items** by impact and likelihood so you're not treating everything as equally urgent.|| **8.	Match strengths to opportunities** to see where you can go on offense, and weaknesses to threats to see where you're most exposed. || **9.	Pick two or three priorities** per quadrant and assign owners and next steps.",
     journeyPhases: ['Validate'],
     placements: {
       phaseSections:['validate:validate-case']
@@ -227,7 +227,7 @@ const toolCatalogue = [
     provider: 'Miro',
     access: 'Sign up',
     timeRequired: '1-2 hours',
-    preparationNeeded: 'An understanding of the circular strategy you wish to pursue with your business',
+    preparationNeeded: 'Miro account and identified the circular strategy you wish to pursue with your business',
     output: 'Completed Strengths, Weaknesses, Opportunities and Threats (SWOT) matrix with prioritised actions; exportable for sharing with team or advisors.',
     bestFor: 'SMEs running the transition readiness workshop from Phase 4 with their team.',
     format: 'Either online Miro board or PDF if printed.',
@@ -546,7 +546,7 @@ const toolCatalogue = [
     id: 'resource-022',
     slug: 'hotspot-analysis-tool',
     title: 'The Hotspot Analysis Tool',
-    description: 'The SCP-HAT "SCP Hotspots" module provides a range of sustainable consumption and production indicators for identifying unsustainable hotspots at country and sector level, pointing to where policy action is needed.',
+    description: 'The tool provides a range of sustainable consumption and production indicators for identifying unsustainable hotspots at country and sector level, pointing to where policy action is needed.',
     about:
       'The Sustainable Consumption and Production Hotspots Analysis Tool (SCP-HAT) Country Profile tool provides an overview of a country\'s environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis. For you as an SMEs, it can be used to identify the most relevant sustainability hotspots for your sector and country, helping you prioritise actions and investments to improve environmental performance. The tool contains data for Ukraine, Moldova, Georgia, Armenia, and Azerbaijan and data can be compared across countries.',
     journeyPhases: ['Assess'],
@@ -563,7 +563,7 @@ const toolCatalogue = [
     output:
       'Users can identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.',
     bestFor: 'All SMEs across all sectors interested in data at national and sector levels.',
-    format: 'Digital platform',
+    format: 'Digital platform with databases',
     toolLink: 'https://scp-hat.org/module-2-scp-hotspots/'
   },
   {
@@ -924,9 +924,9 @@ const toolCatalogue = [
     slug: 'levels-eu-sustainable-buildings-framework',
     title: 'Level(s) - EU Sustainable Buildings Framework',
     description:
-      'A free EU framework for assessing and reporting building sustainability performance across the full lifecycle.',
+      'An EU framework for assessing and reporting building sustainability performance across the full lifecycle.',
     about:
-      'Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements.',
+      'Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements. It is an assessment and reporting tool with guidance, templates and e-learning modules to support building sustainability across the full lifecycle, from design to construction, operation and end-of-life. The framework contributes and supports alignment across other EU directives and standards, including the Sustainable Finance, Energy Performance of Buildings Directive (EPBD), Sustainable Development Goals (SDGs) and the European Green Deal. Depending on the manual, elearning module or ressource you choose, the time required, language and access can vary.',
     journeyPhases: ['Explore'],
     placements: {
       sectors: ['construction'],
@@ -936,13 +936,13 @@ const toolCatalogue = [
     effort: 'High',
     language: 'English',
     provider: 'European Commission (DG Environment)',
-    access: 'Sign up',
+    access: 'Free',
     timeRequired: 'Variable, used across the full project lifecycle',
     preparationNeeded: 'None for basic use; building data for full Life Cycle Assessment (LCA).',
     output: 'Lifecycle sustainability assessment and compliance report',
     bestFor: 'Construction SMEs, architects, developers and residential and commercial building projects',
-    format: 'Digital tool',
-    toolLink: 'https://green-forum.ec.europa.eu/green-business/levels_en'
+    format: 'Framework, elearning courses and manuals',
+    toolLink: 'https://green-forum.ec.europa.eu/green-business/levels/quick-introduction-levels_en'
   },
   {
     id: 'resource-043',
@@ -1257,12 +1257,12 @@ const toolCatalogue = [
     language: 'English',
     provider: 'The Nordic Council of Ministers',
     access: 'Free',
-    timeRequired: '30-60 minutes',
+    timeRequired: '1-5 hours',
     preparationNeeded: 'Basic knowledge of company operations, a pen and the playbook printouts.',
-    output: 'Shortlist of 1-2 circular business opportunities ready for further development',
+    output: 'Identified inefficiencies, assessed potential circular business opportunities that lead to a concrete  idea.',
     bestFor: 'All SMEs exploring which circular business models suit their company',
     format: 'PDF exercises / printable worksheet',
-    toolLink: 'https://www.nordicinnovation.org/tools/nordic-circular-economy-playbook-toolkit'
+    toolLink: 'https://www.nordicinnovation.org/sites/default/files/documents/2021/Nordic%20Circular%20Economy%20Playbook%20-%20Business%20Model%20Development%20Toolkit.pdf'
   },
   {
     id: 'resource-058',
@@ -1431,7 +1431,7 @@ const toolCatalogue = [
     output: 'Directory of sorting and recycling providers and capabilities',
     bestFor: 'Textile brands and waste managers seeking end-of-life partners',
     format: 'Online database',
-    toolLink: 'https://wrap.ngo/taking-action/textiles'
+    toolLink: 'https://airtable.com/appHr39OzGJywew0j/shr8Ngc3JEAGtGSDy/tbl7pBGFWDXP01FmS/viw5GB3B8Q1fqkDZQ'
   },
   {
     id: 'resource-066',

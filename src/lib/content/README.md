@@ -159,7 +159,7 @@ Each sector file follows the order in which content appears on the website:
 5. Key barriers and opportunities
 6. Best practices
 7. Relevant tools
-8. Network and collaborations
+8. Network and collaborations (stored for later, currently hidden on the website)
 ```
 
 Each section has a sector-specific name such as `textilesIntroSection` or
@@ -170,12 +170,15 @@ Each section has a sector-specific name such as `textilesIntroSection` or
 The sector files contain comments above every editable section. In general:
 
 - Edit `paragraphs` to change the Introduction to sector text.
+- Edit `featuredCaseNames` inside the sector's `CasesSection` to choose the
+  three case cards shown on that sector guide page. Use the visible company/case
+  names from `src/lib/content/cases.js`.
 - Edit `intro`, `barriers` and `opportunities` inside the sector's
   `BarriersSection`.
 - Edit the `groups` array inside the sector's `BestPracticesSection`. Each group
   has a title and an `items` list of bullet points.
-- Edit `items` inside the sector's `NetworkSection`. Each network has a `name`,
-  `description` and optional `link`.
+- The `NetworkSection` content is currently hidden from the public sector guide
+  pages. It can stay in the files as stored draft content for later use.
 - Edit the final sector object to change the home-page card and hero
   `description`, image path or image description.
 

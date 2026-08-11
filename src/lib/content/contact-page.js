@@ -18,12 +18,12 @@ export const contactPage = {
   contactEmails: [
     {
       label: 'Armenia',
-      email: 'armenia-contact@example.org',
+      email: 'info@civitta.am',
       flagIcon: 'https://api.iconify.design/circle-flags:am.svg'
     },
     {
       label: 'Moldova',
-      email: 'moldova-contact@example.org',
+      email: 'ecircular@e-circular.org',
       flagIcon: 'https://api.iconify.design/circle-flags:md.svg'
     },
     {
@@ -33,7 +33,7 @@ export const contactPage = {
     },
     {
       label: 'UNIDO',
-      email: 'unido@unido.org',
+      email: 'ce-digitool@unido.org',
       featured: true
     }
   ],

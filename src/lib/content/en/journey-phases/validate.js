@@ -252,8 +252,8 @@ const validateCaseSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that your selected circular opportunity has a clear business model, quick scan result and transition rationale.',
-    'Continue to the Implement phase when the preferred model, risks and transition steps are sufficiently understood.'
+    'Use this checklist to confirm that you have a clear business model, quick scan result and transition rationale for your selected circular opportunity.',
+    'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
     'Reviewed the relevant circular business model archetypes',

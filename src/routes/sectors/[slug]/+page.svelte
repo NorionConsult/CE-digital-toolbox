@@ -23,8 +23,15 @@
   const bestPracticesSection = sector.sections[3];
   /** @type {any} */
   const relevantToolsSection = sector.sections[4];
-  /** @type {any} */
-  const networkSection = sector.sections[5];
+
+  /*
+    The "Networks and collaborations" section is kept in the sector content
+    files for future use, but is intentionally hidden from the public pages for now.
+  */
+  const hiddenSectorSectionIds = new Set(['networks-collaborations']);
+  const visibleNavigation = sector.navigation.filter(
+    (item) => !hiddenSectorSectionIds.has(item.sectionId)
+  );
 </script>
 
 <svelte:head>
@@ -43,7 +50,7 @@
       <p class="sector-intro"><InlineText text={sector.description} /></p>
 
       <nav class="sector-section-navigation" aria-label={`${sector.title} page sections`}>
-        {#each sector.navigation as item}
+        {#each visibleNavigation as item}
           <a class="back-link sector-navigation-link" href={`#${item.sectionId}`}>{item.label}</a>
         {/each}
       </nav>
@@ -161,28 +168,6 @@
   </div>
 </section>
 
-<section id={networkSection.id} class="sector-section sector-network-section">
-  <div class="container">
-    <div class="section-intro">
-      <p class="eyebrow">{sector.title}</p>
-      <h2>{networkSection.title}</h2>
-      <p><InlineText text={networkSection.intro} /></p>
-    </div>
-
-    <div class="network-grid">
-      {#each networkSection.items as item}
-        <article class="network-item">
-          <h3>{item.name}</h3>
-          <p><InlineText text={item.description} /></p>
-          {#if item.link}
-            <a href={item.link} target="_blank" rel="noreferrer">{sectorPage.visitNetwork}</a>
-          {/if}
-        </article>
-      {/each}
-    </div>
-  </div>
-</section>
-
 <style>
   .sector-hero {
     padding: var(--page-hero-padding);
@@ -250,8 +235,7 @@
   }
 
   .sector-cases-section,
-  .sector-best-practices-section,
-  .sector-network-section {
+  .sector-best-practices-section {
     background-color: var(--light-bg);
   }
 
@@ -320,8 +304,7 @@
     padding-left: 22px;
   }
 
-  .best-practices-grid,
-  .network-grid {
+  .best-practices-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
@@ -346,39 +329,13 @@
     padding-left: 22px;
   }
 
-  .network-item {
-    padding: 24px;
-    border: 1px solid var(--soft-border);
-    border-radius: 15px;
-    background-color: var(--white);
-  }
-
-  .network-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-  }
-
-  .network-item a {
-    display: inline-block;
-    margin-top: 16px;
-    color: var(--dark);
-    font-weight: 700;
-    text-underline-offset: 4px;
-  }
-
-  .network-item a:hover {
-    color: var(--green-primary);
-  }
-
   .empty-message {
     color: var(--muted);
   }
 
   @media (max-width: 1040px) {
     .sector-case-grid,
-    .best-practices-grid,
-    .network-grid {
+    .best-practices-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -396,8 +353,7 @@
 
   @media (max-width: 640px) {
     .sector-case-grid,
-    .best-practices-grid,
-    .network-grid {
+    .best-practices-grid {
       grid-template-columns: 1fr;
     }
 

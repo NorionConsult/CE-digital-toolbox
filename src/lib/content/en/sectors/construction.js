@@ -24,12 +24,17 @@ export const constructionIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Case cards shown here are connected automatically through sector: 'Construction'
-// in src/lib/content/cases.js.
+// Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// The names should match the visible company/case names in the case catalogue.
 export const constructionCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.'
+  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  featuredCaseNames: [
+    'Natural Self-Cleaning Pool',
+    'Kindergartens in Yerevan Retrofitting Case Study',
+    'Ararat Chanshin LLC'
+  ]
 };
 
 // 3. KEY BARRIERS AND OPPORTUNITIES

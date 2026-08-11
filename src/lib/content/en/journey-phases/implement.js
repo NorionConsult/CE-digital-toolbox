@@ -72,8 +72,8 @@ const implementationPlanSection = {
   resourceTag: 'implement:implementation-plan',
   paragraphs: [
     "Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage.",
-    "Scope defines what the plan covers. Usually the 1-3 prioritised circular opportunities, which parts of the business they affect, the timeframe, and what's deliberately left out of scope for this round. Actions are the concrete, sequenced steps needed to move each solution from idea to reality, separating quick wins from longer structural changes.",
-     "Responsibilities assign clear ownership of each action who leads, who supports, who signs off, and where external partners are needed. Required resources cover the budget, time, equipment, training, and expertise needed to execute your plan, including any funding gaps that need to be addressed. Dependencies will show what each action relies on before it can succeed, helping to show  bottlenecks and inform in what order you should implement your circular actions. Expected results are the measurable environmental, economic, or operational outcomes you expect to see once actions are complete, tied to the Key Performance Indicator (KPI) Canvas. In practice, the canvas lays these out as a simple grid per opportunity, so your team can see how each piece connects and revisit it as the plan evolves."
+    "Scope defines what the plan covers. This usually includes the one to three prioritised circular opportunities, which parts of your business they affect, the timeframe, and what's deliberately left out of scope for this round. Actions are the concrete, sequenced steps needed to move each solution from idea to reality, separating quick wins from longer structural changes.",
+     "Responsibilities assign clear ownership of each action; who leads, who supports, who signs off, and where external partners are needed. Required resources cover the budget, time, equipment, training, and expertise needed to execute your plan, including any funding gaps that need to be addressed. Dependencies show what each action relies on before it can succeed, helping to show bottlenecks and inform the order in which you implement your circular actions. Expected results are the measurable environmental, economic, or operational outcomes you expect to see once actions are complete, tied to the Key Performance Indicators (KPI) Canvas. In practice, the canvas lays these out as a simple grid per opportunity, so your team can see how each piece connects and revisit it as the plan evolves."
   ],
   /*
     IMPLEMENTATION PRINCIPLES INFO BOX:
@@ -146,8 +146,8 @@ const testPilotSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that the circular initiative has a practical plan, responsible owners and a workable delivery roadmap.',
-    'Continue to the Monitor phase to define indicators, measure results and improve the initiative over time.'
+    'Use this checklist to confirm that you have a practical plan, responsible owners and a workable delivery roadmap for your circular initiative.',
+    'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
     'Defined the scope of the circular implementation initiative',

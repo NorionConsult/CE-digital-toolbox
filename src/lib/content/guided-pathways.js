@@ -109,7 +109,7 @@ export const guidedPathways = {
   /* 4. SECTOR TOOLS SECTION INTRO */
   sectorsSection: {
     eyebrow: 'For specific sectors',
-    title: 'Sector guides',
+    title: 'Selected sector guides',
     text:
       'Through the EU4Green Recovery East Programme project, four relevant sectors were selected as priority sectors for the Eastern Partnership region. These are Construction, Food and Agriculture, Textiles, and Tourism. Sector guides are available to support those working specifically in these sectors in identifying relevant tools and cases.'
   },

@@ -19,7 +19,7 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase helps users assess their starting point. It includes tools and guidance for assessing circular economy maturity, identifying hotspots and establishing an initial baseline.',
+    'This phase helps you assess your starting point. It includes tools and guidance for assessing circular economy maturity, identifying hotspots and establishing an initial baseline.',
   icon: '/phase-icons/icon-assess.png',
   iconAlt: 'Assess phase icon'
 };
@@ -157,8 +157,8 @@ const hotspotSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that the assessment work has created a practical baseline before moving to the Explore phase.',
-    'To continue to the next phase, click below or go back to home to find the next suitable phase, sector, or explore the tools page.'
+    'Use this checklist to confirm that you have mapped a practical baseline and identified your key hotspots.',
+    'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
     'Understood what the Circular Economy is and why it matters for your business.',
