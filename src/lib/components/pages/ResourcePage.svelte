@@ -13,7 +13,7 @@
   $: toolHref = isLocalToolLink ? `${base}${resource.toolLink}` : resource.toolLink;
   $: isDownloadableTool = isDownloadableToolLink(resource.toolLink);
   $: shouldDownloadTool = isLocalToolLink && isDownloadableTool;
-  $: aboutParagraphs = getAboutParagraphs(resource.about);
+  $: aboutBlocks = getAboutBlocks(resource.about);
 
   $: detailRows = [
     ['Time required', resource.timeRequired],
@@ -33,18 +33,51 @@
   ];
 
   /**
-   * Editors can write tool `about` text as:
-   * - one string with `||` between paragraphs, or
-   * - an array of paragraph strings.
+   * Editors can write tool `about` text as one string with `||` between blocks,
+   * or as an array of strings. Blocks starting with `1.`, `2.`, `3.` become a
+   * numbered list. Blocks starting with `-` become a bulleted list.
    *
    * @param {string | string[] | undefined} value
+   * @returns {({ type: 'paragraph'; text: string } | { type: 'ordered' | 'unordered'; items: string[] })[]}
    */
-  function getAboutParagraphs(value) {
-    const paragraphs = Array.isArray(value)
+  function getAboutBlocks(value) {
+    const textBlocks = Array.isArray(value)
       ? value
       : String(value ?? '').split(/\s*\|\|\s*|\n\s*\n/g);
 
-    return paragraphs.map((paragraph) => paragraph.trim()).filter(Boolean);
+    /** @type {({ type: 'paragraph'; text: string } | { type: 'ordered' | 'unordered'; items: string[] })[]} */
+    const blocks = [];
+    /** @type {{ type: 'ordered' | 'unordered'; items: string[] } | null} */
+    let activeList = null;
+
+    for (const textBlock of textBlocks) {
+      const block = String(textBlock ?? '').trim();
+
+      if (!block) {
+        continue;
+      }
+
+      const orderedItem = block.match(/^\d+\.\s+(.+)$/);
+      const unorderedItem = block.match(/^-\s+(.+)$/);
+      const listType = orderedItem ? 'ordered' : unorderedItem ? 'unordered' : null;
+
+      if (listType) {
+        const itemText = orderedItem?.[1] ?? unorderedItem?.[1] ?? '';
+
+        if (!activeList || activeList.type !== listType) {
+          activeList = { type: listType, items: [] };
+          blocks.push(activeList);
+        }
+
+        activeList.items.push(itemText);
+        continue;
+      }
+
+      activeList = null;
+      blocks.push({ type: 'paragraph', text: block });
+    }
+
+    return blocks;
   }
 </script>
 
@@ -81,8 +114,22 @@
   <div class="container resource-detail-layout">
     <article class="resource-main">
       <div class="resource-about">
-        {#each aboutParagraphs as paragraph}
-          <p><InlineText text={paragraph} /></p>
+        {#each aboutBlocks as block}
+          {#if block.type === 'paragraph'}
+            <p><InlineText text={block.text} /></p>
+          {:else if block.type === 'ordered'}
+            <ol>
+              {#each block.items as item}
+                <li><InlineText text={item} /></li>
+              {/each}
+            </ol>
+          {:else}
+            <ul>
+              {#each block.items as item}
+                <li><InlineText text={item} /></li>
+              {/each}
+            </ul>
+          {/if}
         {/each}
       </div>
 
@@ -177,9 +224,22 @@
     gap: 18px;
   }
 
-  .resource-about p {
+  .resource-about p,
+  .resource-about ol,
+  .resource-about ul {
     max-width: 760px;
     font-size: 1.08rem;
+  }
+
+  .resource-about ol,
+  .resource-about ul {
+    display: grid;
+    gap: 10px;
+    padding-left: 26px;
+  }
+
+  .resource-about li {
+    line-height: 1.45;
   }
 
   .resource-detail-grid {

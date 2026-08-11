@@ -368,6 +368,19 @@ To add a link inside the text, use this format:
 about: 'Read the [official guide](https://example.com/guide) before starting.'
 ```
 
+To add a numbered list, use `||` before each item and start each item with
+`1.`, `2.`, `3.`:
+
+```js
+about: 'Use this tool in three steps: || 1. Map the current process || 2. Identify gaps || 3. Select next actions'
+```
+
+To add a bulleted list, use `||` before each item and start each item with `-`:
+
+```js
+about: 'This tool is useful for: || - quick screening || - team workshops || - early planning'
+```
+
 Bold text still works with double asterisks:
 
 ```js

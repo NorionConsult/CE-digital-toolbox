@@ -81,7 +81,7 @@ const toolCatalogue = [
     description:
       'CircularTracker delivers a comprehensive assessment, analyzing key circularity elements such as material recovery, product longevity, reuse potential, and end-of-life strategies empowering data-driven decisions.',
     about:
-      'CircularTracker provides a fast, simple, and standardised way to assess and compare the circularity of your products. Powered by the International Organization for Standardization (ISO) compliant Product Circularity Data Sheet (PCDS), it delivers data-driven insights to support sustainable product decisions.',
+      "CircularTracker is built around the Product Circularity Data Sheet (PCDS). In practice, using it means: you create an account and select a product to assess; you input product data (materials, sourcing, durability, reparability, end-of-life/recyclability, etc.) without needing to share sensitive supplier data; the tool scores and visualizes the product's circularity across standardized categories; you get a dashboard you can benchmark against market references or your own product portfolio, and export/share with clients or regulators. First assessment is free, then it's pay-per-use.",
     journeyPhases: ['Monitor', 'Assess'],
     placements: {
       phaseSections: ['monitor:measuring-success'],
@@ -262,7 +262,7 @@ const toolCatalogue = [
     description:
       'Adapts the classic Business Model Canvas to map circular value creation, delivery, and capture for a chosen circular business model.',
     about:
-      'The Circular Business Development Canvas Pack aims to empower businesses to transition from traditional linear models to innovative circular practices. By focusing on reducing waste, enhancing resource efficiency, and closing the loop, these canvases provide a structured approach to embedding circular economy principles into core operations, customers, and revenue. The ultimate goal is to foster a regenerative business model that benefits the environment and drives economic value and social impact.',
+      'The Circular Business Development Canvas Pack aims to empower businesses to transition from traditional linear models to innovative circular practices. By focusing on reducing waste, enhancing resource efficiency, and closing the loop, these canvases provide a structured approach to embedding circular economy principles into core operations, customers, and revenue. The ultimate goal is to foster a regenerative business model that benefits   the environment and drives economic value and social impact. A step-by-step guide on how to carry out this workshop can be found within the circular canvas pack.',
     journeyPhases: ['Validate'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -774,45 +774,24 @@ const toolCatalogue = [
     toolLink: 'https://www.bpf.co.uk/design/packscore/packscore.aspx'
   },
   {
-    id: 'resource-032',
-    slug: 'recyclass-online-class',
-    title: 'RecyClass Online Class',
-    description:
-      'A self-assessment tool for plastic, aluminium and steel packaging that produces a tailored recyclability report.',
-    about:
-      'The RecyClass Online Tool helps industry users assess the recyclability of packaging and provides country-specific insights on collection, sorting and recycling infrastructure in Europe.',
-    journeyPhases: ['Assess'],
-    sector: 'Plastics',
-    effort: 'Low',
-    language: 'English',
-    provider: 'RecyClass',
-    access: 'Sign up',
-    timeRequired: '15-30 minutes per packaging item',
-    preparationNeeded: 'Knowledge of your packaging materials.',
-    output: 'Recyclability class A-C and a downloadable PDF report with improvement recommendations',
-    bestFor: 'Manufacturers, brands and retailers using or designing plastic packaging',
-    format: 'Digital tool',
-    toolLink: 'https://recyclass.eu/testing/online-tool/'
-  },
-  {
     id: 'resource-033',
-    slug: 'plasticiq',
-    title: 'PlasticIQ',
+    slug: 'recyclass-plastics',
+    title: 'Recyclass Plastics',
     description:
       'A data-driven planning tool that calculates the circularity of plastic packaging and helps companies model reduction, reuse, redesign and substitution solutions.',
     about:
-      'Plastic IQ is a digital tool to help companies improve plastic packaging strategy, reduce plastic waste and build actionable strategies with cost and carbon impact metrics.',
+      'Recyclass online analysis tool is a digital tool to help companies improve plastic packaging strategy, reduce plastic waste and build actionable strategies with cost and carbon impact metrics.',
     journeyPhases: ['Explore'],
     sector: 'Plastics',
-    effort: 'Medium',
+    effort: 'Low',
     language: 'English',
-    provider: 'Plastic IQ',
+    provider: 'Recyclass',
     access: 'Free',
-    timeRequired: '1-2 hours',
+    timeRequired: '15-30 minutes',
     preparationNeeded: 'Detailed packaging data by type, weight and volume, plus current sustainability targets.',
     output: 'Product-specific analysis with recyclability score and class. The analysis results can be downloaded but signing up is required for that part.',
     bestFor: 'Manufacturers, brands and retailers using or designing plastic packaging.',
-    format: 'Digital tool',
+    format: 'Online analysis tool',
     toolLink: 'https://tool.recyclass.eu/en/plastics/tool/#step-1'
   },
   {
@@ -1809,6 +1788,48 @@ const toolCatalogue = [
     bestFor: 'Armenian SME managers',
     format: 'Online courses and networking events',
     toolLink: 'https://sme.acba.am/hy/courses'
+  },
+  {
+    id: 'resource-082',
+    slug: 'recyclass-steel',
+    title: 'Recyclass Steel',
+    description:
+      'A free self-assessment platform for evaluating how well steel packaging is designed for recycling.',
+    about:
+      "The RecyClass Steel Tool is a free online self-assessment platform, published by RecyClass with CIRCPACK (Veolia), that lets brands evaluate steel packaging recyclability against the RecyClass Recyclability Methodology, aligned with EN 13430. Users work through five steps: describing the packaging, confirming eligibility under the methodology's scope, selecting packaging type, and completing a Design for Recycling assessment covering mass balance (recoverable material), design incompatibilities affecting recyclate quality, and an \"easy to empty\" index. || The tool then assigns a class: A (no recyclability issues, closed-loop potential), B (minor issues, mostly closed-loop), C (issues affecting quality or causing material loss), or Not Recyclable (major design flaws or missing EU collection infrastructure). Results and a downloadable PDF report are generated once the analysis is complete, alongside a mapping of European waste management systems. It's meant as a design and screening aid, not certification; independent third-party verification is still required for formal recyclability claims.",
+    journeyPhases: ['Assess'],
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'Circpack',
+    access: 'Free',
+    timeRequired: '15 – 30 minutes',
+    preparationNeeded: 'Knowledge of your packaging materials including mass, dimensions and design features',
+    output: 'Recyclability class and a downloadable PDF report with improvement recommendations (sign up required to download report).',
+    bestFor: 'Manufacturers, brands and retailers using or designing steel packagings',
+    format: 'Online analysis tool',
+    toolLink: 'https://tool.recyclass.eu/en/steel/tool/#step-1'
+  },
+  {
+    id: 'resource-083',
+    slug: 'recyclass-aluminium',
+    title: 'Recyclass Aluminium',
+    description:
+      'A free self-assessment platform for evaluating how well alumminium packaging is designed for recycling.',
+    about:
+      "The RecyClass Aluminium Tool is a free online self-assessment platform, published by RecyClass with CIRCPACK (Veolia), that lets brands evaluate aluminium packaging recyclability against the RecyClass recyclability methodology, aligned with EN 13430. Users work through five steps: describing the packaging, confirming eligibility (mainly aluminium by weight, accepted in household collection), selecting packaging type and characteristics (cans, bottles, foil, thickness, sortability), and entering total versus aluminium net weight to calculate a mass-balance ratio. || The tool then assigns a class: A (95%+ recyclable content), B (80 to 95%), C (70 to 80%), or Not Recyclable (below 70%). It's meant as a design and screening aid, not certification. RecyClass notes the output can support evidence for the EU's PPWR (Regulation 2025/40) but isn't sufficient proof of conformity on its own; independent third-party certification is still required.",
+    journeyPhases: ['Assess'],
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'Circpack',
+    access: 'Free',
+    timeRequired: '15 – 30 minutes',
+    preparationNeeded: 'Knowledge of your packaging materials including mass, dimensions and design features',
+    output: 'Recyclability class and a downloadable PDF report with improvement recommendations (sign up required to download report).',
+    bestFor: 'Manufacturers, brands and retailers using or designing aluminium packagings',
+    format: 'Online analysis tool',
+    toolLink: 'https://tool.recyclass.eu/en/aluminium/tool/#step-1'
   }
 ];
 
