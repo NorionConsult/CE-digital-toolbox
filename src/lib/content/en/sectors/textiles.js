@@ -90,44 +90,6 @@ export const textilesRelevantToolsSection = {
   title: 'Relevant tools',
   intro: 'Tools tagged for the Textiles sector appear here automatically.'
 };
-//This section "Networks and Collaborations" is currently hidden. If needed it can be re-enabled by editing the src/routes/sectors/[slug\]/+page.svelte file where const hiddenSectorSectionIds = new Set(['networks-collaborations']); This should be const hiddenSectorSectionIds = new Set([]); instead.
-export const textilesNetworkSection = {
-  id: 'networks-collaborations',
-  title: 'Network and collaborations',
-  intro: 'These networks and platforms can support learning, partnerships, standards and access to practical tools.',
-  items: [
-    {
-      name: 'European Clothing Action Plan (ECAP)',
-      description: 'EU initiative connecting fashion and textile businesses with tools and funding to reduce textile waste and build circular supply chains across the value chain.',
-      link: ''
-    },
-    {
-      name: 'Textile Exchange',
-      description: 'Global nonprofit driving responsible fibre and materials use through circularity standards, certified materials and life-cycle thinking.',
-      link: 'https://textileexchange.org/'
-    },
-    {
-      name: 'ResCom (Nordic Textile Reuse)',
-      description: 'Nordic collaboration platform promoting reuse, repair and collection networks for textiles, relevant for Scandinavian SMEs seeking regional circular economy partners.',
-      link: ''
-    },
-    {
-      name: 'Fashion for Good',
-      description: 'Global circular innovation platform connecting brands, retailers and investors with start-ups developing textile recycling and sustainable material technologies.',
-      link: 'https://www.fashionforgood.com/'
-    },
-    {
-      name: 'Waste and Resources Action Programme (WRAP) Textiles 2030 (UK)',
-      description: 'Industry-wide sustainability commitment with targets on emissions, water and waste, offering tools, guidance and peer learning relevant to textile SMEs.',
-      link: 'https://wrap.org.uk/taking-action/textiles/initiatives/textiles-2030'
-    },
-    {
-      name: 'SME Climate Hub',
-      description: 'Free platform offering circular economy action guides, carbon calculators and emissions tracking tools with resources relevant to textile businesses.',
-      link: 'https://smeclimatehub.org/'
-    }
-  ]
-};
 
 export const textiles = {
   number: 'Sector 3',
@@ -141,15 +103,13 @@ export const textiles = {
     { label: 'Cases', sectionId: textilesCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: textilesBarriersSection.id },
     { label: 'Best practices', sectionId: textilesBestPracticesSection.id },
-    { label: 'Relevant tools', sectionId: textilesRelevantToolsSection.id },
-    { label: 'Networks', sectionId: textilesNetworkSection.id }
+    { label: 'Relevant tools', sectionId: textilesRelevantToolsSection.id }
   ],
   sections: [
     textilesIntroSection,
     textilesCasesSection,
     textilesBarriersSection,
     textilesBestPracticesSection,
-    textilesRelevantToolsSection,
-    textilesNetworkSection
+    textilesRelevantToolsSection
   ]
 };

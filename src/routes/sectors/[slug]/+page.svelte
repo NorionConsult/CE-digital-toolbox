@@ -23,15 +23,6 @@
   const bestPracticesSection = sector.sections[3];
   /** @type {any} */
   const relevantToolsSection = sector.sections[4];
-
-  /*
-    The "Networks and collaborations" section is kept in the sector content
-    files for future use, but is intentionally hidden from the public pages for now.
-  */
-  const hiddenSectorSectionIds = new Set(['networks-collaborations']);
-  const visibleNavigation = sector.navigation.filter(
-    (item) => !hiddenSectorSectionIds.has(item.sectionId)
-  );
 </script>
 
 <svelte:head>
@@ -50,7 +41,7 @@
       <p class="sector-intro"><InlineText text={sector.description} /></p>
 
       <nav class="sector-section-navigation" aria-label={`${sector.title} page sections`}>
-        {#each visibleNavigation as item}
+        {#each sector.navigation as item}
           <a class="back-link sector-navigation-link" href={`#${item.sectionId}`}>{item.label}</a>
         {/each}
       </nav>

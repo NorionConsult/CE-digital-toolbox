@@ -159,11 +159,10 @@ Each sector file follows the order in which content appears on the website:
 5. Key barriers and opportunities
 6. Best practices
 7. Relevant tools
-8. Network and collaborations (stored for later, currently hidden on the website)
 ```
 
 Each section has a sector-specific name such as `textilesIntroSection` or
-`textilesNetworkSection`, making it easy to find the correct content.
+`textilesRelevantToolsSection`, making it easy to find the correct content.
 
 ### Editing Sector Content
 
@@ -177,8 +176,6 @@ The sector files contain comments above every editable section. In general:
   `BarriersSection`.
 - Edit the `groups` array inside the sector's `BestPracticesSection`. Each group
   has a title and an `items` list of bullet points.
-- The `NetworkSection` content is currently hidden from the public sector guide
-  pages. It can stay in the files as stored draft content for later use.
 - Edit the final sector object to change the home-page card and hero
   `description`, image path or image description.
 

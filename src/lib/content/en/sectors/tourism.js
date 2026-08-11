@@ -100,46 +100,6 @@ export const tourismRelevantToolsSection = {
   intro: 'Tools tagged for the Tourism sector appear here automatically.'
 };
 
-// 6. NETWORK AND COLLABORATIONS
-// Add a URL to `link` when the website should show a Visit website link.
-export const tourismNetworkSection = {
-  id: 'networks-collaborations',
-  title: 'Network and collaborations',
-  intro: 'These networks can support standards, certification, destination partnerships, peer learning and circular tourism action.',
-  items: [
-    {
-      name: 'Global Sustainable Tourism Council (GSTC)',
-      description: 'International body setting sustainability and circular economy standards for tourism, providing certification pathways, free tools and resources for hospitality SMEs.',
-      link: ''
-    },
-    {
-      name: 'ResCom (Regional Tourism Networks)',
-      description: 'Regional resource and knowledge-sharing platforms connecting tourism SMEs with circular economy collaboration opportunities at destination and national level.',
-      link: ''
-    },
-    {
-      name: 'CELTH - Centre of Expertise Leisure',
-      description: 'Dutch knowledge centre for sustainable and circular tourism transitions, producing applied research, sector toolkits and circular economy frameworks available to EU SMEs.',
-      link: ''
-    },
-    {
-      name: 'The Tourism Declares Alliance',
-      description: 'Global network of tourism businesses committing to climate and circular economy action through community, peer learning, tools and public commitments.',
-      link: ''
-    },
-    {
-      name: 'Destination Management Organisations (DMOs)',
-      description: 'Regional destination-management organisations increasingly coordinate circular tourism initiatives and local SME programmes, making them key implementation partners.',
-      link: ''
-    },
-    {
-      name: 'VisitDenmark and regional tourism bodies',
-      description: 'National and regional tourism bodies in Denmark support circular economy transitions through green-certification pathways, funding guidance and local SME partnerships.',
-      link: ''
-    }
-  ]
-};
-
 // SECTOR CARD, HERO AND NAVIGATION
 export const tourism = {
   number: 'Sector 4',
@@ -153,15 +113,13 @@ export const tourism = {
     { label: 'Cases', sectionId: tourismCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: tourismBarriersSection.id },
     { label: 'Best practices', sectionId: tourismBestPracticesSection.id },
-    { label: 'Relevant tools', sectionId: tourismRelevantToolsSection.id },
-    { label: 'Networks', sectionId: tourismNetworkSection.id }
+    { label: 'Relevant tools', sectionId: tourismRelevantToolsSection.id }
   ],
   sections: [
     tourismIntroSection,
     tourismCasesSection,
     tourismBarriersSection,
     tourismBestPracticesSection,
-    tourismRelevantToolsSection,
-    tourismNetworkSection
+    tourismRelevantToolsSection
   ]
 };

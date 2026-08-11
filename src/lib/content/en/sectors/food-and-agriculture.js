@@ -99,46 +99,6 @@ export const foodAndAgricultureRelevantToolsSection = {
   intro: 'Tools tagged for the Food and Agriculture sector appear here automatically.'
 };
 
-// 6. NETWORK AND COLLABORATIONS
-// Add a URL to `link` when the website should show a Visit website link.
-export const foodAndAgricultureNetworkSection = {
-  id: 'networks-collaborations',
-  title: 'Network and collaborations',
-  intro: 'These networks can support funding, partnerships, standards, knowledge sharing and practical circular economy action.',
-  items: [
-    {
-      name: 'Circular Bio-Based Europe (CBE JU)',
-      description: 'EU Joint Undertaking funding agri-SMEs to develop bio-based products from agricultural waste, residues and by-products, with open calls and partnership opportunities.',
-      link: ''
-    },
-    {
-      name: 'European Institute of Innovation and Technology (EIT) Food',
-      description: 'EU innovation community connecting agri-food SMEs with research institutions, investors and circular economy accelerators to develop circular food-system solutions.',
-      link: ''
-    },
-    {
-      name: 'International Federation of Organic Agriculture Movements, now IFOAM Organics International (IFOAM) Organics Europe',
-      description: 'European network of organic and agroecological farming organisations providing policy support, knowledge sharing and market access for sustainable agri-SMEs.',
-      link: ''
-    },
-    {
-      name: 'ResCom (Nordic Agri Networks)',
-      description: 'Nordic collaboration platform facilitating resource sharing and circular food-system partnerships, connecting farms and agri-food SMEs with regional circular economy opportunities.',
-      link: ''
-    },
-    {
-      name: 'Organic Denmark (Okologisk Danmark)',
-      description: 'National network supporting Danish agri-SMEs in organic and circular transitions through policy advocacy, certification guidance and sector collaboration.',
-      link: ''
-    },
-    {
-      name: 'SME Climate Hub',
-      description: 'Free tools and sector-specific guidance for agri-SMEs committing to emissions reduction and circular economy transitions, benchmarking and reporting included.',
-      link: 'https://smeclimatehub.org/'
-    }
-  ]
-};
-
 // SECTOR CARD, HERO AND NAVIGATION
 export const foodAndAgriculture = {
   number: 'Sector 2',
@@ -152,15 +112,13 @@ export const foodAndAgriculture = {
     { label: 'Cases', sectionId: foodAndAgricultureCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: foodAndAgricultureBarriersSection.id },
     { label: 'Best practices', sectionId: foodAndAgricultureBestPracticesSection.id },
-    { label: 'Relevant tools', sectionId: foodAndAgricultureRelevantToolsSection.id },
-    { label: 'Networks', sectionId: foodAndAgricultureNetworkSection.id }
+    { label: 'Relevant tools', sectionId: foodAndAgricultureRelevantToolsSection.id }
   ],
   sections: [
     foodAndAgricultureIntroSection,
     foodAndAgricultureCasesSection,
     foodAndAgricultureBarriersSection,
     foodAndAgricultureBestPracticesSection,
-    foodAndAgricultureRelevantToolsSection,
-    foodAndAgricultureNetworkSection
+    foodAndAgricultureRelevantToolsSection
   ]
 };

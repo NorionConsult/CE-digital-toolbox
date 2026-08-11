@@ -104,46 +104,6 @@ export const constructionRelevantToolsSection = {
   intro: 'Tools tagged for the Construction sector appear here automatically.'
 };
 
-// 6. NETWORK AND COLLABORATIONS
-// Add a URL to `link` when the website should show a Visit website link.
-export const constructionNetworkSection = {
-  id: 'networks-collaborations',
-  title: 'Network and collaborations',
-  intro: 'These networks can support circular renovation, material passports, certification, knowledge sharing and collaboration.',
-  items: [
-    {
-      name: 'CIRCuIT (EU Horizon Project)',
-      description: 'EU Horizon 2020 project connecting cities and construction SMEs to pilot circular renovation practices, linking clusters in Copenhagen, Hamburg, Brussels and Helsinki.',
-      link: ''
-    },
-    {
-      name: 'Buildings Performance Institute Europe (BPIE)',
-      description: 'EU think tank advancing circular-building strategies and Renovation Wave policy, providing sector intelligence, tools and guidance for construction SMEs.',
-      link: ''
-    },
-    {
-      name: 'Madaster Foundation',
-      description: 'Non-profit advancing material passports for buildings across Europe, offering free tools, community and support for construction SMEs beginning their circular economy journey.',
-      link: ''
-    },
-    {
-      name: 'Green Building Councils (GBCs)',
-      description: 'National Green Building Councils across Europe provide certification, circular economy networking and guidance for construction businesses.',
-      link: ''
-    },
-    {
-      name: 'ResCom (Regional Circular Economy (CE) Networks)',
-      description: 'Regional resource-sharing and collaboration networks supporting material exchange, knowledge sharing and project collaboration between construction SMEs.',
-      link: ''
-    },
-    {
-      name: 'European Construction Sector Observatory',
-      description: 'EU-funded platform providing circular economy trends, sector intelligence and policy updates for construction SMEs, useful for benchmarking and regulatory foresight.',
-      link: ''
-    }
-  ]
-};
-
 // SECTOR CARD, HERO AND NAVIGATION
 export const construction = {
   number: 'Sector 1',
@@ -157,15 +117,13 @@ export const construction = {
     { label: 'Cases', sectionId: constructionCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: constructionBarriersSection.id },
     { label: 'Best practices', sectionId: constructionBestPracticesSection.id },
-    { label: 'Relevant tools', sectionId: constructionRelevantToolsSection.id },
-    { label: 'Networks', sectionId: constructionNetworkSection.id }
+    { label: 'Relevant tools', sectionId: constructionRelevantToolsSection.id }
   ],
   sections: [
     constructionIntroSection,
     constructionCasesSection,
     constructionBarriersSection,
     constructionBestPracticesSection,
-    constructionRelevantToolsSection,
-    constructionNetworkSection
+    constructionRelevantToolsSection
   ]
 };
