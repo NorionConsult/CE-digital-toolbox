@@ -13,6 +13,11 @@
  *   pathwaySection?: {
  *     title: string;
  *     paragraphs: string[];
+ *     subsections?: {
+ *       title: string;
+ *       paragraphs: string[];
+ *       image?: { src: string; alt: string; caption: string };
+ *     }[];
  *     images?: { src: string; alt: string; caption: string }[];
  *     cards?: {
  *       sectionId: string;
@@ -71,6 +76,7 @@ export function defineJourneyPhasePage(config) {
     ...hero,
     bodyTitle: pathwaySection?.title ?? hero.bodyTitle,
     bodyParagraphs: pathwaySection?.paragraphs ?? hero.paragraphs ?? hero.bodyParagraphs ?? [],
+    bodySubsections: pathwaySection?.subsections ?? [],
     bodyImages: pathwaySection?.images ?? hero.bodyImages ?? [],
     sections,
     summaryTitle: phaseSummary?.title,

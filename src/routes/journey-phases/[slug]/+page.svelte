@@ -126,6 +126,23 @@
       <h2>{journeyPhase.bodyTitle}</h2>
 
       <RichText text={journeyPhase.bodyParagraphs} />
+
+      {#each journeyPhase.bodySubsections ?? [] as subsection}
+        <section class="module-body-subsection">
+          <h3 class="subsection-title">{subsection.title}</h3>
+
+          <RichText text={subsection.paragraphs} />
+
+          {#if subsection.image}
+            <figure class="module-body-subsection-image">
+              <img src="{base}{subsection.image.src}" alt={subsection.image.alt} />
+              {#if subsection.image.caption}
+                <figcaption>{subsection.image.caption}</figcaption>
+              {/if}
+            </figure>
+          {/if}
+        </section>
+      {/each}
     </div>
 
     {#if phaseSections.length > 0 && !journeyPhase.hidePathwayCards}
@@ -770,6 +787,31 @@
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-transform: uppercase;
     margin-bottom: 24px;
+  }
+
+  .module-body-subsection {
+    display: grid;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .module-body-subsection-image {
+    display: grid;
+    gap: 10px;
+    max-width: 820px;
+    margin: 10px 0 0;
+  }
+
+  .module-body-subsection-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 15px;
+  }
+
+  .module-body-subsection-image figcaption {
+    color: var(--muted);
+    font-size: 0.95rem;
   }
 
   .module-image-grid {

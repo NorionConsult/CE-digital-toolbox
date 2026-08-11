@@ -45,8 +45,25 @@ const pathwaySection = {
   */
   paragraphs: [
     'If you are new to Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, you can first and foremost familiarise yourself with the terminology and foundational principles. This section will provide you with a selection of introductory courses to get a comprehensive introduction to the key concepts.',
-    'After you have familiarised yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly.',
-    'The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests.'
+    'After you have familiarised yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly. The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests. Before you start, review your understanding of circular economy vs. linear economy.'
+  ],
+  /*
+    Add extra blocks below the overview text here.
+    Each subsection can have a subtitle, paragraph text and one optional image.
+  */
+  subsections: [
+    {
+      title: 'Linear vs. circular',
+      paragraphs: [
+        'In contrast to a linear economy, which follows a “take, make, dispose” model, a circular economy aims to keep resources in use for as long as possible and minimise waste, environmental degradation, and climate impacts.',
+        "A widely used way of illustrating the circular economy is the Ellen MacArthur Foundation’s **butterfly diagram** (shown below). The diagram depicts two main cycles, technical and biological, and shows how products, materials, and resources can circulate from use and consumption back into production processes, reducing waste and optimising resource use. || If you want to learn more, see the eLearning courses below to continue learning about the basic concepts of circular economy and resource efficiency."
+      ],
+      image: {
+        src: '/downloads/phase 1/Circular economy butterfly diagram.png',
+        alt: 'Circular economy butterfly diagram showing technical and biological cycles',
+        caption: 'The butterfly diagram by the Ellen MacArthur Foundation, 2019'
+      }
+    }
   ],
   cards: []
 };
