@@ -97,24 +97,7 @@ const baselineSection = {
   resourceTag: 'assess:baseline-mapping',
   paragraphs: [
     'A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time.',
-    'Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible.'
-  ],
-  baselineCards: [
-    {
-      title: 'Energy Hotspots',
-      text: 'Processes or equipment consuming disproportionate electricity, heat or fuel.',
-      icon: 'lightning'
-    },
-    {
-      title: 'Material Hotspots',
-      text: 'Materials that are expensive, scarce, or lost as waste in significant quantities.',
-      icon: 'box'
-    },
-    {
-      title: 'Water Hotspots',
-      text: 'Production stages consuming or polluting large volumes of water.',
-      icon: 'water-level'
-    }
+    'Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. On the image to the side, you can see an example of how an input/output map can look like.'
   ],
   image: {
     src: '/downloads/phase2/M2_Baseline_mapping_MFexample.png',
@@ -136,6 +119,23 @@ const hotspotSection = {
   resourceTag: 'assess:hotspot-analysis',
   paragraphs: [
     'A hotspot is a point in your business where resource use, waste, cost, or environmental impact is disproportionately high. Hotspots are the priority areas where small changes can deliver the greatest circular economy benefits.'
+  ],
+  baselineCards: [
+    {
+      title: 'Energy Hotspots',
+      text: 'Processes or equipment consuming disproportionate electricity, heat or fuel.',
+      icon: 'lightning'
+    },
+    {
+      title: 'Material Hotspots',
+      text: 'Materials that are expensive, scarce, or lost as waste in significant quantities.',
+      icon: 'box'
+    },
+    {
+      title: 'Water Hotspots',
+      text: 'Production stages consuming or polluting large volumes of water.',
+      icon: 'water-level'
+    }
   ],
   factbox: {
     title: 'Identify Hotspots',

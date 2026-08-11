@@ -225,9 +225,33 @@
             <M4Questionnaire {...section.m4Questionnaire} />
           {/if}
 
+          {#if section.baselineCards}
+            <div class="baseline-card-grid">
+              {#each section.baselineCards as card}
+                <div class="baseline-card">
+                  <span
+                    class="baseline-card-icon"
+                    style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                    aria-hidden="true"
+                  ></span>
+                  <h3>{card.title}</h3>
+                  {#if card.items}
+                    <ul>
+                      {#each card.items as item}
+                        <li>{item}</li>
+                      {/each}
+                    </ul>
+                  {:else}
+                    <p><InlineText text={card.text} /></p>
+                  {/if}
+                </div>
+              {/each}
+            </div>
+          {/if}
+
           {#if section.factbox}
             <aside class="hotspot-factbox">
-              <h3 class="subsection-title">{section.factbox.title}</h3>
+              <h3>{section.factbox.title}</h3>
               <ul>
                 {#each section.factbox.items as item}
                   <li>{item}</li>
@@ -547,30 +571,6 @@
               </details>
             {/each}
           </div>
-        </div>
-      {/if}
-
-      {#if section.baselineCards}
-        <div class="container baseline-card-grid">
-          {#each section.baselineCards as card}
-            <div class="baseline-card">
-              <span
-                class="baseline-card-icon"
-                style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
-                aria-hidden="true"
-              ></span>
-              <h3>{card.title}</h3>
-              {#if card.items}
-                <ul>
-                  {#each card.items as item}
-                    <li>{item}</li>
-                  {/each}
-                </ul>
-              {:else}
-                <p><InlineText text={card.text} /></p>
-              {/if}
-            </div>
-          {/each}
         </div>
       {/if}
 
@@ -1482,13 +1482,17 @@
     padding: 28px 32px;
     border: 2px solid var(--green-secondary);
     border-radius: 8px;
-    background-color: transparent;
-    color: var(--muted);
+    background-color: var(--green-secondary);
+    color: var(--white);
     box-shadow: 0 16px 32px rgba(10, 46, 54, 0.12);
   }
 
   .hotspot-factbox h3 {
-    color: var(--green-secondary);
+    font-family: Tahoma, Arial, sans-serif;
+    color: var(--white);
+    font-size: clamp(1.08rem, 1.8vw, 1.35rem);
+    line-height: 1.16;
+    text-transform: uppercase;
   }
 
   .hotspot-factbox ul {
@@ -1506,7 +1510,7 @@
   }
 
   .hotspot-factbox li::marker {
-    color: var(--blue);
+    color: var(--white);
     font-size: 0.8em;
   }
 
@@ -1841,6 +1845,11 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 24px;
     margin-top: 32px;
+  }
+
+  .module-detail-copy-wide .baseline-card-grid,
+  .module-detail-copy-wide .hotspot-factbox {
+    width: min(var(--site-container-max), 92vw);
   }
 
   .baseline-card {

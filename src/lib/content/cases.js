@@ -326,18 +326,6 @@ The case demonstrates how specialised and centralised textile-care services can 
     caseLink: "https://bybotany.am"
   }),
   createCase({
-    id: "case-008",
-    slug: "tobacco-waste-processing",
-    companyName: "Tobacco Waste Processing",
-    country: "Armenia",
-    sector: ["Agriculture and Food"],
-    rStrategies: ["Recycle (R8)"],
-    rStrategyDescription: "Organic tobacco processing residues are biologically transformed into a nutrient input (fertilizer) for agricultural use, replacing synthetic fertilizer inputs.",
-    summary: `This venture converts residual tobacco waste generated during processing into organic fertilizer, diverting agricultural by-product from disposal and reducing pollution linked to tobacco cultivation and processing.`,
-    description: `This CirculUP!-supported initiative addresses a longstanding environmental problem in Armenia's tobacco-growing regions, where processing waste is often discarded or burned, contributing to soil and air pollution. The business collects tobacco waste and processes it into organic fertilizer, giving the material a productive second life while reducing the environmental burden associated with agricultural waste disposal. The resulting fertilizer can be used by local farmers, creating a closed-loop link between agricultural waste generation and agricultural input demand. This case demonstrates how sector-specific waste streams, often overlooked because of their perceived low value, can be converted into commercially useful products.`,
-    caseLink: "https://circulup.am/grantees"
-  }),
-  createCase({
     id: "case-009",
     slug: "the-rug-code",
     companyName: "The Rug Code",
@@ -372,18 +360,6 @@ The case demonstrates how specialised and centralised textile-care services can 
     summary: "Bio Oil LLC transforms used cooking oil collected from households and food businesses into biodiesel, operating Armenia's first EU-certified recycling system for this waste stream.",
     description: `Bio Oil LLC addresses the environmental risks posed by improperly discarded cooking oil, which can contaminate water systems and clog municipal infrastructure. The company has established Armenia's first EU-certified collection and recycling system for used cooking oil, gathering the waste from households, restaurants, and other food-service businesses. The collected oil is processed into biodiesel, a renewable fuel that can substitute for conventional diesel in various applications. This creates both an environmental benefit, by keeping a hazardous waste stream out of the environment, and an economic one, by generating a marketable fuel product. The case was recognised as a CirculUP! grantee for demonstrating a scalable circular solution to an underserved waste stream.`,
     caseLink: "https://circulup.am/2025/03/31/bio-oil-llc"
-  }),
-  createCase({
-    id: "case-012",
-    slug: "biocirc",
-    companyName: "BioCirc",
-    country: "Armenia",
-    sector: ["Renewable Energy"],
-    rStrategies: ["Rethink (R1)"],
-    rStrategyDescription: "The business rethinks energy access by designing decentralised, small-footprint renewable generation equipment as an alternative to grid extension or fossil-fuel generators.",
-    summary: `BioCirc manufactures small-scale, mini hydropower turbines designed to provide off-grid renewable energy solutions, particularly for rural or remote locations without reliable access to the grid.`,
-    description: `BioCirc (operating under the Flowtric brand) designs and manufactures compact hydropower turbines intended for off-grid or remote installations where grid connection is impractical or costly. By harnessing local water flow, these turbines can provide a renewable, low-maintenance power source to rural communities, farms, or facilities lacking dependable electricity access. This reduces reliance on diesel generators or grid extension projects, both of which carry higher costs and environmental footprints. As a CirculUP! grantee, the venture reflects the programme's support for circular and resource-efficient technology manufacturing, extending circular economy principles beyond materials recovery into decentralised clean-energy hardware.`,
-    caseLink: "https://www.facebook.com/people/Flowtric/61563534625731/"
   }),
   createCase({
     id: "case-013",
@@ -468,18 +444,6 @@ The case demonstrates how specialised and centralised textile-care services can 
     summary: `HDIF uses blockchain technology to create a fully transparent, traceable supply chain for Armenia's wool industry, connecting wool producers, processors, and buyers through a verifiable digital record.`,
     description: `HDIF has developed a blockchain-based traceability system for Armenia's wool supply chain, allowing each stage of production — from raising livestock through processing and sale — to be recorded on a verifiable digital ledger. This transparency helps address common challenges in textile supply chains, including unclear material provenance and difficulty verifying sustainable or ethical sourcing claims. For a circular economy, better traceability can support more informed decisions about material reuse, quality grading, and end-of-life recovery of wool products. The initiative was recognised as a CirculUP! grantee for applying digital tools to strengthen sustainability and transparency in a traditional Armenian industry.`,
     caseLink: "https://hdif.org"
-  }),
-  createCase({
-    id: "case-020",
-    slug: "trimaran-dolomiti",
-    companyName: "Trimaran / Dolomiti",
-    country: "Armenia",
-    sector: ["Hospitality"],
-    rStrategies: ["Repurpose (R6)"],
-    rStrategyDescription: `Rose biomass residue from greenhouse operations, a by-product with limited existing use, is processed into a new material input for manufacturing an unrelated finished product (slippers).`,
-    summary: `This venture upcycles rose biomass waste from local greenhouses into raw material for manufacturing eco-friendly hotel slippers, converting an agricultural by-product into a hospitality-sector product.`,
-    description: `Trimaran / Dolomiti addresses a waste stream generated by Armenia's greenhouse rose-growing industry, where large volumes of plant biomass are discarded after flower harvesting. The venture processes this rose biomass into material suitable for manufacturing eco-friendly slippers for the hospitality sector, giving the agricultural residue a new commercial application outside its original industry. This cross-sector upcycling reduces disposal volumes for greenhouse operators while supplying hotels with a more sustainable amenity product than conventional synthetic alternatives. The case was supported as a CirculUP! grantee, illustrating how by-products from one sector (agriculture) can be redirected to meet the material needs of another (hospitality).`,
-    caseLink: "https://circulup.am/grantees"
   }),
   createCase({
     id: "case-021",
