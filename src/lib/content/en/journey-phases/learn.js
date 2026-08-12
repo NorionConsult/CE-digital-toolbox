@@ -129,13 +129,13 @@ const LearningresourcesSection = {
           'Understand how circularity connects to broader systems such as the bioeconomy, trade, and renewable energy'
         ],
         whyTakeCourse: [
-          'This course goes well beyond a basic introduction, offering a comprehensive, progressive curriculum that is directly relevant to industrial and manufacturing SMEs. Because it is modular, learners can work through it section by section and revisit specific topics, such as remanufacturing or circular design, as they apply concepts to their own business. It is a strong next step once the basic vocabulary from an introductory resource has been established.'
+          'This course goes well beyond a basic introduction, offering a comprehensive, progressive curriculum that is directly relevant to industrial and manufacturing small-medium enterprises (SMEs). Because it is modular, learners can work through it section by section and revisit specific topics, such as remanufacturing or circular design, as they apply concepts to their own business. It is a strong next step once the basic vocabulary from an introductory resource has been established.'
         ]
       },
       {
         courseTitle: 'SWITCH circular economy journey',
         shortDescription:
-          'A circular economy programme which aims to support micro-enterprises and SMEs with specific tracks that walk businesses through circular economy practices via games and journey phases.',
+          'A circular economy programme which aims to support micro-enterprises and small-medium enterprises (SMEs) with specific tracks that walk businesses through circular economy practices via games and journey phases.',
         language: 'English',
         provider: 'SWITCH to Circular Economy Value Chains',
         url: 'https://switch.circle-economy.com/',
@@ -169,7 +169,8 @@ const phaseSummary = {
     'You understand that raw materials are finite',
     'You understand that circularity means regenerating natural systems, not just reducing harm',
     'You understand that some strategies retain more value than others',
-    'You understand that circularity is a systems-wide shift, not just recycling'
+    'You understand that circularity is a systems-wide shift, not just recycling',
+    'You understand what the Circular Economy is and why it matters for your business'
   ]
 };
 

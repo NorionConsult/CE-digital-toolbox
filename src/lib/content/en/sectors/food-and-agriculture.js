@@ -36,7 +36,7 @@ export const foodAndAgricultureCasesSection = {
 export const foodAndAgricultureBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Key barriers and opportunities',
-  intro: 'Agricultural SMEs face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.',
+  intro: 'Agricultural small-medium enterprises (SMEs) face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.',
   barriers: [
     'High capital cost of precision technology and circular economy equipment.',
     'Fragmented land ownership limits the scale of circular nutrient systems.',
@@ -104,7 +104,7 @@ export const foodAndAgriculture = {
   number: 'Sector 2',
   slug: 'food-and-agriculture',
   title: 'Food and Agriculture',
-  description: 'This sector tool provides tools, cases and practical guidance for food and agriculture SMEs adopting circular economy practices.',
+  description: 'This sector tool provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/agriculture.jpg',
   imageAlt: 'Food and Agriculture sector',
   navigation: [

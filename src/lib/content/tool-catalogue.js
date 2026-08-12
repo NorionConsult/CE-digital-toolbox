@@ -43,7 +43,7 @@ const toolCatalogue = [
       'The SME Reporting Tool helps small businesses create annual greenhouse gas emission reports and track their reduction efforts.',
     /* Longer description of the tool which appears on the tool page. Add links like [visible link text](https://example.com). To split paragraphs in one text field, write || between paragraphs. */
       about:
-      'The SME Reporting Tool is provided as a free resource to enable SMEs to create a climate report summarizing their annual greenhouse gas emissions, including the actions they are taking and the impact of their emissions reduction effort.',
+      'The SME Reporting Tool is provided as a free resource to enable you to create a climate report summarizing your annual greenhouse gas emissions, including the actions you are taking and the impact of your emissions reduction effort.',
     /* journeyPhases is an array of the exact names of the journey phases where this tool is relevant. Use one or more of these values: Learn, Assess, Explore, Validate, Implement, Monitor. */
       journeyPhases: ['Monitor', 'Validate', 'Explore'],
     /* placements is not required for a tool to be specified. Added only to the tools that appear in the SME Journey pages or Sector guides. The name of the subsection is used to identify the section where the tool appears. */
@@ -68,7 +68,7 @@ const toolCatalogue = [
     /* output is a short text description of the output of the tool. This can be a report, a certificate, a plan, or any other tangible result. */
     output: 'An annual greenhouse emission report',
     /* bestFor is a short text description of the target audience for the tool. This can be a specific sector, size of company, or any other relevant characteristic. */
-    bestFor: 'SMEs in all sectors',
+    bestFor: 'small-medium enterprises (SMEs) in all sectors',
     /* format is a short text description of the format of the tool. This can be a digital platform, a PDF, a workshop, or any other relevant format. */
     format: 'Online platform',
     /* toolLink is the URL to the tool page or downloadable file. The button text is automatic: downloadable file links show "Download tool"; other links show "Open tool". */
@@ -98,7 +98,7 @@ const toolCatalogue = [
     preparationNeeded:
       'Be ready with your measurable data and metrics to be used within the platform.',
     output: 'Visual report with overview of your products circularity',
-    bestFor: 'All SMEs looking to deepen their understanding of circularity',
+    bestFor: 'All small-medium enterprises (SMEs) looking to deepen their understanding of circularity',
     format: 'Online platform',
     toolLink: 'https://circulartracker.eu/'
   },
@@ -153,7 +153,7 @@ const toolCatalogue = [
     preparationNeeded: 'None',
     output:
       'Actions aligned to your industry and business goals. Practical steps, business case insights, expected impacts, and a roadmap with trackable actions and priorities.',
-    bestFor: 'SMEs in all sectors',
+    bestFor: 'small-medium enterprises (SMEs) in all sectors',
     /* format is a short text description of the format of the tool. This can be a digital platform, a PDF, a workshop, or any other relevant format. */
     format: 'Online platform',
     toolLink: 'https://smeclimatehub.org/build-a-climate-action-plan/'
@@ -182,7 +182,7 @@ const toolCatalogue = [
       'Basic understanding of the organisation\'s circular opportunities, current capabilities, and key stakeholders. No detailed sustainability data is required. Access to a Miro account to use it in its intended format.',
     output: 'A roadmap and plan to lead your business towards circular strategy implementation',
     bestFor:
-      'All SMEs, particularly SMEs ready to move from opportunity identification to implementation.',
+      'All small-medium enterprises (SMEs), particularly SMEs ready to move from opportunity identification to implementation.',
     format: 'Online collaborative board (Miro)',
     toolLink: 'https://miro.com/templates/roadmap-to-circular-business/'
   },
@@ -204,7 +204,7 @@ const toolCatalogue = [
     preparationNeeded:
       'A shortlisted circular opportunity or business model concept, plus basic customer, partner and financial information.',
     output: 'A completed Circular Business Model Canvas containing a vision statement.',
-    bestFor: 'Manufacturing/production SMEs',
+    bestFor: 'Manufacturing/production small-medium enterprises (SMEs)',
     format: 'Powerpoint',
     toolLink:
       'https://teknologiateollisuus.fi/wp-content/uploads/2024/08/CE2018_Business-model-canvas_v1-0.pptx'
@@ -229,7 +229,7 @@ const toolCatalogue = [
     timeRequired: '1-2 hours',
     preparationNeeded: 'Miro account and identified the circular strategy you wish to pursue with your business',
     output: 'Completed Strengths, Weaknesses, Opportunities and Threats (SWOT) matrix with prioritised actions; exportable for sharing with team or advisors.',
-    bestFor: 'SMEs running the transition readiness workshop from Phase 4 with their team.',
+    bestFor: 'small-medium enterprises (SMEs) running the transition readiness workshop from Phase 4 with their team.',
     format: 'Either online Miro board or PDF if printed.',
     toolLink: 'https://miro.com/strategic-planning/swot-analysis/'
   },
@@ -251,7 +251,7 @@ const toolCatalogue = [
     preparationNeeded: 'Prepare the relevant business, material flow and resource use data before starting.',
     output:
       'Circular performance score; risk and opportunity analysis; prioritised actions and SMART improvement targets.',
-    bestFor: 'All SMEs',
+    bestFor: 'All small-medium enterprises (SMEs)',
     format: 'Digital tool',
     toolLink: 'http://ctitool.com/'
   },
@@ -273,7 +273,7 @@ const toolCatalogue = [
     preparationNeeded: 'Print out PDF, pens and prepare participants',
     output:
       'Completed circular Business Model Canvas (BMC); clear view of how the circular business model changes your operations.',
-    bestFor: 'SMEs that have identified a preferred circular business model and want to develop it in detail.',
+    bestFor: 'small-medium enterprises (SMEs) that have identified a preferred circular business model and want to develop it in detail.',
     format: 'PDF',
     toolLink:
       'https://circulareconomy.europa.eu/platform/sites/default/files/2025-02/Circular%2BBusiness%2BDevelopment%2BCanvas%2BPack%2B-%2BVersion%2B1%2C%2BJanuary%2B2025%2B-%2BThe%2BGood%2BTribe.pdf'
@@ -283,7 +283,7 @@ const toolCatalogue = [
     slug: 'saxion-quickscan-circular-business-models',
     title: 'Saxion Quickscan Circular Business Models',
     description:
-      'Helps SMEs rapidly assess which circular business models best fit their situation using a scored matrix approach.',
+      'Helps you rapidly assess which circular business models best fit their situation using a scored matrix approach.',
     about:
       'With the Quickscan Circular Business Model (CBM) you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
     journeyPhases: ['Validate', 'Assess'],
@@ -299,7 +299,7 @@ const toolCatalogue = [
     preparationNeeded:
       'General knowledge of your business and the opportunities you have identified in the previous phase.',
     output: 'Prioritised Circular Business Model (CBM) shortlist; scored overview of options; basis for business case development.',
-    bestFor: 'SMEs new to circular business modelling wanting a structured starting point.',
+    bestFor: 'small-medium enterprises (SMEs) new to circular business modelling wanting a structured starting point.',
     format: 'Excel',
     toolLink:
       'https://businessmodellab.nl/dam/jcr:d91068cb-94f8-4c9d-8ac0-c76a45ae1256/tool_quickscan-circulair-businessmodel%20EN.xlsx'
@@ -351,7 +351,7 @@ const toolCatalogue = [
     preparationNeeded: 'None',
     output:
       'Identified circular economy trends, opportunities, threats, and discussion inputs for Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis or future business model ideas.',
-    bestFor: 'All SMEs',
+    bestFor: 'All small-medium enterprises (SMEs)',
     format: 'workshop cards, PDF',
     toolLink: 'https://circitnord.com/wp-content/uploads/2020/04/T02_Circular-Economy-Trends-Cards_CC.pdf'
   },
@@ -362,7 +362,7 @@ const toolCatalogue = [
     description:
       'Helps companies identify suitable circular design strategies for their products through a guided decision process.',
     about:
-      'An ideation tool that helps SMEs explore and identify the most suitable circular pathways for their products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
+      'An ideation tool that helps you explore and identify the most suitable circular pathways for your products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
       phaseSections:['validate:business-models']
@@ -377,7 +377,7 @@ const toolCatalogue = [
       'Users should have basic knowledge of their product, materials, lifecycle, and business model.',
     output:
       'Suggested circular design strategies and guidance on relevant circular economy approaches for the product.',
-    bestFor: 'Manufacturing SMEs, product developers, and companies exploring circular product design or redesign.',
+    bestFor: 'Manufacturing small-medium enterprises (SMEs), product developers, and companies exploring circular product design or redesign.',
     format: 'Digital tool',
     toolLink: 'https://www.ideal-co.nl/pathfinder/'
   },
@@ -420,7 +420,7 @@ const toolCatalogue = [
     timeRequired: '15-20 minutes',
     preparationNeeded: 'Knowledge of your product',
     output: 'Circularity overview which can be emailed',
-    bestFor: 'SMEs in all sectors',
+    bestFor: 'small-medium enterprises (SMEs) in all sectors',
     format: 'Digital tool',
     toolLink: 'http://www.circulareconomytoolkit.org/Assessmenttool.html'
   },
@@ -429,7 +429,7 @@ const toolCatalogue = [
     slug: 'up2circ-assessment',
     title: 'Up2Circ Assessment',
     description:
-      'Assists SMEs in self evaluating their current standing in their circular journey by asking simple questions and providing insights based on answers.',
+      'Assists you in self evaluating your current standing in their circular journey by asking simple questions and providing insights based on answers.',
     about:
       'This Up2Circ Circularity Assessment Tool will help you to become familiar with the circular economy, score how well you integrate circular strategies into your business, and discover opportunities for improvement and challenges to address.',
     journeyPhases: ['Assess'],
@@ -444,7 +444,7 @@ const toolCatalogue = [
     timeRequired: '15-20 minutes',
     preparationNeeded: 'None',
     output: 'Self assessment and recommendations',
-    bestFor: 'SMEs in all sectors',
+    bestFor: 'small-medium enterprises (SMEs) in all sectors',
     format: 'Digital tool',
     toolLink: 'https://up2circ.eu/up2circ-assessment/#gf_9'
   },
@@ -452,7 +452,7 @@ const toolCatalogue = [
     id: 'resource-018',
     slug: 'smart-circular-economy-assessment-scea',
     title: 'Smart Circular Economy Assessment (SCEA)',
-    description: 'Helps SMEs benchmark their current Circular Economy (CE) level and understand key gaps.',
+    description: 'Helps you benchmark your current Circular Economy (CE) level and understand key gaps.',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
     journeyPhases: ['Assess'],
@@ -467,7 +467,7 @@ const toolCatalogue = [
     timeRequired: '30-45 min',
     preparationNeeded: 'Basic business data',
     output: 'Circular Economy (CE) maturity overview across 5 dimensions with visual output and priority recommendations.',
-    bestFor: 'SMEs new to circular economy want a quick, accessible starting point.',
+    bestFor: 'small-medium enterprises (SMEs) new to circular economy want a quick, accessible starting point.',
     format: 'PDF',
     toolLink: 'http://ellenmacarthurfoundation.org/smart-material-choices'
   },
@@ -477,7 +477,7 @@ const toolCatalogue = [
     title: 'I-GO Assessment Tool',
     description: 'Assesses organisational readiness for resource efficiency and circularity.',
     about:
-      'I-GO helps SMEs become more productive, competitive, and resilient by making it easier to access tailored knowledge and support services on resource efficiency. It is the I-GO Assistant tool that guides businesses through self-assessment, suggests practical improvements, and connects them with customised support based on their specific needs.',
+      'I-GO helps you become more productive, competitive, and resilient by making it easier to access tailored knowledge and support services on resource efficiency. It is the I-GO Assistant tool that guides businesses through self-assessment, suggests practical improvements, and connects them with customised support based on your specific needs.',
     journeyPhases: ['Assess', 'Explore'],
     placements: {
       phaseSections: ['assess:maturity-assessment']
@@ -490,7 +490,7 @@ const toolCatalogue = [
     timeRequired: '45-60 minutes',
     preparationNeeded: 'Project data, operations info',
     output: 'Structured diagnosis of green economy readiness with scored indicators.',
-    bestFor: 'SMEs with some sustainability activity looking for a more structured review.',
+    bestFor: 'small-medium enterprises (SMEs) with some sustainability activity looking for a more structured review.',
     format: 'Digital tool',
     toolLink: 'https://igosolution.org/'
   },
@@ -515,7 +515,7 @@ const toolCatalogue = [
     preparationNeeded: 'Material, energy and waste data',
     output:
       'Overview of flows of materials in the system. Overview of the quantities and type of materials utilised in the system.',
-    bestFor: 'SMEs with physical products',
+    bestFor: 'small-medium enterprises (SMEs) with physical products',
     format: 'Print out',
     toolLink: 'https://ready2loop.org/en/981/Material+Flow+Analysis+%28MFA%29'
   },
@@ -1184,7 +1184,7 @@ const toolCatalogue = [
     effort: 'Medium',
     language: 'English',
     provider: 'Circulab',
-    access: 'Free',
+    access: 'Sign up',
     timeRequired: '2-3 hours',
     preparationNeeded: 'Gather measurement data and key results from your indicators before the session.',
     output: 'Updated circular business model canvas with identified improvements',
@@ -1461,7 +1461,7 @@ const toolCatalogue = [
   {
     id: 'resource-067',
     slug: 'youcontrol-esg-profile-for-business',
-    title: 'YouControl - Environmental, social and governance (ESG) Profile for Business',
+    title: 'YouControl - ESG profile for Business',
     description:
       'Automates the assessment of environmental, social and governance (ESG) factors of Ukrainian companies.',
     about:
@@ -1477,7 +1477,7 @@ const toolCatalogue = [
     output: 'Environmental, social and governance (ESG) profile with environmental and social (E&S) impact category and sustainability signals',
     bestFor: 'SMEs applying for bank finance, exporters and procurement teams',
     format: 'Online module',
-    toolLink: 'https://youcontrol.com.ua/esg-for-business'
+    toolLink: 'https://youcontrol.com.ua/esg-for-business/'
   },
   {
     id: 'resource-068',
@@ -1676,7 +1676,7 @@ const toolCatalogue = [
     timeRequired: '1-2 hours',
     preparationNeeded: 'None',
     output: 'Toolkit for incubators and accelerators; Circular Economy (CE) Guidelines in Armenian and English',
-    bestFor: 'Armenian SMEs, incubators and accelerators',
+    bestFor: 'Armenian small-medium enterprises (SMEs), incubators and accelerators',
     format: 'PDF toolkit',
     toolLink: 'https://circulup.am/resources'
   },
@@ -1754,7 +1754,7 @@ const toolCatalogue = [
     description:
       'Resources supporting Resource Efficient and Cleaner Production implementation.',
     about:
-      'Resource Efficient and Cleaner Production (RECP) Armenia resources include primers, leaflets and business cases documenting how Armenian SMEs applied Resource Efficient and Cleaner Production measures across food production, poultry, battery manufacturing, dried fruit processing, lime production, construction and dairy processing.',
+      'Resource Efficient and Cleaner Production (RECP) Armenia resources include primers, leaflets and business cases documenting how Armenian small-medium enterprises (SMEs) applied Resource Efficient and Cleaner Production measures across food production, poultry, battery manufacturing, dried fruit processing, lime production, construction and dairy processing.',
     journeyPhases: ['Learn'],
     sector: 'Manufacturing',
     effort: 'Low',
@@ -1764,7 +1764,7 @@ const toolCatalogue = [
     timeRequired: 'N/A',
     preparationNeeded: 'None',
     output: 'Resource Efficient and Cleaner Production (RECP) toolkit and supporting materials',
-    bestFor: 'Armenian manufacturing and industrial SMEs',
+    bestFor: 'Armenian small-medium enterprises (SMEs), manufacturing and industrial sectors',
     format: 'PDF toolkit',
     toolLink: 'https://recp.am/en/news/recp-materials'
   },
@@ -1773,9 +1773,9 @@ const toolCatalogue = [
     slug: 'acba-business-club-and-sme-courses',
     title: 'ACBA Business Club and SME Courses',
     description:
-      'Networking and free trainings for Armenian SMEs.',
+      'Networking and free trainings for Armenian small-medium enterprises (SMEs).',
     about:
-      'ACBA Business Club provides Armenian SME managers with networking opportunities and free business management trainings, including modules covering environmental, social and governance (ESG), strategy and sustainable business adaptation.',
+      'ACBA Business Club provides Armenian small-medium enterprises (SMEs) with networking opportunities and free business management trainings, including modules covering environmental, social and governance (ESG), strategy and sustainable business adaptation.',
     journeyPhases: ['Explore'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1785,7 +1785,7 @@ const toolCatalogue = [
     timeRequired: '2-4 hours',
     preparationNeeded: 'None',
     output: 'Free training courses and networking events',
-    bestFor: 'Armenian SME managers',
+    bestFor: 'Armenian small-medium enterprises (SMEs) managers',
     format: 'Online courses and networking events',
     toolLink: 'https://sme.acba.am/hy/courses'
   },

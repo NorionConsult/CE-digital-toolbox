@@ -81,7 +81,7 @@ const maturitySection = {
   resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
-    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most SMEs fall somewhere along this maturity spectrum.'
+    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most small-medium enterprises (SMEs) fall somewhere along this maturity spectrum.|| In the interactive diagram below, click on a level to see where it is recommended for you to start with in the SME Journey phases.'
   ]
 };
 
@@ -161,12 +161,10 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'Understood what the Circular Economy is and why it matters for your business.',
     'Identified your current Circular Economy (CE) maturity level (1–5 scale)',
     'Mapped your resource inputs, outputs, and waste streams',
     'Identified your main hotspots: energy, materials, water',
-    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Hotspot Analysis Tool, and Footprint Calculator',
-    'Reviewed a real-world case example and potential savings'
+    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Hotspot Analysis Tool, and Footprint Calculator'
   ]
 };
 

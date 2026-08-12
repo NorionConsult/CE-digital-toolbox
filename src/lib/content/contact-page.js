@@ -40,7 +40,7 @@ export const contactPage = {
   feedbackForm: {
     title: 'Report feedback',
     text:
-      'The feedback form will be a public form with three short branches: technical issue, general feedback, or suggest a tool. Use it to report something that does not work, share improvement ideas, or recommend a tool for the toolbox.',
+      'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises (SMEs) in the region? The feedback form will be a public form with three short branches: technical issue, general feedback, or suggest a tool. Use it to report something that does not work, share improvement ideas, or recommend a tool for the toolbox.',
     buttonLabel: 'Report feedback',
     url: '#'
   },

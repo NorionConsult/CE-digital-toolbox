@@ -14,6 +14,6 @@ export const home = {
   aboutSection: {
     eyebrow: 'About the toolbox',
     title: 'A tool catalogue for easy navigation',  
-    text: 'The tools page is structured to help SMEs quickly identify relevant digital tools. The modular format makes it possible to expand the site over time by adding new tools, categories, links, and case examples. This digital toolbox was developed as part of the EU4Green Recovery East Programme, which seeks to facilitate the adoption of Circular Economy among SMEs in the countries of the Eastern Partnership.'
+    text: 'The tools page is structured to help you identify relevant digital tools. The modular format makes it possible to expand the site over time by adding new tools, categories, links, and case examples. This digital toolbox was developed as part of the EU4Green Recovery East Programme, which seeks to facilitate the adoption of Circular Economy among SMEs in the countries of the Eastern Partnership.'
   }
 }

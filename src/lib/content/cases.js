@@ -513,7 +513,7 @@ The case demonstrates how specialised and centralised textile-care services can 
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: "Heat-recovery ventilation and resource-efficient baking processes reduce the energy (electricity and natural gas) required per unit of food produced.",
     summary: `Arminashogh LLC, a bakery producing cakes, pastries, and bread, modernized its ventilation system with heat recovery and adopted resource-efficient baking methods, reducing electricity use by 2.6% and natural gas use by 3.8%.`,
-    description: `As a participant in the EU4Environment Resource Efficient and Cleaner Production (RECP) programme, Arminashogh LLC, a food production SME specialising in cakes, pastries, and bread, underwent a resource-efficiency audit that identified opportunities to reduce energy waste in its baking operations. The company modernised its ventilation system to incorporate heat recovery, capturing and reusing heat that would otherwise be lost from baking ovens, and adjusted its baking methods to reduce unnecessary energy use. These measures delivered measurable savings of 2.6% in electricity consumption and 3.8% in natural gas consumption, demonstrating how relatively targeted process improvements can generate meaningful resource savings for food-sector SMEs.`,
+    description: `As a participant in the EU4Environment Resource Efficient and Cleaner Production (RECP) programme, Arminashogh LLC, a food production small-medium enterprise (SME) specialising in cakes, pastries, and bread, underwent a resource-efficiency audit that identified opportunities to reduce energy waste in its baking operations. The company modernised its ventilation system to incorporate heat recovery, capturing and reusing heat that would otherwise be lost from baking ovens, and adjusted its baking methods to reduce unnecessary energy use. These measures delivered measurable savings of 2.6% in electricity consumption and 3.8% in natural gas consumption, demonstrating how relatively targeted process improvements can generate meaningful resource savings for food-sector small-medium enterprises (SMEs).`,
     caseLink: "https://www.eu4environment.org/app/uploads/2024/02/Arminashogh-LLC.pdf"
   }),
   createCase({
@@ -621,7 +621,7 @@ The case demonstrates how specialised and centralised textile-care services can 
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: "Preventive environmental strategies applied through the Resource Efficient and Cleaner Production (RECP) demonstration reduce raw material waste and improve overall process efficiency within the production cycle.",
     summary: `Magnon OJSC, an Armenian manufacturing SME, served as a Resource Efficient and Cleaner Production (RECP) demonstration company, undergoing technical assessments to apply preventive environmental strategies aimed at decreasing raw material waste and increasing process efficiency.`,
-    description: `Magnon OJSC served as a demonstration company within the EU4Environment Resource Efficient and Cleaner Production (RECP) programme, meaning it underwent a more detailed technical assessment intended to showcase resource-efficiency methodologies for other Armenian manufacturing SMEs to replicate. The assessment applied preventive environmental strategies, an approach that focuses on avoiding waste and inefficiency at the source within the production process, rather than managing waste after it is generated. The resulting interventions aimed to decrease raw material waste and increase overall process efficiency across Magnon's production cycle, with the company's experience intended to serve as a reference case for the broader Resource Efficient and Cleaner Production (RECP) programme in Armenia.`,
+    description: `Magnon OJSC served as a demonstration company within the EU4Environment Resource Efficient and Cleaner Production (RECP) programme, meaning it underwent a more detailed technical assessment intended to showcase resource-efficiency methodologies for other Armenian manufacturing small-medium enterprises (SMEs) to replicate. The assessment applied preventive environmental strategies, an approach that focuses on avoiding waste and inefficiency at the source within the production process, rather than managing waste after it is generated. The resulting interventions aimed to decrease raw material waste and increase overall process efficiency across Magnon's production cycle, with the company's experience intended to serve as a reference case for the broader Resource Efficient and Cleaner Production (RECP) programme in Armenia.`,
     caseLink: "https://www.eu4environment.org/app/uploads/2024/02/Magnon.pdf"
   }),
 
@@ -644,7 +644,7 @@ The company applies approaches related to efficient resource use, repair, refurb
 The environmental benefit lies in reducing the use of single-use plastic bottles, decreasing waste generation, and extending the service life of equipment. Regular maintenance helps avoid premature replacement of water purification systems.
 
 The economic benefit for customers is the absence of high capital investment in equipment, predictable monthly costs, and reduced maintenance expenses.`,
-    caseLink: "https://ecosoft.ua/",
+    caseLink: "https://ecosoft.ua/ua/",
     image: "/images/cases/ukraine/ecosoft.jpg",
     imageAlt: "Ecosoft case image"
   }),

@@ -35,7 +35,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'From strategy to action',
   paragraphs: [
-    'This Implement phase focuses on how SMEs can put circular strategies into practice. Once circular opportunities and priorities have been identified, the next step is to turn them into concrete actions across the business. Implementation involves testing ideas, making operational changes, involving the right people, and working with partners where needed. For SMEs, this often means taking a step-by-step approach that fits available resources and business needs.'
+    'This Implement phase focuses on how small-medium enterprises (SMEs) can put circular strategies into practice. Once circular opportunities and priorities have been identified, the next step is to turn them into concrete actions across the business. Implementation involves testing ideas, making operational changes, involving the right people, and working with partners where needed. For small-medium enterprises (SMEs), this often means taking a step-by-step approach that fits available resources and business needs.'
   ],
   cards: [
     {
@@ -82,7 +82,7 @@ const implementationPlanSection = {
     https://icon-sets.iconify.design/icon-park-outline/
   */
   principleBox: {
-    title: 'Key principles for SMEs',
+    title: 'Key principles for small-medium enterprises (SMEs)',
     items: [
       {
         title: 'Start small',
@@ -112,7 +112,7 @@ const implementationPlanSection = {
         title: 'Use external support',
         icon: 'add-user',
         text:
-          'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding SMEs can access.'
+          'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding small-medium enterprises (SMEs) can access.'
       }
     ]
   }

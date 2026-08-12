@@ -16,10 +16,10 @@ export const constructionIntroSection = {
   paragraphs: [
     'Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets.',
     'Buildings are responsible for around 40% of EU energy consumption and 36% of Carbon dioxide (CO2) emissions. Renovation and retrofit therefore represent the sector\'s largest circular economy opportunity.',
-    'SMEs account for over 90% of European construction firms, yet most lack dedicated circular economy knowledge, tools and supply-chain capacity for implementation.',
+    'Small-medium enterprises (SMEs) account for over 90% of European construction firms, yet most lack dedicated circular economy knowledge, tools and supply-chain capacity for implementation.',
     'The EU Construction Products Regulation reform and revised Waste Framework Directive are driving new requirements for material traceability and end-of-life planning.',
     'Key circular economy principles for construction include design for disassembly, material reuse and repurposing, adaptive reuse of existing buildings, and digital building material passports.',
-    'Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering SMEs a competitive advantage in procurement and project differentiation.'
+    'Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering small-medium enterprises (SMEs) a competitive advantage in procurement and project differentiation.'
   ]
 };
 
@@ -41,7 +41,7 @@ export const constructionCasesSection = {
 export const constructionBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Key barriers and opportunities',
-  intro: 'Construction SMEs face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
+  intro: 'Constructionsmall-medium enterprises (SMEs) face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
   barriers: [
     'Lack of material traceability data in existing building stock.',
     'Regulatory uncertainty around certification of recycled and salvaged materials.',
@@ -54,7 +54,7 @@ export const constructionBarriersSection = {
     'The EU Renovation Wave is driving demand for circular economy-aligned retrofit and refurbishment.',
     'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
     'Urban mining and material banks can reduce procurement costs and supply risk.',
-    'Green public procurement criteria increasingly favour circular construction SMEs.',
+    'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
     'Modular and prefabricated construction supports disassembly and material reuse.',
     'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.'
   ]
@@ -109,7 +109,7 @@ export const construction = {
   number: 'Sector 1',
   slug: 'construction',
   title: 'Construction',
-  description: 'This sector tool provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
+  description: 'This sector tool provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/construction.jpg',
   imageAlt: 'Construction sector',
   navigation: [

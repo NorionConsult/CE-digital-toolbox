@@ -35,7 +35,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'Validating a circular opportunity',
   paragraphs: [
-    'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This phase helps SMEs identify the right circular business model, validate the strongest opportunities and understand the path forward.'
+    'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This phase helps you identify the right circular business model, validate the opportunities and understand the path forward.'
   ],
   cards: [
     {
@@ -119,7 +119,7 @@ const businessModelsSection = {
       icon: 'share-one',
       text:
         "Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that most products sit unused for most of their life. A drill might be used for a few hours a year; a shared meeting room might sit empty most of the working day. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has clear environmental benefits and can also be more cost-effective for users than ownership. The challenge is usually less about the concept and more about the logistics: booking systems, maintenance schedules, accountability for damage and trust between users. This model often works particularly well in business clusters or local networks, where there's a natural pool of similar businesses with similar but non-overlapping needs.",
-      example: 'Tool-sharing service for construction SMEs in a business park.'
+      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a business park.'
     },
     {
       title: 'Circular Supply Chains',
@@ -261,8 +261,6 @@ const phaseSummary = {
     'Completed a rapid feasibility and impact assessment',
     'Selected a priority model or strategy for further development',
     'Identified key barriers, risks and enabling conditions',
-    'Developed the business model with the NCM toolkit'
-
   ]
 };
 

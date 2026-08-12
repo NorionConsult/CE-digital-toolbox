@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import { tick } from 'svelte';
 
   /**
    * @typedef {{ text: string; href?: string }} RecommendationPart
@@ -40,10 +41,12 @@
       description:
         'Beginning to learn about CE. Some interest in resource efficiency, but no action taken yet.',
       recommendation: [
-        { text: 'Recommended next step: move to ' },
-        { text: 'Phase 1', href: '/journey-phases/learn/' },
-        { text: ' (Learn)' },
-        { text: ' to build a stronger foundation before continuing.' }
+        { text: 'Recommended next step: You are in the correct phase! Explore this page (' },
+        { text: 'Phase 2', href: '/journey-phases/assess/' },
+        { text: ' (Assess)) or move on to ' },
+        { text: 'Phase 3', href: '/journey-phases/explore/' },
+        { text: ' (Explore)' },
+        { text: ' to identify circular options.' }
       ]
     },
     {
@@ -54,10 +57,10 @@
       description:
         'First steps taken: basic waste reduction, energy saving measures or recycling in place.',
       recommendation: [
-        { text: 'You are in the correct phase! If this phase is familiar move to ' },
-        { text: 'Phase 3', href: '/journey-phases/explore/' },
-        { text: ' (Explore)' },
-        { text: '.' }
+        { text: 'Recommended next step: move to ' },
+        { text: 'Phase 4', href: '/journey-phases/validate/' },
+        { text: ' (Validate)' },
+        { text: ' to test and validate your priority circular options.' }
       ]
     },
     {
@@ -69,13 +72,11 @@
         'CE principles embedded in some processes; partnerships formed; some circular revenue.',
       recommendation: [
         { text: 'Recommended next step: continue with ' },
-        { text: 'Phase 4', href: '/journey-phases/validate/' },
-        { text: ' (Validate), ' },
         { text: 'Phase 5', href: '/journey-phases/implement/' },
         { text: ' (Implement) and ' },
         { text: 'Phase 6', href: '/journey-phases/monitor/' },
         { text: ' (Monitor)' },
-        { text: ' to strengthen, test and track your circular work.' }
+        { text: ' to strengthen implementation and track your circular work.' }
       ]
     },
     {
@@ -87,8 +88,11 @@
       recommendation: [
         { text: 'Recommended next step: use ' },
         { text: 'Phase 6', href: '/journey-phases/monitor/' },
+        { text: ' (Monitor)' },
+        { text: ' to keep improving. ' },
+        { text: 'Share your experience with us', href: '/contact/' },
         {
-          text: ' (Monitor) to keep improving. Share your experience with us, to inspire others by including you in the case collection!'
+          text: ', to inspire others by including you in the case collection!'
         }
       ]
     }
@@ -100,10 +104,44 @@
   /**
    * @param {MaturityLevel} level
    */
-  function selectLevel(level) {
+  async function selectLevel(level) {
     activeLevel = level;
+
+    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
+      await tick();
+      document.querySelector('.maturity-pop-up')?.scrollIntoView({
+        block: 'nearest',
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  /**
+   * Close the pop-up when clicking away from it, while still allowing users
+   * to select another maturity point without immediately closing it.
+   * @param {MouseEvent} event
+   */
+  function closeWhenClickingOutside(event) {
+    const target = /** @type {HTMLElement | null} */ (event.target);
+
+    if (!activeLevel || target?.closest('.maturity-pop-up') || target?.closest('.maturity-point')) {
+      return;
+    }
+
+    activeLevel = null;
+  }
+
+  /**
+   * @param {KeyboardEvent} event
+   */
+  function closeOnEscape(event) {
+    if (event.key === 'Escape') {
+      activeLevel = null;
+    }
   }
 </script>
+
+<svelte:window on:click={closeWhenClickingOutside} on:keydown={closeOnEscape} />
 
 <div class="maturity-curve">
   <div class="maturity-visual">
@@ -242,6 +280,7 @@
 
   .maturity-label {
     position: absolute;
+    z-index: 2;
     left: var(--level-x);
     top: calc(var(--level-y) - 58px);
     transform: translateX(-50%);
@@ -253,6 +292,7 @@
 
   .maturity-point {
     position: absolute;
+    z-index: 2;
     left: var(--level-x);
     top: var(--level-y);
     display: grid;
@@ -300,6 +340,10 @@
     box-shadow: 0 18px 38px rgba(10, 46, 54, 0.14);
   }
 
+  .maturity-pop-up p {
+    line-height: 1.45;
+  }
+
   .maturity-pop-up h4 {
     margin-top: 4px;
     color: var(--dark);
@@ -336,6 +380,10 @@
   }
 
   @media (max-width: 720px) {
+    .maturity-curve {
+      margin-top: 28px;
+    }
+
     .maturity-visual {
       max-width: 100%;
     }
@@ -349,6 +397,12 @@
 
     .maturity-chart {
       max-width: 100%;
+      aspect-ratio: 1000 / 430;
+      overflow: visible;
+    }
+
+    .maturity-chart:has(.maturity-pop-up) {
+      margin-bottom: clamp(380px, 125vw, 520px);
     }
 
     .maturity-label {
@@ -357,10 +411,42 @@
     }
 
     .maturity-pop-up {
-      top: 10px;
-      right: 10px;
-      width: min(330px, calc(100% - 20px));
+      top: calc(100% + 16px);
+      right: auto;
+      left: 0;
+      z-index: 4;
+      width: 100%;
+      max-height: min(420px, calc(100vh - 32px));
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
       padding: 16px;
+      border-radius: 12px;
+    }
+
+    .maturity-pop-up h4 {
+      font-size: 1.25rem;
+    }
+
+    .maturity-pop-up p {
+      font-size: 0.98rem;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .maturity-axis {
+      left: 6px;
+      max-width: 72px;
+      font-size: 0.62rem;
+    }
+
+    .maturity-label {
+      top: calc(var(--level-y) - 30px);
+      font-size: 0.66rem;
+    }
+
+    .maturity-point {
+      width: 20px;
+      border-width: 2px;
     }
   }
 </style>

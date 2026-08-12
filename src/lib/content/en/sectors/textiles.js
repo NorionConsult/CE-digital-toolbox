@@ -33,7 +33,7 @@ export const textilesCasesSection = {
 export const textilesBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Key barriers and opportunities',
-  intro: 'Textile SMEs face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.',
+  intro: 'Textile small-medium enterprises (SMEs) face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.',
   barriers: [
     'High cost of fibre sorting, collection and recycling infrastructure.',
     'Blended fabrics such as polyester-cotton are difficult or impossible to recycle.',
@@ -95,7 +95,7 @@ export const textiles = {
   number: 'Sector 3',
   slug: 'textiles',
   title: 'Textiles',
-  description: 'This sector tool provides tools and guidance for textile SMEs to adopt circular economy practices.',
+  description: 'This sector tool provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
   image: '/images/textiles.jpg',
   imageAlt: 'Textiles sector',
   navigation: [

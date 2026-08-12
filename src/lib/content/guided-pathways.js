@@ -125,7 +125,7 @@ export const guidedPathways = {
       slug: 'construction',
       title: 'Construction',
       description:
-        'This sector guide provides tools, cases and practical guidance for construction SMEs adopting circular economy practices.',
+        'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
       image: '/images/construction.jpg',
       imageAlt: 'Construction sector'
     },
@@ -134,7 +134,7 @@ export const guidedPathways = {
       slug: 'food-and-agriculture',
       title: 'Food and Agriculture',
       description:
-        'This sector guide provides tools, cases and practical guidance for food and agriculture SMEs adopting circular economy practices.',
+        'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
       image: '/images/agriculture.jpg',
       imageAlt: 'Food and Agriculture sector'
     },
@@ -143,7 +143,7 @@ export const guidedPathways = {
       slug: 'textiles',
       title: 'Textiles',
       description:
-        'This sector guide provides tools and guidance for textile SMEs to adopt circular economy practices.',
+        'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
       image: '/images/textiles.jpg',
       imageAlt: 'Textiles sector'
     },
@@ -152,7 +152,7 @@ export const guidedPathways = {
       slug: 'tourism',
       title: 'Tourism',
       description:
-        'This sector guide provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
+        'This sector guide provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
       image: '/images/tourism.jpg',
       imageAlt: 'Tourism sector'
     }

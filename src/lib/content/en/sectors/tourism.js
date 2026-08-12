@@ -19,7 +19,7 @@ export const tourismIntroSection = {
     'Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems.',
     'Tourism and food services generate waste streams containing approximately 37-72% organic waste, 6-40% paper and 5-15% plastic, with limited recovery systems in most destinations.',
     'In a business-as-usual scenario, tourism is projected to increase energy consumption by 154%, greenhouse-gas emissions by 131% and solid waste by 251% by 2050.',
-    'SMEs make up the vast majority of European tourism businesses, accounting for approximately half the sector\'s greenhouse-gas emissions, yet face disproportionate barriers to sustainability investment.'
+    'small-medium enterprises (SMEs) make up the vast majority of European tourism businesses, accounting for approximately half the sector\'s greenhouse-gas emissions, yet face disproportionate barriers to sustainability investment.'
   ]
 };
 
@@ -37,14 +37,14 @@ export const tourismCasesSection = {
 export const tourismBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Key barriers and opportunities',
-  intro: 'Tourism SMEs face investment, seasonality, reporting and capacity barriers, while traveller demand, certification and local circular supply chains are creating new opportunities.',
+  intro: 'Tourism small-medium enterprises (SMEs) face investment, seasonality, reporting and capacity barriers, while traveller demand, certification and local circular supply chains are creating new opportunities.',
   barriers: [
     'High upfront cost of energy-efficient, water-saving and waste-reduction technology for SME hospitality operators.',
     'Seasonal fluctuations create inconsistent waste volumes, complicating infrastructure investment and supplier contracts.',
     'Greenwashing risk and a lack of standardised sustainability metrics make credible reporting difficult for small operators.',
     'Fragmented supply chains and dependence on imported goods limit the ability to source locally and reduce transport emissions.',
     'Limited management capacity and staff expertise in circular economy practices among micro and small tourism businesses.',
-    'Regulatory complexity varies across EU member states, increasing the compliance burden for internationally operating SMEs.'
+    'Regulatory complexity varies across EU member states, increasing the compliance burden for internationally operating small-medium enterprises (SMEs).'
   ],
   opportunities: [
     'Demand for certified circular and regenerative tourism is growing, with many global travellers seeking more sustainable options.',
@@ -105,7 +105,7 @@ export const tourism = {
   number: 'Sector 4',
   slug: 'tourism',
   title: 'Tourism',
-  description: 'This sector tool provides practical guidance for tourism and hospitality SMEs adopting circular economy practices.',
+  description: 'This sector tool provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/tourism.jpg',
   imageAlt: 'Tourism sector',
   navigation: [
