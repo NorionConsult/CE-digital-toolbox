@@ -118,7 +118,7 @@ const LearningresourcesSection = {
           'A ten-part e-learning course covering circular economy principles and their application across industrial value chains, developed for green-transition skills building.',
         language: 'English',
         provider: 'United Nations Industrial Development Organization (UNIDO)',
-        url: 'https://habitable-cove.eu/inres/incur_res_023/',
+        url: 'https://www.unido.org/learning-resources/circular-economy-industry',
         buttonLabel: 'Open resource',
         aboutCourse: [
           'A structured, modular e-learning course that progresses from the economic foundations of the circular economy through to applied industrial topics: circular design, value retention strategies such as remanufacturing, reconditioning and refurbishing, recycling processes, circularity in use and consumption, the circular bioeconomy, trade and environment linkages, and the role of renewable energy in circular, low-carbon industrial systems.'

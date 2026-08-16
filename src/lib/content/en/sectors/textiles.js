@@ -20,7 +20,7 @@ export const textilesIntroSection = {
 export const textilesCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  intro: "The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the textiles sector to find all relevant cases.",
   // Add exactly three case names from src/lib/content/cases.js.
   // These names control which cases appear on this sector guide page.
   featuredCaseNames: [
@@ -88,7 +88,7 @@ export const textilesBestPracticesSection = {
 export const textilesRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
-  intro: 'Tools tagged for the Textiles sector appear here automatically.'
+  intro: ''
 };
 
 export const textiles = {

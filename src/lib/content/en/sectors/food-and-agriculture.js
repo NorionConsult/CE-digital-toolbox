@@ -24,7 +24,7 @@ export const foodAndAgricultureIntroSection = {
 export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.',
   featuredCaseNames: [
     'Banca de Alimente Moldova',
     'Garma-Grup SRL',
@@ -96,7 +96,7 @@ export const foodAndAgricultureBestPracticesSection = {
 export const foodAndAgricultureRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
-  intro: 'Tools tagged for the Food and Agriculture sector appear here automatically.'
+  intro: ''
 };
 
 // SECTOR CARD, HERO AND NAVIGATION

@@ -19,7 +19,7 @@ export const guidedPathways = {
     eyebrow: 'Guided pathways',
     title: 'Find the right tools',
     text:
-      'The toolbox is organised into journey phases, sector guides, a case study collection, and a tool catalogue. Each journey phase opens with a short introduction, followed by a curated set of tools offering methods, guidance, and resources. Start with the circular economy journey phases, or explore tools by sector, either route leads to tools, examples, and practical steps suited to where you are in the transition.',
+      'The toolbox is organised into journey phases, sector guides, a case study collection, and a tool catalogue. Start with the circular economy journey phases, or explore tools by sector, either route leads to tools, examples, and practical steps suited to where you are in the transition.',
     buttons: [
       {
         label: 'Follow journey phases',
@@ -41,7 +41,11 @@ export const guidedPathways = {
     eyebrow: 'For a structured approach',
     title: 'The SME journey',
     text:
-      'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contain selected tools and practical guidance.'
+      'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contains selected tools and practical guidance.',
+    callToAction: {
+      text:
+        "**Where are you in the SME journey?** || Use this interactive diagram to understand which phase is most suitable for you to start with."
+    }
   },
 
   /*

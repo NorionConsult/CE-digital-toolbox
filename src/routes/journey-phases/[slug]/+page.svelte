@@ -6,7 +6,6 @@
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import M4Questionnaire from '$lib/components/sections/M4Questionnaire.svelte';
-  import MaturityCurve from '$lib/components/sections/MaturityCurve.svelte';
 
   export let data;
   /** @type {any} */
@@ -581,12 +580,6 @@
               </details>
             {/each}
           </div>
-        </div>
-      {/if}
-
-      {#if journeyPhase.slug === 'assess' && section.id === 'maturity-assessment'}
-        <div class="container">
-          <MaturityCurve />
         </div>
       {/if}
 

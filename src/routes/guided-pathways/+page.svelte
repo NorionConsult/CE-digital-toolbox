@@ -1,7 +1,9 @@
 <script>
   import JourneyPhaseCard from '$lib/components/cards/JourneyPhaseCard.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import SectorCard from '$lib/components/cards/SectorCard.svelte';
   import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
+  import MaturityCurve from '$lib/components/sections/MaturityCurve.svelte';
   import { guidedPathways } from '$lib/content/guided-pathways.js';
   import { site } from '$lib/content/site.js';
 </script>
@@ -38,6 +40,17 @@
       title={guidedPathways.journeyPhasesSection.title}
       text={guidedPathways.journeyPhasesSection.text}
     />
+
+    {#if guidedPathways.journeyPhasesSection.callToAction}
+      <article class="journey-phase-cta-card">
+        <div class="journey-phase-cta-text">
+          <RichText text={guidedPathways.journeyPhasesSection.callToAction.text} />
+        </div>
+        <div class="journey-phase-cta-diagram">
+          <MaturityCurve />
+        </div>
+      </article>
+    {/if}
 
     <div class="journey-phase-grid">
       {#each guidedPathways.journeyPhases as journeyPhase}
@@ -106,6 +119,42 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+  }
+
+  .journey-phase-cta-card {
+    margin: 0 0 32px;
+    padding: 24px;
+    border: 1px solid rgba(64, 171, 87, 0.38);
+    border-radius: 15px;
+    background-color: rgba(64, 171, 87, 0.1);
+  }
+
+  .journey-phase-cta-text {
+    max-width: 760px;
+  }
+
+  .journey-phase-cta-card :global(.rich-text) {
+    gap: 0;
+  }
+
+  .journey-phase-cta-card :global(.rich-text p) {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.08rem;
+    line-height: 1.45;
+  }
+
+  .journey-phase-cta-diagram {
+    margin-top: 28px;
+    padding-top: 28px;
+  }
+
+  .journey-phase-cta-diagram :global(.maturity-curve) {
+    margin-top: 0;
+  }
+
+  .journey-phase-cta-diagram :global(.maturity-visual) {
+    max-width: 100%;
   }
 
   .sector-grid {

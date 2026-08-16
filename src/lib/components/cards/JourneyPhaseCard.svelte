@@ -17,7 +17,10 @@
     <p><InlineText text={journeyPhase.description} /></p>
   </div>
 
-  <a href="{base}/journey-phases/{journeyPhase.slug}/" class="module-link">{site.labels.viewPhase}</a>
+  <a href="{base}/journey-phases/{journeyPhase.slug}/" class="module-link">
+    {site.labels.viewPhase}
+    <span class="link-arrow" aria-hidden="true"></span>
+  </a>
 </article>
 
 <style>
@@ -58,6 +61,9 @@
   }
 
   .module-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     color: inherit;
     font-weight: 700;
     text-decoration: none;
@@ -65,8 +71,22 @@
     width: fit-content;
   }
 
+  .link-arrow {
+    width: 0.95em;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    transition: transform 0.18s ease;
+  }
+
   .module-link:hover {
     opacity: 0.75;
+  }
+
+  .module-link:hover .link-arrow,
+  .module-link:focus-visible .link-arrow {
+    transform: translateX(3px);
   }
 
   @media (max-width: 640px) {

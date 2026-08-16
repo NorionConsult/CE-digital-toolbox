@@ -43,7 +43,7 @@ const pathwaySection = {
       number: '1',
       title: 'Circular Business Models',
       description:
-        'Explore how circular strategies can be translated into business model archetypes that fit your sector, customers and capabilities.',
+        'Explore how circular strategies can be translated into business model archetypes that fit your customers and capabilities.',
       keyOutputs: [
         'A clear view of six circular business model archetypes',
         'Examples of how business models preserve value',
@@ -55,9 +55,9 @@ const pathwaySection = {
       number: '2',
       title: 'Quick Scan Tool',
       description:
-        'Evaluate shortlisted circular business model options based on impact, feasibility, risks and alignment with your existing operations and goals.',
+        'Evaluate shortlisted circular options based on impact, feasibility, risks and alignment with your existing operations and goals.',
       keyOutputs: [
-        'Circular business models screened against six criteria',
+        'Circular models screened against six criteria',
         'A clearer view of feasibility and potential impact'
       ]
     },
@@ -97,7 +97,7 @@ const businessModelsSection = {
       title: 'Product as a Service (PaaS)',
       icon: 'delivery',
       text:
-        "Instead of selling a product outright, you sell access to what it does: the customer pays to use it, not to own it. This shifts who carries the risk when something breaks down or wears out. When you sell a product, the customer absorbs the cost of repairs and replacement; when you sell access instead, that cost sits with you as the provider. This changes your incentives completely: a product that breaks down or wears out quickly is now a cost to your business rather than a future sale, so you're motivated to design for durability, easy repair and a long service life. It also opens up a closer, ongoing relationship with the customer, since you're typically the one handling maintenance and servicing throughout the contract. Revenue becomes recurring rather than one-off, which can make cash flow more predictable, though it usually requires more upfront capital, since you retain ownership of the asset instead of receiving full payment at the point of sale.",
+        "Instead of selling a product, you sell access to what it does: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This shifts who carries the cost and risk when the product breaks down, wears out or needs replacing. In a traditional sale, these costs usually fall on the customer. In a product-as-a-service model, they sit with the provider. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. Because the provider remains responsible for the product, they can also manage its maintenance, reuse, and recycling more effectively, helping reduce waste. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable. However, the model may require more upfront capital to be invested as a provider.",
       example: 'Leasing industrial machinery with full maintenance included.'
     },
     {
@@ -118,7 +118,7 @@ const businessModelsSection = {
       title: 'Sharing Platforms',
       icon: 'share-one',
       text:
-        "Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that most products sit unused for most of their life. A drill might be used for a few hours a year; a shared meeting room might sit empty most of the working day. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has clear environmental benefits and can also be more cost-effective for users than ownership. The challenge is usually less about the concept and more about the logistics: booking systems, maintenance schedules, accountability for damage and trust between users. This model often works particularly well in business clusters or local networks, where there's a natural pool of similar businesses with similar but non-overlapping needs.",
+        "Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that most products sit unused for most of their life. A drill might be used for a few hours a year; a meeting room might sit empty most of the working day. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has clear environmental benefits and can also be more cost-effective for users than ownership. The challenge is usually less about the concept and more about the logistics: booking systems, maintenance schedules, accountability for damage and trust between users. This model often works particularly well in business clusters or local networks, where there's a natural pool of similar businesses with similar but non-overlapping needs.",
       example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a business park.'
     },
     {
@@ -137,7 +137,7 @@ const quickScanSection = {
   title: 'Quick Scan Tool',
   resourceTag: 'validate:quick-scan',
   paragraphs: [
-    'Not every circular business model will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
+    'Not every circular option will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
     'Use this section to support the assessment through criteria and a prioritisation method.  The result can be downloaded. Please use Firefox, Safari of Google Chrome browser if you want the download to work correctly.'
   ],
   /*

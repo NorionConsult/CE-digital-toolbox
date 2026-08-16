@@ -3,132 +3,124 @@
   import { tick } from 'svelte';
 
   /**
-   * @typedef {{ text: string; href?: string }} RecommendationPart
    * @typedef {{
    *   number: string;
-   *   label: string;
-   *   x: number;
-   *   y: number;
-   *   description: string;
-   *   recommendation: RecommendationPart[];
-   * }} MaturityLevel
+   *   panelSide: 'left' | 'right';
+   *   edgePhase: boolean;
+   *   phaseName: string;
+   *   formerLabel: string;
+   *   shortDescription: string;
+   *   popUpText: string;
+   *   icon: string;
+   *   iconAlt: string;
+   *   href: string;
+   * }} JourneyPhaseStep
    */
 
   /*
-    Edit the labels, descriptions and recommendations for the maturity visual here.
-    The page layout and phase text are kept separate so this component can be updated on its own.
+    Edit the phase labels, short descriptions and pop-up text for the
+    interactive SME journey diagram here. The visual layout is handled below.
   */
-  /** @type {MaturityLevel[]} */
-  const levels = [
+  /** @type {JourneyPhaseStep[]} */
+  const phases = [
     {
       number: '1',
-      label: 'Unaware',
-      x: 18,
-      y: 60.5,
-      description: 'No knowledge of CE. Business runs as usual; waste and inefficiency go unnoticed.',
-      recommendation: [
-        { text: 'Recommended next step: move to ' },
-        { text: 'Phase 1', href: '/journey-phases/learn/' },
-        { text: ' (Learn)' },
-        { text: ' before continuing with assessment.' }
-      ]
+      panelSide: 'left',
+      edgePhase: true,
+      phaseName: 'Learn',
+      formerLabel: 'Unaware',
+      shortDescription: 'Understand basic CE concepts',
+      popUpText:
+        'You have no knowledge of circular economy. Business runs as usual; waste and inefficiency go unnoticed. Start with tools from this phase.',
+      icon: '/phase-icons/icon-learn.png',
+      iconAlt: 'Learn phase icon',
+      href: '/journey-phases/learn/'
     },
     {
       number: '2',
-      label: 'Exploring',
-      x: 34,
-      y: 57,
-      description:
-        'Beginning to learn about CE. Some interest in resource efficiency, but no action taken yet.',
-      recommendation: [
-        { text: 'Recommended next step: You are in the correct phase! Explore this page (' },
-        { text: 'Phase 2', href: '/journey-phases/assess/' },
-        { text: ' (Assess)) or move on to ' },
-        { text: 'Phase 3', href: '/journey-phases/explore/' },
-        { text: ' (Explore)' },
-        { text: ' to identify circular options.' }
-      ]
+      panelSide: 'left',
+      edgePhase: false,
+      phaseName: 'Assess',
+      formerLabel: 'Exploring',
+      shortDescription: 'Map and identify potential for improvement',
+      popUpText:
+        'You are beginning to learn about circular economy. There is some interest in resource efficiency, but no action has been taken yet. Use this phase to understand your starting point and identify where improvement is possible.',
+      icon: '/phase-icons/icon-assess.png',
+      iconAlt: 'Assess phase icon',
+      href: '/journey-phases/assess/'
     },
     {
       number: '3',
-      label: 'Starting',
-      x: 52,
-      y: 40.7,
-      description:
-        'First steps taken: basic waste reduction, energy saving measures or recycling in place.',
-      recommendation: [
-        { text: 'Recommended next step: move to ' },
-        { text: 'Phase 4', href: '/journey-phases/validate/' },
-        { text: ' (Validate)' },
-        { text: ' to test and validate your priority circular options.' }
-      ]
+      panelSide: 'left',
+      edgePhase: false,
+      phaseName: 'Explore',
+      formerLabel: 'Starting',
+      shortDescription: 'Brainstorm and integrate circular design principles',
+      popUpText:
+        'You have taken first steps, such as basic waste reduction, energy saving measures or recycling. Use this phase to explore circular strategies and identify options that fit your business.',
+      icon: '/phase-icons/icon-explore.png',
+      iconAlt: 'Explore phase icon',
+      href: '/journey-phases/explore/'
     },
     {
       number: '4',
-      label: 'Advancing',
-      x: 72,
-      y: 33.7,
-      description:
-        'CE principles embedded in some processes; partnerships formed; some circular revenue.',
-      recommendation: [
-        { text: 'Recommended next step: continue with ' },
-        { text: 'Phase 5', href: '/journey-phases/implement/' },
-        { text: ' (Implement) and ' },
-        { text: 'Phase 6', href: '/journey-phases/monitor/' },
-        { text: ' (Monitor)' },
-        { text: ' to strengthen implementation and track your circular work.' }
-      ]
+      panelSide: 'right',
+      edgePhase: false,
+      phaseName: 'Validate',
+      formerLabel: 'Starting',
+      shortDescription: 'Review circular business models and prioritize options',
+      popUpText:
+        'You have identified possible circular options and now need to test which ones are feasible, valuable and strategically relevant. Use this phase to validate and prioritise your strongest options.',
+      icon: '/phase-icons/icon-validate.png',
+      iconAlt: 'Validate phase icon',
+      href: '/journey-phases/validate/'
     },
     {
       number: '5',
-      label: 'Leading',
-      x: 90,
-      y: 19,
-      description: 'CE is core to the business model. Circular practices measured, reported, and improved.',
-      recommendation: [
-        { text: 'Recommended next step: use ' },
-        { text: 'Phase 6', href: '/journey-phases/monitor/' },
-        { text: ' (Monitor)' },
-        { text: ' to keep improving. ' },
-        { text: 'Share your experience with us', href: '/contact/' },
-        {
-          text: ', to inspire others by including you in the case collection!'
-        }
-      ]
+      panelSide: 'right',
+      edgePhase: false,
+      phaseName: 'Implement',
+      formerLabel: 'Advancing',
+      shortDescription: 'Plan and pilot your selected ideas',
+      popUpText:
+        'Circular economy principles are embedded in some processes, partnerships may be forming, and some circular revenue may already exist. Use this phase to plan, pilot and implement selected circular ideas.',
+      icon: '/phase-icons/icon-implement.png',
+      iconAlt: 'Implement phase icon',
+      href: '/journey-phases/implement/'
+    },
+    {
+      number: '6',
+      panelSide: 'right',
+      edgePhase: true,
+      phaseName: 'Monitor',
+      formerLabel: 'Leading',
+      shortDescription: 'Select indicators, review and track progress',
+      popUpText:
+        'Circular economy is becoming core to the business model. Circular practices are measured, reported and improved. Use this phase to monitor progress, keep improving and share your experience through the contact page to inspire others in the case collection.',
+      icon: '/phase-icons/icon-monitor.png',
+      iconAlt: 'Monitor phase icon',
+      href: '/journey-phases/monitor/'
     }
   ];
 
-  /** @type {MaturityLevel | null} */
-  let activeLevel = null;
+  /** @type {JourneyPhaseStep | null} */
+  let activePhase = phases[0];
+  let hasSelectedPhase = false;
 
   /**
-   * @param {MaturityLevel} level
+   * @param {JourneyPhaseStep} phase
    */
-  async function selectLevel(level) {
-    activeLevel = level;
+  async function selectPhase(phase) {
+    activePhase = phase;
+    hasSelectedPhase = true;
 
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
       await tick();
       document.querySelector('.maturity-pop-up')?.scrollIntoView({
-        block: 'nearest',
+        block: 'start',
         behavior: 'smooth'
       });
     }
-  }
-
-  /**
-   * Close the pop-up when clicking away from it, while still allowing users
-   * to select another maturity point without immediately closing it.
-   * @param {MouseEvent} event
-   */
-  function closeWhenClickingOutside(event) {
-    const target = /** @type {HTMLElement | null} */ (event.target);
-
-    if (!activeLevel || target?.closest('.maturity-pop-up') || target?.closest('.maturity-point')) {
-      return;
-    }
-
-    activeLevel = null;
   }
 
   /**
@@ -136,78 +128,74 @@
    */
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
-      activeLevel = null;
+      activePhase = null;
     }
   }
 </script>
 
-<svelte:window on:click={closeWhenClickingOutside} on:keydown={closeOnEscape} />
+<svelte:window on:keydown={closeOnEscape} />
 
 <div class="maturity-curve">
   <div class="maturity-visual">
-    <div class="maturity-chart" aria-label="Circular economy maturity curve">
-      <div class="maturity-axis" aria-hidden="true">
-        <span>High maturity</span>
-        <i></i>
-        <span>Low maturity</span>
+    <div
+      class:has-popup={activePhase !== null}
+      class="maturity-chart"
+      aria-label="Interactive SME journey phase diagram"
+    >
+      <div class="journey-steps">
+        <div class="journey-line" aria-hidden="true"></div>
+
+        {#each phases as phase}
+          <article class:active-step={activePhase?.number === phase.number} class="journey-step">
+            <button
+              type="button"
+              class:active={activePhase?.number === phase.number}
+              class:pulse={phase.number === '1' && !hasSelectedPhase}
+              class="maturity-point"
+              aria-label={`Open ${phase.phaseName} phase description`}
+              aria-pressed={activePhase?.number === phase.number}
+              on:click={() => selectPhase(phase)}
+            >
+              <img src="{base}{phase.icon}" alt="" aria-hidden="true" />
+            </button>
+
+            <div class="journey-step-text">
+              <p class="journey-step-number">Phase {phase.number}</p>
+              <h4><a href="{base}{phase.href}">{phase.phaseName}</a></h4>
+              <p>{phase.shortDescription}</p>
+            </div>
+          </article>
+        {/each}
       </div>
 
-      <svg viewBox="0 0 1000 430" role="img" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="maturity-area-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f3c200" />
-            <stop offset="48%" stop-color="#d5d64b" />
-            <stop offset="100%" stop-color="#7fc23a" />
-          </linearGradient>
-        </defs>
-        <path
-          d="M 0 382 C 62 320, 122 284, 180 260 C 235 242, 285 250, 340 245 C 420 238, 455 185, 520 175 C 610 162, 660 158, 720 145 C 790 132, 830 96, 900 82 C 935 75, 970 73, 1000 72 L 1000 430 L 0 430 Z"
-          fill="url(#maturity-area-gradient)"
-        />
-        <path
-          d="M 0 382 C 62 320, 122 284, 180 260 C 235 242, 285 250, 340 245 C 420 238, 455 185, 520 175 C 610 162, 660 158, 720 145 C 790 132, 830 96, 900 82 C 935 75, 970 73, 1000 72"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-width="3"
-        />
-      </svg>
+      {#if activePhase}
+        <aside
+          class:edge-panel={activePhase.edgePhase}
+          class={`maturity-pop-up panel-${activePhase.panelSide}`}
+          aria-live="polite"
+        >
+          <div class="maturity-panel-card">
+            <button
+              type="button"
+              class="maturity-close"
+              aria-label="Close selected phase description"
+              on:click={() => (activePhase = null)}
+            >
+              <span aria-hidden="true"></span>
+            </button>
 
-      {#each levels as level}
-        <span class="maturity-label" style={`--level-x: ${level.x}%; --level-y: ${level.y}%;`}>
-          {level.label}
-        </span>
-        <button
-          type="button"
-          class:active={activeLevel?.number === level.number}
-          class="maturity-point"
-          style={`--level-x: ${level.x}%; --level-y: ${level.y}%;`}
-          aria-label={`Open ${level.label} maturity description`}
-          aria-pressed={activeLevel?.number === level.number}
-          on:click={() => selectLevel(level)}
-        ></button>
-      {/each}
+            <div class="maturity-panel-content">
+              <h4>{activePhase.formerLabel}</h4>
+              <p>{activePhase.popUpText}</p>
+            </div>
 
-      {#if activeLevel}
-        <aside class="maturity-pop-up" aria-live="polite">
-          <div>
-            <p class="eyebrow">Level {activeLevel.number}</p>
-            <h4>{activeLevel.label}</h4>
+            <div class="maturity-actions">
+              <a href="{base}{activePhase.href}" class="maturity-go-link">
+                View phase
+                <span class="link-arrow" aria-hidden="true"></span>
+              </a>
+            </div>
           </div>
-
-          <p>{activeLevel.description}</p>
-
-          <p class="maturity-recommendation">
-            {#each activeLevel.recommendation as part}
-              {#if part.href}
-                <a href="{base}{part.href}">{part.text}</a>
-              {:else}
-                {part.text}
-              {/if}
-            {/each}
-          </p>
-
-          <button type="button" class="maturity-close" on:click={() => (activeLevel = null)}>Close</button>
         </aside>
       {/if}
     </div>
@@ -221,123 +209,216 @@
   }
 
   .maturity-visual {
-    max-width: 980px;
-  }
-
-  .maturity-axis {
-    position: absolute;
-    top: 24px;
-    bottom: 18px;
-    left: 16px;
-    z-index: 2;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    justify-items: start;
-    color: var(--dark);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0;
-  }
-
-  .maturity-axis i {
-    position: relative;
-    width: 1px;
-    margin: 8px 0 8px 4px;
-    background-color: rgba(10, 46, 54, 0.48);
-  }
-
-  .maturity-axis i::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-right: 4px solid transparent;
-    border-bottom: 6px solid rgba(10, 46, 54, 0.48);
-    border-left: 4px solid transparent;
-    transform: translateX(-50%);
+    max-width: 100%;
   }
 
   .maturity-chart {
+    --journey-point-size: 64px;
+    --journey-step-inset: 12px;
+
     position: relative;
     width: 100%;
-    max-width: 980px;
-    aspect-ratio: 1000 / 430;
     color: var(--dark);
-    background-color: var(--white);
+    padding: 30px 24px 24px;
     border-radius: 15px;
-    overflow: hidden;
   }
 
-  .maturity-chart svg {
+  .journey-line {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
+    top: calc(var(--journey-point-size) / 2);
+    right: calc((100% / 6) - var(--journey-step-inset) - (var(--journey-point-size) / 2));
+    left: calc(var(--journey-step-inset) + (var(--journey-point-size) / 2));
+    height: 3px;
+    border-radius: 999px;
+    background-color: rgba(10, 46, 54, 0.78);
   }
 
-  .maturity-label {
-    position: absolute;
-    z-index: 2;
-    left: var(--level-x);
-    top: calc(var(--level-y) - 58px);
-    transform: translateX(-50%);
-    color: var(--dark);
-    font-size: clamp(0.78rem, 1.5vw, 1rem);
-    font-weight: 700;
-    white-space: nowrap;
+  .journey-steps {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .journey-step {
+    position: relative;
+    display: grid;
+    grid-template-rows: var(--journey-point-size) auto;
+    justify-items: start;
+    gap: 38px;
+    min-width: 0;
+    padding: 0 var(--journey-step-inset);
   }
 
   .maturity-point {
-    position: absolute;
+    position: relative;
     z-index: 2;
-    left: var(--level-x);
-    top: var(--level-y);
-    display: grid;
-    place-items: center;
-    width: clamp(18px, 3vw, 28px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--journey-point-size);
     aspect-ratio: 1;
     padding: 0;
     border: 3px solid currentColor;
     border-radius: 50%;
     color: var(--dark);
     cursor: pointer;
-    transform: translate(-50%, -50%);
     box-shadow: none;
-    background:
-      radial-gradient(circle, var(--white) 0 calc(100% - 4px), transparent calc(100% - 3px));
-    transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease;
+    background-color: var(--white);
+    overflow: hidden;
+    transition:
+      background-color 0.18s ease,
+      box-shadow 0.18s ease,
+      transform 0.18s ease,
+      border-color 0.18s ease;
+  }
+
+  .maturity-point.pulse {
+    animation: maturity-point-pulse 2.6s ease-in-out infinite;
+  }
+
+  .maturity-point img {
+    width: 112%;
+    height: 112%;
+    object-fit: contain;
+    pointer-events: none;
   }
 
   .maturity-point:hover,
   .maturity-point:focus-visible {
-    box-shadow: 0 0 0 7px rgba(210, 198, 63, 0.28), 0 12px 24px rgba(10, 46, 54, 0.2);
-    transform: translate(-50%, -50%) scale(1.08);
+    animation: none;
+    box-shadow: 0 0 0 7px rgba(210, 198, 63, 0.28), 0 12px 24px rgba(10, 46, 54, 0.18);
+    transform: scale(1.06);
   }
 
   .maturity-point.active {
-    background: var(--green-secondary);
+    animation: none;
+    background-color: var(--green-secondary);
     border-color: var(--green-secondary);
-    box-shadow: 0 0 0 9px rgba(74, 129, 58, 0.24), 0 12px 24px rgba(10, 46, 54, 0.2);
-    transform: translate(-50%, -50%) scale(1.08);
+    box-shadow: 0 0 0 9px rgba(74, 129, 58, 0.24), 0 12px 24px rgba(10, 46, 54, 0.18);
+    transform: scale(1.06);
+  }
+
+  .maturity-point.active.pulse {
+    animation: maturity-point-pulse 2.6s ease-in-out infinite;
+  }
+
+  @keyframes maturity-point-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(210, 198, 63, 0.34);
+    }
+
+    50% {
+      box-shadow: 0 0 0 10px rgba(210, 198, 63, 0.08);
+    }
+  }
+
+  .journey-step-text {
+    display: grid;
+    gap: 4px;
+    align-self: stretch;
+    width: calc(100% + 24px);
+    min-height: 172px;
+    margin: -18px -12px 0;
+    padding: 18px 18px 32px;
+    border-radius: 12px 12px 0 0;
+    background-color: transparent;
+    transition:
+      background-color 0.18s ease,
+      color 0.18s ease;
+  }
+
+  .journey-step.active-step {
+    z-index: 2;
+  }
+
+  .journey-step.active-step .journey-step-text {
+    background-color: rgba(64, 171, 87, 0.16);
+  }
+
+  .journey-step-text .journey-step-number {
+    margin: 0 0 2px;
+    color: rgba(64, 171, 87, 0.52);
+    font-family: var(--font-display);
+    font-size: clamp(0.72rem, 1vw, 0.9rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: 0;
+  }
+
+  .journey-step.active-step .journey-step-number {
+    color: var(--green-secondary);
+  }
+
+  .journey-step-text h4 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 1.9vw, 1.4rem);
+    line-height: 1;
+  }
+
+  .journey-step-text h4 a {
+    color: var(--dark);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+
+  .journey-step-text h4 a:hover,
+  .journey-step-text h4 a:focus-visible {
+    color: var(--green-secondary);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+  }
+
+  .journey-step-text p {
+    margin: 0;
+    color: var(--dark);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
   .maturity-pop-up {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    z-index: 3;
+    position: relative;
+    z-index: 1;
+    width: min(760px, 100%);
+    margin-top: 0;
+    padding: 16px;
+    border: 0;
+    border-radius: 15px;
+    background-color: rgba(64, 171, 87, 0.16);
+    box-shadow: none;
+    scroll-margin-top: 140px;
+  }
+
+  .maturity-pop-up.panel-right {
+    margin-left: auto;
+  }
+
+  .maturity-pop-up.panel-left {
+    margin-right: auto;
+  }
+
+  .maturity-pop-up.panel-left.edge-panel {
+    border-top-left-radius: 0;
+  }
+
+  .maturity-pop-up.panel-right.edge-panel {
+    border-top-right-radius: 0;
+  }
+
+  .maturity-panel-card {
+    position: relative;
     display: grid;
-    gap: 12px;
-    width: min(420px, calc(100% - 48px));
-    padding: 20px;
-    border: 1px solid var(--soft-border);
-    border-left: 8px solid var(--green-secondary);
-    border-radius: 8px;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+    min-height: 160px;
+    padding: 22px 68px 22px 24px;
+    border-radius: 10px;
     background-color: var(--white);
-    box-shadow: 0 18px 38px rgba(10, 46, 54, 0.14);
   }
 
   .maturity-pop-up p {
@@ -351,26 +432,67 @@
     text-transform: uppercase;
   }
 
-  .maturity-recommendation {
-    color: var(--muted);
-    font-weight: 700;
+  .maturity-panel-content {
+    display: grid;
+    gap: 10px;
   }
 
-  .maturity-recommendation a {
-    color: var(--dark);
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
+  .maturity-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
-  .maturity-close {
+  .maturity-go-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     width: fit-content;
-    padding: var(--action-button-padding);
-    border: 2px solid currentColor;
-    border-radius: var(--action-button-radius);
-    background-color: transparent;
+    padding: 0 0 3px;
+    border: 0;
+    border-bottom: 2px solid currentColor;
+    border-radius: 0;
     color: var(--dark);
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    transition:
+      color 0.18s ease,
+      opacity 0.18s ease;
+  }
+
+  .link-arrow {
+    width: 0.95em;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    transition: transform 0.18s ease;
+  }
+
+  .maturity-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    aspect-ratio: 1;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--dark);
+    cursor: pointer;
+  }
+
+  .maturity-close span {
+    width: 24px;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:close-one.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:close-one.svg") center / contain no-repeat;
   }
 
   .maturity-close:hover,
@@ -379,74 +501,119 @@
     color: var(--white);
   }
 
-  @media (max-width: 720px) {
+  .maturity-go-link:hover,
+  .maturity-go-link:focus-visible {
+    color: var(--green-secondary);
+    opacity: 0.85;
+  }
+
+  .maturity-go-link:hover .link-arrow,
+  .maturity-go-link:focus-visible .link-arrow {
+    transform: translateX(3px);
+  }
+
+  @media (max-width: 900px) {
+    .maturity-chart {
+      min-height: 0;
+    }
+
+    .maturity-pop-up {
+      margin-top: 28px;
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .maturity-pop-up.panel-right,
+    .maturity-pop-up.panel-left {
+      margin-right: 0;
+      margin-left: 0;
+      border-radius: 15px;
+    }
+
+    .maturity-pop-up.panel-left.edge-panel,
+    .maturity-pop-up.panel-right.edge-panel {
+      border-radius: 15px;
+    }
+
+    .maturity-panel-card {
+      padding-right: 60px;
+    }
+  }
+
+  @media (max-width: 640px) {
     .maturity-curve {
       margin-top: 28px;
     }
 
-    .maturity-visual {
-      max-width: 100%;
-    }
-
-    .maturity-axis {
-      top: 10px;
-      bottom: 12px;
-      left: 10px;
-      font-size: 0.68rem;
-    }
-
     .maturity-chart {
-      max-width: 100%;
-      aspect-ratio: 1000 / 430;
-      overflow: visible;
+      --journey-point-size: 56px;
+
+      padding: 20px 16px;
     }
 
-    .maturity-chart:has(.maturity-pop-up) {
-      margin-bottom: clamp(380px, 125vw, 520px);
+    .journey-line {
+      top: calc(var(--journey-point-size) / 2);
+      bottom: calc(var(--journey-point-size) / 2);
+      left: calc(var(--journey-point-size) / 2);
+      width: 3px;
+      height: auto;
+      right: auto;
     }
 
-    .maturity-label {
-      top: calc(var(--level-y) - 38px);
-      font-size: 0.78rem;
+    .journey-steps {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .journey-step {
+      grid-template-columns: var(--journey-point-size) minmax(0, 1fr);
+      grid-template-rows: auto;
+      gap: 16px;
+      align-items: center;
+      justify-items: start;
+      padding: 0;
+    }
+
+    .journey-step.active-step .journey-step-text {
+      width: 100%;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      background-color: transparent;
+    }
+
+    .maturity-point {
+      justify-self: start;
+    }
+
+    .journey-step-text {
+      width: 100%;
+      min-height: 0;
+      margin: 0;
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+    }
+
+    .journey-step-text h4 {
+      font-size: 1.25rem;
+    }
+
+    .journey-step-text p {
+      font-size: 1rem;
     }
 
     .maturity-pop-up {
-      top: calc(100% + 16px);
-      right: auto;
-      left: 0;
-      z-index: 4;
-      width: 100%;
       max-height: min(420px, calc(100vh - 32px));
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
       padding: 16px;
-      border-radius: 12px;
+      border-radius: 15px;
     }
 
-    .maturity-pop-up h4 {
-      font-size: 1.25rem;
-    }
-
-    .maturity-pop-up p {
-      font-size: 0.98rem;
-    }
-  }
-
-  @media (max-width: 440px) {
-    .maturity-axis {
-      left: 6px;
-      max-width: 72px;
-      font-size: 0.62rem;
-    }
-
-    .maturity-label {
-      top: calc(var(--level-y) - 30px);
-      font-size: 0.66rem;
-    }
-
-    .maturity-point {
-      width: 20px;
-      border-width: 2px;
+    .maturity-panel-card {
+      border-radius: 10px;
+      padding: 16px 52px 16px 16px;
     }
   }
 </style>

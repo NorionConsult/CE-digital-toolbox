@@ -15,7 +15,10 @@
   <p class="sector-number">{sector.number}</p>
   <h3>{sector.title}</h3>
   <p><InlineText text={sector.description} /></p>
-  <a href="{base}/sectors/{sector.slug}/" class="sector-link">{site.labels.viewSector}</a>
+  <a href="{base}/sectors/{sector.slug}/" class="sector-link">
+    {site.labels.viewSector}
+    <span class="link-arrow" aria-hidden="true"></span>
+  </a>
 </article>
 
 <style>
@@ -55,10 +58,27 @@
   }
 
   .sector-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
     margin-top: auto;
     font-weight: 700;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
     width: fit-content;
+  }
+
+  .link-arrow {
+    width: 0.95em;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    transition: transform 0.18s ease;
+  }
+
+  .sector-link:hover .link-arrow,
+  .sector-link:focus-visible .link-arrow {
+    transform: translateX(3px);
   }
 </style>

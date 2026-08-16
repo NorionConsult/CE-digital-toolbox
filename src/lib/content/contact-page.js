@@ -28,7 +28,7 @@ export const contactPage = {
     },
     {
       label: 'Ukraine',
-      email: 'ukraine-contact@example.org',
+      email: 'info@recpc.org',
       flagIcon: 'https://api.iconify.design/circle-flags:ua.svg'
     },
     {

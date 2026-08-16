@@ -29,7 +29,7 @@ export const tourismIntroSection = {
 export const tourismCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'Tourism case examples have not yet been added. New cases can be created in the Cases content file and selected here.',
+  intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the tourism sector to find all relevant cases.',
   featuredCaseNames: []
 };
 
@@ -97,7 +97,7 @@ export const tourismBestPracticesSection = {
 export const tourismRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
-  intro: 'Tools tagged for the Tourism sector appear here automatically.'
+  intro: ''
 };
 
 // SECTOR CARD, HERO AND NAVIGATION

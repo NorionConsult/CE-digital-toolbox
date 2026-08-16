@@ -29,7 +29,7 @@ export const constructionIntroSection = {
 export const constructionCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
-  intro: 'The following case examples show how circular economy strategies and practices have been applied in real business scenarios. Open the Cases page to explore every case.',
+  intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the construction sector to find all relevant cases.',
   featuredCaseNames: [
     'Natural Self-Cleaning Pool',
     'Kindergartens in Yerevan Retrofitting Case Study',
@@ -51,7 +51,6 @@ export const constructionBarriersSection = {
     'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.'
   ],
   opportunities: [
-    'The EU Renovation Wave is driving demand for circular economy-aligned retrofit and refurbishment.',
     'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
     'Urban mining and material banks can reduce procurement costs and supply risk.',
     'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
@@ -87,7 +86,6 @@ export const constructionBestPracticesSection = {
     {
       title: 'Waste and compliance',
       items: [
-        'Register building materials through a digital building material-passport system.',
         'Track and set reduction targets for construction-site waste volumes and landfill rates.',
         'Engage the supply chain on circular economy requirements, standards and material-return protocols.'
       ]
@@ -101,7 +99,7 @@ export const constructionBestPracticesSection = {
 export const constructionRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
-  intro: 'Tools tagged for the Construction sector appear here automatically.'
+  intro: ''
 };
 
 // SECTOR CARD, HERO AND NAVIGATION
