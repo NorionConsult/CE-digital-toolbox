@@ -402,29 +402,6 @@ const toolCatalogue = [
     toolLink: 'https://ddc.dk/wp-content/uploads/2020/10/Circular_strategies_wheel_canvas.pdf'
   },
   {
-    id: 'resource-016',
-    slug: 'circular-economy-toolkit',
-    title: 'Circular Economy toolkit',
-    description: 'To get an overview of how circular your product or service is at this stage',
-    about:
-      'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
-    journeyPhases: ['Assess', 'Explore'],
-    placements: {
-      phaseSections: ['assess:maturity-assessment']
-    },
-    sector: 'Cross-sector',
-    effort: 'Low',
-    language: 'English',
-    provider: 'Accenture',
-    access: 'Free',
-    timeRequired: '15-20 minutes',
-    preparationNeeded: 'Knowledge of your product',
-    output: 'Circularity overview which can be emailed',
-    bestFor: 'small-medium enterprises (SMEs) in all sectors',
-    format: 'Digital tool',
-    toolLink: 'http://www.circulareconomytoolkit.org/Assessmenttool.html'
-  },
-  {
     id: 'resource-017',
     slug: 'up2circ-assessment',
     title: 'Up2Circ Assessment',

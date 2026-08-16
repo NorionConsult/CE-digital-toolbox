@@ -33,7 +33,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'How far is my company in the circular journey?',
+  title: 'How far are you?',
   paragraphs: [
     'Before a business can become more circular, it needs to understand where it stands today.',
     'This phase guides you through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
@@ -44,7 +44,7 @@ const pathwaySection = {
       sectionId: 'maturity-assessment',
       number: '1',
       title: 'Maturity Assessment',
-      description: 'Quick self-diagnosis of how circular your business already is across key dimensions.',
+      description: 'Assess how circular your business already is across key dimensions.',
       keyOutputs: ['Circular Economy (CE) maturity score', 'Priority areas for focus']
     },
     {
@@ -81,7 +81,7 @@ const maturitySection = {
   resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
-    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most small-medium enterprises (SMEs) fall somewhere along this maturity spectrum.|| If you are unsure where to begin, use the interactive diagram on the Guided pathways page to see which SME Journey phase may be most suitable as a starting point.'
+    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed.|| The tools in this section are collections of good questions to ask before moving on to action. If there are some relevant questions which are hard to answer then the first action steps is to gather enought insight, data or understanding to be able to answer these questions first.'
   ]
 };
 
@@ -96,8 +96,7 @@ const baselineSection = {
   title: 'Baseline Mapping',
   resourceTag: 'assess:baseline-mapping',
   paragraphs: [
-    'A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time.',
-    'Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. On the image to the side, you can see an example of how an input/output map can look like.'
+    'A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy and water. If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
   ],
   image: {
     src: '/downloads/phase2/M2_Baseline_mapping_MFexample.png',
@@ -161,10 +160,9 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'Identified your current Circular Economy (CE) maturity level (1–5 scale)',
     'Mapped your resource inputs, outputs, and waste streams',
-    'Identified your main hotspots: energy, materials, water',
-    'Explored practical tools: Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Hotspot Analysis Tool, and Footprint Calculator'
+    'Identified your main hotspots (e.g. energy, materials, water)',
+    'Explored practical tools  (e.g. Smart Circular Economy Assessment (SCEA), I-GO, ready2LOOP, Hotspot Analysis Tool, and Footprint Calculator)'
   ]
 };
 

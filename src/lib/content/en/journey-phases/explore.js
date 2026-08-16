@@ -231,16 +231,16 @@ const assessPrioritiseSection = {
   resourceTag: 'explore:redesign-circular-value',
   paragraphs: [
     'Circular business models describe how a company can create, deliver and retain value while reducing resource use and waste.',
-    'Use this section to explore how circular strategies can become practical business model choices. The cards below introduce common archetypes and show what each model could look like in practice.'
+    'Use this section to explore how circular strategies can become practical business model choices.'
   ],
   /*
     CIRCULAR BUSINESS MODEL CARDS
     Edit the introductory text, card titles, descriptions, examples and icons
     below. Icon names use the Icon Park Outline set from Iconify.
   */
-  businessModelsTitle: 'Circular business models',
+  businessModelsTitle: 'Circular options',
   businessModelsIntro:
-    "Circular business models are how circular strategies get put into practice in your business. As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well. Each archetype below represents a proven way companies can create commercial value while keeping products, materials or resources in use for longer.",
+    "The circular options below detail different strategies for making your business more circular. Each option below represents a proven way to create commercial value while keeping products, materials or resources in use for longer. || As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well.",
   businessModelCards: [
     {
       title: 'Product as a Service (PaaS)',

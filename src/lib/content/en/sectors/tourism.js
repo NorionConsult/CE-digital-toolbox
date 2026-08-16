@@ -43,7 +43,6 @@ export const tourismBarriersSection = {
   ],
   opportunities: [
     'Demand for certified circular and regenerative tourism is growing, with many global travellers seeking more sustainable options.',
-    'The EU Renovation Wave and energy-efficiency directives are driving demand for sustainable hospitality refurbishment and retrofits.',
     'Eco-certification, including Green Key, Travelife and the EU Ecolabel, creates market differentiation and access to new traveller segments.',
     'Local and short food-supply chains reduce transport waste, support community economies and improve product freshness.',
     'Food-surplus platforms can turn unsold meals and avoidable waste into new revenue.',

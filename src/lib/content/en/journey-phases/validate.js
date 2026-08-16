@@ -35,7 +35,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'Validating a circular opportunity',
   paragraphs: [
-    'Before choosing a direction, you need to know which circular opportunities make sense for your business financially, operationally and strategically. This phase helps you identify the right circular business model, validate the opportunities and understand the path forward.'
+    'Before choosing a direction, you need to know which circular options make sense for your business financially, operationally and strategically. This phase helps you identify the right circular option, assess how it will affect your business opportunities, and understand a path forward.'
   ],
   cards: [
     {
@@ -45,7 +45,7 @@ const pathwaySection = {
       description:
         'Evaluate shortlisted circular options based on impact, feasibility, risks and alignment with your existing operations and goals.',
       keyOutputs: [
-        'Circular models screened against six criteria',
+        'Circular options screened against relevant criteria',
         'A clearer view of feasibility and potential impact'
       ]
     },
@@ -88,8 +88,7 @@ const quickScanSection = {
   title: 'Quick Scan Tool',
   resourceTag: 'validate:quick-scan',
   paragraphs: [
-    'Not every circular option will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
-    'Use this section to support the assessment through criteria and a prioritisation method. The result can be downloaded. Please use Firefox, Safari or Google Chrome if you want the download to work correctly.'
+    'Not every circular option will offer the same value or be equally practical to implement. The Quick Scan tool can help you compare circular options to find what is best for your business. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
   ],
   /*
     QUICK SCAN QUESTIONNAIRE
@@ -98,16 +97,16 @@ const quickScanSection = {
     src/lib/components/sections/M4Questionnaire.svelte
   */
   m4Questionnaire: {
-    title: 'Screening Your Options',
+    title: 'Screening your options',
     introduction:
-      'Use this questionnaire criteria to pressure-test each shortlisted strategy before committing to a business case.',
-    businessModelLabel: 'Circular business model to assess',
-    businessModelPlaceholder: 'Select a circular business model',
+      "Use this questionnaire to see how well each circular option could work for you. First, select a circular option to assess. Then, answer the questionnaire below according to your business. Based on your responses, you'll be given an estimate of how well this circular option model could work for you.",
+    businessModelLabel: 'Circular option to assess',
+    businessModelPlaceholder: 'Select a circular option',
     // These options mirror the circular business model cards in Phase 3: Explore.
     businessModelOptions: quickScanBusinessModelOptions,
     otherBusinessModelLabel: 'Other',
     selectBusinessModelText:
-      'Select the circular business model you want to assess, then answer every question to see your result.',
+      'Select the circular option you want to assess, then answer every question to see your result.',
     yesLabel: 'Yes',
     noLabel: 'No',
     resultsTitle: 'Results',
@@ -184,7 +183,7 @@ const quickScanSection = {
     ]
   },
   closingParagraphs: [
-    'Once you have screened business models to consider, you can now move on to shortlist your priority options. In this step, you can narrow down from 1-3 strategies to develop into a business case. For a template to screen your options, see the tool "Shortlisting of Options" template. These considerations can help you understand and clarify the key aspects that these options bring to support further development of your business case in the next phase.'
+    'Based on the results of the screenings above, you can begin to identify the highest-scoring, most feasible circular options. Once you narrow down 1 to 3 options, you will be able to develop a viable business case which incorporates them into a viable strategy to use in the next phase. || For a template to help narrow down your options, see the "Shortlisting of Options" tool below. Using this tool can help you clarify key aspects each option brings to support your business case.'
   ]
 };
 
@@ -194,8 +193,7 @@ const validateCaseSection = {
   title: 'Validate the Case',
   resourceTag: 'validate:validate-case',
   paragraphs: [
-    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis is a useful tool when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified.",
-    "It's a simple framework for assessing a business, project, or decision by looking at four areas: Strengths and Weaknesses are internal factors (what you're good at, and where you fall short), while Opportunities and Threats are external factors (favourable conditions you could exploit, and risks in your environment you need to watch for). Typically laid out as a 2x2 grid, it helps surface a clear, balanced picture before making strategic decisions."
+    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. For example, a Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis is a useful tool when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. || Use the tools below to develop and validate the business case you began in Step 1 of this section."
   ]
 };
 
@@ -205,9 +203,7 @@ const testPilotSection = {
   title: 'Test & Pilot',
   resourceTag: 'validate:test-and-pilot',
   paragraphs: [
-    'Before a validated circular opportunity becomes a full implementation project, test the logic at a smaller scale. A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.',
-    'Start by making the circular flow visible. Use a tool such as the **Circular Loop Designer** to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.',
-    'A useful pilot should be time-bounded, specific and measurable. Define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected. The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase.'
+    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.|| You can use the **Circular Loop Designer** tool below to help develop your pilot.|| A useful pilot should be time-bounded, specific and measurable. The tool can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| It can also help to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
   ]
 };
 
@@ -219,11 +215,10 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'Selected one or more models to screen in the quick scan',
-    'Completed a rapid feasibility and impact assessment',
-    'Selected a priority model or strategy for further development',
-    'Identified key barriers, risks and enabling conditions',
-    'Defined what should be tested before implementation',
+    'Selected one or more circular opportunities to screen in the quick scan',
+    'Narrowed down one to three feasible circular options for further development',
+    'Validated circular options by identifying key barriers, risks and enabling conditions',
+    'Defined what should be tested in a pilot before implementation',
   ]
 };
 
