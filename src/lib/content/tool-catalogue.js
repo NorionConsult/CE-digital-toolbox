@@ -140,7 +140,7 @@ const toolCatalogue = [
       "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.	Register/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clickin on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.	Self-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.	Review recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.	Shortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.	Manage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
     journeyPhases: ['Implement'],
     placements: {
-      phaseSections: ['implement:roadmap-milestones'],
+      phaseSections: ['implement:implementation-plan'],
     },
     sector: 'Cross-sector',
     /* effort should be either 'Low', 'Medium' or 'High'. This is a quick assessment based on the time required and preparation needed. */
@@ -168,7 +168,7 @@ const toolCatalogue = [
       'The Roadmap to Circular Business is a workshop tool that helps organisations turn circular economy ideas into a practical action plan. It supports teams in defining their circular ambition, prioritising actions, assigning responsibilities, and planning next steps. The output is a circular transition roadmap with clear priorities, milestones, and ownership.',
     journeyPhases: ['Implement'],
     placements: {
-      phaseSections: ['implement:roadmap-milestones']
+      phaseSections: ['implement:implementation-plan']
     },
     sector: 'Cross-sector',
     /* effort should be either 'Low', 'Medium' or 'High'. This is a quick assessment based on the time required and preparation needed. */
@@ -340,7 +340,7 @@ const toolCatalogue = [
       'Printable or digital cards covering key circular economy trends, opportunities, and threats. Designed to facilitate team discussions and feed into Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting. For best use, it can be combined with a SWOT Matrix template or other circular business model ideation tools. Depending on the amount of people to include in the workshop to discuss the questions and trends in the cards, it can take 1-3 hours to complete a facilitated exercise.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections:['validate:business-models']
+      phaseSections:['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -365,7 +365,7 @@ const toolCatalogue = [
       'An ideation tool that helps you explore and identify the most suitable circular pathways for your products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections:['validate:business-models']
+      phaseSections:['explore:redesign-circular-value']
     },
     sector: 'Manufacturing',
     effort: 'Low',
@@ -625,7 +625,7 @@ const toolCatalogue = [
       "A practical milestone-setting framework designed to help organisations break circular strategies into trackable steps. Helps teams identify key actions, assign ownership, and define what 'progress' looks like at each stage.",
     journeyPhases: ['Implement'],
     placements: {
-      phaseSections: ['implement:roadmap-milestones']
+      phaseSections: ['implement:implementation-plan']
     },
     sector: 'Cross-sector',
     language: 'English',
@@ -647,9 +647,9 @@ const toolCatalogue = [
       'To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage',
     about:
       "The Circular Loop Designer is a browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
-    journeyPhases: ['Implement'],
+    journeyPhases: ['Validate'],
     placements: {
-      phaseSections: ['implement:test-and-pilot']
+      phaseSections: ['validate:test-and-pilot']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -717,7 +717,7 @@ const toolCatalogue = [
       'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by the Procura+ network of the International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI), bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
     journeyPhases: ['Explore', 'Validate', 'Implement'],
     placements: {
-      phaseSections: ['validate:circular-business-models']
+      phaseSections: ['explore:redesign-circular-value']
     },
     sector: 'Cross-sector',
     effort: 'Low',

@@ -8,12 +8,7 @@ export const textilesIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'The EU textile sector generates approximately 16 kg of textile waste per person annually, with less than 1% recycled back into new fibres.',
-    'SMEs represent over 70% of European textile businesses, spanning design, manufacturing, retail, repair and resale.',
-    'The EU Strategy for Sustainable and Circular Textiles (2022) sets binding targets for recyclable design, Extended Producer Responsibility (EPR) and ecodesign by 2030.',
-    'Fast fashion remains dominant, driving overproduction, short product lifespans and high resource consumption - all areas where circular economy practices offer direct alternatives.',
-    'Increasing regulatory pressure from the EU Ecodesign for Sustainable Products Regulation (ESPR) and Digital Product Passport (DPP) is reshaping SME obligations.',
-    'Key circular economy opportunities include design for durability and disassembly, repair and resale services, fibre-to-fibre recycling, and clothing-as-a-service models.'
+    'The textile sector covers the production, processing and use of fibres, fabrics, clothing and other textile products. It relies heavily on raw materials, water, energy and chemicals, while generating significant waste and pollution across its value chain. The EU textile sector generates approximately 16 kg of textile waste per person annually, with less than 1% recycled back into new fibres. || Engaging with circular economy practices can help businesses reduce resource use and waste, extend the life of products and materials, and build more resilient and sustainable value chains. Key circular economy opportunities include design for durability and disassembly, repair and resale services, fibre-to-fibre recycling, and clothing-as-a-service models.'
   ]
 };
 
@@ -95,7 +90,7 @@ export const textiles = {
   number: 'Sector 3',
   slug: 'textiles',
   title: 'Textiles',
-  description: 'This sector tool provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
+  description: 'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
   image: '/images/textiles.jpg',
   imageAlt: 'Textiles sector',
   navigation: [

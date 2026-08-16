@@ -14,12 +14,7 @@ export const constructionIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets.',
-    'Buildings are responsible for around 40% of EU energy consumption and 36% of Carbon dioxide (CO2) emissions. Renovation and retrofit therefore represent the sector\'s largest circular economy opportunity.',
-    'Small-medium enterprises (SMEs) account for over 90% of European construction firms, yet most lack dedicated circular economy knowledge, tools and supply-chain capacity for implementation.',
-    'The EU Construction Products Regulation reform and revised Waste Framework Directive are driving new requirements for material traceability and end-of-life planning.',
-    'Key circular economy principles for construction include design for disassembly, material reuse and repurposing, adaptive reuse of existing buildings, and digital building material passports.',
-    'Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering small-medium enterprises (SMEs) a competitive advantage in procurement and project differentiation.'
+    'The construction sector includes the design, building, renovation and demolition of buildings and infrastructure. It is one of the largest users of raw materials and generates substantial amounts of waste, while also contributing significantly to energy use and greenhouse gas emissions. Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets. || Circular economy practices can help the sector use materials more efficiently, extend the lifetime of buildings and components, and reduce the need for virgin resources, some which have potential to disrupt the sector due to low access and high demand (e.g. sand). Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering SMEs a competitive advantage in procurement and project differentiation.'
   ]
 };
 
@@ -107,7 +102,7 @@ export const construction = {
   number: 'Sector 1',
   slug: 'construction',
   title: 'Construction',
-  description: 'This sector tool provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
+  description: 'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/construction.jpg',
   imageAlt: 'Construction sector',
   navigation: [

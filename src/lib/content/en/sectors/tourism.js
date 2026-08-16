@@ -14,12 +14,7 @@ export const tourismIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'Tourism contributes almost EUR 1.8 trillion to EU Gross Domestic Product (GDP) and supports over 23 million jobs, approximately 10% of total economic output.',
-    'Europe accounts for 51% of international tourist arrivals globally, making it the world\'s most visited region.',
-    'Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems.',
-    'Tourism and food services generate waste streams containing approximately 37-72% organic waste, 6-40% paper and 5-15% plastic, with limited recovery systems in most destinations.',
-    'In a business-as-usual scenario, tourism is projected to increase energy consumption by 154%, greenhouse-gas emissions by 131% and solid waste by 251% by 2050.',
-    'small-medium enterprises (SMEs) make up the vast majority of European tourism businesses, accounting for approximately half the sector\'s greenhouse-gas emissions, yet face disproportionate barriers to sustainability investment.'
+    'The tourism sector brings together accommodation, food services, transport, attractions and other activities that support visitors and destinations. Tourism contributes almost EUR 1.8 trillion to EU GDP and supports over 23 million jobs, approximately 10% of total economic output. While it is an important source of income and employment, tourism can also place pressure on energy, water, materials and local ecosystems, while generating significant waste. Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems. || Applying circular economy practices can help tourism businesses reduce their environmental footprint, use resources more efficiently and contribute to the long-term sustainability of the destinations on which they depend.'
   ]
 };
 
@@ -105,7 +100,7 @@ export const tourism = {
   number: 'Sector 4',
   slug: 'tourism',
   title: 'Tourism',
-  description: 'This sector tool provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
+  description: 'This sector guide provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/tourism.jpg',
   imageAlt: 'Tourism sector',
   navigation: [

@@ -26,9 +26,9 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'circular-business-models', label: 'Explore models' },
   { sectionId: 'quick-scan-tool', label: 'Run quick scan' },
-  { sectionId: 'transition-planning', label: 'Plan transition' }
+  { sectionId: 'validate-case', label: 'Validate case' },
+  { sectionId: 'test-and-pilot', label: 'Prepare pilot' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -39,20 +39,8 @@ const pathwaySection = {
   ],
   cards: [
     {
-      sectionId: 'circular-business-models',
-      number: '1',
-      title: 'Circular Business Models',
-      description:
-        'Explore how circular strategies can be translated into business model archetypes that fit your customers and capabilities.',
-      keyOutputs: [
-        'A clear view of six circular business model archetypes',
-        'Examples of how business models preserve value',
-        'Initial ideas for which models may fit your business'
-      ]
-    },
-    {
       sectionId: 'quick-scan-tool',
-      number: '2',
+      number: '1',
       title: 'Quick Scan Tool',
       description:
         'Evaluate shortlisted circular options based on impact, feasibility, risks and alignment with your existing operations and goals.',
@@ -63,82 +51,45 @@ const pathwaySection = {
     },
     {
       sectionId: 'validate-case',
-      number: '3',
+      number: '2',
       title: 'Validate the Case',
       description:
-        'Understand the barriers, enablers and steps required to move from your current business model to a circular one.',
+        'Understand the barriers, enablers and risks required to move from an idea to a stronger circular business case.',
       keyOutputs: [
-        'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis', 
+        'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis',
         'A shortlist of one to three priority strategies'
+      ]
+    },
+    {
+      sectionId: 'test-and-pilot',
+      number: '3',
+      title: 'Test & Pilot',
+      description:
+        'Prepare a small-scale test before committing to full implementation, including material flows, partners and learning goals.',
+      keyOutputs: [
+        'Pilot logic mapped',
+        'Testing assumptions and learning goals defined'
       ]
     }
   ]
 };
 
 /* 4. DETAILED SECTION 1 */
-const businessModelsSection = {
-  id: 'circular-business-models',
-  title: 'Circular Business Models',
-  resourceTag: 'validate:business-models',
-  paragraphs: [
-    'Circular business models describe how a company can create, deliver and retain value while reducing resource use and waste.',
-    'Use this section to explain the model types, provide examples and help users identify which models align with their selected circular opportunities.'
-  ],
-  /*
-    CIRCULAR BUSINESS MODEL CARDS
-    Edit the introductory text, card titles, descriptions, examples and icons
-    below. Icon names use the Icon Park Outline set from Iconify.
-  */
-  businessModelsTitle: 'Circular business models',
-  businessModelsIntro:
-    "Circular business models are how circular strategies get put into practice in your business. As an SME, you don't need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well. Each archetype below represents a proven way other companies have created commercial value while keeping products, materials or resources in use for longer, often unlocking new revenue streams or reducing costs along the way. Explore each one to see how it works and what it could look like for a business like yours.",
-  businessModelCards: [
-    {
-      title: 'Product as a Service (PaaS)',
-      icon: 'delivery',
-      text:
-        "Instead of selling a product, you sell access to what it does: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This shifts who carries the cost and risk when the product breaks down, wears out or needs replacing. In a traditional sale, these costs usually fall on the customer. In a product-as-a-service model, they sit with the provider. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. Because the provider remains responsible for the product, they can also manage its maintenance, reuse, and recycling more effectively, helping reduce waste. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable. However, the model may require more upfront capital to be invested as a provider.",
-      example: 'Leasing industrial machinery with full maintenance included.'
-    },
-    {
-      title: 'Resource Recovery',
-      icon: 'recycling-pool',
-      text:
-        "Instead of discarding your waste, you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. The economics tend to work best when the recovered material can replace something you'd otherwise have to buy in, or when there's a ready market for it elsewhere. It often requires some investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you'd otherwise throw away, an approach known as industrial symbiosis. The environmental case is usually straightforward, since less material ends up in landfill or incineration, but the business case depends heavily on the value of the recovered material compared with the cost of recovering it.",
-      example: 'Using production off-cuts to create secondary products.'
-    },
-    {
-      title: 'Extended Product Life',
-      icon: 'history',
-      text:
-        'Instead of a product being sold once and eventually discarded, you keep it in use for as long as possible, through repair, upgrades and resale. This means thinking about the whole lifecycle of a product, not just the point of sale. Design decisions made early on, such as modularity, ease of disassembly and standard components, directly determine how easy repair and refurbishment will be later. This model also shifts your relationship with customers from a single transaction to multiple touchpoints over time: a sale, then repairs, then perhaps a buyback and resale as refurbished stock. This can build customer loyalty, since people return to a trusted source for servicing, but it requires capabilities you may not currently have in-house, such as a process for getting products back (reverse logistics) and refurbishment skills or partnerships.',
-      example: 'Offering a takeback and refurbishment programme for electronics.'
-    },
-    {
-      title: 'Sharing Platforms',
-      icon: 'share-one',
-      text:
-        "Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that most products sit unused for most of their life. A drill might be used for a few hours a year; a meeting room might sit empty most of the working day. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has clear environmental benefits and can also be more cost-effective for users than ownership. The challenge is usually less about the concept and more about the logistics: booking systems, maintenance schedules, accountability for damage and trust between users. This model often works particularly well in business clusters or local networks, where there's a natural pool of similar businesses with similar but non-overlapping needs.",
-      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a business park.'
-    },
-    {
-      title: 'Circular Supply Chains',
-      icon: 'link-one',
-      text:
-        "Instead of focusing on what happens to your product after it's sold, you focus on what goes into it in the first place, by sourcing recycled or secondary materials rather than virgin ones. This typically requires closer collaboration with suppliers than a conventional purchasing relationship, since recycled or secondary materials often vary more in quality or supply than virgin materials, and managing that variability is usually a shared problem between you and your supplier. There's often a trade-off between risk and reliability in the early stages, since switching to circular inputs can mean accepting some uncertainty while the supply relationship matures. Over time, though, it can reduce your exposure to price swings in virgin materials and strengthen ties with suppliers who are themselves shifting toward more circular practices.",
-      example: 'Switching to recycled feedstock and partnering with a local recycler.'
-    },
-  ]
-};
+const quickScanBusinessModelOptions = [
+  'Product as a Service (PaaS)',
+  'Resource Recovery',
+  'Extended Product Life',
+  'Sharing Platforms',
+  'Circular Supply Chains'
+];
 
-/* 5. DETAILED SECTION 2 */
 const quickScanSection = {
   id: 'quick-scan-tool',
   title: 'Quick Scan Tool',
   resourceTag: 'validate:quick-scan',
   paragraphs: [
     'Not every circular option will offer the same value or be equally practical to implement. A transparent assessment helps teams compare opportunities consistently.',
-    'Use this section to support the assessment through criteria and a prioritisation method.  The result can be downloaded. Please use Firefox, Safari of Google Chrome browser if you want the download to work correctly.'
+    'Use this section to support the assessment through criteria and a prioritisation method. The result can be downloaded. Please use Firefox, Safari or Google Chrome if you want the download to work correctly.'
   ],
   /*
     QUICK SCAN QUESTIONNAIRE
@@ -152,8 +103,8 @@ const quickScanSection = {
       'Use this questionnaire criteria to pressure-test each shortlisted strategy before committing to a business case.',
     businessModelLabel: 'Circular business model to assess',
     businessModelPlaceholder: 'Select a circular business model',
-    // These options update automatically when the business model card titles above are edited.
-    businessModelOptions: businessModelsSection.businessModelCards.map((card) => card.title),
+    // These options mirror the circular business model cards in Phase 3: Explore.
+    businessModelOptions: quickScanBusinessModelOptions,
     otherBusinessModelLabel: 'Other',
     selectBusinessModelText:
       'Select the circular business model you want to assess, then answer every question to see your result.',
@@ -237,7 +188,7 @@ const quickScanSection = {
   ]
 };
 
-/* 6. DETAILED SECTION 3 */
+/* 5. DETAILED SECTION 2 */
 const validateCaseSection = {
   id: 'validate-case',
   title: 'Validate the Case',
@@ -248,19 +199,31 @@ const validateCaseSection = {
   ]
 };
 
+/* 6. DETAILED SECTION 3 */
+const testPilotSection = {
+  id: 'test-and-pilot',
+  title: 'Test & Pilot',
+  resourceTag: 'validate:test-and-pilot',
+  paragraphs: [
+    'Before a validated circular opportunity becomes a full implementation project, test the logic at a smaller scale. A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.',
+    'Start by making the circular flow visible. Use a tool such as the **Circular Loop Designer** to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.',
+    'A useful pilot should be time-bounded, specific and measurable. Define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected. The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase.'
+  ]
+};
+
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that you have a clear business model, quick scan result and transition rationale for your selected circular opportunity.',
+    'Use this checklist to confirm that you have a quick scan result, a validated case and a clear pilot focus for your selected circular opportunity.',
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'Reviewed the relevant circular business model archetypes',
     'Selected one or more models to screen in the quick scan',
     'Completed a rapid feasibility and impact assessment',
     'Selected a priority model or strategy for further development',
     'Identified key barriers, risks and enabling conditions',
+    'Defined what should be tested before implementation',
   ]
 };
 
@@ -269,6 +232,6 @@ export const validate = defineJourneyPhasePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [businessModelsSection, quickScanSection, validateCaseSection],
+  detailSections: [quickScanSection, validateCaseSection, testPilotSection],
   phaseSummary
 });

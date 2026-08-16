@@ -14,7 +14,7 @@ export const foodAndAgricultureIntroSection = {
   id: 'introduction',
   title: 'Introduction to sector',
   paragraphs: [
-    'The food and agriculture sector contributes approximately 10% of EU greenhouse gas emissions and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers. The EU Farm to Fork Strategy targets a 50% reduction in pesticide use and 20% reduction in fertiliser use by 2030, while expanding organic farmland to 25% of total agricultural area.\r\n SME farms and agri-food businesses face input cost volatility, soil degradation, biodiversity loss and tightening regulatory requirements, all of which circular economy strategies can address. Circular agriculture closes nutrient loops, returning compost, digestate and recovered nutrients to land rather than losing them as waste or pollution. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.'
+    'The food and agriculture sector includes the production, processing, distribution and consumption of food and agricultural products. It depends directly on natural resources such as land, water and healthy soils, while also contributing to greenhouse gas emissions, biodiversity loss and large volumes of food and organic waste. The food and agriculture sector contributes approximately 10% of EU greenhouse gas emissions and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers. Circular economy practices can help businesses reduce losses, make better use of by-products and resources, and support more sustainable and resilient food systems. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.'
   ]
 };
 
@@ -104,7 +104,7 @@ export const foodAndAgriculture = {
   number: 'Sector 2',
   slug: 'food-and-agriculture',
   title: 'Food and Agriculture',
-  description: 'This sector tool provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
+  description: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
   image: '/images/agriculture.jpg',
   imageAlt: 'Food and Agriculture sector',
   navigation: [

@@ -131,6 +131,34 @@
       activePhase = null;
     }
   }
+
+  /**
+   * @param {EventTarget | null} target
+   */
+  function isLinkTarget(target) {
+    return target instanceof Element && target.closest('a');
+  }
+
+  /**
+   * @param {MouseEvent} event
+   * @param {JourneyPhaseStep} phase
+   */
+  function selectPhaseFromText(event, phase) {
+    if (isLinkTarget(event.target)) return;
+    selectPhase(phase);
+  }
+
+  /**
+   * @param {KeyboardEvent} event
+   * @param {JourneyPhaseStep} phase
+   */
+  function selectPhaseFromTextKeydown(event, phase) {
+    if (isLinkTarget(event.target)) return;
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      selectPhase(phase);
+    }
+  }
 </script>
 
 <svelte:window on:keydown={closeOnEscape} />
@@ -159,9 +187,20 @@
               <img src="{base}{phase.icon}" alt="" aria-hidden="true" />
             </button>
 
-            <div class="journey-step-text">
+            <div
+              class="journey-step-text"
+              role="button"
+              tabindex="0"
+              aria-label={`Open ${phase.phaseName} phase description`}
+              on:click={(event) => selectPhaseFromText(event, phase)}
+              on:keydown={(event) => selectPhaseFromTextKeydown(event, phase)}
+            >
               <p class="journey-step-number">Phase {phase.number}</p>
-              <h4><a href="{base}{phase.href}">{phase.phaseName}</a></h4>
+              <h4>
+                <a href="{base}{phase.href}" on:click|stopPropagation>
+                  {phase.phaseName}
+                </a>
+              </h4>
               <p>{phase.shortDescription}</p>
             </div>
           </article>
@@ -326,9 +365,16 @@
     padding: 18px 18px 32px;
     border-radius: 12px 12px 0 0;
     background-color: transparent;
+    cursor: pointer;
+    outline: none;
     transition:
       background-color 0.18s ease,
       color 0.18s ease;
+  }
+
+  .journey-step-text:hover,
+  .journey-step-text:focus-visible {
+    background-color: rgba(64, 171, 87, 0.08);
   }
 
   .journey-step.active-step {

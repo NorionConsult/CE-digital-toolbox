@@ -48,69 +48,7 @@ export const guidedPathways = {
     }
   },
 
-  /*
-    3. JOURNEY PHASE CARDS
-    Copy one complete card object to add a new phase card to this overview page.
-    The slug must match an existing journey phase page folder route.
-  */
-  journeyPhases: [
-    {
-      number: '01',
-      slug: 'learn',
-      shortName: 'Phase 1',
-      title: 'Learn',
-      colourClass: 'module-card-green',
-      description:
-        'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, even without prior knowledge.'
-    },
-    {
-      number: '02',
-      slug: 'assess',
-      shortName: 'Phase 2',
-      title: 'Assess',
-      colourClass: 'module-card-lime',
-      description:
-        'Provides tools to assess Circular Economy (CE) adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
-    },
-    {
-      number: '03',
-      slug: 'explore',
-      shortName: 'Phase 3',
-      title: 'Explore',
-      colourClass: 'module-card-yellow',
-      description:
-        'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.'
-    },
-    {
-      number: '04',
-      slug: 'validate',
-      shortName: 'Phase 4',
-      title: 'Validate',
-      colourClass: 'module-card-blue',
-      description:
-        'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.'
-    },
-    {
-      number: '05',
-      slug: 'implement',
-      shortName: 'Phase 5',
-      title: 'Implement',
-      colourClass: 'module-card-dark',
-      description:
-        'Tools that support the identification of key value chain partnerships, circular solutions or practices to test, and help move ideas into the testing phase.'
-    },
-    {
-      number: '06',
-      slug: 'monitor',
-      shortName: 'Phase 6',
-      title: 'Monitor',
-      colourClass: 'module-card-outline',
-      description:
-        'Selected tools for ongoing monitoring of solutions, including data gathering, selection of relevant indicators, and re-diagnosis after implementation.'
-    }
-  ],
-
-  /* 4. SECTOR TOOLS SECTION INTRO */
+  /* 3. SECTOR TOOLS SECTION INTRO */
   sectorsSection: {
     eyebrow: 'For specific sectors',
     title: 'Selected sector guides',
@@ -119,7 +57,7 @@ export const guidedPathways = {
   },
 
   /*
-    5. SECTOR TOOL CARDS
+    4. SECTOR TOOL CARDS
     Copy one complete card object to add a new sector card to this overview page.
     The slug must match an existing sector page route.
   */

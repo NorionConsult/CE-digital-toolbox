@@ -67,11 +67,11 @@ const pathwaySection = {
       number: '3',
       title: 'Redesigning for Circular value',
       description:
-        'Apply circular design strategies to generate concrete product or process improvements your team can take forward into a business case.',
+        'Explore circular business model archetypes and consider how circular strategies could create, deliver and retain value in your business.',
       keyOutputs: [
-        'Understand the redesign process',
-        'Begin your redesign journey with the two tools',
-        'Notes on what needs further testing'
+        'A clear view of circular business model archetypes',
+        'Examples of how business models preserve value',
+        'Initial ideas for which models may fit your business'
       ]
     }
   ]
@@ -146,10 +146,7 @@ const exploreStrategiesSection = {
       }
     ]
   },
-  /*
-    The circular business model cards were moved to Phase :
-    src/lib/content/en/journey-phases/validate.js
-  */
+  showRelevantTools: false
 };
 
 /* 5. DETAILED SECTION 2 */
@@ -228,66 +225,59 @@ const identifyOptionsSection = {
 };
 
 /* 6. DETAILED SECTION 3 */
-/*If text needs to be added before the visual, add it in the 'paragraphs' section where there is an empty string. The visual will appear after the last paragraph in the list. To remove text, instead of deleting it, add ""*/
 const assessPrioritiseSection = {
   id: 'assess-and-prioritise',
   title: 'Redesigning Circular Value',
   resourceTag: 'explore:redesign-circular-value',
   paragraphs: [
-    ""
+    'Circular business models describe how a company can create, deliver and retain value while reducing resource use and waste.',
+    'Use this section to explore how circular strategies can become practical business model choices. The cards below introduce common archetypes and show what each model could look like in practice.'
   ],
   /*
-    PROCESS REDESIGN INFO BOX:
-    Edit the columns below to change headings, icons, subtitles or actions.
+    CIRCULAR BUSINESS MODEL CARDS
+    Edit the introductory text, card titles, descriptions, examples and icons
+    below. Icon names use the Icon Park Outline set from Iconify.
   */
-  m3ProcessRedesign: {
-    title: 'Redesigning Your Processes',
-    intro:
-      "Circular design is not just about the product, it is also about how you make it, what happens in production, and how waste is managed.",
-    footer: 'Material flow loops back — recovery feeds input again',
-    columns: [
-      {
-        title: 'Input',
-        subtitle: 'Sourcing & Materials',
-        icon: 'recycling',
-        actions: [
-          'Switch to recycled or secondary raw materials',
-          'Source from suppliers with circularity credentials',
-          'Reduce virgin material inputs'
-        ]
-      },
-      {
-        title: 'Process',
-        subtitle: 'Production & Manufacturing',
-        icon: 'tool',
-        actions: [
-          'Lean manufacturing: eliminate process waste',
-          'Closed-loop water and solvent recovery',
-          'Capture and reuse production offcuts'
-        ]
-      },
-      {
-        title: 'Output',
-        subtitle: 'Products & Packaging',
-        icon: 'box',
-        actions: [
-          'Design products for longevity and take-back',
-          'Eliminate single-use or non-recyclable packaging',
-          'Label materials clearly for end-of-life sorting'
-        ]
-      },
-      {
-        title: 'Recovery',
-        subtitle: 'End-of-Life Management',
-        icon: 'recycling',
-        actions: [
-          'Set up a take-back or buy-back scheme',
-          'Partner with reprocessors or recyclers',
-          'Reintroduce recovered materials as inputs'
-        ]
-      }
-    ]
-  }
+  businessModelsTitle: 'Circular business models',
+  businessModelsIntro:
+    "Circular business models are how circular strategies get put into practice in your business. As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well. Each archetype below represents a proven way companies can create commercial value while keeping products, materials or resources in use for longer.",
+  businessModelCards: [
+    {
+      title: 'Product as a Service (PaaS)',
+      icon: 'delivery',
+      text:
+        "Instead of selling a product, you sell access to what it does: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable.",
+      example: 'Leasing industrial machinery with full maintenance included.'
+    },
+    {
+      title: 'Resource Recovery',
+      icon: 'recycling-pool',
+      text:
+        "Instead of discarding your waste, you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. It often requires investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you would otherwise throw away.",
+      example: 'Using production off-cuts to create secondary products.'
+    },
+    {
+      title: 'Extended Product Life',
+      icon: 'history',
+      text:
+        'Instead of a product being sold once and eventually discarded, you keep it in use for as long as possible through repair, upgrades and resale. This means thinking about the whole lifecycle of a product, not just the point of sale. Design decisions made early on, such as modularity, ease of disassembly and standard components, directly determine how easy repair and refurbishment will be later.',
+      example: 'Offering a takeback and refurbishment programme for electronics.'
+    },
+    {
+      title: 'Sharing Platforms',
+      icon: 'share-one',
+      text:
+        'Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that many products sit unused for most of their life. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has environmental benefits and can also be more cost-effective for users than ownership.',
+      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a business park.'
+    },
+    {
+      title: 'Circular Supply Chains',
+      icon: 'link-one',
+      text:
+        'Instead of focusing only on what happens to your product after it is sold, you focus on what goes into it in the first place by sourcing recycled or secondary materials rather than virgin ones. This typically requires closer collaboration with suppliers, because recycled or secondary materials often vary more in quality or supply than virgin materials. Over time, it can reduce exposure to virgin material price volatility and strengthen supplier relationships.',
+      example: 'Switching to recycled feedstock and partnering with a local recycler.'
+    }
+  ]
 };
 
 /* 7. PHASE SUMMARY */
@@ -301,7 +291,7 @@ const phaseSummary = {
     'A clear understanding of the Design for X (DfX) redesign process',
     'A completed Design for X (DfX) audit',
     'Design proposal and completion of the Circular strategies wheel workshop',
-    'Awareness of how you can redesign your process'
+    'Awareness of circular business model archetypes that could fit your business'
   ]
 };
 
