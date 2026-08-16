@@ -31,7 +31,7 @@
       formerLabel: 'Start with the basics',
       shortDescription: 'Understand basic CE concepts',
       popUpText:
-        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource-efficient cleaner production. At this stage, business usually continues as normal, while waste and inefficiencies may go unnoticed. Start with the tools in this phase before moving on to more specific tools.',
+        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource-efficient cleaner production.',
       icon: '/phase-icons/icon-learn.png',
       iconAlt: 'Learn phase icon',
       href: '/journey-phases/learn/'
@@ -44,7 +44,7 @@
       formerLabel: 'Find your starting point',
       shortDescription: 'Map and identify potential for improvement',
       popUpText:
-        'If you already have some interest in circular economy or resource efficiency, but need a clearer picture of your current maturity, resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities and areas where improvement is possible.',
+        'If you already have some interest in circular economy or resource efficiency, but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities and areas where improvement is possible.',
       icon: '/phase-icons/icon-assess.png',
       iconAlt: 'Assess phase icon',
       href: '/journey-phases/assess/'
