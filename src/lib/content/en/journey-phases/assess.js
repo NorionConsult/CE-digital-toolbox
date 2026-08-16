@@ -81,7 +81,7 @@ const maturitySection = {
   resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
-    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most small-medium enterprises (SMEs) fall somewhere along this maturity spectrum.|| In the interactive diagram below, click on a level to see where it is recommended for you to start with in the SME Journey phases.'
+    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. The result is a simple overview of strengths and gaps. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed. Before using assessment tools, reflect on your current situation. Most small-medium enterprises (SMEs) fall somewhere along this maturity spectrum.|| If you are unsure where to begin, use the interactive diagram on the Guided pathways page to see which SME Journey phase may be most suitable as a starting point.'
   ]
 };
 
