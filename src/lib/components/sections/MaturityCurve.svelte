@@ -28,10 +28,10 @@
       panelSide: 'left',
       edgePhase: true,
       phaseName: 'Learn',
-      formerLabel: 'Unaware',
+      formerLabel: 'Start with the basics',
       shortDescription: 'Understand basic CE concepts',
       popUpText:
-        'You have no knowledge of circular economy. Business runs as usual; waste and inefficiency go unnoticed. Start with tools from this phase.',
+        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource-efficient cleaner production. At this stage, business usually continues as normal, while waste and inefficiencies may go unnoticed. Start with the tools in this phase before moving on to more specific tools.',
       icon: '/phase-icons/icon-learn.png',
       iconAlt: 'Learn phase icon',
       href: '/journey-phases/learn/'
@@ -41,10 +41,10 @@
       panelSide: 'left',
       edgePhase: false,
       phaseName: 'Assess',
-      formerLabel: 'Exploring',
+      formerLabel: 'Find your starting point',
       shortDescription: 'Map and identify potential for improvement',
       popUpText:
-        'You are beginning to learn about circular economy. There is some interest in resource efficiency, but no action has been taken yet. Use this phase to understand your starting point and identify where improvement is possible.',
+        'If you already have some interest in circular economy or resource efficiency, but need a clearer picture of your current maturity, resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities and areas where improvement is possible.',
       icon: '/phase-icons/icon-assess.png',
       iconAlt: 'Assess phase icon',
       href: '/journey-phases/assess/'
@@ -54,10 +54,10 @@
       panelSide: 'left',
       edgePhase: false,
       phaseName: 'Explore',
-      formerLabel: 'Starting',
+      formerLabel: 'Explore practical options',
       shortDescription: 'Brainstorm and integrate circular design principles',
       popUpText:
-        'You have taken first steps, such as basic waste reduction, energy saving measures or recycling. Use this phase to explore circular strategies and identify options that fit your business.',
+        'If you know your main challenges and want to explore circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options and prepare a stronger basis for deciding what to take forward.',
       icon: '/phase-icons/icon-explore.png',
       iconAlt: 'Explore phase icon',
       href: '/journey-phases/explore/'
@@ -67,10 +67,10 @@
       panelSide: 'right',
       edgePhase: false,
       phaseName: 'Validate',
-      formerLabel: 'Starting',
+      formerLabel: 'Validate what can work',
       shortDescription: 'Review circular business models and prioritize options',
       popUpText:
-        'You have identified possible circular options and now need to test which ones are feasible, valuable and strategically relevant. Use this phase to validate and prioritise your strongest options.',
+        'If you have identified possible circular options, but need to compare their feasibility, risks, barriers and potential value, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, operationally and financially before investing more time and resources.',
       icon: '/phase-icons/icon-validate.png',
       iconAlt: 'Validate phase icon',
       href: '/journey-phases/validate/'
@@ -80,10 +80,10 @@
       panelSide: 'right',
       edgePhase: false,
       phaseName: 'Implement',
-      formerLabel: 'Advancing',
+      formerLabel: 'Turn plans into action',
       shortDescription: 'Plan and pilot your selected ideas',
       popUpText:
-        'Circular economy principles are embedded in some processes, partnerships may be forming, and some circular revenue may already exist. Use this phase to plan, pilot and implement selected circular ideas.',
+        'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones and pilot activities, then this phase is relevant for you. This phase helps you turn selected strategies into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
       icon: '/phase-icons/icon-implement.png',
       iconAlt: 'Implement phase icon',
       href: '/journey-phases/implement/'
@@ -93,10 +93,10 @@
       panelSide: 'right',
       edgePhase: true,
       phaseName: 'Monitor',
-      formerLabel: 'Leading',
+      formerLabel: 'Track and keep improving',
       shortDescription: 'Select indicators, review and track progress',
       popUpText:
-        'Circular economy is becoming core to the business model. Circular practices are measured, reported and improved. Use this phase to monitor progress, keep improving and share your experience through the contact page to inspire others in the case collection.',
+        'If circular actions are being tested or already implemented, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time and share your experience through the contact page to inspire others in the case collection.',
       icon: '/phase-icons/icon-monitor.png',
       iconAlt: 'Monitor phase icon',
       href: '/journey-phases/monitor/'
@@ -316,6 +316,8 @@
 
   .journey-step-text {
     display: grid;
+    grid-template-rows: 18px 34px auto;
+    align-content: start;
     gap: 4px;
     align-self: stretch;
     width: calc(100% + 24px);
@@ -356,6 +358,7 @@
     font-family: var(--font-display);
     font-size: clamp(1.05rem, 1.9vw, 1.4rem);
     line-height: 1;
+    align-self: start;
   }
 
   .journey-step-text h4 a {
@@ -378,6 +381,7 @@
     font-family: Tahoma, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.3;
+    align-self: start;
   }
 
   .maturity-pop-up {
@@ -429,7 +433,6 @@
     margin-top: 4px;
     color: var(--dark);
     font-size: clamp(1.15rem, 2vw, 1.5rem);
-    text-transform: uppercase;
   }
 
   .maturity-panel-content {
@@ -587,6 +590,7 @@
     }
 
     .journey-step-text {
+      grid-template-rows: none;
       width: 100%;
       min-height: 0;
       margin: 0;

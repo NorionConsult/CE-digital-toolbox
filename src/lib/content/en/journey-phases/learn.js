@@ -19,7 +19,7 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for users who need a shared language and overview before selecting specific tools.',
+    'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for you who need a shared language and overview before selecting specific tools.',
   icon: '/phase-icons/icon-learn.png',
   iconAlt: 'Learn phase icon',
   hideSectionNavigation: true,
