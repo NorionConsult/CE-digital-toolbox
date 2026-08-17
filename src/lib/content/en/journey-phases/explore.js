@@ -165,7 +165,7 @@ const identifyOptionsSection = {
   inlineImage: {
     afterParagraph: 2,
     title: 'Circular Economy strategies',
-    src: '/downloads/phase3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - Frame 13.svg',
+    src: '/downloads/phase3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
     alt: 'The 9R circular economy strategies arranged by value preservation',
     caption: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
     maxWidth: '680px',
