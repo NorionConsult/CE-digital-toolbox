@@ -3,8 +3,10 @@
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import { journeyPhasePage } from '$lib/content/journey-phase-page.js';
+  import { journeyPhases } from '$lib/content/journey-phases.js';
   import { site } from '$lib/content/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
+  import CompactJourneyPhaseMap from '$lib/components/sections/CompactJourneyPhaseMap.svelte';
   import M4Questionnaire from '$lib/components/sections/M4Questionnaire.svelte';
 
   export let data;
@@ -87,9 +89,13 @@
 
 <section class="subpage-hero">
   <div class="container subpage-content module-hero-content">
-    <a href="{base}/guided-pathways/#journey-phases" class="back-link">
-      {journeyPhasePage.backLink}
-    </a>
+    <div class="module-hero-topline">
+      <a href="{base}/guided-pathways/#journey-phases" class="back-link">
+        {journeyPhasePage.backLink}
+      </a>
+
+      <CompactJourneyPhaseMap phases={journeyPhases} activeSlug={journeyPhase.slug} />
+    </div>
 
     <div class="module-hero-icon">
       <img src="{base}{journeyPhase.icon}" alt={journeyPhase.iconAlt} />
@@ -720,10 +726,17 @@
     gap: 56px;
   }
 
-  .module-hero-content .back-link {
+  .module-hero-topline {
     grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+  }
+
+  .module-hero-topline .back-link {
     width: fit-content;
-    margin-bottom: 0;
+    margin: 0;
   }
 
   .module-section-navigation {
@@ -2104,6 +2117,11 @@
       grid-template-columns: 1fr;
       gap: 24px;
       align-items: start;
+    }
+
+    .module-hero-topline {
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
 
     .module-hero-icon {
