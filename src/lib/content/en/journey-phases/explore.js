@@ -27,8 +27,8 @@ const hero = {
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
   { sectionId: 'identify-your-options', label: 'Identify options' },
-  { sectionId: 'develop-solutions', label: 'Develop solutions' },
-  { sectionId: 'shape-value-model', label: 'Shape value model' }
+  { sectionId: 'shape-value-model', label: 'Shape value model' },
+  { sectionId: 'develop-solutions', label: 'Develop solutions' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -51,20 +51,8 @@ const pathwaySection = {
       ]
     },
     {
-      sectionId: 'develop-solutions',
-      number: '2',
-      title: 'Develop Solutions',
-      description:
-        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for validation.',
-      keyOutputs: [
-        'Bundled ideas and stronger solution concepts',
-        'A clearer view of which solutions fit your business',
-        'Initial concepts ready to validate in the next phase'
-      ]
-    },
-    {
       sectionId: 'shape-value-model',
-      number: '3',
+      number: '2',
       title: 'Shape the Value Model',
       description:
         'Explore how your circular solution could deliver value for customers and your business.',
@@ -72,6 +60,18 @@ const pathwaySection = {
         'A clearer view of possible circular value models',
         'Initial value assumptions to validate in the next phase',
         'A stronger concept for customer and business value creation'
+      ]
+    },
+    {
+      sectionId: 'develop-solutions',
+      number: '3',
+      title: 'Develop Solutions',
+      description:
+        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for validation.',
+      keyOutputs: [
+        'Bundled ideas and stronger solution concepts',
+        'A clearer view of which solutions fit your business',
+        'Initial concepts ready to validate in the next phase'
       ]
     }
   ]
@@ -94,7 +94,7 @@ const identifyOptionsSection = {
     afterParagraph: 1,
     title: 'Circular Economy strategies',
     description:
-      "The image below shows how the '9R strategies' form a hierarchy of circular economy interventions, ranked from highest to lowest value preservation. At the top, R0 (Refuse) eliminates the need for a product entirely, preserving the most value by avoiding resource consumption altogether. Moving down, R1-R2 (Rethink/Reduce) minimise resource use, while R3-R6 (Reuse, Repair, Refurbish, Remanufacture) focus on keeping products and components in active use for as long as possible. R7 (Repurpose) gives materials a new function, R8 (Recycle) recovers raw material value through processing, and R9 (Recover), typically energy recovery through incineration, sits at the bottom of the hierarchy as the lowest value preservation strategy, extracting only calorific value once all other options are exhausted. || The framework's core principle is that the higher the R, the more embedded economic, social and environmental value is lost. Using this understanding, you can move on to a practical workshop exercise to explore possible circular strategies or explore other relevant tools to help identify your options.",
+      "The image below shows how the 9R strategies form a hierarchy of circular economy interventions, ranked according to how much value they preserve. At the top, R0 Refuse avoids the need for a product or resource altogether. R1 Rethink and R2 Reduce focus on using products and resources more efficiently, while R3-R6 Reuse, Repair, Refurbish and Remanufacture aim to keep products, components and their embedded value in use for as long as possible. || Further down the hierarchy, R7 Repurpose gives products or components a new function, R8 Recycle recovers material value through processing, and R9 Recover, typically through energy recovery, retains only a limited share of the original value. || The key principle is that the further down the hierarchy an intervention sits, the more of the economic, environmental and social value embedded in the product is generally lost. Recycling can therefore be important, but it should not automatically be the starting point for circular innovation.|| The framework can help challenge existing assumptions, identify a wider range of possible strategies and prioritise exploration of higher-value options before moving towards recycling or recovery. With this perspective in mind, you can move on to a practical workshop exercise to explore relevant circular strategies, or use other tools in the Explore phase to identify and develop possible options.",
     src: '/downloads/phase3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
     alt: 'The 9R circular economy strategies arranged by value preservation',
     caption: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
@@ -159,21 +159,6 @@ const identifyOptionsSection = {
 };
 
 /* 5. DETAILED SECTION 2 */
-const developSolutionsSection = {
-  id: 'develop-solutions',
-  title: 'Develop Solutions',
-  resourceTag: 'explore:develop-solutions',
-  paragraphs: [
-    'Once you have identified some relevant circular strategies, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
-  ],
-  /*
-    Relevant tools are connected in src/lib/content/tool-catalogue.js.
-    To show a tool here, add this tag to the tool's placements.phaseSections:
-    explore:develop-solutions
-  */
-};
-
-/* 6. DETAILED SECTION 3 */
 const shapeValueModelSection = {
   id: 'shape-value-model',
   title: 'Shape the Value Model',
@@ -236,6 +221,21 @@ const shapeValueModelSection = {
     'The core of any marketable circular business is the value proposition for users, customers and partners. In addition to exploring circular value models, it is important to understand how stakeholders experience the value offered by a new model. To build this understanding, it is relevant to map the stakeholders involved and review the value chains as they work today. The relevant tools below can help you do this, including tools for value chain mapping and user interviews, so your exploration is guided by the people and relationships that matter most.'
 };
 
+/* 6. DETAILED SECTION 3 */
+const developSolutionsSection = {
+  id: 'develop-solutions',
+  title: 'Develop Solutions',
+  resourceTag: 'explore:develop-solutions',
+  paragraphs: [
+    'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
+  ],
+  /*
+    Relevant tools are connected in src/lib/content/tool-catalogue.js.
+    To show a tool here, add this tag to the tool's placements.phaseSections:
+    explore:develop-solutions
+  */
+};
+
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
   title: 'Phase Summary',
@@ -244,9 +244,10 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'A clear understanding of the 9R framework and how Design for X (DfX) can support circular redesign',
+    'A clear understanding of the 9R framework can support circular redesign',
     'Shared understanding with your team on circular strategies through the Circular strategies wheel workshop',
-    'Selected circular options and value model ideas that you can validate in the next phase'
+    'Familiarised yourself with circular options and value model that you can validate in the next phase',
+    'Developed ideas or identified options that can become valuable circular solutions for your business. '
   ]
 };
 
@@ -255,6 +256,6 @@ export const explore = defineJourneyPhasePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [identifyOptionsSection, developSolutionsSection, shapeValueModelSection],
+  detailSections: [identifyOptionsSection, shapeValueModelSection, developSolutionsSection],
   phaseSummary
 });

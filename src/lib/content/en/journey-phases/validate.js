@@ -89,7 +89,7 @@ const shortlistStrategiesSection = {
   title: 'Shortlist strategies',
   resourceTag: 'validate:shortlist-strategies',
   paragraphs: [
-    'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
+    'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. If you already have a particular idea from the former phase you can move to the next step to verity the potential of the idea or concept. If you rather keep the thoughts on the circular strategies, use the screening tool here to think further on the options identified in the former phases. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
   ],
   /*
     SHORTLIST STRATEGIES QUESTIONNAIRE
@@ -204,7 +204,7 @@ const testPilotSection = {
   title: 'Test & Pilot',
   resourceTag: 'validate:test-and-pilot',
   paragraphs: [
-    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.|| You can use the **Circular Loop Designer** tool below to help develop your pilot.|| A useful pilot should be time-bounded, specific and measurable. The tool can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| It can also help to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
+    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. Testing ideas or prototypes in the real world can help to validate a solution. || A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.|| A useful pilot should be time-bounded, specific and measurable. The tool can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| It can also help to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
   ]
 };
 

@@ -2143,7 +2143,7 @@ const toolCatalogue = [
     description:
       'To understand the stakeholders, relationships and flows surrounding your business.',
     about:
-      'Business Ecosystem Mapping helps your team understand the network of organisations and other actors that influence how your business currently operates. This is particularly important when developing circular solutions, because keeping products and materials in circulation often requires new forms of cooperation across suppliers, customers, service providers and other stakeholders. || The exercise starts by defining whether you are mapping the whole company or a particular product or product group. Your company is placed at the centre of the map, after which relevant stakeholders are added around it. These can include direct value-chain partners such as suppliers and customers, but also actors outside the immediate value chain, such as industry associations, research organisations, standard-setting bodies and public authorities. || Stakeholders are positioned according to how closely they are connected to the company. The team then maps important resource and service flows, financial flows and information flows between the different actors. Looking at these relationships together can reveal dependencies, missing connections and stakeholders that may either support or create barriers to a circular transition. || The resulting ecosystem map provides a common starting point for discussing which relationships may need to change, which new actors could be required, and where collaboration will be particularly important for implementing a circular solution. CIRCit recommends involving participants from different parts of the company so that the map reflects different perspectives on the existing ecosystem. To continue and expand the mapping on stakeholders, you can use the Stakeholder Value Mapping tool by the same provider.',
+      'Business Ecosystem Mapping helps your team understand the network of organisations and other actors that influence how your business currently operates. This is particularly important when developing circular solutions, because keeping products and materials in circulation often requires new forms of cooperation across suppliers, customers, service providers and other stakeholders. || Stakeholders are positioned according to how closely they are connected to the company. The team maps important resource and service flows, financial flows and information flows between the different actors. Looking at these relationships together can reveal dependencies, missing connections and stakeholders that may either support or create barriers to a circular transition. || The resulting ecosystem map provides a common starting point for discussing which relationships may need to change, which new actors could be required, and where collaboration will be particularly important for implementing a circular solution. CIRCit recommends involving participants from different parts of the company so that the map reflects different perspectives on the existing ecosystem. To continue and expand the mapping on stakeholders, you can use the Stakeholder Value Mapping tool by the same provider.',
     journeyPhases: ['Assess', 'Explore'],
     placements: {
       phaseSections: ['explore:shape-value-model'],
@@ -2163,6 +2163,34 @@ const toolCatalogue = [
       'Small-medium enterprises (SMEs) exploring circular opportunities that depend on collaboration beyond their own organisation, for example take-back systems, reuse, repair, refurbishment, reverse logistics, secondary materials or service-based business models.',
     format: 'Printable cards and workshop guide',
     toolLink: 'https://circitnord.com/tools/business-ecosystem-mapping/'
+  },
+  {
+    id: 'resource-098',
+    slug: 'build-run-prototypes',
+    title: 'Build & Run Prototypes',
+    description:
+      'To turn a circular idea into a tangible prototype and test it with users before investing in full development.',
+    about:
+      'Build & Run Prototypes helps your team move from an idea to something that people can see, experience or interact with. Instead of developing a complete solution immediately, the method encourages you to create a simple and inexpensive version that is detailed enough to communicate the idea and generate useful feedback. || A prototype does not have to be a finished physical product. Depending on what you want to test, it could be a mock-up, model, storyboard, role play or another simple representation of the proposed product or service. This makes the method relevant for circular solutions such as a new repair service, take-back process, reusable packaging system, rental offer or redesigned customer journey, as well as for physical product concepts. || For circular solutions, prototyping is particularly valuable because it allows you to test important parts of the solution before committing significant resources. You can explore, for example, whether users understand a return process, whether a service is convenient to use, or whether a proposed interaction works as intended. Repeated testing helps reduce uncertainty and provides practical evidence about what should be changed before moving towards a larger pilot or implementation.',
+    journeyPhases: ['Validate'],
+    placements: {
+      phaseSections: ['validate:verify-potential'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium to high',
+    language: 'English',
+    provider: 'Design Kit / IDEO.org',
+    access: 'Free',
+    timeRequired:
+      'Variable, from a few days to a few weeks, depending on what is being prototyped and how many rounds of testing and iteration are needed.',
+    preparationNeeded:
+      'Start with a circular concept that you want to validate. Decide which part of the concept needs to be made tangible and who should test it. Gather simple materials for creating the prototype.',
+    output:
+      'One or more tested and improved prototypes, together with documented feedback and learning about how users understand and interact with the proposed solution.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that have developed a promising circular product, service or business-model concept and need to make it tangible, test it with intended users and improve it before investing in a full pilot or implementation.',
+    format: 'Step-by-step method and downloadable cards',
+    toolLink: 'https://www.designkit.org/methods/build-run-prototypes.html'
   }
 ];
 
