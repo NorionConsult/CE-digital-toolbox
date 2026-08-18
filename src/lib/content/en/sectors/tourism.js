@@ -35,7 +35,7 @@ export const tourismBarriersSection = {
   intro: 'Tourism small-medium enterprises (SMEs) face investment, seasonality, reporting and capacity barriers, while traveller demand, certification and local circular supply chains are creating new opportunities.',
   barriers: [
     'High upfront cost of energy-efficient, water-saving and waste-reduction technology for SME hospitality operators.',
-    'Seasonal fluctuations create inconsistent waste volumes, complicating infrastructure investment and supplier contracts.',
+    'Seasonal fluctuations, such as changes in visitor numbers and weather conditions, creates inconsistent waste volumes, complicating infrastructure investment and supplier contracts.',
     'Greenwashing risk and a lack of standardised sustainability metrics make credible reporting difficult for small operators.',
     'Fragmented supply chains and dependence on imported goods limit the ability to source locally and reduce transport emissions.',
     'Limited management capacity and staff expertise in circular economy practices among micro and small tourism businesses.',

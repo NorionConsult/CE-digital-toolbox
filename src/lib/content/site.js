@@ -77,6 +77,8 @@ export const site = {
       width: '72px'
     }
   ],
+  footerCopyright:
+    '© 2026 EU4 GreenRecovery East programme. All rights reserved. Licensed to the European Union under conditions.',
   /* The labels object contains all the text labels used throughout the website. If changed once here, it will update everywhere. */
   labels: {
     viewPhase: 'View phase',
