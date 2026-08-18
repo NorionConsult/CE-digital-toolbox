@@ -19,7 +19,7 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase focuses on validating circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
+    'This phase focuses on prioritizing circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
   icon: '/phase-icons/icon-validate.png',
   iconAlt: 'Validate phase icon'
 };

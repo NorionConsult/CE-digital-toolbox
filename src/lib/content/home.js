@@ -9,7 +9,7 @@ export const home = {
     title: 'Find digital tools to support your circular economy transition',
     text: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs across different industries. Get started by following a guided flow that introduces the tools or by freely browsing tools in the catalogue.',
     primaryButton: 'Follow guided pathways',
-    secondaryButton: 'Browse tools freely'
+    secondaryButton: 'Browse tools'
   },
   aboutSection: {
     eyebrow: 'About the toolbox',

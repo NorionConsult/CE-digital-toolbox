@@ -81,7 +81,7 @@
       edgePhase: false,
       phaseName: 'Implement',
       formerLabel: 'Turn plans into action',
-      shortDescription: 'Plan and pilot your selected ideas',
+      shortDescription: 'Plan and realise your selected ideas',
       popUpText:
         'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones and pilot activities, then this phase is relevant for you. This phase helps you turn selected strategies into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
       icon: '/phase-icons/icon-implement.png',

@@ -27,7 +27,7 @@ const hero = {
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
   { sectionId: 'maturity-assessment', label: 'Assess maturity' },
-  { sectionId: 'baseline-mapping', label: 'Map baseline' },
+  { sectionId: 'mapping-resources', label: 'Map resources' },
   { sectionId: 'hotspot-analysis', label: 'Analyse hotspots' }
 ];
 
@@ -37,7 +37,7 @@ const pathwaySection = {
   paragraphs: [
     'Before a business can become more circular, it needs to understand where it stands today.',
     'This phase guides you through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
-    'Rather than jumping straight to solutions, this phase builds the factual foundation that makes every subsequent decision more targeted and effective. The phase works through three interconnected stages.'
+    'Rather than jumping straight to solutions, this phase builds the factual foundation that makes every subsequent decision more targeted and effective. The phase works through three interconnected stages. As for example, the resource mapping is very important, as it builds the groundwork for the hotspot analysis and shows where resources can be used better. '
   ],
   cards: [
     {
@@ -48,9 +48,9 @@ const pathwaySection = {
       keyOutputs: ['Circular Economy (CE) maturity score', 'Priority areas for focus']
     },
     {
-      sectionId: 'baseline-mapping',
+      sectionId: 'mapping-resources',
       number: '2',
-      title: 'Baseline Mapping',
+      title: 'Mapping Resources',
       description: 'Map your resource inputs, outputs, waste streams and energy flows systematically.',
       keyOutputs: ['Input/output inventory', 'Waste stream overview']
     },
@@ -85,18 +85,18 @@ const maturitySection = {
   ]
 };
 
-/* 5. DETAILED SECTION 2: BASELINE MAPPING */
+/* 5. DETAILED SECTION 2: MAPPING RESOURCES */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/tool-catalogue.js, add 'assess:baseline-mapping' to:
+  In src/lib/content/tool-catalogue.js, add 'assess:mapping-resources' to:
   placements.phaseSections
 */
-const baselineSection = {
-  id: 'baseline-mapping',
-  title: 'Baseline Mapping',
-  resourceTag: 'assess:baseline-mapping',
+const mappingResourcesSection = {
+  id: 'mapping-resources',
+  title: 'Mapping Resources',
+  resourceTag: 'assess:mapping-resources',
   paragraphs: [
-    'A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
+    'Mapping your resources is a critical step to creating a baseline. A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
   ],
   image: {
     src: '/downloads/phase2/M2_Baseline_mapping_MFexample.png',
@@ -148,7 +148,7 @@ const hotspotSection = {
     ]
   },
   closingParagraphs: [
-    'Your hotspot analysis directly feeds into Phase 3 (Explore) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them.'
+    'Your hotspot analysis directly feeds into Phase 3 (Explore) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them. Apart from resource and material hotspots, you can also scope your area of effort through a materiality assessment, which is a process to identify the most relevant topics for your value chains, business operations, and stakeholders. This can be done through a structured process of stakeholder engagement and prioritisation of double materiality.|| The double materiality asssessment ask you to consider the impact of your business on the environment and society, as well as the impact of environmental and social issues on your business. The double materiality assessment (DMA) can help you identify the most relevant topics for your business and stakeholders, and can inform your sustainability strategy and reporting. This is a recommended step for those who are looking for a corporate management view to improve your sustainability performance and reporting. The European Sustainability Reporting Standards (ESRS) requires large companies in the EU to conduct a double materiality assessment, but SMEs outside of EU can also benefit from this approach to improve their sustainability performance and reporting.'
   ]
 };
 
@@ -171,6 +171,6 @@ export const assess = defineJourneyPhasePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [maturitySection, baselineSection, hotspotSection],
+  detailSections: [maturitySection, mappingResourcesSection, hotspotSection],
   phaseSummary
 });

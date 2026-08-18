@@ -26,9 +26,8 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'explore-ce-strategies', label: 'Design principles' },
   { sectionId: 'identify-your-options', label: 'Identify options' },
-  { sectionId: 'assess-and-prioritise', label: 'Redesign circular value' }
+  { sectionId: 'develop-solutions', label: 'Develop solutions' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -39,20 +38,8 @@ const pathwaySection = {
   ],
   cards: [
     {
-      sectionId: 'explore-ce-strategies',
-      number: '1',
-      title: 'Understand design principles',
-      description:
-        'Explore the core Design for X (DfX) strategies: Design for Longevity, Repairability, Disassembly, and Recyclability, and how they apply to your products.',
-      keyOutputs: [
-        'A clear understanding of the design for X principles',
-        'Gain insight of how to apply these strategies to your SME',
-        'An awareness of the regulation surrounding these principles'
-      ]
-    },
-    {
       sectionId: 'identify-your-options',
-      number: '2',
+      number: '1',
       title: 'Identify Your Options',
       description:
         'Use structured tools to map which strategies are feasible and relevant for your specific business, sector and supply chain.',
@@ -63,93 +50,21 @@ const pathwaySection = {
       ]
     },
     {
-      sectionId: 'assess-and-prioritise',
-      number: '3',
-      title: 'Redesigning for Circular value',
+      sectionId: 'develop-solutions',
+      number: '2',
+      title: 'Develop Solutions',
       description:
-        'Explore circular business model archetypes and consider how circular strategies could create, deliver and retain value in your business.',
+        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for validation.',
       keyOutputs: [
-        'A clear view of circular business model archetypes',
-        'Examples of how business models preserve value',
-        'Initial ideas for which models may fit your business'
+        'Bundled ideas and stronger solution concepts',
+        'A clearer view of which solutions fit your business',
+        'Initial concepts ready to validate in the next phase'
       ]
     }
   ]
 };
 
 /* 4. DETAILED SECTION 1 */
-const exploreStrategiesSection = {
-  id: 'explore-ce-strategies',
-  title: 'Understand Design Principles',
-  resourceTag: 'explore:explore-strategies',
-  paragraphs: [
-    'Circular economy strategies provide different ways to preserve value, reduce waste and keep products, components and materials in use for longer. For this end, there are different models and frameworks.',
-    "One of these is the Design for X (DfX) framework, which helps teams translate circular economy ambition into design decisions. Design for X (DfX) means designing for a specific circular outcome, such as longevity, repairability, disassembly or recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products. EU regulation, particularly the Ecodesign for Sustainable Products Regulation (ESPR), Right to Repair, and packaging regulations, is based on and aligned with these design principles. This means the design choices of companies will soon affect market access. The visualisation below describes four design strategies that keep products and materials in use longer and can be applied at different scales and degrees."
-  ],
-  /*
-    DFX FRAMEWORK INFO BOX:
-    Edit the cards below to change the text, icons or source note.
-    Icons use Iconify's icon-park-outline library:
-    https://icon-sets.iconify.design/icon-park-outline/
-  */
-  m3DfxFramework: {
-    title: 'The Design for X (DfX) Framework',
-    intro: 'The Design for X (DfX) Framework',
-    source:
-      'Source: Mesa, Jaime A. (2023). Design for circularity and durability: an integrated approach from Design for X (DfX) guidelines. Research in Engineering Design. 34, 3. 10.1007/s00163-023-00419-1.',
-    cards: [
-      {
-        title: 'Design for Longevity',
-        icon: 'time',
-        meaning:
-          'Products built to last: high durability, quality materials, resistance to wear.',
-        application: [
-          'Use modular components',
-          'Avoid planned obsolescence',
-          'Design timeless aesthetics'
-        ],
-        regulation: 'Ecodesign for Sustainable Products Regulation (ESPR) durability requirements · Right to Repair Directive'
-      },
-      {
-        title: 'Design for Repairability',
-        icon: 'tool',
-        meaning: 'Products that can be fixed, not thrown away.',
-        application: [
-          'Accessible fasteners',
-          'Spare parts availability',
-          'Clear repair instructions'
-        ],
-        regulation: 'Right to Repair (EU 2024/1799) · Energy-related products'
-      },
-      {
-        title: 'Design for Disassembly',
-        icon: 'screwdriver',
-        meaning: 'Products that can be taken apart efficiently at end of life.',
-        application: [
-          'Reversible connections',
-          'Material compatibility',
-          'Labelled components'
-        ],
-        regulation: 'Ecodesign for Sustainable Products Regulation (ESPR) 2025-2030 working plan · Electronics & textiles first'
-      },
-      {
-        title: 'Design for Recyclability',
-        icon: 'recycling',
-        meaning: 'Materials that can re-enter the production cycle cleanly.',
-        application: [
-          'Mono-material design',
-          'Avoid hazardous additives',
-          'Clearly marked materials'
-        ],
-        regulation:
-          'Packaging & Packaging Waste Regulation · Critical Raw Materials Act'
-      }
-    ]
-  },
-  showRelevantTools: false
-};
-
-/* 5. DETAILED SECTION 2 */
 const identifyOptionsSection = {
   id: 'identify-your-options',
   title: 'Identify Your Options',
@@ -171,7 +86,11 @@ const identifyOptionsSection = {
     maxWidth: '680px',
     zoomable: true
   },
-  showRelevantTools: false,
+  /*
+    Relevant tools are connected in src/lib/content/tool-catalogue.js.
+    To show a tool here, add this tag to the tool's placements.phaseSections:
+    explore:identify-options
+  */
   /*
     M3 WHEEL WORKSHOP
     Edit all Phase 3 wheel workshop wording, timings, lists and the canvas link below.
@@ -224,15 +143,20 @@ const identifyOptionsSection = {
   }
 };
 
-/* 6. DETAILED SECTION 3 */
-const assessPrioritiseSection = {
-  id: 'assess-and-prioritise',
-  title: 'Redesigning Circular Value',
-  resourceTag: 'explore:redesign-circular-value',
+/* 5. DETAILED SECTION 2 */
+const developSolutionsSection = {
+  id: 'develop-solutions',
+  title: 'Develop Solutions',
+  resourceTag: 'explore:develop-solutions',
   paragraphs: [
-    'Circular business models describe how a company can create, deliver and retain value while reducing resource use and waste.',
-    'Use this section to explore how circular strategies can become practical business model choices.'
+    'Once you have identified promising circular strategies, the next step is to turn them into clearer solution ideas.',
+    'Use this section to combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase.'
   ],
+  /*
+    Relevant tools are connected in src/lib/content/tool-catalogue.js.
+    To show a tool here, add this tag to the tool's placements.phaseSections:
+    explore:develop-solutions
+  */
   /*
     CIRCULAR BUSINESS MODEL CARDS
     Edit the introductory text, card titles, descriptions, examples and icons
@@ -280,7 +204,7 @@ const assessPrioritiseSection = {
   ]
 };
 
-/* 7. PHASE SUMMARY */
+/* 6. PHASE SUMMARY */
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
@@ -288,10 +212,9 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'A clear understanding of the Design for X (DfX) redesign process',
-    'A completed Design for X (DfX) audit',
-    'Design proposal and completion of the Circular strategies wheel workshop',
-    'Awareness of circular business model archetypes that could fit your business'
+    'A clear understanding of the 9R framework and how Design for X (DfX) can support circular redesign',
+    'Shared understanding with your team on circular strategies through the Circular strategies wheel workshop',
+    'Selected circular options that you can validate on the next phase'
   ]
 };
 
@@ -300,10 +223,6 @@ export const explore = defineJourneyPhasePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [
-    exploreStrategiesSection,
-    identifyOptionsSection,
-    assessPrioritiseSection
-  ],
+  detailSections: [identifyOptionsSection, developSolutionsSection],
   phaseSummary
 });

@@ -340,7 +340,7 @@ const toolCatalogue = [
       'Printable or digital cards covering key circular economy trends, opportunities, and threats. Designed to facilitate team discussions and feed into Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting. For best use, it can be combined with a SWOT Matrix template or other circular business model ideation tools. Depending on the amount of people to include in the workshop to discuss the questions and trends in the cards, it can take 1-3 hours to complete a facilitated exercise.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections:['explore:redesign-circular-value']
+      phaseSections:['explore:identify-options']
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -365,7 +365,7 @@ const toolCatalogue = [
       'An ideation tool that helps you explore and identify the most suitable circular pathways for your products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections:['explore:redesign-circular-value']
+      phaseSections:['explore:identify-options']
     },
     sector: 'Manufacturing',
     effort: 'Low',
@@ -481,7 +481,7 @@ const toolCatalogue = [
       'Material Flow Analysis (MFA) gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.',
     journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['assess:baseline-mapping']
+      phaseSections: ['assess:mapping-resources']
     },
     sector: 'Manufacturing',
     effort: 'High',
@@ -505,7 +505,7 @@ const toolCatalogue = [
       'STAN allows users to create graphical Material Flow Analysis (MFA) models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.',
     journeyPhases: ['Assess'],
     placements: {
-      phaseSections: ['assess:baseline-mapping']
+      phaseSections: ['assess:mapping-resources']
     },
     sector: 'Manufacturing',
     effort: 'High',
@@ -694,7 +694,7 @@ const toolCatalogue = [
       'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by the Procura+ network of the International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI), bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
     journeyPhases: ['Explore', 'Validate', 'Implement'],
     placements: {
-      phaseSections: ['explore:redesign-circular-value']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -1251,7 +1251,7 @@ const toolCatalogue = [
       'The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:explore-strategies']
+      phaseSections: ['explore:identify-options']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1266,6 +1266,33 @@ const toolCatalogue = [
     toolLink: '/downloads/tools/Tool-Product%20Design%20Audit%20Map.pdf'
   },
   {
+    id: 'resource-084',
+    slug: 'design-for-x-dfx-framework',
+    title: 'The Design for X (DfX) Framework',
+    description:
+      'A circular design framework that helps teams translate circular economy ambitions into product design decisions such as longevity, repairability, disassembly and recyclability.',
+    about:
+      'The Design for X (DfX) Framework helps teams translate circular economy ambition into design decisions. Design for X (DfX) means designing for a specific circular outcome, such as longevity, repairability, disassembly or recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products.|| **Four design strategies**|| - **Design for Longevity:** products built to last through high durability, quality materials and resistance to wear. Apply it through modular components, avoiding planned obsolescence and designing timeless aesthetics.|| - **Design for Repairability:** products that can be fixed rather than thrown away. Apply it through accessible fasteners, spare parts availability and clear repair instructions.|| - **Design for Disassembly:** products that can be taken apart efficiently at end of life. Apply it through reversible connections, material compatibility and labelled components.|| - **Design for Recyclability:** materials that can re-enter the production cycle cleanly. Apply it through mono-material design, avoiding hazardous additives and clearly marked materials.|| The framework also connects to European Union regulation, including the Ecodesign for Sustainable Products Regulation (ESPR), Right to Repair rules and packaging-related requirements.',
+    journeyPhases: ['Explore'],
+    placements: {
+      phaseSections: ['explore:identify-options']
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'Research in Engineering Design',
+    access: 'Free',
+    timeRequired: '1-2 hours',
+    preparationNeeded:
+      'A product, material or process to review, plus basic information about design, repair, materials and end-of-life handling.',
+    output:
+      'A structured review of circular design opportunities related to longevity, repairability, disassembly and recyclability.',
+    bestFor:
+      'SMEs exploring circular product design principles and early redesign opportunities.',
+    format: 'Framework / guidance',
+    toolLink: 'https://doi.org/10.1007/s00163-023-00419-1'
+  },
+  {
     id: 'resource-059',
     slug: 'how-might-we',
     title: 'How Might We',
@@ -1275,7 +1302,7 @@ const toolCatalogue = [
       'The How Might We method from Technical University of Denmark (DTU)\'s Design Kit is a simple but powerful reframing technique used in human-centred design. Teams take insight statements gathered from research and rephrase them as How Might We questions, a format that implies a solution is possible without prescribing what it should be. The method is used in the ideation phase to open creative space before brainstorming. A well-crafted question is neither too narrow, which limits ideas, nor too broad, which makes it hard to act on.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:explore-strategies']
+      phaseSections: ['explore:identify-options']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1299,7 +1326,7 @@ const toolCatalogue = [
       'Bundle Ideas is an IDEO.org method for moving from divergent brainstorming to convergent concept development by clustering, combining and synthesising the strongest elements across concepts.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:explore-strategies']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1323,7 +1350,7 @@ const toolCatalogue = [
       'Create a Concept is an IDEO.org method that bridges ideation and prototyping. Teams turn their strongest idea clusters into coherent concepts that are more complete than raw ideas but not yet final solutions.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:explore-strategies']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1347,7 +1374,7 @@ const toolCatalogue = [
       'This Ellen MacArthur Foundation workshop helps users understand the implications of choosing materials for circular products, including the need to design out chemicals of concern and enable material recovery.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:redesign-circular-value']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1371,7 +1398,7 @@ const toolCatalogue = [
       'The Ecodesign Toolkit by EcoDesign Circle is an open-access collection of downloadable PDFs and interactive Mural boards for circular and ecodesign work across products, services, systems and business models.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:redesign-circular-value']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
