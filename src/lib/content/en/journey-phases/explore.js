@@ -227,7 +227,13 @@ const shapeValueModelSection = {
       example: 'Switching to recycled feedstock and partnering with a local recycler.'
     }
   ],
-  showRelevantTools: false
+  /*
+    TEXT AFTER THE CIRCULAR VALUE MODEL CARDS
+    This block appears after the accordion cards and before the relevant tools.
+  */
+  afterBusinessModelsTitle: 'Stakeholder and value chain perspectives',
+  afterBusinessModelsText:
+    'The core of any marketable circular business is the value proposition for users, customers and partners. In addition to exploring circular value models, it is important to understand how stakeholders experience the value offered by a new model. To build this understanding, it is relevant to map the stakeholders involved and review the value chains as they work today. The relevant tools below can help you do this, including tools for value chain mapping and user interviews, so your exploration is guided by the people and relationships that matter most.'
 };
 
 /* 7. PHASE SUMMARY */

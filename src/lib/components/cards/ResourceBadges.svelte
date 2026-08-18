@@ -2,7 +2,7 @@
   import JourneyPhaseBadges from '$lib/components/cards/JourneyPhaseBadges.svelte';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
 
-  /** @type {{ journeyPhases?: string[]; sectorDisplay?: string; sector?: string }} */
+  /** @type {{ journeyPhases?: string[]; filterValues?: { sectors?: string[] }; sectorDisplay?: string; sector?: string }} */
   export let resource;
   /** @type {'card' | 'hero'} */
   export let variant = 'card';
@@ -16,27 +16,28 @@
   }
 
   /**
-   * @param {{ sectorDisplay?: string; sector?: string }} item
-   * @returns {string}
+   * @param {{ filterValues?: { sectors?: string[] }; sectorDisplay?: string; sector?: string }} item
+   * @returns {string[]}
    */
-  function getSectorBadge(item) {
-    return item.sectorDisplay ?? item.sector ?? '';
+  function getSectorBadges(item) {
+    const sectors = item.filterValues?.sectors ?? [item.sectorDisplay ?? item.sector ?? ''];
+
+    return sectors.filter((sector) => sector !== '' && sector !== 'Cross-sector');
   }
 
   $: phaseBadges = getPhaseBadges(resource);
-  $: sectorBadge = getSectorBadge(resource);
-  $: showSectorBadge = sectorBadge !== '' && sectorBadge !== 'Cross-sector';
+  $: sectorBadges = getSectorBadges(resource);
 </script>
 
-{#if phaseBadges.length > 0 || showSectorBadge}
+{#if phaseBadges.length > 0 || sectorBadges.length > 0}
   <div class="resource-badges" class:resource-badges-hero={variant === 'hero'}>
     {#if phaseBadges.length > 0}
       <JourneyPhaseBadges phases={phaseBadges} variant="inline" />
     {/if}
 
-    {#if showSectorBadge}
-      <SectorBadge sector={sectorBadge} />
-    {/if}
+    {#each sectorBadges as sector}
+      <SectorBadge {sector} />
+    {/each}
   </div>
 {/if}
 

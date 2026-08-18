@@ -1873,7 +1873,7 @@ const toolCatalogue = [
       'User interviews help you understand how customers, users and other stakeholders actually experience a product, service or system. In a circular economy context, this is important because solutions such as reuse, repair, sharing, take-back and product-service models often depend on people changing behaviours or interacting with a product in new ways. || The worksheet supports the preparation of a semi-structured interview plan based on research questions. It encourages open questions, follow-up questions and systematic recording of insights across interviewees, so recurring needs, challenges and patterns can inform circular solution development.',
     journeyPhases: ['Assess', 'Explore'],
     placements: {
-      phaseSections: ['assess:mapping-resources', 'explore:develop-solutions'],
+      phaseSections: ['explore:shape-value-model'],
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1882,7 +1882,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '1-2 weeks, including preparation, interviews and collection of insights',
     preparationNeeded:
-      'Define what you need to learn and which user or stakeholder groups you need to speak to. Prepare research questions and related open interview questions, and arrange consent if interviews are recorded.',
+      'Define what you need to learn and which user or stakeholder groups you need to speak to.',
     output:
       'Structured qualitative insights into user needs, behaviours, motivations, barriers and opportunities.',
     bestFor:
@@ -1982,26 +1982,26 @@ const toolCatalogue = [
       'To plan a real-world pilot and test whether a circular solution can work in practice.',
     about:
       'The Circular Pilot Canvas helps your team turn a promising circular concept into a structured real-world pilot. It is designed around three fundamental questions: Is there demand for the solution? Is the circular business model worthwhile? And can the organisations involved actually deliver it? || The canvas brings these questions together across value proposition, circular business model, and feasibility and readiness. The team defines what the pilot will test, who needs to participate, what value the solution creates, how circularity will be measured and how responsibilities are distributed.',
-    journeyPhases: ['Implement'],
+    journeyPhases: ['Validate','Implement'],
     placements: {
       phaseSections: ['validate:test-and-pilot'],
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
     },
     sector: ['Cross-sector', 'Construction', 'Manufacturing'],
-    effort: 'High',
+    effort: 'Medium',
     language: 'English',
     provider: 'Nordic Circularity Piloting Program / Combient Pure',
     access: 'Free',
     timeRequired:
-      'Approximately 90-120 minutes for an initial pilot-planning workshop, followed by further preparation with the organisations involved.',
+      'Approximately 1.5 to 2 hours for an initial pilot-planning workshop.',
     preparationNeeded:
-      'Start with a circular solution selected for further development. Bring together the organisations or functions needed to deliver the pilot and prepare initial information on customers, partners, benefits, costs and operational requirements.',
+      'A circular solution selected for further development. Bring together the organisations or functions needed to deliver the pilot and prepare initial information on customers, partners, benefits, costs and operational requirements.',
     output:
-      'A structured pilot plan covering what will be tested, stakeholders, expected benefits, circularity goals, costs, risks, roles, success criteria, timeline and learning.',
+      'A structured pilot plan covering what will be tested, stakeholders, expected benefits, circularity goals, costs, risks, roles, success criteria, and timeline.',
     bestFor:
       'Small-medium enterprises (SMEs) that want to test a circular product, service or business model with customers and value-chain partners under real-world conditions.',
-    format: 'Printable pilot-planning canvas',
+    format: 'Printable canvas',
     toolLink: 'https://assets.ctfassets.net/a2tjr1gs85zs/7nITcohRhMxFY7aLd3KlH4/668c49380f237b3e326d996058355437/Circular_Piloting_Canvas.pdf'
   },
   {
@@ -2107,6 +2107,62 @@ const toolCatalogue = [
       'Farmers, smallholders and organisations wanting structured circular economy and organic agriculture training in Armenia.',
     format: 'Digital training catalogue',
     toolLink: 'https://www.organicarmenia.bio/en/all-green/trainings'
+  },
+  {
+    id: 'resource-096',
+    slug: 'stakeholder-value-mapping',
+    title: 'Stakeholder Value Mapping',
+    description:
+      'To understand what different stakeholders gain or lose from a circular solution and identify opportunities for creating shared value.',
+    about:
+      'Stakeholder Value Mapping helps your team explore what a circular transition means for the different stakeholders involved. A circular solution may create significant benefits for your company while requiring customers, suppliers or other partners to change how they work. Understanding what motivates these actors, and where they may experience costs or disadvantages, can therefore be critical for turning a circular idea into a workable value chain. || The exercise compares the current situation with the proposed new circular value chain. For each important stakeholder, the team first identifies the value they currently receive from the company. This can include tangible value such as products, services or financial benefits, as well as less tangible benefits such as knowledge, innovation opportunities or stronger business relationships. || The tool is particularly useful after Business Ecosystem Mapping, another tool provided by CIRCit, because CIRCit recommends transferring the most important stakeholders from the ecosystem map into the Stakeholder Value Mapping exercise.',
+    journeyPhases: ['Assess', 'Explore'],
+    placements: {
+      phaseSections: ['explore:shape-value-model'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'CIRCit',
+    access: 'Free',
+    timeRequired:
+      '60-90 minutes as a starting point, depending on the number of stakeholders being assessed.',
+    preparationNeeded:
+      'Ideally complete a Business Ecosystem Map first and select the stakeholders most relevant to the proposed transition. Bring together people who understand customers, suppliers, operations and business relationships. Include perspectives beyond immediate commercial partners where relevant, including society and the environment.',
+    output:
+      'A structured overview of value currently created for each stakeholder, unmet needs, existing pain points, missed or destroyed value, new value opportunities, stakeholders that may lose out and areas where interests can be aligned.',
+    bestFor:
+      'Small-medium enterprises (SMEs) developing circular solutions that require customers, suppliers or partners to participate or change their behaviour, particularly where the benefits and responsibilities are distributed across several organisations.',
+    format: 'Printable stakeholder mapping canvas',
+    toolLink: 'https://circitnord.com/tools/stakeholder-value-mapping/'
+  },
+  {
+    id: 'resource-097',
+    slug: 'business-ecosystem-mapping',
+    title: 'Business Ecosystem Mapping',
+    description:
+      'To understand the stakeholders, relationships and flows surrounding your business.',
+    about:
+      'Business Ecosystem Mapping helps your team understand the network of organisations and other actors that influence how your business currently operates. This is particularly important when developing circular solutions, because keeping products and materials in circulation often requires new forms of cooperation across suppliers, customers, service providers and other stakeholders. || The exercise starts by defining whether you are mapping the whole company or a particular product or product group. Your company is placed at the centre of the map, after which relevant stakeholders are added around it. These can include direct value-chain partners such as suppliers and customers, but also actors outside the immediate value chain, such as industry associations, research organisations, standard-setting bodies and public authorities. || Stakeholders are positioned according to how closely they are connected to the company. The team then maps important resource and service flows, financial flows and information flows between the different actors. Looking at these relationships together can reveal dependencies, missing connections and stakeholders that may either support or create barriers to a circular transition. || The resulting ecosystem map provides a common starting point for discussing which relationships may need to change, which new actors could be required, and where collaboration will be particularly important for implementing a circular solution. CIRCit recommends involving participants from different parts of the company so that the map reflects different perspectives on the existing ecosystem. To continue and expand the mapping on stakeholders, you can use the Stakeholder Value Mapping tool by the same provider.',
+    journeyPhases: ['Assess', 'Explore'],
+    placements: {
+      phaseSections: ['explore:shape-value-model'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'CIRCit',
+    access: 'Free',
+    timeRequired:
+      '1 to 1.5 hours for a focused mapping workshop. More complex ecosystems may require additional research or follow-up.',
+    preparationNeeded:
+      'Prepare the stakeholder cards and a large working surface or digital whiteboard. It can also be useful to gather basic information beforehand about important suppliers, customers, partners and other organisations that influence the business.',
+    output:
+      'A visual overview of important stakeholders in and around the value chain, how closely they are connected to the company, resource and service flows, financial flows, information flows, relationships and dependencies that may support or hinder circular solutions.',
+    bestFor:
+      'Small-medium enterprises (SMEs) exploring circular opportunities that depend on collaboration beyond their own organisation, for example take-back systems, reuse, repair, refurbishment, reverse logistics, secondary materials or service-based business models.',
+    format: 'Printable cards and workshop guide',
+    toolLink: 'https://circitnord.com/tools/business-ecosystem-mapping/'
   }
 ];
 

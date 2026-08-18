@@ -187,7 +187,8 @@ function prepareTool(tool) {
   const languages = normalizeFilterList(tool.language, 'language');
   const languageDisplay = getCompactLanguageDisplay(tool.language);
   const languageFullDisplay = getFullLanguageDisplay(tool.language);
-  const sectorDisplay = normalizeFilterValue(tool.sector, 'sector');
+  const sectorValues = normalizeFilterList(tool.sector, 'sector');
+  const sectorDisplay = sectorValues.join(', ');
   const effortDisplay = normalizeEffortValue(tool.effort);
   const accessDisplay = normalizeFilterValue(tool.access, 'access');
 
@@ -202,7 +203,7 @@ function prepareTool(tool) {
     accessDisplay,
     filterValues: {
       journeyPhases: journeyPhaseFilterValues,
-      sectors: [sectorDisplay],
+      sectors: sectorValues,
       languages,
       access: [accessDisplay]
     },

@@ -590,6 +590,18 @@
               </details>
             {/each}
           </div>
+
+          {#if section.afterBusinessModelsTitle || section.afterBusinessModelsText}
+            <div class="business-models-afterword">
+              {#if section.afterBusinessModelsTitle}
+                <h3 class="subsection-title business-models-title">{section.afterBusinessModelsTitle}</h3>
+              {/if}
+
+              {#if section.afterBusinessModelsText}
+                <RichText text={section.afterBusinessModelsText} className="business-models-intro" />
+              {/if}
+            </div>
+          {/if}
         </div>
       {/if}
 
@@ -1082,6 +1094,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
     gap: 22px;
+  }
+
+  .business-models-afterword {
+    display: grid;
+    gap: 12px;
+    margin-top: 32px;
   }
 
   .business-model-card {
