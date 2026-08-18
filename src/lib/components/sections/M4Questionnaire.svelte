@@ -45,7 +45,7 @@
   /** @type {string} */
   export let downloadingLabel = 'Preparing PDF...';
   /** @type {string} */
-  export let downloadFilename = 'quick-scan-results.pdf';
+  export let downloadFilename = 'shortlist-strategies-results.pdf';
   /** @type {string} */
   export let pdfDisclaimer;
   /** @type {string} */

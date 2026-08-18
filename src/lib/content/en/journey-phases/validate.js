@@ -3,7 +3,8 @@ import { defineJourneyPhasePage } from './_shared.js';
 /*
   PHASE 4: VALIDATE
   The editable blocks below follow the same order as the website page.
-  Keep sectionId and id values unchanged because they connect page links.
+  Keep sectionId and id values aligned with the visible subsection names because
+  they connect page links and relevant tool placements.
 */
 
 /* 1. HOME PAGE PHASE CARD AND PHASE HERO */
@@ -26,8 +27,8 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'quick-scan-tool', label: 'Shortlist strategies' },
-  { sectionId: 'validate-case', label: 'Verify potential' },
+  { sectionId: 'shortlist-strategies', label: 'Shortlist strategies' },
+  { sectionId: 'verify-potential', label: 'Verify potential' },
   { sectionId: 'test-and-pilot', label: 'Prepare pilot' }
 ];
 
@@ -39,7 +40,7 @@ const pathwaySection = {
   ],
   cards: [
     {
-      sectionId: 'quick-scan-tool',
+      sectionId: 'shortlist-strategies',
       number: '1',
       title: 'Shortlist strategies',
       description:
@@ -50,7 +51,7 @@ const pathwaySection = {
       ]
     },
     {
-      sectionId: 'validate-case',
+      sectionId: 'verify-potential',
       number: '2',
       title: 'Verify potential',
       description:
@@ -75,7 +76,7 @@ const pathwaySection = {
 };
 
 /* 4. DETAILED SECTION 1 */
-const quickScanBusinessModelOptions = [
+const shortlistStrategiesOptions = [
   'Product as a Service (PaaS)',
   'Resource Recovery',
   'Extended Product Life',
@@ -84,9 +85,9 @@ const quickScanBusinessModelOptions = [
 ];
 
 const shortlistStrategiesSection = {
-  id: 'quick-scan-tool',
+  id: 'shortlist-strategies',
   title: 'Shortlist strategies',
-  resourceTag: 'validate:quick-scan',
+  resourceTag: 'validate:shortlist-strategies',
   paragraphs: [
     'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
   ],
@@ -102,8 +103,8 @@ const shortlistStrategiesSection = {
       "Use this questionnaire to see how well each circular option could work for you. First, select a circular option to assess. Then, answer the questionnaire below according to your business. Based on your responses, you'll be given an estimate of how well this circular option model could work for you.",
     businessModelLabel: 'Circular option to assess',
     businessModelPlaceholder: 'Select a circular option',
-    // These options mirror the circular business model cards in Phase 3: Explore.
-    businessModelOptions: quickScanBusinessModelOptions,
+    // These options mirror the circular value model cards in Phase 3: Explore.
+    businessModelOptions: shortlistStrategiesOptions,
     otherBusinessModelLabel: 'Other',
     selectBusinessModelText:
       'Select the circular option you want to assess, then answer every question to see your result.',
@@ -113,7 +114,7 @@ const shortlistStrategiesSection = {
     answeredLabel: 'answered',
     downloadLabel: 'Download results',
     downloadingLabel: 'Preparing PDF...',
-    downloadFilename: 'phase-4-validate-quick-scan-results.pdf',
+    downloadFilename: 'phase-4-validate-shortlist-strategies-results.pdf',
     pdfDisclaimer:
       'These are guiding questions part of Phase 4: Validate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
     incompleteText: 'Answer every question to see your result.',
@@ -166,7 +167,7 @@ const shortlistStrategiesSection = {
             yesLabel: 'Multiple',
             noLabel: 'Few'
           },
-          'Does it create wider social or community value?'
+          'Does it create wider social or community value (better circumstances for the workers, more jobs, access to better and affordable products)?'
         ]
       },
       {
@@ -189,11 +190,11 @@ const shortlistStrategiesSection = {
 
 /* 5. DETAILED SECTION 2 */
 const verifyPotentialSection = {
-  id: 'validate-case',
+  id: 'verify-potential',
   title: 'Verify potential',
-  resourceTag: 'validate:validate-case',
+  resourceTag: 'validate:verify-potential',
   paragraphs: [
-    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. For example, a Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis is a useful tool when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. || Use the tools below to develop and validate the business case you began in Step 1 of this section."
+    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. It is important to identify what hidden barriers could come into effect for each of the strategies, ideas and concepts you have identified. || Use the tools below to develop and further validate the business case you selected in Step 1 of this section or the ideas you developed in the Explore phase."
   ]
 };
 
@@ -215,7 +216,7 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'Selected one or more circular opportunities to screen in the quick scan',
+    'Selected one or more circular opportunities to screen through the shortlist strategies step',
     'Narrowed down one to three feasible circular options for further development',
     'Validated circular options by identifying key barriers, risks and enabling conditions',
     'Defined what should be tested in a pilot before implementation',

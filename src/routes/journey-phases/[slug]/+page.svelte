@@ -222,6 +222,10 @@
                   <h3 class="subsection-title">{section.inlineImage.title}</h3>
                 {/if}
 
+                {#if section.inlineImage.description}
+                  <RichText text={section.inlineImage.description} />
+                {/if}
+
                 {#if section.inlineImage.zoomable}
                   <button
                     type="button"

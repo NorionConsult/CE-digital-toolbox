@@ -219,7 +219,7 @@ const toolCatalogue = [
       "A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities. To access Miro templates, you frist need a user. You can create a free user to access the templates, if you do not have a Miro account. Once you can access the templates, you can follow the instructions to use them. || **Step by step guide** || **1.	Set the objective:** Define what you're analysing and keep the scope specific so the analysis stays focused. ||**2.	Gather the right people:** Pull in a small group with different perspectives (ops, sales, finance, etc.). || **3.	List Strengths:** Internal, positive factors: what you do well, unique resources, etc. || **4.	List Weaknesses:** Internal, negative factors: gaps, resource constraints, etc.|| **5.	List Opportunities:** External, positive factors: market trends, gaps you could exploit, emerging needs.|| **6.	List Threats:** External, negative factors: competition, regulatory shifts, etc. || **7.	Rank items** by impact and likelihood so you're not treating everything as equally urgent.|| **8.	Match strengths to opportunities** to see where you can go on offense, and weaknesses to threats to see where you're most exposed. || **9.	Pick two or three priorities** per quadrant and assign owners and next steps.",
     journeyPhases: ['Validate'],
     placements: {
-      phaseSections:['validate:validate-case']
+      phaseSections:['validate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -288,7 +288,7 @@ const toolCatalogue = [
       'With the Quickscan Circular Business Model (CBM) you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
     journeyPhases: ['Validate', 'Assess'],
     placements: {
-      phaseSections:['validate:quick-scan']
+      phaseSections:['validate:shortlist-strategies']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -314,7 +314,7 @@ const toolCatalogue = [
       'Calculate your sustainability Return on Investment (ROI). Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.',
     journeyPhases: ['Validate'],
     placements: {
-      phaseSections:['validate:validate-case']
+      phaseSections:['validate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -683,30 +683,6 @@ const toolCatalogue = [
     bestFor: 'All SMEs concerned with climate and emissions reduction',
     format: 'Software',
     toolLink: 'https://www.openlca.org/download/'
-  },
-  {
-    id: 'resource-029',
-    slug: 'sustainable-procurement-platform',
-    title: 'Sustainable Procurement Platform',
-    description:
-      'A repository of knowledge for procurement across a large variety of sectors, with search filters to guide users to tools suited to their needs.',
-    about:
-      'The Sustainable Procurement Platform Resource Centre is a knowledge hub run by the Procura+ network of the International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI), bringing together resources on sustainable, circular, and innovation-focused public procurement across Europe and beyond.',
-    journeyPhases: ['Explore', 'Validate', 'Implement'],
-    placements: {
-      phaseSections: ['explore:develop-solutions']
-    },
-    sector: 'Cross-sector',
-    effort: 'Low',
-    language: 'English',
-    provider: 'International Council for Local Environmental Initiatives, now ICLEI Local Governments for Sustainability (ICLEI)',
-    access: 'Free',
-    timeRequired: 'Continuous',
-    preparationNeeded: 'None',
-    output: 'Procurement guidance, case studies and supporting resources',
-    bestFor: 'Any SME that procures goods and services',
-    format: 'PDF',
-    toolLink: 'https://sustainable-procurement.org/resource-centre/?c=search&language=English&product=textiles'
   },
   {
     id: 'resource-030',
@@ -1203,7 +1179,7 @@ const toolCatalogue = [
       'This resource helps teams move from screened business models to a shortlist of one to three priority strategies that can be developed into a business case.',
     journeyPhases: ['Explore', 'Validate'],
     placements: {
-      phaseSections: ['validate:quick-scan']
+      phaseSections: ['validate:shortlist-strategies']
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -1227,7 +1203,7 @@ const toolCatalogue = [
       'The Business Model Development Toolkit guides teams through exercises to assess five linear-model inefficiencies, reflect on customer pain points and explore circular business sub-models before choosing opportunities to develop further.',
     journeyPhases: ['Explore','Validate'],
     placements: {
-      phaseSections:['validate:validate-case']
+      phaseSections:['validate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1251,7 +1227,7 @@ const toolCatalogue = [
       'The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:identify-options']
+      phaseSections: ['validate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1275,7 +1251,7 @@ const toolCatalogue = [
       'The Design for X (DfX) Framework helps teams translate circular economy ambition into design decisions. Design for X (DfX) means designing for a specific circular outcome, such as longevity, repairability, disassembly or recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products.|| **Four design strategies**|| - **Design for Longevity:** products built to last through high durability, quality materials and resistance to wear. Apply it through modular components, avoiding planned obsolescence and designing timeless aesthetics.|| - **Design for Repairability:** products that can be fixed rather than thrown away. Apply it through accessible fasteners, spare parts availability and clear repair instructions.|| - **Design for Disassembly:** products that can be taken apart efficiently at end of life. Apply it through reversible connections, material compatibility and labelled components.|| - **Design for Recyclability:** materials that can re-enter the production cycle cleanly. Apply it through mono-material design, avoiding hazardous additives and clearly marked materials.|| The framework also connects to European Union regulation, including the Ecodesign for Sustainable Products Regulation (ESPR), Right to Repair rules and packaging-related requirements.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['explore:identify-options']
+      phaseSections: ['explore:develop-solutions']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1290,7 +1266,7 @@ const toolCatalogue = [
     bestFor:
       'SMEs exploring circular product design principles and early redesign opportunities.',
     format: 'Framework / guidance',
-    toolLink: 'https://doi.org/10.1007/s00163-023-00419-1'
+    toolLink: 'https://www.circulardesign.it/design-for-x/#Reuse'
   },
   {
     id: 'resource-059',
@@ -1834,6 +1810,303 @@ const toolCatalogue = [
     bestFor: 'Manufacturers, brands and retailers using or designing aluminium packagings',
     format: 'Online analysis tool',
     toolLink: 'https://tool.recyclass.eu/en/aluminium/tool/#step-1'
+  },
+  {
+    id: 'resource-085',
+    slug: 'proteus-pss-tool-book',
+    title: 'PROTEUS Product-Service System Tool Book',
+    description:
+      'To develop circular product-service systems and new ways of creating value.',
+    about:
+      'The PROTEUS Product-Service System Tool Book helps teams explore how products and services can be combined into new value propositions. Rather than focusing only on selling more physical products, product-service systems focus on the outcome or value a customer needs and consider which combination of products, services and relationships can deliver it. || The workbook brings together 11 tools covering areas such as the business ecosystem, user activities, product lifecycles, service design, total cost of ownership and concept evaluation. The tools can be used individually or combined within a structured process moving from analysing the current situation, to defining priorities, developing concepts and evaluating the most promising options.',
+    journeyPhases: ['Explore', 'Validate'],
+    sector: 'Manufacturing',
+    effort: 'High',
+    language: 'English',
+    provider: 'Technical University of Denmark (DTU) / PROTEUS Innovation Consortium',
+    access: 'Free',
+    timeRequired:
+      'Variable. Individual workshops typically require a few hours plus preparation; using several tools as part of a full development process requires multiple sessions.',
+    preparationNeeded:
+      'Choose the product, service or business opportunity you want to explore. Bring together a cross-functional team and gather relevant knowledge about customers, products and services, the value chain and business performance.',
+    output:
+      'Structured product-service system concepts, supported by a better understanding of customer needs, lifecycle opportunities, stakeholders, value creation and business implications.',
+    bestFor:
+      'Product-based and manufacturing small-medium enterprises (SMEs) that want to explore service-based or outcome-based business models.',
+    format: 'PDF workbook and workshop tools',
+    toolLink: 'https://backend.orbit.dtu.dk/ws/portalfiles/portal/81262011/PSS_Tool_Book.pdf'
+  },
+  {
+    id: 'resource-086',
+    slug: 'value-chain-mapping-as-is',
+    title: 'Value Chain Mapping / As-Is',
+    description:
+      'To understand your current value chain and identify where circular opportunities may exist.',
+    about:
+      'The As-Is Value Chain Mapping tool helps your team build a shared picture of how your current value chain works before trying to redesign it. It takes you through the different stages of the value chain and helps distinguish between activities controlled by your organisation and those carried out by suppliers, customers or other partners. || For each stage, the team maps the resources being used, important stakeholders, inefficiencies and wider influences such as regulation or market trends. Connections between these elements are then made visible, revealing where resources or capabilities are underused, where value is lost and where collaboration may be required.',
+    journeyPhases: ['Assess', 'Explore'],
+    placements: {
+      phaseSections: ['explore:shape-value-model'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'EIS / HI Advisory',
+    access: 'Free',
+    timeRequired: '2-3 hours',
+    preparationNeeded:
+      'Bring together participants with knowledge from different parts and levels of the organisation. Print the worksheet in a large format or recreate it on a digital whiteboard, and have sticky notes and pens ready.',
+    output:
+      'A visual map of the current value chain showing key stages, resources, stakeholders, inefficiencies and external influences.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that want to understand their current system before identifying circular strategies, redesigning their value chain or engaging new partners.',
+    format: 'Printable worksheet',
+    toolLink: 'https://eis.ee/wp-content/uploads/2025/09/circular-design-tool-4_value-chain-mapping_a2.pdf'
+  },
+  {
+    id: 'resource-087',
+    slug: 'user-interviews',
+    title: 'User Interviews',
+    description:
+      'To understand user needs, behaviours and barriers before designing circular solutions.',
+    about:
+      'User interviews help you understand how customers, users and other stakeholders actually experience a product, service or system. In a circular economy context, this is important because solutions such as reuse, repair, sharing, take-back and product-service models often depend on people changing behaviours or interacting with a product in new ways. || The worksheet supports the preparation of a semi-structured interview plan based on research questions. It encourages open questions, follow-up questions and systematic recording of insights across interviewees, so recurring needs, challenges and patterns can inform circular solution development.',
+    journeyPhases: ['Assess', 'Explore'],
+    placements: {
+      phaseSections: ['assess:mapping-resources', 'explore:develop-solutions'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'EIS / HI Advisory',
+    access: 'Free',
+    timeRequired: '1-2 weeks, including preparation, interviews and collection of insights',
+    preparationNeeded:
+      'Define what you need to learn and which user or stakeholder groups you need to speak to. Prepare research questions and related open interview questions, and arrange consent if interviews are recorded.',
+    output:
+      'Structured qualitative insights into user needs, behaviours, motivations, barriers and opportunities.',
+    bestFor:
+      'Small-medium enterprises (SMEs) developing solutions where customer or user behaviour is important, including reuse, repair, sharing, return systems and service models.',
+    format: 'Printable interview planning worksheet',
+    toolLink: 'https://eis.ee/wp-content/uploads/2025/09/circular-design-tool-6_user-interviews_a2.pdf'
+  },
+  {
+    id: 'resource-088',
+    slug: 'cevaluator',
+    title: 'CEvaluator',
+    description:
+      'To assess the circularity, opportunities and financing risks of a circular project.',
+    about:
+      'CEvaluator is an online checklist for examining a circular project from both a circularity and financing perspective. It was originally developed to help financial organisations assess circular investment cases, but it can also help small-medium enterprises (SMEs) prepare a circular project or financing application. || The assessment considers circular design and production, circular use models, value retention, environmental sustainability, opportunities and risks. Rather than producing a single circularity percentage, CEvaluator provides a qualitative overview of how a project performs across different dimensions and where additional evidence or risk mitigation may be needed.',
+    journeyPhases: ['Assess', 'Validate'],
+    placements: {
+      phaseSections: ['validate:verify-potential'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English, Dutch, French',
+    provider: 'Circular Flanders / OVAM / VITO',
+    access: 'Free',
+    timeRequired:
+      'Variable, depending on the complexity of the project and how much supporting information is already available.',
+    preparationNeeded:
+      'Have a clear description of the project and business model available, together with evidence on circular activities, environmental performance, financing needs, risks and expected benefits.',
+    output:
+      'A qualitative overview of circular performance together with relevant opportunities and risks for financing the project.',
+    bestFor:
+      'Circular small-medium enterprises (SMEs) preparing an investment or funding case, as well as organisations evaluating whether a circular project is ready for financing.',
+    format: 'Online assessment',
+    toolLink: 'https://www.cevaluator.be/'
+  },
+  {
+    id: 'resource-089',
+    slug: 'test-card',
+    title: 'Test Card',
+    description:
+      'To turn assumptions about a new solution into clear experiments that can be tested.',
+    about:
+      'The Test Card helps your team test whether the assumptions behind a new product, service or business model hold up in practice before committing substantial resources to implementation. Instead of relying on discussion or intuition, the tool turns an assumption into a structured experiment with clear evidence and a predefined threshold for success. || For a circular solution, this could involve testing whether customers will return a product, whether they are willing to pay for repair or rental, whether a supplier will accept recovered materials, or whether a new service can operate at an acceptable cost.',
+    journeyPhases: ['Validate', 'Implement'],
+    placements: {
+      phaseSections: ['validate:test-and-pilot'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'Strategyzer',
+    access: 'Free',
+    timeRequired:
+      'Around 30-60 minutes to design an individual test, followed by the time required to carry out the experiment.',
+    preparationNeeded:
+      'Start with a circular solution or business-model concept that you want to validate. Identify the assumptions that are most important for the idea to succeed.',
+    output:
+      'A clearly defined experiment describing the assumption to test, how it will be tested, what evidence will be collected and the threshold for success.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that have developed a circular concept but still need evidence about demand, behaviour, operations, partnerships, pricing or other assumptions.',
+    format: 'Printable test card / digital worksheet',
+    toolLink: 'https://www.strategyzer.com/library/validate-your-ideas-with-the-test-card'
+  },
+  {
+    id: 'resource-090',
+    slug: 'circular-designs-evaluation-pack',
+    title: 'Circular Designs Evaluation Pack',
+    description:
+      'To compare circular concepts and decide which ideas are worth pursuing.',
+    about:
+      'The Circular Designs Evaluation Pack helps your team assess and compare circular product and service concepts before investing further time and resources in development. Instead of looking only at environmental benefits, the tool examines each concept from three perspectives: whether it creates value for users, whether it makes sense for the organisation and whether it is likely to benefit the environment. || Concepts can then be positioned according to their potential and difficulty of implementation. This makes it easier to distinguish quick opportunities, ideas requiring further development and more ambitious concepts that could deliver significant benefits but require substantial organisational change.',
+    journeyPhases: ['Explore', 'Validate'],
+    placements: {
+      phaseSections: ['validate:shortlist-strategies'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'Use2Use / Chalmers University of Technology',
+    access: 'Free',
+    timeRequired:
+      'Approximately 45-60 minutes for 1-3 concepts. More complex concepts may require additional research before the assessment can be completed.',
+    preparationNeeded:
+      'Select one to three circular concepts to compare and describe each one briefly. Ideally involve people who understand customers, operations, sustainability and the commercial side of the business.',
+    output:
+      'A structured comparison of circular concepts showing user value, organisational value, environmental benefits, implementation challenges and questions requiring further investigation.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that have generated several circular product or service ideas and need to decide which concepts should progress.',
+    format: 'Printable evaluation canvas',
+    toolLink: 'https://usercontent.one/wp/www.use2use.se/wp-content/uploads/2022/03/CircularDesignsEvaluationPack.pdf'
+  },
+  {
+    id: 'resource-091',
+    slug: 'circular-pilot-canvas',
+    title: 'Circular Pilot Canvas',
+    description:
+      'To plan a real-world pilot and test whether a circular solution can work in practice.',
+    about:
+      'The Circular Pilot Canvas helps your team turn a promising circular concept into a structured real-world pilot. It is designed around three fundamental questions: Is there demand for the solution? Is the circular business model worthwhile? And can the organisations involved actually deliver it? || The canvas brings these questions together across value proposition, circular business model, and feasibility and readiness. The team defines what the pilot will test, who needs to participate, what value the solution creates, how circularity will be measured and how responsibilities are distributed.',
+    journeyPhases: ['Implement'],
+    placements: {
+      phaseSections: ['validate:test-and-pilot'],
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: ['Cross-sector', 'Construction', 'Manufacturing'],
+    effort: 'High',
+    language: 'English',
+    provider: 'Nordic Circularity Piloting Program / Combient Pure',
+    access: 'Free',
+    timeRequired:
+      'Approximately 90-120 minutes for an initial pilot-planning workshop, followed by further preparation with the organisations involved.',
+    preparationNeeded:
+      'Start with a circular solution selected for further development. Bring together the organisations or functions needed to deliver the pilot and prepare initial information on customers, partners, benefits, costs and operational requirements.',
+    output:
+      'A structured pilot plan covering what will be tested, stakeholders, expected benefits, circularity goals, costs, risks, roles, success criteria, timeline and learning.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that want to test a circular product, service or business model with customers and value-chain partners under real-world conditions.',
+    format: 'Printable pilot-planning canvas',
+    toolLink: 'https://assets.ctfassets.net/a2tjr1gs85zs/7nITcohRhMxFY7aLd3KlH4/668c49380f237b3e326d996058355437/Circular_Piloting_Canvas.pdf'
+  },
+  {
+    id: 'resource-092',
+    slug: 'prioritising-circular-solutions',
+    title: 'Prioritising Circular Solutions',
+    description:
+      'To identify which circular ideas should be taken forward first.',
+    about:
+      'The Prioritising Circular Solutions tool helps your team move from a long list of circular ideas to a smaller number of priorities for further development. It is particularly useful after an ideation workshop, when many possible actions have been generated but it is not yet clear which ones deserve attention first. || The team consolidates the ideas and positions them on a visual matrix according to expected impact, contribution or effort required and timing. The result is a practical first prioritisation that can feed into business-case development, feasibility assessment or implementation planning.',
+    journeyPhases: ['Validate'],
+    placements: {
+      phaseSections: ['validate:shortlist-strategies'],
+    },
+    sector: 'Cross-sector',
+    effort: 'Low',
+    language: 'English',
+    provider: 'EIS Circular Design Toolbox / HI Advisory',
+    access: 'Free',
+    timeRequired: '45-60 minutes',
+    preparationNeeded:
+      'Bring the circular ideas or solutions generated during earlier analysis or ideation activities. Remove obvious duplicates and formulate each idea clearly enough for comparison.',
+    output:
+      'A visual prioritisation of circular solutions, including a small number of high-priority actions to take forward.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that have identified several possible circular actions and need a quick, collaborative method for agreeing what to focus on first.',
+    format: 'Printable prioritisation matrix',
+    toolLink: 'https://eis.ee/wp-content/uploads/2025/09/circular-design-tool-11_prioritising-circular-solutions_a2.pdf'
+  },
+  {
+    id: 'resource-093',
+    slug: 'authorized-waste-operator-search',
+    title: 'Cautare Operatori Autorizati per Tip Deseu',
+    description:
+      'Interactive Power BI dashboard for finding licensed waste and recycling operators by waste type.',
+    about:
+      'Built under the Waste Statistics - Key Facilitator for the Circular Economy project, this dashboard pulls data from the Environment Agency on authorised waste management operators, their permits and contact details. Users can search by waste type to identify licensed recyclers or collectors and access relevant permit documents.',
+    journeyPhases: ['Implement'],
+    sector: ['Cross-sector', 'Waste Management', 'Recycling'],
+    effort: 'Low',
+    language: 'Romanian',
+    provider: 'E-Circular, funded by the Austrian Development Agency (ADA/ADC)',
+    access: 'Free',
+    timeRequired: '5-15 minutes per search',
+    preparationNeeded: 'Know the waste type or category you need to search for.',
+    output:
+      'A list of authorised operators with permit details and contact information per waste type.',
+    bestFor:
+      'Businesses, local authorities and citizens looking to identify a licensed recycler or waste operator for a specific waste stream.',
+    format: 'Digital tool',
+    toolLink: 'https://e-circular.org/statistici/cautare-operatori-autorizatii/'
+  },
+  {
+    id: 'resource-094',
+    slug: 'organic-armenia-all-green-circular-economy',
+    title: 'Organic Armenia - All Green Educational Platform',
+    description:
+      'Webpage introducing circular economy principles and their link to organic agriculture, with a downloadable awareness-raising booklet.',
+    about:
+      'Part of Organic Armenia\'s All Green educational platform, this page explains circular economy principles as an alternative to the linear produce-use-discard model and connects them to organic agriculture practices such as composting, returning crop residues to soil and renewable energy use. || It links to the Armenian booklet Circular Economy and Organic Agriculture: Their Connection, Composting, prepared under the EU-funded Circular Future programme in cooperation with Impact Hub Yerevan and Environment and Health NGO.',
+    journeyPhases: ['Learn'],
+    placements: {
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
+    },
+    sector: 'Food and Agriculture',
+    effort: 'Low',
+    language: 'English, Armenian',
+    provider:
+      'Organic Armenia Agricultural Association NGO; booklet co-funded by the European Union through CirculUP!',
+    access: 'Free',
+    timeRequired: '20-30 minutes',
+    preparationNeeded: 'None',
+    output: 'Awareness resource and downloadable booklet',
+    bestFor:
+      'Farmers, smallholders and agri-businesses new to circular economy concepts, particularly in organic and agricultural value chains.',
+    format: 'Downloadable PDF',
+    toolLink: 'https://www.organicarmenia.bio/en/all-green/circular-economy'
+  },
+  {
+    id: 'resource-095',
+    slug: 'organic-armenia-training',
+    title: 'Organic Armenia - Training',
+    description:
+      'Directory of training courses on organic agriculture and circular economy, including a dedicated circular economy course.',
+    about:
+      'Organic Armenia Training lists professional development courses run by Organic Armenia. It includes Organic Agriculture: From Introduction to Practical Application and Circular Future, an online course covering circular economy principles, zero-waste approaches and composting or vermicomposting as circular economy examples in organic production. || Some listed courses may show as completed, so the page can function as both a course catalogue and a place to check whether new cohorts are planned.',
+    journeyPhases: ['Learn'],
+    placements: {
+      sectors: ['food-and-agriculture'],
+      sectorSections: ['food-and-agriculture:relevant-tools']
+    },
+    sector: 'Food and Agriculture',
+    effort: 'High',
+    language: 'Armenian, English',
+    provider: 'Organic Armenia Agricultural Association NGO',
+    access: 'Free',
+    timeRequired:
+      'Multi-week hybrid programme for organic agriculture; shorter online format for the Circular Future course.',
+    preparationNeeded: 'None to browse; registration or interest submission may be needed to join a future cohort.',
+    output: 'Structured training curricula and certificates of participation for completed cohorts',
+    bestFor:
+      'Farmers, smallholders and organisations wanting structured circular economy and organic agriculture training in Armenia.',
+    format: 'Digital training catalogue',
+    toolLink: 'https://www.organicarmenia.bio/en/all-green/trainings'
   }
 ];
 

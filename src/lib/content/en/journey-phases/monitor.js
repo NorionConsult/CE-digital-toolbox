@@ -28,8 +28,7 @@ const hero = {
 const sectionButtons = [
   { sectionId: 'choosing-indicators', label: 'Choose indicators' },
   { sectionId: 'measuring-success', label: 'Measure success' },
-  { sectionId: 'interpreting-results', label: 'Interpret results' },
-  { sectionId: 'continuous-improvement', label: 'Improve continuously' }
+  { sectionId: 'interpreting-results', label: 'Interpret results' }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */

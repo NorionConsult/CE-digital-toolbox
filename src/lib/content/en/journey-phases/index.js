@@ -19,6 +19,7 @@ import { explore } from './explore.js';
  *   inlineImage?: {
  *     afterParagraph: number;
  *     title?: string;
+ *     description?: string;
  *     src: string;
  *     alt: string;
  *     caption?: string;
