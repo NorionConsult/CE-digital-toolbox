@@ -26,8 +26,8 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'quick-scan-tool', label: 'Run quick scan' },
-  { sectionId: 'validate-case', label: 'Validate case' },
+  { sectionId: 'quick-scan-tool', label: 'Shortlist strategies' },
+  { sectionId: 'validate-case', label: 'Verify potential' },
   { sectionId: 'test-and-pilot', label: 'Prepare pilot' }
 ];
 
@@ -41,7 +41,7 @@ const pathwaySection = {
     {
       sectionId: 'quick-scan-tool',
       number: '1',
-      title: 'Quick Scan Tool',
+      title: 'Shortlist strategies',
       description:
         'Evaluate shortlisted circular options based on impact, feasibility, risks and alignment with your existing operations and goals.',
       keyOutputs: [
@@ -52,7 +52,7 @@ const pathwaySection = {
     {
       sectionId: 'validate-case',
       number: '2',
-      title: 'Validate the Case',
+      title: 'Verify potential',
       description:
         'Understand the barriers, enablers and risks required to move from an idea to a stronger circular business case.',
       keyOutputs: [
@@ -83,15 +83,15 @@ const quickScanBusinessModelOptions = [
   'Circular Supply Chains'
 ];
 
-const quickScanSection = {
+const shortlistStrategiesSection = {
   id: 'quick-scan-tool',
-  title: 'Quick Scan Tool',
+  title: 'Shortlist strategies',
   resourceTag: 'validate:quick-scan',
   paragraphs: [
-    'Not every circular option will offer the same value or be equally practical to implement. The Quick Scan tool can help you compare circular options to find what is best for your business. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
+    'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
   ],
   /*
-    QUICK SCAN QUESTIONNAIRE
+    SHORTLIST STRATEGIES QUESTIONNAIRE
     Edit the questionnaire title, instructions, categories, questions and
     result messages below. The interactive layout is in:
     src/lib/components/sections/M4Questionnaire.svelte
@@ -188,9 +188,9 @@ const quickScanSection = {
 };
 
 /* 5. DETAILED SECTION 2 */
-const validateCaseSection = {
+const verifyPotentialSection = {
   id: 'validate-case',
-  title: 'Validate the Case',
+  title: 'Verify potential',
   resourceTag: 'validate:validate-case',
   paragraphs: [
     "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. For example, a Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis is a useful tool when trying to identify what hidden barriers could come into effect for each of the three circular strategies you have identified. || Use the tools below to develop and validate the business case you began in Step 1 of this section."
@@ -211,7 +211,7 @@ const testPilotSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that you have a quick scan result, a validated case and a clear pilot focus for your selected circular opportunity.',
+    'Use this checklist to confirm that you have shortlisted strategies, verified their potential and defined a clear pilot focus for your selected circular opportunity.',
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
@@ -227,6 +227,6 @@ export const validate = defineJourneyPhasePage({
   hero,
   sectionButtons,
   pathwaySection,
-  detailSections: [quickScanSection, validateCaseSection, testPilotSection],
+  detailSections: [shortlistStrategiesSection, verifyPotentialSection, testPilotSection],
   phaseSummary
 });
