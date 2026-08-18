@@ -164,7 +164,7 @@ const developSolutionsSection = {
   title: 'Develop Solutions',
   resourceTag: 'explore:develop-solutions',
   paragraphs: [
-    'Once you have identified some relevant circular strategies, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. Combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
+    'Once you have identified some relevant circular strategies, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
   ],
   /*
     Relevant tools are connected in src/lib/content/tool-catalogue.js.
@@ -226,7 +226,8 @@ const shapeValueModelSection = {
         'Instead of focusing only on what happens to your product after it is sold, you focus on what goes into it in the first place by sourcing recycled or secondary materials rather than virgin ones. This typically requires closer collaboration with suppliers, because recycled or secondary materials often vary more in quality or supply than virgin materials. Over time, it can reduce exposure to virgin material price volatility and strengthen supplier relationships.',
       example: 'Switching to recycled feedstock and partnering with a local recycler.'
     }
-  ]
+  ],
+  showRelevantTools: false
 };
 
 /* 7. PHASE SUMMARY */
