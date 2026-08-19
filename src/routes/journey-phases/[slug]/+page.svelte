@@ -90,7 +90,8 @@
 <section class="subpage-hero">
   <div class="container subpage-content module-hero-content">
     <div class="module-hero-topline">
-      <a href="{base}/guided-pathways/#journey-phases" class="back-link">
+      <a href="{base}/guided-pathways/#journey-phases" class="back-link journey-back-link">
+        <span class="back-link-arrow" aria-hidden="true"></span>
         {journeyPhasePage.backLink}
       </a>
 
@@ -636,7 +637,11 @@
             <RichText text={journeyPhase.summaryParagraphs ?? [journeyPhase.summaryText]} />
           </div>
 
-          <a href="{base}/guided-pathways/#journey-phases" class="back-link summary-copy-next-link">
+          <a
+            href="{base}/guided-pathways/#journey-phases"
+            class="back-link journey-back-link summary-copy-next-link"
+          >
+            <span class="back-link-arrow" aria-hidden="true"></span>
             {journeyPhasePage.summaryBackLink}
           </a>
         </div>
@@ -669,13 +674,13 @@
                 </div>
 
                 <div class="summary-completion-actions">
-                  <a href="{base}/guided-pathways/#sectors" class="secondary-button">
+                  <a href="{base}/guided-pathways/#sectors" class="primary-button">
                     {journeyPhasePage.exploreSectors}
                   </a>
-                  <a href="{base}/cases/" class="secondary-button">
+                  <a href="{base}/cases/" class="primary-button">
                     {journeyPhasePage.seeCases}
                   </a>
-                  <a href="{base}/tools/" class="secondary-button">
+                  <a href="{base}/tools/" class="primary-button">
                     {journeyPhasePage.seeTools}
                   </a>
                 </div>
@@ -753,6 +758,26 @@
   .module-hero-topline .back-link {
     width: fit-content;
     margin: 0;
+  }
+
+  .journey-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .back-link-arrow {
+    width: 0.95em;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    transition: transform 0.18s ease;
+  }
+
+  .journey-back-link:hover .back-link-arrow,
+  .journey-back-link:focus-visible .back-link-arrow {
+    transform: translateX(-3px);
   }
 
   .module-section-navigation {
@@ -953,9 +978,9 @@
     justify-content: center;
     width: fit-content;
     padding: var(--action-button-padding);
-    border: 2px solid var(--dark);
+    border: 0;
     border-radius: var(--action-button-radius);
-    background-color: var(--dark);
+    background-color: var(--blue);
     color: var(--white);
     font-weight: 700;
     text-decoration: none;
@@ -963,8 +988,7 @@
   }
 
   .pathway-link:hover {
-    border-color: var(--blue);
-    background-color: var(--blue);
+    background-color: var(--button-highlight);
   }
 
   .summary-next-phase-link {
@@ -1481,17 +1505,16 @@
     align-items: center;
     justify-content: center;
     padding: var(--action-button-padding);
-    border: 2px solid var(--dark);
+    border: 0;
     border-radius: var(--action-button-radius);
-    background-color: var(--dark);
+    background-color: var(--blue);
     color: var(--white);
     font-weight: 700;
     text-decoration: none;
   }
 
   .m1-learning-resource-card .resource-link:hover {
-    border-color: var(--blue);
-    background-color: var(--blue);
+    background-color: var(--button-highlight);
   }
 
   .m1-learning-resource-details {
@@ -2054,7 +2077,7 @@
   }
 
   .summary-copy-next-link {
-    display: inline-block;
+    display: inline-flex;
     margin-top: 44px;
     margin-bottom: 0;
   }

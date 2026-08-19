@@ -38,17 +38,17 @@ export const contactPage = {
     }
   ],
   feedbackForm: {
-    title: 'Report feedback',
+    title: 'Report issues or feedback ',
     text:
-      'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises (SMEs) in the region? The feedback form will be a public form with three short branches: technical issue, general feedback, or suggest a tool. Use it to report something that does not work, share improvement ideas, or recommend a tool for the toolbox.',
-    buttonLabel: 'Report feedback',
+      'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises (SMEs) in the region? Use the form below to report an issue or provide feedback',
+    buttonLabel: 'Go to form',
     url: '#'
   },
   testimonyForm: {
-    title: 'Submit testimony',
+    title: 'Share experiences, nominate tool and ask for a certificate',
     text:
-      "The testimony form will capture implementation context, outcomes, lessons, testimony, publication permission, and certificate request information. Use it to share how a tool, journey phase, or sector resource supported circular economy action in practice.",  
-    buttonLabel: 'Submit testimony',
+      "Have you used one of the tools in the toolbox catalogue and had a good experience or case to share? Or do you have a tool that you would like to nominate, not currently in the tool catalogue, but that should be included? Use the form below to submit your experiences and request a certificate of participation. ",  
+    buttonLabel: 'Go to form',
     url: '#'
   }
 };

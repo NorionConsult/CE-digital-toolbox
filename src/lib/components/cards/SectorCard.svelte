@@ -62,10 +62,12 @@
     align-items: center;
     gap: 7px;
     margin-top: auto;
+    color: var(--dark);
     font-weight: 700;
     text-decoration: none;
     border-bottom: 2px solid currentColor;
     width: fit-content;
+    transition: color 0.18s ease;
   }
 
   .link-arrow {
@@ -75,6 +77,11 @@
     -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
     mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
     transition: transform 0.18s ease;
+  }
+
+  .sector-link:hover,
+  .sector-link:focus-visible {
+    color: var(--green-secondary);
   }
 
   .sector-link:hover .link-arrow,

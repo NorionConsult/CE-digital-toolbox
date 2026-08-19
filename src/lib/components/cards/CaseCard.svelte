@@ -67,6 +67,7 @@
   }
 
   h3 {
+    color: var(--dark);
     font-size: 1.65rem;
     line-height: 1.1;
     text-transform: uppercase;
@@ -108,17 +109,16 @@
     align-items: center;
     justify-content: center;
     padding: var(--action-button-padding);
-    border: 2px solid var(--dark);
+    border: 0;
     border-radius: var(--action-button-radius);
-    background-color: var(--dark);
+    background-color: var(--blue);
     color: var(--white);
     text-decoration: none;
     font-weight: 700;
   }
 
   .case-link:hover {
-    border-color: var(--blue);
-    background-color: var(--blue);
+    background-color: var(--button-highlight);
   }
 
   .case-card-compact {

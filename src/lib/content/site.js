@@ -41,7 +41,7 @@
 export const site = {
   name: 'Circular Economy Toolbox',
   headerLogo: {
-    src: '/logos/logo-toolbox-header.png',
+    src: '/logos/site_logo.svg',
     alt: 'Circular Economy Toolbox logo'
   },
   /*

@@ -32,7 +32,10 @@
 
 <section class="sector-hero">
   <div class="container sector-hero-content">
-    <a href="{base}/guided-pathways/#sectors" class="back-link">{sectorPage.backLink}</a>
+    <a href="{base}/guided-pathways/#sectors" class="back-link sector-back-link">
+      <span class="back-link-arrow" aria-hidden="true"></span>
+      {sectorPage.backLink}
+    </a>
 
     <img class="sector-hero-image" src="{base}{sector.image}" alt={sector.imageAlt} />
 
@@ -177,6 +180,26 @@
     grid-column: 1 / -1;
     width: fit-content;
     margin-bottom: 0;
+  }
+
+  .sector-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .back-link-arrow {
+    width: 0.95em;
+    aspect-ratio: 1;
+    background-color: currentColor;
+    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    transition: transform 0.18s ease;
+  }
+
+  .sector-back-link:hover .back-link-arrow,
+  .sector-back-link:focus-visible .back-link-arrow {
+    transform: translateX(-3px);
   }
 
   .sector-hero-image {

@@ -9,6 +9,8 @@
   --yellow: #ffcc00;
   --blue: #1d3d8f;
   --dark: #0A2E36;
+  --site-logo-text-color: var(--dark);
+  --button-highlight: #68be98;
 
   --white: #ffffff;
   --light-bg: #f7f7f2;
@@ -176,7 +178,19 @@ h3,
 .site-logo {
   font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
   letter-spacing: 0.02em;
-  color: var(--dark);
+}
+
+h1 {
+  color: var(--blue);
+}
+
+h2,
+h3 {
+  color: var(--blue);
+}
+
+.site-logo {
+  color: var(--site-logo-text-color);
 }
 
 /*
@@ -211,13 +225,13 @@ h3,
   border-radius: var(--action-button-radius);
   text-decoration: none;
   font-weight: 700;
-  border: 2px solid var(--dark);
+  border: 0;
   cursor: pointer;
 }
 
 .primary-button,
 .download-button.primary {
-  background-color: var(--dark);
+  background-color: var(--blue);
   color: var(--white);
 }
 
@@ -230,8 +244,7 @@ h3,
 
 .primary-button:hover,
 .download-button.primary:hover {
-  background-color: var(--blue);
-  border-color: var(--blue);
+  background-color: var(--button-highlight);
 }
 
 .secondary-button:hover,
@@ -332,7 +345,7 @@ h3,
 }
 
 .back-link:hover {
-  color: var(--green-primary);
+  color: var(--green-secondary);
 }
 
 @media (max-width: 900px) {

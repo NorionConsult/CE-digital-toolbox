@@ -1244,28 +1244,28 @@ const toolCatalogue = [
   {
     id: 'resource-084',
     slug: 'design-for-x-dfx-framework',
-    title: 'The Design for X (DfX) Framework',
+    title: 'The Design for X (DfX) Explorer',
     description:
-      'A circular design framework that helps teams translate circular economy ambitions into product design decisions such as longevity, repairability, disassembly and recyclability.',
+      'To identify concrete design strategies that support reuse, repair, refurbishment, remanufacturing and recycling',
     about:
-      'The Design for X (DfX) Framework helps teams translate circular economy ambition into design decisions. Design for X (DfX) means designing for a specific circular outcome, such as longevity, repairability, disassembly or recyclability. These four aspects are typically the most actionable for SME teams working with circular design of products.|| **Four design strategies**|| - **Design for Longevity:** products built to last through high durability, quality materials and resistance to wear. Apply it through modular components, avoiding planned obsolescence and designing timeless aesthetics.|| - **Design for Repairability:** products that can be fixed rather than thrown away. Apply it through accessible fasteners, spare parts availability and clear repair instructions.|| - **Design for Disassembly:** products that can be taken apart efficiently at end of life. Apply it through reversible connections, material compatibility and labelled components.|| - **Design for Recyclability:** materials that can re-enter the production cycle cleanly. Apply it through mono-material design, avoiding hazardous additives and clearly marked materials.|| The framework also connects to European Union regulation, including the Ecodesign for Sustainable Products Regulation (ESPR), Right to Repair rules and packaging-related requirements.',
+      'Design for X is an interactive tool that helps you explore how products, components and systems can be designed for different circular strategies. Design for X stands for multiple design strategies, where X can stand for reuse, longevity, repair, reassembly,etc. Therefore it is Design for X.|| With this online tool, you can filter according to the circular outcome you want to enable, such as reuse, maintenance, refurbishment, remanufacturing or recycling, and explore relevant design approaches. || The tool encourages you to think beyond the product itself and consider the full lifecycle, including production, use, maintenance, reverse logistics and recovery. This makes it useful when translating a broad circular ambition into more concrete product and system design choices.',
     journeyPhases: ['Explore'],
     placements: {
       phaseSections: ['explore:develop-solutions']
     },
-    sector: 'Cross-sector',
-    effort: 'Medium',
+    sector: ['Cross-sector','Manufacturing'],
+    effort: 'Low',
     language: 'English',
-    provider: 'Research in Engineering Design',
+    provider: 'Circular Design',
     access: 'Free',
-    timeRequired: '1-2 hours',
+    timeRequired: '30-60 minutes for an initial exploration.',
     preparationNeeded:
-      'A product, material or process to review, plus basic information about design, repair, materials and end-of-life handling.',
+      'No preparation needed, as this tools is to inspire and learn about the DfX framework.',
     output:
-      'A structured review of circular design opportunities related to longevity, repairability, disassembly and recyclability.',
+      'A selection of relevant design strategies and considerations that can be used to develop or improve a circular product concept.',
     bestFor:
       'SMEs exploring circular product design principles and early redesign opportunities.',
-    format: 'Framework / guidance',
+    format: 'Interactive online tool',
     toolLink: 'https://www.circulardesign.it/design-for-x/#Reuse'
   },
   {

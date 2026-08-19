@@ -425,9 +425,9 @@
   .m4-questionnaire-answer-buttons button {
     min-width: 64px;
     padding: 9px 14px;
-    border: 2px solid var(--dark);
+    border: 0;
     border-radius: 15px;
-    background-color: transparent;
+    background-color: var(--white);
     color: var(--dark);
     font: inherit;
     font-weight: 700;
@@ -440,11 +440,11 @@
 
   .m4-questionnaire-answer-buttons button:hover {
     transform: translateY(-1px);
-    background-color: color-mix(in srgb, var(--module-accent) 30%, var(--white));
+    background-color: var(--button-highlight);
   }
 
   .m4-questionnaire-answer-buttons button.active {
-    background-color: var(--dark);
+    background-color: var(--blue);
     color: var(--white);
   }
 

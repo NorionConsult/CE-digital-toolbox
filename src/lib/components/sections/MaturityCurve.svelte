@@ -326,15 +326,20 @@
   .maturity-point:hover,
   .maturity-point:focus-visible {
     animation: none;
-    box-shadow: 0 0 0 7px rgba(210, 198, 63, 0.28), 0 12px 24px rgba(10, 46, 54, 0.18);
+    border-color: var(--button-highlight);
+    box-shadow:
+      0 0 0 7px color-mix(in srgb, var(--button-highlight) 32%, transparent),
+      0 12px 24px rgba(10, 46, 54, 0.18);
     transform: scale(1.06);
   }
 
   .maturity-point.active {
     animation: none;
-    background-color: var(--green-secondary);
-    border-color: var(--green-secondary);
-    box-shadow: 0 0 0 9px rgba(74, 129, 58, 0.24), 0 12px 24px rgba(10, 46, 54, 0.18);
+    background-color: var(--button-highlight);
+    border-color: var(--button-highlight);
+    box-shadow:
+      0 0 0 9px color-mix(in srgb, var(--button-highlight) 28%, transparent),
+      0 12px 24px rgba(10, 46, 54, 0.18);
     transform: scale(1.06);
   }
 
@@ -345,11 +350,11 @@
   @keyframes maturity-point-pulse {
     0%,
     100% {
-      box-shadow: 0 0 0 0 rgba(210, 198, 63, 0.34);
+      box-shadow: 0 0 0 0 color-mix(in srgb, var(--button-highlight) 42%, transparent);
     }
 
     50% {
-      box-shadow: 0 0 0 10px rgba(210, 198, 63, 0.08);
+      box-shadow: 0 0 0 10px color-mix(in srgb, var(--button-highlight) 10%, transparent);
     }
   }
 
@@ -408,14 +413,14 @@
   }
 
   .journey-step-text h4 a {
-    color: var(--dark);
+    color: var(--blue);
     text-decoration: none;
     transition: color 0.18s ease;
   }
 
   .journey-step-text h4 a:hover,
   .journey-step-text h4 a:focus-visible {
-    color: var(--green-secondary);
+    color: var(--blue);
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 5px;
@@ -546,7 +551,7 @@
 
   .maturity-close:hover,
   .maturity-close:focus-visible {
-    background-color: var(--dark);
+    background-color: var(--blue);
     color: var(--white);
   }
 

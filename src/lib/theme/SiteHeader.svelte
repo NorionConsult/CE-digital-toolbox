@@ -64,8 +64,7 @@
 
   .partner-logo-bar {
     background:
-      linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
-      var(--light-bg);
+      var(--white);
   }
 
   .partner-logo-bar-content {
@@ -85,7 +84,7 @@
   }
 
   .main-menu-bar {
-    background-color: var(--white);
+    background-color: var(--yellow);
     box-shadow: 0 -4px 10px rgba(10, 46, 54, 0.05), 0 4px 10px rgba(10, 46, 54, 0.05);
   }
 
@@ -139,18 +138,18 @@
   }
 
   .main-nav a:hover {
-    color: var(--green-primary);
+    color: var(--green-secondary);
   }
 
   .menu-toggle {
     display: none;
     width: 44px;
     height: 44px;
-    border: 2px solid var(--dark);
+    border: 0;
     border-radius: 15px;
-    background: transparent;
+    background: var(--blue);
     padding: 10px;
-    color: var(--dark);
+    color: var(--white);
     cursor: pointer;
   }
 
@@ -168,7 +167,7 @@
 
   .menu-toggle:hover,
   .menu-toggle:focus-visible {
-    background-color: rgba(9, 187, 136, 0.12);
+    background-color: var(--button-highlight);
     outline: none;
   }
 

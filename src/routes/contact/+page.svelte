@@ -60,7 +60,7 @@
         <h2>{contactPage.testimonyForm.title}</h2>
         <p><InlineText text={contactPage.testimonyForm.text} /></p>
         <a
-          class="secondary-button"
+          class="primary-button"
           href={getButtonHref(contactPage.testimonyForm.url)}
           target={isPlaceholderUrl(contactPage.testimonyForm.url) ? undefined : '_blank'}
           rel={isPlaceholderUrl(contactPage.testimonyForm.url) ? undefined : 'noreferrer'}
@@ -124,6 +124,7 @@
 
   .contact-details h2,
   .contact-action-card h2 {
+    color: var(--dark);
     font-size: clamp(1.8rem, 3vw, 2.6rem);
     line-height: 1;
     margin-bottom: 16px;
@@ -186,13 +187,13 @@
 
   .featured-contact {
     border-color: transparent;
-    background: var(--blue);
+    background: var(--yellow);
     color: var(--white);
   }
 
   .featured-contact h3,
   .featured-contact a {
-    color: var(--white);
+    color: var(--dark);
   }
 
   .contact-action-grid {

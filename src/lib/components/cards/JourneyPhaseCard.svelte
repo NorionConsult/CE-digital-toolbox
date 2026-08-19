@@ -69,6 +69,7 @@
     text-decoration: none;
     border-bottom: 2px solid currentColor;
     width: fit-content;
+    transition: color 0.18s ease;
   }
 
   .link-arrow {
@@ -81,7 +82,7 @@
   }
 
   .module-link:hover {
-    opacity: 0.75;
+    color: var(--green-secondary);
   }
 
   .module-link:hover .link-arrow,
