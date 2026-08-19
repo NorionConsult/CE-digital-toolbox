@@ -148,7 +148,7 @@ const hotspotSection = {
     ]
   },
   closingParagraphs: [
-    'Your hotspot analysis directly feeds into Phase 3 (Explore) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them. Apart from resource and material hotspots, you can also scope your area of effort through a materiality assessment, which is a process to identify the most relevant topics for your value chains, business operations, and stakeholders. This can be done through a structured process of stakeholder engagement and prioritisation of double materiality from a management perspective.'
+    'Your hotspot analysis directly feeds into Phase 3 (Explore) - once you know where your biggest impacts are, you can identify the most impactful circular strategies to address them.'
   ]
 };
 
