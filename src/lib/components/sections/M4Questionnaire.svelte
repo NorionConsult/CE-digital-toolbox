@@ -247,7 +247,7 @@
   <div class="m4-questionnaire-pdf-stage" aria-hidden="true">
     <article class="m4-questionnaire-pdf" bind:this={pdfDocument}>
       <header class="m4-questionnaire-pdf-header">
-        <img src="{base}/logos/logo-toolbox.png" alt="" />
+        <img src="{base}/logos/site_logo.svg" alt="" />
         <div>
           <h1>{title}</h1>
           <p>{introduction}</p>
@@ -425,9 +425,9 @@
   .m4-questionnaire-answer-buttons button {
     min-width: 64px;
     padding: 9px 14px;
-    border: 0;
+    border: 2px solid var(--dark);
     border-radius: 15px;
-    background-color: var(--white);
+    background-color: transparent;
     color: var(--dark);
     font: inherit;
     font-weight: 700;
@@ -440,11 +440,11 @@
 
   .m4-questionnaire-answer-buttons button:hover {
     transform: translateY(-1px);
-    background-color: var(--button-highlight);
+    background-color: color-mix(in srgb, var(--module-accent) 30%, var(--white));
   }
 
   .m4-questionnaire-answer-buttons button.active {
-    background-color: var(--blue);
+    background-color: var(--dark);
     color: var(--white);
   }
 
