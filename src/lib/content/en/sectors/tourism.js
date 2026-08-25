@@ -50,42 +50,7 @@ export const tourismBarriersSection = {
   ]
 };
 
-// 4. BEST PRACTICES
-// Each object becomes one bullet-point group on the page.
-export const tourismBestPracticesSection = {
-  id: 'best-practices',
-  title: 'Best practices',
-  intro: 'Explore practical actions across energy, resources, food supply chains, certification and reporting.',
-  groups: [
-    {
-      title: 'Energy and resources',
-      items: [
-        'Conduct an energy, water and waste audit and set annual reduction targets.',
-        'Switch to renewable-energy sources and install smart energy-management systems.',
-        'Replace single-use plastics with reusable, refillable or compostable alternatives.',
-        'Implement greywater recycling and rainwater harvesting for non-potable uses.',
-        'Design or refurbish guest rooms and amenities for durability and material reuse.'
-      ]
-    },
-    {
-      title: 'Food and supply chain',
-      items: [
-        'Source food and beverages locally and seasonally to reduce transport emissions.',
-        'Partner with food-surplus redistribution platforms to monetise unsold meals.',
-        'Establish supplier codes of conduct covering circular economy, labour and environmental standards.'
-      ]
-    },
-    {
-      title: 'Certification and reporting',
-      items: [
-        'Pursue Green Key, Travelife or EU Ecolabel certification for market differentiation.',
-        'Measure and report the business carbon footprint using the Hotel Carbon Measurement Initiative.'
-      ]
-    }
-  ]
-};
-
-// 5. RELEVANT TOOLS
+// 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Tourism sector slug to a resource's
 // placements in src/lib/content/tool-catalogue.js to display it automatically.
 export const tourismRelevantToolsSection = {
@@ -106,14 +71,12 @@ export const tourism = {
     { label: 'Introduction', sectionId: tourismIntroSection.id },
     { label: 'Cases', sectionId: tourismCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: tourismBarriersSection.id },
-    { label: 'Best practices', sectionId: tourismBestPracticesSection.id },
     { label: 'Relevant tools', sectionId: tourismRelevantToolsSection.id }
   ],
   sections: [
     tourismIntroSection,
     tourismCasesSection,
     tourismBarriersSection,
-    tourismBestPracticesSection,
     tourismRelevantToolsSection
   ]
 };

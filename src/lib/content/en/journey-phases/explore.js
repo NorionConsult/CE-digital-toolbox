@@ -70,7 +70,7 @@ const pathwaySection = {
       keyOutputs: [
         'Bundled ideas and stronger solution concepts',
         'A clearer view of which solutions fit your business',
-        'Initial concepts ready to validate in the next phase'
+        'Initial concepts ready to evaluate in the next phase'
       ]
     }
   ]
@@ -164,7 +164,7 @@ const shapeValueModelSection = {
   resourceTag: 'explore:shape-value-model',
   paragraphs: [
     'A circular solution also needs a clear value model. Use this section to explore how your solution could create value for customers, reduce waste or costs, strengthen relationships and support your business goals.',
-    'These circular value models can help you think through how a concept could work commercially before you validate it in the next phase.'
+    'These circular value models can help you think through how a concept could work commercially before you evaluate it in the next phase.'
   ],
   /*
     CIRCULAR VALUE MODEL CARDS
@@ -226,7 +226,7 @@ const developSolutionsSection = {
   title: 'Develop Solutions',
   resourceTag: 'explore:develop-solutions',
   paragraphs: [
-    'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and validated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
+    'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and evaluated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
   ],
   /*
     Relevant tools are connected in src/lib/content/tool-catalogue.js.
@@ -245,7 +245,7 @@ const phaseSummary = {
   checklist: [
     'A clear understanding of the 9R framework can support circular redesign',
     'Shared understanding with your team on circular strategies',
-    'Familiarised yourself with circular options and value model that you can validate in the next phase',
+    'Familiarised yourself with circular options and value model that you can evaluate in the next phase',
     'Developed ideas or identified options that can become valuable circular solutions for your business. '
   ]
 };

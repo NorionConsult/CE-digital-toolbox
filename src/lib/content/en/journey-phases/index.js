@@ -1,9 +1,9 @@
 import { learn } from './learn.js';
-import { validate } from './validate.js';
 import { assess } from './assess.js';
+import { explore } from './explore.js';
+import { evaluate } from './evaluate.js';
 import { implement } from './implement.js';
 import { monitor } from './monitor.js';
-import { explore } from './explore.js';
 
 /**
  * @typedef {{
@@ -142,4 +142,4 @@ import { explore } from './explore.js';
   Keep this list in the order the journey phases should appear on the website.
 */
 /** @type {JourneyPhaseContent[]} */
-export const journeyPhases = [learn, assess, explore, validate, implement, monitor];
+export const journeyPhases = [learn, assess, explore, evaluate, implement, monitor];

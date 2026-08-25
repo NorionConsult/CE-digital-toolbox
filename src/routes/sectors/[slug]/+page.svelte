@@ -21,9 +21,7 @@
   /** @type {any} */
   const barriersSection = sector.sections[2];
   /** @type {any} */
-  const bestPracticesSection = sector.sections[3];
-  /** @type {any} */
-  const relevantToolsSection = sector.sections[4];
+  const relevantToolsSection = sector.sections[3];
 </script>
 
 <svelte:head>
@@ -114,29 +112,6 @@
           {/each}
         </ul>
       </section>
-    </div>
-  </div>
-</section>
-
-<section id={bestPracticesSection.id} class="sector-section sector-best-practices-section">
-  <div class="container">
-    <div class="section-intro">
-      <p class="eyebrow">{sector.title}</p>
-      <h2>{bestPracticesSection.title}</h2>
-      <RichText text={bestPracticesSection.intro} />
-    </div>
-
-    <div class="best-practices-grid">
-      {#each bestPracticesSection.groups as group}
-        <section class="best-practices-group">
-          <h3>{group.title}</h3>
-          <ul>
-            {#each group.items as item}
-              <li><InlineText text={item} /></li>
-            {/each}
-          </ul>
-        </section>
-      {/each}
     </div>
   </div>
 </section>
@@ -242,13 +217,12 @@
   }
 
   .sector-introduction-section,
-  .sector-barriers-section,
-  .sector-tools-section {
+  .sector-barriers-section {
     background-color: var(--white);
   }
 
   .sector-cases-section,
-  .sector-best-practices-section {
+  .sector-tools-section {
     background-color: var(--light-bg);
   }
 
@@ -317,38 +291,12 @@
     padding-left: 22px;
   }
 
-  .best-practices-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
-  }
-
-  .best-practices-group {
-    padding: 24px;
-    border: 1px solid var(--soft-border);
-    border-radius: 15px;
-    background-color: var(--white);
-  }
-
-  .best-practices-group h3 {
-    margin-bottom: 16px;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-  }
-
-  .best-practices-group ul {
-    display: grid;
-    gap: 12px;
-    padding-left: 22px;
-  }
-
   .empty-message {
     color: var(--muted);
   }
 
   @media (max-width: 1040px) {
-    .sector-case-grid,
-    .best-practices-grid {
+    .sector-case-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -365,8 +313,7 @@
   }
 
   @media (max-width: 640px) {
-    .sector-case-grid,
-    .best-practices-grid {
+    .sector-case-grid {
       grid-template-columns: 1fr;
     }
 

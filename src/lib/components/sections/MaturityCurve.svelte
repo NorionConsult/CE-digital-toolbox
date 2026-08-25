@@ -66,14 +66,14 @@
       number: '4',
       panelSide: 'right',
       edgePhase: false,
-      phaseName: 'Validate',
-      formerLabel: 'Validate what can work',
+      phaseName: 'Evaluate',
+      formerLabel: 'Evaluate what can work',
       shortDescription: 'Review and prioritize Circular Economy options',
       popUpText:
         'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
-      icon: '/phase-icons/icon-validate.png',
-      iconAlt: 'Validate phase icon',
-      href: '/journey-phases/validate/'
+      icon: '/phase-icons/icon-evaluate.png',
+      iconAlt: 'Evaluate phase icon',
+      href: '/journey-phases/evaluate/'
     },
     {
       number: '5',

@@ -6,7 +6,7 @@
   2. Give it a unique id and slug.
   3. Replace all visible text, taxonomy values and the toolLink.
   4. Set journeyPhases using one or more exact phase names:
-     Learn, Assess, Explore, Validate, Implement, Monitor.
+     Learn, Assess, Explore, Evaluate, Implement, Monitor.
   5. Add a placements block if the tool should appear on journey phase or sector pages.
 
   The slug becomes the tool page URL, so use lowercase words separated with hyphens
@@ -44,8 +44,8 @@ const toolCatalogue = [
     /* Longer description of the tool which appears on the tool page. Add links like [visible link text](https://example.com). To split paragraphs in one text field, write || between paragraphs. */
       about:
       'The SME Reporting Tool is provided as a free resource to enable you to create a climate report summarizing your annual greenhouse gas emissions, including the actions you are taking and the impact of your emissions reduction effort.',
-    /* journeyPhases is an array of the exact names of the journey phases where this tool is relevant. Use one or more of these values: Learn, Assess, Explore, Validate, Implement, Monitor. */
-      journeyPhases: ['Monitor', 'Validate', 'Explore'],
+    /* journeyPhases is an array of the exact names of the journey phases where this tool is relevant. Use one or more of these values: Learn, Assess, Explore, Evaluate, Implement, Monitor. */
+      journeyPhases: ['Monitor', 'Evaluate', 'Explore'],
     /* placements is not required for a tool to be specified. Added only to the tools that appear in the SME Journey pages or Sector guides. The name of the subsection is used to identify the section where the tool appears. */
     placements: {
       phaseSections: ['monitor:measuring-success'],
@@ -217,9 +217,9 @@ const toolCatalogue = [
       'Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) template, sticky notes, real-time team editing, and voting tools for a structured online workshop.',
     about:
       "A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities. To access Miro templates, you frist need a user. You can create a free user to access the templates, if you do not have a Miro account. Once you can access the templates, you can follow the instructions to use them. || **Step by step guide** || **1.	Set the objective:** Define what you're analysing and keep the scope specific so the analysis stays focused. ||**2.	Gather the right people:** Pull in a small group with different perspectives (ops, sales, finance, etc.). || **3.	List Strengths:** Internal, positive factors: what you do well, unique resources, etc. || **4.	List Weaknesses:** Internal, negative factors: gaps, resource constraints, etc.|| **5.	List Opportunities:** External, positive factors: market trends, gaps you could exploit, emerging needs.|| **6.	List Threats:** External, negative factors: competition, regulatory shifts, etc. || **7.	Rank items** by impact and likelihood so you're not treating everything as equally urgent.|| **8.	Match strengths to opportunities** to see where you can go on offense, and weaknesses to threats to see where you're most exposed. || **9.	Pick two or three priorities** per quadrant and assign owners and next steps.",
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
-      phaseSections:['validate:verify-potential']
+      phaseSections:['evaluate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -241,7 +241,7 @@ const toolCatalogue = [
       'Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
       'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. Circular Transition Indicators (CTI) Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the Circular Transition Indicators (CTI) in practice. By using Circular Transition Indicators (CTI) Tool you build the material level data and indicators that the Global Circularity Protocol (GCP) expects, which means you can reuse your Circular Transition Indicators (CTI) work when you start working with the Global Circularity Protocol (GCP).',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
@@ -263,7 +263,7 @@ const toolCatalogue = [
       'Adapts the classic Business Model Canvas to map circular value creation, delivery, and capture for a chosen circular business model.',
     about:
       'The Circular Business Development Canvas Pack aims to empower businesses to transition from traditional linear models to innovative circular practices. By focusing on reducing waste, enhancing resource efficiency, and closing the loop, these canvases provide a structured approach to embedding circular economy principles into core operations, customers, and revenue. The ultimate goal is to foster a regenerative business model that benefits   the environment and drives economic value and social impact. A step-by-step guide on how to carry out this workshop can be found within the circular canvas pack.',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
@@ -286,9 +286,9 @@ const toolCatalogue = [
       'Helps you rapidly assess which circular business models best fit their situation using a scored matrix approach.',
     about:
       'With the Quickscan Circular Business Model (CBM) you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.',
-    journeyPhases: ['Validate', 'Assess'],
+    journeyPhases: ['Evaluate', 'Assess'],
     placements: {
-      phaseSections:['validate:shortlist-strategies']
+      phaseSections:['evaluate:shortlist-strategies']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -312,9 +312,9 @@ const toolCatalogue = [
       'Online calculator that builds a data-backed business case for circular investment by computing financial return, payback time, and emissions impact using discounted cash flow logic.',
     about:
       'Calculate your sustainability Return on Investment (ROI). Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
-      phaseSections:['validate:verify-potential']
+      phaseSections:['evaluate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -338,7 +338,7 @@ const toolCatalogue = [
       'Provides you with an overview of the current trends and key questions in the circular economy space with the aim of inspiring discussions and brainstorms.',
     about:
       'Printable or digital cards covering key circular economy trends, opportunities, and threats. Designed to facilitate team discussions and feed into Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting. For best use, it can be combined with a SWOT Matrix template or other circular business model ideation tools. Depending on the amount of people to include in the workshop to discuss the questions and trends in the cards, it can take 1-3 hours to complete a facilitated exercise.',
-    journeyPhases: ['Explore', 'Validate'],
+    journeyPhases: ['Explore', 'Evaluate'],
     placements: {
       phaseSections:['explore:identify-options']
     },
@@ -363,7 +363,7 @@ const toolCatalogue = [
       'Helps companies identify suitable circular design strategies for their products through a guided decision process.',
     about:
       'An ideation tool that helps you explore and identify the most suitable circular pathways for your products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.',
-    journeyPhases: ['Explore', 'Validate'],
+    journeyPhases: ['Explore', 'Evaluate'],
     placements: {
       phaseSections:['explore:identify-options']
     },
@@ -624,9 +624,9 @@ const toolCatalogue = [
       'To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage',
     about:
       "The Circular Loop Designer is a browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
-      phaseSections: ['validate:test-and-pilot']
+      phaseSections: ['evaluate:test-and-pilot']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -671,7 +671,7 @@ const toolCatalogue = [
       'The openLCA software tool aims to assist users in performing a self-assessment and includes free demo sessions on how to use the tool.',
     about:
       'openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.',
-    journeyPhases: ['Assess', 'Validate', 'Monitor'],
+    journeyPhases: ['Assess', 'Evaluate', 'Monitor'],
     sector: 'Cross-sector',
     effort: 'High',
     language: 'English',
@@ -980,7 +980,7 @@ const toolCatalogue = [
       'Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.',
     about:
       'This Waste and Resources Action Programme (WRAP) data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
       sectors: ['food-and-agriculture'],
       sectorSections: ['food-and-agriculture:relevant-tools']
@@ -1105,7 +1105,7 @@ const toolCatalogue = [
       'A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.',
     about:
       'The Plan, Do, Check, Act (PDCA) cycle is a continuous improvement framework that works well for circular economy implementation. You can use as an overall project management tool to review results of implemented actions, decide what to adjust, set new targets and implement improvements. The framework is simple yet powerful, and is essential in systemactic reviews. || The tool provider also offers templates with more advanced versions of the PDCA framework, including problem solving templates with more detailed fields and other formats such as Excel sheets and google sheets. If the template is too simplified for your use-case, review the more detailed templates in their website: [HERE](https://www.smartsheet.com/content/pdca-templates). These templates can also be utilised to inform your own review document frameworks, wherever these are located for best follow-up.',
-    journeyPhases: ['Explore', 'Validate', 'Monitor'],
+    journeyPhases: ['Explore', 'Evaluate', 'Monitor'],
     placements: {
       phaseSections: ['monitor:interpreting-results']
     },
@@ -1177,9 +1177,9 @@ const toolCatalogue = [
       'A template for shortlisting circular options and assigning responsibility for reviewing feasibility.',
     about:
       'This resource helps teams move from screened business models to a shortlist of one to three priority strategies that can be developed into a business case.',
-    journeyPhases: ['Explore', 'Validate'],
+    journeyPhases: ['Explore', 'Evaluate'],
     placements: {
-      phaseSections: ['validate:shortlist-strategies']
+      phaseSections: ['evaluate:shortlist-strategies']
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -1201,9 +1201,9 @@ const toolCatalogue = [
       'A toolkit for identifying inefficiencies, customer pain points and circular business model opportunities.',
     about:
       'The Business Model Development Toolkit guides teams through exercises to assess five linear-model inefficiencies, reflect on customer pain points and explore circular business sub-models before choosing opportunities to develop further.',
-    journeyPhases: ['Explore','Validate'],
+    journeyPhases: ['Explore','Evaluate'],
     placements: {
-      phaseSections:['validate:verify-potential']
+      phaseSections:['evaluate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1227,7 +1227,7 @@ const toolCatalogue = [
       'The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.',
     journeyPhases: ['Explore'],
     placements: {
-      phaseSections: ['validate:verify-potential']
+      phaseSections: ['evaluate:verify-potential']
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1819,7 +1819,7 @@ const toolCatalogue = [
       'To develop circular product-service systems and new ways of creating value.',
     about:
       'The PROTEUS Product-Service System Tool Book helps teams explore how products and services can be combined into new value propositions. Rather than focusing only on selling more physical products, product-service systems focus on the outcome or value a customer needs and consider which combination of products, services and relationships can deliver it. || The workbook brings together 11 tools covering areas such as the business ecosystem, user activities, product lifecycles, service design, total cost of ownership and concept evaluation. The tools can be used individually or combined within a structured process moving from analysing the current situation, to defining priorities, developing concepts and evaluating the most promising options.',
-    journeyPhases: ['Explore', 'Validate'],
+    journeyPhases: ['Explore', 'Evaluate'],
     sector: 'Manufacturing',
     effort: 'High',
     language: 'English',
@@ -1898,9 +1898,9 @@ const toolCatalogue = [
       'To assess the circularity, opportunities and financing risks of a circular project.',
     about:
       'CEvaluator is an online checklist for examining a circular project from both a circularity and financing perspective. It was originally developed to help financial organisations assess circular investment cases, but it can also help small-medium enterprises (SMEs) prepare a circular project or financing application. || The assessment considers circular design and production, circular use models, value retention, environmental sustainability, opportunities and risks. Rather than producing a single circularity percentage, CEvaluator provides a qualitative overview of how a project performs across different dimensions and where additional evidence or risk mitigation may be needed.',
-    journeyPhases: ['Assess', 'Validate'],
+    journeyPhases: ['Assess', 'Evaluate'],
     placements: {
-      phaseSections: ['validate:verify-potential'],
+      phaseSections: ['evaluate:verify-potential'],
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1926,9 +1926,9 @@ const toolCatalogue = [
       'To turn assumptions about a new solution into clear experiments that can be tested.',
     about:
       'The Test Card helps your team test whether the assumptions behind a new product, service or business model hold up in practice before committing substantial resources to implementation. Instead of relying on discussion or intuition, the tool turns an assumption into a structured experiment with clear evidence and a predefined threshold for success. || For a circular solution, this could involve testing whether customers will return a product, whether they are willing to pay for repair or rental, whether a supplier will accept recovered materials, or whether a new service can operate at an acceptable cost.',
-    journeyPhases: ['Validate', 'Implement'],
+    journeyPhases: ['Evaluate', 'Implement'],
     placements: {
-      phaseSections: ['validate:test-and-pilot'],
+      phaseSections: ['evaluate:test-and-pilot'],
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -1938,7 +1938,7 @@ const toolCatalogue = [
     timeRequired:
       'Around 30-60 minutes to design an individual test, followed by the time required to carry out the experiment.',
     preparationNeeded:
-      'Start with a circular solution or business-model concept that you want to validate. Identify the assumptions that are most important for the idea to succeed.',
+      'Start with a circular solution or business-model concept that you want to evaluate. Identify the assumptions that are most important for the idea to succeed.',
     output:
       'A clearly defined experiment describing the assumption to test, how it will be tested, what evidence will be collected and the threshold for success.',
     bestFor:
@@ -1954,9 +1954,9 @@ const toolCatalogue = [
       'To compare circular concepts and decide which ideas are worth pursuing.',
     about:
       'The Circular Designs Evaluation Pack helps your team assess and compare circular product and service concepts before investing further time and resources in development. Instead of looking only at environmental benefits, the tool examines each concept from three perspectives: whether it creates value for users, whether it makes sense for the organisation and whether it is likely to benefit the environment. || Concepts can then be positioned according to their potential and difficulty of implementation. This makes it easier to distinguish quick opportunities, ideas requiring further development and more ambitious concepts that could deliver significant benefits but require substantial organisational change.',
-    journeyPhases: ['Explore', 'Validate'],
+    journeyPhases: ['Explore', 'Evaluate'],
     placements: {
-      phaseSections: ['validate:shortlist-strategies'],
+      phaseSections: ['evaluate:shortlist-strategies'],
     },
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -1982,9 +1982,9 @@ const toolCatalogue = [
       'To plan a real-world pilot and test whether a circular solution can work in practice.',
     about:
       'The Circular Pilot Canvas helps your team turn a promising circular concept into a structured real-world pilot. It is designed around three fundamental questions: Is there demand for the solution? Is the circular business model worthwhile? And can the organisations involved actually deliver it? || The canvas brings these questions together across value proposition, circular business model, and feasibility and readiness. The team defines what the pilot will test, who needs to participate, what value the solution creates, how circularity will be measured and how responsibilities are distributed.',
-    journeyPhases: ['Validate','Implement'],
+    journeyPhases: ['Evaluate','Implement'],
     placements: {
-      phaseSections: ['validate:test-and-pilot'],
+      phaseSections: ['evaluate:test-and-pilot'],
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
     },
@@ -2012,9 +2012,9 @@ const toolCatalogue = [
       'To identify which circular ideas should be taken forward first.',
     about:
       'The Prioritising Circular Solutions tool helps your team move from a long list of circular ideas to a smaller number of priorities for further development. It is particularly useful after an ideation workshop, when many possible actions have been generated but it is not yet clear which ones deserve attention first. || The team consolidates the ideas and positions them on a visual matrix according to expected impact, contribution or effort required and timing. The result is a practical first prioritisation that can feed into business-case development, feasibility assessment or implementation planning.',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
-      phaseSections: ['validate:shortlist-strategies'],
+      phaseSections: ['evaluate:shortlist-strategies'],
     },
     sector: 'Cross-sector',
     effort: 'Low',
@@ -2172,9 +2172,9 @@ const toolCatalogue = [
       'To turn a circular idea into a tangible prototype and test it with users before investing in full development.',
     about:
       'Build & Run Prototypes helps your team move from an idea to something that people can see, experience or interact with. Instead of developing a complete solution immediately, the method encourages you to create a simple and inexpensive version that is detailed enough to communicate the idea and generate useful feedback. || A prototype does not have to be a finished physical product. Depending on what you want to test, it could be a mock-up, model, storyboard, role play or another simple representation of the proposed product or service. This makes the method relevant for circular solutions such as a new repair service, take-back process, reusable packaging system, rental offer or redesigned customer journey, as well as for physical product concepts. || For circular solutions, prototyping is particularly valuable because it allows you to test important parts of the solution before committing significant resources. You can explore, for example, whether users understand a return process, whether a service is convenient to use, or whether a proposed interaction works as intended. Repeated testing helps reduce uncertainty and provides practical evidence about what should be changed before moving towards a larger pilot or implementation.',
-    journeyPhases: ['Validate'],
+    journeyPhases: ['Evaluate'],
     placements: {
-      phaseSections: ['validate:verify-potential'],
+      phaseSections: ['evaluate:verify-potential'],
     },
     sector: 'Cross-sector',
     effort: 'Medium to high',
@@ -2184,7 +2184,7 @@ const toolCatalogue = [
     timeRequired:
       'Variable, from a few days to a few weeks, depending on what is being prototyped and how many rounds of testing and iteration are needed.',
     preparationNeeded:
-      'Start with a circular concept that you want to validate. Decide which part of the concept needs to be made tangible and who should test it. Gather simple materials for creating the prototype.',
+      'Start with a circular concept that you want to evaluate. Decide which part of the concept needs to be made tangible and who should test it. Gather simple materials for creating the prototype.',
     output:
       'One or more tested and improved prototypes, together with documented feedback and learning about how users understand and interact with the proposed solution.',
     bestFor:

@@ -54,42 +54,7 @@ export const foodAndAgricultureBarriersSection = {
   ]
 };
 
-// 4. BEST PRACTICES
-// Each object becomes one bullet-point group on the page.
-export const foodAndAgricultureBestPracticesSection = {
-  id: 'best-practices',
-  title: 'Best practices',
-  intro: 'Explore practical actions across new methods, business models, traceability and compliance.',
-  groups: [
-    {
-      title: 'New methods',
-      items: [
-        'Explore nutrient recovery from manure, digestate and slurry.',
-        'Measure and set targets to reduce food waste at harvest, storage and processing.',
-        'Engage with local food networks and short supply chains to reduce transport waste.'
-      ]
-    },
-    {
-      title: 'Business model',
-      items: [
-        'Implement on-farm composting or anaerobic digestion for organic residues.',
-        'Adopt precision irrigation and nutrient management to reduce input use.',
-        'Build supply-chain partnerships for surplus redistribution and valorisation.',
-        'Trial cover cropping and reduced tillage practices to restore soil health.',
-        'Investigate biorefinery or industrial symbiosis partnerships for crop residues.'
-      ]
-    },
-    {
-      title: 'Traceability and compliance',
-      items: [
-        'Track and reduce energy and water consumption across farm operations.',
-        'Engage with local food networks and regional circular economy platforms to share resources and access support.'
-      ]
-    }
-  ]
-};
-
-// 5. RELEVANT TOOLS
+// 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Food and Agriculture sector slug to a resource's
 // placements in src/lib/content/tool-catalogue.js to display it automatically.
 export const foodAndAgricultureRelevantToolsSection = {
@@ -110,14 +75,12 @@ export const foodAndAgriculture = {
     { label: 'Introduction', sectionId: foodAndAgricultureIntroSection.id },
     { label: 'Cases', sectionId: foodAndAgricultureCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: foodAndAgricultureBarriersSection.id },
-    { label: 'Best practices', sectionId: foodAndAgricultureBestPracticesSection.id },
     { label: 'Relevant tools', sectionId: foodAndAgricultureRelevantToolsSection.id }
   ],
   sections: [
     foodAndAgricultureIntroSection,
     foodAndAgricultureCasesSection,
     foodAndAgricultureBarriersSection,
-    foodAndAgricultureBestPracticesSection,
     foodAndAgricultureRelevantToolsSection
   ]
 };

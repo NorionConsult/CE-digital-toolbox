@@ -5,6 +5,7 @@
 */
 
 const LANGUAGE_MULTIPLE_LABEL = 'Multiple';
+const PUBLIC_LANGUAGE_FILTER_OPTIONS = ['English', 'Armenian', 'Romanian', 'Ukrainian'];
 const DOWNLOADABLE_TOOL_EXTENSIONS = [
   'pdf',
   'doc',
@@ -30,9 +31,9 @@ const FILTER_LABELS = {
     diagnosis: 'Assess',
     options: 'Explore',
     explore: 'Explore',
-    validate: 'Validate',
-    'business case': 'Validate',
-    'business-case': 'Validate',
+    evaluate: 'Evaluate',
+    'business case': 'Evaluate',
+    'business-case': 'Evaluate',
     implement: 'Implement',
     implementation: 'Implement',
     monitor: 'Monitor',
@@ -223,13 +224,13 @@ export function buildToolCatalogue(toolCatalogue) {
 
   return {
     resources,
-    journeyPhases: ['Learn', 'Assess', 'Explore', 'Validate', 'Implement', 'Monitor'],
+    journeyPhases: ['Learn', 'Assess', 'Explore', 'Evaluate', 'Implement', 'Monitor'],
     sectors: sortFilterValues([
       ...new Set(resources.flatMap((resource) => resource.filterValues.sectors))
     ]),
-    languages: sortFilterValues([
-      ...new Set(resources.flatMap((resource) => resource.filterValues.languages))
-    ]),
+    // The public language filter intentionally only shows the priority website languages.
+    // Tool cards and tool pages still display the full language list entered by editors.
+    languages: PUBLIC_LANGUAGE_FILTER_OPTIONS,
     accessOptions: sortFilterValues([
       ...new Set(resources.flatMap((resource) => resource.filterValues.access))
     ])

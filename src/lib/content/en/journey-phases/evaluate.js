@@ -1,7 +1,7 @@
 import { defineJourneyPhasePage } from './_shared.js';
 
 /*
-  PHASE 4: VALIDATE
+  PHASE 4: EVALUATE
   The editable blocks below follow the same order as the website page.
   Keep sectionId and id values aligned with the visible subsection names because
   they connect page links and relevant tool placements.
@@ -10,9 +10,9 @@ import { defineJourneyPhasePage } from './_shared.js';
 /* 1. HOME PAGE PHASE CARD AND PHASE HERO */
 const phaseCard = {
   number: '04',
-  slug: 'validate',
+  slug: 'evaluate',
   shortName: 'Phase 4',
-  title: 'Validate',
+  title: 'Evaluate',
   colourClass: 'module-card-blue',
   description:
     'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.'
@@ -21,8 +21,8 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase focuses on prioritizing circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
-  icon: '/phase-icons/icon-validate.png',
-  iconAlt: 'Validate phase icon'
+  icon: '/phase-icons/icon-evaluate.png',
+  iconAlt: 'Evaluate phase icon'
 };
 
 /* 2. HERO SECTION BUTTONS */
@@ -34,7 +34,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'Validating a circular opportunity',
+  title: 'Evaluating a circular opportunity',
   paragraphs: [
     'Before choosing a direction, you need to know which circular options make sense for your business financially, operationally and strategically. This phase helps you identify the right circular option, assess how it will affect your business opportunities, and understand a path forward.'
   ],
@@ -87,7 +87,7 @@ const shortlistStrategiesOptions = [
 const shortlistStrategiesSection = {
   id: 'shortlist-strategies',
   title: 'Shortlist strategies',
-  resourceTag: 'validate:shortlist-strategies',
+  resourceTag: 'evaluate:shortlist-strategies',
   paragraphs: [
     'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. If you already have a particular idea from the phase before you can move to verify the potential of the idea or concept. If you rather keep working on the circular strategies, use the screening tool here to think further on the options identified in the former phase. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox for a better print).'
   ],
@@ -114,9 +114,9 @@ const shortlistStrategiesSection = {
     answeredLabel: 'answered',
     downloadLabel: 'Download results',
     downloadingLabel: 'Preparing PDF...',
-    downloadFilename: 'phase-4-validate-shortlist-strategies-results.pdf',
+    downloadFilename: 'phase-4-evaluate-shortlist-strategies-results.pdf',
     pdfDisclaimer:
-      'These are guiding questions part of Phase 4: Validate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
+      'These are guiding questions part of Phase 4: Evaluate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
     incompleteText: 'Answer every question to see your result.',
     positiveResult:
       'There seems to be potential! This strategy should be considered to be tested.',
@@ -192,9 +192,9 @@ const shortlistStrategiesSection = {
 const verifyPotentialSection = {
   id: 'verify-potential',
   title: 'Verify potential',
-  resourceTag: 'validate:verify-potential',
+  resourceTag: 'evaluate:verify-potential',
   paragraphs: [
-    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. It is important to identify what hidden barriers could come into effect for each of the strategies, ideas and concepts you have identified. || Use the tools below to develop and further validate the business case you selected in Step 1 of this section or the ideas you developed in the Explore phase."
+    "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. It is important to identify what hidden barriers could come into effect for each of the strategies, ideas and concepts you have identified. || Use the tools below to evaluate the business case you selected in Step 1 of this section or the ideas you developed in the Explore phase."
   ]
 };
 
@@ -202,9 +202,9 @@ const verifyPotentialSection = {
 const testPilotSection = {
   id: 'test-and-pilot',
   title: 'Test & Pilot',
-  resourceTag: 'validate:test-and-pilot',
+  resourceTag: 'evaluate:test-and-pilot',
   paragraphs: [
-    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. Testing ideas or prototypes in the real world can help to validate a solution. || A pilot helps you check whether the idea works in practice, who needs to be involved, and which assumptions still need evidence.|| A useful pilot should be time-bounded, specific and measurable. The tools, such as the test card, can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
+    "Before an evaluated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. Testing ideas or prototypes in the real world can help to evaluate a solution. || A pilot helps you check whether the idea works in practice, who needs to be involved, and which assumptions still need evidence.|| A useful pilot should be time-bounded, specific and measurable. The tools, such as the test card, can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
   ]
 };
 
@@ -218,12 +218,12 @@ const phaseSummary = {
   checklist: [
     'Selected one or more circular opportunities to screen through the shortlist strategies step',
     'Narrowed down one to three feasible circular options for further development',
-    'Validated circular options by identifying key barriers, risks and enabling conditions',
+    'Evaluated circular options by identifying key barriers, risks and enabling conditions',
     'Defined what should be tested in a pilot before implementation',
   ]
 };
 
-export const validate = defineJourneyPhasePage({
+export const evaluate = defineJourneyPhasePage({
   phaseCard,
   hero,
   sectionButtons,

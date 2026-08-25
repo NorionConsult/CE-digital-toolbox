@@ -157,8 +157,7 @@ Each sector file follows the order in which content appears on the website:
 3. Introduction to sector
 4. Case examples
 5. Key barriers and opportunities
-6. Best practices
-7. Relevant tools
+6. Relevant tools
 ```
 
 Each section has a sector-specific name such as `textilesIntroSection` or
@@ -441,10 +440,22 @@ language: 'English, Dutch'
 language: 'English/Dutch'
 ```
 
-The filter will show separate `English` and `Dutch` options, and the tool will
-appear under both. If more than three languages are listed, the card displays
-`Multiple` to keep the card readable, but the tool still appears under each
-individual language filter.
+The tool card and tool detail page will still show the actual languages entered
+by the editor. If more than three languages are listed, the card displays
+`Multiple` to keep the card readable, while the detail page shows the full list.
+
+The public language filter is intentionally limited to:
+
+```text
+English
+Armenian
+Romanian
+Ukrainian
+```
+
+This means an editor can still write additional languages such as Dutch, Spanish
+or Georgian when that is accurate for a tool, but those extra languages will not
+be added as public filter choices.
 
 ### Journey Phase Badge Colours
 
@@ -457,7 +468,7 @@ Use these exact phase names:
 Learn
 Assess
 Explore
-Validate
+Evaluate
 Implement
 Monitor
 ```
@@ -472,7 +483,7 @@ For tools that belong to more than one phase, include all relevant phases in
 the same list:
 
 ```js
-journeyPhases: ['Monitor', 'Validate', 'Explore'],
+journeyPhases: ['Monitor', 'Evaluate', 'Explore'],
 ```
 
 This example automatically displays three separately coloured badges on the

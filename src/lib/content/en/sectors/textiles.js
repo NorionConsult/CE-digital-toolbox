@@ -47,39 +47,6 @@ export const textilesBarriersSection = {
   ]
 };
 
-export const textilesBestPracticesSection = {
-  id: 'best-practices',
-  title: 'Best practices',
-  intro: 'Explore practical circular actions across design, business models, traceability and compliance.',
-  groups: [
-    {
-      title: 'Design and materials',
-      items: [
-        'Design for durability, disassembly and recyclability from the outset.',
-        'Audit material composition and eliminate blended fibres where possible.',
-        'Transition to natural, certified organic or certified recycled fibres.'
-      ]
-    },
-    {
-      title: 'Business model',
-      items: [
-        'Map and reduce overproduction through demand-led or made-to-order models.',
-        'Explore clothing rental, leasing or subscription business models.',
-        'Partner with certified fibre recyclers for closed-loop end-of-life routing.',
-        'Implement a take-back, return or buy-back programme.',
-        'Offer repair, alteration or resale services to customers.'
-      ]
-    },
-    {
-      title: 'Traceability and compliance',
-      items: [
-        'Adopt Digital Product Passports for end-to-end traceability.',
-        'Communicate circular economy credentials transparently and avoid greenwashing claims.'
-      ]
-    }
-  ]
-};
-
 export const textilesRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',
@@ -97,14 +64,12 @@ export const textiles = {
     { label: 'Introduction', sectionId: textilesIntroSection.id },
     { label: 'Cases', sectionId: textilesCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: textilesBarriersSection.id },
-    { label: 'Best practices', sectionId: textilesBestPracticesSection.id },
     { label: 'Relevant tools', sectionId: textilesRelevantToolsSection.id }
   ],
   sections: [
     textilesIntroSection,
     textilesCasesSection,
     textilesBarriersSection,
-    textilesBestPracticesSection,
     textilesRelevantToolsSection
   ]
 };

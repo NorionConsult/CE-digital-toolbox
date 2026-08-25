@@ -33,7 +33,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'From strategy to action',
   paragraphs: [
-    'This Implement phase focuses on how small-medium enterprises (SMEs) can put validated circular strategies into practice. Once circular opportunities have been screened and tested at a small scale, the next step is to turn them into concrete actions across the business. Implementation involves making operational changes, involving the right people, setting milestones, and working with partners where needed.'
+    'This Implement phase focuses on how small-medium enterprises (SMEs) can put evaluated circular strategies into practice. Once circular opportunities have been screened and tested at a small scale, the next step is to turn them into concrete actions across the business. Implementation involves making operational changes, involving the right people, setting milestones, and working with partners where needed.'
   ],
   cards: [
     {

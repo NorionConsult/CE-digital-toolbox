@@ -54,41 +54,7 @@ export const constructionBarriersSection = {
   ]
 };
 
-// 4. BEST PRACTICES
-// Each object becomes one bullet-point group on the page.
-export const constructionBestPracticesSection = {
-  id: 'best-practices',
-  title: 'Best practices',
-  intro: 'Explore practical actions across design, procurement, partnerships, waste and compliance.',
-  groups: [
-    {
-      title: 'Design and materials',
-      items: [
-        'Conduct pre-demolition and pre-renovation material audits for every project.',
-        'Use Building Information Modelling to plan material reuse and disassembly.',
-        'Design structural connections and joints for reversibility and disassembly.'
-      ]
-    },
-    {
-      title: 'Procurement and partnerships',
-      items: [
-        'Specify minimum recycled content in procurement contracts and specifications.',
-        'Partner with deconstruction specialists for selective salvage before demolition.',
-        'Use material-exchange platforms to source and list surplus or reclaimed stock.',
-        'Prioritise adaptive-reuse strategies before recommending demolition to clients.'
-      ]
-    },
-    {
-      title: 'Waste and compliance',
-      items: [
-        'Track and set reduction targets for construction-site waste volumes and landfill rates.',
-        'Engage the supply chain on circular economy requirements, standards and material-return protocols.'
-      ]
-    }
-  ]
-};
-
-// 5. RELEVANT TOOLS
+// 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Construction sector slug to a resource's
 // placements in src/lib/content/tool-catalogue.js to display it automatically.
 export const constructionRelevantToolsSection = {
@@ -109,14 +75,12 @@ export const construction = {
     { label: 'Introduction', sectionId: constructionIntroSection.id },
     { label: 'Cases', sectionId: constructionCasesSection.id },
     { label: 'Barriers & opportunities', sectionId: constructionBarriersSection.id },
-    { label: 'Best practices', sectionId: constructionBestPracticesSection.id },
     { label: 'Relevant tools', sectionId: constructionRelevantToolsSection.id }
   ],
   sections: [
     constructionIntroSection,
     constructionCasesSection,
     constructionBarriersSection,
-    constructionBestPracticesSection,
     constructionRelevantToolsSection
   ]
 };
