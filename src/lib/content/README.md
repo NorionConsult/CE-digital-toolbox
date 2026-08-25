@@ -156,7 +156,7 @@ Each sector file follows the order in which content appears on the website:
 2. Hero navigation buttons
 3. Introduction to sector
 4. Case examples
-5. Key barriers and opportunities
+5. Common barriers and opportunities
 6. Relevant tools
 ```
 

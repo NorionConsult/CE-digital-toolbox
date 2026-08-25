@@ -27,7 +27,7 @@ export const textilesCasesSection = {
 
 export const textilesBarriersSection = {
   id: 'barriers-opportunities',
-  title: 'Key barriers and opportunities',
+  title: 'Common barriers and opportunities',
   intro: 'Textile small-medium enterprises (SMEs) face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.',
   barriers: [
     'High cost of fibre sorting, collection and recycling infrastructure.',

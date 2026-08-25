@@ -32,10 +32,10 @@ export const foodAndAgricultureCasesSection = {
   ]
 };
 
-// 3. KEY BARRIERS AND OPPORTUNITIES
+// 3. Common barriers and opportunities
 export const foodAndAgricultureBarriersSection = {
   id: 'barriers-opportunities',
-  title: 'Key barriers and opportunities',
+  title: 'Common barriers and opportunities',
   intro: 'Agricultural small-medium enterprises (SMEs) face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.',
   barriers: [
     'High capital cost of precision technology and circular economy equipment.',

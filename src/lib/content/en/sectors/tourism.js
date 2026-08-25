@@ -28,10 +28,10 @@ export const tourismCasesSection = {
   featuredCaseNames: []
 };
 
-// 3. KEY BARRIERS AND OPPORTUNITIES
+// 3. Common barriers and opportunities
 export const tourismBarriersSection = {
   id: 'barriers-opportunities',
-  title: 'Key barriers and opportunities',
+  title: 'Common barriers and opportunities',
   intro: 'Tourism small-medium enterprises (SMEs) face investment, seasonality, reporting and capacity barriers, while traveller demand, certification and local circular supply chains are creating new opportunities.',
   barriers: [
     'High upfront cost of energy-efficient, water-saving and waste-reduction technology for SME hospitality operators.',

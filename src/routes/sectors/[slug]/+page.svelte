@@ -187,9 +187,11 @@
 
   .sector-hero h1 {
     margin-bottom: 28px;
-    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-size: clamp(3rem, 6vw, 5.6rem);
     line-height: 0.95;
     text-transform: uppercase;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
   }
 
   :global(.sector-intro) {

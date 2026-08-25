@@ -32,10 +32,10 @@ export const constructionCasesSection = {
   ]
 };
 
-// 3. KEY BARRIERS AND OPPORTUNITIES
+// 3. Common barriers and opportunities
 export const constructionBarriersSection = {
   id: 'barriers-opportunities',
-  title: 'Key barriers and opportunities',
+  title: 'Common barriers and opportunities',
   intro: 'Construction small-medium enterprises face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
   barriers: [
     'Lack of material traceability data in existing building stock.',
