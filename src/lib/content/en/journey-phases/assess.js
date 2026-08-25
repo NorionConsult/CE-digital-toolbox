@@ -14,7 +14,7 @@ const phaseCard = {
   title: 'Assess',
   colourClass: 'module-card-lime',
   description:
-    'Provides tools to assess Circular Economy (CE) adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
+    'Provides tools to assess Circular Economy adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
 };
 
 const hero = {
@@ -33,7 +33,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'How far are you?',
+  title: 'Where are you?',
   paragraphs: [
     'Before a business can become more circular, it needs to understand where it stands today.',
     'This phase guides you through a structured diagnostic process, assessing circular economy maturity, mapping resource flows, and identifying the specific hotspots where waste, inefficiency, or environmental impact is highest.',
@@ -45,7 +45,7 @@ const pathwaySection = {
       number: '1',
       title: 'Maturity Assessment',
       description: 'Assess how circular your business already is across key dimensions.',
-      keyOutputs: ['Circular Economy (CE) maturity score', 'Priority areas for focus']
+      keyOutputs: ['Circular Economy maturity score', 'Priority areas']
     },
     {
       sectionId: 'mapping-resources',
@@ -59,7 +59,7 @@ const pathwaySection = {
       number: '3',
       title: 'Hotspot Analysis',
       description: 'Pinpoint the most resource-intensive or wasteful activities in your operations.',
-      keyOutputs: ['Hotspot map', 'Priorities for action']
+      keyOutputs: ['Hotspot map', 'Priorities for investigation']
     }
   ]
 };
@@ -81,7 +81,7 @@ const maturitySection = {
   resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
-    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps teams reflect on strategy, operations, products, supply chain practices and internal capabilities before selecting specific actions. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed.|| The tools in this section are collections of good questions to ask before moving on to action. If there are some relevant questions which are hard to answer then the first action steps is to gather enought insight, data or understanding to be able to answer these questions first.'
+    'The maturity assessment gives you a structured way to understand your current level of circular economy readiness. It helps you reflect on strategy, operations, products, supply chain practices and internal capabilities before proposing solutions. This creates a shared starting point for discussion and makes it easier to decide where more detailed mapping or improvement work is needed.|| The tools in this section are collections of good questions to ask before moving on to action. If there are relevant questions which are hard to answer then the first action step is to collect enough insights, data or understanding to be able to answer these questions first.'
   ]
 };
 
@@ -96,7 +96,7 @@ const mappingResourcesSection = {
   title: 'Mapping Resources',
   resourceTag: 'assess:mapping-resources',
   paragraphs: [
-    'Mapping your resources is a critical step to creating a baseline. A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many cost savings and circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
+    'Mapping your resources is a critical step to creating a baseline. A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy, and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
   ],
   image: {
     src: '/downloads/phase2/M2_Baseline_mapping_MFexample.png',

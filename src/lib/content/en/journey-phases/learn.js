@@ -19,7 +19,7 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for you who need a shared language and overview before selecting specific tools.',
+    'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for those who need a shared language and overview before selecting specific tools.',
   icon: '/phase-icons/icon-learn.png',
   iconAlt: 'Learn phase icon',
   hideSectionNavigation: true,
@@ -45,7 +45,7 @@ const pathwaySection = {
   */
   paragraphs: [
     'If you are new to Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, you can first and foremost familiarise yourself with the terminology and foundational principles. This section will provide you with a selection of introductory courses to get a comprehensive introduction to the key concepts.',
-    'After you have familiarised yourself with the terminology and foundational principles, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly. The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests. Before you start, review your understanding of circular economy vs. linear economy.'
+    'Afterwards, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly. The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests. Before you start, review your understanding of circular economy vs. linear economy.'
   ],
   /*
     Add extra blocks below the overview text here.
@@ -164,7 +164,6 @@ const phaseSummary = {
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
-    'You understand that waste is a design flaw, not an inevitability',
     'You understand that products and materials should be kept in use for as long as possible',
     'You understand that raw materials are finite',
     'You understand that circularity means regenerating natural systems, not just reducing harm',

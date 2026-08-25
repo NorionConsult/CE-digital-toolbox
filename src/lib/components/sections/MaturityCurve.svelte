@@ -31,7 +31,7 @@
       formerLabel: 'Start with the basics',
       shortDescription: 'Understand basic CE concepts',
       popUpText:
-        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource-efficient cleaner production.',
+        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource efficient cleaner production.',
       icon: '/phase-icons/icon-learn.png',
       iconAlt: 'Learn phase icon',
       href: '/journey-phases/learn/'
@@ -44,7 +44,7 @@
       formerLabel: 'Find your starting point',
       shortDescription: 'Map and identify potential for improvement',
       popUpText:
-        'If you already have some interest in circular economy or resource efficiency, but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities and areas where improvement is possible.',
+        'If you already have some interest in circular economy or resource efficiency but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities, and areas where improvement is possible.',
       icon: '/phase-icons/icon-assess.png',
       iconAlt: 'Assess phase icon',
       href: '/journey-phases/assess/'
@@ -55,9 +55,9 @@
       edgePhase: false,
       phaseName: 'Explore',
       formerLabel: 'Explore practical options',
-      shortDescription: 'Brainstorm and integrate circular design principles',
+      shortDescription: 'Brainstorm and integrate circular principles',
       popUpText:
-        'If you know your main challenges and want to explore circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options and prepare a stronger basis for deciding what to take forward.',
+        'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
       icon: '/phase-icons/icon-explore.png',
       iconAlt: 'Explore phase icon',
       href: '/journey-phases/explore/'
@@ -68,9 +68,9 @@
       edgePhase: false,
       phaseName: 'Validate',
       formerLabel: 'Validate what can work',
-      shortDescription: 'Review circular business models and prioritize options',
+      shortDescription: 'Review and prioritize Circular Economy options',
       popUpText:
-        'If you have identified possible circular options, but need to compare their feasibility, risks, barriers and potential value, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, operationally and financially before investing more time and resources.',
+        'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
       icon: '/phase-icons/icon-validate.png',
       iconAlt: 'Validate phase icon',
       href: '/journey-phases/validate/'
@@ -83,7 +83,7 @@
       formerLabel: 'Turn plans into action',
       shortDescription: 'Plan and realise your selected ideas',
       popUpText:
-        'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones and pilot activities, then this phase is relevant for you. This phase helps you turn selected strategies into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
+        'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones, and activities, then this phase is relevant for you. This phase helps you turn selected options into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
       icon: '/phase-icons/icon-implement.png',
       iconAlt: 'Implement phase icon',
       href: '/journey-phases/implement/'
@@ -94,9 +94,9 @@
       edgePhase: true,
       phaseName: 'Monitor',
       formerLabel: 'Track and keep improving',
-      shortDescription: 'Select indicators, review and track progress',
+      shortDescription: 'Review and track progress',
       popUpText:
-        'If circular actions are being tested or already implemented, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time and share your experience through the contact page to inspire others in the case collection.',
+        'If you have implemented or tested circular actions, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time, and share your experience.',
       icon: '/phase-icons/icon-monitor.png',
       iconAlt: 'Monitor phase icon',
       href: '/journey-phases/monitor/'

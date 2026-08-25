@@ -33,9 +33,9 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'What strategy is best for you?',
+  title: 'What option is applicable for you?',
   paragraphs: [
-    'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will explore which circular strategies are out there and how to redesign your products for the circular economy.'
+    'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will consider which circular strategies are out there and how to redesign your products, services or value chains for the circular economy.'
   ],
   cards: [
     {
@@ -58,7 +58,6 @@ const pathwaySection = {
         'Explore how your circular solution could deliver value for customers and your business.',
       keyOutputs: [
         'A clearer view of possible circular value models',
-        'Initial value assumptions to validate in the next phase',
         'A stronger concept for customer and business value creation'
       ]
     },
@@ -67,7 +66,7 @@ const pathwaySection = {
       number: '3',
       title: 'Develop Solutions',
       description:
-        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for validation.',
+        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for evaluation.',
       keyOutputs: [
         'Bundled ideas and stronger solution concepts',
         'A clearer view of which solutions fit your business',
@@ -180,14 +179,14 @@ const shapeValueModelSection = {
       title: 'Product as a Service (PaaS)',
       icon: 'delivery',
       text:
-        "Instead of selling a product, you sell access to what it does: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable.",
+        "Instead of selling a product, you sell its function: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable.",
       example: 'Leasing industrial machinery with full maintenance included.'
     },
     {
       title: 'Resource Recovery',
       icon: 'recycling-pool',
       text:
-        "Instead of discarding your waste, you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. It often requires investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you would otherwise throw away.",
+        "Instead of discarding resources on your waste streams (e.g. biproducts, residues), you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. It often requires investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you would otherwise throw away.",
       example: 'Using production off-cuts to create secondary products.'
     },
     {
@@ -195,14 +194,14 @@ const shapeValueModelSection = {
       icon: 'history',
       text:
         'Instead of a product being sold once and eventually discarded, you keep it in use for as long as possible through repair, upgrades and resale. This means thinking about the whole lifecycle of a product, not just the point of sale. Design decisions made early on, such as modularity, ease of disassembly and standard components, directly determine how easy repair and refurbishment will be later.',
-      example: 'Offering a takeback and refurbishment programme for electronics.'
+      example: 'Offering a refurbishment programme for electronics.'
     },
     {
       title: 'Sharing Platforms',
       icon: 'share-one',
       text:
         'Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that many products sit unused for most of their life. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has environmental benefits and can also be more cost-effective for users than ownership.',
-      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a business park.'
+      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a industrial park.'
     },
     {
       title: 'Circular Supply Chains',
@@ -240,12 +239,12 @@ const developSolutionsSection = {
 const phaseSummary = {
   title: 'Phase Summary',
   paragraphs: [
-    'Use this checklist to confirm that you understand the circular design principles and have identified relevant strategies for your business.',
+    'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.',
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
   ],
   checklist: [
     'A clear understanding of the 9R framework can support circular redesign',
-    'Shared understanding with your team on circular strategies through the Circular strategies wheel workshop',
+    'Shared understanding with your team on circular strategies',
     'Familiarised yourself with circular options and value model that you can validate in the next phase',
     'Developed ideas or identified options that can become valuable circular solutions for your business. '
   ]

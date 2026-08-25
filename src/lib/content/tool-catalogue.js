@@ -429,7 +429,7 @@ const toolCatalogue = [
     id: 'resource-018',
     slug: 'smart-circular-economy-assessment-scea',
     title: 'Smart Circular Economy Assessment (SCEA)',
-    description: 'Helps you benchmark your current Circular Economy (CE) level and understand key gaps.',
+    description: 'Helps you benchmark your current Circular Economy level and understand key gaps.',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
     journeyPhases: ['Assess'],

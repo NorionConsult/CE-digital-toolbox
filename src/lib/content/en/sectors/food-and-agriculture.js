@@ -51,7 +51,6 @@ export const foodAndAgricultureBarriersSection = {
     'Precision agriculture technology can significantly reduce input costs.',
     'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
     'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
-    'EU Common Agricultural Policy subsidies are increasingly tied to sustainability and circularity outcomes.'
   ]
 };
 

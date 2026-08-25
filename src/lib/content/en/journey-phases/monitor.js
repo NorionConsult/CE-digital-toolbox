@@ -19,7 +19,7 @@ const phaseCard = {
 
 const hero = {
   intro:
-    'This phase helps you track progress and learn from implementation. It includes tools for monitoring outcomes, selecting indicators and revisiting the baseline after circular economy actions have been tested.',
+    'This phase helps you track progress and learn from implementation. It includes tools for monitoring outcomes, selecting indicators and revisiting the baseline after circular economy actions have been implemented.',
   icon: '/phase-icons/icon-monitor.png',
   iconAlt: 'Monitor phase icon'
 };
@@ -35,8 +35,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: 'Monitoring',
   paragraphs: [
-    'To improve circularity in practice, you need to track progress and learn from results over time. This phase focuses on how to report on your circular activities in a simple and useful way, and how to use feedback to identify what should be improved.',
-    'Reporting can help you monitor performance, support decision-making and communicate progress to internal and external stakeholders. Feedback loops make it possible to learn from data, customers, partners, and day-to-day experience.'
+    'To improve circularity in practice, you need to track progress and learn from results over time. Feedback loops make it possible to learn from data, customers, partners, and day-to-day experience. Monitoring supports decision-making and communicate progress to internal and external stakeholders. || This phase focuses on choosing indicators for your circular activities in a simple and useful way, how to measure success to track what should be improved and how to interpret and review your results'
   ],
   cards: [
     {
@@ -130,7 +129,7 @@ const measuringSuccessSection = {
   title: 'Measuring Success',
   resourceTag: 'monitor:measuring-success',
   paragraphs: [
-    "With the right indicators chosen in the exercises above, the next step is to put them to use. The two tools on the following section help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.|| - **Track real progress against your circular goals**: The indicators you selected in Exercise 1 and Exercise 2 are directly linked to your circular strategy. Measuring them consistently tells you whether your actions are having the intended effect, and gives you evidence to act on. || - **Support smarter decisions inside your business**: The data from your chosen metrics makes it easier to prioritise investments, allocate resources, and decide where to scale circular activities. Without measurement, improvement is guesswork. ||- **Communicate progress to stakeholders credibly**: Customers, funders, and partners increasingly expect evidence, not just intentions. The indicators from your exercises give you a credible, consistent basis for reporting.|| The recommended tools are the **SME Reporting Tool**, which uses your selected indicators to create an annual climate and circularity report tracking greenhouse gas emissions and key reductions over time, and the **Circular Tracker**, which applies product-level indicators to provide a standardised assessment of product circularity, including material recovery, reuse potential, and end-of-life performance."
+    "With the right indicators chosen in the step above, the next step is to put them to use. The two tools on the following section help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.|| - **Track progress against your circular goals**: The indicators you selected in the previous step are directly linked to your circular strategy. Measuring them consistently tells you whether your actions are having the intended effect, and gives you evidence to act on. || - **Support smarter decisions inside your business**: The data from your chosen metrics makes it easier to prioritise investments, allocate resources, and decide where to scale circular activities. Without measurement, improvement is guesswork. ||- **Communicate progress to stakeholders credibly**: Customers, funders, and partners increasingly expect evidence, not just intentions. The indicators selected give you a credible, consistent basis for reporting.|| The recommended tools are the **SME Reporting Tool**, which uses your selected indicators to create an annual climate and circularity report tracking greenhouse gas emissions and key reductions over time, and the **Circular Tracker**, which applies product-level indicators to provide a standardised assessment of product circularity, including material recovery, reuse potential, and end-of-life performance."
   ]
 };
 
@@ -140,22 +139,8 @@ const interpretingResultsSection = {
   title: 'Interpreting Results',
   resourceTag: 'monitor:interpreting-results',
   paragraphs: [
-    "Interpreting results is an essential part of managing a circular economy transition. It helps you turn monitoring into practical learning by showing whether circular actions are performing how you would expect them to, which initiatives are doing well, and where you need to make adjustments.", 
-    "Results should be compared against the milestones and targets set during planning, using a simple status system such as red, amber and green to make progress easy to communicate. Where targets are not being met, small-medium enterprises (SMEs) should look beyond the numbers and identify the underlying causes, such as resource gaps, behavioural barriers, operational challenges or dependencies on partners. Equally important is understanding what is working well, so successful approaches can be replicated and scaled. By capturing these insights and sharing them with relevant teams, leadership, customers or funders, small-medium enterprises (SMEs) can strengthen accountability, build trust and feed learning into the next cycle of circular improvement."
+    "Interpreting results is an essential part of managing a circular economy transition. It helps you turn monitoring into practical learning by showing whether circular actions are performing how you would expect them to, which initiatives are doing well, and where you need to make adjustments. Results should be compared against the milestones and targets set during planning. ||Where targets are not being met, small-medium enterprises (SMEs) should look beyond the numbers and identify the underlying causes, such as resource gaps, behavioural barriers, operational challenges or dependencies on partners. Equally important is understanding what is working well, so successful approaches can be replicated and scaled. By capturing these insights and sharing them with relevant teams, leadership, customers or funders, you can strengthen accountability, build trust and feed learning into the next cycle of circular improvement."
   ],
-  /*
-    RESULT INTERPRETATION VISUAL:
-    Replace src to change the visual. It is clickable/zoomable on the page.
-  */
-  inlineImage: {
-    afterParagraph: 1,
-    title: 'Interpreting monitoring results',
-    src: '/downloads/phase6/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - m6-visualisation.svg',
-    alt: 'Visualisation for interpreting circular economy monitoring results',
-    caption: 'A four-step framework for continuous improvement. Use monitoring results to understand progress, gaps and next improvement actions.',
-    maxWidth: '680px',
-    zoomable: true
-  }
 };
 
 /* 8. PHASE SUMMARY */
@@ -168,7 +153,7 @@ const phaseSummary = {
   checklist: [
     'Selected indicators that connect directly to circular goals',
     'Defined responsibilities and data sources for each indicator',
-    'Established baselines, targets and reporting intervals',
+    'Established targets and reporting intervals',
     'Reviewed performance and identified important gaps',
     'Agreed improvement actions based on the results',
     'Created a repeatable monitoring and feedback process'

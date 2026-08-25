@@ -27,7 +27,7 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'shortlist-strategies', label: 'Shortlist strategies' },
+  { sectionId: 'shortlist-strategies', label: 'Shortlist options' },
   { sectionId: 'verify-potential', label: 'Verify potential' },
   { sectionId: 'test-and-pilot', label: 'Prepare pilot' }
 ];
@@ -42,7 +42,7 @@ const pathwaySection = {
     {
       sectionId: 'shortlist-strategies',
       number: '1',
-      title: 'Shortlist strategies',
+      title: 'Shortlist options',
       description:
         'Evaluate shortlisted circular options based on impact, feasibility, risks and alignment with your existing operations and goals.',
       keyOutputs: [
@@ -89,7 +89,7 @@ const shortlistStrategiesSection = {
   title: 'Shortlist strategies',
   resourceTag: 'validate:shortlist-strategies',
   paragraphs: [
-    'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. If you already have a particular idea from the former phase you can move to the next step to verity the potential of the idea or concept. If you rather keep the thoughts on the circular strategies, use the screening tool here to think further on the options identified in the former phases. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox).'
+    'Not every circular option will offer the same value or be equally practical to implement. This section can help you compare circular options to find what is best for your business. If you already have a particular idea from the phase before you can move to verify the potential of the idea or concept. If you rather keep working on the circular strategies, use the screening tool here to think further on the options identified in the former phase. || You can download the result of this section to share with others (Please use Google Chrome, Safari, or Firefox for a better print).'
   ],
   /*
     SHORTLIST STRATEGIES QUESTIONNAIRE
@@ -204,7 +204,7 @@ const testPilotSection = {
   title: 'Test & Pilot',
   resourceTag: 'validate:test-and-pilot',
   paragraphs: [
-    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. Testing ideas or prototypes in the real world can help to validate a solution. || A pilot helps you check whether the idea works in practice, who needs to be involved and which assumptions still need evidence.|| A useful pilot should be time-bounded, specific and measurable. The tool can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| It can also help to map where inputs come from, how products or materials move through use, and what happens at end of life. This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
+    "Before a validated circular opportunity becomes a full implementation project, it's helpful to test the logic at a smaller scale. Testing ideas or prototypes in the real world can help to validate a solution. || A pilot helps you check whether the idea works in practice, who needs to be involved, and which assumptions still need evidence.|| A useful pilot should be time-bounded, specific and measurable. The tools, such as the test card, can help you define what you want to learn, what success would look like, who is responsible, and which data or feedback will be collected.|| This helps surface missing partners, unclear responsibilities, technical barriers and material flow gaps before you commit time and money to implementation.||The output of this section should be a clear pilot concept that can be turned into an implementation plan in the next phase."
   ]
 };
 
