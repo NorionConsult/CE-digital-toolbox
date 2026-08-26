@@ -172,9 +172,17 @@ The sector files contain comments above every editable section. In general:
   three case cards shown on that sector guide page. Use the visible company/case
   names from `src/lib/content/cases.js`.
 - Edit `intro`, `barriers` and `opportunities` inside the sector's
-  `BarriersSection`.
-- Edit the `groups` array inside the sector's `BestPracticesSection`. Each group
-  has a title and an `items` list of bullet points.
+  `BarriersSection`. Barriers and opportunities can include sources directly
+  next to each bullet:
+
+```js
+{
+  text: 'Write the bullet statement here.',
+  source: 'Write the source here, or leave this empty.'
+}
+```
+
+  If no source is available yet, keep `source: ''`.
 - Edit the final sector object to change the home-page card and hero
   `description`, image path or image description.
 

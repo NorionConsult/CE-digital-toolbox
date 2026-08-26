@@ -37,20 +37,55 @@ export const foodAndAgricultureBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Common barriers and opportunities',
   intro: 'Agricultural small-medium enterprises (SMEs) face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.',
+  // Each bullet can include a `source`. Editors can update the statement and
+  // its source together here. If no source is available, leave `source: ''`.
   barriers: [
-    'High capital cost of precision technology and circular economy equipment.',
-    'Fragmented land ownership limits the scale of circular nutrient systems.',
-    'Knowledge gaps among small farms on circular economy practices and returns.',
-    'Complex regulation around organic waste, nutrient recovery and biogas.',
-    'Price competition from conventional non-circular producers.',
-    'Short-term subsidy structures can discourage longer-term circular economy investment.'
+    {
+      text: 'High capital cost of precision technology and circular economy equipment.',
+      source: 'European Parliament Digital Agriculture Report, 2024'
+    },
+    {
+      text: 'Fragmented land ownership limits the scale of circular nutrient systems.',
+      source: 'ScienceDirect, Classification of farmland ownership fragmentation, 2016'
+    },
+    {
+      text: 'Knowledge gaps among small farms on circular economy practices and returns.',
+      source: 'Diversification of Agriculture and Circular Economy in EU Countries, 2023'
+    },
+    {
+      text: 'Complex regulation around organic waste, nutrient recovery and biogas.',
+      source: 'EU Joint Research Centre / Wageningen University & Research, 2024'
+    },
+    {
+      text: 'Price competition from conventional non-circular producers.',
+      source: 'Circle Economy, Circular Agroecology for a Resilient Europe, 2025'
+    },
+    {
+      text: 'Short-term subsidy structures can discourage longer-term circular economy investment.',
+      source: 'IEEP, Supporting a Transition to Sustainable Farming Systems, 2024'
+    }
   ],
   opportunities: [
-    'Growing consumer demand for organic, local and sustainably certified produce.',
-    'Biogas and biomass energy from agricultural residues create new income streams.',
-    'Precision agriculture technology can significantly reduce input costs.',
-    'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
-    'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
+    {
+      text: 'Growing consumer demand for organic, local and sustainably certified produce.',
+      source: 'IMARC Group, 2024'
+    },
+    {
+      text: 'Biogas and biomass energy from agricultural residues create new income streams.',
+      source: 'European Biogas Association Statistical Report, 2025'
+    },
+    {
+      text: 'Precision agriculture technology can significantly reduce input costs.',
+      source: 'MDPI, Sustainability, Farm-level Economic and Environmental Benefits of Precision Agriculture Technology Adoption, 2025'
+    },
+    {
+      text: 'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
+      source: 'Wageningen University & Research, 2024'
+    },
+    {
+      text: 'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
+      source: 'Renewable Carbon News / Waste Framework Directive data, 2024'
+    }
   ]
 };
 

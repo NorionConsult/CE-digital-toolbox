@@ -22,6 +22,11 @@
   const barriersSection = sector.sections[2];
   /** @type {any} */
   const relevantToolsSection = sector.sections[3];
+
+  /** @param {string | { text: string, source?: string }} item */
+  const listItemText = (item) => (typeof item === 'string' ? item : item.text);
+  /** @param {string | { text: string, source?: string }} item */
+  const listItemSource = (item) => (typeof item === 'string' ? '' : item.source);
 </script>
 
 <svelte:head>
@@ -99,7 +104,12 @@
         <h3>{sectorPage.barriersTitle}</h3>
         <ul>
           {#each barriersSection.barriers as barrier}
-            <li><InlineText text={barrier} /></li>
+            <li>
+              <InlineText text={listItemText(barrier)} />
+              {#if listItemSource(barrier)}
+                <span class="sector-source">Source: <InlineText text={listItemSource(barrier)} /></span>
+              {/if}
+            </li>
           {/each}
         </ul>
       </section>
@@ -108,7 +118,12 @@
         <h3>{sectorPage.opportunitiesTitle}</h3>
         <ul>
           {#each barriersSection.opportunities as opportunity}
-            <li><InlineText text={opportunity} /></li>
+            <li>
+              <InlineText text={listItemText(opportunity)} />
+              {#if listItemSource(opportunity)}
+                <span class="sector-source">Source: <InlineText text={listItemSource(opportunity)} /></span>
+              {/if}
+            </li>
           {/each}
         </ul>
       </section>
@@ -290,7 +305,37 @@
   .barrier-opportunity-grid ul {
     display: grid;
     gap: 12px;
-    padding-left: 22px;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .barrier-opportunity-grid li {
+    display: grid;
+    grid-template-columns: 14px minmax(0, 1fr);
+    gap: 6px;
+    align-items: start;
+  }
+
+  .barrier-opportunity-grid li::before {
+    content: '';
+    width: 10px;
+    aspect-ratio: 1;
+    margin-top: 0.42em;
+    border-radius: 50%;
+    background-color: var(--green-secondary);
+  }
+
+  .barrier-opportunity-grid li > :not(.sector-source) {
+    grid-column: 2;
+  }
+
+  .sector-source {
+    grid-column: 2;
+    display: block;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-style: italic;
+    line-height: 1.35;
   }
 
   .empty-message {

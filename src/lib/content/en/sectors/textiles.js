@@ -29,21 +29,59 @@ export const textilesBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Common barriers and opportunities',
   intro: 'Textile small-medium enterprises (SMEs) face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.',
+  // Each bullet can include a `source`. Editors can update the statement and
+  // its source together here. If no source is available, leave `source: ''`.
   barriers: [
-    'High cost of fibre sorting, collection and recycling infrastructure.',
-    'Blended fabrics such as polyester-cotton are difficult or impossible to recycle.',
-    'Consumer habits favour low-cost fast fashion over resale or repair.',
-    'Limited supply-chain transparency hinders traceability claims.',
-    'Greenwashing risks erode consumer and investor trust.',
-    'Small-batch production limits scale advantages in sustainable materials.'
+    {
+      text: 'High cost of fibre sorting, collection and recycling infrastructure.',
+      source: "EEA, Textile Waste Management in Europe's CE, 2024"
+    },
+    {
+      text: 'Blended fabrics such as polyester-cotton are difficult or impossible to recycle.',
+      source: 'European Commission JRC, Textiles and the Environment, 2022'
+    },
+    {
+      text: 'Consumer habits favour low-cost fast fashion over resale or repair.',
+      source: 'Chatham House / circulareconomy.earth, 2024'
+    },
+    {
+      text: 'Limited supply-chain transparency hinders traceability claims.',
+      source: 'EU ESPR / DPP Regulatory Impact Assessment, EC, 2023'
+    },
+    {
+      text: 'Greenwashing risks erode consumer and investor trust.',
+      source: 'EU Green Claims Directive Proposal, EC, 2023'
+    },
+    {
+      text: 'Small-batch production limits scale advantages in sustainable materials.',
+      source: 'Farrukh et al., Sustainable Development, 2024'
+    }
   ],
   opportunities: [
-    'The European resale apparel market is projected to grow from EUR 16 billion to EUR 26 billion by 2030.',
-    'EU extended producer responsibility schemes create demand for take-back and collection infrastructure.',
-    'Digital Product Passports enable traceability and consumer engagement.',
-    'Repair cafes and rental or subscription models generate new revenue streams.',
-    'Deadstock and surplus fabric upcycling can reduce input material costs.',
-    'Business-to-business (B2B) textile exchange platforms reduce waste and lower procurement spend.'
+    {
+      text: 'The European resale apparel market is projected to grow from EUR 16 billion to EUR 26 billion by 2030.',
+      source: 'Circular Fashion Federation / KPMG, 2025'
+    },
+    {
+      text: 'EU extended producer responsibility schemes create demand for take-back and collection infrastructure.',
+      source: 'EC Waste Framework Directive revision, 2023'
+    },
+    {
+      text: 'Digital Product Passports enable traceability and consumer engagement.',
+      source: 'EU ESPR Regulation, 2024'
+    },
+    {
+      text: 'Repair cafes and rental or subscription models generate new revenue streams.',
+      source: 'Circular Fashion Federation / KPMG, 2025'
+    },
+    {
+      text: 'Deadstock and surplus fabric upcycling can reduce input material costs.',
+      source: 'EEA Briefing - Destruction of Unsold Textiles, 2024'
+    },
+    {
+      text: 'Business-to-business (B2B) textile exchange platforms reduce waste and lower procurement spend.',
+      source: 'EU Textiles Strategy, EC, 2022'
+    }
   ]
 };
 

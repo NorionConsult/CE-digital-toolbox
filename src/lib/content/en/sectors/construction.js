@@ -37,20 +37,55 @@ export const constructionBarriersSection = {
   id: 'barriers-opportunities',
   title: 'Common barriers and opportunities',
   intro: 'Construction small-medium enterprises face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
+  // Each bullet can include a `source`. Editors can update the statement and
+  // its source together here. If no source is available, leave `source: ''`.
   barriers: [
-    'Lack of material traceability data in existing building stock.',
-    'Regulatory uncertainty around certification of recycled and salvaged materials.',
-    'Client and contractor resistance to longer design and planning timelines.',
-    'Higher upfront cost of deconstruction compared with conventional demolition.',
-    'Fragmented supply chains hinder the development of secondary-material markets.',
-    'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.'
+    {
+      text: 'Lack of material traceability data in existing building stock.',
+      source: 'Bellini & Bang, 2022 and Raghu et al., 2023'
+    },
+    {
+      text: 'Regulatory uncertainty around certification of recycled and salvaged materials.',
+      source: 'EU Construction and Demolition Waste Protocol and Guidelines'
+    },
+    {
+      text: 'Client and contractor resistance to longer design and planning timelines.',
+      source: 'Barriers to Circular Procurement in Construction, 2024'
+    },
+    {
+      text: 'Higher upfront cost of deconstruction compared with conventional demolition.',
+      source: 'Dantata et al., Analysis of Cost and Duration of Deconstruction and Demolition in Massachusetts, 2024'
+    },
+    {
+      text: 'Fragmented supply chains hinder the development of secondary-material markets.',
+      source: 'MDPI, Sustainability: Circular Economy of EU Construction and Demolition Waste, 2025'
+    },
+    {
+      text: 'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.',
+      source: 'Review of Barriers, Drivers and Stakeholders Towards CE in Construction, 2023'
+    }
   ],
   opportunities: [
-    'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
-    'Urban mining and material banks can reduce procurement costs and supply risk.',
-    'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
-    'Modular and prefabricated construction supports disassembly and material reuse.',
-    'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.'
+    {
+      text: 'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
+      source: 'From Data Templates to Material Passports and Digital Product Passports, 2023'
+    },
+    {
+      text: 'Urban mining and material banks can reduce procurement costs and supply risk.',
+      source: 'European.realestate, How Circular Economy is Reshaping European Construction, 2026'
+    },
+    {
+      text: 'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
+      source: 'ECCO, Green Public Procurement: A Catalyst for Competitiveness, 2025'
+    },
+    {
+      text: 'Modular and prefabricated construction supports disassembly and material reuse.',
+      source: 'Towards a Sustainable Circular Economy: Reusing Modular Building Components, 2024'
+    },
+    {
+      text: 'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.',
+      source: 'Europe Green Building Materials Market, 2026'
+    }
   ]
 };
 
