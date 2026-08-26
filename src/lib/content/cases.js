@@ -422,18 +422,6 @@ The case demonstrates how specialised and centralised textile-care services can 
     caseLink: "https://www.facebook.com/RedLineArmenia?locale=ru_RU"
   }),
   createCase({
-    id: "case-018",
-    slug: "maquaponics-llc",
-    companyName: "MAquaponics LLC",
-    country: "Armenia",
-    sector: ["Agriculture and Food"],
-    rStrategies: ["Recycle (R8)"],
-    rStrategyDescription: "Animal manure, an organic waste stream, is processed into a water-soluble fertilizer product, substituting synthetic fertilizer inputs in crop and aquaponic agriculture.",
-    summary: `MAquaponics converts animal manure into a water-soluble organic fertilizer, supporting more sustainable agricultural practices by returning nutrients from livestock waste back into crop production.`,
-    description: `MAquaponics (operating under the Omniponics brand) processes animal manure into a water-soluble organic fertilizer suitable for use in conventional and aquaponic agricultural systems. This addresses a common waste-management challenge for livestock operations, where manure can otherwise become a source of water and soil pollution if not properly managed. By converting the waste into a usable fertilizer input, the business helps close the nutrient loop between livestock and crop production, reducing farmers' reliance on synthetic fertilizers. The case was supported as a CirculUP! grantee, reflecting the programme's focus on agricultural circularity in Armenia.`,
-    caseLink: "https://omniponics.am/"
-  }),
-  createCase({
     id: "case-019",
     slug: "hdif-homeland-development-initiative-foundation",
     companyName: "HDIF (Homeland Development Initiative Foundation)",
@@ -455,6 +443,7 @@ The case demonstrates how specialised and centralised textile-care services can 
     rStrategyDescription: `Organic residues from herbal tea production, previously a low-value waste stream, are processed into higher-value cosmetics and essential oil products through a different production pathway.`,
     summary: `Antaram extracts high-value cosmetics ingredients and essential oils from organic waste generated during herbal tea production, turning a processing by-product into a marketable consumer product line.`,
     description: `Antaram has developed a process to extract essential oils and cosmetic-grade ingredients from the organic waste generated during herbal tea processing, such as spent plant material and residues. This upcycling approach captures additional value from a waste stream that would otherwise be discarded, while diversifying the business's product offering into the higher-margin cosmetics sector. By linking two Armenian sectors — herbal/agricultural processing and cosmetics manufacturing — the venture demonstrates how by-product valorisation can create new revenue streams for producers while reducing overall waste generation. The initiative was featured as a CirculUP! grantee.`
+    caseLink: "circulup.am/2025/03/31/antaram"
   }),
   createCase({
     id: "case-022",
@@ -907,28 +896,6 @@ The economic impact is reflected in lower material costs for Ukrainian manufactu
     caseLink: "https://lion-recycling.com.ua",
     image: "/images/cases/ukraine/lion-recycling-ukraine.jpg",
     imageAlt: "Lion Recycling Ukraine case image"
-  }),
-  createCase({
-    id: "case-049",
-    slug: "re-inventex",
-    companyName: "Re:inventex",
-    country: "Ukraine",
-    sector: ["Textiles"],
-    rStrategies: ["Recycle (R8)"],
-    rStrategyDescription: "Textile production offcuts are mechanically recycled into fibers that substitute virgin fiber inputs in the production of yarn, fabrics, and nonwoven materials.",
-    summary: `Re:inventex operates Ukraine's first textile production waste recycling line, mechanically converting textile offcuts into fibers usable for new yarn, fabric and nonwoven materials.`,
-    description: `Re:inventex is a Ukrainian textile waste recycling initiative implemented by the team of K.Tex. In 2024, the first textile production waste recycling line in Ukraine, with an annual processing capacity of up to 2,500 tonnes, was launched in Irpin. The facility processes textile offcuts generated during the production of clothing, bed linen, and other textile industry products.
-
-The company applies a resource recovery model in which textile waste is returned to the production cycle as secondary raw material. Specialized equipment enables the mechanical recycling of textile residues into fibers that can be used in the production of yarn, fabrics, and nonwoven materials. Through this approach, the company reduces the volume of textile waste sent to landfills and decreases the demand for virgin raw materials.
-
-The project contributes to the development of a circular textile system in Ukraine. The company collaborates with enterprises from the light industry sector and is developing a collection system for textile waste to support further recycling. In the future, the facility plans to process not only domestic but also imported secondary textile raw materials.
-
-The environmental benefits of the project include reducing textile waste generation, lowering the burden on landfills, and decreasing the consumption of virgin materials in the textile industry. In addition, textile recycling helps reduce greenhouse gas emissions and lowers the water and energy consumption associated with the production of new textile materials.
-
-The economic benefits of the project include the creation of a new recycling industry segment, the development of the secondary textile raw materials market, and reduced waste disposal costs. The project also creates new jobs and supports the adaptation of Ukraine's light industry to the environmental requirements of the European market.`,
-    caseLink: "https://reinventex.com.ua",
-    image: "/images/cases/ukraine/re-inventex.jpg",
-    imageAlt: "Re:inventex case image"
   }),
   createCase({
     id: "case-050",

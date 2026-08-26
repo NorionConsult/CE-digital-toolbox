@@ -75,34 +75,6 @@ const toolCatalogue = [
     toolLink: 'https://smeclimatehub.org/report-your-progress/'
   },
   {
-    id: 'resource-002',
-    slug: 'circular-tracker',
-    title: 'Circular Tracker',
-    description:
-      'CircularTracker delivers a comprehensive assessment, analyzing key circularity elements such as material recovery, product longevity, reuse potential, and end-of-life strategies empowering data-driven decisions.',
-    about:
-      "CircularTracker is built around the Product Circularity Data Sheet (PCDS). In practice, using it means: you create an account and select a product to assess; you input product data (materials, sourcing, durability, reparability, end-of-life/recyclability, etc.) without needing to share sensitive supplier data; the tool scores and visualizes the product's circularity across standardized categories; you get a dashboard you can benchmark against market references or your own product portfolio, and export/share with clients or regulators. First assessment is free, then it's pay-per-use.",
-    journeyPhases: ['Monitor', 'Assess'],
-    placements: {
-      phaseSections: ['monitor:measuring-success'],
-    },
-    sector: 'Cross-sector',
-    /* effort should be either 'Low', 'Medium' or 'High'. This is a quick assessment based on the time required and preparation needed. */
-    effort: 'Medium',
-    /* language should have a comma in between to separate multiple languages */
-    language: 'English',
-    provider: '+Impakt (a Sweco product)',
-    /* access should be either 'Free', 'Sign up' or 'Paid' */
-    access: 'Sign up',
-    timeRequired: '2-3 hours',
-    preparationNeeded:
-      'Be ready with your measurable data and metrics to be used within the platform.',
-    output: 'Visual report with overview of your products circularity',
-    bestFor: 'All small-medium enterprises (SMEs) looking to deepen their understanding of circularity',
-    format: 'Online platform',
-    toolLink: 'https://circulartracker.eu/'
-  },
-  {
     id: 'resource-003',
     slug: 'circulytics-guide',
     title: 'Circulytics Guide',
@@ -240,7 +212,7 @@ const toolCatalogue = [
     description:
       'Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
-      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. Circular Transition Indicators (CTI) Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the Circular Transition Indicators (CTI) in practice. By using Circular Transition Indicators (CTI) Tool you build the material level data and indicators that the Global Circularity Protocol (GCP) expects, which means you can reuse your Circular Transition Indicators (CTI) work when you start working with the Global Circularity Protocol (GCP).',
+      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. CTI Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that the GCP expects, which means you can reuse your CTI work when you start working with the GCP.',
     journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
     effort: 'Medium',
