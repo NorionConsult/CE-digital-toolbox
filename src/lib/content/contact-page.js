@@ -11,7 +11,7 @@ export const contactPage = {
   eyebrow: 'Contact',
   title: 'Share feedback',
   intro:
-    'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, or implementation stories. Select and fill out the form that suits best for your case.',
+    'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, implementation stories or to request a certificate of contribution. Select and fill out the form that suits best for your case.',
   contactDetailsTitle: 'Contact us',
   contactDetails:
     'For other questions about the toolbox, contact the project team by email if your inquiry is not covered by one of the forms.',
@@ -40,7 +40,7 @@ export const contactPage = {
   feedbackForm: {
     title: 'Report issues or feedback ',
     text:
-      'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises (SMEs) in the region? Use the form below to report an issue or provide feedback',
+      'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises in the region? Use the form below to report an issue or provide feedback',
     buttonLabel: 'Go to form',
     url: '#'
   },

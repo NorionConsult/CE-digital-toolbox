@@ -442,8 +442,8 @@ The case demonstrates how specialised and centralised textile-care services can 
     rStrategies: ["Repurpose (R6)"],
     rStrategyDescription: `Organic residues from herbal tea production, previously a low-value waste stream, are processed into higher-value cosmetics and essential oil products through a different production pathway.`,
     summary: `Antaram extracts high-value cosmetics ingredients and essential oils from organic waste generated during herbal tea production, turning a processing by-product into a marketable consumer product line.`,
-    description: `Antaram has developed a process to extract essential oils and cosmetic-grade ingredients from the organic waste generated during herbal tea processing, such as spent plant material and residues. This upcycling approach captures additional value from a waste stream that would otherwise be discarded, while diversifying the business's product offering into the higher-margin cosmetics sector. By linking two Armenian sectors — herbal/agricultural processing and cosmetics manufacturing — the venture demonstrates how by-product valorisation can create new revenue streams for producers while reducing overall waste generation. The initiative was featured as a CirculUP! grantee.`
-    caseLink: "circulup.am/2025/03/31/antaram"
+    description: `Antaram has developed a process to extract essential oils and cosmetic-grade ingredients from the organic waste generated during herbal tea processing, such as spent plant material and residues. This upcycling approach captures additional value from a waste stream that would otherwise be discarded, while diversifying the business's product offering into the higher-margin cosmetics sector. By linking two Armenian sectors — herbal/agricultural processing and cosmetics manufacturing — the venture demonstrates how by-product valorisation can create new revenue streams for producers while reducing overall waste generation. The initiative was featured as a CirculUP! grantee.`,
+    caseLink: "https://circulup.am/2025/03/31/antaram"
   }),
   createCase({
     id: "case-022",
