@@ -19,13 +19,16 @@ export const tourismIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Add up to three Tourism case names from src/lib/content/cases.js when they are available.
-// Leave this empty until Tourism cases have been added to the case catalogue.
+// Add up to three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
+// Tourism-specific cases can be added here when they are available in the case catalogue.
 export const tourismCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
   intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the tourism sector to find all relevant cases.',
-  featuredCaseNames: []
+  featuredCaseNames: [
+    'Chystota (Cleaning Company)'
+  ]
 };
 
 // 3. Common barriers and opportunities

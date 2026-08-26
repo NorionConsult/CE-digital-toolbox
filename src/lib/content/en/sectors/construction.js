@@ -21,14 +21,15 @@ export const constructionIntroSection = {
 // 2. CASE EXAMPLES
 // Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
 // The names should match the visible company/case names in the case catalogue.
+// Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 export const constructionCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
   intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the construction sector to find all relevant cases.',
   featuredCaseNames: [
-    'Natural Self-Cleaning Pool',
-    'Kindergartens in Yerevan Retrofitting Case Study',
-    'Ararat Chanshin LLC'
+    'UNIPLAST SRL',
+    'Ararat Chanshin LLC',
+    'Eco Build Ukraine'
   ]
 };
 

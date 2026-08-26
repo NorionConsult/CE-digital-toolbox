@@ -23,13 +23,15 @@ function normaliseCaseReference(value) {
 /**
  * Editors choose featured sector cases by company/case name in the sector files.
  * This function accepts either the visible company name or the case slug, keeps
- * the chosen order, and falls back to the first matching sector cases if no
+ * the chosen order, and allows a manually selected cross-sector case when needed
+ * for country balance. It falls back to the first matching sector cases if no
  * featured names are defined yet.
  * @param {any} casesSection
  * @param {any[]} matchingCases
+ * @param {any[]} allCases
  * @returns {any[]}
  */
-function getFeaturedSectorCases(casesSection, matchingCases) {
+function getFeaturedSectorCases(casesSection, matchingCases, allCases) {
   const featuredCaseNames = casesSection?.featuredCaseNames ?? [];
 
   if (!Array.isArray(featuredCaseNames) || featuredCaseNames.length === 0) {
@@ -41,7 +43,7 @@ function getFeaturedSectorCases(casesSection, matchingCases) {
 
   for (const caseName of featuredCaseNames) {
     const reference = normaliseCaseReference(caseName);
-    const matchingCase = matchingCases.find(
+    const matchingCase = allCases.find(
       (caseStudy) =>
         normaliseCaseReference(caseStudy.companyName) === reference ||
         normaliseCaseReference(caseStudy.slug) === reference
@@ -85,7 +87,7 @@ export function load({ params }) {
       matchingCaseSectors.includes(caseSector)
     )
   );
-  const relatedCases = getFeaturedSectorCases(sector.sections[1], matchingCases);
+  const relatedCases = getFeaturedSectorCases(sector.sections[1], matchingCases, cases);
 
   return { sector, relatedResources, relatedCases };
 }

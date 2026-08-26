@@ -152,7 +152,7 @@
     </div>
 
     {#if phaseSections.length > 0 && !journeyPhase.hidePathwayCards}
-      <div class="module-pathway-grid">
+      <div class="module-pathway-grid" class:module-pathway-grid-single={phaseSections.length === 1}>
         {#each phaseSections as section}
           <article class="pathway-card">
             <div class="pathway-card-top">
@@ -908,6 +908,10 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 28px;
     margin-top: 40px;
+  }
+
+  .module-pathway-grid-single {
+    grid-template-columns: minmax(0, 920px);
   }
 
   .pathway-card {

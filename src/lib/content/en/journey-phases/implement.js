@@ -117,8 +117,7 @@ const phaseSummary = {
     'Converted the selected strategy into concrete actions',
     'Assigned owners, responsibilities and resources',
     'Created a roadmap with milestones and review points',
-    'Identified the tools, partners and support required',
-    'Confirmed the team is ready to begin implementation'
+    'Implemented your plan and roadmap!'
   ]
 };
 

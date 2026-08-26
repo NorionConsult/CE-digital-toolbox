@@ -21,14 +21,15 @@ export const foodAndAgricultureIntroSection = {
 // 2. CASE EXAMPLES
 // Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
 // The names should match the visible company/case names in the case catalogue.
+// Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
   title: 'Case examples',
   intro: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.',
   featuredCaseNames: [
     'Banca de Alimente Moldova',
-    'Garma-Grup SRL',
-    'Permaculture in Armenia'
+    'Permaculture in Armenia',
+    'Eco Build Ukraine'
   ]
 };
 
