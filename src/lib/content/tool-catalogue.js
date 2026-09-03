@@ -149,7 +149,7 @@ const toolCatalogue = [
     provider: 'The Good Tribe',
     /* access should be either 'Free', 'Sign up' or 'Paid' */
     access: 'Sign up',
-    timeRequired: '20-30 minutes',
+    timeRequired: '1-2 hours per canvas',
     preparationNeeded:
       'Basic understanding of the organisation\'s circular opportunities, current capabilities, and key stakeholders. No detailed sustainability data is required. Access to a Miro account to use it in its intended format.',
     output: 'A roadmap and plan to lead your business towards circular strategy implementation',
@@ -364,7 +364,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'Circular Strategies Wheel Workshop',
+    provider: 'Danish Design Center',
     access: 'Free',
     timeRequired: '30-45 minutes',
     preparationNeeded: 'Print out, post its, pens and people',
@@ -647,7 +647,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'High',
     language: 'English',
-    provider: 'Carbon Trust',
+    provider: 'Green Delta',
     access: 'Free',
     timeRequired: 'Days to weeks',
     preparationNeeded: 'You will need the emissions data of your company to make your own assessments and some skills to apply Life Cycle Assessment (LCA) methodology.',
@@ -659,7 +659,7 @@ const toolCatalogue = [
   {
     id: 'resource-030',
     slug: 'bpf-eco-tool-finder',
-    title: 'BPF Eco tool finder ',
+    title: 'BPF Eco tool finder',
     description:
       'A simplified eco-design tool for early-stage packaging design decisions, showing the recyclability impact of design choices before production begins.',
     about:
@@ -696,7 +696,7 @@ const toolCatalogue = [
     output: 'System-level recyclability assessment, improvement recommendations and Extended Producer Responsibility (EPR) compliance guidance',
     bestFor: 'Brands, retailers and packaging designers',
     format: 'Digital tool',
-    toolLink: 'https://www.bpf.co.uk/design/packscore/packscore.aspx'
+    toolLink: 'https://the-recycling-partnership.us.auth0.com/login?state=hKFo2SBORzZKZGtWTkJxSTZBVlp0LUcwT2lGM2JXbExKRlpZeaFupWxvZ2luo3RpZNkgc0pMVGlWOFdJY3hTZXNjV1lsTk5sMUFJTmduM3NZaGWjY2lk2SBlVnQ0U2lzc0VTUHpGbXBoa0ptSzh0NTBScnRrc21ocA&client=eVt4SissESPzFmphkJmK8t50Rrtksmhp&protocol=oauth2&scope=openid%20profile%20email&response_type=id_token&redirect_uri=https%3A%2F%2Fapi.packaging.recyclingpartnership.org%2Fauth%2Fcallback&response_mode=form_post&nonce=xWgTW6dMeXdwqfpT4dbri4fe-c0e51XbvGYpeyvE5L8'
   },
   {
     id: 'resource-033',
@@ -947,7 +947,7 @@ const toolCatalogue = [
   {
     id: 'resource-046',
     slug: 'wrap-food-waste-reduction-toolkit',
-    title: 'Waste and Resources Action Programme (WRAP) Food Waste Reduction Toolkit',
+    title: 'WRAP Food Waste Reduction Toolkit',
     description:
       'Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.',
     about:
@@ -984,7 +984,7 @@ const toolCatalogue = [
     },
     sector: 'Textiles',
     effort: 'High',
-    language: 'English/Dutch',
+    language: 'English, Dutch',
     provider: 'Circular Economy',
     access: 'Sign up',
     timeRequired: '10-month process',
@@ -1214,33 +1214,6 @@ const toolCatalogue = [
     toolLink: '/downloads/tools/Tool-Product%20Design%20Audit%20Map.pdf'
   },
   {
-    id: 'resource-084',
-    slug: 'design-for-x-dfx-framework',
-    title: 'The Design for X (DfX) Explorer',
-    description:
-      'To identify concrete design strategies that support reuse, repair, refurbishment, remanufacturing and recycling',
-    about:
-      'Design for X is an interactive tool that helps you explore how products, components and systems can be designed for different circular strategies. Design for X stands for multiple design strategies, where X can stand for reuse, longevity, repair, reassembly,etc. Therefore it is Design for X.|| With this online tool, you can filter according to the circular outcome you want to enable, such as reuse, maintenance, refurbishment, remanufacturing or recycling, and explore relevant design approaches. || The tool encourages you to think beyond the product itself and consider the full lifecycle, including production, use, maintenance, reverse logistics and recovery. This makes it useful when translating a broad circular ambition into more concrete product and system design choices.',
-    journeyPhases: ['Explore'],
-    placements: {
-      phaseSections: ['explore:develop-solutions']
-    },
-    sector: ['Cross-sector','Manufacturing'],
-    effort: 'Low',
-    language: 'English',
-    provider: 'Circular Design',
-    access: 'Free',
-    timeRequired: '30-60 minutes for an initial exploration.',
-    preparationNeeded:
-      'No preparation needed, as this tools is to inspire and learn about the DfX framework.',
-    output:
-      'A selection of relevant design strategies and considerations that can be used to develop or improve a circular product concept.',
-    bestFor:
-      'SMEs exploring circular product design principles and early redesign opportunities.',
-    format: 'Interactive online tool',
-    toolLink: 'https://www.circulardesign.it/design-for-x/#Reuse'
-  },
-  {
     id: 'resource-059',
     slug: 'how-might-we',
     title: 'How Might We',
@@ -1255,7 +1228,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'Technical University of Denmark (DTU)',
+    provider: 'DTU Skylab',
     access: 'Free',
     timeRequired: '1 hour',
     preparationNeeded: 'Existing insight statements from prior research, plus pens and post-its.',
@@ -1333,8 +1306,8 @@ const toolCatalogue = [
     preparationNeeded: 'Works best with a diverse team from different backgrounds.',
     output: 'Three redesign concepts documented with a memorable name',
     bestFor: 'All SMEs that can benefit from a redesign workshop',
-    format: 'Online Workshop',
-    toolLink: 'https://www.designkit.org/methods/3.html'
+    format: 'Printeable workshop template',
+    toolLink: 'https://www.ellenmacarthurfoundation.org/product-redesign-workshop'
   },
   {
     id: 'resource-063',
@@ -1363,7 +1336,7 @@ const toolCatalogue = [
   {
     id: 'resource-065',
     slug: 'wrap-textiles-sorting-and-recycling-database',
-    title: 'Waste and Resources Action Programme (WRAP) Textiles Sorting and Recycling Database',
+    title: 'WRAP Textiles Sorting and Recycling Database',
     description:
       'A database mapping textile sorting and recycling capacity.',
     about:
@@ -1502,7 +1475,7 @@ const toolCatalogue = [
       'Supports reuse of building materials salvaged from damaged buildings.',
     about:
       'CC Yard and Zero Waste Yard in Kharkiv collect, sort, record and store reusable building materials such as bricks, timber, windows, doors, roofing and sanitary ware so they can return to use in repair and reconstruction.',
-    journeyPhases: ['Assess'],
+    journeyPhases: ['Implement'],
     placements: {
       sectors: ['construction'],
       sectorSections: ['construction:relevant-tools']
@@ -1518,31 +1491,6 @@ const toolCatalogue = [
     bestFor: 'Construction SMEs and communities repairing damaged buildings',
     format: 'Physical sites',
     toolLink: 'https://zerowastekharkiv.org.ua/'
-  },
-  {
-    id: 'resource-072',
-    slug: 'digital-twin-for-the-reconstruction-of-ukraine',
-    title: 'Digital Twin for the Reconstruction of Ukraine',
-    description:
-      'Supports authorities across the reconstruction cycle with AI-generated city models and scenarios.',
-    about:
-      'This European Commission AI Office initiative is described as an AI platform that can generate a 3D virtual replica of Ukrainian cities, support damage assessment from imagery and reports, compare reconstruction scenarios, and calculate reconstruction costs by damage level, materials and building type.',
-    journeyPhases: ['Assess'],
-    placements: {
-      sectors: ['construction'],
-      sectorSections: ['construction:relevant-tools']
-    },
-    sector: 'Construction',
-    effort: 'Low',
-    language: 'English',
-    provider: 'AI Office of the European Commission (DG CNECT)',
-    access: 'Sign up',
-    timeRequired: '10-15 minutes to read the description',
-    preparationNeeded: 'N/A',
-    output: 'Damage assessment, reconstruction scenarios and cost estimates',
-    bestFor: 'Municipalities, urban planners and construction sector partners',
-    format: 'AI platform generating a 3D virtual replica of cities',
-    toolLink: 'https://digital-strategy.ec.europa.eu/'
   },
   {
     id: 'resource-073',
@@ -1784,6 +1732,33 @@ const toolCatalogue = [
     toolLink: 'https://tool.recyclass.eu/en/aluminium/tool/#step-1'
   },
   {
+    id: 'resource-084',
+    slug: 'design-for-x-dfx-framework',
+    title: 'The Design for X (DfX) Explorer',
+    description:
+      'To identify concrete design strategies that support reuse, repair, refurbishment, remanufacturing and recycling',
+    about:
+      'Design for X is an interactive tool that helps you explore how products, components and systems can be designed for different circular strategies. Design for X stands for multiple design strategies, where X can stand for reuse, longevity, repair, reassembly,etc. Therefore it is Design for X.|| With this online tool, you can filter according to the circular outcome you want to enable, such as reuse, maintenance, refurbishment, remanufacturing or recycling, and explore relevant design approaches. || The tool encourages you to think beyond the product itself and consider the full lifecycle, including production, use, maintenance, reverse logistics and recovery. This makes it useful when translating a broad circular ambition into more concrete product and system design choices.',
+    journeyPhases: ['Explore'],
+    placements: {
+      phaseSections: ['explore:develop-solutions']
+    },
+    sector: ['Cross-sector','Manufacturing'],
+    effort: 'Low',
+    language: 'English',
+    provider: 'Circular Design',
+    access: 'Free',
+    timeRequired: '30-60 minutes for an initial exploration.',
+    preparationNeeded:
+      'No preparation needed, as this tools is to inspire and learn about the DfX framework.',
+    output:
+      'A selection of relevant design strategies and considerations that can be used to develop or improve a circular product concept.',
+    bestFor:
+      'SMEs exploring circular product design principles and early redesign opportunities.',
+    format: 'Interactive online tool',
+    toolLink: 'https://www.circulardesign.it/design-for-x/#Reuse'
+  },
+  {
     id: 'resource-085',
     slug: 'proteus-pss-tool-book',
     title: 'PROTEUS Product-Service System Tool Book',
@@ -2006,7 +1981,7 @@ const toolCatalogue = [
   {
     id: 'resource-093',
     slug: 'authorized-waste-operator-search',
-    title: 'Cautare Operatori Autorizati per Tip Deseu',
+    title: 'Căutare operatori autorizați pe tip de deșeu',
     description:
       'Interactive Power BI dashboard for finding licensed waste and recycling operators by waste type.',
     about:
@@ -2149,7 +2124,7 @@ const toolCatalogue = [
       phaseSections: ['evaluate:verify-potential'],
     },
     sector: 'Cross-sector',
-    effort: 'Medium to high',
+    effort: 'Medium',
     language: 'English',
     provider: 'Design Kit / IDEO.org',
     access: 'Free',
