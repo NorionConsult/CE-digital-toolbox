@@ -2197,7 +2197,32 @@ const toolCatalogue = [
     format: 'Excel template',
     toolLink:
       'https://www.thinkstep-anz.com/services/circular-economy/material-circularity-indicator-mci-calculator/'
-  }
+  },
+  {
+    id: 'resource-072',
+    slug: 'digital-twin-for-the-reconstruction-of-ukraine',
+    title: 'Digital Twin for the Reconstruction of Ukraine',
+    description:
+      'Supports authorities across the reconstruction cycle with AI-generated city models and scenarios.',
+    about:
+      'This European Commission AI Office initiative is described as an AI platform that can generate a 3D virtual replica of Ukrainian cities, support damage assessment from imagery and reports, compare reconstruction scenarios, and calculate reconstruction costs by damage level, materials and building type.',
+    journeyPhases: ['Assess'],
+    placements: {
+      sectors: ['construction'],
+      sectorSections: ['construction:relevant-tools']
+    },
+    sector: 'Construction',
+    effort: 'Low',
+    language: 'English',
+    provider: 'AI Office of the European Commission (DG CNECT)',
+    access: 'Sign up',
+    timeRequired: '10-15 minutes to read the description',
+    preparationNeeded: 'N/A',
+    output: 'Damage assessment, reconstruction scenarios and cost estimates',
+    bestFor: 'Municipalities, urban planners and construction sector partners',
+    format: 'AI platform generating a 3D virtual replica of cities',
+    toolLink: 'https://ustcoalition.com.ua/en/kalkulyator-rozrahunkovoyi-kilkosti-vidhodiv-vid-rujnuvan/'
+  },
 ];
 
 export const { resources, journeyPhases, sectors, languages, accessOptions } =
