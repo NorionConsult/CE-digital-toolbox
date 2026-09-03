@@ -43,7 +43,7 @@ const toolCatalogue = [
       'The SME Reporting Tool helps small businesses create annual greenhouse gas emission reports and track their reduction efforts.',
     /* Longer description of the tool which appears on the tool page. Add links like [visible link text](https://example.com). To split paragraphs in one text field, write || between paragraphs. */
       about:
-      'The SME Reporting Tool is provided as a free resource to enable you to create a climate report summarizing your annual greenhouse gas emissions, including the actions you are taking and the impact of your emissions reduction effort.',
+      'The SME Reporting Tool is provided as a free resource to enable you to create a climate report summarising your annual greenhouse gas emissions, including the actions you are taking and the impact of your emissions reduction effort.',
     /* journeyPhases is an array of the exact names of the journey phases where this tool is relevant. Use one or more of these values: Learn, Assess, Explore, Evaluate, Implement, Monitor. */
       journeyPhases: ['Monitor', 'Evaluate', 'Explore'],
     /* placements is not required for a tool to be specified. Added only to the tools that appear in the SME Journey pages or Sector guides. The name of the subsection is used to identify the section where the tool appears. */
@@ -56,7 +56,7 @@ const toolCatalogue = [
     effort: 'Medium',
     /* language should have a comma in between to separate multiple languages */
     language: 'English',
-    /* provider is the name of the organization or company that provides the tool. */
+    /* provider is the name of the organisation or company that provides the tool. */
     provider: 'SME Climate Hub',
     /* access should be either 'Free', 'Sign up' or 'Paid' */
     access: 'Free',
@@ -107,9 +107,9 @@ const toolCatalogue = [
     slug: 'climate-action-planner',
     title: 'Climate and Action Planner',
     description:
-      'A climate action plan outlines how an organization will reduce greenhouse gas emissions and prepare for the impacts of climate change.',
+      'A climate action plan outlines how an organisation will reduce greenhouse gas emissions and prepare for the impacts of climate change.',
     about:
-      "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.	Register/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clickin on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.	Self-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.	Review recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.	Shortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.	Manage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
+      "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.	Register/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clicking on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.	Self-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.	Review recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.	Shortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.	Manage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
     journeyPhases: ['Implement'],
     placements: {
       phaseSections: ['implement:implementation-plan'],
@@ -212,7 +212,7 @@ const toolCatalogue = [
     description:
       'Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.',
     about:
-      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. CTI Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that the GCP expects, which means you can reuse your CTI work when you start working with the GCP.',
+      'The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organisation for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. CTI Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that the GCP expects, which means you can reuse your CTI work when you start working with the GCP.',
     journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
     effort: 'Medium',
@@ -400,7 +400,7 @@ const toolCatalogue = [
   {
     id: 'resource-018',
     slug: 'smart-circular-economy-assessment-scea',
-    title: 'Smart Circular Economy Assessment (SCEA)',
+    title: 'Smart Material Choices Assessment',
     description: 'Helps you benchmark your current Circular Economy level and understand key gaps.',
     about:
       'Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.',
@@ -472,7 +472,7 @@ const toolCatalogue = [
     id: 'resource-021',
     slug: 'stan-tool',
     title: 'STAN Tool',
-    description: 'Visualizes the material flow data of your products/services',
+    description: 'Visualises the material flow data of your products/services',
     about:
       'STAN allows users to create graphical Material Flow Analysis (MFA) models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.',
     journeyPhases: ['Assess'],
@@ -1076,7 +1076,7 @@ const toolCatalogue = [
     description:
       'A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.',
     about:
-      'The Plan, Do, Check, Act (PDCA) cycle is a continuous improvement framework that works well for circular economy implementation. You can use as an overall project management tool to review results of implemented actions, decide what to adjust, set new targets and implement improvements. The framework is simple yet powerful, and is essential in systemactic reviews. || The tool provider also offers templates with more advanced versions of the PDCA framework, including problem solving templates with more detailed fields and other formats such as Excel sheets and google sheets. If the template is too simplified for your use-case, review the more detailed templates in their website: [HERE](https://www.smartsheet.com/content/pdca-templates). These templates can also be utilised to inform your own review document frameworks, wherever these are located for best follow-up.',
+      'The Plan, Do, Check, Act (PDCA) cycle is a continuous improvement framework that works well for circular economy implementation. You can use as an overall project management tool to review results of implemented actions, decide what to adjust, set new targets and implement improvements. The framework is simple yet powerful, and is essential in systematic reviews. || The tool provider also offers templates with more advanced versions of the PDCA framework, including problem solving templates with more detailed fields and other formats such as Excel sheets and google sheets. If the template is too simplified for your use-case, review the more detailed templates in their website: [HERE](https://www.smartsheet.com/content/pdca-templates). These templates can also be utilised to inform your own review document frameworks, wherever these are located for best follow-up.',
     journeyPhases: ['Explore', 'Evaluate', 'Monitor'],
     placements: {
       phaseSections: ['monitor:interpreting-results']
@@ -1204,7 +1204,7 @@ const toolCatalogue = [
     sector: 'Cross-sector',
     effort: 'Medium',
     language: 'English',
-    provider: 'United Nations Industrial Development Organization (UNIDO)',
+    provider: 'United Nations Industrial Development Organisation (UNIDO)',
     access: 'Free',
     timeRequired: '45-60 minutes',
     preparationNeeded: 'Printout of scoring sheet, post-its, pens and product samples or specifications.',
@@ -1564,7 +1564,7 @@ const toolCatalogue = [
     slug: 'circulup-embedding-circularity-toolkit',
     title: 'CirculUP! Embedding Circularity Toolkit',
     description:
-      'A localized toolkit helping Armenian SMEs apply circular design principles.',
+      'A localised toolkit helping Armenian SMEs apply circular design principles.',
     about:
       'CirculUP! provides downloadable resources tailored for Armenian SMEs, incubators and accelerators, including toolkits and Circular Economy Guidelines in Armenian and English.',
     journeyPhases: ['Learn','Implement'],
@@ -1608,7 +1608,7 @@ const toolCatalogue = [
     description:
       'An e-learning course on inclusive green economies and resource efficiency.',
     about:
-      'This localized, interactive course equips SME managers, environmental officers and civil servants with a basic understanding of inclusive green economies and resource efficiency.',
+      'This localised, interactive course equips SME managers, environmental officers and civil servants with a basic understanding of inclusive green economies and resource efficiency.',
     journeyPhases: ['Learn'],
     sector: 'Cross-sector',
     effort: 'High',
@@ -2138,6 +2138,65 @@ const toolCatalogue = [
       'Small-medium enterprises (SMEs) that have developed a promising circular product, service or business-model concept and need to make it tangible, test it with intended users and improve it before investing in a full pilot or implementation.',
     format: 'Step-by-step method and downloadable cards',
     toolLink: 'https://www.designkit.org/methods/build-run-prototypes.html'
+  },
+  {
+    id: 'resource-099',
+    slug: 'bawear-score',
+    title: 'bAwear Score',
+    description:
+      'Life Cycle Assessment (LCA)-based environmental impact measurement platform for textiles and apparel products.',
+    about:
+      'bAwear Score is a platform for measuring environmental impacts in textiles and apparel. It calculates product-level results using Life Cycle Assessment (LCA), based on the ReCiPe 2016 Midpoint method and aligned with International Organisation for Standardization (ISO) 14040/14044. The platform can be used to compare material and process options, identify the life cycle stages with the highest impact, support greenhouse gas reporting and prepare for upcoming EU product information requirements. || The platform includes Quick Score for indicative results and Expert studies for detailed assessments using primary supplier data. Results can be used by product development, sourcing, sustainability, corporate social responsibility and quality teams to make design and sourcing decisions based on measured data rather than assumptions.',
+    journeyPhases: ['Evaluate', 'Monitor'],
+    placements: {
+      phaseSections: ['evaluate:verify-potential', 'monitor:choosing-indicators'],
+      sectors: ['textiles'],
+      sectorSections: ['textiles:relevant-tools']
+    },
+    sector: 'Textiles',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'bAwear B.V.',
+    access: 'Sign up',
+    timeRequired:
+      'About 30 minutes for first setup; 10-15 minutes for one Quick Score calculation when data is ready; Expert studies vary by scope and supplier data availability.',
+    preparationNeeded:
+      'Collect product type, fibre composition, product weight, yarn and fabric construction, wet processes, countries of production, transport mode and distance. Primary supplier data on energy, water and waste improves accuracy.',
+    output:
+      'Product impact profile across impact categories, results split by life cycle stage, comparison against a reference product and an exportable report.',
+    bestFor:
+      'Small and medium textile and apparel companies, including brands, retailers, manufacturers and importers or exporters that need to compare material or process options before committing to a design.',
+    format: 'Digital platform',
+    toolLink: 'https://bawear-score.com'
+  },
+  {
+    id: 'resource-100',
+    slug: 'material-circularity-indicator-mci-calculator',
+    title: 'Material Circularity Indicator (MCI) Calculator',
+    description:
+      'A circularity calculator that measures how effectively a product keeps its materials in use throughout its life cycle.',
+    about:
+      'The Material Circularity Indicator (MCI) Calculator helps assess how effectively materials are kept in use throughout a product life cycle. The Material Circularity Indicator (MCI) score runs from 0% for a fully linear product to 100% for a fully circular product. It can support product design decisions, circular economy performance reporting, benchmarking and procurement decisions. || The tool includes a trial version for comparing scenarios, benchmarking performance and testing the concept. A professional version provides expanded functionality for decision-grade results and stronger support for external claims. Editors should note that the source document did not include the tool URL; the link used here is the official Thinkstep ANZ calculator page.',
+    journeyPhases: ['Evaluate', 'Monitor'],
+    placements: {
+      phaseSections: ['evaluate:verify-potential', 'monitor:choosing-indicators']
+    },
+    sector: 'Cross-sector',
+    effort: 'Medium',
+    language: 'English',
+    provider: 'Thinkstep ANZ',
+    access: 'Sign up',
+    timeRequired:
+      '1-3 hours if the bill of materials and product life cycle inputs are ready, including time to interpret the results.',
+    preparationNeeded:
+      'Prepare a bill of materials and product life cycle data, including material types, quantities, product destination and relevant inflows and outflows.',
+    output:
+      'Material Circularity Indicator (MCI) score, product circularity analysis, scenario comparison and identification of product-level hotspots.',
+    bestFor:
+      'Small-medium enterprises (SMEs) that want to deepen their understanding of product circularity and compare circular design options.',
+    format: 'Excel template',
+    toolLink:
+      'https://www.thinkstep-anz.com/services/circular-economy/material-circularity-indicator-mci-calculator/'
   }
 ];
 

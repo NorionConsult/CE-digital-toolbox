@@ -117,7 +117,7 @@ const LearningresourcesSection = {
         shortDescription:
           'A ten-part e-learning course covering circular economy principles and their application across industrial value chains, developed for green-transition skills building.',
         language: 'English',
-        provider: 'United Nations Industrial Development Organization (UNIDO)',
+        provider: 'United Nations Industrial Development Organisation (UNIDO)',
         url: 'https://www.unido.org/learning-resources/circular-economy-industry',
         buttonLabel: 'Open resource',
         aboutCourse: [
