@@ -148,7 +148,7 @@ const toolCatalogue = [
     language: 'English',
     provider: 'The Good Tribe',
     /* access should be either 'Free', 'Sign up' or 'Paid' */
-    access: 'Free',
+    access: 'Sign up',
     timeRequired: '20-30 minutes',
     preparationNeeded:
       'Basic understanding of the organisation\'s circular opportunities, current capabilities, and key stakeholders. No detailed sustainability data is required. Access to a Miro account to use it in its intended format.',
