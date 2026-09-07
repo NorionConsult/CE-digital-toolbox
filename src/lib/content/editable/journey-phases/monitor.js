@@ -20,7 +20,7 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase helps you track progress and learn from implementation. It includes tools for monitoring outcomes, selecting indicators and revisiting the baseline after circular economy actions have been implemented.',
-  icon: '/phase-icons/icon-monitor.png',
+  icon: '/icons/phase-icons/icon-monitor.png',
   iconAlt: 'Monitor phase icon'
 };
 

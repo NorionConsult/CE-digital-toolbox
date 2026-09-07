@@ -225,7 +225,7 @@ const toolCatalogue = [
       'Circular performance score; risk and opportunity analysis; prioritised actions and SMART improvement targets.',
     bestFor: 'All small-medium enterprises (SMEs)',
     format: 'Digital tool',
-    toolLink: 'http://ctitool.com/'
+    toolLink: 'https://ctitool.com/'
   },
   {
     id: 'resource-010',
@@ -418,7 +418,7 @@ const toolCatalogue = [
     output: 'Circular Economy (CE) maturity overview across 5 dimensions with visual output and priority recommendations.',
     bestFor: 'small-medium enterprises (SMEs) new to circular economy want a quick, accessible starting point.',
     format: 'PDF',
-    toolLink: 'http://ellenmacarthurfoundation.org/smart-material-choices'
+    toolLink: 'https://ellenmacarthurfoundation.org/smart-material-choices'
   },
   {
     id: 'resource-019',
@@ -767,7 +767,7 @@ const toolCatalogue = [
     output: 'Carbon footprint per occupied room, per meeting space hour and total property',
     bestFor: 'Hotels and accommodation providers of any size globally',
     format: 'Excel template',
-    toolLink: 'https://sustainablehospitalityalliance.org/wp-content/uploads/2020/02/HCMI-v2.0.zip'
+    toolLink: 'https://sustainablehospitalityalliance.org/resource/hotel-carbon-measurement-initiative/'
   },
   {
     id: 'resource-036',
@@ -1163,7 +1163,7 @@ const toolCatalogue = [
     output: 'Filled-out shortlist of circular options with responsibilities and priorities',
     bestFor: 'All SMEs that benefit from a quick shortlisting exercise',
     format: 'Print out',
-    toolLink: '/downloads/tools/Tool-Shortlisting-your-priority-options.pdf'
+    toolLink: '/tools/Tool-Shortlisting-your-priority-options.pdf'
   },
   {
     id: 'resource-057',
@@ -1184,7 +1184,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '1-5 hours',
     preparationNeeded: 'Basic knowledge of company operations, a pen and the playbook printouts.',
-    output: 'Identified inefficiencies, assessed potential circular business opportunities that lead to a concrete  idea.',
+    output: 'Identified inefficiencies, assessed potential circular business opportunities that lead to a concrete idea.',
     bestFor: 'All SMEs exploring which circular business models suit their company',
     format: 'PDF exercises / printable worksheet',
     toolLink: 'https://www.nordicinnovation.org/sites/default/files/documents/2021/Nordic%20Circular%20Economy%20Playbook%20-%20Business%20Model%20Development%20Toolkit.pdf'
@@ -1211,7 +1211,7 @@ const toolCatalogue = [
     output: 'Circular design improvement suggestions for your products',
     bestFor: 'All SMEs, particularly manufacturing SMEs or businesses with a physical product',
     format: 'Print out',
-    toolLink: '/downloads/tools/Tool-Product%20Design%20Audit%20Map.pdf'
+    toolLink: '/tools/Tool-Product%20Design%20Audit%20Map.pdf'
   },
   {
     id: 'resource-059',

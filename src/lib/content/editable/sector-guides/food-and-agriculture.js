@@ -105,7 +105,7 @@ export const foodAndAgriculture = {
   slug: 'food-and-agriculture',
   title: 'Food and Agriculture',
   description: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
-  image: '/images/agriculture.jpg',
+  image: '/images/sectors/agriculture.jpg',
   imageAlt: 'Food and Agriculture sector',
   navigation: [
     { label: 'Introduction', sectionId: foodAndAgricultureIntroSection.id },

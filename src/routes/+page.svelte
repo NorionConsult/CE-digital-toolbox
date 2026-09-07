@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { home } from '$lib/content/editable/pages/home.js';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 </script>
 
 <svelte:head>
@@ -20,7 +21,7 @@
       <a href="{base}/guided-pathways/" class="primary-button">
         <span
           class="hero-button-icon"
-          style={`--icon-url: url("https://api.iconify.design/icon-park-outline:map-draw.svg");`}
+          style={`--icon-url: url("${iconParkUrl('map-draw')}");`}
           aria-hidden="true"
         ></span>
         {home.hero.primaryButton}
@@ -28,7 +29,7 @@
       <a href="{base}/tools/" class="secondary-button">
         <span
           class="hero-button-icon"
-          style={`--icon-url: url("https://api.iconify.design/icon-park-outline:search.svg");`}
+          style={`--icon-url: url("${iconParkUrl('search')}");`}
           aria-hidden="true"
         ></span>
         {home.hero.secondaryButton}

@@ -14,9 +14,11 @@ src/
 └── app.css                # Global colours, fonts, spacing and shared styles
 
 static/
-├── downloads/             # Download files linked from specific tools
-├── images/                # Sector tool images
-└── logos/                 # Footer logos
+├── icons/                 # Local interface icons and journey phase icons
+├── images/                # Website images, including sector and case images
+├── logos/                 # Footer logos
+├── phase-content/         # Images and files used inside journey phase pages
+└── tools/                 # Local files linked from tool pages
 ```
 
 ## Where To Edit Common Things
@@ -114,7 +116,7 @@ src/lib/content/editable/tools/tool-catalogue.js
 
 2. Copy one existing tool block and change the title, description, journey phases, language, provider, access and link.
 
-3. If the tool should download a local PDF, Word, PowerPoint, Excel, CSV or ZIP file, add the file under `static/downloads/tools/` and set `toolLink` to that file path.
+3. If the tool should download a local PDF, Word, PowerPoint, Excel, CSV or ZIP file, add the file under `static/tools/` and set `toolLink` to that file path.
 
 The tool page button text is automatic. If `toolLink` ends in a downloadable file type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says **Download tool**. Other links say **Open tool**. Editors do not need to add a separate button label.
 

@@ -1,6 +1,8 @@
 <script>
+  import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { contactPage } from '$lib/content/editable/pages/contact-page.js';
+  import { staticAssetUrl } from '$lib/utils/assets.js';
 
   /**
    * Placeholder links use "#". When editors add real form URLs in
@@ -26,6 +28,7 @@
   function getMailtoHref(email) {
     return `mailto:${email.trim()}`;
   }
+
 </script>
 
 <svelte:head>
@@ -81,7 +84,7 @@
           <article class:featured-contact={contact.featured} class="contact-email-card">
             <h3>
               {#if contact.flagIcon}
-                <img class="contact-flag" src={contact.flagIcon} alt="" aria-hidden="true" />
+                <img class="contact-flag" src={staticAssetUrl(contact.flagIcon)} alt="" aria-hidden="true" />
               {/if}
               <span>{contact.label}</span>
             </h3>

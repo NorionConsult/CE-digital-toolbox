@@ -8,6 +8,7 @@
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import CompactJourneyPhaseMap from '$lib/components/sections/CompactJourneyPhaseMap.svelte';
   import StrategyShortlistQuestionnaire from '$lib/components/sections/StrategyShortlistQuestionnaire.svelte';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let data;
   /** @type {any} */
@@ -91,7 +92,11 @@
   <div class="container subpage-content phase-hero-content">
     <div class="phase-hero-topline">
       <a href="{base}/guided-pathways/#journey-phases" class="back-link journey-back-link">
-        <span class="back-link-arrow" aria-hidden="true"></span>
+        <span
+          class="back-link-arrow"
+          style={`--icon-url: url("${iconParkUrl('arrow-left')}");`}
+          aria-hidden="true"
+        ></span>
         {journeyPhasePage.backLink}
       </a>
 
@@ -257,7 +262,7 @@
                 <div class="baseline-card">
                   <span
                     class="baseline-card-icon"
-                    style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                    style={`--icon-url: url("${iconParkUrl(card.icon)}");`}
                     aria-hidden="true"
                   ></span>
                   <h3>{card.title}</h3>
@@ -295,7 +300,7 @@
                   <article class="phase-principle-item">
                     <span
                       class="phase-principle-icon"
-                      style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${item.icon}.svg");`}
+                      style={`--icon-url: url("${iconParkUrl(item.icon)}");`}
                       aria-hidden="true"
                     ></span>
 
@@ -321,7 +326,7 @@
                     <div class="design-for-x-card-header">
                       <span
                         class="design-for-x-icon"
-                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                        style={`--icon-url: url("${iconParkUrl(card.icon)}");`}
                         aria-hidden="true"
                       ></span>
                       <h4>{card.title}</h4>
@@ -375,7 +380,7 @@
                     <div class="process-redesign-top">
                       <span
                         class="process-redesign-icon"
-                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${column.icon}.svg");`}
+                        style={`--icon-url: url("${iconParkUrl(column.icon)}");`}
                         aria-hidden="true"
                       ></span>
                       <h4>{column.title}</h4>
@@ -419,7 +424,7 @@
                       <h3>{section.circularStrategiesWorkshop.title}</h3>
                       <span
                         class="circular-strategies-workshop-title-icon"
-                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${section.circularStrategiesWorkshop.icon}.svg");`}
+                        style={`--icon-url: url("${iconParkUrl(section.circularStrategiesWorkshop.icon)}");`}
                         aria-hidden="true"
                       ></span>
                     </div>
@@ -577,7 +582,7 @@
                 <summary class="business-model-card-heading">
                   <span
                     class="business-model-card-icon"
-                    style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
+                    style={`--icon-url: url("${iconParkUrl(card.icon)}");`}
                     aria-hidden="true"
                   ></span>
                   <h3>{card.title}</h3>
@@ -770,8 +775,8 @@
     width: 0.95em;
     aspect-ratio: 1;
     background-color: currentColor;
-    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
-    mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
     transition: transform 0.18s ease;
   }
 

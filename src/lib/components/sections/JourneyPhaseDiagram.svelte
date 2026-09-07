@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import { tick } from 'svelte';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 
   /**
    * @typedef {{
@@ -32,7 +33,7 @@
       shortDescription: 'Understand basic CE concepts',
       popUpText:
         'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource efficient cleaner production.',
-      icon: '/phase-icons/icon-learn.png',
+      icon: '/icons/phase-icons/icon-learn.png',
       iconAlt: 'Learn phase icon',
       href: '/journey-phases/learn/'
     },
@@ -45,7 +46,7 @@
       shortDescription: 'Map and identify potential for improvement',
       popUpText:
         'If you already have some interest in circular economy or resource efficiency but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities, and areas where improvement is possible.',
-      icon: '/phase-icons/icon-assess.png',
+      icon: '/icons/phase-icons/icon-assess.png',
       iconAlt: 'Assess phase icon',
       href: '/journey-phases/assess/'
     },
@@ -58,7 +59,7 @@
       shortDescription: 'Brainstorm and integrate circular principles',
       popUpText:
         'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
-      icon: '/phase-icons/icon-explore.png',
+      icon: '/icons/phase-icons/icon-explore.png',
       iconAlt: 'Explore phase icon',
       href: '/journey-phases/explore/'
     },
@@ -71,7 +72,7 @@
       shortDescription: 'Review and prioritize Circular Economy options',
       popUpText:
         'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
-      icon: '/phase-icons/icon-evaluate.png',
+      icon: '/icons/phase-icons/icon-evaluate.png',
       iconAlt: 'Evaluate phase icon',
       href: '/journey-phases/evaluate/'
     },
@@ -84,7 +85,7 @@
       shortDescription: 'Plan and realise your selected ideas',
       popUpText:
         'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones, and activities, then this phase is relevant for you. This phase helps you turn selected options into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
-      icon: '/phase-icons/icon-implement.png',
+      icon: '/icons/phase-icons/icon-implement.png',
       iconAlt: 'Implement phase icon',
       href: '/journey-phases/implement/'
     },
@@ -97,7 +98,7 @@
       shortDescription: 'Review and track progress',
       popUpText:
         'If you have implemented or tested circular actions, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time, and share your experience.',
-      icon: '/phase-icons/icon-monitor.png',
+      icon: '/icons/phase-icons/icon-monitor.png',
       iconAlt: 'Monitor phase icon',
       href: '/journey-phases/monitor/'
     }
@@ -220,7 +221,10 @@
               aria-label="Close selected phase description"
               on:click={() => (activePhase = null)}
             >
-              <span aria-hidden="true"></span>
+              <span
+                style={`--icon-url: url("${iconParkUrl('close-one')}");`}
+                aria-hidden="true"
+              ></span>
             </button>
 
             <div class="journey-diagram-panel-content">
@@ -231,7 +235,11 @@
             <div class="journey-diagram-actions">
               <a href="{base}{activePhase.href}" class="journey-diagram-go-link">
                 View phase
-                <span class="link-arrow" aria-hidden="true"></span>
+                <span
+                  class="link-arrow"
+                  style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}
+                  aria-hidden="true"
+                ></span>
               </a>
             </div>
           </div>
@@ -519,8 +527,8 @@
     width: 0.95em;
     aspect-ratio: 1;
     background-color: currentColor;
-    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
-    mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
     transition: transform 0.18s ease;
   }
 
@@ -545,8 +553,8 @@
     width: 24px;
     aspect-ratio: 1;
     background-color: currentColor;
-    -webkit-mask: url("https://api.iconify.design/icon-park-outline:close-one.svg") center / contain no-repeat;
-    mask: url("https://api.iconify.design/icon-park-outline:close-one.svg") center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
   }
 
   .journey-diagram-close:hover,

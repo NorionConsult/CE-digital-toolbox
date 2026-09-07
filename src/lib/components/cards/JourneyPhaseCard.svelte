@@ -6,6 +6,7 @@
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let journeyPhase;
 </script>
@@ -19,7 +20,11 @@
 
   <a href="{base}/journey-phases/{journeyPhase.slug}/" class="phase-link">
     {site.labels.viewPhase}
-    <span class="link-arrow" aria-hidden="true"></span>
+    <span
+      class="link-arrow"
+      style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}
+      aria-hidden="true"
+    ></span>
   </a>
 </article>
 
@@ -76,8 +81,8 @@
     width: 0.95em;
     aspect-ratio: 1;
     background-color: currentColor;
-    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
-    mask: url("https://api.iconify.design/icon-park-outline:arrow-right.svg") center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
     transition: transform 0.18s ease;
   }
 

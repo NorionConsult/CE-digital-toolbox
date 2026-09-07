@@ -20,13 +20,13 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase supports the identification and comparison of possible circular economy choices. It can be used to explore strategies, generate ideas and move from assessment to practical opportunities.',
-  icon: '/phase-icons/icon-explore.png',
+  icon: '/icons/phase-icons/icon-explore.png',
   iconAlt: 'Explore phase icon'
 };
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'identify-your-options', label: 'Identify options' },
+  { sectionId: 'identify-options', label: 'Identify options' },
   { sectionId: 'shape-value-model', label: 'Shape value model' },
   { sectionId: 'develop-solutions', label: 'Develop solutions' }
 ];
@@ -39,7 +39,7 @@ const pathwaySection = {
   ],
   cards: [
     {
-      sectionId: 'identify-your-options',
+      sectionId: 'identify-options',
       number: '1',
       title: 'Identify Your Options',
       description:
@@ -78,7 +78,7 @@ const pathwaySection = {
 
 /* 4. DETAILED SECTION 1 */
 const identifyOptionsSection = {
-  id: 'identify-your-options',
+  id: 'identify-options',
   title: 'Identify Your Options',
   resourceTag: 'explore:identify-options',
   paragraphs: [
@@ -94,7 +94,7 @@ const identifyOptionsSection = {
     title: 'Circular Economy strategies',
     description:
       "The image below shows how the 9R strategies form a hierarchy of circular economy interventions, ranked according to how much value they preserve. At the top, R0 Refuse avoids the need for a product or resource altogether. R1 Rethink and R2 Reduce focus on using products and resources more efficiently, while R3-R6 Reuse, Repair, Refurbish and Remanufacture aim to keep products, components and their embedded value in use for as long as possible. || Further down the hierarchy, R7 Repurpose gives products or components a new function, R8 Recycle recovers material value through processing, and R9 Recover, typically through energy recovery, retains only a limited share of the original value. || The key principle is that the further down the hierarchy an intervention sits, the more of the economic, environmental and social value embedded in the product is generally lost. Recycling can therefore be important, but it should not automatically be the starting point for circular innovation.|| The framework can help challenge existing assumptions, identify a wider range of possible strategies and prioritise exploration of higher-value options before moving towards recycling or recovery. With this perspective in mind, you can move on to a practical workshop exercise to explore relevant circular strategies, or use other tools in the Explore phase to identify and develop possible options.",
-    src: '/downloads/phase3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
+    src: '/phase-content/phase-3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
     alt: 'The 9R circular economy strategies arranged by value preservation',
     caption: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
     maxWidth: '680px',

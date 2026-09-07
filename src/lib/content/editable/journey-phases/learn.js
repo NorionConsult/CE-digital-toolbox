@@ -20,7 +20,7 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for those who need a shared language and overview before selecting specific tools.',
-  icon: '/phase-icons/icon-learn.png',
+  icon: '/icons/phase-icons/icon-learn.png',
   iconAlt: 'Learn phase icon',
   hideSectionNavigation: true,
   hidePathwayCards: true
@@ -59,7 +59,7 @@ const pathwaySection = {
         "A widely used way of illustrating the circular economy is the Ellen MacArthur Foundation’s **butterfly diagram** (shown below). The diagram depicts two main cycles, technical and biological, and shows how products, materials, and resources can circulate from use and consumption back into production processes, reducing waste and optimising resource use. || If you want to learn more, see the eLearning courses below to continue learning about the basic concepts of circular economy and resource efficiency."
       ],
       image: {
-        src: '/downloads/phase 1/Circular economy butterfly diagram.png',
+        src: '/phase-content/phase-1/Circular economy butterfly diagram.png',
         alt: 'Circular economy butterfly diagram showing technical and biological cycles',
         caption: 'The butterfly diagram by the Ellen MacArthur Foundation, 2019'
       }

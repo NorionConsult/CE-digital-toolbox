@@ -97,7 +97,7 @@ export const textiles = {
   slug: 'textiles',
   title: 'Textiles',
   description: 'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
-  image: '/images/textiles.jpg',
+  image: '/images/sectors/textiles.jpg',
   imageAlt: 'Textiles sector',
   navigation: [
     { label: 'Introduction', sectionId: textilesIntroSection.id },

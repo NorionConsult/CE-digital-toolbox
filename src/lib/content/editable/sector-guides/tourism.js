@@ -103,7 +103,7 @@ export const tourism = {
   slug: 'tourism',
   title: 'Tourism',
   description: 'This sector guide provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
-  image: '/images/tourism.jpg',
+  image: '/images/sectors/tourism.jpg',
   imageAlt: 'Tourism sector',
   navigation: [
     { label: 'Introduction', sectionId: tourismIntroSection.id },

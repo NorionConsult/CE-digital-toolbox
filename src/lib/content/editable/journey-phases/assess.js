@@ -20,7 +20,7 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase helps you assess your starting point. It includes tools and guidance for assessing circular economy maturity, identifying hotspots and establishing an initial baseline.',
-  icon: '/phase-icons/icon-assess.png',
+  icon: '/icons/phase-icons/icon-assess.png',
   iconAlt: 'Assess phase icon'
 };
 
@@ -95,7 +95,7 @@ const mappingResourcesSection = {
     'Mapping your resources is a critical step to creating a baseline. A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy, and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
   ],
   image: {
-    src: '/downloads/phase2/mapping-resources-input-output-example.png',
+    src: '/phase-content/phase-2/mapping-resources-input-output-example.png',
     alt: 'Example input and output map for a small packaging manufacturer',
     caption: 'Example input/output map showing resource flows through a production process.',
     zoomable: true

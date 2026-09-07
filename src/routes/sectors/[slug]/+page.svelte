@@ -6,6 +6,7 @@
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { sectorPage } from '$lib/content/editable/pages/sector-page.js';
   import { site } from '$lib/content/editable/global/site.js';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let data;
   const { sector, relatedResources, relatedCases } = data;
@@ -36,7 +37,11 @@
 <section class="sector-hero">
   <div class="container sector-hero-content">
     <a href="{base}/guided-pathways/#sectors" class="back-link sector-back-link">
-      <span class="back-link-arrow" aria-hidden="true"></span>
+      <span
+        class="back-link-arrow"
+        style={`--icon-url: url("${iconParkUrl('arrow-left')}");`}
+        aria-hidden="true"
+      ></span>
       {sectorPage.backLink}
     </a>
 
@@ -182,8 +187,8 @@
     width: 0.95em;
     aspect-ratio: 1;
     background-color: currentColor;
-    -webkit-mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
-    mask: url("https://api.iconify.design/icon-park-outline:arrow-left.svg") center / contain no-repeat;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
     transition: transform 0.18s ease;
   }
 

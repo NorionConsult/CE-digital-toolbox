@@ -20,7 +20,7 @@ const phaseCard = {
 const hero = {
   intro:
     'This phase supports implementation planning and delivery. It includes tools that can help users define actions, assign responsibilities, identify partners, set milestones and move selected circular solutions into practice.',
-  icon: '/phase-icons/icon-implement.png',
+  icon: '/icons/phase-icons/icon-implement.png',
   iconAlt: 'Implement phase icon'
 };
 

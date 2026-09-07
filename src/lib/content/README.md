@@ -305,13 +305,24 @@ about: 'Use **Circular Loop Designer** before scaling the idea.'
 
 ## Static Files
 
-Images and downloads live outside the content folder:
+Images, icons, phase page media and local tool files live outside the content
+folder:
 
 ```text
+static/icons/
+static/icons/icon-park/
+static/icons/phase-icons/
 static/images/
+static/images/sectors/
 static/images/cases/
 static/logos/
-static/downloads/
+static/phase-content/
+static/tools/
 ```
 
 Tools are generated as pages from `editable/tools/tool-catalogue.js`; they do not need PDF files unless a specific tool explicitly links to one.
+
+Icon Park SVG files are stored locally in `static/icons/icon-park/`.
+They use the pattern `icon-park-original-name.svg`, for example
+`icon-park-arrow-right.svg`. The SME journey phase image icons are stored in
+`static/icons/phase-icons/`.

@@ -1,10 +1,12 @@
 <script>
+  import { base } from '$app/paths';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import SectorCard from '$lib/components/cards/SectorCard.svelte';
   import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
   import JourneyPhaseDiagram from '$lib/components/sections/JourneyPhaseDiagram.svelte';
   import { guidedPathways } from '$lib/content/editable/pages/guided-pathways.js';
   import { site } from '$lib/content/editable/global/site.js';
+  import { iconParkUrl } from '$lib/utils/assets.js';
 </script>
 
 <svelte:head>
@@ -22,7 +24,7 @@
         <a href={button.href} class={`${button.style}-button`}>
           <span
             class="guided-pathways-hero-button-icon"
-            style={`--icon-url: url("https://api.iconify.design/${button.icon}.svg");`}
+            style={`--icon-url: url("${iconParkUrl(button.icon)}");`}
             aria-hidden="true"
           ></span>
           {button.label}

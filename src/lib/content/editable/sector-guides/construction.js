@@ -105,7 +105,7 @@ export const construction = {
   slug: 'construction',
   title: 'Construction',
   description: 'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
-  image: '/images/construction.jpg',
+  image: '/images/sectors/construction.jpg',
   imageAlt: 'Construction sector',
   navigation: [
     { label: 'Introduction', sectionId: constructionIntroSection.id },
