@@ -5,7 +5,7 @@
   */
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   export let sector;
 </script>

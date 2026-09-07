@@ -12,7 +12,7 @@ const phaseCard = {
   slug: 'assess',
   shortName: 'Phase 2',
   title: 'Assess',
-  colourClass: 'module-card-lime',
+  colourClass: 'phase-card-lime',
   description:
     'Provides tools to assess Circular Economy adoption, identify impacts and gaps, perform hotspot analysis, and set a baseline.'
 };
@@ -66,12 +66,8 @@ const pathwaySection = {
 
 /* 4. DETAILED SECTION 1: MATURITY ASSESSMENT */
 /*
-  MATURITY VISUALISATION TEXT:
-  Edit the five maturity levels and popup recommendations in:
-  src/lib/components/sections/MaturityCurve.svelte
-
   RELEVANT TOOLS:
-  Edit resources in src/lib/content/tool-catalogue.js.
+  Edit resources in src/lib/content/editable/tools/tool-catalogue.js.
   Add 'assess:maturity-assessment' to:
   placements.phaseSections
 */
@@ -88,7 +84,7 @@ const maturitySection = {
 /* 5. DETAILED SECTION 2: MAPPING RESOURCES */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/tool-catalogue.js, add 'assess:mapping-resources' to:
+  In src/lib/content/editable/tools/tool-catalogue.js, add 'assess:mapping-resources' to:
   placements.phaseSections
 */
 const mappingResourcesSection = {
@@ -99,7 +95,7 @@ const mappingResourcesSection = {
     'Mapping your resources is a critical step to creating a baseline. A baseline captures your business as it is today: all materials entering and leaving, energy used, water consumed, and waste generated. It gives you a factual starting point to measure improvement over time. || Many circular opportunities are invisible until you map your flows. A simple resource map reveals which inputs cost the most, where waste is highest, and where efficiency gains are possible. || On the image to the side, you can see an example of how an input/output map can look like. You can start by creating your own input/output map inspired by the example, as either a poster for multiple people to map on or an Excel sheet for a digital version. The map can be as simple or as detailed as you need, but it should capture the main flows of materials, energy, and water. || Whether you are a manufacturing, construction or service-based business with only one office, you can map your inputs that are required for your business to function. || If you need more advanced tools you can look into Material Flow Analysis (MFA) or the Stan tools.'
   ],
   image: {
-    src: '/downloads/phase2/M2_Baseline_mapping_MFexample.png',
+    src: '/downloads/phase2/mapping-resources-input-output-example.png',
     alt: 'Example input and output map for a small packaging manufacturer',
     caption: 'Example input/output map showing resource flows through a production process.',
     zoomable: true
@@ -109,7 +105,7 @@ const mappingResourcesSection = {
 /* 6. DETAILED SECTION 3: HOTSPOT ANALYSIS */
 /*
   RELEVANT TOOLS:
-  In src/lib/content/tool-catalogue.js, add 'assess:hotspot-analysis' to:
+  In src/lib/content/editable/tools/tool-catalogue.js, add 'assess:hotspot-analysis' to:
   placements.phaseSections
 */
 const hotspotSection = {

@@ -1,7 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
-  import { aboutPage } from '$lib/content/about-page.js';
+  import { aboutPage } from '$lib/content/editable/pages/about-page.js';
 </script>
 
 <svelte:head>

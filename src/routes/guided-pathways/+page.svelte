@@ -2,9 +2,9 @@
   import RichText from '$lib/components/formatting/RichText.svelte';
   import SectorCard from '$lib/components/cards/SectorCard.svelte';
   import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
-  import MaturityCurve from '$lib/components/sections/MaturityCurve.svelte';
-  import { guidedPathways } from '$lib/content/guided-pathways.js';
-  import { site } from '$lib/content/site.js';
+  import JourneyPhaseDiagram from '$lib/components/sections/JourneyPhaseDiagram.svelte';
+  import { guidedPathways } from '$lib/content/editable/pages/guided-pathways.js';
+  import { site } from '$lib/content/editable/global/site.js';
 </script>
 
 <svelte:head>
@@ -46,7 +46,7 @@
           <RichText text={guidedPathways.journeyPhasesSection.callToAction.text} />
         </div>
         <div class="journey-phase-cta-diagram">
-          <MaturityCurve />
+          <JourneyPhaseDiagram />
         </div>
       </article>
     {/if}
@@ -136,11 +136,11 @@
     padding-top: 28px;
   }
 
-  .journey-phase-cta-diagram :global(.maturity-curve) {
+  .journey-phase-cta-diagram :global(.journey-diagram-curve) {
     margin-top: 0;
   }
 
-  .journey-phase-cta-diagram :global(.maturity-visual) {
+  .journey-phase-cta-diagram :global(.journey-diagram-visual) {
     max-width: 100%;
   }
 

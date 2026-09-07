@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   export let caseStudy;
 

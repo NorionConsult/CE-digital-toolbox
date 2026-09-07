@@ -1,6 +1,8 @@
 /*
   Edit this file for global website text.
-  These values are used by the header, footer and browser page titles.
+  These values are used by the header, navigation and browser page titles.
+  Shared button labels are edited in buttons.js.
+  Footer logos and copyright text are edited in footer.js.
 
   ACRONYM WRITING GUIDE FOR EDITORS
   When an acronym appears in public website text, write the full term first and keep
@@ -38,6 +40,9 @@
   GCF = Green Climate Fund (GCF)
   EMIS = Energy Management Information System (EMIS)
 */
+import { buttonLabels } from './buttons.js';
+import { footer } from './footer.js';
+
 export const site = {
   name: 'Circular Economy Toolbox',
   headerLogo: {
@@ -64,32 +69,13 @@ export const site = {
       }
     ]
   },
-  /* Footer logos */
-  footerLogos: [
-    {
-      src: '/logos/EU-logo.png',
-      alt: 'European Union logo',
-      width: '185px'
-    },
-    {
-      src: '/logos/EU4Green-logo.png',
-      alt: 'EU4Green logo',
-      width: '72px'
-    }
-  ],
-  footerCopyright:
-    '© 2026 EU4 GreenRecovery East programme. All rights reserved. Licensed to the European Union under conditions.',
-  /* The labels object contains all the text labels used throughout the website. If changed once here, it will update everywhere. */
-  labels: {
-    viewPhase: 'View phase',
-    viewTools: 'View tools',
-    viewSector: 'View sector tools',
-    viewResource: 'View tool',
-    viewCase: 'View case',
-    openTool: 'Open tool',
-    downloadTool: 'Download tool',
-    openCase: 'Visit company site'
-  },
+  /*
+    These footer and button values are imported from their own editor files.
+    Keeping them here preserves the shared `site` object used by the page code.
+  */
+  footerLogos: footer.logos,
+  footerCopyright: footer.copyright,
+  labels: buttonLabels,
   /* The navigation array controls the main menu labels and links in the header.*/
   navigation: [
     { label: 'Follow guides', href: '/guided-pathways/' },

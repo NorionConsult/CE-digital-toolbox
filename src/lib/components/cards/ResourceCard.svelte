@@ -1,10 +1,10 @@
 <script>
   /*
-    The page link points to the resource slug in src/lib/content/tool-catalogue.js.
+    The page link points to the resource slug in src/lib/content/editable/tools/tool-catalogue.js.
   */
   import { base } from '$app/paths';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   export let resource;
   export let variant = 'default';

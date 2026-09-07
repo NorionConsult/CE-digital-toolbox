@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
-import { journeyPhases } from '$lib/content/journey-phases.js';
-import { resources } from '$lib/content/tool-catalogue.js';
+import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
+import { resources } from '$lib/content/editable/tools/tool-catalogue.js';
 
 /*
   Tells SvelteKit which dynamic journey phase pages should be generated as static HTML.

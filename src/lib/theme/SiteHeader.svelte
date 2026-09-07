@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   let menuOpen = false;
 </script>

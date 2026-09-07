@@ -4,8 +4,8 @@
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
-  import { sectorPage } from '$lib/content/sector-page.js';
-  import { site } from '$lib/content/site.js';
+  import { sectorPage } from '$lib/content/editable/pages/sector-page.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   export let data;
   const { sector, relatedResources, relatedCases } = data;

@@ -5,62 +5,62 @@
   */
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
 
   export let journeyPhase;
 </script>
 
-<article class="module-card {journeyPhase.colourClass}">
+<article class="phase-card {journeyPhase.colourClass}">
   <div>
-    <div class="module-number">{journeyPhase.shortName}</div>
+    <div class="phase-number">{journeyPhase.shortName}</div>
     <h3>{journeyPhase.title}</h3>
     <p><InlineText text={journeyPhase.description} /></p>
   </div>
 
-  <a href="{base}/journey-phases/{journeyPhase.slug}/" class="module-link">
+  <a href="{base}/journey-phases/{journeyPhase.slug}/" class="phase-link">
     {site.labels.viewPhase}
     <span class="link-arrow" aria-hidden="true"></span>
   </a>
 </article>
 
 <style>
-  .module-card {
+  .phase-card {
     min-height: 320px;
     padding: 32px;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--module-bg);
-    border: 2px solid var(--module-border);
-    color: var(--module-text);
+    background-color: var(--phase-bg);
+    border: 2px solid var(--phase-border);
+    color: var(--phase-text);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  .module-card:hover {
+  .phase-card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow);
   }
 
-  .module-number {
+  .phase-number {
     font-weight: 700;
     font-size: 0.95rem;
     opacity: 0.8;
     margin-bottom: 20px;
   }
 
-  .module-card h3 {
+  .phase-card h3 {
     font-size: var(--home-journey-phase-card-title-size, 2.4rem);
     text-transform: uppercase;
     margin-bottom: 16px;
     color: inherit;
   }
 
-  .module-card p {
+  .phase-card p {
     margin-bottom: 28px;
   }
 
-  .module-link {
+  .phase-link {
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -81,17 +81,17 @@
     transition: transform 0.18s ease;
   }
 
-  .module-link:hover {
+  .phase-link:hover {
     color: var(--green-secondary);
   }
 
-  .module-link:hover .link-arrow,
-  .module-link:focus-visible .link-arrow {
+  .phase-link:hover .link-arrow,
+  .phase-link:focus-visible .link-arrow {
     transform: translateX(3px);
   }
 
   @media (max-width: 640px) {
-    .module-card {
+    .phase-card {
       min-height: 260px;
     }
   }

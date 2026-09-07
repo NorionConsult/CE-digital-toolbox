@@ -12,9 +12,9 @@ const phaseCard = {
   slug: 'monitor',
   shortName: 'Phase 6',
   title: 'Monitor',
-  colourClass: 'module-card-outline',
+  colourClass: 'phase-card-outline',
   description:
-    'Selected tools for ongoing monitoring of solutions, including data gathering, selection of relevant indicators, and re-diagnosis after implementation.'
+    'Selected tools for ongoing monitoring of solutions, including data gathering, selection of relevant indicators, and reassessment after implementation.'
 };
 
 const hero = {

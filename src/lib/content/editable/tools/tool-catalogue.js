@@ -16,7 +16,7 @@
   Keep each id unique and do not change it after a tool has been published. This can be used for internal analytics.
 
 	  Normalization, filter lists and display cleanup are handled in
-	  src/lib/content/tool-catalogue-utils.js. Editors should not edit that file.
+	  src/lib/content/technical/tool-catalogue-utils.js. Editors should not edit that file.
 
 	  TOOL BUTTON TEXT:
 	  Editors only need to update `toolLink`. If the link ends in a downloadable
@@ -29,7 +29,7 @@
 	  You can also use an array of strings if you prefer one paragraph per line.
 	*/
 
-import { buildToolCatalogue } from './tool-catalogue-utils.js';
+import { buildToolCatalogue } from '../../technical/tool-catalogue-utils.js';
 
 const toolCatalogue = [
   {
@@ -438,7 +438,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '45-60 minutes',
     preparationNeeded: 'Project data, operations info',
-    output: 'Structured diagnosis of green economy readiness with scored indicators.',
+    output: 'Structured assessment of green economy readiness with scored indicators.',
     bestFor: 'small-medium enterprises (SMEs) with some sustainability activity looking for a more structured review.',
     format: 'Digital tool',
     toolLink: 'https://igosolution.org/'
@@ -813,7 +813,7 @@ const toolCatalogue = [
     provider: 'Interreg',
     access: 'Sign up',
     timeRequired: '2-4 hours',
-    preparationNeeded: 'Basic awareness of energy, water, waste, sourcing practices and stakeholder relationships is helpful.',
+    preparationNeeded: 'Basic understanding of energy, water, waste, sourcing practices and stakeholder relationships is helpful.',
     output: 'Circularity score, question breakdown, collaboration rating and best-practice dataset',
     bestFor: 'Hotels, guesthouses and accommodation providers of all sizes',
     format: 'Digital tool',
@@ -2006,7 +2006,7 @@ const toolCatalogue = [
     slug: 'organic-armenia-all-green-circular-economy',
     title: 'Organic Armenia - All Green Educational Platform',
     description:
-      'Webpage introducing circular economy principles and their link to organic agriculture, with a downloadable awareness-raising booklet.',
+      'Webpage introducing circular economy principles and their link to organic agriculture, with a downloadable introductory booklet.',
     about:
       'Part of Organic Armenia\'s All Green educational platform, this page explains circular economy principles as an alternative to the linear produce-use-discard model and connects them to organic agriculture practices such as composting, returning crop residues to soil and renewable energy use. || It links to the Armenian booklet Circular Economy and Organic Agriculture: Their Connection, Composting, prepared under the EU-funded Circular Future programme in cooperation with Impact Hub Yerevan and Environment and Health NGO.',
     journeyPhases: ['Learn'],
@@ -2022,7 +2022,7 @@ const toolCatalogue = [
     access: 'Free',
     timeRequired: '20-30 minutes',
     preparationNeeded: 'None',
-    output: 'Awareness resource and downloadable booklet',
+    output: 'Introductory resource and downloadable booklet',
     bestFor:
       'Farmers, smallholders and agri-businesses new to circular economy concepts, particularly in organic and agricultural value chains.',
     format: 'Downloadable PDF',
@@ -2197,31 +2197,6 @@ const toolCatalogue = [
     format: 'Excel template',
     toolLink:
       'https://www.thinkstep-anz.com/services/circular-economy/material-circularity-indicator-mci-calculator/'
-  },
-  {
-    id: 'resource-072',
-    slug: 'digital-twin-for-the-reconstruction-of-ukraine',
-    title: 'Digital Twin for the Reconstruction of Ukraine',
-    description:
-      'Supports authorities across the reconstruction cycle with AI-generated city models and scenarios.',
-    about:
-      'This European Commission AI Office initiative is described as an AI platform that can generate a 3D virtual replica of Ukrainian cities, support damage assessment from imagery and reports, compare reconstruction scenarios, and calculate reconstruction costs by damage level, materials and building type.',
-    journeyPhases: ['Assess'],
-    placements: {
-      sectors: ['construction'],
-      sectorSections: ['construction:relevant-tools']
-    },
-    sector: 'Construction',
-    effort: 'Low',
-    language: 'English',
-    provider: 'AI Office of the European Commission (DG CNECT)',
-    access: 'Sign up',
-    timeRequired: '10-15 minutes to read the description',
-    preparationNeeded: 'N/A',
-    output: 'Damage assessment, reconstruction scenarios and cost estimates',
-    bestFor: 'Municipalities, urban planners and construction sector partners',
-    format: 'AI platform generating a 3D virtual replica of cities',
-    toolLink: 'https://ustcoalition.com.ua/en/kalkulyator-rozrahunkovoyi-kilkosti-vidhodiv-vid-rujnuvan/'
   },
 ];
 

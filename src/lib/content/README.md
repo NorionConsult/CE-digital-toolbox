@@ -1,79 +1,111 @@
 # Editing Website Content
 
-Most day-to-day website edits happen in this folder.
+Most day-to-day website edits happen in:
 
 ```text
-site.js              Global site name, header logo, header partner logos, navigation, footer logos and shared button labels
-home.js              Home page text
-guided-pathways.js   Guided pathways page hero, journey phase cards and sector tool cards
-about-page.js        About page title and text paragraphs
-contact-page.js      Contact page text, form button URLs and contact email links
-journey-phases.js    Loads the current language journey phase files
-sectors.js           Loads the current language sector files
-tool-catalogue.js    Tools, taxonomy, page text and tool links
-tools-page.js        Tools page intro, filter labels and empty state text
-cases.js             Case cards, taxonomy and automatically generated case pages
-cases-page.js        Cases page intro, filter labels and empty state text
-journey-phase-page.js Labels shared by all journey phase detail pages
-sector-page.js       Labels shared by all sector tool pages
-
-en/journey-phases/   English journey phase content, one file per journey phase page
-en/sectors/          English sector content, one file per sector page
+src/lib/content/editable/
 ```
+
+Technical helper files live in:
+
+```text
+src/lib/content/technical/
+```
+
+Editors should normally avoid the technical folder unless a developer asks for a specific change there.
+
+## Folder Map
+
+```text
+editable/global/site.js              Site name, header logo, partner logos, navigation and acronym guide
+editable/global/buttons.js           Shared button labels used across the website
+editable/global/footer.js            Footer logos and copyright text
+
+editable/pages/home.js               Home page text
+editable/pages/guided-pathways.js    Guided pathways page text and overview sections
+editable/pages/tools-page.js         Tools catalogue intro, filters and empty state text
+editable/pages/cases-page.js         Cases page intro, filters and empty state text
+editable/pages/about-page.js         About page text and bottom call to action
+editable/pages/contact-page.js       Contact page text, form URLs and contact email links
+editable/pages/journey-phase-page.js Labels shared by all journey phase pages
+editable/pages/sector-page.js        Labels shared by all sector guide pages
+
+editable/journey-phases/             One file per SME journey phase page
+editable/sector-guides/              One file per sector guide page
+editable/tools/tool-catalogue.js      Tool cards, tool pages, taxonomy and tool links
+editable/cases/cases.js              Case cards, taxonomy and case pages
+
+technical/tool-catalogue-utils.js     Tool normalisation, filters and automatic button behaviour
+technical/phase-badge-colours.js      Journey phase badge colour matching
+technical/registries/journey-phases.js Ordered list of journey phase files
+technical/registries/sector-guides.js  Ordered list of sector guide files
+```
+
+## Global Text
+
+To edit text used everywhere, open:
+
+```text
+src/lib/content/editable/global/
+```
+
+Use `site.js` for the site name, header logo, header partner logos and main menu. Use `buttons.js` for shared button labels such as `View phase`, `View tool` and `Download tool`. Use `footer.js` for footer logos and copyright text.
 
 ## Editing Contact Emails
 
 To change the email addresses shown on the Contact page, open:
 
 ```text
-src/lib/content/contact-page.js
+src/lib/content/editable/pages/contact-page.js
 ```
 
-Edit the `contactEmails` list. Change only the `label` and `email` text unless
-you want to change which contact is highlighted. The website automatically uses
-the `email` value to create the clickable mail link. Country flags are set with
-`flagIcon`; these use the Iconify `circle-flags` icon set.
+Edit the `contactEmails` list. Change only the `label` and `email` text unless you want to change which contact is highlighted. The website automatically uses the `email` value to create the clickable mail link. Country flags are set with `flagIcon`; these use the Iconify `circle-flags` icon set.
 
-## Editing The Guided Pathways Page
+## Guided Pathways Page
 
 To edit the page shown at `/guided-pathways/`, open:
 
 ```text
-src/lib/content/guided-pathways.js
+src/lib/content/editable/pages/guided-pathways.js
 ```
 
 This file is organised in the same order as the page:
 
 ```text
 1. Page hero
-2. Journey phases section intro
-3. Journey phase cards
-4. Sector tools section intro
-5. Sector tool cards
+2. SME journey section
+3. Interactive journey diagram text
+4. Sector tools section
 ```
 
-Edit the text, image paths and card descriptions there when changing the
-overview page. The card `slug` values connect each card to its existing page
-URL, so only change a `slug` if the matching page URL is also being changed.
+The detailed journey phase pages and sector guide pages are edited in their own folders:
 
-The individual journey phase pages and sector pages are still edited in their
-own files. This keeps detailed page content separate while making the Guided
-pathways overview page editable from one place.
+```text
+src/lib/content/editable/journey-phases/
+src/lib/content/editable/sector-guides/
+```
+
+## Journey Phase Pages
 
 To edit one journey phase page, open its file:
 
 ```text
-src/lib/content/en/journey-phases/assess.js
+src/lib/content/editable/journey-phases/learn.js
+src/lib/content/editable/journey-phases/assess.js
+src/lib/content/editable/journey-phases/explore.js
+src/lib/content/editable/journey-phases/evaluate.js
+src/lib/content/editable/journey-phases/implement.js
+src/lib/content/editable/journey-phases/monitor.js
 ```
 
 Each journey phase file follows the order in which content appears on the website:
 
 ```text
-1. Home page journey phase card and journey phase hero
-2. Hero section buttons
+1. Home page journey phase card and page hero
+2. Hero buttons
 3. Pathway overview and pathway cards
 4. Detailed sections in page order
-5. Phase Summary
+5. Phase summary
 6. Download paths
 ```
 
@@ -82,51 +114,26 @@ Important editing notes:
 - Edit visible text, lists, image paths and captions freely.
 - Keep `slug`, `sectionId`, `id`, `resourceTag` and `colourClass` unchanged unless the website structure is also being updated.
 - A pathway card and its detailed section are connected when `sectionId` and `id` contain the same value.
-- `_shared.js` assembles the page data and normally should not be edited.
+- `_shared.js` assembles shared journey phase data and normally should not be edited.
+- Page order is controlled in `src/lib/content/technical/registries/journey-phases.js`.
 
 ### Learn Phase Learning Resource Cards
 
-The Learn phase has a special learning resources section for e-courses and
-introductory learning links. Edit it here:
+The Learn phase has a special learning resources section for e-courses and introductory learning links. Edit it here:
 
 ```text
-src/lib/content/en/journey-phases/learn.js
+src/lib/content/editable/journey-phases/learn.js
 ```
 
-Inside `LearningresourcesSection`, edit `learningResources.cards`. Each card is
-shown directly on the Learn page and does not create a separate subpage.
-Each card creates one green learning-resource container: the card preview on
-the left and the matching explanation text on the right. Copy one complete card
-object to add another course:
+Inside `LearningresourcesSection`, edit `learningResources.cards`. Each card is shown directly on the Learn page and does not create a separate tool page.
 
-```js
-{
-  courseTitle: 'Course title here',
-  shortDescription: 'Short description here.',
-  language: 'English',
-  provider: 'Provider name',
-  url: 'https://example.com',
-  buttonLabel: 'Open resource',
-  aboutCourse: [
-    'Short explanation of the course.'
-  ],
-  learningGoals: [
-    'Objective 1',
-    'Objective 2'
-  ],
-  whyTakeCourse: [
-    'Why this course is useful.'
-  ]
-}
+Normal tools are edited in:
+
+```text
+src/lib/content/editable/tools/tool-catalogue.js
 ```
 
-The right-side headings are edited in `learningResources.labels`. Keep the
-current labels `What is this?`, `Learning goals` and
-`Why should I take this course?` if you want the section structure to stay the
-same.
-
-Normal tools are still edited in `tool-catalogue.js`. To place a normal tool in
-the Learn page's Relevant tools section, add this tag to the tool:
+To place a normal tool in the Learn page's Relevant tools section, add this tag to the tool:
 
 ```js
 placements: {
@@ -134,19 +141,15 @@ placements: {
 }
 ```
 
-To edit one sector page, open its file:
+## Sector Guide Pages
+
+To edit one sector guide page, open its file:
 
 ```text
-src/lib/content/en/sectors/construction.js
-```
-
-Current English sector files:
-
-```text
-src/lib/content/en/sectors/food-and-agriculture.js
-src/lib/content/en/sectors/construction.js
-src/lib/content/en/sectors/textiles.js
-src/lib/content/en/sectors/tourism.js
+src/lib/content/editable/sector-guides/food-and-agriculture.js
+src/lib/content/editable/sector-guides/construction.js
+src/lib/content/editable/sector-guides/textiles.js
+src/lib/content/editable/sector-guides/tourism.js
 ```
 
 Each sector file follows the order in which content appears on the website:
@@ -160,20 +163,12 @@ Each sector file follows the order in which content appears on the website:
 6. Relevant tools
 ```
 
-Each section has a sector-specific name such as `textilesIntroSection` or
-`textilesRelevantToolsSection`, making it easy to find the correct content.
-
-### Editing Sector Content
-
 The sector files contain comments above every editable section. In general:
 
 - Edit `paragraphs` to change the Introduction to sector text.
-- Edit `featuredCaseNames` inside the sector's `CasesSection` to choose the
-  three case cards shown on that sector guide page. Use the visible company/case
-  names from `src/lib/content/cases.js`.
-- Edit `intro`, `barriers` and `opportunities` inside the sector's
-  `BarriersSection`. Barriers and opportunities can include sources directly
-  next to each bullet:
+- Edit `featuredCaseNames` inside the sector's `CasesSection` to choose the case cards shown on that sector guide page. Use the visible company or case names from `src/lib/content/editable/cases/cases.js`.
+- Edit `intro`, `barriers` and `opportunities` inside the sector's `BarriersSection`.
+- Barriers and opportunities can include sources directly next to each bullet:
 
 ```js
 {
@@ -182,34 +177,15 @@ The sector files contain comments above every editable section. In general:
 }
 ```
 
-  If no source is available yet, keep `source: ''`.
-- Edit the final sector object to change the home-page card and hero
-  `description`, image path or image description.
-
-Keep these technical connection values unchanged unless the page structure is
-also being deliberately changed:
+Relevant tools are connected from each tool's `placements` block in:
 
 ```text
-id
-slug
-sectionId
+src/lib/content/editable/tools/tool-catalogue.js
 ```
 
-Sector case cards are not written inside the sector file. They are stored in:
+Sector guide order is controlled in `src/lib/content/technical/registries/sector-guides.js`.
 
-```text
-src/lib/content/cases.js
-```
-
-A case appears automatically on a sector page when its `sector` matches the
-sector title, for example:
-
-```js
-sector: 'Food and Agriculture',
-```
-
-Relevant tools are also connected automatically. Edit a tool's `placements`
-inside `tool-catalogue.js` and add the sector slug:
+Example:
 
 ```js
 placements: {
@@ -219,116 +195,32 @@ placements: {
 }
 ```
 
-To add a new journey phase or sector, copy an existing file in the relevant folder and
-add it to that folder's `index.js`.
-
-For future translations, create matching language folders such as:
-
-```text
-src/lib/content/hy/journey-phases/
-src/lib/content/uk/journey-phases/
-src/lib/content/ro/journey-phases/
-```
-
-Keep the same filenames and exported fields in each language folder so the page templates can stay global.
-
-Download files used by specific tools live in:
-
-```text
-static/downloads/
-```
-
-Tools are generated as pages from `tool-catalogue.js`; they do not need PDF files
-unless a specific tool explicitly links to one.
-
 ## Adding Cases
 
 To add a case, open:
 
 ```text
-src/lib/content/cases.js
+src/lib/content/editable/cases/cases.js
 ```
 
-Copy one complete `createCase({ ... })` block and update its values. Give it a
-unique `id` and `slug`. The `slug` becomes its page URL.
+Copy one complete `createCase({ ... })` block and update its values. Give it a unique `id` and `slug`. The `slug` becomes its page URL.
 
-Each case uses these editor-facing fields:
+Use arrays when a case has more than one country, sector or R strategy:
 
 ```js
-companyName: 'Company name',
 country: ['Netherlands', 'Denmark'],
 sector: ['Textiles', 'Construction'],
-rStrategies: ['Reuse (R3)', 'Recycle (R8)'],
-rStrategyDescription: 'Optional explanation of how the R strategy applies.',
-summary: 'Short text shown on the case card and in the page hero.',
-description: 'Longer text shown on the individual case page.',
-caseLink: 'https://example.com',
-image: '/images/cases/example-image.jpg',
-imageAlt: 'Short description of the image'
-```
-
-Use arrays when a case has more than one country, sector or R strategy. For
-example:
-
-```js
-country: ['Netherlands', 'Denmark'],
-sector: ['Plastics', 'Construction'],
 rStrategies: ['Reuse (R3)', 'Recycle (R8)']
 ```
 
-Arrays are the recommended format because they are easiest to read and least
-likely to break. The website also understands comma, semicolon and spaced slash
-separators if older text has been pasted in.
-
-The website automatically shows these as comma-separated values and uses each
-item separately in the filters. This means a case with
-`country: ['Netherlands', 'Denmark']` appears when the user filters for
-`Netherlands`, `Denmark` or `All`.
-
-Filtering is not case-sensitive. If an editor writes `portugal`, the filter
-option is normalised to `Portugal` so duplicate options are avoided.
-
-The `rStrategies` field is a list. Add one or more strategies between square
-brackets. They are shown separated by commas on the case card and in the
-taxonomy box. The Cases page R strategy filter is created automatically from
-these values.
-
-The `rStrategyDescription` field is optional. Leave it as an empty string if
-there is no extra explanation. When it has text, it appears above
-`Description of case` on the individual case page.
-
-The `caseLink` field controls the "Visit company site" button in the case page
-hero. Leave it as an empty string if there is no external case source yet.
-
-The `image` and `imageAlt` fields are optional. If an image path is added, the
-image appears in the case page hero. Store case images in:
-
-```text
-static/images/cases/
-```
-
-One case record automatically creates:
-
-- a card on the Cases page
-- a detail page at `/cases/the-case-slug/`
-- a card in the Case examples section of the matching sector tool
-
-The sector connection uses the case's `sector` value. For example:
-
-```js
-sector: 'Textiles',
-```
-
-Sector badge colours are assigned automatically. Food and Agriculture,
-Construction, Textiles and Tourism have fixed theme colours. New sector names
-are also supported and receive a consistent generated outline colour.
+The website automatically shows these as comma-separated values and uses each item separately in the filters. Filtering is not case-sensitive.
 
 ## Adding Tools
 
 To add a tool, open:
 
 ```text
-src/lib/content/tool-catalogue.js
+src/lib/content/editable/tools/tool-catalogue.js
 ```
 
 Copy one complete `{ ... }` block and paste it after an existing tool. Then:
@@ -338,137 +230,7 @@ Copy one complete `{ ... }` block and paste it after an existing tool. Then:
 3. Set its journey phase badges using `journeyPhases`.
 4. Update `placements` if it should also appear in a journey phase or sector page.
 
-The `slug` becomes the page URL. Use lowercase words separated by hyphens.
-
-The `id` is the stable internal identifier for the tool. It is not shown on the
-website. Keep every `id` unique and avoid changing it after a tool has been
-published, because it gives the tool a stable identity inside the catalogue.
-
-The tool page button text is automatic. If `toolLink` ends in a downloadable file
-type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says
-`Download tool`. Other links say `Open tool`. Editors only need to update
-`toolLink`; there is no separate button text field to maintain.
-
-### Formatting Long Paragraph Text
-
-These formatting rules work in long editable text fields, including:
-
-- tool `about` text
-- SME journey phase paragraph fields such as `paragraphs`, `bodyParagraphs`,
-  `closingParagraphs` and `summaryParagraphs`
-- sector guide intro and paragraph fields
-- case `summary`, `description` and `rStrategyDescription`
-
-Do not use these formatting shortcuts in technical fields such as `id`, `slug`,
-`sectionId`, image paths, URLs, taxonomy values, button labels or titles.
-
-To make two paragraphs while keeping the text in one field, write `||` between
-paragraphs:
-
-```js
-about: 'First paragraph text. || Second paragraph text.'
-```
-
-You can also write it as a list if that feels easier:
-
-```js
-about: [
-  'First paragraph text.',
-  'Second paragraph text.'
-]
-```
-
-To add a link inside the text, use this format:
-
-```js
-about: 'Read the [official guide](https://example.com/guide) before starting.'
-```
-
-To add a numbered list, use `||` before each item and start each item with
-`1.`, `2.`, `3.`:
-
-```js
-about: 'Use this tool in three steps: || 1. Map the current process || 2. Identify gaps || 3. Select next actions'
-```
-
-To add a bulleted list, use `||` before each item and start each item with `-`:
-
-```js
-about: 'This tool is useful for: || - quick screening || - team workshops || - early planning'
-```
-
-Bold text still works with double asterisks:
-
-```js
-about: 'Use **Circular Loop Designer** before scaling the idea.'
-```
-
-### Tool Card Fields
-
-Use `effort` to show how demanding the tool is expected to be:
-
-```js
-effort: 'Low'
-effort: 'Medium'
-effort: 'High'
-```
-
-The effort value appears first on tool cards, where the card previously showed
-Sector. Sector is still stored in the tool record and still appears in the
-taxonomy box on each individual tool page.
-
-The `format` field is also shown in the taxonomy box on each individual tool
-page, directly below Effort. Use a short label such as `PDF`, `Digital tool`,
-`Print out`, `Workshop`, `Miro board` or `E-learning course`.
-
-### Filter Values
-
-The Tools page filter values and the Effort card label are cleaned
-automatically for editors. This means capitalisation does not create duplicate
-filter options:
-
-```js
-language: 'enGlish'
-```
-
-will still appear as `English` in the filter. The same clean-up applies to:
-
-- `journeyPhases`
-- `sector`
-- `effort`
-- `language`
-- `access`
-
-For tools available in more than one language, write the languages as a simple
-comma-separated or slash-separated list:
-
-```js
-language: 'English, Dutch'
-// or
-language: 'English/Dutch'
-```
-
-The tool card and tool detail page will still show the actual languages entered
-by the editor. If more than three languages are listed, the card displays
-`Multiple` to keep the card readable, while the detail page shows the full list.
-
-The public language filter is intentionally limited to:
-
-```text
-English
-Armenian
-Romanian
-Ukrainian
-```
-
-This means an editor can still write additional languages such as Dutch, Spanish
-or Georgian when that is accurate for a tool, but those extra languages will not
-be added as public filter choices.
-
-### Journey Phase Badge Colours
-
-Badge colours are assigned automatically from the matching journey phase colour.
-Editors do not need to add colour codes or CSS classes.
+The tool page button text is automatic. If `toolLink` ends in a downloadable file type such as `.pdf`, `.docx`, `.pptx`, `.xlsx`, `.csv` or `.zip`, the button says `Download tool`. Other links say `Open tool`.
 
 Use these exact phase names:
 
@@ -481,49 +243,75 @@ Implement
 Monitor
 ```
 
-New tools should always be assigned to at least one journey phase:
+For tools available in more than one language, write the languages as a comma-separated or slash-separated list:
 
 ```js
-journeyPhases: ['Monitor']
+language: 'English, Dutch'
+// or
+language: 'English/Dutch'
 ```
 
-For tools that belong to more than one phase, include all relevant phases in
-the same list:
+The public language filter is intentionally limited to:
+
+```text
+English
+Armenian
+Romanian
+Ukrainian
+```
+
+Editors can still write additional languages when that is accurate for a tool. Those extra languages remain visible on the tool card and tool page, but they are not added as public filter choices.
+
+## Formatting Long Paragraph Text
+
+These formatting rules work in long editable text fields, including:
+
+- tool `about` text
+- SME journey phase paragraph fields such as `paragraphs`, `bodyParagraphs`, `closingParagraphs` and `summaryParagraphs`
+- sector guide intro and paragraph fields
+- case `summary`, `description` and `rStrategyDescription`
+
+Do not use these formatting shortcuts in technical fields such as `id`, `slug`, `sectionId`, image paths, URLs, taxonomy values, button labels or titles.
+
+To make two paragraphs while keeping the text in one field, write `||` between paragraphs:
 
 ```js
-journeyPhases: ['Monitor', 'Evaluate', 'Explore'],
+about: 'First paragraph text. || Second paragraph text.'
 ```
 
-This example automatically displays three separately coloured badges on the
-Tools card, embedded journey phase/sector cards and the resource page. Global
-journey phase colours are maintained in `src/app.css`.
-
-### Placing Cards on Other Pages
-
-To control where a tool appears, edit its `placements` block:
+To add a link inside the text, use this format:
 
 ```js
-placements: {
-  phaseSections: ['assess:baseline-mapping'],
-  sectors: ['construction'],
-  sectorSections: ['construction:relevant-tools']
-}
+about: 'Read the [official guide](https://example.com/guide) before starting.'
 ```
 
-- `phaseSections` places tools under a particular journey phase subsection.
-- `sectors` places tools in the general Relevant Tools area of a sector page.
-- `sectorSections` places tools in a named sector subsection. The current tool
-  section ID is `relevant-tools`.
-- Several tags can be added when one tool belongs in several places.
+To add a numbered list, use `||` before each item and start each item with `1.`, `2.`, `3.`:
 
-Sector images live in:
+```js
+about: 'Use this tool in three steps: || 1. Map the current process || 2. Identify gaps || 3. Select next actions'
+```
+
+To add a bulleted list, use `||` before each item and start each item with `-`:
+
+```js
+about: 'This tool is useful for: || - quick screening || - team workshops || - early planning'
+```
+
+Bold text works with double asterisks:
+
+```js
+about: 'Use **Circular Loop Designer** before scaling the idea.'
+```
+
+## Static Files
+
+Images and downloads live outside the content folder:
 
 ```text
 static/images/
-```
-
-Footer logos live in:
-
-```text
+static/images/cases/
 static/logos/
+static/downloads/
 ```
+
+Tools are generated as pages from `editable/tools/tool-catalogue.js`; they do not need PDF files unless a specific tool explicitly links to one.

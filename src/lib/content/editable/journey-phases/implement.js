@@ -12,7 +12,7 @@ const phaseCard = {
   slug: 'implement',
   shortName: 'Phase 5',
   title: 'Implement',
-  colourClass: 'module-card-dark',
+  colourClass: 'phase-card-dark',
   description:
     'Tools that support planning, ownership, milestones, partnerships and practical delivery of selected circular economy actions.'
 };

@@ -1,8 +1,8 @@
 <script>
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
-  import { cases, caseCountries, caseRStrategies, caseSectors } from '$lib/content/cases.js';
-  import { casesPage } from '$lib/content/cases-page.js';
+  import { cases, caseCountries, caseRStrategies, caseSectors } from '$lib/content/editable/cases/cases.js';
+  import { casesPage } from '$lib/content/editable/pages/cases-page.js';
 
   let selectedSector = '';
   let selectedCountry = '';

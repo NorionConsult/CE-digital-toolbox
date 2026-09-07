@@ -1,7 +1,7 @@
 /*
   Edit this file for text shared by all journey phase detail pages.
   Individual journey phase names and descriptions are edited in
-  src/lib/content/en/journey-phases/.
+  src/lib/content/editable/journey-phases/.
 */
 export const journeyPhasePage = {
   backLink: 'Back to journey phases',

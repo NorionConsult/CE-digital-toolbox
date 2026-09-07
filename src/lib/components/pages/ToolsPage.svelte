@@ -1,8 +1,8 @@
 <script>
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
-  import { toolsPage } from '$lib/content/tools-page.js';
-  import { resources, journeyPhases, sectors, languages, accessOptions } from '$lib/content/tool-catalogue.js';
+  import { toolsPage } from '$lib/content/editable/pages/tools-page.js';
+  import { resources, journeyPhases, sectors, languages, accessOptions } from '$lib/content/editable/tools/tool-catalogue.js';
 
   let selectedPhase = '';
   let selectedSector = '';

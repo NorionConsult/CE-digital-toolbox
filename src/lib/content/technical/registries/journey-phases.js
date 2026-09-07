@@ -1,9 +1,9 @@
-import { learn } from './learn.js';
-import { assess } from './assess.js';
-import { explore } from './explore.js';
-import { evaluate } from './evaluate.js';
-import { implement } from './implement.js';
-import { monitor } from './monitor.js';
+import { learn } from '../../editable/journey-phases/learn.js';
+import { assess } from '../../editable/journey-phases/assess.js';
+import { explore } from '../../editable/journey-phases/explore.js';
+import { evaluate } from '../../editable/journey-phases/evaluate.js';
+import { implement } from '../../editable/journey-phases/implement.js';
+import { monitor } from '../../editable/journey-phases/monitor.js';
 
 /**
  * @typedef {{
@@ -40,7 +40,7 @@ import { monitor } from './monitor.js';
  *     title: string;
  *     items: { title: string; icon: string; text: string }[];
  *   };
- *   m3DfxFramework?: {
+ *   designForXFramework?: {
  *     title: string;
  *     intro: string;
  *     source?: string;
@@ -52,7 +52,7 @@ import { monitor } from './monitor.js';
  *       regulation: string;
  *     }[];
  *   };
- *   m3ProcessRedesign?: {
+ *   processRedesign?: {
  *     title: string;
  *     intro: string;
  *     footer?: string;
@@ -60,7 +60,7 @@ import { monitor } from './monitor.js';
  *   };
  *   baselineCards?: { title: string; text?: string; items?: string[]; icon: string }[];
  *   closingParagraphs?: string[];
- *   m3WheelWorkshop?: {
+ *   circularStrategiesWorkshop?: {
  *     subtitle: string;
  *     title: string;
  *     icon: string;
@@ -84,7 +84,7 @@ import { monitor } from './monitor.js';
  *       tip: string;
  *     }[];
  *   };
- *   m4Questionnaire?: {
+ *   strategyShortlistQuestionnaire?: {
  *     title: string;
  *     introduction: string;
  *     businessModelLabel: string;
@@ -138,7 +138,7 @@ import { monitor } from './monitor.js';
  */
 
 /*
-  Edit the individual files in this folder for page text.
+  This technical registry gathers the editable journey phase files.
   Keep this list in the order the journey phases should appear on the website.
 */
 /** @type {JourneyPhaseContent[]} */

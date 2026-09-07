@@ -131,7 +131,7 @@
         },
         pagebreak: {
           mode: ['css', 'legacy'],
-          avoid: ['.m4-questionnaire-pdf-category', '.m4-questionnaire-pdf-result']
+          avoid: ['.strategy-shortlist-questionnaire-pdf-category', '.strategy-shortlist-questionnaire-pdf-result']
         }
       };
 
@@ -145,13 +145,13 @@
   }
 </script>
 
-<section class="m4-questionnaire" aria-labelledby="m4-questionnaire-title">
-  <header class="m4-questionnaire-heading">
-    <h3 id="m4-questionnaire-title">{title}</h3>
+<section class="strategy-shortlist-questionnaire" aria-labelledby="strategy-shortlist-questionnaire-title">
+  <header class="strategy-shortlist-questionnaire-heading">
+    <h3 id="strategy-shortlist-questionnaire-title">{title}</h3>
     <p>{introduction}</p>
   </header>
 
-  <label class="m4-questionnaire-model-selector">
+  <label class="strategy-shortlist-questionnaire-model-selector">
     <span>{businessModelLabel}</span>
     <select bind:value={selectedBusinessModel} on:change={handleBusinessModelChange}>
       <option value="" disabled>{businessModelPlaceholder}</option>
@@ -162,12 +162,12 @@
     </select>
   </label>
 
-  <div class="m4-questionnaire-card">
+  <div class="strategy-shortlist-questionnaire-card">
     {#each categories as category, categoryIndex}
-      <section class="m4-questionnaire-category">
+      <section class="strategy-shortlist-questionnaire-category">
         <h4>{category.title}</h4>
 
-        <div class="m4-questionnaire-questions">
+        <div class="strategy-shortlist-questionnaire-questions">
           {#each category.questions as question, questionIndex}
             {@const answerIndex =
               categories
@@ -179,13 +179,13 @@
             {@const questionNoLabel =
               typeof question === 'string' ? noLabel : question.noLabel ?? noLabel}
             <div
-              class="m4-questionnaire-question"
+              class="strategy-shortlist-questionnaire-question"
               role="group"
-              aria-labelledby={`m4-question-${answerIndex}`}
+              aria-labelledby={`strategy-shortlist-question-${answerIndex}`}
             >
-              <p id={`m4-question-${answerIndex}`}>{questionText}</p>
+              <p id={`strategy-shortlist-question-${answerIndex}`}>{questionText}</p>
 
-              <div class="m4-questionnaire-answer-buttons">
+              <div class="strategy-shortlist-questionnaire-answer-buttons">
                 <button
                   type="button"
                   class:active={answers[answerIndex] === true}
@@ -213,7 +213,7 @@
   </div>
 
   <aside
-    class="m4-questionnaire-results"
+    class="strategy-shortlist-questionnaire-results"
     class:complete={isComplete}
     class:positive={hasPotential}
     aria-live="polite"
@@ -224,19 +224,19 @@
     </div>
 
     {#if isComplete}
-      <p class="m4-questionnaire-result-message">
+      <p class="strategy-shortlist-questionnaire-result-message">
         {hasPotential ? positiveResult : negativeResult}
       </p>
-      <p class="m4-questionnaire-score">{yesPercentage}% Yes</p>
+      <p class="strategy-shortlist-questionnaire-score">{yesPercentage}% Yes</p>
     {:else}
-      <p class="m4-questionnaire-result-message">
+      <p class="strategy-shortlist-questionnaire-result-message">
         {selectedBusinessModel ? incompleteText : selectBusinessModelText}
       </p>
     {/if}
 
     <button
       type="button"
-      class="primary-button m4-questionnaire-download"
+      class="primary-button strategy-shortlist-questionnaire-download"
       disabled={!isComplete || isDownloading}
       on:click={downloadResults}
     >
@@ -244,9 +244,9 @@
     </button>
   </aside>
 
-  <div class="m4-questionnaire-pdf-stage" aria-hidden="true">
-    <article class="m4-questionnaire-pdf" bind:this={pdfDocument}>
-      <header class="m4-questionnaire-pdf-header">
+  <div class="strategy-shortlist-questionnaire-pdf-stage" aria-hidden="true">
+    <article class="strategy-shortlist-questionnaire-pdf" bind:this={pdfDocument}>
+      <header class="strategy-shortlist-questionnaire-pdf-header">
         <img src="{base}/logos/site_logo.svg" alt="" />
         <div>
           <h1>{title}</h1>
@@ -254,14 +254,14 @@
         </div>
       </header>
 
-      <section class="m4-questionnaire-pdf-model">
+      <section class="strategy-shortlist-questionnaire-pdf-model">
         <span>{businessModelLabel}</span>
         <strong>{selectedBusinessModel}</strong>
       </section>
 
       <main>
         {#each categories as category, categoryIndex}
-          <section class="m4-questionnaire-pdf-category">
+          <section class="strategy-shortlist-questionnaire-pdf-category">
             <h2>{category.title}</h2>
 
             {#each category.questions as question, questionIndex}
@@ -270,7 +270,7 @@
                   .slice(0, categoryIndex)
                   .reduce((total, item) => total + item.questions.length, 0) + questionIndex}
               {@const questionText = typeof question === 'string' ? question : question.text}
-              <div class="m4-questionnaire-pdf-answer">
+              <div class="strategy-shortlist-questionnaire-pdf-answer">
                 <p>{questionText}</p>
                 <strong><span>{getAnswerLabel(question, answers[answerIndex])}</span></strong>
               </div>
@@ -278,7 +278,7 @@
           </section>
         {/each}
 
-        <section class="m4-questionnaire-pdf-result">
+        <section class="strategy-shortlist-questionnaire-pdf-result">
           <div>
             <h2>{resultsTitle}</h2>
             <strong>{yesPercentage}% Yes</strong>
@@ -287,9 +287,9 @@
         </section>
       </main>
 
-      <footer class="m4-questionnaire-pdf-footer">
-        <div class="m4-questionnaire-pdf-logos">
-          <img class="m4-questionnaire-pdf-eu-logo" src="{base}/logos/EU-logo.png" alt="" />
+      <footer class="strategy-shortlist-questionnaire-pdf-footer">
+        <div class="strategy-shortlist-questionnaire-pdf-logos">
+          <img class="strategy-shortlist-questionnaire-pdf-eu-logo" src="{base}/logos/EU-logo.png" alt="" />
           <img src="{base}/logos/EU4Green-logo.png" alt="" />
         </div>
         <p>{pdfDisclaimer}</p>
@@ -299,20 +299,20 @@
 </section>
 
 <style>
-  .m4-questionnaire {
+  .strategy-shortlist-questionnaire {
     display: grid;
     gap: 22px;
     width: min(var(--site-container-max), 92vw);
     margin-top: 42px;
   }
 
-  .m4-questionnaire-heading {
+  .strategy-shortlist-questionnaire-heading {
     display: grid;
     gap: 10px;
     max-width: 980px;
   }
 
-  .m4-questionnaire-heading h3 {
+  .strategy-shortlist-questionnaire-heading h3 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.35rem, 2.4vw, 1.9rem);
     font-weight: 400;
@@ -320,11 +320,11 @@
     color: var(--dark);
   }
 
-  .m4-questionnaire-heading p {
+  .strategy-shortlist-questionnaire-heading p {
     color: var(--muted);
   }
 
-  .m4-questionnaire-model-selector {
+  .strategy-shortlist-questionnaire-model-selector {
     display: grid;
     grid-template-columns: minmax(220px, auto) minmax(260px, 520px);
     gap: 18px;
@@ -336,12 +336,12 @@
     background-color: var(--light-bg);
   }
 
-  .m4-questionnaire-model-selector span {
+  .strategy-shortlist-questionnaire-model-selector span {
     color: var(--dark);
     font-weight: 700;
   }
 
-  .m4-questionnaire-model-selector select {
+  .strategy-shortlist-questionnaire-model-selector select {
     width: 100%;
     min-height: 48px;
     padding: 10px 42px 10px 14px;
@@ -352,12 +352,12 @@
     cursor: pointer;
   }
 
-  .m4-questionnaire-model-selector select:focus {
-    outline: 3px solid color-mix(in srgb, var(--module-accent) 40%, transparent);
+  .strategy-shortlist-questionnaire-model-selector select:focus {
+    outline: 3px solid color-mix(in srgb, var(--phase-accent) 40%, transparent);
     outline-offset: 2px;
   }
 
-  .m4-questionnaire-card {
+  .strategy-shortlist-questionnaire-card {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
@@ -366,38 +366,38 @@
     background-color: var(--light-bg);
   }
 
-  .m4-questionnaire-category {
+  .strategy-shortlist-questionnaire-category {
     position: relative;
     display: grid;
     gap: 16px;
     min-width: 0;
     padding: 22px;
     overflow: hidden;
-    border: 1px solid color-mix(in srgb, var(--module-accent) 65%, var(--dark));
+    border: 1px solid color-mix(in srgb, var(--phase-accent) 65%, var(--dark));
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--module-accent) 12%, var(--white));
+    background-color: color-mix(in srgb, var(--phase-accent) 12%, var(--white));
   }
 
-  .m4-questionnaire-category::before {
+  .strategy-shortlist-questionnaire-category::before {
     content: "";
     position: absolute;
     inset: 0 auto 0 0;
     width: 8px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
   }
 
-  .m4-questionnaire-category h4 {
+  .strategy-shortlist-questionnaire-category h4 {
     color: var(--dark);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: 1.45rem;
   }
 
-  .m4-questionnaire-questions {
+  .strategy-shortlist-questionnaire-questions {
     display: grid;
     gap: 14px;
   }
 
-  .m4-questionnaire-question {
+  .strategy-shortlist-questionnaire-question {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 16px;
@@ -407,22 +407,22 @@
     border-top: 1px solid rgba(10, 46, 54, 0.14);
   }
 
-  .m4-questionnaire-question:first-child {
+  .strategy-shortlist-questionnaire-question:first-child {
     padding-top: 0;
     border-top: 0;
   }
 
-  .m4-questionnaire-question p {
+  .strategy-shortlist-questionnaire-question p {
     color: var(--text);
     line-height: 1.35;
   }
 
-  .m4-questionnaire-answer-buttons {
+  .strategy-shortlist-questionnaire-answer-buttons {
     display: flex;
     gap: 8px;
   }
 
-  .m4-questionnaire-answer-buttons button {
+  .strategy-shortlist-questionnaire-answer-buttons button {
     min-width: 64px;
     padding: 9px 14px;
     border: 2px solid var(--dark);
@@ -438,17 +438,17 @@
       transform 0.18s ease;
   }
 
-  .m4-questionnaire-answer-buttons button:hover {
+  .strategy-shortlist-questionnaire-answer-buttons button:hover {
     transform: translateY(-1px);
-    background-color: color-mix(in srgb, var(--module-accent) 30%, var(--white));
+    background-color: color-mix(in srgb, var(--phase-accent) 30%, var(--white));
   }
 
-  .m4-questionnaire-answer-buttons button.active {
+  .strategy-shortlist-questionnaire-answer-buttons button.active {
     background-color: var(--dark);
     color: var(--white);
   }
 
-  .m4-questionnaire-answer-buttons button:disabled {
+  .strategy-shortlist-questionnaire-answer-buttons button:disabled {
     border-color: var(--soft-border);
     background-color: transparent;
     color: var(--muted);
@@ -456,7 +456,7 @@
     opacity: 0.68;
   }
 
-  .m4-questionnaire-results {
+  .strategy-shortlist-questionnaire-results {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 18px 30px;
@@ -467,59 +467,59 @@
     background-color: var(--light-bg);
   }
 
-  .m4-questionnaire-results > div {
+  .strategy-shortlist-questionnaire-results > div {
     display: grid;
     gap: 2px;
   }
 
-  .m4-questionnaire-results h4 {
+  .strategy-shortlist-questionnaire-results h4 {
     color: var(--dark);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: 1.45rem;
     text-transform: uppercase;
   }
 
-  .m4-questionnaire-results > div p,
-  .m4-questionnaire-score {
+  .strategy-shortlist-questionnaire-results > div p,
+  .strategy-shortlist-questionnaire-score {
     color: var(--muted);
     font-size: 0.92rem;
     font-weight: 700;
   }
 
-  .m4-questionnaire-results.complete {
+  .strategy-shortlist-questionnaire-results.complete {
     border-color: var(--blue);
     background-color: color-mix(in srgb, var(--blue) 8%, var(--white));
   }
 
-  .m4-questionnaire-results.complete.positive {
+  .strategy-shortlist-questionnaire-results.complete.positive {
     border-color: var(--green-secondary);
     background-color: color-mix(in srgb, var(--green-secondary) 10%, var(--white));
   }
 
-  .m4-questionnaire-result-message {
+  .strategy-shortlist-questionnaire-result-message {
     color: var(--dark);
     line-height: 1.4;
   }
 
-  .m4-questionnaire-score {
+  .strategy-shortlist-questionnaire-score {
     grid-column: 2;
   }
 
-  .m4-questionnaire-download {
+  .strategy-shortlist-questionnaire-download {
     grid-column: 3;
     grid-row: 1 / span 2;
     align-self: center;
     white-space: nowrap;
   }
 
-  .m4-questionnaire-download:disabled {
+  .strategy-shortlist-questionnaire-download:disabled {
     border-color: var(--soft-border);
     background-color: var(--soft-border);
     color: var(--muted);
     cursor: not-allowed;
   }
 
-  .m4-questionnaire-pdf-stage {
+  .strategy-shortlist-questionnaire-pdf-stage {
     position: fixed;
     top: 0;
     left: -100000px;
@@ -527,7 +527,7 @@
     pointer-events: none;
   }
 
-  .m4-questionnaire-pdf {
+  .strategy-shortlist-questionnaire-pdf {
     box-sizing: border-box;
     width: 650px;
     padding: 30px;
@@ -537,21 +537,21 @@
     line-height: 1.35;
   }
 
-  .m4-questionnaire-pdf-header {
+  .strategy-shortlist-questionnaire-pdf-header {
     display: grid;
     grid-template-columns: 58px minmax(0, 1fr);
     gap: 16px;
     align-items: start;
     padding-bottom: 18px;
-    border-bottom: 5px solid var(--module-accent);
+    border-bottom: 5px solid var(--phase-accent);
   }
 
-  .m4-questionnaire-pdf-header img {
+  .strategy-shortlist-questionnaire-pdf-header img {
     width: 58px;
     height: auto;
   }
 
-  .m4-questionnaire-pdf h1 {
+  .strategy-shortlist-questionnaire-pdf h1 {
     margin: 0 0 8px;
     color: #0a2e36;
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
@@ -560,13 +560,13 @@
     text-transform: uppercase;
   }
 
-  .m4-questionnaire-pdf-header p {
+  .strategy-shortlist-questionnaire-pdf-header p {
     margin: 0;
     color: #637173;
     font-size: 14px;
   }
 
-  .m4-questionnaire-pdf-model {
+  .strategy-shortlist-questionnaire-pdf-model {
     display: grid;
     grid-template-columns: 210px minmax(0, 1fr);
     gap: 18px;
@@ -577,42 +577,42 @@
     background-color: #f7f7f2;
   }
 
-  .m4-questionnaire-pdf-model span {
+  .strategy-shortlist-questionnaire-pdf-model span {
     color: #637173;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
   }
 
-  .m4-questionnaire-pdf-model strong {
+  .strategy-shortlist-questionnaire-pdf-model strong {
     color: #0a2e36;
     font-size: 14px;
   }
 
-  .m4-questionnaire-pdf main {
+  .strategy-shortlist-questionnaire-pdf main {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
     margin-top: 18px;
   }
 
-  .m4-questionnaire-pdf-category {
+  .strategy-shortlist-questionnaire-pdf-category {
     padding: 14px;
-    border-left: 6px solid var(--module-accent);
+    border-left: 6px solid var(--phase-accent);
     border-radius: 10px;
-    background-color: color-mix(in srgb, var(--module-accent) 12%, #ffffff);
+    background-color: color-mix(in srgb, var(--phase-accent) 12%, #ffffff);
     break-inside: avoid;
   }
 
-  .m4-questionnaire-pdf-category h2,
-  .m4-questionnaire-pdf-result h2 {
+  .strategy-shortlist-questionnaire-pdf-category h2,
+  .strategy-shortlist-questionnaire-pdf-result h2 {
     margin: 0 0 12px;
     color: #0a2e36;
     font-size: 18px;
     text-transform: uppercase;
   }
 
-  .m4-questionnaire-pdf-answer {
+  .strategy-shortlist-questionnaire-pdf-answer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 12px;
@@ -621,12 +621,12 @@
     border-top: 1px solid #d8ddd8;
   }
 
-  .m4-questionnaire-pdf-answer p {
+  .strategy-shortlist-questionnaire-pdf-answer p {
     margin: 0;
     font-size: 12px;
   }
 
-  .m4-questionnaire-pdf-answer strong {
+  .strategy-shortlist-questionnaire-pdf-answer strong {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -645,12 +645,12 @@
     html2canvas paints the bold font baseline slightly too low even when the
     badge container is centered. Move only the rendered glyphs upward.
   */
-  .m4-questionnaire-pdf-answer strong span {
+  .strategy-shortlist-questionnaire-pdf-answer strong span {
     display: block;
     transform: translateY(-2px);
   }
 
-  .m4-questionnaire-pdf-result {
+  .strategy-shortlist-questionnaire-pdf-result {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 160px minmax(0, 1fr);
@@ -663,16 +663,16 @@
     break-inside: avoid;
   }
 
-  .m4-questionnaire-pdf-result h2 {
+  .strategy-shortlist-questionnaire-pdf-result h2 {
     margin-bottom: 4px;
   }
 
-  .m4-questionnaire-pdf-result p {
+  .strategy-shortlist-questionnaire-pdf-result p {
     margin: 0;
     font-size: 13px;
   }
 
-  .m4-questionnaire-pdf-footer {
+  .strategy-shortlist-questionnaire-pdf-footer {
     display: grid;
     grid-template-columns: 270px minmax(0, 1fr);
     gap: 16px;
@@ -683,19 +683,19 @@
     break-inside: avoid;
   }
 
-  .m4-questionnaire-pdf-logos {
+  .strategy-shortlist-questionnaire-pdf-logos {
     display: flex;
     gap: 10px;
     align-items: center;
   }
 
-  .m4-questionnaire-pdf-logos img {
+  .strategy-shortlist-questionnaire-pdf-logos img {
     width: auto;
     height: 44px;
     object-fit: contain;
   }
 
-  .m4-questionnaire-pdf-footer p {
+  .strategy-shortlist-questionnaire-pdf-footer p {
     margin: 0;
     color: #637173;
     font-size: 9px;
@@ -703,43 +703,43 @@
   }
 
   @media (max-width: 900px) {
-    .m4-questionnaire-card {
+    .strategy-shortlist-questionnaire-card {
       grid-template-columns: 1fr;
     }
   }
 
   @media (max-width: 640px) {
-    .m4-questionnaire-model-selector {
+    .strategy-shortlist-questionnaire-model-selector {
       grid-template-columns: 1fr;
       width: 100%;
     }
 
-    .m4-questionnaire-card {
+    .strategy-shortlist-questionnaire-card {
       padding: 14px;
     }
 
-    .m4-questionnaire-category {
+    .strategy-shortlist-questionnaire-category {
       padding: 18px;
     }
 
-    .m4-questionnaire-question,
-    .m4-questionnaire-results {
+    .strategy-shortlist-questionnaire-question,
+    .strategy-shortlist-questionnaire-results {
       grid-template-columns: 1fr;
     }
 
-    .m4-questionnaire-answer-buttons {
+    .strategy-shortlist-questionnaire-answer-buttons {
       width: 100%;
     }
 
-    .m4-questionnaire-answer-buttons button {
+    .strategy-shortlist-questionnaire-answer-buttons button {
       flex: 1;
     }
 
-    .m4-questionnaire-score {
+    .strategy-shortlist-questionnaire-score {
       grid-column: 1;
     }
 
-    .m4-questionnaire-download {
+    .strategy-shortlist-questionnaire-download {
       grid-column: 1;
       grid-row: auto;
       width: 100%;

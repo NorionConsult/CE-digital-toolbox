@@ -1,4 +1,4 @@
-import { journeyPhases } from '$lib/content/journey-phases.js';
+import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
 
 /*
   Resource phase badges use the same colour classes as their matching journey phases.
@@ -10,5 +10,5 @@ import { journeyPhases } from '$lib/content/journey-phases.js';
 export function getJourneyPhaseClass(journeyPhase) {
   const matchingPhase = journeyPhases.find((phase) => phase.title === journeyPhase);
 
-  return matchingPhase?.colourClass ?? 'module-card-outline';
+  return matchingPhase?.colourClass ?? 'phase-card-outline';
 }

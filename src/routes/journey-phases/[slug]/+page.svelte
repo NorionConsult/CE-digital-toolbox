@@ -2,12 +2,12 @@
   import { base } from '$app/paths';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
-  import { journeyPhasePage } from '$lib/content/journey-phase-page.js';
-  import { journeyPhases } from '$lib/content/journey-phases.js';
-  import { site } from '$lib/content/site.js';
+  import { journeyPhasePage } from '$lib/content/editable/pages/journey-phase-page.js';
+  import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
+  import { site } from '$lib/content/editable/global/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import CompactJourneyPhaseMap from '$lib/components/sections/CompactJourneyPhaseMap.svelte';
-  import M4Questionnaire from '$lib/components/sections/M4Questionnaire.svelte';
+  import StrategyShortlistQuestionnaire from '$lib/components/sections/StrategyShortlistQuestionnaire.svelte';
 
   export let data;
   /** @type {any} */
@@ -88,8 +88,8 @@
 </svelte:head>
 
 <section class="subpage-hero">
-  <div class="container subpage-content module-hero-content">
-    <div class="module-hero-topline">
+  <div class="container subpage-content phase-hero-content">
+    <div class="phase-hero-topline">
       <a href="{base}/guided-pathways/#journey-phases" class="back-link journey-back-link">
         <span class="back-link-arrow" aria-hidden="true"></span>
         {journeyPhasePage.backLink}
@@ -98,18 +98,18 @@
       <CompactJourneyPhaseMap phases={journeyPhases} activeSlug={journeyPhase.slug} />
     </div>
 
-    <div class="module-hero-icon">
+    <div class="phase-hero-icon">
       <img src="{base}{journeyPhase.icon}" alt={journeyPhase.iconAlt} />
     </div>
 
-    <div class="module-hero-copy">
+    <div class="phase-hero-copy">
       <p class="eyebrow">{journeyPhase.shortName}</p>
       <h1>{journeyPhase.title}</h1>
 
       <RichText text={journeyPhase.intro} className="subpage-intro" />
 
       {#if phaseSections.length > 0 && !journeyPhase.hideSectionNavigation}
-        <nav class="module-section-navigation" aria-label="{journeyPhase.title} sections">
+        <nav class="phase-section-navigation" aria-label="{journeyPhase.title} sections">
           {#each phaseSections as section}
             <a href="#{section.id}" class="back-link">
               {section.navigationLabel ?? section.title}
@@ -124,23 +124,23 @@
 
 <section
   class={journeyPhase.colourClass}
-  class:module-body-section={phaseSections.length === 0}
-  class:module-pathway-section={phaseSections.length > 0}
+  class:phase-body-section={phaseSections.length === 0}
+  class:phase-pathway-section={phaseSections.length > 0}
 >
-  <div class="container module-body-content" class:module-body-content-wide={phaseSections.length > 0}>
-    <div class="module-body-text">
+  <div class="container phase-body-content" class:phase-body-content-wide={phaseSections.length > 0}>
+    <div class="phase-body-text">
       <h2>{journeyPhase.bodyTitle}</h2>
 
       <RichText text={journeyPhase.bodyParagraphs} />
 
       {#each journeyPhase.bodySubsections ?? [] as subsection}
-        <section class="module-body-subsection">
+        <section class="phase-body-subsection">
           <h3 class="subsection-title">{subsection.title}</h3>
 
           <RichText text={subsection.paragraphs} />
 
           {#if subsection.image}
-            <figure class="module-body-subsection-image">
+            <figure class="phase-body-subsection-image">
               <img src="{base}{subsection.image.src}" alt={subsection.image.alt} />
               {#if subsection.image.caption}
                 <figcaption>{subsection.image.caption}</figcaption>
@@ -152,7 +152,7 @@
     </div>
 
     {#if phaseSections.length > 0 && !journeyPhase.hidePathwayCards}
-      <div class="module-pathway-grid" class:module-pathway-grid-single={phaseSections.length === 1}>
+      <div class="phase-pathway-grid" class:phase-pathway-grid-single={phaseSections.length === 1}>
         {#each phaseSections as section}
           <article class="pathway-card">
             <div class="pathway-card-top">
@@ -180,7 +180,7 @@
         {/each}
       </div>
     {:else}
-      <div class="module-image-grid" aria-label="Journey phase images">
+      <div class="phase-image-grid" aria-label="Journey phase images">
         {#each journeyPhase.bodyImages as image}
           <figure>
             <img src="{base}{image.src}" alt={image.alt} />
@@ -197,26 +197,26 @@
     {@const sectionResources = getSectionResources(section)}
     {@const hasSideContent = section.image}
     <section
-      class="module-detail-section {journeyPhase.colourClass}"
-      class:module-detail-section-muted={sectionIndex % 2 === 1}
+      class="phase-detail-section {journeyPhase.colourClass}"
+      class:phase-detail-section-muted={sectionIndex % 2 === 1}
       id={section.id}
     >
-      <div class="container module-detail-content">
-        <header class="module-detail-heading" class:module-detail-heading-wide={!hasSideContent}>
+      <div class="container phase-detail-content">
+        <header class="phase-detail-heading" class:phase-detail-heading-wide={!hasSideContent}>
           {#if !section.hideStepEyebrow && section.number}
             <p class="eyebrow">Step {section.number}</p>
           {/if}
           <h2>{section.bodyTitle}</h2>
         </header>
 
-        <div class="module-detail-layout" class:module-detail-layout-wide={!hasSideContent}>
-          <article class="module-detail-copy" class:module-detail-copy-wide={!hasSideContent}>
+        <div class="phase-detail-layout" class:phase-detail-layout-wide={!hasSideContent}>
+          <article class="phase-detail-copy" class:phase-detail-copy-wide={!hasSideContent}>
           {#each section.bodyParagraphs as paragraph, paragraphIndex}
             <RichText text={paragraph} />
 
             {#if section.inlineImage?.afterParagraph === paragraphIndex + 1}
               <figure
-                class="module-inline-image"
+                class="phase-inline-image"
                 style:--inline-image-width={section.inlineImage.maxWidth ?? '760px'}
               >
                 {#if section.inlineImage.title}
@@ -230,7 +230,7 @@
                 {#if section.inlineImage.zoomable}
                   <button
                     type="button"
-                    class="module-inline-image-button"
+                    class="phase-inline-image-button"
                     aria-label="Open larger image"
                     on:click={() => section.inlineImage && openZoomedImage(section.inlineImage)}
                   >
@@ -247,8 +247,8 @@
             {/if}
           {/each}
 
-          {#if section.m4Questionnaire}
-            <M4Questionnaire {...section.m4Questionnaire} />
+          {#if section.strategyShortlistQuestionnaire}
+            <StrategyShortlistQuestionnaire {...section.strategyShortlistQuestionnaire} />
           {/if}
 
           {#if section.baselineCards}
@@ -287,14 +287,14 @@
           {/if}
 
           {#if section.principleBox}
-            <aside class="module-principle-box">
+            <aside class="phase-principle-box">
               <h3>{section.principleBox.title}</h3>
 
-              <div class="module-principle-list">
+              <div class="phase-principle-list">
                 {#each section.principleBox.items as item}
-                  <article class="module-principle-item">
+                  <article class="phase-principle-item">
                     <span
-                      class="module-principle-icon"
+                      class="phase-principle-icon"
                       style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${item.icon}.svg");`}
                       aria-hidden="true"
                     ></span>
@@ -309,25 +309,25 @@
             </aside>
           {/if}
 
-          {#if section.m3DfxFramework}
-            <aside class="m3-dfx-framework">
-              <div class="m3-dfx-heading">
-                <RichText text={section.m3DfxFramework.intro} />
+          {#if section.designForXFramework}
+            <aside class="design-for-x-framework">
+              <div class="design-for-x-heading">
+                <RichText text={section.designForXFramework.intro} />
               </div>
 
-              <div class="m3-dfx-grid">
-                {#each section.m3DfxFramework.cards as card}
-                  <article class="m3-dfx-card">
-                    <div class="m3-dfx-card-header">
+              <div class="design-for-x-grid">
+                {#each section.designForXFramework.cards as card}
+                  <article class="design-for-x-card">
+                    <div class="design-for-x-card-header">
                       <span
-                        class="m3-dfx-icon"
+                        class="design-for-x-icon"
                         style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${card.icon}.svg");`}
                         aria-hidden="true"
                       ></span>
                       <h4>{card.title}</h4>
                     </div>
 
-                    <div class="m3-dfx-card-body">
+                    <div class="design-for-x-card-body">
                       <section>
                         <h5>What it means</h5>
                         <RichText text={card.meaning} />
@@ -355,26 +355,26 @@
                 {/each}
               </div>
 
-              {#if section.m3DfxFramework.source}
-                <RichText text={section.m3DfxFramework.source} className="m3-dfx-source" />
+              {#if section.designForXFramework.source}
+                <RichText text={section.designForXFramework.source} className="design-for-x-source" />
               {/if}
             </aside>
           {/if}
 
-          {#if section.m3ProcessRedesign}
-            <aside class="m3-process-redesign">
-              <div class="m3-process-heading">
-                <RichText text={section.m3ProcessRedesign.intro} />
+          {#if section.processRedesign}
+            <aside class="process-redesign">
+              <div class="process-redesign-heading">
+                <RichText text={section.processRedesign.intro} />
               </div>
 
-              <div class="m3-process-flow-arrow m3-process-flow-arrow-top" aria-hidden="true"></div>
+              <div class="process-redesign-flow-arrow process-redesign-flow-arrow-top" aria-hidden="true"></div>
 
-              <div class="m3-process-grid">
-                {#each section.m3ProcessRedesign.columns as column}
-                  <article class="m3-process-column">
-                    <div class="m3-process-top">
+              <div class="process-redesign-grid">
+                {#each section.processRedesign.columns as column}
+                  <article class="process-redesign-column">
+                    <div class="process-redesign-top">
                       <span
-                        class="m3-process-icon"
+                        class="process-redesign-icon"
                         style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${column.icon}.svg");`}
                         aria-hidden="true"
                       ></span>
@@ -391,89 +391,89 @@
                 {/each}
               </div>
 
-              <div class="m3-process-flow-arrow" aria-hidden="true"></div>
+              <div class="process-redesign-flow-arrow" aria-hidden="true"></div>
 
-              {#if section.m3ProcessRedesign.footer}
-                <div class="m3-process-footer">
+              {#if section.processRedesign.footer}
+                <div class="process-redesign-footer">
                   <span aria-hidden="true">↻</span>
-                  <RichText text={section.m3ProcessRedesign.footer} />
+                  <RichText text={section.processRedesign.footer} />
                 </div>
               {/if}
             </aside>
           {/if}
 
           {#if section.closingParagraphs}
-            <div class="module-detail-closing">
+            <div class="phase-detail-closing">
               <RichText text={section.closingParagraphs} />
             </div>
           {/if}
 
-          {#if section.m3WheelWorkshop}
-            <div class="m3-wheel-workshop-highlight">
-              <h3 class="subsection-title">{section.m3WheelWorkshop.subtitle}</h3>
+          {#if section.circularStrategiesWorkshop}
+            <div class="circular-strategies-workshop-highlight">
+              <h3 class="subsection-title">{section.circularStrategiesWorkshop.subtitle}</h3>
 
-              <div class="m3-wheel-workshop-card-collection">
-                <div class="m3-wheel-workshop-overview-grid">
-                  <article class="m3-wheel-workshop-card m3-wheel-workshop-introduction">
-                    <div class="m3-wheel-workshop-title-row">
-                      <h3>{section.m3WheelWorkshop.title}</h3>
+              <div class="circular-strategies-workshop-card-collection">
+                <div class="circular-strategies-workshop-overview-grid">
+                  <article class="circular-strategies-workshop-card circular-strategies-workshop-introduction">
+                    <div class="circular-strategies-workshop-title-row">
+                      <h3>{section.circularStrategiesWorkshop.title}</h3>
                       <span
-                        class="m3-wheel-workshop-title-icon"
-                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${section.m3WheelWorkshop.icon}.svg");`}
+                        class="circular-strategies-workshop-title-icon"
+                        style={`--icon-url: url("https://api.iconify.design/icon-park-outline:${section.circularStrategiesWorkshop.icon}.svg");`}
                         aria-hidden="true"
                       ></span>
                     </div>
-                    <RichText text={section.m3WheelWorkshop.introduction} />
-                    <p class="m3-wheel-workshop-outcome">
-                      <strong>Expected outcomes:</strong> <InlineText text={section.m3WheelWorkshop.outcome} />
+                    <RichText text={section.circularStrategiesWorkshop.introduction} />
+                    <p class="circular-strategies-workshop-outcome">
+                      <strong>Expected outcomes:</strong> <InlineText text={section.circularStrategiesWorkshop.outcome} />
                     </p>
                   </article>
 
-                  <article class="m3-wheel-workshop-card m3-wheel-workshop-preparation">
-                    <div class="m3-wheel-workshop-card-heading">
-                      <h3>{section.m3WheelWorkshop.preparation.title}</h3>
-                      <span class="m3-wheel-workshop-time">{section.m3WheelWorkshop.preparation.time}</span>
+                  <article class="circular-strategies-workshop-card circular-strategies-workshop-preparation">
+                    <div class="circular-strategies-workshop-card-heading">
+                      <h3>{section.circularStrategiesWorkshop.preparation.title}</h3>
+                      <span class="circular-strategies-workshop-time">{section.circularStrategiesWorkshop.preparation.time}</span>
                     </div>
 
-                    <RichText text={section.m3WheelWorkshop.preparation.text} />
+                    <RichText text={section.circularStrategiesWorkshop.preparation.text} />
 
-                    <div class="m3-wheel-workshop-details">
-                      {#each section.m3WheelWorkshop.preparation.details as detail}
+                    <div class="circular-strategies-workshop-details">
+                      {#each section.circularStrategiesWorkshop.preparation.details as detail}
                         <RichText text={detail} />
                       {/each}
                     </div>
 
                     <div>
-                      <strong>{section.m3WheelWorkshop.preparation.listTitle}</strong>
+                      <strong>{section.circularStrategiesWorkshop.preparation.listTitle}</strong>
                       <ul>
-                        {#each section.m3WheelWorkshop.preparation.items as item}
+                        {#each section.circularStrategiesWorkshop.preparation.items as item}
                           <li><InlineText text={item} /></li>
                         {/each}
                       </ul>
                     </div>
 
-                    <p class="m3-wheel-workshop-link">
+                    <p class="circular-strategies-workshop-link">
                       <strong>Link:</strong>
                       <a
-                        href={section.m3WheelWorkshop.preparation.link}
+                        href={section.circularStrategiesWorkshop.preparation.link}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        {section.m3WheelWorkshop.preparation.linkLabel}
+                        {section.circularStrategiesWorkshop.preparation.linkLabel}
                       </a>
                     </p>
                   </article>
                 </div>
 
-                <div class="m3-wheel-workshop-step-grid">
-                  {#each section.m3WheelWorkshop.steps as step}
-                    <article class="m3-wheel-workshop-card m3-wheel-workshop-step-card">
-                      <div class="m3-wheel-workshop-card-heading">
+                <div class="circular-strategies-workshop-step-grid">
+                  {#each section.circularStrategiesWorkshop.steps as step}
+                    <article class="circular-strategies-workshop-card circular-strategies-workshop-step-card">
+                      <div class="circular-strategies-workshop-card-heading">
                         <div>
-                          <p class="m3-wheel-workshop-step-number">Step {step.number}</p>
+                          <p class="circular-strategies-workshop-step-number">Step {step.number}</p>
                           <h3>{step.title}</h3>
                         </div>
-                        <span class="m3-wheel-workshop-time">{step.time}</span>
+                        <span class="circular-strategies-workshop-time">{step.time}</span>
                       </div>
 
                       <RichText text={step.text} />
@@ -486,19 +486,19 @@
           {/if}
 
           {#if section.learningResources}
-            <div class="m1-learning-resource-list" aria-label="Learning resources">
+            <div class="learning-resource-list" aria-label="Learning resources">
               {#each section.learningResources.cards as card}
-                <article class="m1-learning-resource-item">
-                  <div class="m1-learning-resource-card">
+                <article class="learning-resource-item">
+                  <div class="learning-resource-card">
                     <div>
-                      <p class="m1-learning-resource-badge">
+                      <p class="learning-resource-badge">
                         {section.learningResources.labels?.badge ?? 'Learning resource'}
                       </p>
                       <h3>{card.courseTitle}</h3>
                       <RichText text={card.shortDescription} />
                     </div>
 
-                    <dl class="m1-learning-resource-meta" aria-label="Course information">
+                    <dl class="learning-resource-meta" aria-label="Course information">
                       <div>
                         <dt>Language</dt>
                         <dd>{card.language}</dd>
@@ -514,7 +514,7 @@
                     </a>
                   </div>
 
-                  <div class="m1-learning-resource-details">
+                  <div class="learning-resource-details">
                     <section>
                       <h3>{section.learningResources.labels?.about ?? 'What is this?'}</h3>
                       <RichText text={card.aboutCourse} />
@@ -542,11 +542,11 @@
           </article>
 
         {#if section.image}
-          <figure class="module-detail-image">
+          <figure class="phase-detail-image">
             {#if section.image.zoomable}
               <button
                 type="button"
-                class="module-detail-image-button"
+                class="phase-detail-image-button"
                 aria-label="Open larger image"
                 on:click={() => section.image && openZoomedImage(section.image)}
               >
@@ -607,19 +607,19 @@
       {/if}
 
       {#if section.showRelevantTools !== false}
-        <div class="container module-detail-tools">
+        <div class="container phase-detail-tools">
           <div class="section-intro">
             <h3 class="subsection-title">{journeyPhasePage.relatedTitle}</h3>
           </div>
 
           {#if sectionResources.length > 0}
-            <div class="module-resource-grid embedded-resource-grid">
+            <div class="phase-resource-grid embedded-resource-grid">
               {#each sectionResources as resource (resource.id)}
                 <ResourceCard {resource} variant="compact" />
               {/each}
             </div>
           {:else}
-            <p class="module-empty-tools">{journeyPhasePage.relatedEmpty}</p>
+            <p class="phase-empty-tools">{journeyPhasePage.relatedEmpty}</p>
           {/if}
         </div>
       {/if}
@@ -627,13 +627,13 @@
   {/each}
 
   {#if journeyPhase.summaryTitle}
-    <section class="module-summary-section {journeyPhase.colourClass}">
-      <div class="container module-summary-content">
-        <div class="module-summary-copy">
+    <section class="phase-summary-section {journeyPhase.colourClass}">
+      <div class="container phase-summary-content">
+        <div class="phase-summary-copy">
           <p class="eyebrow">{journeyPhase.shortName}</p>
           <h2>{journeyPhase.summaryTitle}</h2>
 
-          <div class="module-summary-text">
+          <div class="phase-summary-text">
             <RichText text={journeyPhase.summaryParagraphs ?? [journeyPhase.summaryText]} />
           </div>
 
@@ -646,7 +646,7 @@
           </a>
         </div>
 
-        <div class="module-summary-checklist" aria-label={journeyPhase.summaryTitle}>
+        <div class="phase-summary-checklist" aria-label={journeyPhase.summaryTitle}>
           <div class="summary-progress">
             <h3>Checklist</h3>
             <p>{summaryCompletedCount} / {summaryChecklist.length} complete</p>
@@ -707,20 +707,20 @@
     </section>
   {/if}
 {:else}
-  <section class="module-tools-section">
+  <section class="phase-tools-section">
     <div class="container">
       <div class="section-intro">
         <h3 class="subsection-title">{journeyPhasePage.relatedTitle}</h3>
       </div>
 
       {#if relatedResources.length > 0}
-        <div class="module-resource-grid embedded-resource-grid">
+        <div class="phase-resource-grid embedded-resource-grid">
           {#each relatedResources as resource (resource.id)}
             <ResourceCard {resource} variant="compact" />
           {/each}
         </div>
       {:else}
-        <p class="module-empty-tools">{journeyPhasePage.relatedEmpty}</p>
+        <p class="phase-empty-tools">{journeyPhasePage.relatedEmpty}</p>
       {/if}
     </div>
   </section>
@@ -740,14 +740,14 @@
 {/if}
 
 <style>
-  .module-hero-content {
+  .phase-hero-content {
     max-width: var(--site-container-max);
     display: grid;
     grid-template-columns: 200px minmax(0, 820px);
     gap: 56px;
   }
 
-  .module-hero-topline {
+  .phase-hero-topline {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: max-content minmax(0, 1fr);
@@ -755,7 +755,7 @@
     gap: 24px;
   }
 
-  .module-hero-topline .back-link {
+  .phase-hero-topline .back-link {
     width: fit-content;
     margin: 0;
   }
@@ -780,18 +780,18 @@
     transform: translateX(-3px);
   }
 
-  .module-section-navigation {
+  .phase-section-navigation {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 18px 28px;
   }
 
-  .module-section-navigation .back-link {
+  .phase-section-navigation .back-link {
     margin-bottom: 0;
   }
 
-  .module-hero-icon {
+  .phase-hero-icon {
     width: 210px;
     aspect-ratio: 1;
     border-radius: 28px;
@@ -800,117 +800,117 @@
     border: 0px solid var(--dark);
   }
 
-  .module-hero-icon img {
+  .phase-hero-icon img {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
 
-  .module-body-section {
+  .phase-body-section {
     padding: 64px 0;
     background-color: var(--white);
   }
 
-  .module-body-content {
+  .phase-body-content {
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
     gap: 56px;
     align-items: start;
   }
 
-  .module-body-content-wide {
+  .phase-body-content-wide {
     grid-template-columns: 1fr;
   }
 
-  .module-body-text {
+  .phase-body-text {
     max-width: 720px;
   }
 
-  .module-body-content-wide .module-body-text {
+  .phase-body-content-wide .phase-body-text {
     max-width: 920px;
   }
 
-  .module-body-text h2 {
+  .phase-body-text h2 {
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-transform: uppercase;
     margin-bottom: 24px;
   }
 
-  .module-body-subsection {
+  .phase-body-subsection {
     display: grid;
     gap: 18px;
     margin-top: 40px;
   }
 
-  .module-body-subsection-image {
+  .phase-body-subsection-image {
     display: grid;
     gap: 10px;
     max-width: 820px;
     margin: 10px 0 0;
   }
 
-  .module-body-subsection-image img {
+  .phase-body-subsection-image img {
     width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 15px;
   }
 
-  .module-body-subsection-image figcaption {
+  .phase-body-subsection-image figcaption {
     color: var(--muted);
     font-size: 0.95rem;
   }
 
-  .module-image-grid {
+  .phase-image-grid {
     display: grid;
     gap: 24px;
   }
 
-  .module-image-grid figure {
+  .phase-image-grid figure {
     display: grid;
     gap: 10px;
   }
 
-  .module-image-grid img {
+  .phase-image-grid img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 20px;
   }
 
-  .module-image-grid figcaption {
+  .phase-image-grid figcaption {
     color: var(--muted);
     font-size: 0.95rem;
   }
 
-  .module-tools-section {
+  .phase-tools-section {
     padding: 64px 0;
     background-color: var(--light-bg);
   }
 
-  .module-pathway-section {
+  .phase-pathway-section {
     padding: 72px 0;
     background-color: var(--light-bg);
   }
 
-  .module-detail-heading h2,
-  .module-summary-copy h2 {
+  .phase-detail-heading h2,
+  .phase-summary-copy h2 {
     font-size: clamp(2rem, 4vw, 3.5rem);
     text-transform: uppercase;
   }
 
-  .module-summary-copy h2 {
+  .phase-summary-copy h2 {
     margin-bottom: 18px;
   }
 
-  .module-pathway-grid {
+  .phase-pathway-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 28px;
     margin-top: 40px;
   }
 
-  .module-pathway-grid-single {
+  .phase-pathway-grid-single {
     grid-template-columns: minmax(0, 920px);
   }
 
@@ -935,7 +935,7 @@
   }
 
   .pathway-card-top span {
-    color: var(--module-accent);
+    color: var(--phase-accent);
     font-size: clamp(1.45rem, 2vw, 2rem);
     font-weight: 700;
     line-height: 1.1;
@@ -966,7 +966,7 @@
   }
 
   .pathway-outputs h4 {
-    color: var(--module-accent);
+    color: var(--phase-accent);
     font-size: 1rem;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -1013,66 +1013,66 @@
     color: var(--muted);
   }
 
-  .module-detail-section {
+  .phase-detail-section {
     padding: 72px 0;
     background-color: var(--white);
     scroll-margin-top: 110px;
   }
 
-  .module-detail-section .eyebrow {
-    color: var(--module-accent);
+  .phase-detail-section .eyebrow {
+    color: var(--phase-accent);
   }
 
-  .module-detail-section-muted {
+  .phase-detail-section-muted {
     background-color: var(--light-bg);
   }
 
-  .module-detail-content {
+  .phase-detail-content {
     display: grid;
     gap: 22px;
   }
 
-  .module-detail-heading {
+  .phase-detail-heading {
     max-width: 760px;
   }
 
-  .module-detail-heading-wide {
+  .phase-detail-heading-wide {
     max-width: 980px;
   }
 
-  .module-detail-layout {
+  .phase-detail-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
     gap: 56px;
     align-items: start;
   }
 
-  .module-detail-layout-wide {
+  .phase-detail-layout-wide {
     grid-template-columns: minmax(0, 980px);
   }
 
-  .module-detail-copy {
+  .phase-detail-copy {
     max-width: 760px;
   }
 
-  .module-detail-copy-wide {
+  .phase-detail-copy-wide {
     max-width: 980px;
   }
 
-  .module-inline-image {
+  .phase-inline-image {
     display: grid;
     gap: 18px;
     width: 100%;
     margin: 32px 0;
   }
 
-  .module-inline-image img {
+  .phase-inline-image img {
     display: block;
     width: 100%;
     height: auto;
   }
 
-  .module-inline-image-button {
+  .phase-inline-image-button {
     width: min(100%, var(--inline-image-width));
     margin: 0 auto;
     padding: 0;
@@ -1083,17 +1083,17 @@
     cursor: zoom-in;
   }
 
-  .module-inline-image-button img {
+  .phase-inline-image-button img {
     transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
 
-  .module-inline-image-button:hover img,
-  .module-inline-image-button:focus-visible img {
+  .phase-inline-image-button:hover img,
+  .phase-inline-image-button:focus-visible img {
     transform: translateY(-2px);
     box-shadow: 0 16px 34px rgba(10, 46, 54, 0.16);
   }
 
-  .module-inline-image figcaption {
+  .phase-inline-image figcaption {
     width: min(100%, var(--inline-image-width));
     margin: 0 auto;
     color: var(--muted);
@@ -1133,7 +1133,7 @@
   .business-model-card {
     min-width: 0;
     padding: 24px;
-    border: 2px solid var(--module-accent);
+    border: 2px solid var(--phase-accent);
     border-radius: 15px;
     background-color: var(--white);
     box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
@@ -1161,7 +1161,7 @@
   .business-model-card-icon {
     width: 30px;
     height: 30px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
@@ -1203,7 +1203,7 @@
   }
 
   .business-model-card-heading:hover .business-model-card-toggle {
-    background-color: color-mix(in srgb, var(--module-accent) 25%, var(--white));
+    background-color: color-mix(in srgb, var(--phase-accent) 25%, var(--white));
   }
 
   .business-model-card[open] .business-model-card-toggle::after {
@@ -1215,7 +1215,7 @@
   }
 
   .business-model-card[open] .business-model-card-heading {
-    border-bottom-color: var(--module-accent);
+    border-bottom-color: var(--phase-accent);
   }
 
   .business-model-card-content {
@@ -1235,14 +1235,14 @@
     font-style: italic;
   }
 
-  .m3-wheel-workshop-highlight {
+  .circular-strategies-workshop-highlight {
     display: grid;
     gap: 22px;
     width: min(var(--site-container-max), 92vw);
     margin-top: 42px;
   }
 
-  .m3-wheel-workshop-card-collection {
+  .circular-strategies-workshop-card-collection {
     display: grid;
     gap: 22px;
     padding: 22px;
@@ -1251,14 +1251,14 @@
     background-color: var(--yellow);
   }
 
-  .m3-wheel-workshop-overview-grid,
-  .m3-wheel-workshop-step-grid {
+  .circular-strategies-workshop-overview-grid,
+  .circular-strategies-workshop-step-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
   }
 
-  .m3-wheel-workshop-card {
+  .circular-strategies-workshop-card {
     display: flex;
     flex-direction: column;
     gap: 18px;
@@ -1270,14 +1270,14 @@
     box-shadow: 0 10px 24px rgba(10, 46, 54, 0.07);
   }
 
-  .m3-wheel-workshop-card p {
+  .circular-strategies-workshop-card p {
     margin-top: 0;
     color: var(--text);
     line-height: 1.45;
   }
 
-  .m3-wheel-workshop-title-row,
-  .m3-wheel-workshop-card-heading {
+  .circular-strategies-workshop-title-row,
+  .circular-strategies-workshop-card-heading {
     display: flex;
     gap: 18px;
     align-items: flex-start;
@@ -1286,20 +1286,20 @@
     border-bottom: 4px solid var(--yellow);
   }
 
-  .m3-wheel-workshop-title-row h3,
-  .m3-wheel-workshop-card-heading h3,
-  .m3-wheel-workshop-step-number {
+  .circular-strategies-workshop-title-row h3,
+  .circular-strategies-workshop-card-heading h3,
+  .circular-strategies-workshop-step-number {
     color: var(--dark);
     line-height: 1.08;
     text-transform: uppercase;
   }
 
-  .m3-wheel-workshop-title-row h3 {
+  .circular-strategies-workshop-title-row h3 {
     max-width: 520px;
     font-size: clamp(1.7rem, 3vw, 2.6rem);
   }
 
-  .m3-wheel-workshop-title-icon {
+  .circular-strategies-workshop-title-icon {
     flex: 0 0 auto;
     width: 64px;
     height: 64px;
@@ -1308,31 +1308,31 @@
     mask: var(--icon-url) center / contain no-repeat;
   }
 
-  .m3-wheel-workshop-card-heading h3 {
+  .circular-strategies-workshop-card-heading h3 {
     font-size: clamp(1.25rem, 2vw, 1.65rem);
   }
 
-  .m3-wheel-workshop-step-number {
+  .circular-strategies-workshop-step-number {
     margin-bottom: 6px;
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: clamp(1.25rem, 2vw, 1.65rem);
     font-weight: 700;
   }
 
-  .m3-wheel-workshop-step-card .m3-wheel-workshop-card-heading h3 {
+  .circular-strategies-workshop-step-card .circular-strategies-workshop-card-heading h3 {
     font-family: Tahoma, Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
     text-transform: none;
   }
 
-  .m3-wheel-workshop-outcome {
+  .circular-strategies-workshop-outcome {
     margin-top: auto !important;
     padding-top: 18px;
     border-top: 1px solid rgba(10, 46, 54, 0.18);
   }
 
-  .m3-wheel-workshop-time {
+  .circular-strategies-workshop-time {
     flex: 0 0 auto;
     padding: 8px 12px;
     border-radius: 15px;
@@ -1342,47 +1342,47 @@
     white-space: nowrap;
   }
 
-  .m3-wheel-workshop-details {
+  .circular-strategies-workshop-details {
     display: grid;
     gap: 2px;
   }
 
-  .m3-wheel-workshop-card ul {
+  .circular-strategies-workshop-card ul {
     margin-top: 6px;
     padding-left: 22px;
   }
 
-  .m3-wheel-workshop-card li + li {
+  .circular-strategies-workshop-card li + li {
     margin-top: 5px;
   }
 
-  .m3-wheel-workshop-link {
+  .circular-strategies-workshop-link {
     margin-top: auto !important;
   }
 
-  .m3-wheel-workshop-link a {
+  .circular-strategies-workshop-link a {
     color: var(--dark);
     font-weight: 700;
     text-underline-offset: 3px;
   }
 
-  .m3-wheel-workshop-link a:hover {
-    color: var(--module-accent);
+  .circular-strategies-workshop-link a:hover {
+    color: var(--phase-accent);
   }
 
-  .module-detail-image {
+  .phase-detail-image {
     display: grid;
     gap: 10px;
   }
 
-  .module-detail-image img {
+  .phase-detail-image img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 20px;
   }
 
-  .module-detail-image-button {
+  .phase-detail-image-button {
     display: block;
     width: 100%;
     padding: 0;
@@ -1392,7 +1392,7 @@
     cursor: zoom-in;
   }
 
-  .module-detail-image-button img {
+  .phase-detail-image-button img {
     height: auto;
     aspect-ratio: auto;
     object-fit: contain;
@@ -1400,43 +1400,43 @@
     transition: box-shadow 0.18s ease, transform 0.18s ease;
   }
 
-  .module-detail-image-button:hover img,
-  .module-detail-image-button:focus-visible img {
+  .phase-detail-image-button:hover img,
+  .phase-detail-image-button:focus-visible img {
     transform: translateY(-2px);
     box-shadow: 0 16px 34px rgba(10, 46, 54, 0.16);
   }
 
-  .module-detail-image figcaption {
+  .phase-detail-image figcaption {
     color: var(--muted);
     font-size: 0.95rem;
   }
 
-  .module-detail-tools {
+  .phase-detail-tools {
     margin-top: 46px;
   }
 
-  .m1-learning-resource-list {
+  .learning-resource-list {
     display: grid;
     gap: 28px;
     width: min(var(--site-container-max), 92vw);
     margin-top: 36px;
   }
 
-  .m1-learning-resource-item {
+  .learning-resource-item {
     display: grid;
     grid-template-columns: var(--embedded-tool-card-width) minmax(280px, 1fr);
     gap: 30px;
     align-items: start;
     padding: 24px;
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--module-accent) 24%, var(--white));
+    background-color: color-mix(in srgb, var(--phase-accent) 24%, var(--white));
   }
 
-  .m1-learning-resource-item + .m1-learning-resource-item {
+  .learning-resource-item + .learning-resource-item {
     margin-top: 0;
   }
 
-  .m1-learning-resource-card {
+  .learning-resource-card {
     position: relative;
     overflow: hidden;
     background-color: var(--white);
@@ -1450,15 +1450,15 @@
     box-shadow: 0 8px 24px rgba(10, 46, 54, 0.06);
   }
 
-  .m1-learning-resource-card .m1-learning-resource-badge {
+  .learning-resource-card .learning-resource-badge {
     display: inline-flex;
     align-items: center;
     width: fit-content;
     margin-bottom: 12px;
     padding: 6px 10px;
-    border: 1px solid var(--module-border);
+    border: 1px solid var(--phase-border);
     border-radius: 999px;
-    background-color: var(--module-bg);
+    background-color: var(--phase-bg);
     color: var(--white);
     font-size: 0.78rem;
     font-weight: 700;
@@ -1467,7 +1467,7 @@
     text-transform: uppercase;
   }
 
-  .m1-learning-resource-card h3 {
+  .learning-resource-card h3 {
     color: var(--dark);
     font-size: var(--tool-card-title-size, 1.65rem);
     line-height: 1.1;
@@ -1475,17 +1475,17 @@
     text-transform: uppercase;
   }
 
-  .m1-learning-resource-card p {
+  .learning-resource-card p {
     color: var(--muted);
   }
 
-  .m1-learning-resource-meta {
+  .learning-resource-meta {
     display: grid;
     gap: 10px;
     margin-top: auto;
   }
 
-  .m1-learning-resource-meta div {
+  .learning-resource-meta div {
     display: flex;
     justify-content: space-between;
     gap: 16px;
@@ -1493,18 +1493,18 @@
     padding-top: 10px;
   }
 
-  .m1-learning-resource-meta dt {
+  .learning-resource-meta dt {
     color: var(--dark);
     font-weight: 700;
   }
 
-  .m1-learning-resource-meta dd {
+  .learning-resource-meta dd {
     margin: 0;
     color: var(--muted);
     text-align: right;
   }
 
-  .m1-learning-resource-card .resource-link {
+  .learning-resource-card .resource-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1517,22 +1517,22 @@
     text-decoration: none;
   }
 
-  .m1-learning-resource-card .resource-link:hover {
+  .learning-resource-card .resource-link:hover {
     background-color: var(--button-highlight);
   }
 
-  .m1-learning-resource-details {
+  .learning-resource-details {
     display: grid;
     gap: 20px;
     padding: 8px 4px;
   }
 
-  .m1-learning-resource-details section {
+  .learning-resource-details section {
     display: grid;
     gap: 6px;
   }
 
-  .m1-learning-resource-details h3 {
+  .learning-resource-details h3 {
     color: var(--dark);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: 1.08rem;
@@ -1540,14 +1540,14 @@
     line-height: 1.1;
   }
 
-  .m1-learning-resource-details p,
-  .m1-learning-resource-details li {
+  .learning-resource-details p,
+  .learning-resource-details li {
     color: var(--dark);
     font-size: 0.98rem;
     line-height: 1.35;
   }
 
-  .m1-learning-resource-details ul {
+  .learning-resource-details ul {
     margin: 0;
     padding-left: 22px;
   }
@@ -1591,61 +1591,61 @@
     font-size: 0.8em;
   }
 
-  .module-principle-box {
+  .phase-principle-box {
     display: grid;
     gap: 24px;
     margin-top: 34px;
     padding: 32px;
-    border: 2px solid var(--module-accent);
+    border: 2px solid var(--phase-accent);
     border-radius: 15px;
-    background-color: color-mix(in srgb, var(--module-accent) 12%, var(--white));
+    background-color: color-mix(in srgb, var(--phase-accent) 12%, var(--white));
     box-shadow: 0 12px 24px rgba(10, 46, 54, 0.08);
   }
 
-  .module-principle-box h3 {
-    color: var(--module-accent);
+  .phase-principle-box h3 {
+    color: var(--phase-accent);
     font-family: Tahoma, Arial, sans-serif;
     font-size: clamp(1.55rem, 2.8vw, 2.2rem);
     line-height: 1.12;
   }
 
-  .module-principle-list {
+  .phase-principle-list {
     display: grid;
     gap: 18px;
   }
 
-  .module-principle-item {
+  .phase-principle-item {
     display: grid;
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 18px;
     align-items: start;
   }
 
-  .module-principle-icon {
+  .phase-principle-icon {
     width: 38px;
     height: 38px;
     margin-top: 4px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
 
-  .module-principle-item h4 {
+  .phase-principle-item h4 {
     margin-bottom: 4px;
-    color: var(--module-accent);
+    color: var(--phase-accent);
     font-family: Tahoma, Arial, sans-serif;
     font-size: clamp(1rem, 1.8vw, 1.2rem);
     line-height: 1.2;
   }
 
-  .module-principle-item p {
+  .phase-principle-item p {
     color: var(--dark);
     font-size: 1rem;
     line-height: 1.35;
   }
 
-  .m3-dfx-framework,
-  .m3-process-redesign {
+  .design-for-x-framework,
+  .process-redesign {
     display: grid;
     gap: 26px;
     width: min(var(--site-container-max), 92vw);
@@ -1653,17 +1653,17 @@
     margin-top: 36px;
     padding: 30px;
     border-radius: 15px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
   }
 
-  .m3-dfx-heading,
-  .m3-process-heading {
+  .design-for-x-heading,
+  .process-redesign-heading {
     display: grid;
     gap: 10px;
   }
 
-  .m3-dfx-heading p,
-  .m3-process-heading p {
+  .design-for-x-heading p,
+  .process-redesign-heading p {
     color: var(--dark);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.35rem, 2.4vw, 1.9rem);
@@ -1671,13 +1671,13 @@
     line-height: 1.2;
   }
 
-  .m3-dfx-grid {
+  .design-for-x-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
   }
 
-  .m3-dfx-card {
+  .design-for-x-card {
     display: grid;
     grid-template-rows: auto 1fr;
     border-radius: 15px;
@@ -1685,7 +1685,7 @@
     background-color: var(--white);
   }
 
-  .m3-dfx-card-header {
+  .design-for-x-card-header {
     display: grid;
     grid-template-columns: 46px minmax(0, 1fr);
     gap: 14px;
@@ -1696,15 +1696,15 @@
     color: var(--white);
   }
 
-  .m3-dfx-icon {
+  .design-for-x-icon {
     width: 44px;
     height: 44px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
 
-  .m3-dfx-card-header h4 {
+  .design-for-x-card-header h4 {
     color: var(--white);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: clamp(1.25rem, 2vw, 1.65rem);
@@ -1712,78 +1712,78 @@
     text-transform: uppercase;
   }
 
-  .m3-dfx-card-body {
+  .design-for-x-card-body {
     display: grid;
     gap: 0;
     padding: 22px;
   }
 
-  .m3-dfx-card-body section {
+  .design-for-x-card-body section {
     display: grid;
     gap: 12px;
     padding: 18px 0;
-    border-bottom: 1px solid color-mix(in srgb, var(--module-accent) 55%, var(--white));
+    border-bottom: 1px solid color-mix(in srgb, var(--phase-accent) 55%, var(--white));
   }
 
-  .m3-dfx-card-body section:first-child {
+  .design-for-x-card-body section:first-child {
     padding-top: 0;
   }
 
-  .m3-dfx-card-body section:last-child {
+  .design-for-x-card-body section:last-child {
     padding-bottom: 0;
     border-bottom: 0;
   }
 
-  .m3-dfx-card-body h5 {
+  .design-for-x-card-body h5 {
     color: var(--dark);
     font-family: Tahoma, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.2;
   }
 
-  .m3-dfx-card-body p {
+  .design-for-x-card-body p {
     color: var(--muted);
     font-size: 0.98rem;
     line-height: 1.28;
   }
 
-  .m3-dfx-card-body ul {
+  .design-for-x-card-body ul {
     display: grid;
     gap: 7px;
     margin: 0;
     padding-left: 20px;
   }
 
-  .m3-dfx-card-body li {
+  .design-for-x-card-body li {
     color: var(--muted);
     font-size: 0.98rem;
     line-height: 1.28;
   }
 
-  .m3-dfx-card-body li::marker {
-    color: var(--module-accent);
+  .design-for-x-card-body li::marker {
+    color: var(--phase-accent);
     font-size: 0.8em;
   }
 
-  :global(.m3-dfx-card-body section:last-child p) {
+  :global(.design-for-x-card-body section:last-child p) {
     font-style: italic;
   }
 
-  :global(.m3-dfx-source) {
-    color: color-mix(in srgb, var(--dark) 58%, var(--module-accent));
+  :global(.design-for-x-source) {
+    color: color-mix(in srgb, var(--dark) 58%, var(--phase-accent));
     font-size: 0.8rem;
     font-style: italic;
     line-height: 1.35;
   }
 
-  .m3-process-grid {
+  .process-redesign-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 22px;
     position: relative;
   }
 
-  .m3-process-column {
+  .process-redesign-column {
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 20px;
@@ -1794,29 +1794,29 @@
     color: var(--white);
   }
 
-  .m3-process-top {
+  .process-redesign-top {
     display: grid;
     justify-items: center;
     gap: 10px;
     text-align: center;
   }
 
-  .m3-process-icon {
+  .process-redesign-icon {
     width: 54px;
     height: 54px;
     position: relative;
   }
 
-  .m3-process-icon::after {
+  .process-redesign-icon::after {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
 
-  .m3-process-top h4 {
+  .process-redesign-top h4 {
     color: var(--white);
     font-family: "Bahnschrift SemiCondensed", "Bahnschrift", Impact, sans-serif;
     font-size: clamp(1.25rem, 2vw, 1.65rem);
@@ -1824,13 +1824,13 @@
     text-transform: uppercase;
   }
 
-  .m3-process-top p {
-    color: color-mix(in srgb, var(--white) 82%, var(--module-accent));
+  .process-redesign-top p {
+    color: color-mix(in srgb, var(--white) 82%, var(--phase-accent));
     font-style: italic;
     line-height: 1.25;
   }
 
-  .m3-process-column ul {
+  .process-redesign-column ul {
     display: grid;
     gap: 22px;
     margin: 0;
@@ -1839,7 +1839,7 @@
     list-style: none;
   }
 
-  .m3-process-column li {
+  .process-redesign-column li {
     position: relative;
     padding-left: 28px;
     color: inherit;
@@ -1848,28 +1848,28 @@
     line-height: 1.3;
   }
 
-  .m3-process-column li::before {
+  .process-redesign-column li::before {
     content: "";
     position: absolute;
     left: 0;
     top: 0.45em;
     width: 10px;
     height: 10px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     border-radius: 999px;
   }
 
-  .m3-process-flow-arrow {
+  .process-redesign-flow-arrow {
     position: relative;
     height: 22px;
     margin: 24px 24px 8px;
   }
 
-  .m3-process-flow-arrow-top {
+  .process-redesign-flow-arrow-top {
     margin: 12px 24px 14px;
   }
 
-  .m3-process-flow-arrow::before {
+  .process-redesign-flow-arrow::before {
     content: "";
     position: absolute;
     left: 0;
@@ -1880,7 +1880,7 @@
     transform: translateY(-50%);
   }
 
-  .m3-process-flow-arrow::after {
+  .process-redesign-flow-arrow::after {
     content: "";
     position: absolute;
     right: 0;
@@ -1892,18 +1892,18 @@
     transform: translateY(-50%) rotate(-45deg);
   }
 
-  .m3-process-flow-arrow-top::before {
+  .process-redesign-flow-arrow-top::before {
     left: 10px;
     right: 0;
   }
 
-  .m3-process-flow-arrow-top::after {
+  .process-redesign-flow-arrow-top::after {
     left: 0;
     right: auto;
     transform: translateY(-50%) rotate(135deg);
   }
 
-  .m3-process-footer {
+  .process-redesign-footer {
     display: flex;
     justify-content: center;
     gap: 8px;
@@ -1912,8 +1912,8 @@
     line-height: 1.3;
   }
 
-  .m3-process-footer span {
-    color: var(--module-accent);
+  .process-redesign-footer span {
+    color: var(--phase-accent);
     font-weight: 700;
   }
 
@@ -1924,8 +1924,8 @@
     margin-top: 32px;
   }
 
-  .module-detail-copy-wide .baseline-card-grid,
-  .module-detail-copy-wide .hotspot-factbox {
+  .phase-detail-copy-wide .baseline-card-grid,
+  .phase-detail-copy-wide .hotspot-factbox {
     width: min(var(--site-container-max), 92vw);
   }
 
@@ -1935,7 +1935,7 @@
     gap: 14px;
     min-height: 250px;
     padding: 28px 24px;
-    border: 2px solid var(--module-accent);
+    border: 2px solid var(--phase-accent);
     border-radius: 8px;
     background-color: transparent;
     box-shadow: 0 12px 22px rgba(10, 46, 54, 0.08);
@@ -1945,14 +1945,14 @@
   .baseline-card-icon {
     width: 68px;
     height: 68px;
-    background-color: var(--module-accent);
+    background-color: var(--phase-accent);
     -webkit-mask: var(--icon-url) center / contain no-repeat;
     mask: var(--icon-url) center / contain no-repeat;
   }
 
   .baseline-card h3 {
     font-family: Tahoma, Arial, sans-serif;
-    color: var(--module-accent);
+    color: var(--phase-accent);
     font-size: clamp(1.08rem, 1.8vw, 1.35rem);
     line-height: 1.16;
     text-transform: uppercase;
@@ -1980,10 +1980,10 @@
   }
 
   .baseline-card li::marker {
-    color: var(--module-accent);
+    color: var(--phase-accent);
   }
 
-  .module-detail-closing {
+  .phase-detail-closing {
     margin-top: 28px;
   }
 
@@ -2045,38 +2045,38 @@
     cursor: pointer;
   }
 
-  .module-empty-tools {
+  .phase-empty-tools {
     color: var(--muted);
   }
 
-  .module-summary-section {
+  .phase-summary-section {
     padding: 72px 0;
     background:
       linear-gradient(135deg, rgba(9, 187, 136, 0.18), rgba(255, 204, 0, 0.2)),
       var(--light-bg);
   }
 
-  .module-summary-section .eyebrow,
-  .module-summary-section h2,
-  :global(.module-summary-text p),
-  :global(.module-summary-text li) {
+  .phase-summary-section .eyebrow,
+  .phase-summary-section h2,
+  :global(.phase-summary-text p),
+  :global(.phase-summary-text li) {
     color: var(--dark);
   }
 
-  .module-summary-content {
+  .phase-summary-content {
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1fr);
     gap: 48px;
     align-items: start;
   }
 
-  .module-summary-text {
+  .phase-summary-text {
     display: grid;
     gap: 28px;
     max-width: 640px;
   }
 
-  .module-summary-text p {
+  .phase-summary-text p {
     margin: 0;
   }
 
@@ -2086,7 +2086,7 @@
     margin-bottom: 0;
   }
 
-  .module-summary-checklist {
+  .phase-summary-checklist {
     display: grid;
     gap: 18px;
     padding: 24px;
@@ -2162,55 +2162,55 @@
   }
 
   @media (max-width: 900px) {
-    .module-hero-content {
+    .phase-hero-content {
       grid-template-columns: 1fr;
       gap: 24px;
       align-items: start;
     }
 
-    .module-hero-topline {
+    .phase-hero-topline {
       grid-template-columns: 1fr;
       gap: 18px;
     }
 
-    .module-hero-icon {
+    .phase-hero-icon {
       width: 96px;
       border-radius: 18px;
       order: 2;
     }
 
-    .module-hero-copy {
+    .phase-hero-copy {
       display: contents;
     }
 
-    .module-hero-copy .eyebrow {
+    .phase-hero-copy .eyebrow {
       order: 1;
       margin-bottom: 0;
     }
 
-    .module-hero-copy h1 {
+    .phase-hero-copy h1 {
       order: 3;
     }
 
-    .module-hero-copy :global(.subpage-intro) {
+    .phase-hero-copy :global(.subpage-intro) {
       order: 4;
     }
 
-    .module-section-navigation {
+    .phase-section-navigation {
       order: 5;
     }
 
-    .module-body-content,
-    .module-detail-layout,
-    .m1-learning-resource-item,
-    .module-summary-content {
+    .phase-body-content,
+    .phase-detail-layout,
+    .learning-resource-item,
+    .phase-summary-content {
       grid-template-columns: 1fr;
     }
 
-    .module-pathway-grid,
+    .phase-pathway-grid,
     .baseline-card-grid,
-    .m3-dfx-grid,
-    .m3-process-grid {
+    .design-for-x-grid,
+    .process-redesign-grid {
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -2218,35 +2218,35 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .m3-wheel-workshop-overview-grid,
-    .m3-wheel-workshop-step-grid {
+    .circular-strategies-workshop-overview-grid,
+    .circular-strategies-workshop-step-grid {
       grid-template-columns: 1fr;
     }
   }
 
   @media (max-width: 640px) {
-    .module-pathway-grid,
+    .phase-pathway-grid,
     .baseline-card-grid,
-    .m3-dfx-grid,
-    .m3-process-grid {
+    .design-for-x-grid,
+    .process-redesign-grid {
       grid-template-columns: 1fr;
     }
 
-    .m3-dfx-framework,
-    .m3-process-redesign {
+    .design-for-x-framework,
+    .process-redesign {
       padding: 20px;
     }
 
-    .m3-dfx-card-header {
+    .design-for-x-card-header {
       min-height: auto;
     }
 
-    .m3-process-column,
-    .m3-process-column ul {
+    .process-redesign-column,
+    .process-redesign-column ul {
       min-height: auto;
     }
 
-    .m3-process-flow-arrow {
+    .process-redesign-flow-arrow {
       display: none;
     }
 
@@ -2254,20 +2254,20 @@
       grid-template-columns: 1fr;
     }
 
-    .m3-wheel-workshop-card {
+    .circular-strategies-workshop-card {
       padding: 20px;
     }
 
-    .m3-wheel-workshop-card-collection {
+    .circular-strategies-workshop-card-collection {
       padding: 14px;
     }
 
-    .m3-wheel-workshop-title-icon {
+    .circular-strategies-workshop-title-icon {
       width: 48px;
       height: 48px;
     }
 
-    .m3-wheel-workshop-card-heading {
+    .circular-strategies-workshop-card-heading {
       align-items: flex-start;
     }
 

@@ -13,7 +13,7 @@ const phaseCard = {
   slug: 'evaluate',
   shortName: 'Phase 4',
   title: 'Evaluate',
-  colourClass: 'module-card-blue',
+  colourClass: 'phase-card-blue',
   description:
     'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.'
 };
@@ -95,9 +95,9 @@ const shortlistStrategiesSection = {
     SHORTLIST STRATEGIES QUESTIONNAIRE
     Edit the questionnaire title, instructions, categories, questions and
     result messages below. The interactive layout is in:
-    src/lib/components/sections/M4Questionnaire.svelte
+    src/lib/components/sections/StrategyShortlistQuestionnaire.svelte
   */
-  m4Questionnaire: {
+  strategyShortlistQuestionnaire: {
     title: 'Screening your options',
     introduction:
       "Use this questionnaire to see how well each circular option could work for you. First, select a circular option to assess. Then, answer the questionnaire below according to your business. Based on your responses, you'll be given an estimate of how well this circular option model could work for you.",
@@ -116,7 +116,7 @@ const shortlistStrategiesSection = {
     downloadingLabel: 'Preparing PDF...',
     downloadFilename: 'phase-4-evaluate-shortlist-strategies-results.pdf',
     pdfDisclaimer:
-      'These are guiding questions part of Phase 4: Evaluate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and context awareness.',
+      'These are guiding questions part of Phase 4: Evaluate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and business context.',
     incompleteText: 'Answer every question to see your result.',
     positiveResult:
       'There seems to be potential! This strategy should be considered to be tested.',

@@ -6,7 +6,7 @@
   - Edit text inside quotes and add or remove list entries as needed.
   - Keep `id`, `slug` and `sectionId` values unchanged unless the page structure
     and resource placement tags are also being changed.
-  - Construction case cards are edited separately in src/lib/content/cases.js.
+  - Construction case cards are edited separately in src/lib/content/editable/cases/cases.js.
 */
 
 // 1. INTRODUCTION TO SECTOR
@@ -19,7 +19,7 @@ export const constructionIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// Add exactly three case names from src/lib/content/editable/cases/cases.js to `featuredCaseNames`.
 // The names should match the visible company/case names in the case catalogue.
 // Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 export const constructionCasesSection = {
@@ -92,7 +92,7 @@ export const constructionBarriersSection = {
 
 // 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Construction sector slug to a resource's
-// placements in src/lib/content/tool-catalogue.js to display it automatically.
+// placements in src/lib/content/editable/tools/tool-catalogue.js to display it automatically.
 export const constructionRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',

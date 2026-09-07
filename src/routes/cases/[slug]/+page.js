@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { cases } from '$lib/content/cases.js';
+import { cases } from '$lib/content/editable/cases/cases.js';
 
 export function entries() {
   return cases.map((caseStudy) => ({ slug: caseStudy.slug }));

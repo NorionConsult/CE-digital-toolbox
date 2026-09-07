@@ -12,7 +12,7 @@ const phaseCard = {
   slug: 'learn',
   shortName: 'Phase 1',
   title: 'Learn',
-  colourClass: 'module-card-green',
+  colourClass: 'phase-card-green',
   description:
     'Introduces key Circular Economy (CE) and Resource Efficient and Cleaner Production (RECP) concepts, terms, and models to understand the benefits, risks, and potential of circular economy, without prior knowledge.'
 };

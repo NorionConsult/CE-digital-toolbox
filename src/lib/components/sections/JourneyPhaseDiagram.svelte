@@ -116,7 +116,7 @@
 
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
       await tick();
-      document.querySelector('.maturity-pop-up')?.scrollIntoView({
+      document.querySelector('.journey-diagram-pop-up')?.scrollIntoView({
         block: 'start',
         behavior: 'smooth'
       });
@@ -163,11 +163,11 @@
 
 <svelte:window on:keydown={closeOnEscape} />
 
-<div class="maturity-curve">
-  <div class="maturity-visual">
+<div class="journey-diagram-curve">
+  <div class="journey-diagram-visual">
     <div
       class:has-popup={activePhase !== null}
-      class="maturity-chart"
+      class="journey-diagram-chart"
       aria-label="Interactive SME journey phase diagram"
     >
       <div class="journey-steps">
@@ -179,7 +179,7 @@
               type="button"
               class:active={activePhase?.number === phase.number}
               class:pulse={phase.number === '1' && !hasSelectedPhase}
-              class="maturity-point"
+              class="journey-diagram-point"
               aria-label={`Open ${phase.phaseName} phase description`}
               aria-pressed={activePhase?.number === phase.number}
               on:click={() => selectPhase(phase)}
@@ -210,26 +210,26 @@
       {#if activePhase}
         <aside
           class:edge-panel={activePhase.edgePhase}
-          class={`maturity-pop-up panel-${activePhase.panelSide}`}
+          class={`journey-diagram-pop-up panel-${activePhase.panelSide}`}
           aria-live="polite"
         >
-          <div class="maturity-panel-card">
+          <div class="journey-diagram-panel-card">
             <button
               type="button"
-              class="maturity-close"
+              class="journey-diagram-close"
               aria-label="Close selected phase description"
               on:click={() => (activePhase = null)}
             >
               <span aria-hidden="true"></span>
             </button>
 
-            <div class="maturity-panel-content">
+            <div class="journey-diagram-panel-content">
               <h4>{activePhase.formerLabel}</h4>
               <p>{activePhase.popUpText}</p>
             </div>
 
-            <div class="maturity-actions">
-              <a href="{base}{activePhase.href}" class="maturity-go-link">
+            <div class="journey-diagram-actions">
+              <a href="{base}{activePhase.href}" class="journey-diagram-go-link">
                 View phase
                 <span class="link-arrow" aria-hidden="true"></span>
               </a>
@@ -242,16 +242,16 @@
 </div>
 
 <style>
-  .maturity-curve {
+  .journey-diagram-curve {
     display: grid;
     margin-top: 42px;
   }
 
-  .maturity-visual {
+  .journey-diagram-visual {
     max-width: 100%;
   }
 
-  .maturity-chart {
+  .journey-diagram-chart {
     --journey-point-size: 64px;
     --journey-step-inset: 12px;
 
@@ -289,7 +289,7 @@
     padding: 0 var(--journey-step-inset);
   }
 
-  .maturity-point {
+  .journey-diagram-point {
     position: relative;
     z-index: 2;
     display: inline-flex;
@@ -312,19 +312,19 @@
       border-color 0.18s ease;
   }
 
-  .maturity-point.pulse {
-    animation: maturity-point-pulse 2.6s ease-in-out infinite;
+  .journey-diagram-point.pulse {
+    animation: journey-diagram-point-pulse 2.6s ease-in-out infinite;
   }
 
-  .maturity-point img {
+  .journey-diagram-point img {
     width: 112%;
     height: 112%;
     object-fit: contain;
     pointer-events: none;
   }
 
-  .maturity-point:hover,
-  .maturity-point:focus-visible {
+  .journey-diagram-point:hover,
+  .journey-diagram-point:focus-visible {
     animation: none;
     border-color: var(--button-highlight);
     box-shadow:
@@ -333,7 +333,7 @@
     transform: scale(1.06);
   }
 
-  .maturity-point.active {
+  .journey-diagram-point.active {
     animation: none;
     background-color: var(--button-highlight);
     border-color: var(--button-highlight);
@@ -343,11 +343,11 @@
     transform: scale(1.06);
   }
 
-  .maturity-point.active.pulse {
-    animation: maturity-point-pulse 2.6s ease-in-out infinite;
+  .journey-diagram-point.active.pulse {
+    animation: journey-diagram-point-pulse 2.6s ease-in-out infinite;
   }
 
-  @keyframes maturity-point-pulse {
+  @keyframes journey-diagram-point-pulse {
     0%,
     100% {
       box-shadow: 0 0 0 0 color-mix(in srgb, var(--button-highlight) 42%, transparent);
@@ -435,7 +435,7 @@
     align-self: start;
   }
 
-  .maturity-pop-up {
+  .journey-diagram-pop-up {
     position: relative;
     z-index: 1;
     width: min(760px, 100%);
@@ -448,23 +448,23 @@
     scroll-margin-top: 140px;
   }
 
-  .maturity-pop-up.panel-right {
+  .journey-diagram-pop-up.panel-right {
     margin-left: auto;
   }
 
-  .maturity-pop-up.panel-left {
+  .journey-diagram-pop-up.panel-left {
     margin-right: auto;
   }
 
-  .maturity-pop-up.panel-left.edge-panel {
+  .journey-diagram-pop-up.panel-left.edge-panel {
     border-top-left-radius: 0;
   }
 
-  .maturity-pop-up.panel-right.edge-panel {
+  .journey-diagram-pop-up.panel-right.edge-panel {
     border-top-right-radius: 0;
   }
 
-  .maturity-panel-card {
+  .journey-diagram-panel-card {
     position: relative;
     display: grid;
     grid-template-columns: 1fr;
@@ -476,28 +476,28 @@
     background-color: var(--white);
   }
 
-  .maturity-pop-up p {
+  .journey-diagram-pop-up p {
     line-height: 1.45;
   }
 
-  .maturity-pop-up h4 {
+  .journey-diagram-pop-up h4 {
     margin-top: 4px;
     color: var(--dark);
     font-size: clamp(1.15rem, 2vw, 1.5rem);
   }
 
-  .maturity-panel-content {
+  .journey-diagram-panel-content {
     display: grid;
     gap: 10px;
   }
 
-  .maturity-actions {
+  .journey-diagram-actions {
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
 
-  .maturity-go-link {
+  .journey-diagram-go-link {
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -524,7 +524,7 @@
     transition: transform 0.18s ease;
   }
 
-  .maturity-close {
+  .journey-diagram-close {
     position: absolute;
     top: 16px;
     right: 16px;
@@ -541,7 +541,7 @@
     cursor: pointer;
   }
 
-  .maturity-close span {
+  .journey-diagram-close span {
     width: 24px;
     aspect-ratio: 1;
     background-color: currentColor;
@@ -549,57 +549,57 @@
     mask: url("https://api.iconify.design/icon-park-outline:close-one.svg") center / contain no-repeat;
   }
 
-  .maturity-close:hover,
-  .maturity-close:focus-visible {
+  .journey-diagram-close:hover,
+  .journey-diagram-close:focus-visible {
     background-color: var(--blue);
     color: var(--white);
   }
 
-  .maturity-go-link:hover,
-  .maturity-go-link:focus-visible {
+  .journey-diagram-go-link:hover,
+  .journey-diagram-go-link:focus-visible {
     color: var(--green-secondary);
     opacity: 0.85;
   }
 
-  .maturity-go-link:hover .link-arrow,
-  .maturity-go-link:focus-visible .link-arrow {
+  .journey-diagram-go-link:hover .link-arrow,
+  .journey-diagram-go-link:focus-visible .link-arrow {
     transform: translateX(3px);
   }
 
   @media (max-width: 900px) {
-    .maturity-chart {
+    .journey-diagram-chart {
       min-height: 0;
     }
 
-    .maturity-pop-up {
+    .journey-diagram-pop-up {
       margin-top: 28px;
       width: 100%;
       border-radius: 15px;
     }
 
-    .maturity-pop-up.panel-right,
-    .maturity-pop-up.panel-left {
+    .journey-diagram-pop-up.panel-right,
+    .journey-diagram-pop-up.panel-left {
       margin-right: 0;
       margin-left: 0;
       border-radius: 15px;
     }
 
-    .maturity-pop-up.panel-left.edge-panel,
-    .maturity-pop-up.panel-right.edge-panel {
+    .journey-diagram-pop-up.panel-left.edge-panel,
+    .journey-diagram-pop-up.panel-right.edge-panel {
       border-radius: 15px;
     }
 
-    .maturity-panel-card {
+    .journey-diagram-panel-card {
       padding-right: 60px;
     }
   }
 
   @media (max-width: 640px) {
-    .maturity-curve {
+    .journey-diagram-curve {
       margin-top: 28px;
     }
 
-    .maturity-chart {
+    .journey-diagram-chart {
       --journey-point-size: 56px;
 
       padding: 20px 16px;
@@ -636,7 +636,7 @@
       background-color: transparent;
     }
 
-    .maturity-point {
+    .journey-diagram-point {
       justify-self: start;
     }
 
@@ -658,7 +658,7 @@
       font-size: 1rem;
     }
 
-    .maturity-pop-up {
+    .journey-diagram-pop-up {
       max-height: min(420px, calc(100vh - 32px));
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
@@ -666,7 +666,7 @@
       border-radius: 15px;
     }
 
-    .maturity-panel-card {
+    .journey-diagram-panel-card {
       border-radius: 10px;
       padding: 16px 52px 16px 16px;
     }

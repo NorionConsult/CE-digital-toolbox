@@ -65,46 +65,46 @@
   cards, Tools page resource cards and resource pages all use these same
   classes, so changing a journey phase colour only needs to happen here.
 */
-.module-card-green {
-  --module-bg: var(--green-primary);
-  --module-text: var(--dark);
-  --module-border: transparent;
-  --module-accent: var(--green-primary);
+.phase-card-green {
+  --phase-bg: var(--green-primary);
+  --phase-text: var(--dark);
+  --phase-border: transparent;
+  --phase-accent: var(--green-primary);
 }
 
-.module-card-lime {
-  --module-bg: var(--green-secondary);
-  --module-text: var(--white);
-  --module-border: transparent;
-  --module-accent: var(--green-secondary);
+.phase-card-lime {
+  --phase-bg: var(--green-secondary);
+  --phase-text: var(--white);
+  --phase-border: transparent;
+  --phase-accent: var(--green-secondary);
 }
 
-.module-card-yellow {
-  --module-bg: var(--yellow);
-  --module-text: var(--dark);
-  --module-border: transparent;
-  --module-accent: var(--yellow);
+.phase-card-yellow {
+  --phase-bg: var(--yellow);
+  --phase-text: var(--dark);
+  --phase-border: transparent;
+  --phase-accent: var(--yellow);
 }
 
-.module-card-blue {
-  --module-bg: var(--blue);
-  --module-text: var(--white);
-  --module-border: transparent;
-  --module-accent: var(--blue);
+.phase-card-blue {
+  --phase-bg: var(--blue);
+  --phase-text: var(--white);
+  --phase-border: transparent;
+  --phase-accent: var(--blue);
 }
 
-.module-card-dark {
-  --module-bg: var(--dark);
-  --module-text: var(--white);
-  --module-border: transparent;
-  --module-accent: var(--dark);
+.phase-card-dark {
+  --phase-bg: var(--dark);
+  --phase-text: var(--white);
+  --phase-border: transparent;
+  --phase-accent: var(--dark);
 }
 
-.module-card-outline {
-  --module-bg: #6177b1;
-  --module-text: var(--white);
-  --module-border: transparent;
-  --module-accent: #6177b1;
+.phase-card-outline {
+  --phase-bg: #6177b1;
+  --phase-text: var(--white);
+  --phase-border: transparent;
+  --phase-accent: #6177b1;
 }
 
 * {

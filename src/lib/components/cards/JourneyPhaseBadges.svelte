@@ -1,5 +1,5 @@
 <script>
-  import { getJourneyPhaseClass } from '$lib/content/phase-badge-colours.js';
+  import { getJourneyPhaseClass } from '$lib/content/technical/phase-badge-colours.js';
 
   /** @type {string[]} */
   export let phases = [];
@@ -31,10 +31,10 @@
     align-items: center;
     width: fit-content;
     padding: 6px 10px;
-    border: 1px solid var(--module-border);
+    border: 1px solid var(--phase-border);
     border-radius: 999px;
-    background-color: var(--module-bg);
-    color: var(--module-text);
+    background-color: var(--phase-bg);
+    color: var(--phase-text);
     font-size: 0.78rem;
     font-weight: 700;
     line-height: 1.15;

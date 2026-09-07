@@ -7,7 +7,7 @@ This is a SvelteKit static website for the Circular Economy Toolbox. The project
 ```text
 src/
 ├── lib/
-│   ├── content/           # Edit website text, journey phases, sectors and tools here
+│   ├── content/           # Editable content plus technical content helpers
 │   ├── theme/             # Edit the global header and footer here
 │   └── components/        # Reusable page building blocks
 ├── routes/                # Website pages and page templates
@@ -25,53 +25,58 @@ Global header, header logo and navigation:
 
 ```text
 src/lib/theme/SiteHeader.svelte
-src/lib/content/site.js
+src/lib/content/editable/global/site.js
+src/lib/content/editable/global/buttons.js
+src/lib/content/editable/global/footer.js
 static/logos/
 ```
 
-Global footer and contact email:
+Global footer:
 
 ```text
 src/lib/theme/SiteFooter.svelte
-src/lib/content/site.js
+src/lib/content/editable/global/footer.js
 ```
 
 Home page text:
 
 ```text
-src/lib/content/home.js
+src/lib/content/editable/pages/home.js
 ```
 
 Journey phase cards and journey phase pages:
 
 ```text
-src/lib/content/journey-phases.js
-src/lib/content/en/journey-phases/
+src/lib/content/editable/journey-phases/
+src/lib/content/editable/pages/journey-phase-page.js
+src/lib/content/technical/registries/journey-phases.js
 ```
 
 Sector tools:
 
 ```text
-src/lib/content/sectors.js
+src/lib/content/editable/sector-guides/
+src/lib/content/editable/pages/sector-page.js
+src/lib/content/technical/registries/sector-guides.js
 static/images/
 ```
 
 Tools:
 
 ```text
-src/lib/content/tool-catalogue.js
+src/lib/content/editable/tools/tool-catalogue.js
 ```
 
 Tools page labels and intro text:
 
 ```text
-src/lib/content/tools-page.js
+src/lib/content/editable/pages/tools-page.js
 ```
 
 Shared journey phase page labels:
 
 ```text
-src/lib/content/journey-phase-page.js
+src/lib/content/editable/pages/journey-phase-page.js
 ```
 
 Colours, fonts and shared visual style:
@@ -104,7 +109,7 @@ This will show only those names in bold on the website. This works in journey ph
 1. Open:
 
 ```text
-src/lib/content/tool-catalogue.js
+src/lib/content/editable/tools/tool-catalogue.js
 ```
 
 2. Copy one existing tool block and change the title, description, journey phases, language, provider, access and link.
@@ -120,14 +125,14 @@ paragraph break inside one text field. Add links with
 lists. This works for tool about text, journey phase paragraphs, sector guide
 paragraphs and case descriptions.
 
-The Tools filters are created automatically from the tools, so new languages, providers and access values appear without editing another file.
+The Tools filters are created automatically from the tools. The public language filter is intentionally limited to English, Armenian, Romanian and Ukrainian, while the full language text entered by editors still appears on tool cards and tool pages.
 
 ## Add A New Journey Phase
 
 1. Open:
 
 ```text
-src/lib/content/en/journey-phases/
+src/lib/content/editable/journey-phases/
 ```
 
 2. Copy one existing journey phase file and change the text and slug.
@@ -145,7 +150,7 @@ static/images/
 Then update the matching `image` and `imageAlt` values in:
 
 ```text
-src/lib/content/sectors.js
+src/lib/content/editable/sector-guides/
 ```
 
 ## Replace Footer Logos
@@ -159,7 +164,7 @@ static/logos/
 Then update `footerLogos` in:
 
 ```text
-src/lib/content/site.js
+src/lib/content/editable/global/footer.js
 ```
 
 ## About The Build Folder
@@ -173,10 +178,10 @@ Good practice is to keep editable assets only in `static/` and ignore `build/` i
 Most visible text is in:
 
 ```text
-src/lib/content/
+src/lib/content/editable/
 ```
 
-To create another language, copy the content files, translate the text values, and then point the page imports to the translated files. The structure is intentionally simple so a later language switcher can be added without rewriting the theme.
+To create another language later, copy the editable content structure, translate the text values, and then connect the page imports to the translated files. The current site uses one editor-facing content structure without the old `en` wrapper folder.
 
 ## Run Locally
 

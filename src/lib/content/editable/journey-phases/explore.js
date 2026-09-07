@@ -12,7 +12,7 @@ const phaseCard = {
   slug: 'explore',
   shortName: 'Phase 3',
   title: 'Explore',
-  colourClass: 'module-card-yellow',
+  colourClass: 'phase-card-yellow',
   description:
     'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.'
 };
@@ -101,16 +101,16 @@ const identifyOptionsSection = {
     zoomable: true
   },
   /*
-    Relevant tools are connected in src/lib/content/tool-catalogue.js.
+    Relevant tools are connected in src/lib/content/editable/tools/tool-catalogue.js.
     To show a tool here, add this tag to the tool's placements.phaseSections:
     explore:identify-options
   */
   /*
-    M3 WHEEL WORKSHOP
+    CIRCULAR STRATEGIES WORKSHOP
     Edit all Phase 3 wheel workshop wording, timings, lists and the canvas link below.
     The workshop appears immediately after the section paragraphs above.
   */
-  m3WheelWorkshop: {
+  circularStrategiesWorkshop: {
     subtitle: 'Explore possible circular strategies',
     title: 'Circular Strategies Wheel Workshop',
     icon: 'recycling',
@@ -229,7 +229,7 @@ const developSolutionsSection = {
     'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and evaluated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
   ],
   /*
-    Relevant tools are connected in src/lib/content/tool-catalogue.js.
+    Relevant tools are connected in src/lib/content/editable/tools/tool-catalogue.js.
     To show a tool here, add this tag to the tool's placements.phaseSections:
     explore:develop-solutions
   */

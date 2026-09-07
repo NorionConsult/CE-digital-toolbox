@@ -6,7 +6,7 @@
   - Edit text inside quotes and add or remove list entries as needed.
   - To make a paragraph change in the text, add \r\n at the end of the line and continue the paragraph on the next line. Making a space in the code will NOT result in a line break on the page. Use \r\n to create a new paragraph.
   - Keep `id`, `slug` and `sectionId` values unchanged unless the page structure and resource placement tags are also being changed.
-  - Food and Agriculture case cards are edited separately in src/lib/content/cases.js.
+  - Food and Agriculture case cards are edited separately in src/lib/content/editable/cases/cases.js.
 */
 
 // 1. INTRODUCTION TO SECTOR
@@ -19,7 +19,7 @@ export const foodAndAgricultureIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Add exactly three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// Add exactly three case names from src/lib/content/editable/cases/cases.js to `featuredCaseNames`.
 // The names should match the visible company/case names in the case catalogue.
 // Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 export const foodAndAgricultureCasesSection = {
@@ -92,7 +92,7 @@ export const foodAndAgricultureBarriersSection = {
 
 // 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Food and Agriculture sector slug to a resource's
-// placements in src/lib/content/tool-catalogue.js to display it automatically.
+// placements in src/lib/content/editable/tools/tool-catalogue.js to display it automatically.
 export const foodAndAgricultureRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',

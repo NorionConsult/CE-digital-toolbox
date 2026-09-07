@@ -2,8 +2,8 @@
   import { base } from '$app/paths';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
-  import { site } from '$lib/content/site.js';
-  import { isDownloadableToolLink } from '$lib/content/tool-catalogue-utils.js';
+  import { site } from '$lib/content/editable/global/site.js';
+  import { isDownloadableToolLink } from '$lib/content/technical/tool-catalogue-utils.js';
 
   export let resource;
 

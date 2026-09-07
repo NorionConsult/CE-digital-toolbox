@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
-import { sectors } from '$lib/content/sectors.js';
-import { resources } from '$lib/content/tool-catalogue.js';
-import { cases } from '$lib/content/cases.js';
+import { sectors } from '$lib/content/technical/registries/sector-guides.js';
+import { resources } from '$lib/content/editable/tools/tool-catalogue.js';
+import { cases } from '$lib/content/editable/cases/cases.js';
 
 /** @type {Record<string, string[]>} */
 const sectorCaseAliases = {

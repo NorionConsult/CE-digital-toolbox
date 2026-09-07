@@ -1,6 +1,6 @@
 <script>
   import InlineText from '$lib/components/formatting/InlineText.svelte';
-  import { contactPage } from '$lib/content/contact-page.js';
+  import { contactPage } from '$lib/content/editable/pages/contact-page.js';
 
   /**
    * Placeholder links use "#". When editors add real form URLs in

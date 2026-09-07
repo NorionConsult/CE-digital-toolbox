@@ -6,7 +6,7 @@
   - Edit text inside quotes and add or remove list entries as needed.
   - Keep `id`, `slug` and `sectionId` values unchanged unless the page structure
     and resource placement tags are also being changed.
-  - Tourism case cards can be added in src/lib/content/cases.js.
+  - Tourism case cards can be added in src/lib/content/editable/cases/cases.js.
 */
 
 // 1. INTRODUCTION TO SECTOR
@@ -19,7 +19,7 @@ export const tourismIntroSection = {
 };
 
 // 2. CASE EXAMPLES
-// Add up to three case names from src/lib/content/cases.js to `featuredCaseNames`.
+// Add up to three case names from src/lib/content/editable/cases/cases.js to `featuredCaseNames`.
 // Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 // Tourism-specific cases can be added here when they are available in the case catalogue.
 export const tourismCasesSection = {
@@ -90,7 +90,7 @@ export const tourismBarriersSection = {
 
 // 4. RELEVANT TOOLS
 // Tools are not listed here. Add the Tourism sector slug to a resource's
-// placements in src/lib/content/tool-catalogue.js to display it automatically.
+// placements in src/lib/content/editable/tools/tool-catalogue.js to display it automatically.
 export const tourismRelevantToolsSection = {
   id: 'relevant-tools',
   title: 'Relevant tools',

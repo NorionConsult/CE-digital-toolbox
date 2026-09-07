@@ -7,8 +7,8 @@
 
   Important:
   - These cards control the overview page only.
-  - The detailed journey phase pages are edited in src/lib/content/en/journey-phases/.
-  - The detailed sector pages are edited in src/lib/content/en/sectors/.
+  - The detailed journey phase pages are edited in src/lib/content/editable/journey-phases/.
+  - The detailed sector pages are edited in src/lib/content/editable/sector-guides/.
   - Keep slug values unchanged unless the matching page URL is also changed.
 */
 export const guidedPathways = {

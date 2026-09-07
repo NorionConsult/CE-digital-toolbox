@@ -1,7 +1,7 @@
 /*
   Technical helper functions for the Tool Catalogue.
-  Editors should not edit this file. Tool entries are edited in:
-  src/lib/content/tool-catalogue.js
+  Editors should not edit this file. Unless it is for translation of the labels. Tool entries are edited in:
+  src/lib/content/editable/tools/tool-catalogue.js
 */
 
 const LANGUAGE_MULTIPLE_LABEL = 'Multiple';
@@ -24,22 +24,13 @@ const DOWNLOADABLE_TOOL_EXTENSIONS = [
 /** @type {Record<string, Record<string, string>>} */
 const FILTER_LABELS = {
   journeyPhases: {
-    awareness: 'Learn',
     learn: 'Learn',
     assess: 'Assess',
-    diagnose: 'Assess',
-    diagnosis: 'Assess',
-    options: 'Explore',
     explore: 'Explore',
     evaluate: 'Evaluate',
-    'business case': 'Evaluate',
-    'business-case': 'Evaluate',
     implement: 'Implement',
-    implementation: 'Implement',
     monitor: 'Monitor',
-    monitoring: 'Monitor',
-    none: 'None',
-    'sector tools': 'None'
+    none: 'None'
   },
   sector: {
     all: 'Cross-sector',

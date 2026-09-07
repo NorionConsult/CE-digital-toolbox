@@ -4,7 +4,7 @@
     This wraps every page with the same header and footer, so they are easy to maintain globally.
   */
   import '../app.css';
-  import { site } from '$lib/content/site.js';
+  import { site } from '$lib/content/editable/global/site.js';
   import SiteHeader from '$lib/theme/SiteHeader.svelte';
   import SiteFooter from '$lib/theme/SiteFooter.svelte';
 </script>
