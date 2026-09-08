@@ -1,36 +1,41 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { aboutPage } from '$lib/content/editable/pages/about-page.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentAboutPage = localizeContent(aboutPage, currentLanguage);
 </script>
 
 <svelte:head>
-  <title>{aboutPage.pageTitle}</title>
+  <title>{currentAboutPage.pageTitle}</title>
 </svelte:head>
 
 <section class="subpage-hero about-hero">
   <div class="container subpage-content">
-    <p class="eyebrow">{aboutPage.eyebrow}</p>
-    <h1>{aboutPage.title}</h1>
+    <p class="eyebrow">{currentAboutPage.eyebrow}</p>
+    <h1>{currentAboutPage.title}</h1>
 
     <div class="about-copy">
-      {#each aboutPage.paragraphs as paragraph}
+      {#each currentAboutPage.paragraphs as paragraph}
         <p class="subpage-intro"><InlineText text={paragraph} /></p>
       {/each}
     </div>
   </div>
 </section>
 
-{#if aboutPage.callToAction}
+{#if currentAboutPage.callToAction}
   <section class="about-cta-section">
     <div class="container">
       <aside class="about-cta-card">
         <div class="about-cta-copy">
-          <h2>{aboutPage.callToAction.title}</h2>
-          <p><InlineText text={aboutPage.callToAction.text} /></p>
+          <h2>{currentAboutPage.callToAction.title}</h2>
+          <p><InlineText text={currentAboutPage.callToAction.text} /></p>
         </div>
-        <a class="primary-button" href="{base}{aboutPage.callToAction.href}">
-          {aboutPage.callToAction.buttonLabel}
+        <a class="primary-button" href="{base}{localizePath(currentAboutPage.callToAction.href, currentLanguage)}">
+          {currentAboutPage.callToAction.buttonLabel}
         </a>
       </aside>
     </div>

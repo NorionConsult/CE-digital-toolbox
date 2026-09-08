@@ -1,30 +1,30 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import { site } from '$lib/content/editable/global/site.js';
+  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
 </script>
 
 <footer id="contact" class="site-footer">
   <div class="container footer-content">
     <div class="footer-logo-area">
       <div class="footer-logos" aria-label="Programme logos">
-        {#each site.footerLogos as logo}
+        {#each currentSite.footerLogos as logo}
           <div class="footer-logo-cell" style:--logo-width={logo.width}>
             <img src="{base}{logo.src}" alt={logo.alt} />
           </div>
         {/each}
       </div>
 
-      {#if site.footerCopyright}
-        <p class="footer-copyright">{site.footerCopyright}</p>
+      {#if currentSite.footerCopyright}
+        <p class="footer-copyright">{currentSite.footerCopyright}</p>
       {/if}
     </div>
 
-    <p class="footer-disclaimer">
-      This website is funded by the European Union. Its content
-      are the sole responsibility of the EU4Green Recovery East programme, financed by the
-      European Union. The content of the website belongs to the authors and does not necessarily
-      reflect the views of the European Union, its members or the Governments of the Eastern Partnership Countries. This website and any content included herein are without prejudice to the status of, or sovereignty over, any territory, to the delimitation of international frontiers and boundaries, and to the name of any territory, city or area. Furthermore, neither the EU nor the EU4Green Recovery East programme are liable for risks arising from the use of this website or any third-party tools.
-    </p>
+    <p class="footer-disclaimer">{currentSite.footerDisclaimer}</p>
 
   </div>
 </footer>

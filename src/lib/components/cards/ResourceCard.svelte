@@ -3,43 +3,59 @@
     The page link points to the resource slug in src/lib/content/editable/tools/tool-catalogue.js.
   */
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { translateTaxonomyDisplay, translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
 
   export let resource;
   export let variant = 'default';
 
+  const labels = {
+    effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
+    language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
+    provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
+    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' }
+  };
+
   $: isCompact = variant === 'compact';
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentResource = localizeContent(resource, currentLanguage);
+  $: effortLabel = translateTaxonomyValue(currentResource.effortDisplay ?? currentResource.effort, 'effort', currentLanguage);
+  $: languageLabel = translateTaxonomyDisplay(currentResource.languageDisplay ?? currentResource.language, 'languages', currentLanguage);
+  $: accessLabel = translateTaxonomyValue(currentResource.accessDisplay ?? currentResource.access, 'access', currentLanguage);
 </script>
 
 <article class="tool-card resource-card" class:resource-card-compact={isCompact}>
   <div>
-    <ResourceBadges {resource} />
-    <h3>{resource.title}</h3>
-    <p class="resource-description">{resource.description}</p>
+    <ResourceBadges resource={currentResource} />
+    <h3>{currentResource.title}</h3>
+    <p class="resource-description">{currentResource.description}</p>
   </div>
 
   <dl class="resource-meta" aria-label="Resource metadata">
     <div>
-      <dt>Effort</dt>
-      <dd>{resource.effortDisplay ?? resource.effort}</dd>
+      <dt>{translate(labels.effort, currentLanguage)}</dt>
+      <dd>{effortLabel}</dd>
     </div>
     <div>
-      <dt>Language</dt>
-      <dd>{resource.languageDisplay ?? resource.language}</dd>
+      <dt>{translate(labels.language, currentLanguage)}</dt>
+      <dd>{languageLabel}</dd>
     </div>
     <div>
-      <dt>Provider</dt>
-      <dd>{resource.provider}</dd>
+      <dt>{translate(labels.provider, currentLanguage)}</dt>
+      <dd>{currentResource.provider}</dd>
     </div>
     <div>
-      <dt>Access</dt>
-      <dd>{resource.accessDisplay ?? resource.access}</dd>
+      <dt>{translate(labels.access, currentLanguage)}</dt>
+      <dd>{accessLabel}</dd>
     </div>
   </dl>
 
-  <a href="{base}/tools/{resource.slug}/" class="resource-link" target="_blank" rel="noreferrer">
-    {site.labels.viewResource}
+  <a href="{base}{localizePath(`/tools/${currentResource.slug}/`, currentLanguage)}" class="resource-link" target="_blank" rel="noreferrer">
+    {currentSite.labels.viewResource}
   </a>
 </article>
 

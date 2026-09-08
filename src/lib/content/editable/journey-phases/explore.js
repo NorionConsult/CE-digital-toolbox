@@ -10,40 +10,52 @@ import { defineJourneyPhasePage } from './_shared.js';
 const phaseCard = {
   number: '03',
   slug: 'explore',
-  shortName: 'Phase 3',
-  title: 'Explore',
+  shortName: { en: 'Phase 3', uk: 'Фаза 3', ro: 'Faza 3', hy: 'Փուլ 3' },
+  title: { en: 'Explore', uk: 'Дослідження', ro: 'Explorează', hy: 'Ուսումնասիրել' },
   colourClass: 'phase-card-yellow',
-  description:
-    'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.'
+  description: {
+    en: 'Offers tools to support innovation and design processes, review practices, and identify relevant strategies to address assessed hotspots.',
+    uk: 'Пропонує інструменти для підтримки інновацій і процесів дизайну, перегляду практик та визначення релевантних стратегій для роботи з виявленими гарячими точками.',
+    ro: 'Oferă instrumente pentru sprijinirea inovării și proceselor de design, revizuirea practicilor și identificarea strategiilor relevante pentru punctele critice evaluate.',
+    hy: 'Առաջարկում է գործիքներ նորարարության եւ դիզայնի գործընթացներին աջակցելու, գործելակերպերը վերանայելու եւ գնահատված խնդրահարույց կետերը լուծելու համապատասխան ռազմավարություններ գտնելու համար։'
+  }
 };
 
 const hero = {
-  intro:
-    'This phase supports the identification and comparison of possible circular economy choices. It can be used to explore strategies, generate ideas and move from assessment to practical opportunities.',
+  intro: {
+    en: 'This phase supports the identification and comparison of possible circular economy choices. It can be used to explore strategies, generate ideas and move from assessment to practical opportunities.',
+    uk: 'Ця фаза підтримує визначення та порівняння можливих варіантів циркулярної економіки. Її можна використовувати для дослідження стратегій, генерування ідей і переходу від оцінювання до практичних можливостей.',
+    ro: 'Această fază sprijină identificarea și compararea opțiunilor posibile de economie circulară. Poate fi folosită pentru a explora strategii, a genera idei și a trece de la evaluare la oportunități practice.',
+    hy: 'Այս փուլը աջակցում է շրջանաձեւ տնտեսության հնարավոր տարբերակների բացահայտմանը եւ համեմատությանը։ Այն կարելի է օգտագործել ռազմավարություններ ուսումնասիրելու, գաղափարներ ստեղծելու եւ գնահատումից գործնական հնարավորությունների անցնելու համար։'
+  },
   icon: '/icons/phase-icons/icon-explore.png',
-  iconAlt: 'Explore phase icon'
+  iconAlt: { en: 'Explore phase icon', uk: 'Іконка фази Дослідження', ro: 'Pictograma fazei Explorează', hy: 'Ուսումնասիրել փուլի պատկերակ' }
 };
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'identify-options', label: 'Identify options' },
-  { sectionId: 'shape-value-model', label: 'Shape value model' },
-  { sectionId: 'develop-solutions', label: 'Develop solutions' }
+  { sectionId: 'identify-options', label: { en: 'Identify options', uk: 'Визначити варіанти', ro: 'Identifică opțiuni', hy: 'Գտնել տարբերակներ' } },
+  { sectionId: 'shape-value-model', label: { en: 'Shape value model', uk: 'Сформувати модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորել արժեքի մոդելը' } },
+  { sectionId: 'develop-solutions', label: { en: 'Develop solutions', uk: 'Розробити рішення', ro: 'Dezvoltă soluții', hy: 'Մշակել լուծումներ' } }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: 'What option is applicable for you?',
+  title: { en: 'What option is applicable for you?', uk: 'Який варіант підходить вам?', ro: 'Ce opțiune ți se potrivește?', hy: 'Ո՞ր տարբերակն է ձեզ համապատասխանում։' },
   paragraphs: [
-    'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will consider which circular strategies are out there and how to redesign your products, services or value chains for the circular economy.'
+    { en: 'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will consider which circular strategies are out there and how to redesign your products, services or value chains for the circular economy.', uk: 'Фаза дослідження поєднує оцінювання з ухваленням рішень. На основі того, що ви дізналися про свій бізнес, ви розглянете наявні циркулярні стратегії та способи переосмислення продуктів, послуг або ланцюгів створення цінності для циркулярної економіки.', ro: 'Faza Explorează face legătura dintre evaluare și luarea deciziilor. Pe baza a ceea ce ai aflat despre afacerea ta, vei analiza ce strategii circulare există și cum îți poți redesena produsele, serviciile sau lanțurile valorice pentru economia circulară.', hy: 'Ուսումնասիրել փուլը կապում է գնահատումը որոշումների կայացման հետ։ Ձեր բիզնեսի մասին սովորածի հիման վրա դուք կդիտարկեք առկա շրջանաձեւ ռազմավարությունները եւ ինչպես վերաձեւավորել արտադրանքը, ծառայությունները կամ արժեքի շղթաները շրջանաձեւ տնտեսության համար։' }
   ],
   cards: [
     {
       sectionId: 'identify-options',
       number: '1',
-      title: 'Identify Your Options',
-      description:
-        'Use structured tools to map which strategies are feasible and relevant for your specific business, sector and supply chain.',
+      title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Գտեք ձեր տարբերակները' },
+      description: {
+        en: 'Use structured tools to map which strategies are feasible and relevant for your specific business, sector and supply chain.',
+        uk: 'Використовуйте структуровані інструменти, щоб визначити, які стратегії є здійсненними й релевантними для вашого бізнесу, сектору та ланцюга постачання.',
+        ro: 'Folosește instrumente structurate pentru a cartografia strategiile fezabile și relevante pentru afacerea, sectorul și lanțul tău de aprovizionare.',
+        hy: 'Օգտագործեք կառուցվածքային գործիքներ՝ պարզելու համար, թե որ ռազմավարություններն են իրագործելի եւ համապատասխան ձեր բիզնեսի, ոլորտի եւ մատակարարման շղթայի համար։'
+      },
       keyOutputs: [
         'A shared visual map of relevant circular strategies',
         'A clear picture of current circular activities',
@@ -53,9 +65,13 @@ const pathwaySection = {
     {
       sectionId: 'shape-value-model',
       number: '2',
-      title: 'Shape the Value Model',
-      description:
-        'Explore how your circular solution could deliver value for customers and your business.',
+      title: { en: 'Shape the Value Model', uk: 'Сформуйте модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորեք արժեքի մոդելը' },
+      description: {
+        en: 'Explore how your circular solution could deliver value for customers and your business.',
+        uk: 'Дослідіть, як ваше циркулярне рішення може створювати цінність для клієнтів і бізнесу.',
+        ro: 'Explorează cum soluția ta circulară poate crea valoare pentru clienți și pentru afacerea ta.',
+        hy: 'Ուսումնասիրեք, թե ինչպես կարող է ձեր շրջանաձեւ լուծումը արժեք ստեղծել հաճախորդների եւ ձեր բիզնեսի համար։'
+      },
       keyOutputs: [
         'A clearer view of possible circular value models',
         'A stronger concept for customer and business value creation'
@@ -64,9 +80,13 @@ const pathwaySection = {
     {
       sectionId: 'develop-solutions',
       number: '3',
-      title: 'Develop Solutions',
-      description:
-        'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for evaluation.',
+      title: { en: 'Develop Solutions', uk: 'Розробіть рішення', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
+      description: {
+        en: 'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for evaluation.',
+        uk: 'Перетворіть перспективні циркулярні стратегії на чіткіші концепції рішень, які можна обговорити, покращити й підготувати до оцінювання.',
+        ro: 'Transformă strategiile circulare promițătoare în concepte de soluții mai clare, care pot fi discutate, îmbunătățite și pregătite pentru evaluare.',
+        hy: 'Խոստումնալից շրջանաձեւ ռազմավարությունները վերածեք ավելի հստակ լուծումների գաղափարների, որոնք կարելի է քննարկել, բարելավել եւ պատրաստել գնահատման համար։'
+      },
       keyOutputs: [
         'Bundled ideas and stronger solution concepts',
         'A clearer view of which solutions fit your business',
@@ -79,7 +99,7 @@ const pathwaySection = {
 /* 4. DETAILED SECTION 1 */
 const identifyOptionsSection = {
   id: 'identify-options',
-  title: 'Identify Your Options',
+  title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Գտեք ձեր տարբերակները' },
   resourceTag: 'explore:identify-options',
   paragraphs: [
     'This section helps you translate broad circular economy strategies into options that relate directly to your products, operations and value chain.'
@@ -160,7 +180,7 @@ const identifyOptionsSection = {
 /* 5. DETAILED SECTION 2 */
 const shapeValueModelSection = {
   id: 'shape-value-model',
-  title: 'Shape the Value Model',
+  title: { en: 'Shape the Value Model', uk: 'Сформуйте модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորեք արժեքի մոդելը' },
   resourceTag: 'explore:shape-value-model',
   paragraphs: [
     'A circular solution also needs a clear value model. Use this section to explore how your solution could create value for customers, reduce waste or costs, strengthen relationships and support your business goals.',
@@ -169,9 +189,9 @@ const shapeValueModelSection = {
   /*
     CIRCULAR VALUE MODEL CARDS
     Edit the introductory text, card titles, descriptions, examples and icons
-    below. Icon names use the Icon Park Outline set from Iconify.
+    below. Icons use local Icon Park SVG files from static/icons/icon-park/.
   */
-  businessModelsTitle: 'Circular value models',
+  businessModelsTitle: { en: 'Circular value models', uk: 'Циркулярні моделі цінності', ro: 'Modele circulare de valoare', hy: 'Շրջանաձեւ արժեքի մոդելներ' },
   businessModelsIntro:
     "The circular options below detail different strategies for making your business more circular. Each option below represents a proven way to create commercial value while keeping products, materials or resources in use for longer. || As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well.",
   businessModelCards: [
@@ -215,7 +235,7 @@ const shapeValueModelSection = {
     TEXT AFTER THE CIRCULAR VALUE MODEL CARDS
     This block appears after the accordion cards and before the relevant tools.
   */
-  afterBusinessModelsTitle: 'Stakeholder and value chain perspectives',
+  afterBusinessModelsTitle: { en: 'Stakeholder and value chain perspectives', uk: 'Перспективи зацікавлених сторін і ланцюга цінності', ro: 'Perspectivele părților interesate și ale lanțului valoric', hy: 'Շահագրգիռ կողմերի եւ արժեքի շղթայի տեսանկյուններ' },
   afterBusinessModelsText:
     'The core of any marketable circular business is the value proposition for users, customers and partners. In addition to exploring circular value models, it is important to understand how stakeholders experience the value offered by a new model. To build this understanding, it is relevant to map the stakeholders involved and review the value chains as they work today. The relevant tools below can help you do this, including tools for value chain mapping and user interviews, so your exploration is guided by the people and relationships that matter most.'
 };
@@ -223,7 +243,7 @@ const shapeValueModelSection = {
 /* 6. DETAILED SECTION 3 */
 const developSolutionsSection = {
   id: 'develop-solutions',
-  title: 'Develop Solutions',
+  title: { en: 'Develop Solutions', uk: 'Розробіть рішення', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
   resourceTag: 'explore:develop-solutions',
   paragraphs: [
     'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and evaluated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
@@ -237,7 +257,7 @@ const developSolutionsSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: 'Phase Summary',
+  title: { en: 'Phase Summary', uk: 'Підсумок фази', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.',
     'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'

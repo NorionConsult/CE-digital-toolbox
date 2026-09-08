@@ -1,54 +1,85 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { translateTaxonomyDisplay, translateTaxonomyList, translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
   import { isDownloadableToolLink } from '$lib/content/technical/tool-catalogue-utils.js';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
 
   export let resource;
 
-  $: journeyPhases = resource.journeyPhases ?? [];
-  $: journeyPhaseText = journeyPhases.length > 0 ? journeyPhases.join(', ') : 'None';
-  $: isLocalToolLink = resource.toolLink?.startsWith('/');
-  $: toolHref = isLocalToolLink ? `${base}${resource.toolLink}` : resource.toolLink;
-  $: isDownloadableTool = isDownloadableToolLink(resource.toolLink);
+  const labels = {
+    backToTools: { en: 'Back to tools', uk: 'Назад до інструментів', ro: 'Înapoi la instrumente', hy: 'Վերադառնալ գործիքներին' },
+    timeRequired: { en: 'Time required', uk: 'Потрібний час', ro: 'Timp necesar', hy: 'Պահանջվող ժամանակ' },
+    preparationNeeded: { en: 'Preparation needed', uk: 'Потрібна підготовка', ro: 'Pregătire necesară', hy: 'Պահանջվող նախապատրաստություն' },
+    output: { en: 'Output', uk: 'Результат', ro: 'Rezultat', hy: 'Արդյունք' },
+    bestFor: { en: 'Best for', uk: 'Найкраще підходить для', ro: 'Potrivit pentru', hy: 'Լավագույնը՝' },
+    about: { en: 'About', uk: 'Про інструмент', ro: 'Despre', hy: 'Մասին' },
+    journey: { en: 'SME journey', uk: 'Шлях МСП', ro: 'Parcursul IMM', hy: 'ՓՄՁ ուղին' },
+    sector: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },
+    effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
+    format: { en: 'Format', uk: 'Формат', ro: 'Format', hy: 'Ձեւաչափ' },
+    language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
+    provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
+    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' },
+    none: { en: 'None', uk: 'Немає', ro: 'Niciuna', hy: 'Չկա' }
+  };
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentResource = localizeContent(resource, currentLanguage);
+  $: journeyPhases = currentResource.journeyPhases ?? [];
+  $: journeyPhaseText = journeyPhases.length > 0
+    ? translateTaxonomyList(journeyPhases, 'journeyPhases', currentLanguage).join(', ')
+    : translate(labels.none, currentLanguage);
+  $: sectorText = translateTaxonomyDisplay(currentResource.sectorDisplay ?? currentResource.sector, 'sectors', currentLanguage);
+  $: effortText = translateTaxonomyValue(currentResource.effortDisplay ?? currentResource.effort, 'effort', currentLanguage);
+  $: languageText = translateTaxonomyDisplay(currentResource.languageFullDisplay ?? currentResource.language, 'languages', currentLanguage);
+  $: accessText = translateTaxonomyValue(currentResource.accessDisplay ?? currentResource.access, 'access', currentLanguage);
+  $: isLocalToolLink = currentResource.toolLink?.startsWith('/');
+  $: toolHref = isLocalToolLink ? `${base}${currentResource.toolLink}` : currentResource.toolLink;
+  $: isDownloadableTool = isDownloadableToolLink(currentResource.toolLink);
   $: shouldDownloadTool = isLocalToolLink && isDownloadableTool;
 
   $: detailRows = [
-    ['Time required', resource.timeRequired],
-    ['Preparation needed', resource.preparationNeeded],
-    ['Output', resource.output],
-    ['Best for', resource.bestFor]
+    [translate(labels.timeRequired, currentLanguage), currentResource.timeRequired],
+    [translate(labels.preparationNeeded, currentLanguage), currentResource.preparationNeeded],
+    [translate(labels.output, currentLanguage), currentResource.output],
+    [translate(labels.bestFor, currentLanguage), currentResource.bestFor]
   ];
 
   $: taxonomyRows = [
-    ['SME journey', journeyPhaseText],
-    ['Sector', resource.sectorDisplay ?? resource.sector],
-    ['Effort', resource.effortDisplay ?? resource.effort],
-    ['Format', resource.format],
-    ['Language', resource.languageFullDisplay ?? resource.language],
-    ['Provider', resource.provider],
-    ['Access', resource.accessDisplay ?? resource.access]
+    [translate(labels.journey, currentLanguage), journeyPhaseText],
+    [translate(labels.sector, currentLanguage), sectorText],
+    [translate(labels.effort, currentLanguage), effortText],
+    [translate(labels.format, currentLanguage), currentResource.format],
+    [translate(labels.language, currentLanguage), languageText],
+    [translate(labels.provider, currentLanguage), currentResource.provider],
+    [translate(labels.access, currentLanguage), accessText]
   ];
 
 </script>
 
 <svelte:head>
-  <title>{resource.title} | {site.name}</title>
+  <title>{currentResource.title} | {currentSite.name}</title>
 </svelte:head>
 
 <section class="resource-hero">
   <div class="container resource-hero-content">
-    <a href="{base}/tools/" class="back-link">Back to tools</a>
+    <a href="{base}{localizePath('/tools/', currentLanguage)}" class="back-link">
+      {translate(labels.backToTools, currentLanguage)}
+    </a>
 
     <div class="resource-kicker">
-      <ResourceBadges {resource} variant="hero" />
+      <ResourceBadges resource={currentResource} variant="hero" />
     </div>
 
-    <h1>{resource.title}</h1>
-    <p class="resource-summary">{resource.description}</p>
+    <h1>{currentResource.title}</h1>
+    <p class="resource-summary">{currentResource.description}</p>
 
-    {#if resource.toolLink}
+    {#if currentResource.toolLink}
       <a
         class="primary-button resource-tool-link"
         href={toolHref}
@@ -56,7 +87,7 @@
         rel={shouldDownloadTool ? undefined : 'noreferrer'}
         download={shouldDownloadTool ? '' : undefined}
       >
-        {isDownloadableTool ? site.labels.downloadTool : site.labels.openTool}
+        {isDownloadableTool ? currentSite.labels.downloadTool : currentSite.labels.openTool}
       </a>
     {/if}
   </div>
@@ -65,7 +96,7 @@
 <section class="resource-detail-section">
   <div class="container resource-detail-layout">
     <article class="resource-main">
-      <RichText text={resource.about} className="resource-about" />
+      <RichText text={currentResource.about} className="resource-about" />
 
       <div class="resource-detail-grid">
         {#each detailRows as row}
@@ -79,7 +110,7 @@
     </article>
 
     <aside class="resource-taxonomy" aria-label="Resource taxonomy">
-      <h2>About</h2>
+      <h2>{translate(labels.about, currentLanguage)}</h2>
       <dl>
         {#each taxonomyRows as row}
           <div>

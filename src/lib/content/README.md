@@ -51,6 +51,82 @@ src/lib/content/editable/global/
 
 Use `site.js` for the site name, header logo, header partner logos and main menu. Use `buttons.js` for shared button labels such as `View phase`, `View tool` and `Download tool`. Use `footer.js` for footer logos and copyright text.
 
+## Translating Text
+
+The website supports these front-end languages:
+
+```text
+en = English
+uk = Ukrainian
+ro = Romanian
+hy = Armenian
+```
+
+English is always the fallback language. If a visitor selects Ukrainian,
+Romanian or Armenian and a specific translation is missing, the website will
+show the English text for that field instead of showing an empty space.
+
+The language selector in the main menu remembers the visitor's choice while
+they move around the site. Page slugs stay in the existing stable format for
+now, so translated pages use URLs such as `/uk/tools/example-tool/` while the
+final slug segment remains unchanged.
+
+Editors can keep ordinary English strings while content is still untranslated:
+
+```js
+title: 'Phase Summary'
+```
+
+When a text field is ready to translate, replace the string with a language
+object:
+
+```js
+title: {
+  en: 'Phase Summary',
+  uk: '...',
+  ro: '...',
+  hy: '...'
+}
+```
+
+This can be used for visible text such as titles, paragraph text, button labels,
+card descriptions, footer text, page intros, tool descriptions and case
+descriptions.
+
+In the tool catalogue, the translated user-facing fields are normally
+`description`, `about`, `timeRequired`, `preparationNeeded`, `output`,
+`bestFor` and `format`. In the case catalogue, the translated user-facing
+fields are normally `summary`, `description`, `rStrategyDescription` and
+`imageAlt`.
+
+Do not translate technical values such as:
+
+```text
+id
+slug
+sectionId
+resourceTag
+placements
+toolLink
+image paths
+icon paths
+colour classes
+```
+
+Those values connect pages, filters, links and assets together. They should stay
+stable even when the visible text changes language.
+
+Filter labels and badges such as sectors, countries, R strategies, access
+types, effort levels and tool languages are translated centrally in:
+
+```text
+src/lib/content/technical/taxonomy-labels.js
+```
+
+This keeps filtering stable while still showing translated labels to visitors.
+Editors usually do not need to edit this file unless a new taxonomy value is
+added and should also appear translated.
+
 ## Editing Contact Emails
 
 To change the email addresses shown on the Contact page, open:
@@ -59,7 +135,7 @@ To change the email addresses shown on the Contact page, open:
 src/lib/content/editable/pages/contact-page.js
 ```
 
-Edit the `contactEmails` list. Change only the `label` and `email` text unless you want to change which contact is highlighted. The website automatically uses the `email` value to create the clickable mail link. Country flags are set with `flagIcon`; these use the Iconify `circle-flags` icon set.
+Edit the `contactEmails` list. Change only the `label` and `email` text unless you want to change which contact is highlighted. The website automatically uses the `email` value to create the clickable mail link. Country flags are set with `flagIcon`; these are local SVG files in `static/icons/circle-flags/`.
 
 ## Guided Pathways Page
 

@@ -1,6 +1,8 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import { tick } from 'svelte';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
   /**
@@ -8,12 +10,12 @@
    *   number: string;
    *   panelSide: 'left' | 'right';
    *   edgePhase: boolean;
-   *   phaseName: string;
-   *   formerLabel: string;
-   *   shortDescription: string;
-   *   popUpText: string;
+   *   phaseName: any;
+   *   formerLabel: any;
+   *   shortDescription: any;
+   *   popUpText: any;
    *   icon: string;
-   *   iconAlt: string;
+   *   iconAlt: any;
    *   href: string;
    * }} JourneyPhaseStep
    */
@@ -22,97 +24,133 @@
     Edit the phase labels, short descriptions and pop-up text for the
     interactive SME journey diagram here. The visual layout is handled below.
   */
+  const labels = {
+    phase: { en: 'Phase', uk: 'Фаза', ro: 'Faza', hy: 'Փուլ' },
+    openDescriptionPrefix: { en: 'Open', uk: 'Відкрити', ro: 'Deschide', hy: 'Բացել' },
+    openDescriptionSuffix: { en: 'phase description', uk: 'опис фази', ro: 'descrierea fazei', hy: 'փուլի նկարագրությունը' }
+  };
+
   /** @type {JourneyPhaseStep[]} */
   const phases = [
     {
       number: '1',
       panelSide: 'left',
       edgePhase: true,
-      phaseName: 'Learn',
-      formerLabel: 'Start with the basics',
-      shortDescription: 'Understand basic CE concepts',
-      popUpText:
-        'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource efficient cleaner production.',
+      phaseName: { en: 'Learn', uk: 'Навчання', ro: 'Învață', hy: 'Սովորել' },
+      formerLabel: { en: 'Start with the basics', uk: 'Почніть з основ', ro: 'Începe cu elementele de bază', hy: 'Սկսեք հիմունքներից' },
+      shortDescription: { en: 'Understand basic CE concepts', uk: 'Зрозумійте базові поняття циркулярної економіки', ro: 'Înțelege conceptele de bază ale economiei circulare', hy: 'Հասկացեք շրջանաձեւ տնտեսության հիմնական գաղափարները' },
+      popUpText: {
+        en: 'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource efficient cleaner production.',
+        uk: 'Якщо ви лише знайомитеся з циркулярною економікою і потребуєте спільної мови та базового огляду, ця фаза для вас. Вона знайомить з основними поняттями циркулярної економіки та ресурсоефективного чистого виробництва.',
+        ro: 'Dacă ești la început cu economia circulară și ai nevoie de un limbaj comun și o privire de ansamblu, această fază este relevantă pentru tine. Ea introduce conceptele de bază ale economiei circulare și ale producției mai curate și eficiente în utilizarea resurselor.',
+        hy: 'Եթե նոր եք ծանոթանում շրջանաձեւ տնտեսությանը եւ ձեզ պետք է ընդհանուր լեզու ու հիմնական ակնարկ, այս փուլը ձեզ համար է։ Այն ներկայացնում է շրջանաձեւ տնտեսության եւ ռեսուրսաարդյունավետ մաքուր արտադրության հիմնական գաղափարները։'
+      },
       icon: '/icons/phase-icons/icon-learn.png',
-      iconAlt: 'Learn phase icon',
+      iconAlt: { en: 'Learn phase icon', uk: 'Іконка фази Навчання', ro: 'Pictograma fazei Învață', hy: 'Սովորել փուլի պատկերակ' },
       href: '/journey-phases/learn/'
     },
     {
       number: '2',
       panelSide: 'left',
       edgePhase: false,
-      phaseName: 'Assess',
-      formerLabel: 'Find your starting point',
-      shortDescription: 'Map and identify potential for improvement',
-      popUpText:
-        'If you already have some interest in circular economy or resource efficiency but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities, and areas where improvement is possible.',
+      phaseName: { en: 'Assess', uk: 'Оцінювання', ro: 'Evaluează', hy: 'Գնահատել' },
+      formerLabel: { en: 'Find your starting point', uk: 'Знайдіть свою відправну точку', ro: 'Găsește punctul de plecare', hy: 'Գտեք ձեր մեկնարկային կետը' },
+      shortDescription: { en: 'Map and identify potential for improvement', uk: 'Картуйте й визначайте потенціал для покращення', ro: 'Cartografiază și identifică potențialul de îmbunătățire', hy: 'Քարտեզագրեք եւ գտեք բարելավման ներուժը' },
+      popUpText: {
+        en: 'If you already have some interest in circular economy or resource efficiency but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities, and areas where improvement is possible.',
+        uk: 'Якщо ви вже цікавитеся циркулярною економікою або ресурсоефективністю, але потребуєте чіткішої картини своїх ресурсних потоків і гарячих точок, ця фаза для вас. Вона допомагає зрозуміти поточний стан бізнесу, прогалини, пріоритети та сфери для покращення.',
+        ro: 'Dacă ai deja interes pentru economia circulară sau eficiența resurselor, dar ai nevoie de o imagine mai clară asupra fluxurilor de resurse și a punctelor critice, această fază este relevantă pentru tine. Ea te ajută să înțelegi unde se află afacerea ta astăzi și să identifici lacune, priorități și zone de îmbunătățire.',
+        hy: 'Եթե արդեն հետաքրքրված եք շրջանաձեւ տնտեսությամբ կամ ռեսուրսաարդյունավետությամբ, բայց ձեզ պետք է ավելի հստակ պատկեր ձեր ռեսուրսային հոսքերի եւ խնդրահարույց կետերի մասին, այս փուլը ձեզ համար է։ Այն օգնում է հասկանալ բիզնեսի ներկա վիճակը, բացերը, առաջնահերթությունները եւ բարելավման հնարավորությունները։'
+      },
       icon: '/icons/phase-icons/icon-assess.png',
-      iconAlt: 'Assess phase icon',
+      iconAlt: { en: 'Assess phase icon', uk: 'Іконка фази Оцінювання', ro: 'Pictograma fazei Evaluează', hy: 'Գնահատել փուլի պատկերակ' },
       href: '/journey-phases/assess/'
     },
     {
       number: '3',
       panelSide: 'left',
       edgePhase: false,
-      phaseName: 'Explore',
-      formerLabel: 'Explore practical options',
-      shortDescription: 'Brainstorm and integrate circular principles',
-      popUpText:
-        'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
+      phaseName: { en: 'Explore', uk: 'Дослідження', ro: 'Explorează', hy: 'Ուսումնասիրել' },
+      formerLabel: { en: 'Explore practical options', uk: 'Дослідіть практичні варіанти', ro: 'Explorează opțiuni practice', hy: 'Ուսումնասիրեք գործնական տարբերակներ' },
+      shortDescription: { en: 'Brainstorm and integrate circular principles', uk: 'Генеруйте ідеї та інтегруйте циркулярні принципи', ro: 'Generează idei și integrează principii circulare', hy: 'Գեներացրեք գաղափարներ եւ ներառեք շրջանաձեւ սկզբունքներ' },
+      popUpText: {
+        en: 'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
+        uk: 'Якщо ви знаєте свої основні виклики й хочете застосувати циркулярні стратегії, принципи дизайну та ідеї, що відповідають вашому бізнес-контексту, ця фаза для вас. Вона допомагає перейти від оцінювання до можливих рішень, згенерувати варіанти й підготувати міцнішу основу для вибору подальших дій.',
+        ro: 'Dacă îți cunoști principalele provocări și vrei să aplici strategii circulare, principii de design și idei potrivite contextului afacerii tale, această fază este relevantă pentru tine. Ea te ajută să treci de la evaluare la soluții posibile, să generezi opțiuni și să pregătești o bază mai solidă pentru decizia de mai departe.',
+        hy: 'Եթե գիտեք ձեր հիմնական մարտահրավերները եւ ցանկանում եք կիրառել շրջանաձեւ ռազմավարություններ, դիզայնի սկզբունքներ ու գաղափարներ, որոնք համապատասխանում են ձեր բիզնեսի համատեքստին, այս փուլը ձեզ համար է։ Այն օգնում է գնահատումից անցնել հնարավոր լուծումների, ստեղծել տարբերակներ եւ պատրաստել ավելի ամուր հիմք հետագա որոշումների համար։'
+      },
       icon: '/icons/phase-icons/icon-explore.png',
-      iconAlt: 'Explore phase icon',
+      iconAlt: { en: 'Explore phase icon', uk: 'Іконка фази Дослідження', ro: 'Pictograma fazei Explorează', hy: 'Ուսումնասիրել փուլի պատկերակ' },
       href: '/journey-phases/explore/'
     },
     {
       number: '4',
       panelSide: 'right',
       edgePhase: false,
-      phaseName: 'Evaluate',
-      formerLabel: 'Evaluate what can work',
-      shortDescription: 'Review and prioritize Circular Economy options',
-      popUpText:
-        'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
+      phaseName: { en: 'Evaluate', uk: 'Оцінка потенціалу', ro: 'Analizează', hy: 'Վերլուծել' },
+      formerLabel: { en: 'Evaluate what can work', uk: 'Оцініть, що може спрацювати', ro: 'Analizează ce poate funcționa', hy: 'Գնահատեք, թե ինչը կարող է աշխատել' },
+      shortDescription: { en: 'Review and prioritize Circular Economy options', uk: 'Перегляньте й пріоритезуйте варіанти циркулярної економіки', ro: 'Revizuiește și prioritizează opțiunile de economie circulară', hy: 'Վերանայեք եւ առաջնահերթեցրեք շրջանաձեւ տնտեսության տարբերակները' },
+      popUpText: {
+        en: 'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
+        uk: 'Якщо ви визначили можливі циркулярні варіанти, але потрібно порівняти їхню здійсненність, ризики, бар’єри, можливості та потенційні вигоди, ця фаза для вас. Вона допомагає перевірити, чи мають ваші можливості стратегічний, технічний, операційний і фінансовий сенс до того, як вкладати більше часу й ресурсів.',
+        ro: 'Dacă ai identificat opțiuni circulare posibile, dar trebuie să le compari fezabilitatea, riscurile, barierele, oportunitățile și beneficiile potențiale, această fază este relevantă pentru tine. Ea te ajută să testezi dacă oportunitățile tale au sens strategic, tehnic, operațional și financiar înainte de a investi mai mult timp și resurse.',
+        hy: 'Եթե գտել եք հնարավոր շրջանաձեւ տարբերակներ, բայց պետք է համեմատել դրանց իրագործելիությունը, ռիսկերը, խոչընդոտները, հնարավորությունները եւ հնարավոր օգուտները, այս փուլը ձեզ համար է։ Այն օգնում է ստուգել՝ արդյոք ձեր հնարավորությունները ռազմավարական, տեխնիկական, գործառնական եւ ֆինանսական տեսանկյունից իմաստ ունեն, նախքան ավելի շատ ժամանակ եւ ռեսուրսներ ներդնելը։'
+      },
       icon: '/icons/phase-icons/icon-evaluate.png',
-      iconAlt: 'Evaluate phase icon',
+      iconAlt: { en: 'Evaluate phase icon', uk: 'Іконка фази Оцінка потенціалу', ro: 'Pictograma fazei Analizează', hy: 'Վերլուծել փուլի պատկերակ' },
       href: '/journey-phases/evaluate/'
     },
     {
       number: '5',
       panelSide: 'right',
       edgePhase: false,
-      phaseName: 'Implement',
-      formerLabel: 'Turn plans into action',
-      shortDescription: 'Plan and realise your selected ideas',
-      popUpText:
-        'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones, and activities, then this phase is relevant for you. This phase helps you turn selected options into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
+      phaseName: { en: 'Implement', uk: 'Впровадження', ro: 'Implementează', hy: 'Իրականացնել' },
+      formerLabel: { en: 'Turn plans into action', uk: 'Перетворіть плани на дії', ro: 'Transformă planurile în acțiuni', hy: 'Վերածեք պլանները գործողությունների' },
+      shortDescription: { en: 'Plan and realise your selected ideas', uk: 'Плануйте й реалізуйте вибрані ідеї', ro: 'Planifică și realizează ideile selectate', hy: 'Պլանավորեք եւ իրականացրեք ընտրված գաղափարները' },
+      popUpText: {
+        en: 'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones, and activities, then this phase is relevant for you. This phase helps you turn selected options into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
+        uk: 'Якщо ви пріоритезували циркулярну можливість і тепер маєте визначити відповідальність, партнерів, етапи та дії, ця фаза для вас. Вона допомагає перетворити вибрані варіанти на конкретні дії, випробувати ідеї на практиці та рухатися вперед через реалістичні кроки впровадження.',
+        ro: 'Dacă ai prioritizat o oportunitate circulară și trebuie acum să definești responsabilități, parteneri, etape și activități, această fază este relevantă pentru tine. Ea te ajută să transformi opțiunile selectate în acțiuni concrete, să testezi ideile în practică și să creezi impuls prin pași realiști de implementare.',
+        hy: 'Եթե առաջնահերթեցրել եք շրջանաձեւ հնարավորություն եւ այժմ պետք է սահմանեք պատասխանատվություններ, գործընկերներ, հանգրվաններ եւ գործողություններ, այս փուլը ձեզ համար է։ Այն օգնում է ընտրված տարբերակները վերածել կոնկրետ գործողությունների, փորձարկել գաղափարները գործնականում եւ առաջ շարժվել իրատեսական իրականացման քայլերով։'
+      },
       icon: '/icons/phase-icons/icon-implement.png',
-      iconAlt: 'Implement phase icon',
+      iconAlt: { en: 'Implement phase icon', uk: 'Іконка фази Впровадження', ro: 'Pictograma fazei Implementează', hy: 'Իրականացնել փուլի պատկերակ' },
       href: '/journey-phases/implement/'
     },
     {
       number: '6',
       panelSide: 'right',
       edgePhase: true,
-      phaseName: 'Monitor',
-      formerLabel: 'Track and keep improving',
-      shortDescription: 'Review and track progress',
-      popUpText:
-        'If you have implemented or tested circular actions, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time, and share your experience.',
+      phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մոնիթորինգ' },
+      formerLabel: { en: 'Track and keep improving', uk: 'Відстежуйте й покращуйте', ro: 'Urmărește și îmbunătățește continuu', hy: 'Հետեւեք եւ շարունակ բարելավեք' },
+      shortDescription: { en: 'Review and track progress', uk: 'Переглядайте й відстежуйте прогрес', ro: 'Revizuiește și urmărește progresul', hy: 'Վերանայեք եւ հետեւեք առաջընթացին' },
+      popUpText: {
+        en: 'If you have implemented or tested circular actions, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time, and share your experience.',
+        uk: 'Якщо ви впровадили або протестували циркулярні дії й потребуєте простих показників, даних і циклів зворотного зв’язку, щоб зрозуміти, що працює, ця фаза для вас. Вона допомагає відстежувати результати, вдосконалюватися з часом і ділитися досвідом.',
+        ro: 'Dacă ai implementat sau testat acțiuni circulare și ai nevoie de indicatori simpli, date și bucle de feedback pentru a înțelege ce funcționează, această fază este relevantă pentru tine. Ea te ajută să urmărești rezultatele, să îmbunătățești în timp și să împărtășești experiența.',
+        hy: 'Եթե իրականացրել կամ փորձարկել եք շրջանաձեւ գործողություններ եւ ձեզ պետք են պարզ ցուցանիշներ, տվյալներ ու հետադարձ կապի շրջափուլեր՝ հասկանալու համար, թե ինչն է աշխատում, այս փուլը ձեզ համար է։ Այն օգնում է հետեւել արդյունքներին, ժամանակի ընթացքում բարելավել եւ կիսվել փորձով։'
+      },
       icon: '/icons/phase-icons/icon-monitor.png',
-      iconAlt: 'Monitor phase icon',
+      iconAlt: { en: 'Monitor phase icon', uk: 'Іконка фази Моніторинг', ro: 'Pictograma fazei Monitorizează', hy: 'Մոնիթորինգ փուլի պատկերակ' },
       href: '/journey-phases/monitor/'
     }
   ];
 
-  /** @type {JourneyPhaseStep | null} */
-  let activePhase = phases[0];
+  let activePhaseNumber = '1';
   let hasSelectedPhase = false;
+  /** @type {any[]} */
+  let currentPhases = [];
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentPhases = localizeContent(phases, currentLanguage);
+  $: activePhase = activePhaseNumber
+    ? currentPhases.find((phase) => phase.number === activePhaseNumber) ?? null
+    : null;
 
   /**
    * @param {JourneyPhaseStep} phase
    */
   async function selectPhase(phase) {
-    activePhase = phase;
+    activePhaseNumber = phase.number;
     hasSelectedPhase = true;
 
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
@@ -129,7 +167,7 @@
    */
   function closeOnEscape(event) {
     if (event.key === 'Escape') {
-      activePhase = null;
+      activePhaseNumber = '';
     }
   }
 
@@ -169,19 +207,19 @@
     <div
       class:has-popup={activePhase !== null}
       class="journey-diagram-chart"
-      aria-label="Interactive SME journey phase diagram"
+      aria-label={translate({ en: 'Interactive SME journey phase diagram' }, currentLanguage)}
     >
       <div class="journey-steps">
         <div class="journey-line" aria-hidden="true"></div>
 
-        {#each phases as phase}
+        {#each currentPhases as phase}
           <article class:active-step={activePhase?.number === phase.number} class="journey-step">
             <button
               type="button"
               class:active={activePhase?.number === phase.number}
               class:pulse={phase.number === '1' && !hasSelectedPhase}
               class="journey-diagram-point"
-              aria-label={`Open ${phase.phaseName} phase description`}
+              aria-label={`${translate(labels.openDescriptionPrefix, currentLanguage)} ${phase.phaseName} ${translate(labels.openDescriptionSuffix, currentLanguage)}`}
               aria-pressed={activePhase?.number === phase.number}
               on:click={() => selectPhase(phase)}
             >
@@ -192,13 +230,13 @@
               class="journey-step-text"
               role="button"
               tabindex="0"
-              aria-label={`Open ${phase.phaseName} phase description`}
+              aria-label={`${translate(labels.openDescriptionPrefix, currentLanguage)} ${phase.phaseName} ${translate(labels.openDescriptionSuffix, currentLanguage)}`}
               on:click={(event) => selectPhaseFromText(event, phase)}
               on:keydown={(event) => selectPhaseFromTextKeydown(event, phase)}
             >
-              <p class="journey-step-number">Phase {phase.number}</p>
+              <p class="journey-step-number">{translate(labels.phase, currentLanguage)} {phase.number}</p>
               <h4>
-                <a href="{base}{phase.href}" on:click|stopPropagation>
+                <a href="{base}{localizePath(phase.href, currentLanguage)}" on:click|stopPropagation>
                   {phase.phaseName}
                 </a>
               </h4>
@@ -218,8 +256,8 @@
             <button
               type="button"
               class="journey-diagram-close"
-              aria-label="Close selected phase description"
-              on:click={() => (activePhase = null)}
+              aria-label={translate({ en: 'Close selected phase description' }, currentLanguage)}
+              on:click={() => (activePhaseNumber = '')}
             >
               <span
                 style={`--icon-url: url("${iconParkUrl('close-one')}");`}
@@ -233,8 +271,8 @@
             </div>
 
             <div class="journey-diagram-actions">
-              <a href="{base}{activePhase.href}" class="journey-diagram-go-link">
-                View phase
+              <a href="{base}{localizePath(activePhase.href, currentLanguage)}" class="journey-diagram-go-link">
+                {translate({ en: 'View phase' }, currentLanguage)}
                 <span
                   class="link-arrow"
                   style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}

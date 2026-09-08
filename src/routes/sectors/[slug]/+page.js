@@ -2,6 +2,7 @@ import { error } from '@sveltejs/kit';
 import { sectors } from '$lib/content/technical/registries/sector-guides.js';
 import { resources } from '$lib/content/editable/tools/tool-catalogue.js';
 import { cases } from '$lib/content/editable/cases/cases.js';
+import { translate } from '$lib/translation-helper.js';
 
 /** @type {Record<string, string[]>} */
 const sectorCaseAliases = {
@@ -81,7 +82,8 @@ export function load({ params }) {
         tag.startsWith(sectorSectionPrefix)
       )
   );
-  const matchingCaseSectors = sectorCaseAliases[sector.title] ?? [sector.title];
+  const sectorTitle = translate(sector.title, 'en');
+  const matchingCaseSectors = sectorCaseAliases[sectorTitle] ?? [sectorTitle];
   const matchingCases = cases.filter((caseStudy) =>
     (caseStudy.filterValues?.sectors ?? []).some((caseSector) =>
       matchingCaseSectors.includes(caseSector)

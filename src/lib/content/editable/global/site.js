@@ -44,7 +44,12 @@ import { buttonLabels } from './buttons.js';
 import { footer } from './footer.js';
 
 export const site = {
-  name: 'Circular Economy Toolbox',
+  name: {
+    en: 'Circular Economy Toolbox',
+    uk: 'Інструментарій циркулярної економіки',
+    ro: 'Set de instrumente pentru economia circulară',
+    hy: 'Շրջանաձեւ տնտեսության գործիքակազմ'
+  },
   headerLogo: {
     src: '/logos/site_logo.svg',
     alt: 'Circular Economy Toolbox logo'
@@ -75,13 +80,57 @@ export const site = {
   */
   footerLogos: footer.logos,
   footerCopyright: footer.copyright,
+  footerDisclaimer: footer.disclaimer,
   labels: buttonLabels,
-  /* The navigation array controls the main menu labels and links in the header.*/
+  /*
+    The navigation array controls the main menu labels and links in the header.
+    Translate only `label`; keep `href` unchanged so links stay stable.
+  */
   navigation: [
-    { label: 'Follow guides', href: '/guided-pathways/' },
-    { label: 'Browse Tools', href: '/tools/' },
-    { label: 'Find Cases', href: '/cases/' },
-    { label: 'About', href: '/about/' },
-    { label: 'Contact', href: '/contact/' }
+    {
+      label: {
+        en: 'Follow guides',
+        uk: 'Перейти до путівників',
+        ro: 'Urmează ghidurile',
+        hy: 'Հետեւել ուղեցույցներին'
+      },
+      href: '/guided-pathways/'
+    },
+    {
+      label: {
+        en: 'Browse Tools',
+        uk: 'Переглянути інструменти',
+        ro: 'Explorează instrumentele',
+        hy: 'Դիտել գործիքները'
+      },
+      href: '/tools/'
+    },
+    {
+      label: {
+        en: 'Find Cases',
+        uk: 'Знайти кейси',
+        ro: 'Găsește studii de caz',
+        hy: 'Գտնել օրինակներ'
+      },
+      href: '/cases/'
+    },
+    {
+      label: {
+        en: 'About',
+        uk: 'Про нас',
+        ro: 'Despre',
+        hy: 'Մեր մասին'
+      },
+      href: '/about/'
+    },
+    {
+      label: {
+        en: 'Contact',
+        uk: 'Контакти',
+        ro: 'Contact',
+        hy: 'Կապ'
+      },
+      href: '/contact/'
+    }
   ]
 };

@@ -1,38 +1,43 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { home } from '$lib/content/editable/pages/home.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentHome = localizeContent(home, currentLanguage);
 </script>
 
 <svelte:head>
-  <title>{home.pageTitle}</title>
+  <title>{currentHome.pageTitle}</title>
 </svelte:head>
 
 <section class="hero home-hero">
   <div class="container hero-content">
-    <p class="eyebrow">{home.hero.eyebrow}</p>
+    <p class="eyebrow">{currentHome.hero.eyebrow}</p>
 
-    <h1>{home.hero.title}</h1>
+    <h1>{currentHome.hero.title}</h1>
 
-    <p class="hero-text"><InlineText text={home.hero.text} /></p>
+    <p class="hero-text"><InlineText text={currentHome.hero.text} /></p>
 
     <div class="hero-actions">
-      <a href="{base}/guided-pathways/" class="primary-button">
+      <a href="{base}{localizePath('/guided-pathways/', currentLanguage)}" class="primary-button">
         <span
           class="hero-button-icon"
           style={`--icon-url: url("${iconParkUrl('map-draw')}");`}
           aria-hidden="true"
         ></span>
-        {home.hero.primaryButton}
+        {currentHome.hero.primaryButton}
       </a>
-      <a href="{base}/tools/" class="secondary-button">
+      <a href="{base}{localizePath('/tools/', currentLanguage)}" class="secondary-button">
         <span
           class="hero-button-icon"
           style={`--icon-url: url("${iconParkUrl('search')}");`}
           aria-hidden="true"
         ></span>
-        {home.hero.secondaryButton}
+        {currentHome.hero.secondaryButton}
       </a>
     </div>
   </div>

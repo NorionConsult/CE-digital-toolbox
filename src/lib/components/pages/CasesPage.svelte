@@ -1,14 +1,23 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
   import { cases, caseCountries, caseRStrategies, caseSectors } from '$lib/content/editable/cases/cases.js';
   import { casesPage } from '$lib/content/editable/pages/cases-page.js';
+  import { translateTaxonomyDisplay, translateTaxonomyList } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
 
   let selectedSector = '';
   let selectedCountry = '';
   let selectedRStrategy = '';
   let searchTerm = '';
+  /** @type {any[]} */
+  let currentCases = [];
 
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentCasesPage = localizeContent(casesPage, currentLanguage);
+  $: currentCases = localizeContent(cases, currentLanguage);
   $: normalisedSearch = searchTerm.trim().toLowerCase();
 
   /**
@@ -28,7 +37,12 @@
       caseStudy.rStrategyDescription,
       caseStudy.rStrategies.join(' '),
       caseStudy.sectorDisplay,
-      caseStudy.countryDisplay
+      caseStudy.countryDisplay,
+      translateTaxonomyList(caseStudy.filterValues?.sectors ?? [], 'sectors', currentLanguage).join(' '),
+      translateTaxonomyList(caseStudy.filterValues?.countries ?? [], 'countries', currentLanguage).join(' '),
+      translateTaxonomyList(caseStudy.filterValues?.rStrategies ?? [], 'rStrategies', currentLanguage).join(' '),
+      translateTaxonomyDisplay(caseStudy.sectorDisplay, 'sectors', currentLanguage),
+      translateTaxonomyDisplay(caseStudy.countryDisplay, 'countries', currentLanguage)
     ]
       .filter(Boolean)
       .join(' ')
@@ -46,7 +60,7 @@
     return matchesSearch && matchesSector && matchesCountry && matchesRStrategy;
   }
 
-  $: casesMatchingNonSectorFilters = cases.filter((caseStudy) =>
+  $: casesMatchingNonSectorFilters = currentCases.filter((caseStudy) =>
     caseMatchesFilters(caseStudy, {
       search: normalisedSearch,
       country: selectedCountry,
@@ -62,7 +76,7 @@
     (sector) => sector !== selectedSector && !availableSectorSet.has(sector)
   );
 
-  $: casesMatchingNonRStrategyFilters = cases.filter((caseStudy) =>
+  $: casesMatchingNonRStrategyFilters = currentCases.filter((caseStudy) =>
     caseMatchesFilters(caseStudy, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -78,7 +92,7 @@
     (rStrategy) => rStrategy !== selectedRStrategy && !availableRStrategySet.has(rStrategy)
   );
 
-  $: casesMatchingNonCountryFilters = cases.filter((caseStudy) =>
+  $: casesMatchingNonCountryFilters = currentCases.filter((caseStudy) =>
     caseMatchesFilters(caseStudy, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -94,7 +108,7 @@
     (country) => country !== selectedCountry && !availableCountrySet.has(country)
   );
 
-  $: filteredCases = cases.filter((caseStudy) =>
+  $: filteredCases = currentCases.filter((caseStudy) =>
     caseMatchesFilters(caseStudy, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -112,60 +126,63 @@
 </script>
 
 <svelte:head>
-  <title>{casesPage.pageTitle}</title>
+  <title>{currentCasesPage.pageTitle}</title>
 </svelte:head>
 
 <section class="subpage-hero cases-hero">
   <div class="container subpage-content">
-    <p class="eyebrow">{casesPage.eyebrow}</p>
-    <h1>{casesPage.title}</h1>
-    <p class="subpage-intro">{casesPage.intro}</p>
+    <p class="eyebrow">{currentCasesPage.eyebrow}</p>
+    <h1>{currentCasesPage.title}</h1>
+    <p class="subpage-intro">{currentCasesPage.intro}</p>
   </div>
 </section>
 
 <section class="cases-section">
   <div class="container">
-    <form class="filter-panel" aria-label={casesPage.filtersLabel} on:submit|preventDefault>
+    <form class="filter-panel" aria-label={currentCasesPage.filtersLabel} on:submit|preventDefault>
       <label class="search-field" for="case-search">
-        <span>{casesPage.searchLabel}</span>
-        <input id="case-search" type="search" bind:value={searchTerm} placeholder={casesPage.searchPlaceholder} />
+        <span>{currentCasesPage.searchLabel}</span>
+        <input id="case-search" type="search" bind:value={searchTerm} placeholder={currentCasesPage.searchPlaceholder} />
       </label>
 
       <FilterSelect
         id="case-sector-filter"
-        label={casesPage.sectorLabel}
+        label={currentCasesPage.sectorLabel}
         bind:value={selectedSector}
         options={caseSectors}
         disabledOptions={disabledSectors}
-        disabledOptionTitle={casesPage.disabledSectorTitle}
+        disabledOptionTitle={currentCasesPage.disabledSectorTitle}
+        taxonomyType="sectors"
       />
       <FilterSelect
         id="case-r-strategy-filter"
-        label={casesPage.rStrategyLabel}
+        label={currentCasesPage.rStrategyLabel}
         bind:value={selectedRStrategy}
         options={caseRStrategies}
         disabledOptions={disabledRStrategies}
-        disabledOptionTitle={casesPage.disabledRStrategyTitle}
+        disabledOptionTitle={currentCasesPage.disabledRStrategyTitle}
+        taxonomyType="rStrategies"
       />
       <FilterSelect
         id="case-country-filter"
-        label={casesPage.countryLabel}
+        label={currentCasesPage.countryLabel}
         bind:value={selectedCountry}
         options={caseCountries}
         disabledOptions={disabledCountries}
-        disabledOptionTitle={casesPage.disabledCountryTitle}
+        disabledOptionTitle={currentCasesPage.disabledCountryTitle}
+        taxonomyType="countries"
       />
 
-      <button type="button" class="reset-button" on:click={resetFilters}>{casesPage.resetButton}</button>
+      <button type="button" class="reset-button" on:click={resetFilters}>{currentCasesPage.resetButton}</button>
     </form>
 
     <div class="results-bar" aria-live="polite">
       <p>
-        {casesPage.resultPrefix}
+        {currentCasesPage.resultPrefix}
         <strong>{filteredCases.length}</strong>
-        {casesPage.resultMiddle}
-        <strong>{cases.length}</strong>
-        {casesPage.resultSuffix}
+        {currentCasesPage.resultMiddle}
+        <strong>{currentCases.length}</strong>
+        {currentCasesPage.resultSuffix}
       </p>
     </div>
 
@@ -177,9 +194,9 @@
       </div>
     {:else}
       <div class="empty-state">
-        <h2>{casesPage.emptyTitle}</h2>
-        <p>{casesPage.emptyText}</p>
-        <button type="button" class="reset-button" on:click={resetFilters}>{casesPage.resetButton}</button>
+        <h2>{currentCasesPage.emptyTitle}</h2>
+        <p>{currentCasesPage.emptyText}</p>
+        <button type="button" class="reset-button" on:click={resetFilters}>{currentCasesPage.resetButton}</button>
       </div>
     {/if}
   </div>

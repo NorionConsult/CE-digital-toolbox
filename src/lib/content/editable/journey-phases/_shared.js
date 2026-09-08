@@ -6,38 +6,7 @@
   files instead.
 */
 /**
- * @param {{
- *   phaseCard: Record<string, any>;
- *   hero: Record<string, any> & { paragraphs?: string[]; bodyParagraphs?: string[] };
- *   sectionButtons?: { sectionId: string; label: string }[];
- *   pathwaySection?: {
- *     title: string;
- *     paragraphs: string[];
- *     subsections?: {
- *       title: string;
- *       paragraphs: string[];
- *       image?: { src: string; alt: string; caption: string };
- *     }[];
- *     images?: { src: string; alt: string; caption: string }[];
- *     cards?: {
- *       sectionId: string;
- *       number: string;
- *       title: string;
- *       description: string;
- *       keyOutputs: string[];
- *     }[];
- *   } | null;
- *   detailSections?: (Record<string, any> & {
- *     id: string;
- *     title: string;
- *     paragraphs: string[];
- *   })[];
- *   phaseSummary?: {
- *     title: string;
- *     paragraphs: string[];
- *     checklist: string[];
- *   } | null;
- * }} config
+ * @param {any} config
  * @returns {any}
  */
 export function defineJourneyPhasePage(config) {
@@ -49,14 +18,13 @@ export function defineJourneyPhasePage(config) {
     detailSections = [],
     phaseSummary
   } = config;
-  const buttonLabels = new Map(
-    sectionButtons.map((button) => [button.sectionId, button.label])
-  );
-  const pathwayCards = new Map(
-    (pathwaySection?.cards ?? []).map((card) => [card.sectionId, card])
-  );
 
-  const sections = detailSections.map((section) => {
+  /** @param {any} button */
+  const getButtonLabelEntry = (button) => [button.sectionId, button.label];
+  /** @param {any} card */
+  const getPathwayCardEntry = (card) => [card.sectionId, card];
+  /** @param {any} section */
+  const buildSection = (section) => {
     const pathwayCard = pathwayCards.get(section.id);
 
     return {
@@ -69,7 +37,16 @@ export function defineJourneyPhasePage(config) {
       bodyTitle: section.title,
       bodyParagraphs: section.paragraphs
     };
-  });
+  };
+
+  const buttonLabels = new Map(
+    sectionButtons.map(getButtonLabelEntry)
+  );
+  const pathwayCards = new Map(
+    (pathwaySection?.cards ?? []).map(getPathwayCardEntry)
+  );
+
+  const sections = detailSections.map(buildSection);
 
   return {
     ...phaseCard,

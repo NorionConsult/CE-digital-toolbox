@@ -1,49 +1,78 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { translateTaxonomyDisplay, translateTaxonomyList } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
 
   export let caseStudy;
 
-  $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
-  $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
+  const labels = {
+    backToCases: { en: 'Back to cases', uk: 'Назад до кейсів', ro: 'Înapoi la cazuri', hy: 'Վերադառնալ օրինակներին' },
+    companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
+    country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
+    rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
+    sector: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },
+    notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' },
+    circularStrategiesTitle: {
+      en: 'How does this case apply circular strategies?',
+      uk: 'Як цей кейс застосовує циркулярні стратегії?',
+      ro: 'Cum aplică acest caz strategiile circulare?',
+      hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձեւ ռազմավարությունները։'
+    },
+    descriptionTitle: { en: 'Description of case', uk: 'Опис кейсу', ro: 'Descrierea cazului', hy: 'Օրինակի նկարագրություն' },
+    about: { en: 'About', uk: 'Про кейс', ro: 'Despre', hy: 'Մասին' }
+  };
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentCaseStudy = localizeContent(caseStudy, currentLanguage);
+  $: rStrategyText = currentCaseStudy.rStrategies?.length
+    ? translateTaxonomyList(currentCaseStudy.rStrategies, 'rStrategies', currentLanguage).join(', ')
+    : translate(labels.notSpecified, currentLanguage);
+  $: countryText = translateTaxonomyDisplay(currentCaseStudy.countryDisplay || currentCaseStudy.country, 'countries', currentLanguage);
+  $: sectorText = translateTaxonomyDisplay(currentCaseStudy.sectorDisplay || currentCaseStudy.sector, 'sectors', currentLanguage);
+  $: sectorBadges = currentCaseStudy.sectors?.length ? currentCaseStudy.sectors : [currentCaseStudy.sector];
   $: taxonomyRows = [
-    ['Company name', caseStudy.companyName],
-    ['Country', caseStudy.countryDisplay || caseStudy.country],
-    ['R strategy', rStrategyText],
-    ['Sector', caseStudy.sectorDisplay || caseStudy.sector]
+    [translate(labels.companyName, currentLanguage), currentCaseStudy.companyName],
+    [translate(labels.country, currentLanguage), countryText],
+    [translate(labels.rStrategy, currentLanguage), rStrategyText],
+    [translate(labels.sector, currentLanguage), sectorText]
   ];
 
-  $: caseLink = caseStudy.caseLink;
+  $: caseLink = currentCaseStudy.caseLink;
 </script>
 
 <svelte:head>
-  <title>{caseStudy.companyName} | {site.name}</title>
+  <title>{currentCaseStudy.companyName} | {currentSite.name}</title>
 </svelte:head>
 
 <section class="case-hero">
   <div class="container case-hero-layout" class:case-hero-layout-with-image={caseStudy.image}>
     <div class="case-hero-content">
-      <a href="{base}/cases/" class="back-link">Back to cases</a>
+      <a href="{base}{localizePath('/cases/', currentLanguage)}" class="back-link">
+        {translate(labels.backToCases, currentLanguage)}
+      </a>
       <div class="case-badges" aria-label="Case sectors">
         {#each sectorBadges as sector}
           <SectorBadge {sector} />
         {/each}
       </div>
-      <h1>{caseStudy.companyName}</h1>
-      <RichText text={caseStudy.summary} className="case-summary" />
+      <h1>{currentCaseStudy.companyName}</h1>
+      <RichText text={currentCaseStudy.summary} className="case-summary" />
 
       {#if caseLink}
         <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
-          {site.labels.openCase}
+          {currentSite.labels.openCase}
         </a>
       {/if}
     </div>
 
-    {#if caseStudy.image}
+    {#if currentCaseStudy.image}
       <figure class="case-hero-image">
-        <img src="{base}{caseStudy.image}" alt={caseStudy.imageAlt || caseStudy.companyName} />
+        <img src="{base}{currentCaseStudy.image}" alt={currentCaseStudy.imageAlt || currentCaseStudy.companyName} />
       </figure>
     {/if}
   </div>
@@ -52,21 +81,21 @@
 <section class="case-detail-section">
   <div class="container case-detail-layout">
     <article class="case-main">
-      {#if caseStudy.rStrategyDescription}
+      {#if currentCaseStudy.rStrategyDescription}
         <section class="case-text-block">
-          <h2>How does this case apply circular strategies?</h2>
-          <RichText text={caseStudy.rStrategyDescription} />
+          <h2>{translate(labels.circularStrategiesTitle, currentLanguage)}</h2>
+          <RichText text={currentCaseStudy.rStrategyDescription} />
         </section>
       {/if}
 
       <section class="case-text-block">
-        <h2>Description of case</h2>
-        <RichText text={caseStudy.description} />
+        <h2>{translate(labels.descriptionTitle, currentLanguage)}</h2>
+        <RichText text={currentCaseStudy.description} />
       </section>
     </article>
 
     <aside class="case-taxonomy" aria-label="Case taxonomy">
-      <h2>About</h2>
+      <h2>{translate(labels.about, currentLanguage)}</h2>
       <dl>
         {#each taxonomyRows as row}
           <div>

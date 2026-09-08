@@ -1,8 +1,13 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { contactPage } from '$lib/content/editable/pages/contact-page.js';
+  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
   import { staticAssetUrl } from '$lib/utils/assets.js';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentContactPage = localizeContent(contactPage, currentLanguage);
 
   /**
    * Placeholder links use "#". When editors add real form URLs in
@@ -32,14 +37,14 @@
 </script>
 
 <svelte:head>
-  <title>{contactPage.pageTitle}</title>
+  <title>{currentContactPage.pageTitle}</title>
 </svelte:head>
 
 <section class="subpage-hero contact-hero">
   <div class="container subpage-content">
-    <p class="eyebrow">{contactPage.eyebrow}</p>
-    <h1>{contactPage.title}</h1>
-    <p class="subpage-intro"><InlineText text={contactPage.intro} /></p>
+    <p class="eyebrow">{currentContactPage.eyebrow}</p>
+    <h1>{currentContactPage.title}</h1>
+    <p class="subpage-intro"><InlineText text={currentContactPage.intro} /></p>
   </div>
 </section>
 
@@ -47,40 +52,40 @@
   <div class="container contact-layout">
     <div class="contact-action-grid">
       <article class="contact-action-card">
-        <h2>{contactPage.feedbackForm.title}</h2>
-        <p><InlineText text={contactPage.feedbackForm.text} /></p>
+        <h2>{currentContactPage.feedbackForm.title}</h2>
+        <p><InlineText text={currentContactPage.feedbackForm.text} /></p>
         <a
           class="primary-button"
-          href={getButtonHref(contactPage.feedbackForm.url)}
-          target={isPlaceholderUrl(contactPage.feedbackForm.url) ? undefined : '_blank'}
-          rel={isPlaceholderUrl(contactPage.feedbackForm.url) ? undefined : 'noreferrer'}
+          href={getButtonHref(currentContactPage.feedbackForm.url)}
+          target={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : '_blank'}
+          rel={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : 'noreferrer'}
         >
-          {contactPage.feedbackForm.buttonLabel}
+          {currentContactPage.feedbackForm.buttonLabel}
         </a>
       </article>
 
       <article class="contact-action-card">
-        <h2>{contactPage.testimonyForm.title}</h2>
-        <p><InlineText text={contactPage.testimonyForm.text} /></p>
+        <h2>{currentContactPage.testimonyForm.title}</h2>
+        <p><InlineText text={currentContactPage.testimonyForm.text} /></p>
         <a
           class="primary-button"
-          href={getButtonHref(contactPage.testimonyForm.url)}
-          target={isPlaceholderUrl(contactPage.testimonyForm.url) ? undefined : '_blank'}
-          rel={isPlaceholderUrl(contactPage.testimonyForm.url) ? undefined : 'noreferrer'}
+          href={getButtonHref(currentContactPage.testimonyForm.url)}
+          target={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : '_blank'}
+          rel={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : 'noreferrer'}
         >
-          {contactPage.testimonyForm.buttonLabel}
+          {currentContactPage.testimonyForm.buttonLabel}
         </a>
       </article>
     </div>
 
     <aside class="contact-details">
       <div class="contact-details-intro">
-        <h2>{contactPage.contactDetailsTitle}</h2>
-        <p><InlineText text={contactPage.contactDetails} /></p>
+        <h2>{currentContactPage.contactDetailsTitle}</h2>
+        <p><InlineText text={currentContactPage.contactDetails} /></p>
       </div>
 
       <div class="contact-email-grid" aria-label="Contact email addresses">
-        {#each contactPage.contactEmails as contact}
+        {#each currentContactPage.contactEmails as contact}
           <article class:featured-contact={contact.featured} class="contact-email-card">
             <h3>
               {#if contact.flagIcon}
@@ -211,8 +216,7 @@
     flex-direction: column;
   }
 
-  .contact-action-card .primary-button,
-  .contact-action-card .secondary-button {
+  .contact-action-card .primary-button {
     width: fit-content;
     margin-top: auto;
   }

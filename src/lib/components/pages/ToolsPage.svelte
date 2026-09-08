@@ -1,15 +1,24 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import FilterSelect from '$lib/components/forms/FilterSelect.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { toolsPage } from '$lib/content/editable/pages/tools-page.js';
   import { resources, journeyPhases, sectors, languages, accessOptions } from '$lib/content/editable/tools/tool-catalogue.js';
+  import { translateTaxonomyDisplay, translateTaxonomyList, translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
 
   let selectedPhase = '';
   let selectedSector = '';
   let selectedLanguage = '';
   let selectedAccess = '';
   let searchTerm = '';
+  /** @type {any[]} */
+  let currentResources = [];
 
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentToolsPage = localizeContent(toolsPage, currentLanguage);
+  $: currentResources = localizeContent(resources, currentLanguage);
   $: normalisedSearch = searchTerm.trim().toLowerCase();
 
   const NO_PHASE = 'None';
@@ -25,6 +34,20 @@
    * }} filters
    */
   function resourceMatchesFilters(resource, filters) {
+    const searchableTaxonomyText = [
+      translateTaxonomyList(resource.filterValues?.journeyPhases ?? [], 'journeyPhases', currentLanguage).join(' '),
+      translateTaxonomyList(resource.filterValues?.sectors ?? [], 'sectors', currentLanguage).join(' '),
+      translateTaxonomyList(resource.filterValues?.languages ?? [], 'languages', currentLanguage).join(' '),
+      translateTaxonomyList(resource.filterValues?.access ?? [], 'access', currentLanguage).join(' '),
+      translateTaxonomyDisplay(resource.sectorDisplay, 'sectors', currentLanguage),
+      translateTaxonomyDisplay(resource.languageDisplay, 'languages', currentLanguage),
+      translateTaxonomyValue(resource.effortDisplay, 'effort', currentLanguage),
+      translateTaxonomyValue(resource.accessDisplay, 'access', currentLanguage)
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
     const matchesSearch =
       !filters.search ||
       resource.title.toLowerCase().includes(filters.search) ||
@@ -32,7 +55,8 @@
       resource.sectorDisplay.toLowerCase().includes(filters.search) ||
       resource.languageDisplay.toLowerCase().includes(filters.search) ||
       resource.provider.toLowerCase().includes(filters.search) ||
-      resource.accessDisplay.toLowerCase().includes(filters.search);
+      resource.accessDisplay.toLowerCase().includes(filters.search) ||
+      searchableTaxonomyText.includes(filters.search);
 
     const matchesSector =
       !filters.sector || resource.filterValues.sectors.includes(filters.sector);
@@ -46,7 +70,7 @@
     return matchesSearch && matchesSector && matchesPhase && matchesLanguage && matchesAccess;
   }
 
-  $: resourcesMatchingNonPhaseFilters = resources.filter((resource) =>
+  $: resourcesMatchingNonPhaseFilters = currentResources.filter((resource) =>
     resourceMatchesFilters(resource, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -65,7 +89,7 @@
     (phase) => phase !== selectedPhase && !availableJourneyPhaseSet.has(phase)
   );
 
-  $: resourcesMatchingNonLanguageFilters = resources.filter((resource) =>
+  $: resourcesMatchingNonLanguageFilters = currentResources.filter((resource) =>
     resourceMatchesFilters(resource, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -82,7 +106,7 @@
     (language) => language !== selectedLanguage && !availableLanguageSet.has(language)
   );
 
-  $: resourcesMatchingNonAccessFilters = resources.filter((resource) =>
+  $: resourcesMatchingNonAccessFilters = currentResources.filter((resource) =>
     resourceMatchesFilters(resource, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -99,7 +123,7 @@
     (access) => access !== selectedAccess && !availableAccessSet.has(access)
   );
 
-  $: filteredResources = resources.filter((resource) =>
+  $: filteredResources = currentResources.filter((resource) =>
     resourceMatchesFilters(resource, {
       search: normalisedSearch,
       sector: selectedSector,
@@ -119,66 +143,75 @@
 </script>
 
 <svelte:head>
-  <title>{toolsPage.pageTitle}</title>
+  <title>{currentToolsPage.pageTitle}</title>
 </svelte:head>
 
 <section class="subpage-hero tools-hero">
   <div class="container subpage-content">
-    <p class="eyebrow">{toolsPage.eyebrow}</p>
-    <h1>{toolsPage.title}</h1>
-    <p class="subpage-intro">{toolsPage.intro}</p>
+    <p class="eyebrow">{currentToolsPage.eyebrow}</p>
+    <h1>{currentToolsPage.title}</h1>
+    <p class="subpage-intro">{currentToolsPage.intro}</p>
   </div>
 </section>
 
 <section class="tools-section">
   <div class="container">
-    <form class="filter-panel" aria-label={toolsPage.filtersLabel} on:submit|preventDefault>
+    <form class="filter-panel" aria-label={currentToolsPage.filtersLabel} on:submit|preventDefault>
       <label class="search-field" for="resource-search">
-        <span>{toolsPage.searchLabel}</span>
+        <span>{currentToolsPage.searchLabel}</span>
         <input
           id="resource-search"
           type="search"
           bind:value={searchTerm}
-          placeholder={toolsPage.searchPlaceholder}
+          placeholder={currentToolsPage.searchPlaceholder}
         />
       </label>
 
-      <FilterSelect id="sector-filter" label={toolsPage.sectorLabel} bind:value={selectedSector} options={sectors} />
+      <FilterSelect
+        id="sector-filter"
+        label={currentToolsPage.sectorLabel}
+        bind:value={selectedSector}
+        options={sectors}
+        taxonomyType="sectors"
+      />
       <FilterSelect
         id="phase-filter"
-        label={toolsPage.phaseLabel}
+        label={currentToolsPage.phaseLabel}
         bind:value={selectedPhase}
         options={journeyPhases}
         disabledOptions={disabledJourneyPhases}
-        disabledOptionTitle={toolsPage.disabledPhaseTitle}
+        disabledOptionTitle={currentToolsPage.disabledPhaseTitle}
+        taxonomyType="journeyPhases"
       />
       <FilterSelect
         id="language-filter"
-        label={toolsPage.languageLabel}
+        label={currentToolsPage.languageLabel}
         bind:value={selectedLanguage}
         options={languages}
         disabledOptions={disabledLanguages}
-        disabledOptionTitle={toolsPage.disabledLanguageTitle}
+        disabledOptionTitle={currentToolsPage.disabledLanguageTitle}
+        taxonomyType="languages"
       />
       <FilterSelect
         id="access-filter"
-        label={toolsPage.accessLabel}
+        label={currentToolsPage.accessLabel}
         bind:value={selectedAccess}
         options={accessOptions}
         disabledOptions={disabledAccessOptions}
-        disabledOptionTitle={toolsPage.disabledAccessTitle}
+        disabledOptionTitle={currentToolsPage.disabledAccessTitle}
+        taxonomyType="access"
       />
 
-      <button type="button" class="reset-button" on:click={resetFilters}>{toolsPage.resetButton}</button>
+      <button type="button" class="reset-button" on:click={resetFilters}>{currentToolsPage.resetButton}</button>
     </form>
 
     <div class="tools-results-bar" aria-live="polite">
       <p>
-        {toolsPage.resultPrefix}
+        {currentToolsPage.resultPrefix}
         <strong>{filteredResources.length}</strong>
-        {toolsPage.resultMiddle}
-        <strong>{resources.length}</strong>
-        {toolsPage.resultSuffix}
+        {currentToolsPage.resultMiddle}
+        <strong>{currentResources.length}</strong>
+        {currentToolsPage.resultSuffix}
       </p>
     </div>
 
@@ -190,9 +223,9 @@
       </div>
     {:else}
       <div class="empty-state">
-        <h2>{toolsPage.emptyTitle}</h2>
-        <p>{toolsPage.emptyText}</p>
-        <button type="button" class="reset-button" on:click={resetFilters}>{toolsPage.resetButton}</button>
+        <h2>{currentToolsPage.emptyTitle}</h2>
+        <p>{currentToolsPage.emptyText}</p>
+        <button type="button" class="reset-button" on:click={resetFilters}>{currentToolsPage.resetButton}</button>
       </div>
     {/if}
   </div>

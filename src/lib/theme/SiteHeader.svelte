@@ -1,19 +1,102 @@
 <script>
   import { base } from '$app/paths';
+  import { browser } from '$app/environment';
+  import { goto } from '$app/navigation';
+  import { page } from '$app/stores';
+  import { onMount } from 'svelte';
+  import {
+    LANGUAGE_STORAGE_KEY,
+    languages,
+    getAppPathname,
+    getLanguageFromPathname,
+    hasLanguagePrefix,
+    isSupportedLanguage,
+    localizeContent,
+    localizePath,
+    translate
+  } from '$lib/translation-helper.js';
   import { site } from '$lib/content/editable/global/site.js';
 
   let menuOpen = false;
+  let selectedLanguage = 'en';
+
+  const menuLabels = {
+    open: {
+      en: 'Open menu',
+      uk: 'Відкрити меню',
+      ro: 'Deschide meniul',
+      hy: 'Բացել ընտրացանկը'
+    },
+    close: {
+      en: 'Close menu',
+      uk: 'Закрити меню',
+      ro: 'Închide meniul',
+      hy: 'Փակել ընտրացանկը'
+    },
+    language: {
+      en: 'Language',
+      uk: 'Мова',
+      ro: 'Limbă',
+      hy: 'Լեզու'
+    }
+  };
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: selectedLanguage = currentLanguage;
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentAppPath = getAppPathname($page.url.pathname, base);
+
+  /** @param {string} path */
+  function getLocalizedHref(path) {
+    if (path.startsWith('#')) {
+      return `${base}${localizePath(currentAppPath, currentLanguage)}${path}`;
+    }
+
+    return `${base}${localizePath(path, currentLanguage)}`;
+  }
+
+  /** @param {string} languageCode */
+  function getLanguageHref(languageCode) {
+    return `${base}${localizePath(currentAppPath, languageCode)}`;
+  }
+
+  /** @param {Event} event */
+  function changeLanguage(event) {
+    const languageCode = event.currentTarget instanceof HTMLSelectElement
+      ? event.currentTarget.value
+      : currentLanguage;
+
+    if (browser && isSupportedLanguage(languageCode)) {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, languageCode);
+    }
+
+    menuOpen = false;
+    goto(getLanguageHref(languageCode));
+  }
+
+  onMount(() => {
+    const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+
+    if (hasLanguagePrefix($page.url.pathname, base)) {
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+      return;
+    }
+
+    if (storedLanguage && isSupportedLanguage(storedLanguage) && storedLanguage !== currentLanguage) {
+      goto(getLanguageHref(storedLanguage), { replaceState: true });
+    }
+  });
 </script>
 
 <header class="site-header">
-  {#if site.headerPartnerLogos?.enabled}
+  {#if currentSite.headerPartnerLogos?.enabled}
     <div class="partner-logo-bar">
       <div
         class="container partner-logo-bar-content"
-        style={`--header-partner-logo-height: ${site.headerPartnerLogos.logoHeight};`}
+        style={`--header-partner-logo-height: ${currentSite.headerPartnerLogos.logoHeight};`}
         aria-label="Programme logos"
       >
-        {#each site.headerPartnerLogos.logos as logo}
+        {#each currentSite.headerPartnerLogos.logos as logo}
           <img
             src="{base}{logo.src}"
             alt={logo.alt}
@@ -26,15 +109,17 @@
 
   <div class="main-menu-bar">
     <div class="container header-content">
-      <a href="{base}/" class="site-brand">
-        <img class="site-logo-image" src="{base}{site.headerLogo.src}" alt={site.headerLogo.alt} />
-        <span class="site-logo">{site.name}</span>
+      <a href={getLocalizedHref('/')} class="site-brand">
+        <img class="site-logo-image" src="{base}{currentSite.headerLogo.src}" alt={currentSite.headerLogo.alt} />
+        <span class="site-logo">{currentSite.name}</span>
       </a>
 
       <button
         type="button"
         class="menu-toggle"
-        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+        aria-label={menuOpen
+          ? translate(menuLabels.close, currentLanguage)
+          : translate(menuLabels.open, currentLanguage)}
         aria-expanded={menuOpen}
         aria-controls="main-navigation"
         on:click={() => (menuOpen = !menuOpen)}
@@ -45,9 +130,27 @@
       </button>
 
       <nav id="main-navigation" class:menu-open={menuOpen} class="main-nav" aria-label="Main navigation">
-        {#each site.navigation as item}
-          <a href="{base}{item.href}" on:click={() => (menuOpen = false)}>{item.label}</a>
+        {#each currentSite.navigation as item}
+          <a href={getLocalizedHref(item.href)} on:click={() => (menuOpen = false)}>{item.label}</a>
         {/each}
+
+        <label class="language-selector">
+          <select
+            bind:value={selectedLanguage}
+            aria-label={translate(menuLabels.language, currentLanguage)}
+            on:change={changeLanguage}
+          >
+            {#each languages as language}
+              <option value={language.code}>{language.label}</option>
+            {/each}
+          </select>
+        </label>
+
+        <div class="language-crawl-links" aria-hidden="true">
+          {#each languages as language}
+            <a href={getLanguageHref(language.code)} tabindex="-1">{language.shortLabel}</a>
+          {/each}
+        </div>
       </nav>
     </div>
   </div>
@@ -139,6 +242,42 @@
 
   .main-nav a:hover {
     color: var(--green-secondary);
+  }
+
+  .language-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--dark);
+    font-weight: 700;
+    font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+    line-height: 1;
+  }
+
+  .language-selector select {
+    min-width: 118px;
+    border: 0;
+    border-radius: 10px;
+    padding: 8px 28px 8px 10px;
+    background-color: var(--white);
+    color: var(--dark);
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .language-selector select:hover,
+  .language-selector select:focus-visible {
+    outline: 2px solid var(--green-secondary);
+    outline-offset: 2px;
+  }
+
+  .language-crawl-links {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 
   .menu-toggle {
@@ -234,6 +373,16 @@
       padding: 14px 0;
       font-size: 1rem;
       border-bottom: 1px solid rgba(10, 46, 54, 0.08);
+    }
+
+    .language-selector {
+      justify-content: space-between;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(10, 46, 54, 0.08);
+    }
+
+    .language-selector select {
+      min-width: 150px;
     }
   }
 

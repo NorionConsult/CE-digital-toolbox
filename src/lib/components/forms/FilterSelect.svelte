@@ -3,6 +3,11 @@
     Reusable filter drop-down.
     Bind the selected value from the parent page with bind:value.
   */
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, translate } from '$lib/translation-helper.js';
+
   /** @type {string} */
   export let id;
   /** @type {string} */
@@ -15,21 +20,33 @@
   export let disabledOptions = [];
   /** @type {string} */
   export let disabledOptionTitle = '';
+  /** @type {'journeyPhases' | 'sectors' | 'countries' | 'rStrategies' | 'languages' | 'access' | 'effort' | ''} */
+  export let taxonomyType = '';
 
+  const labels = {
+    all: {
+      en: 'All',
+      uk: 'Усі',
+      ro: 'Toate',
+      hy: 'Բոլորը'
+    }
+  };
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: disabledOptionSet = new Set(disabledOptions);
 </script>
 
 <label class="filter-field" for={id}>
   <span>{label}</span>
   <select {id} bind:value>
-    <option value="">All</option>
+    <option value="">{translate(labels.all, currentLanguage)}</option>
     {#each options as option}
       <option
         value={option}
         disabled={disabledOptionSet.has(option)}
         title={disabledOptionSet.has(option) ? disabledOptionTitle : ''}
       >
-        {option}
+        {taxonomyType ? translateTaxonomyValue(option, taxonomyType, currentLanguage) : option}
       </option>
     {/each}
   </select>

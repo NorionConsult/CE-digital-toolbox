@@ -4,20 +4,26 @@
     These link to dedicated sector pages.
   */
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let sector;
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentSector = localizeContent(sector, currentLanguage);
 </script>
 
 <article class="sector-card">
-  <img class="sector-image" src="{base}{sector.image}" alt={sector.imageAlt} />
-  <p class="sector-number">{sector.number}</p>
-  <h3>{sector.title}</h3>
-  <p><InlineText text={sector.description} /></p>
-  <a href="{base}/sectors/{sector.slug}/" class="sector-link">
-    {site.labels.viewSector}
+  <img class="sector-image" src="{base}{currentSector.image}" alt={currentSector.imageAlt} />
+  <p class="sector-number">{currentSector.number}</p>
+  <h3>{currentSector.title}</h3>
+  <p><InlineText text={currentSector.description} /></p>
+  <a href="{base}{localizePath(`/sectors/${currentSector.slug}/`, currentLanguage)}" class="sector-link">
+    {currentSite.labels.viewSector}
     <span
       class="link-arrow"
       style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}

@@ -1,28 +1,45 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import CaseCard from '$lib/components/cards/CaseCard.svelte';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import { sectorPage } from '$lib/content/editable/pages/sector-page.js';
   import { site } from '$lib/content/editable/global/site.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let data;
-  const { sector, relatedResources, relatedCases } = data;
+  /** @type {any} */
+  let sector;
+  /** @type {any[]} */
+  let relatedResources = [];
+  /** @type {any[]} */
+  let relatedCases = [];
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentData = localizeContent(data, currentLanguage);
+  $: currentSectorPage = localizeContent(sectorPage, currentLanguage);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: ({ sector, relatedResources, relatedCases } = currentData);
 
   /*
     Every sector file keeps sections in this shared order. The explicit types
     keep the page template simple while editors work only in the content files.
   */
   /** @type {any} */
-  const introductionSection = sector.sections[0];
+  let introductionSection;
   /** @type {any} */
-  const casesSection = sector.sections[1];
+  let casesSection;
   /** @type {any} */
-  const barriersSection = sector.sections[2];
+  let barriersSection;
   /** @type {any} */
-  const relevantToolsSection = sector.sections[3];
+  let relevantToolsSection;
+  $: introductionSection = sector.sections[0];
+  $: casesSection = sector.sections[1];
+  $: barriersSection = sector.sections[2];
+  $: relevantToolsSection = sector.sections[3];
 
   /** @param {string | { text: string, source?: string }} item */
   const listItemText = (item) => (typeof item === 'string' ? item : item.text);
@@ -31,18 +48,18 @@
 </script>
 
 <svelte:head>
-  <title>{sector.title} | {site.name}</title>
+  <title>{sector.title} | {currentSite.name}</title>
 </svelte:head>
 
 <section class="sector-hero">
   <div class="container sector-hero-content">
-    <a href="{base}/guided-pathways/#sectors" class="back-link sector-back-link">
+    <a href="{base}{localizePath('/guided-pathways/#sectors', currentLanguage)}" class="back-link sector-back-link">
       <span
         class="back-link-arrow"
         style={`--icon-url: url("${iconParkUrl('arrow-left')}");`}
         aria-hidden="true"
       ></span>
-      {sectorPage.backLink}
+      {currentSectorPage.backLink}
     </a>
 
     <img class="sector-hero-image" src="{base}{sector.image}" alt={sector.imageAlt} />
@@ -89,10 +106,10 @@
         {/each}
       </div>
     {:else}
-      <p class="empty-message">{sectorPage.casesEmpty}</p>
+      <p class="empty-message">{currentSectorPage.casesEmpty}</p>
     {/if}
 
-    <a class="secondary-button section-action" href="{base}/cases/">{sectorPage.browseCases}</a>
+    <a class="secondary-button section-action" href="{base}{localizePath('/cases/', currentLanguage)}">{currentSectorPage.browseCases}</a>
   </div>
 </section>
 
@@ -106,13 +123,13 @@
 
     <div class="barrier-opportunity-grid">
       <section class="barrier-list">
-        <h3>{sectorPage.barriersTitle}</h3>
+        <h3>{currentSectorPage.barriersTitle}</h3>
         <ul>
           {#each barriersSection.barriers as barrier}
             <li>
               <InlineText text={listItemText(barrier)} />
               {#if listItemSource(barrier)}
-                <span class="sector-source">Source: <InlineText text={listItemSource(barrier)} /></span>
+                <span class="sector-source">{currentSectorPage.source}: <InlineText text={listItemSource(barrier)} /></span>
               {/if}
             </li>
           {/each}
@@ -120,13 +137,13 @@
       </section>
 
       <section class="opportunity-list">
-        <h3>{sectorPage.opportunitiesTitle}</h3>
+        <h3>{currentSectorPage.opportunitiesTitle}</h3>
         <ul>
           {#each barriersSection.opportunities as opportunity}
             <li>
               <InlineText text={listItemText(opportunity)} />
               {#if listItemSource(opportunity)}
-                <span class="sector-source">Source: <InlineText text={listItemSource(opportunity)} /></span>
+                <span class="sector-source">{currentSectorPage.source}: <InlineText text={listItemSource(opportunity)} /></span>
               {/if}
             </li>
           {/each}
@@ -151,7 +168,7 @@
         {/each}
       </div>
     {:else}
-      <p class="empty-message">{sectorPage.toolsEmpty}</p>
+      <p class="empty-message">{currentSectorPage.toolsEmpty}</p>
     {/if}
   </div>
 </section>

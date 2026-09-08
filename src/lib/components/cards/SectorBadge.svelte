@@ -1,4 +1,9 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname } from '$lib/translation-helper.js';
+
   /** @type {string} */
   export let sector;
 
@@ -22,9 +27,11 @@
   }
 
   $: badgeColour = knownColours[sector] ?? fallbackColour(sector);
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: sectorLabel = translateTaxonomyValue(sector, 'sectors', currentLanguage);
 </script>
 
-<span class="sector-badge" style:--sector-badge-colour={badgeColour}>{sector}</span>
+<span class="sector-badge" style:--sector-badge-colour={badgeColour}>{sectorLabel}</span>
 
 <style>
   .sector-badge {

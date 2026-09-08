@@ -1,10 +1,24 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
   import { getJourneyPhaseClass } from '$lib/content/technical/phase-badge-colours.js';
+  import { getLanguageFromPathname, translate } from '$lib/translation-helper.js';
 
   /** @type {string[]} */
   export let phases = [];
   /** @type {'card' | 'hero' | 'inline'} */
   export let variant = 'card';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: phaseLabelMap = new Map(
+    journeyPhases.map((phase) => [translate(phase.title, 'en'), translate(phase.title, currentLanguage)])
+  );
+
+  /** @param {string} phase */
+  function getPhaseLabel(phase) {
+    return phaseLabelMap.get(phase) ?? phase;
+  }
 </script>
 
 <div
@@ -14,7 +28,7 @@
   aria-label="Journey phases"
 >
   {#each phases as phase}
-    <span class="journey-phase-badge {getJourneyPhaseClass(phase)}">{phase}</span>
+    <span class="journey-phase-badge {getJourneyPhaseClass(phase)}">{getPhaseLabel(phase)}</span>
   {/each}
 </div>
 

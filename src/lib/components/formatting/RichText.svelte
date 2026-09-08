@@ -1,4 +1,7 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { getLanguageFromPathname, translate } from '$lib/translation-helper.js';
   import InlineText from './InlineText.svelte';
 
   /*
@@ -16,6 +19,11 @@
   */
   export let text = '';
   export let className = '';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: translatedText = Array.isArray(text)
+    ? text.map((item) => translate(item, currentLanguage))
+    : translate(text, currentLanguage);
 
   /**
    * @param {string | string[] | undefined | null} value
@@ -64,7 +72,7 @@
     return blocks;
   }
 
-  $: blocks = getRichTextBlocks(text);
+  $: blocks = getRichTextBlocks(translatedText);
 </script>
 
 <div class={`rich-text ${className}`.trim()}>

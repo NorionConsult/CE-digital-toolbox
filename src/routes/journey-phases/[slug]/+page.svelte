@@ -1,5 +1,6 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import { journeyPhasePage } from '$lib/content/editable/pages/journey-phase-page.js';
@@ -8,6 +9,7 @@
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import CompactJourneyPhaseMap from '$lib/components/sections/CompactJourneyPhaseMap.svelte';
   import StrategyShortlistQuestionnaire from '$lib/components/sections/StrategyShortlistQuestionnaire.svelte';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let data;
@@ -17,7 +19,12 @@
   let relatedResources = [];
   /** @type {any} */
   let nextPhase = null;
-  $: ({ journeyPhase, relatedResources, nextPhase } = data);
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentData = localizeContent(data, currentLanguage);
+  $: currentJourneyPhasePage = localizeContent(journeyPhasePage, currentLanguage);
+  $: currentJourneyPhases = localizeContent(journeyPhases, currentLanguage);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: ({ journeyPhase, relatedResources, nextPhase } = currentData);
 
   /** @type {{ src: string; alt: string; caption?: string } | null} */
   let zoomedImage = null;
@@ -85,22 +92,22 @@
 </script>
 
 <svelte:head>
-  <title>{journeyPhase.shortName}: {journeyPhase.title} | {site.name}</title>
+  <title>{journeyPhase.shortName}: {journeyPhase.title} | {currentSite.name}</title>
 </svelte:head>
 
 <section class="subpage-hero">
   <div class="container subpage-content phase-hero-content">
     <div class="phase-hero-topline">
-      <a href="{base}/guided-pathways/#journey-phases" class="back-link journey-back-link">
+      <a href="{base}{localizePath('/guided-pathways/#journey-phases', currentLanguage)}" class="back-link journey-back-link">
         <span
           class="back-link-arrow"
           style={`--icon-url: url("${iconParkUrl('arrow-left')}");`}
           aria-hidden="true"
         ></span>
-        {journeyPhasePage.backLink}
+        {currentJourneyPhasePage.backLink}
       </a>
 
-      <CompactJourneyPhaseMap phases={journeyPhases} activeSlug={journeyPhase.slug} />
+      <CompactJourneyPhaseMap phases={currentJourneyPhases} activeSlug={journeyPhase.slug} />
     </div>
 
     <div class="phase-hero-icon">
@@ -114,7 +121,7 @@
       <RichText text={journeyPhase.intro} className="subpage-intro" />
 
       {#if phaseSections.length > 0 && !journeyPhase.hideSectionNavigation}
-        <nav class="phase-section-navigation" aria-label="{journeyPhase.title} sections">
+        <nav class="phase-section-navigation" aria-label={`${journeyPhase.title} sections`}>
           {#each phaseSections as section}
             <a href="#{section.id}" class="back-link">
               {section.navigationLabel ?? section.title}
@@ -169,7 +176,7 @@
               <p><InlineText text={section.description} /></p>
 
               <div class="pathway-outputs">
-                <h4>Key outputs:</h4>
+                <h4>{currentJourneyPhasePage.keyOutputs}</h4>
                 <ul>
                   {#each section.keyOutputs as output}
                     <li>{output}</li>
@@ -177,15 +184,15 @@
                 </ul>
               </div>
 
-              <a href="#{section.id}" class="pathway-link" aria-label="Start {section.title} section">
-                <span>Start</span>
+              <a href="#{section.id}" class="pathway-link" aria-label={`${currentJourneyPhasePage.start} ${section.title} section`}>
+                <span>{currentJourneyPhasePage.start}</span>
               </a>
             </div>
           </article>
         {/each}
       </div>
     {:else}
-      <div class="phase-image-grid" aria-label="Journey phase images">
+      <div class="phase-image-grid" aria-label={currentJourneyPhasePage.journeyPhaseImages}>
         {#each journeyPhase.bodyImages as image}
           <figure>
             <img src="{base}{image.src}" alt={image.alt} />
@@ -209,7 +216,7 @@
       <div class="container phase-detail-content">
         <header class="phase-detail-heading" class:phase-detail-heading-wide={!hasSideContent}>
           {#if !section.hideStepEyebrow && section.number}
-            <p class="eyebrow">Step {section.number}</p>
+            <p class="eyebrow">{currentJourneyPhasePage.step} {section.number}</p>
           {/if}
           <h2>{section.bodyTitle}</h2>
         </header>
@@ -236,7 +243,7 @@
                   <button
                     type="button"
                     class="phase-inline-image-button"
-                    aria-label="Open larger image"
+                    aria-label={currentJourneyPhasePage.openLargerImage}
                     on:click={() => section.inlineImage && openZoomedImage(section.inlineImage)}
                   >
                     <img src="{base}{section.inlineImage.src}" alt={section.inlineImage.alt} />
@@ -334,12 +341,12 @@
 
                     <div class="design-for-x-card-body">
                       <section>
-                        <h5>What it means</h5>
+                        <h5>{currentJourneyPhasePage.whatItMeans}</h5>
                         <RichText text={card.meaning} />
                       </section>
 
                       <section>
-                        <h5>How to apply it</h5>
+                        <h5>{currentJourneyPhasePage.howToApplyIt}</h5>
                         {#if Array.isArray(card.application)}
                           <ul>
                             {#each card.application as item}
@@ -352,7 +359,7 @@
                       </section>
 
                       <section>
-                        <h5>EU regulation</h5>
+                        <h5>{currentJourneyPhasePage.euRegulation}</h5>
                         <RichText text={card.regulation} />
                       </section>
                     </div>
@@ -430,7 +437,7 @@
                     </div>
                     <RichText text={section.circularStrategiesWorkshop.introduction} />
                     <p class="circular-strategies-workshop-outcome">
-                      <strong>Expected outcomes:</strong> <InlineText text={section.circularStrategiesWorkshop.outcome} />
+                      <strong>{currentJourneyPhasePage.expectedOutcomes}</strong> <InlineText text={section.circularStrategiesWorkshop.outcome} />
                     </p>
                   </article>
 
@@ -458,7 +465,7 @@
                     </div>
 
                     <p class="circular-strategies-workshop-link">
-                      <strong>Link:</strong>
+                      <strong>{currentJourneyPhasePage.link}</strong>
                       <a
                         href={section.circularStrategiesWorkshop.preparation.link}
                         target="_blank"
@@ -475,14 +482,14 @@
                     <article class="circular-strategies-workshop-card circular-strategies-workshop-step-card">
                       <div class="circular-strategies-workshop-card-heading">
                         <div>
-                          <p class="circular-strategies-workshop-step-number">Step {step.number}</p>
+                          <p class="circular-strategies-workshop-step-number">{currentJourneyPhasePage.step} {step.number}</p>
                           <h3>{step.title}</h3>
                         </div>
                         <span class="circular-strategies-workshop-time">{step.time}</span>
                       </div>
 
                       <RichText text={step.text} />
-                      <p><strong>Tip:</strong> <InlineText text={step.tip} /></p>
+                      <p><strong>{currentJourneyPhasePage.tip}</strong> <InlineText text={step.tip} /></p>
                     </article>
                   {/each}
                 </div>
@@ -491,25 +498,25 @@
           {/if}
 
           {#if section.learningResources}
-            <div class="learning-resource-list" aria-label="Learning resources">
+            <div class="learning-resource-list" aria-label={currentJourneyPhasePage.learningResource}>
               {#each section.learningResources.cards as card}
                 <article class="learning-resource-item">
                   <div class="learning-resource-card">
                     <div>
                       <p class="learning-resource-badge">
-                        {section.learningResources.labels?.badge ?? 'Learning resource'}
+                        {section.learningResources.labels?.badge ?? currentJourneyPhasePage.learningResource}
                       </p>
                       <h3>{card.courseTitle}</h3>
                       <RichText text={card.shortDescription} />
                     </div>
 
-                    <dl class="learning-resource-meta" aria-label="Course information">
+                    <dl class="learning-resource-meta" aria-label={currentJourneyPhasePage.learningResource}>
                       <div>
-                        <dt>Language</dt>
+                        <dt>{currentJourneyPhasePage.language}</dt>
                         <dd>{card.language}</dd>
                       </div>
                       <div>
-                        <dt>Provider</dt>
+                        <dt>{currentJourneyPhasePage.provider}</dt>
                         <dd>{card.provider}</dd>
                       </div>
                     </dl>
@@ -521,12 +528,12 @@
 
                   <div class="learning-resource-details">
                     <section>
-                      <h3>{section.learningResources.labels?.about ?? 'What is this?'}</h3>
+                      <h3>{section.learningResources.labels?.about}</h3>
                       <RichText text={card.aboutCourse} />
                     </section>
 
                     <section>
-                      <h3>{section.learningResources.labels?.learningGoals ?? 'Learning goals'}</h3>
+                      <h3>{section.learningResources.labels?.learningGoals}</h3>
                       <ul>
                         {#each card.learningGoals as goal}
                           <li><InlineText text={goal} /></li>
@@ -535,7 +542,7 @@
                     </section>
 
                     <section>
-                      <h3>{section.learningResources.labels?.whyTakeCourse ?? 'Why should I take this course?'}</h3>
+                      <h3>{section.learningResources.labels?.whyTakeCourse}</h3>
                       <RichText text={card.whyTakeCourse} />
                     </section>
                   </div>
@@ -552,7 +559,7 @@
               <button
                 type="button"
                 class="phase-detail-image-button"
-                aria-label="Open larger image"
+                aria-label={currentJourneyPhasePage.openLargerImage}
                 on:click={() => section.image && openZoomedImage(section.image)}
               >
                 <img src="{base}{section.image.src}" alt={section.image.alt} />
@@ -591,7 +598,7 @@
 
                 <div class="business-model-card-content">
                   <RichText text={card.text} />
-                  <p class="business-model-example"><strong>Example:</strong> <InlineText text={card.example} /></p>
+                  <p class="business-model-example"><strong>{currentJourneyPhasePage.example}</strong> <InlineText text={card.example} /></p>
                 </div>
               </details>
             {/each}
@@ -614,7 +621,7 @@
       {#if section.showRelevantTools !== false}
         <div class="container phase-detail-tools">
           <div class="section-intro">
-            <h3 class="subsection-title">{journeyPhasePage.relatedTitle}</h3>
+            <h3 class="subsection-title">{currentJourneyPhasePage.relatedTitle}</h3>
           </div>
 
           {#if sectionResources.length > 0}
@@ -624,7 +631,7 @@
               {/each}
             </div>
           {:else}
-            <p class="phase-empty-tools">{journeyPhasePage.relatedEmpty}</p>
+            <p class="phase-empty-tools">{currentJourneyPhasePage.relatedEmpty}</p>
           {/if}
         </div>
       {/if}
@@ -643,18 +650,18 @@
           </div>
 
           <a
-            href="{base}/guided-pathways/#journey-phases"
+            href="{base}{localizePath('/guided-pathways/#journey-phases', currentLanguage)}"
             class="back-link journey-back-link summary-copy-next-link"
           >
             <span class="back-link-arrow" aria-hidden="true"></span>
-            {journeyPhasePage.summaryBackLink}
+            {currentJourneyPhasePage.summaryBackLink}
           </a>
         </div>
 
         <div class="phase-summary-checklist" aria-label={journeyPhase.summaryTitle}>
           <div class="summary-progress">
-            <h3>Checklist</h3>
-            <p>{summaryCompletedCount} / {summaryChecklist.length} complete</p>
+            <h3>{currentJourneyPhasePage.checklist}</h3>
+            <p>{summaryCompletedCount} / {summaryChecklist.length} {currentJourneyPhasePage.complete}</p>
           </div>
 
           <div class="summary-items">
@@ -675,34 +682,34 @@
             {#if journeyPhase.slug === 'monitor'}
               {#if isSummaryComplete}
                 <div class="summary-final-message">
-                  <p>{journeyPhasePage.finalCongratulations}</p>
+                  <p>{currentJourneyPhasePage.finalCongratulations}</p>
                 </div>
 
                 <div class="summary-completion-actions">
-                  <a href="{base}/guided-pathways/#sectors" class="primary-button">
-                    {journeyPhasePage.exploreSectors}
+                  <a href="{base}{localizePath('/guided-pathways/#sectors', currentLanguage)}" class="primary-button">
+                    {currentJourneyPhasePage.exploreSectors}
                   </a>
-                  <a href="{base}/cases/" class="primary-button">
-                    {journeyPhasePage.seeCases}
+                  <a href="{base}{localizePath('/cases/', currentLanguage)}" class="primary-button">
+                    {currentJourneyPhasePage.seeCases}
                   </a>
-                  <a href="{base}/tools/" class="primary-button">
-                    {journeyPhasePage.seeTools}
+                  <a href="{base}{localizePath('/tools/', currentLanguage)}" class="primary-button">
+                    {currentJourneyPhasePage.seeTools}
                   </a>
                 </div>
               {/if}
             {:else if nextPhase}
               <div class="summary-completion-actions">
                 <a
-                  href="{base}/journey-phases/{nextPhase.slug}/"
+                  href="{base}{localizePath(`/journey-phases/${nextPhase.slug}/`, currentLanguage)}"
                   class="pathway-link summary-next-phase-link"
                   class:summary-action-disabled={!isSummaryComplete}
                   aria-disabled={!isSummaryComplete}
-                  aria-label="Go to {nextPhase.shortName}: {nextPhase.title}"
+                  aria-label={`${currentJourneyPhasePage.nextPhase}: ${nextPhase.shortName}: ${nextPhase.title}`}
                   tabindex={isSummaryComplete ? 0 : -1}
                   title={isSummaryComplete ? undefined : 'Complete the checklist before moving on'}
                   on:click={preventLockedSummaryNavigation}
                 >
-                  {journeyPhasePage.nextPhase}
+                  {currentJourneyPhasePage.nextPhase}
                 </a>
               </div>
             {/if}
@@ -715,7 +722,7 @@
   <section class="phase-tools-section">
     <div class="container">
       <div class="section-intro">
-        <h3 class="subsection-title">{journeyPhasePage.relatedTitle}</h3>
+        <h3 class="subsection-title">{currentJourneyPhasePage.relatedTitle}</h3>
       </div>
 
       {#if relatedResources.length > 0}
@@ -725,17 +732,17 @@
           {/each}
         </div>
       {:else}
-        <p class="phase-empty-tools">{journeyPhasePage.relatedEmpty}</p>
+        <p class="phase-empty-tools">{currentJourneyPhasePage.relatedEmpty}</p>
       {/if}
     </div>
   </section>
 {/if}
 
 {#if zoomedImage}
-  <div class="image-zoom-modal" role="dialog" aria-modal="true" aria-label="Larger journeyPhase image" tabindex="-1">
-    <button type="button" class="image-zoom-backdrop" aria-label="Close image" on:click={closeZoomedImage}></button>
+  <div class="image-zoom-modal" role="dialog" aria-modal="true" aria-label={currentJourneyPhasePage.largerImage} tabindex="-1">
+    <button type="button" class="image-zoom-backdrop" aria-label={currentJourneyPhasePage.closeImage} on:click={closeZoomedImage}></button>
     <div class="image-zoom-content">
-      <button type="button" class="image-zoom-close" aria-label="Close image" on:click={closeZoomedImage}>x</button>
+      <button type="button" class="image-zoom-close" aria-label={currentJourneyPhasePage.closeImage} on:click={closeZoomedImage}>x</button>
       <img src="{base}{zoomedImage.src}" alt={zoomedImage.alt} />
       {#if zoomedImage.caption}
         <p>{zoomedImage.caption}</p>

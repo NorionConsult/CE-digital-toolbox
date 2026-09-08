@@ -1,27 +1,43 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import SectorCard from '$lib/components/cards/SectorCard.svelte';
   import SectionIntro from '$lib/components/sections/SectionIntro.svelte';
   import JourneyPhaseDiagram from '$lib/components/sections/JourneyPhaseDiagram.svelte';
   import { guidedPathways } from '$lib/content/editable/pages/guided-pathways.js';
   import { site } from '$lib/content/editable/global/site.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentGuidedPathways = localizeContent(guidedPathways, currentLanguage);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentPagePath = localizePath('/guided-pathways/', currentLanguage);
+
+  /** @param {string} path */
+  function getHeroButtonHref(path) {
+    if (path.startsWith('#')) {
+      return `${base}${currentPagePath}${path}`;
+    }
+
+    return `${base}${localizePath(path, currentLanguage)}`;
+  }
 </script>
 
 <svelte:head>
-  <title>{guidedPathways.pageTitle} | {site.name}</title>
+  <title>{currentGuidedPathways.pageTitle} | {currentSite.name}</title>
 </svelte:head>
 
 <section class="guided-pathways-hero">
   <div class="container">
-    <p class="eyebrow">{guidedPathways.hero.eyebrow}</p>
-    <h1>{guidedPathways.hero.title}</h1>
-    <p class="hero-text">{guidedPathways.hero.text}</p>
+    <p class="eyebrow">{currentGuidedPathways.hero.eyebrow}</p>
+    <h1>{currentGuidedPathways.hero.title}</h1>
+    <p class="hero-text">{currentGuidedPathways.hero.text}</p>
 
     <div class="guided-pathways-hero-actions">
-      {#each guidedPathways.hero.buttons as button}
-        <a href={button.href} class={`${button.style}-button`}>
+      {#each currentGuidedPathways.hero.buttons as button}
+        <a href={getHeroButtonHref(button.href)} class={`${button.style}-button`}>
           <span
             class="guided-pathways-hero-button-icon"
             style={`--icon-url: url("${iconParkUrl(button.icon)}");`}
@@ -37,15 +53,15 @@
 <section id="journey-phases" class="journey-phases-section">
   <div class="container">
     <SectionIntro
-      eyebrow={guidedPathways.journeyPhasesSection.eyebrow}
-      title={guidedPathways.journeyPhasesSection.title}
-      text={guidedPathways.journeyPhasesSection.text}
+      eyebrow={currentGuidedPathways.journeyPhasesSection.eyebrow}
+      title={currentGuidedPathways.journeyPhasesSection.title}
+      text={currentGuidedPathways.journeyPhasesSection.text}
     />
 
-    {#if guidedPathways.journeyPhasesSection.callToAction}
+    {#if currentGuidedPathways.journeyPhasesSection.callToAction}
       <article class="journey-phase-cta-card">
         <div class="journey-phase-cta-text">
-          <RichText text={guidedPathways.journeyPhasesSection.callToAction.text} />
+          <RichText text={currentGuidedPathways.journeyPhasesSection.callToAction.text} />
         </div>
         <div class="journey-phase-cta-diagram">
           <JourneyPhaseDiagram />
@@ -58,13 +74,13 @@
 <section id="sectors" class="sectors-section">
   <div class="container">
     <SectionIntro
-      eyebrow={guidedPathways.sectorsSection.eyebrow}
-      title={guidedPathways.sectorsSection.title}
-      text={guidedPathways.sectorsSection.text}
+      eyebrow={currentGuidedPathways.sectorsSection.eyebrow}
+      title={currentGuidedPathways.sectorsSection.title}
+      text={currentGuidedPathways.sectorsSection.text}
     />
 
     <div class="sector-grid">
-      {#each guidedPathways.sectors as sector}
+      {#each currentGuidedPathways.sectors as sector}
         <SectorCard {sector} />
       {/each}
     </div>

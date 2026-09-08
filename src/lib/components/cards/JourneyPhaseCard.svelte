@@ -4,22 +4,28 @@
     The component receives journey phase data as a prop and renders a consistent card.
   */
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { site } from '$lib/content/editable/global/site.js';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
   export let journeyPhase;
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentJourneyPhase = localizeContent(journeyPhase, currentLanguage);
 </script>
 
-<article class="phase-card {journeyPhase.colourClass}">
+<article class="phase-card {currentJourneyPhase.colourClass}">
   <div>
-    <div class="phase-number">{journeyPhase.shortName}</div>
-    <h3>{journeyPhase.title}</h3>
-    <p><InlineText text={journeyPhase.description} /></p>
+    <div class="phase-number">{currentJourneyPhase.shortName}</div>
+    <h3>{currentJourneyPhase.title}</h3>
+    <p><InlineText text={currentJourneyPhase.description} /></p>
   </div>
 
-  <a href="{base}/journey-phases/{journeyPhase.slug}/" class="phase-link">
-    {site.labels.viewPhase}
+  <a href="{base}{localizePath(`/journey-phases/${currentJourneyPhase.slug}/`, currentLanguage)}" class="phase-link">
+    {currentSite.labels.viewPhase}
     <span
       class="link-arrow"
       style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}

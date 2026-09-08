@@ -1,18 +1,23 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
 
   /** @type {any[]} */
   export let phases = [];
   /** @type {string} */
   export let activeSlug = '';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentPhases = localizeContent(phases, currentLanguage);
 </script>
 
 <nav class="compact-journey-map" aria-label="Journey phases overview">
   <div class="compact-journey-line" aria-hidden="true"></div>
 
-  {#each phases as phase}
+  {#each currentPhases as phase}
     <a
-      href="{base}/journey-phases/{phase.slug}/"
+      href="{base}{localizePath(`/journey-phases/${phase.slug}/`, currentLanguage)}"
       class:active-phase={phase.slug === activeSlug}
       class="compact-journey-step"
       aria-current={phase.slug === activeSlug ? 'page' : undefined}

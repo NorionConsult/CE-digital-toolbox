@@ -1,5 +1,12 @@
 <script>
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { getLanguageFromPathname, translate } from '$lib/translation-helper.js';
+
   export let text = '';
+
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: translatedText = translate(text, currentLanguage);
 
   /**
    * Allows editors to make selected words bold with **double asterisks** and
@@ -69,7 +76,7 @@
   }
 </script>
 
-{#each formatInlineText(text) as part}
+{#each formatInlineText(translatedText) as part}
   {#if part.href}
     <a
       href={part.href}

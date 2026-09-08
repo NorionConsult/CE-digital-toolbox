@@ -1,14 +1,30 @@
 <script>
   import { base } from '$app/paths';
+  import { page } from '$app/stores';
   import { site } from '$lib/content/editable/global/site.js';
+  import { translateTaxonomyDisplay, translateTaxonomyList } from '$lib/content/technical/taxonomy-labels.js';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
   import SectorBadge from './SectorBadge.svelte';
 
   export let caseStudy;
   export let variant = 'default';
 
+  const labels = {
+    companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
+    country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
+    rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
+    notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' }
+  };
+
   $: isCompact = variant === 'compact';
-  $: rStrategyText = caseStudy.rStrategies?.length ? caseStudy.rStrategies.join(', ') : 'Not specified';
-  $: sectorBadges = caseStudy.sectors?.length ? caseStudy.sectors : [caseStudy.sector];
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentSite = localizeContent(site, currentLanguage);
+  $: currentCaseStudy = localizeContent(caseStudy, currentLanguage);
+  $: rStrategyText = currentCaseStudy.rStrategies?.length
+    ? translateTaxonomyList(currentCaseStudy.rStrategies, 'rStrategies', currentLanguage).join(', ')
+    : translate(labels.notSpecified, currentLanguage);
+  $: countryText = translateTaxonomyDisplay(currentCaseStudy.countryDisplay || currentCaseStudy.country, 'countries', currentLanguage);
+  $: sectorBadges = currentCaseStudy.sectors?.length ? currentCaseStudy.sectors : [currentCaseStudy.sector];
 </script>
 
 <article class="case-card" class:case-card-compact={isCompact}>
@@ -18,27 +34,27 @@
         <SectorBadge {sector} />
       {/each}
     </div>
-    <h3>{caseStudy.companyName}</h3>
-    <p>{caseStudy.summary}</p>
+    <h3>{currentCaseStudy.companyName}</h3>
+    <p>{currentCaseStudy.summary}</p>
   </div>
 
   <dl aria-label="Case taxonomy">
     <div>
-      <dt>Company name</dt>
-      <dd>{caseStudy.companyName}</dd>
+      <dt>{translate(labels.companyName, currentLanguage)}</dt>
+      <dd>{currentCaseStudy.companyName}</dd>
     </div>
     <div>
-      <dt>Country</dt>
-      <dd>{caseStudy.countryDisplay || caseStudy.country}</dd>
+      <dt>{translate(labels.country, currentLanguage)}</dt>
+      <dd>{countryText}</dd>
     </div>
     <div>
-      <dt>R strategy</dt>
+      <dt>{translate(labels.rStrategy, currentLanguage)}</dt>
       <dd>{rStrategyText}</dd>
     </div>
   </dl>
 
-  <a href="{base}/cases/{caseStudy.slug}/" class="case-link" target="_blank" rel="noreferrer">
-    {site.labels.viewCase}
+  <a href="{base}{localizePath(`/cases/${currentCaseStudy.slug}/`, currentLanguage)}" class="case-link" target="_blank" rel="noreferrer">
+    {currentSite.labels.viewCase}
   </a>
 </article>
 

@@ -81,6 +81,12 @@ Shared journey phase page labels:
 src/lib/content/editable/pages/journey-phase-page.js
 ```
 
+Translation helper and supported language setup:
+
+```text
+src/lib/translation-helper.js
+```
+
 Colours, fonts and shared visual style:
 
 ```text
@@ -183,7 +189,9 @@ Most visible text is in:
 src/lib/content/editable/
 ```
 
-To create another language later, copy the editable content structure, translate the text values, and then connect the page imports to the translated files. The current site uses one editor-facing content structure without the old `en` wrapper folder.
+To translate a text value, keep it in the same editable file and replace the plain string with a language object such as `{ en: 'English text', uk: 'Ukrainian text', ro: 'Romanian text', hy: 'Armenian text' }`. English is the fallback language, so editors can add translations gradually without breaking pages that still only have English text.
+
+The main menu language selector stores the visitor's choice and keeps them on that language while they navigate. Slugs stay stable for now, so translated paths look like `/uk/tools/example-tool/` while the tool slug itself remains unchanged.
 
 ## Run Locally
 
