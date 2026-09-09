@@ -1,6 +1,5 @@
-<script>
-  // Compatibility alias: the main page is now /tools/.
-  import ToolsPage from '$lib/components/pages/ToolsPage.svelte';
-</script>
+<svelte:head>
+  <meta name="robots" content="noindex" />
+</svelte:head>
 
-<ToolsPage />
+<p>Redirecting to the tools catalogue...</p>

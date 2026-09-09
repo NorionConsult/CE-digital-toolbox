@@ -45,49 +45,104 @@ export const tourismBarriersSection = {
   // its source together here. If no source is available, leave `source: ''`.
   barriers: [
     {
-      text: 'High upfront cost of energy-efficient, water-saving and waste-reduction technology for SME hospitality operators.',
+      text: {
+        en: 'High upfront cost of energy-efficient, water-saving and waste-reduction technology for SME hospitality operators.',
+        uk: 'Високі початкові витрати на енергоефективні, водозберігаючі та відходозменшувальні технології для малих і середніх готельно-ресторанних операторів.',
+        ro: 'Costuri inițiale ridicate pentru tehnologii eficiente energetic, de economisire a apei și de reducere a deșeurilor pentru operatorii HoReCa IMM.',
+        hy: 'ՓՄՁ հյուրընկալության օպերատորների համար էներգաարդյունավետ, ջրախնայող եւ թափոնները նվազեցնող տեխնոլոգիաների բարձր նախնական ծախսեր։'
+      },
       source: 'McGrady Clarke, Hospitality Sustainability Outlook, 2024'
     },
     {
-      text: 'Seasonal fluctuations, such as changes in visitor numbers and weather conditions, creates inconsistent waste volumes, complicating infrastructure investment and supplier contracts.',
+      text: {
+        en: 'Seasonal fluctuations, such as changes in visitor numbers and weather conditions, create inconsistent waste volumes, complicating infrastructure investment and supplier contracts.',
+        uk: 'Сезонні коливання, зокрема зміни кількості відвідувачів і погодних умов, створюють нерівномірні обсяги відходів, ускладнюючи інвестиції в інфраструктуру та договори з постачальниками.',
+        ro: 'Fluctuațiile sezoniere, precum schimbările numărului de vizitatori și ale condițiilor meteo, creează volume inconstante de deșeuri, complicând investițiile în infrastructură și contractele cu furnizorii.',
+        hy: 'Սեզոնային տատանումները, օրինակ՝ այցելուների թվի եւ եղանակային պայմանների փոփոխությունները, ստեղծում են թափոնների անկայուն ծավալներ՝ բարդացնելով ենթակառուցվածքային ներդրումներն ու մատակարարների պայմանագրերը։'
+      },
       source: 'Waste and Tourism: Drivers of Sustainable WM, 2025'
     },
     {
-      text: 'Greenwashing risk and a lack of standardised sustainability metrics make credible reporting difficult for small operators.',
+      text: {
+        en: 'Greenwashing risk and a lack of standardised sustainability metrics make credible reporting difficult for small operators.',
+        uk: 'Ризик грінвошингу та нестача стандартизованих показників сталості ускладнюють достовірну звітність для малих операторів.',
+        ro: 'Riscul de greenwashing și lipsa unor indicatori standardizați de sustenabilitate fac raportarea credibilă dificilă pentru operatorii mici.',
+        hy: 'Կանաչ լվացման ռիսկը եւ կայունության ստանդարտացված ցուցանիշների պակասը բարդացնում են փոքր օպերատորների հավաստի հաշվետվությունը։'
+      },
       source: 'Earth5R, Sustainable Tourism 20 Destinations, 2025; EU Tourism Platform, 2024'
     },
     {
-      text: 'Fragmented supply chains and dependence on imported goods limit the ability to source locally and reduce transport emissions.',
+      text: {
+        en: 'Fragmented supply chains and dependence on imported goods limit the ability to source locally and reduce transport emissions.',
+        uk: 'Фрагментовані ланцюги постачання та залежність від імпортних товарів обмежують можливість закуповувати локально й зменшувати транспортні викиди.',
+        ro: 'Lanțurile de aprovizionare fragmentate și dependența de bunuri importate limitează capacitatea de aprovizionare locală și de reducere a emisiilor din transport.',
+        hy: 'Մասնատված մատակարարման շղթաները եւ ներմուծվող ապրանքներից կախվածությունը սահմանափակում են տեղական գնումների եւ տրանսպորտային արտանետումների նվազեցման հնարավորությունը։'
+      },
       source: 'Springer, Rethinking Tourism Sustainability Certification, CE Approach, 2024'
     },
     {
-      text: 'Limited management capacity and staff expertise in circular economy practices among micro and small tourism businesses.',
+      text: {
+        en: 'Limited management capacity and staff expertise in circular economy practices among micro and small tourism businesses.',
+        uk: 'Обмежена управлінська спроможність і нестача експертизи персоналу щодо практик циркулярної економіки серед мікро- та малих туристичних бізнесів.',
+        ro: 'Capacitatea managerială limitată și expertiza redusă a personalului în practici de economie circulară în rândul microîntreprinderilor și întreprinderilor mici din turism.',
+        hy: 'Միկրո եւ փոքր զբոսաշրջային բիզնեսների շրջանում շրջանաձեւ տնտեսության գործելակերպերի վերաբերյալ կառավարման սահմանափակ կարողություններ եւ անձնակազմի փորձի պակաս։'
+      },
       source: 'Taylor & Francis Online, Accelerating SME Tourism Engagement with Climate Change, 2024'
     },
     {
-      text: 'Regulatory complexity varies across EU member states, increasing the compliance burden for internationally operating small-medium enterprises (SMEs).',
+      text: {
+        en: 'Regulatory complexity varies across EU member states, increasing the compliance burden for internationally operating small-medium enterprises (SMEs).',
+        uk: 'Регуляторна складність відрізняється між країнами ЄС, збільшуючи тягар дотримання вимог для міжнародно активних МСП.',
+        ro: 'Complexitatea reglementărilor variază între statele membre UE, crescând sarcina de conformare pentru IMM-urile active internațional.',
+        hy: 'Կարգավորումների բարդությունը տարբերվում է ԵՄ անդամ երկրների միջեւ՝ մեծացնելով միջազգային գործունեություն ունեցող ՓՄՁ-ների համապատասխանության բեռը։'
+      },
       source: 'McGrady Clarke, Hospitality Sustainability Outlook, 2024'
     }
   ],
   opportunities: [
     {
-      text: 'Demand for certified circular and regenerative tourism is growing, with many global travellers seeking more sustainable options.',
+      text: {
+        en: 'Demand for certified circular and regenerative tourism is growing, with many global travellers seeking more sustainable options.',
+        uk: 'Попит на сертифікований циркулярний і регенеративний туризм зростає, оскільки багато мандрівників шукають сталіші варіанти.',
+        ro: 'Cererea pentru turism circular și regenerativ certificat este în creștere, deoarece mulți călători caută opțiuni mai sustenabile.',
+        hy: 'Վկայագրված շրջանաձեւ եւ վերականգնողական զբոսաշրջության պահանջարկը աճում է, քանի որ շատ ճանապարհորդներ փնտրում են ավելի կայուն տարբերակներ։'
+      },
       source: 'Sustainable Travel Report, 2023; WEF, Future of Tourism, 2023'
     },
     {
-      text: 'Eco-certification, including Green Key, Travelife and the EU Ecolabel, creates market differentiation and access to new traveller segments.',
+      text: {
+        en: 'Eco-certification, including Green Key, Travelife and the EU Ecolabel, creates market differentiation and access to new traveller segments.',
+        uk: 'Екосертифікація, зокрема Green Key, Travelife та EU Ecolabel, створює ринкову диференціацію та доступ до нових сегментів мандрівників.',
+        ro: 'Eco-certificarea, inclusiv Green Key, Travelife și eticheta ecologică a UE, creează diferențiere pe piață și acces la noi segmente de călători.',
+        hy: 'Էկոհավաստագրումը, ներառյալ Green Key-ը, Travelife-ը եւ ԵՄ էկոպիտակը, ստեղծում է շուկայական տարբերակում եւ մուտք ճանապարհորդների նոր հատվածներ։'
+      },
       source: 'Frontiers, Analysis of Sustainability Certifications in Hotel Industry, 2023'
     },
     {
-      text: 'Local and short food-supply chains reduce transport waste, support community economies and improve product freshness.',
+      text: {
+        en: 'Local and short food-supply chains reduce transport waste, support community economies and improve product freshness.',
+        uk: 'Локальні та короткі харчові ланцюги постачання зменшують транспортні відходи, підтримують місцеві економіки та покращують свіжість продуктів.',
+        ro: 'Lanțurile alimentare locale și scurte reduc deșeurile asociate transportului, sprijină economiile comunitare și îmbunătățesc prospețimea produselor.',
+        hy: 'Տեղական եւ կարճ սննդի մատակարարման շղթաները նվազեցնում են տրանսպորտային թափոնները, աջակցում համայնքային տնտեսություններին եւ բարելավում արտադրանքի թարմությունը։'
+      },
       source: 'PMC, CE and Sustainable Development in Tourism, 2024'
     },
     {
-      text: 'Food-surplus platforms can turn unsold meals and avoidable waste into new revenue.',
+      text: {
+        en: 'Food-surplus platforms can turn unsold meals and avoidable waste into new revenue.',
+        uk: 'Платформи для надлишків їжі можуть перетворювати непродані страви та уникнені відходи на новий дохід.',
+        ro: 'Platformele pentru surplus alimentar pot transforma mesele nevândute și deșeurile evitabile în venituri noi.',
+        hy: 'Սննդի ավելցուկների հարթակները կարող են չվաճառված ուտեստներն ու կանխարգելելի թափոնները վերածել նոր եկամտի։'
+      },
       source: 'Too Good To Go, About Us, 2025'
     },
     {
-      text: 'Circular amenity design, refillable dispensers, reusable linen and upcycled furnishings can reduce procurement costs and waste.',
+      text: {
+        en: 'Circular amenity design, refillable dispensers, reusable linen and upcycled furnishings can reduce procurement costs and waste.',
+        uk: 'Циркулярний дизайн зручностей, багаторазові дозатори, повторно використовувана білизна та меблі з апсайклінгу можуть зменшити закупівельні витрати й відходи.',
+        ro: 'Designul circular al facilităților, dozatoarele reîncărcabile, lenjeria reutilizabilă și mobilierul upcycled pot reduce costurile de achiziție și deșeurile.',
+        hy: 'Հարմարությունների շրջանաձեւ դիզայնը, վերալիցքավորվող դիսպենսերները, կրկնօգտագործվող սպիտակեղենը եւ վերարժեւորված կահույքը կարող են նվազեցնել գնումների ծախսերն ու թափոնները։'
+      },
       source: 'Sustainable Hospitality Alliance / HCMI guidance, 2024'
     }
   ]

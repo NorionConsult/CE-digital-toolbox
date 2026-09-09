@@ -1,7 +1,5 @@
-<script>
-  import ResourcePage from '$lib/components/pages/ResourcePage.svelte';
+<svelte:head>
+  <meta name="robots" content="noindex" />
+</svelte:head>
 
-  export let data;
-</script>
-
-<ResourcePage resource={data.resource} />
+<p>Redirecting to the tool page...</p>

@@ -85,7 +85,7 @@ const choosingIndicatorsSection = {
   */
   baselineCards: [
     {
-      title: 'Material Use',
+      title: { en: 'Material Use', uk: 'Використання матеріалів', ro: 'Utilizarea materialelor', hy: 'Նյութերի օգտագործում' },
       icon: 'recycling',
       items: [
         '% recycled content in products',
@@ -95,7 +95,7 @@ const choosingIndicatorsSection = {
       ]
     },
     {
-      title: 'Product Life',
+      title: { en: 'Product Life', uk: 'Строк служби продукту', ro: 'Durata de viață a produsului', hy: 'Արտադրանքի կյանքի տեւողություն' },
       icon: 'tool',
       items: [
         'Product average lifespan',
@@ -105,7 +105,7 @@ const choosingIndicatorsSection = {
       ]
     },
     {
-      title: 'Circular Revenue',
+      title: { en: 'Circular Revenue', uk: 'Циркулярний дохід', ro: 'Venituri circulare', hy: 'Շրջանաձեւ եկամուտ' },
       icon: 'wallet',
       items: [
         'Revenue from circular services',
@@ -115,7 +115,7 @@ const choosingIndicatorsSection = {
       ]
     },
     {
-      title: 'Environmental',
+      title: { en: 'Environmental', uk: 'Екологічні показники', ro: 'Mediu', hy: 'Բնապահպանական' },
       icon: 'earth',
       items: [
         'Carbon dioxide (CO2) emissions per unit',
@@ -133,7 +133,12 @@ const measuringSuccessSection = {
   title: { en: 'Measuring Success', uk: 'Вимірювання успіху', ro: 'Măsurarea succesului', hy: 'Հաջողության չափում' },
   resourceTag: 'monitor:measuring-success',
   paragraphs: [
-    "With the right indicators chosen in the step above, the next step is to put them to use. The two tools on the following section help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.|| - **Track progress against your circular goals**: The indicators you selected in the previous step are directly linked to your circular strategy. Measuring them consistently tells you whether your actions are having the intended effect, and gives you evidence to act on. || - **Support smarter decisions inside your business**: The data from your chosen metrics makes it easier to prioritise investments, allocate resources, and decide where to scale circular activities. Without measurement, improvement is guesswork. ||- **Communicate progress to stakeholders credibly**: Customers, funders, and partners increasingly expect evidence, not just intentions. The indicators selected give you a credible, consistent basis for reporting.|| A recommended tool is the **SME Reporting Tool**, which uses your selected indicators to create an annual climate and circularity report tracking greenhouse gas emissions and key reductions over time."
+    {
+      en: "With the right indicators chosen in the step above, the next step is to put them to use. The two tools on the following section help you collect and organise data against your selected metrics, turning your circular ambitions into measurable, trackable progress.|| - **Track progress against your circular goals**: The indicators you selected in the previous step are directly linked to your circular strategy. Measuring them consistently tells you whether your actions are having the intended effect, and gives you evidence to act on. || - **Support smarter decisions inside your business**: The data from your chosen metrics makes it easier to prioritise investments, allocate resources, and decide where to scale circular activities. Without measurement, improvement is guesswork. ||- **Communicate progress to stakeholders credibly**: Customers, funders, and partners increasingly expect evidence, not just intentions. The indicators selected give you a credible, consistent basis for reporting.|| A recommended tool is the **SME Reporting Tool**, which uses your selected indicators to create an annual climate and circularity report tracking greenhouse gas emissions and key reductions over time.",
+      uk: 'Коли правильні показники обрано на попередньому кроці, наступне завдання - застосувати їх на практиці. Два інструменти в наступному розділі допоможуть зібрати й упорядкувати дані за вибраними метриками, перетворюючи циркулярні амбіції на вимірюваний і відстежуваний прогрес.|| - **Відстежуйте прогрес щодо циркулярних цілей**: показники, обрані на попередньому кроці, безпосередньо пов’язані з вашою циркулярною стратегією. Регулярне вимірювання показує, чи мають дії очікуваний ефект, і дає докази для подальших рішень. || - **Підтримуйте розумніші рішення у бізнесі**: дані за вибраними метриками допомагають пріоритезувати інвестиції, розподіляти ресурси та вирішувати, де масштабувати циркулярні дії. Без вимірювання покращення лишається здогадкою. ||- **Переконливо комунікуйте прогрес зацікавленим сторонам**: клієнти, донори й партнери дедалі частіше очікують доказів, а не лише намірів. Обрані показники дають надійну й послідовну основу для звітування.|| Рекомендований інструмент - **SME Reporting Tool**, який використовує обрані показники для створення щорічного кліматичного та циркулярного звіту з відстеженням викидів парникових газів і ключових скорочень з часом.',
+      ro: 'După ce ai ales indicatorii potriviți în pasul anterior, următorul pas este să îi folosești. Cele două instrumente din secțiunea următoare te ajută să colectezi și să organizezi date pentru metricile selectate, transformând ambițiile circulare în progres măsurabil și ușor de urmărit.|| - **Urmărește progresul față de obiectivele circulare**: indicatorii selectați în pasul anterior sunt conectați direct la strategia ta circulară. Măsurarea lor consecventă arată dacă acțiunile au efectul dorit și oferă dovezi pe baza cărora poți acționa. || - **Sprijină decizii mai inteligente în afacere**: datele din metricile alese facilitează prioritizarea investițiilor, alocarea resurselor și decizia privind extinderea activităților circulare. Fără măsurare, îmbunătățirea se bazează pe presupuneri. ||- **Comunică progresul credibil către părțile interesate**: clienții, finanțatorii și partenerii așteaptă tot mai mult dovezi, nu doar intenții. Indicatorii selectați oferă o bază credibilă și consecventă pentru raportare.|| Un instrument recomandat este **SME Reporting Tool**, care folosește indicatorii selectați pentru a crea un raport anual de climă și circularitate, urmărind emisiile de gaze cu efect de seră și reducerile-cheie în timp.',
+      hy: 'Վերեւի քայլում ճիշտ ցուցանիշները ընտրելուց հետո հաջորդ քայլը դրանք գործնականում օգտագործելն է։ Հաջորդ բաժնի երկու գործիքները կօգնեն հավաքել եւ կազմակերպել տվյալները ձեր ընտրած չափորոշիչների համաձայն՝ շրջանաձեւ նպատակները դարձնելով չափելի եւ հետեւելի առաջընթաց։|| - **Հետեւեք ձեր շրջանաձեւ նպատակների առաջընթացին**. նախորդ քայլում ընտրված ցուցանիշները անմիջապես կապված են ձեր շրջանաձեւ ռազմավարության հետ։ Դրանց կանոնավոր չափումը ցույց է տալիս՝ արդյոք գործողությունները տալիս են սպասվող արդյունքը, եւ տրամադրում է ապացույցներ հետագա գործողությունների համար։ || - **Աջակցեք ավելի խելացի որոշումներին բիզնեսի ներսում**. ընտրված չափորոշիչների տվյալները հեշտացնում են ներդրումների առաջնահերթացումը, ռեսուրսների բաշխումը եւ այն որոշումը, թե որտեղ մասշտաբավորել շրջանաձեւ գործողությունները։ Առանց չափման բարելավումը ենթադրություն է։ ||- **Հավաստիորեն հաղորդեք առաջընթացը շահագրգիռ կողմերին**. հաճախորդները, ֆինանսավորողները եւ գործընկերները ավելի ու ավելի են ակնկալում ապացույցներ, ոչ միայն մտադրություններ։ Ընտրված ցուցանիշները տալիս են հաշվետվության վստահելի եւ հետեւողական հիմք։|| Առաջարկվող գործիք է **SME Reporting Tool**-ը, որը օգտագործում է ընտրված ցուցանիշները՝ ստեղծելու տարեկան կլիմայի եւ շրջանաձեւության հաշվետվություն, որը հետեւում է ջերմոցային գազերի արտանետումներին եւ հիմնական կրճատումներին ժամանակի ընթացքում։'
+    }
   ]
 };
 
@@ -143,7 +148,12 @@ const interpretingResultsSection = {
   title: { en: 'Interpreting Results', uk: 'Інтерпретація результатів', ro: 'Interpretarea rezultatelor', hy: 'Արդյունքների մեկնաբանում' },
   resourceTag: 'monitor:interpreting-results',
   paragraphs: [
-    "Interpreting results is an essential part of managing a circular economy transition. It helps you turn monitoring into practical learning by showing whether circular actions are performing how you would expect them to, which initiatives are doing well, and where you need to make adjustments. Results should be compared against the milestones and targets set during planning. ||Where targets are not being met, small-medium enterprises (SMEs) should look beyond the numbers and identify the underlying causes, such as resource gaps, behavioural barriers, operational challenges or dependencies on partners. Equally important is understanding what is working well, so successful approaches can be replicated and scaled. By capturing these insights and sharing them with relevant teams, leadership, customers or funders, you can strengthen accountability, build trust and feed learning into the next cycle of circular improvement."
+    {
+      en: "Interpreting results is an essential part of managing a circular economy transition. It helps you turn monitoring into practical learning by showing whether circular actions are performing how you would expect them to, which initiatives are doing well, and where you need to make adjustments. Results should be compared against the milestones and targets set during planning. ||Where targets are not being met, small-medium enterprises (SMEs) should look beyond the numbers and identify the underlying causes, such as resource gaps, behavioural barriers, operational challenges or dependencies on partners. Equally important is understanding what is working well, so successful approaches can be replicated and scaled. By capturing these insights and sharing them with relevant teams, leadership, customers or funders, you can strengthen accountability, build trust and feed learning into the next cycle of circular improvement.",
+      uk: 'Інтерпретація результатів є важливою частиною управління переходом до циркулярної економіки. Вона допомагає перетворити моніторинг на практичне навчання, показуючи, чи працюють циркулярні дії так, як очікувалося, які ініціативи дають добрі результати і де потрібні коригування. Результати слід порівнювати з етапами та цілями, визначеними під час планування. ||Якщо цілі не досягаються, малі та середні підприємства повинні дивитися не лише на цифри, а й визначати першопричини: прогалини в ресурсах, поведінкові бар’єри, операційні труднощі або залежність від партнерів. Так само важливо зрозуміти, що працює добре, щоб успішні підходи можна було повторювати й масштабувати. Фіксуючи ці висновки та ділячись ними з командами, керівництвом, клієнтами або донорами, ви зміцнюєте підзвітність, довіру і передаєте навчання в наступний цикл циркулярного покращення.',
+      ro: 'Interpretarea rezultatelor este o parte esențială a gestionării tranziției către economia circulară. Te ajută să transformi monitorizarea în învățare practică, arătând dacă acțiunile circulare funcționează conform așteptărilor, care inițiative merg bine și unde trebuie făcute ajustări. Rezultatele ar trebui comparate cu etapele și țintele stabilite în planificare. ||Atunci când țintele nu sunt atinse, întreprinderile mici și mijlocii ar trebui să privească dincolo de cifre și să identifice cauzele de bază, cum ar fi lipsa resurselor, bariere comportamentale, provocări operaționale sau dependențe de parteneri. La fel de important este să înțelegi ce funcționează bine, astfel încât abordările reușite să poată fi replicate și extinse. Prin colectarea acestor învățăminte și partajarea lor cu echipele relevante, conducerea, clienții sau finanțatorii, poți consolida responsabilitatea, încrederea și învățarea pentru următorul ciclu de îmbunătățire circulară.',
+      hy: 'Արդյունքների մեկնաբանումը շրջանաձեւ տնտեսության անցումը կառավարելու կարեւոր մաս է։ Այն օգնում է մոնիթորինգը վերածել գործնական ուսուցման՝ ցույց տալով, թե արդյոք շրջանաձեւ գործողությունները կատարում են սպասվածը, որ նախաձեռնություններն են լավ աշխատում եւ որտեղ են անհրաժեշտ հարմարեցումներ։ Արդյունքները պետք է համեմատել պլանավորման ընթացքում սահմանված հանգրվանների եւ թիրախների հետ։ ||Երբ թիրախները չեն կատարվում, փոքր եւ միջին ձեռնարկությունները պետք է նայեն թվերից այն կողմ եւ բացահայտեն հիմքային պատճառները, ինչպիսիք են ռեսուրսների պակասը, վարքային խոչընդոտները, գործառնական դժվարությունները կամ գործընկերներից կախվածությունը։ Նույնքան կարեւոր է հասկանալ, թե ինչն է լավ աշխատում, որպեսզի հաջող մոտեցումները կրկնվեն եւ մասշտաբավորվեն։ Այս գիտելիքները հավաքելով եւ համապատասխան թիմերի, ղեկավարության, հաճախորդների կամ ֆինանսավորողների հետ կիսելով՝ կարող եք ամրապնդել հաշվետվողականությունը, վստահությունը եւ ուսուցումը հաջորդ շրջանաձեւ բարելավման ցիկլի համար։'
+    }
   ],
 };
 

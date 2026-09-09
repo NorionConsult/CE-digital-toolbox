@@ -80,37 +80,62 @@ const implementationPlanSection = {
     Icons use local Icon Park SVG files from static/icons/icon-park/.
   */
   principleBox: {
-    title: 'Key principles for small-medium enterprises (SMEs)',
+    title: {
+      en: 'Key principles for small-medium enterprises (SMEs)',
+      uk: 'Ключові принципи для малих і середніх підприємств (МСП)',
+      ro: 'Principii-cheie pentru întreprinderile mici și mijlocii (IMM-uri)',
+      hy: 'Հիմնական սկզբունքներ փոքր եւ միջին ձեռնարկությունների (ՓՄՁ) համար'
+    },
     items: [
       {
-        title: 'Start small',
+        title: { en: 'Start small', uk: 'Починайте з малого', ro: 'Începe cu pași mici', hy: 'Սկսեք փոքրից' },
         icon: 'zoom-in',
-        text:
-          'Pick one or two circular actions to implement first. Success builds momentum and confidence for the next step.'
+        text: {
+          en: 'Pick one or two circular actions to implement first. Success builds momentum and confidence for the next step.',
+          uk: 'Спершу оберіть одну-дві циркулярні дії для впровадження. Успіх створює імпульс і впевненість для наступного кроку.',
+          ro: 'Alege una sau două acțiuni circulare pentru început. Succesul creează elan și încredere pentru pasul următor.',
+          hy: 'Սկզբում ընտրեք մեկ կամ երկու շրջանաձեւ գործողություն իրականացնելու համար։ Հաջողությունը ստեղծում է թափ եւ վստահություն հաջորդ քայլի համար։'
+        }
       },
       {
-        title: 'Involve your team',
+        title: { en: 'Involve your team', uk: 'Залучайте команду', ro: 'Implică echipa', hy: 'Ներգրավեք ձեր թիմը' },
         icon: 'personal-collection',
-        text:
-          'Implementation works best when the people who will carry out the actions have been part of designing them.'
+        text: {
+          en: 'Implementation works best when the people who will carry out the actions have been part of designing them.',
+          uk: 'Впровадження працює найкраще, коли люди, які виконуватимуть дії, брали участь у їх розробці.',
+          ro: 'Implementarea funcționează cel mai bine atunci când oamenii care vor realiza acțiunile au participat la proiectarea lor.',
+          hy: 'Իրականացումը լավագույնս ստացվում է, երբ գործողություններն իրականացնող մարդիկ մասնակցել են դրանց նախագծմանը։'
+        }
       },
       {
-        title: 'Be specific',
+        title: { en: 'Be specific', uk: 'Будьте конкретними', ro: 'Fii specific', hy: 'Եղեք կոնկրետ' },
         icon: 'aiming',
-        text:
-          'Assign a named person, a specific date, and a measurable outcome to each action. Ambiguity is the most common reason implementation stalls.'
+        text: {
+          en: 'Assign a named person, a specific date, and a measurable outcome to each action. Ambiguity is the most common reason implementation stalls.',
+          uk: 'Для кожної дії визначте відповідальну особу, конкретну дату та вимірюваний результат. Нечіткість найчастіше зупиняє впровадження.',
+          ro: 'Atribuie fiecărei acțiuni o persoană responsabilă, o dată concretă și un rezultat măsurabil. Ambiguitatea este cel mai frecvent motiv pentru care implementarea se blochează.',
+          hy: 'Յուրաքանչյուր գործողության համար նշանակեք պատասխանատու անձ, կոնկրետ ամսաթիվ եւ չափելի արդյունք։ Անորոշությունը իրականացման կանգ առնելու ամենատարածված պատճառն է։'
+        }
       },
       {
-        title: 'Plan to adapt',
+        title: { en: 'Plan to adapt', uk: 'Плануйте адаптацію', ro: 'Planifică adaptarea', hy: 'Պլանավորեք հարմարվելու համար' },
         icon: 'adjustment',
-        text:
-          'Your first implementation plan will change. Build in regular review points so you can adjust as you learn.'
+        text: {
+          en: 'Your first implementation plan will change. Build in regular review points so you can adjust as you learn.',
+          uk: 'Перший план впровадження змінюватиметься. Закладіть регулярні точки перегляду, щоб коригувати його під час навчання.',
+          ro: 'Primul tău plan de implementare se va schimba. Include puncte regulate de revizuire, astfel încât să îl poți ajusta pe măsură ce înveți.',
+          hy: 'Ձեր առաջին իրականացման պլանը կփոխվի։ Ներառեք կանոնավոր վերանայման կետեր, որպեսզի կարողանաք հարմարվել սովորելու ընթացքում։'
+        }
       },
       {
-        title: 'Use external support',
+        title: { en: 'Use external support', uk: 'Використовуйте зовнішню підтримку', ro: 'Folosește sprijin extern', hy: 'Օգտագործեք արտաքին աջակցություն' },
         icon: 'add-user',
-        text:
-          'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding small-medium enterprises (SMEs) can access.'
+        text: {
+          en: 'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding small-medium enterprises (SMEs) can access.',
+          uk: 'Партнери, консультанти та програми, що фінансуються ЄС, можуть надати ресурси, експертизу й фінансування, доступні для МСП.',
+          ro: 'Partenerii, consilierii și programele finanțate de UE pot oferi resurse, expertiză și finanțare la care IMM-urile pot avea acces.',
+          hy: 'Գործընկերները, խորհրդատուները եւ ԵՄ ֆինանսավորմամբ ծրագրերը կարող են տրամադրել ռեսուրսներ, փորձագիտություն եւ ֆինանսավորում, որոնց կարող են օգտվել ՓՄՁ-ները։'
+        }
       }
     ]
   }

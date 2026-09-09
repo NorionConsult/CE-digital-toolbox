@@ -17,6 +17,8 @@
   } from '$lib/translation-helper.js';
   import { site } from '$lib/content/editable/global/site.js';
 
+  const routingBasePath = import.meta.env.PUBLIC_BASE_PATH || base;
+
   let menuOpen = false;
   let selectedLanguage = 'en';
 
@@ -41,10 +43,10 @@
     }
   };
 
-  $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
+  $: currentLanguage = getLanguageFromPathname($page.url.pathname, routingBasePath);
   $: selectedLanguage = currentLanguage;
   $: currentSite = localizeContent(site, currentLanguage);
-  $: currentAppPath = getAppPathname($page.url.pathname, base);
+  $: currentAppPath = getAppPathname($page.url.pathname, routingBasePath);
 
   /** @param {string} path */
   function getLocalizedHref(path) {

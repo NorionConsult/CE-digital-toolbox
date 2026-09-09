@@ -47,49 +47,104 @@ export const foodAndAgricultureBarriersSection = {
   // its source together here. If no source is available, leave `source: ''`.
   barriers: [
     {
-      text: 'High capital cost of precision technology and circular economy equipment.',
+      text: {
+        en: 'High capital cost of precision technology and circular economy equipment.',
+        uk: 'Високі капітальні витрати на технології точного землеробства та обладнання для циркулярної економіки.',
+        ro: 'Costuri de capital ridicate pentru tehnologiile de agricultură de precizie și echipamentele de economie circulară.',
+        hy: 'Ճշգրիտ գյուղատնտեսության տեխնոլոգիաների եւ շրջանաձեւ տնտեսության սարքավորումների բարձր կապիտալ ծախսեր։'
+      },
       source: 'European Parliament Digital Agriculture Report, 2024'
     },
     {
-      text: 'Fragmented land ownership limits the scale of circular nutrient systems.',
+      text: {
+        en: 'Fragmented land ownership limits the scale of circular nutrient systems.',
+        uk: 'Фрагментована власність на землю обмежує масштабування циркулярних систем поживних речовин.',
+        ro: 'Proprietatea funciară fragmentată limitează extinderea sistemelor circulare de nutrienți.',
+        hy: 'Հողի սեփականության մասնատվածությունը սահմանափակում է սննդանյութերի շրջանաձեւ համակարգերի մասշտաբավորումը։'
+      },
       source: 'ScienceDirect, Classification of farmland ownership fragmentation, 2016'
     },
     {
-      text: 'Knowledge gaps among small farms on circular economy practices and returns.',
+      text: {
+        en: 'Knowledge gaps among small farms on circular economy practices and returns.',
+        uk: 'Прогалини у знаннях малих фермерських господарств щодо практик циркулярної економіки та їхньої віддачі.',
+        ro: 'Lacune de cunoștințe în rândul fermelor mici privind practicile de economie circulară și beneficiile acestora.',
+        hy: 'Փոքր տնտեսությունների շրջանում շրջանաձեւ տնտեսության գործելակերպերի եւ դրանց արդյունքների վերաբերյալ գիտելիքների պակաս։'
+      },
       source: 'Diversification of Agriculture and Circular Economy in EU Countries, 2023'
     },
     {
-      text: 'Complex regulation around organic waste, nutrient recovery and biogas.',
+      text: {
+        en: 'Complex regulation around organic waste, nutrient recovery and biogas.',
+        uk: 'Складне регулювання органічних відходів, відновлення поживних речовин і біогазу.',
+        ro: 'Reglementări complexe privind deșeurile organice, recuperarea nutrienților și biogazul.',
+        hy: 'Օրգանական թափոնների, սննդանյութերի վերականգնման եւ կենսագազի շուրջ բարդ կարգավորումներ։'
+      },
       source: 'EU Joint Research Centre / Wageningen University & Research, 2024'
     },
     {
-      text: 'Price competition from conventional non-circular producers.',
+      text: {
+        en: 'Price competition from conventional non-circular producers.',
+        uk: 'Цінова конкуренція з боку традиційних нециркулярних виробників.',
+        ro: 'Concurență de preț din partea producătorilor convenționali necirculari.',
+        hy: 'Գնային մրցակցություն ավանդական ոչ շրջանաձեւ արտադրողների կողմից։'
+      },
       source: 'Circle Economy, Circular Agroecology for a Resilient Europe, 2025'
     },
     {
-      text: 'Short-term subsidy structures can discourage longer-term circular economy investment.',
+      text: {
+        en: 'Short-term subsidy structures can discourage longer-term circular economy investment.',
+        uk: 'Короткострокові субсидійні механізми можуть зменшувати стимули до довгострокових інвестицій у циркулярну економіку.',
+        ro: 'Structurile de subvenții pe termen scurt pot descuraja investițiile pe termen lung în economia circulară.',
+        hy: 'Կարճաժամկետ սուբսիդավորման համակարգերը կարող են նվազեցնել երկարաժամկետ շրջանաձեւ ներդրումների խթանները։'
+      },
       source: 'IEEP, Supporting a Transition to Sustainable Farming Systems, 2024'
     }
   ],
   opportunities: [
     {
-      text: 'Growing consumer demand for organic, local and sustainably certified produce.',
+      text: {
+        en: 'Growing consumer demand for organic, local and sustainably certified produce.',
+        uk: 'Зростає споживчий попит на органічну, місцеву та стало сертифіковану продукцію.',
+        ro: 'Cererea consumatorilor pentru produse organice, locale și certificate sustenabil este în creștere.',
+        hy: 'Աճում է սպառողների պահանջարկը օրգանական, տեղական եւ կայուն հավաստագրված արտադրանքի նկատմամբ։'
+      },
       source: 'IMARC Group, 2024'
     },
     {
-      text: 'Biogas and biomass energy from agricultural residues create new income streams.',
+      text: {
+        en: 'Biogas and biomass energy from agricultural residues create new income streams.',
+        uk: 'Біогаз і енергія з біомаси з аграрних залишків створюють нові джерела доходу.',
+        ro: 'Biogazul și energia din biomasă obținute din reziduuri agricole creează noi fluxuri de venituri.',
+        hy: 'Գյուղատնտեսական մնացորդներից կենսագազն ու կենսազանգվածի էներգիան ստեղծում են եկամտի նոր աղբյուրներ։'
+      },
       source: 'European Biogas Association Statistical Report, 2025'
     },
     {
-      text: 'Precision agriculture technology can significantly reduce input costs.',
+      text: {
+        en: 'Precision agriculture technology can significantly reduce input costs.',
+        uk: 'Технології точного землеробства можуть суттєво зменшити витрати на ресурси.',
+        ro: 'Tehnologiile de agricultură de precizie pot reduce semnificativ costurile cu inputurile.',
+        hy: 'Ճշգրիտ գյուղատնտեսության տեխնոլոգիաները կարող են զգալիորեն նվազեցնել ներդրվող ռեսուրսների ծախսերը։'
+      },
       source: 'MDPI, Sustainability, Farm-level Economic and Environmental Benefits of Precision Agriculture Technology Adoption, 2025'
     },
     {
-      text: 'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
+      text: {
+        en: 'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
+        uk: 'Відновлення поживних речовин із гною та гноївки зменшує залежність від синтетичних добрив.',
+        ro: 'Recuperarea nutrienților din gunoi de grajd și dejecții lichide reduce dependența de îngrășăminte sintetice.',
+        hy: 'Գոմաղբից եւ հեղուկ գոմաղբից սննդանյութերի վերականգնումը նվազեցնում է կախվածությունը սինթետիկ պարարտանյութերից։'
+      },
       source: 'Wageningen University & Research, 2024'
     },
     {
-      text: 'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
+      text: {
+        en: 'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
+        uk: 'Агропродовольчі відходи можуть стати сировиною для біоматеріалів і біопластиків.',
+        ro: 'Deșeurile agroalimentare pot deveni materie primă pentru materiale bio-bazate și bioplastice.',
+        hy: 'Ագրոպարենային թափոնները կարող են դառնալ կենսահիմնված նյութերի եւ կենսապլաստիկների հումք։'
+      },
       source: 'Renewable Carbon News / Waste Framework Directive data, 2024'
     }
   ]

@@ -39,53 +39,113 @@ export const textilesBarriersSection = {
   // its source together here. If no source is available, leave `source: ''`.
   barriers: [
     {
-      text: 'High cost of fibre sorting, collection and recycling infrastructure.',
+      text: {
+        en: 'High cost of fibre sorting, collection and recycling infrastructure.',
+        uk: 'Висока вартість сортування волокон, збору та інфраструктури переробки.',
+        ro: 'Costuri ridicate pentru sortarea fibrelor, colectare și infrastructura de reciclare.',
+        hy: 'Մանրաթելերի տեսակավորման, հավաքման եւ վերամշակման ենթակառուցվածքի բարձր ծախսեր։'
+      },
       source: "EEA, Textile Waste Management in Europe's CE, 2024"
     },
     {
-      text: 'Blended fabrics such as polyester-cotton are difficult or impossible to recycle.',
+      text: {
+        en: 'Blended fabrics such as polyester-cotton are difficult or impossible to recycle.',
+        uk: 'Змішані тканини, такі як поліестер-бавовна, важко або неможливо переробити.',
+        ro: 'Țesăturile mixte, precum poliester-bumbac, sunt dificil sau imposibil de reciclat.',
+        hy: 'Խառը գործվածքները, օրինակ՝ պոլիեսթեր-բամբակ, դժվար կամ անհնար է վերամշակել։'
+      },
       source: 'European Commission JRC, Textiles and the Environment, 2022'
     },
     {
-      text: 'Consumer habits favour low-cost fast fashion over resale or repair.',
+      text: {
+        en: 'Consumer habits favour low-cost fast fashion over resale or repair.',
+        uk: 'Споживчі звички надають перевагу дешевій швидкій моді замість перепродажу чи ремонту.',
+        ro: 'Obiceiurile consumatorilor favorizează moda rapidă cu cost redus în detrimentul revânzării sau reparației.',
+        hy: 'Սպառողական սովորությունները նախընտրում են ցածրարժեք արագ նորաձեւությունը՝ վերավաճառքի կամ վերանորոգման փոխարեն։'
+      },
       source: 'Chatham House / circulareconomy.earth, 2024'
     },
     {
-      text: 'Limited supply-chain transparency hinders traceability claims.',
+      text: {
+        en: 'Limited supply-chain transparency hinders traceability claims.',
+        uk: 'Обмежена прозорість ланцюга постачання ускладнює заяви про простежуваність.',
+        ro: 'Transparența limitată a lanțului de aprovizionare îngreunează afirmațiile privind trasabilitatea.',
+        hy: 'Մատակարարման շղթայի սահմանափակ թափանցիկությունը խոչընդոտում է հետագծելիության հավաստումներին։'
+      },
       source: 'EU ESPR / DPP Regulatory Impact Assessment, EC, 2023'
     },
     {
-      text: 'Greenwashing risks erode consumer and investor trust.',
+      text: {
+        en: 'Greenwashing risks erode consumer and investor trust.',
+        uk: 'Ризики грінвошингу підривають довіру споживачів та інвесторів.',
+        ro: 'Riscurile de greenwashing erodează încrederea consumatorilor și investitorilor.',
+        hy: 'Կանաչ լվացման ռիսկերը նվազեցնում են սպառողների եւ ներդրողների վստահությունը։'
+      },
       source: 'EU Green Claims Directive Proposal, EC, 2023'
     },
     {
-      text: 'Small-batch production limits scale advantages in sustainable materials.',
+      text: {
+        en: 'Small-batch production limits scale advantages in sustainable materials.',
+        uk: 'Малосерійне виробництво обмежує переваги масштабу для сталих матеріалів.',
+        ro: 'Producția în loturi mici limitează avantajele de scară pentru materialele sustenabile.',
+        hy: 'Փոքր խմբաքանակներով արտադրությունը սահմանափակում է կայուն նյութերի մասշտաբի առավելությունները։'
+      },
       source: 'Farrukh et al., Sustainable Development, 2024'
     }
   ],
   opportunities: [
     {
-      text: 'The European resale apparel market is projected to grow from EUR 16 billion to EUR 26 billion by 2030.',
+      text: {
+        en: 'The European resale apparel market is projected to grow from EUR 16 billion to EUR 26 billion by 2030.',
+        uk: 'Європейський ринок перепродажу одягу, за прогнозами, зросте з 16 до 26 млрд євро до 2030 року.',
+        ro: 'Piața europeană de revânzare a îmbrăcămintei este proiectată să crească de la 16 miliarde EUR la 26 miliarde EUR până în 2030.',
+        hy: 'Եվրոպական հագուստի վերավաճառքի շուկան կանխատեսվում է, որ մինչեւ 2030 թվականը կաճի 16 միլիարդ եվրոյից մինչեւ 26 միլիարդ եվրո։'
+      },
       source: 'Circular Fashion Federation / KPMG, 2025'
     },
     {
-      text: 'EU extended producer responsibility schemes create demand for take-back and collection infrastructure.',
+      text: {
+        en: 'EU extended producer responsibility schemes create demand for take-back and collection infrastructure.',
+        uk: 'Схеми розширеної відповідальності виробника в ЄС створюють попит на інфраструктуру повернення та збору.',
+        ro: 'Schemele UE de răspundere extinsă a producătorului creează cerere pentru infrastructură de preluare și colectare.',
+        hy: 'ԵՄ արտադրողի ընդլայնված պատասխանատվության սխեմաները պահանջարկ են ստեղծում հետվերցման եւ հավաքման ենթակառուցվածքի համար։'
+      },
       source: 'EC Waste Framework Directive revision, 2023'
     },
     {
-      text: 'Digital Product Passports enable traceability and consumer engagement.',
+      text: {
+        en: 'Digital Product Passports enable traceability and consumer engagement.',
+        uk: 'Цифрові паспорти продуктів забезпечують простежуваність і залучення споживачів.',
+        ro: 'Pașapoartele digitale ale produselor permit trasabilitatea și implicarea consumatorilor.',
+        hy: 'Ապրանքների թվային անձնագրերը ապահովում են հետագծելիություն եւ սպառողների ներգրավում։'
+      },
       source: 'EU ESPR Regulation, 2024'
     },
     {
-      text: 'Repair cafes and rental or subscription models generate new revenue streams.',
+      text: {
+        en: 'Repair cafes and rental or subscription models generate new revenue streams.',
+        uk: 'Ремонтні кафе та моделі оренди або підписки створюють нові джерела доходу.',
+        ro: 'Cafenelele de reparații și modelele de închiriere sau abonament generează noi fluxuri de venituri.',
+        hy: 'Վերանորոգման սրճարաններն ու վարձակալության կամ բաժանորդագրության մոդելները ստեղծում են եկամտի նոր աղբյուրներ։'
+      },
       source: 'Circular Fashion Federation / KPMG, 2025'
     },
     {
-      text: 'Deadstock and surplus fabric upcycling can reduce input material costs.',
+      text: {
+        en: 'Deadstock and surplus fabric upcycling can reduce input material costs.',
+        uk: 'Апсайклінг залишків і надлишкових тканин може зменшити витрати на вхідні матеріали.',
+        ro: 'Upcyclingul stocurilor moarte și al surplusului de țesături poate reduce costurile materialelor de intrare.',
+        hy: 'Մնացորդային եւ ավելցուկային գործվածքների վերարժեւորումը կարող է նվազեցնել մուտքային նյութերի ծախսերը։'
+      },
       source: 'EEA Briefing - Destruction of Unsold Textiles, 2024'
     },
     {
-      text: 'Business-to-business (B2B) textile exchange platforms reduce waste and lower procurement spend.',
+      text: {
+        en: 'Business-to-business (B2B) textile exchange platforms reduce waste and lower procurement spend.',
+        uk: 'B2B-платформи обміну текстилем зменшують відходи та витрати на закупівлі.',
+        ro: 'Platformele business-to-business (B2B) de schimb textile reduc deșeurile și cheltuielile de achiziție.',
+        hy: 'Բիզնես-բիզնես (B2B) տեքստիլ փոխանակման հարթակները նվազեցնում են թափոնները եւ գնումների ծախսերը։'
+      },
       source: 'EU Textiles Strategy, EC, 2022'
     }
   ]

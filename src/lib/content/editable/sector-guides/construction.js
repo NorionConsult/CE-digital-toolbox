@@ -57,49 +57,104 @@ export const constructionBarriersSection = {
   // its source together here. If no source is available, leave `source: ''`.
   barriers: [
     {
-      text: 'Lack of material traceability data in existing building stock.',
+      text: {
+        en: 'Lack of material traceability data in existing building stock.',
+        uk: 'Відсутність даних про простежуваність матеріалів у наявному фонді будівель.',
+        ro: 'Lipsa datelor de trasabilitate a materialelor în stocul existent de clădiri.',
+        hy: 'Առկա շենքային ֆոնդում նյութերի հետագծելիության տվյալների պակաս։'
+      },
       source: 'Bellini & Bang, 2022 and Raghu et al., 2023'
     },
     {
-      text: 'Regulatory uncertainty around certification of recycled and salvaged materials.',
+      text: {
+        en: 'Regulatory uncertainty around certification of recycled and salvaged materials.',
+        uk: 'Регуляторна невизначеність щодо сертифікації перероблених і врятованих матеріалів.',
+        ro: 'Incertitudine de reglementare privind certificarea materialelor reciclate și recuperate.',
+        hy: 'Վերամշակված եւ վերականգնված նյութերի հավաստագրման շուրջ կարգավորող անորոշություն։'
+      },
       source: 'EU Construction and Demolition Waste Protocol and Guidelines'
     },
     {
-      text: 'Client and contractor resistance to longer design and planning timelines.',
+      text: {
+        en: 'Client and contractor resistance to longer design and planning timelines.',
+        uk: 'Опір клієнтів і підрядників довшим строкам проєктування та планування.',
+        ro: 'Rezistența clienților și contractorilor față de termene mai lungi de proiectare și planificare.',
+        hy: 'Հաճախորդների եւ կապալառուների դիմադրություն նախագծման եւ պլանավորման ավելի երկար ժամկետներին։'
+      },
       source: 'Barriers to Circular Procurement in Construction, 2024'
     },
     {
-      text: 'Higher upfront cost of deconstruction compared with conventional demolition.',
+      text: {
+        en: 'Higher upfront cost of deconstruction compared with conventional demolition.',
+        uk: 'Вищі початкові витрати на деконструкцію порівняно зі звичайним знесенням.',
+        ro: 'Costuri inițiale mai mari pentru deconstrucție comparativ cu demolarea convențională.',
+        hy: 'Ապակառուցման ավելի բարձր նախնական ծախսեր՝ սովորական քանդման համեմատ։'
+      },
       source: 'Dantata et al., Analysis of Cost and Duration of Deconstruction and Demolition in Massachusetts, 2024'
     },
     {
-      text: 'Fragmented supply chains hinder the development of secondary-material markets.',
+      text: {
+        en: 'Fragmented supply chains hinder the development of secondary-material markets.',
+        uk: 'Фрагментовані ланцюги постачання стримують розвиток ринків вторинних матеріалів.',
+        ro: 'Lanțurile de aprovizionare fragmentate împiedică dezvoltarea piețelor de materiale secundare.',
+        hy: 'Մասնատված մատակարարման շղթաները խոչընդոտում են երկրորդային նյութերի շուկաների զարգացմանը։'
+      },
       source: 'MDPI, Sustainability: Circular Economy of EU Construction and Demolition Waste, 2025'
     },
     {
-      text: 'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.',
+      text: {
+        en: 'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.',
+        uk: 'Прогалини в навичках проєктування для розбирання, адаптивного повторного використання та створення паспортів матеріалів.',
+        ro: 'Lacune de competențe în proiectarea pentru dezasamblare, reutilizare adaptivă și crearea pașapoartelor materialelor.',
+        hy: 'Հմտությունների պակաս՝ ապամոնտաժման, հարմարվողական կրկնօգտագործման եւ նյութերի անձնագրերի ստեղծման համար նախագծման ոլորտում։'
+      },
       source: 'Review of Barriers, Drivers and Stakeholders Towards CE in Construction, 2023'
     }
   ],
   opportunities: [
     {
-      text: 'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
+      text: {
+        en: 'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
+        uk: 'Цифрові паспорти будівель забезпечують відстеження матеріалів, планування повторного використання та збереження вартості активів.',
+        ro: 'Pașapoartele digitale ale clădirilor permit urmărirea materialelor, planificarea reutilizării și păstrarea valorii activelor.',
+        hy: 'Շենքերի թվային անձնագրերը հնարավորություն են տալիս հետեւել նյութերին, պլանավորել կրկնօգտագործումը եւ պահպանել ակտիվների արժեքը։'
+      },
       source: 'From Data Templates to Material Passports and Digital Product Passports, 2023'
     },
     {
-      text: 'Urban mining and material banks can reduce procurement costs and supply risk.',
+      text: {
+        en: 'Urban mining and material banks can reduce procurement costs and supply risk.',
+        uk: 'Міський видобуток і банки матеріалів можуть зменшити витрати на закупівлі та ризики постачання.',
+        ro: 'Mineritul urban și băncile de materiale pot reduce costurile de achiziție și riscurile de aprovizionare.',
+        hy: 'Քաղաքային հանքարդյունահանումը եւ նյութերի բանկերը կարող են նվազեցնել գնումների ծախսերը եւ մատակարարման ռիսկերը։'
+      },
       source: 'European.realestate, How Circular Economy is Reshaping European Construction, 2026'
     },
     {
-      text: 'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
+      text: {
+        en: 'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
+        uk: 'Критерії зелених державних закупівель дедалі більше підтримують циркулярні будівельні МСП.',
+        ro: 'Criteriile de achiziții publice verzi favorizează tot mai mult IMM-urile din construcții cu soluții circulare.',
+        hy: 'Կանաչ պետական գնումների չափանիշները ավելի ու ավելի են նպաստում շրջանաձեւ շինարարական ՓՄՁ-ներին։'
+      },
       source: 'ECCO, Green Public Procurement: A Catalyst for Competitiveness, 2025'
     },
     {
-      text: 'Modular and prefabricated construction supports disassembly and material reuse.',
+      text: {
+        en: 'Modular and prefabricated construction supports disassembly and material reuse.',
+        uk: 'Модульне та збірне будівництво підтримує розбирання і повторне використання матеріалів.',
+        ro: 'Construcțiile modulare și prefabricate sprijină dezasamblarea și reutilizarea materialelor.',
+        hy: 'Մոդուլային եւ նախապատրաստված շինարարությունը աջակցում է ապամոնտաժմանը եւ նյութերի կրկնօգտագործմանը։'
+      },
       source: 'Towards a Sustainable Circular Economy: Reusing Modular Building Components, 2024'
     },
     {
-      text: 'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.',
+      text: {
+        en: 'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.',
+        uk: 'Зростаючий ринок вторинних матеріалів створює можливості для повторно використаного каменю, деревини, цегли та скла.',
+        ro: 'Piața în creștere a materialelor secundare creează oportunități pentru piatră, lemn, cărămidă și sticlă recuperate.',
+        hy: 'Երկրորդային նյութերի աճող շուկան հնարավորություններ է ստեղծում վերականգնված քարի, փայտի, աղյուսի եւ ապակու համար։'
+      },
       source: 'Europe Green Building Materials Market, 2026'
     }
   ]

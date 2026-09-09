@@ -1,4 +1,7 @@
-import { stripLanguagePrefix, hasLanguagePrefix } from '$lib/translation-helper.js';
+import { base } from '$app/paths';
+import { stripLanguagePrefix, hasLanguagePrefix, getAppPathname } from '$lib/translation-helper.js';
+
+const routingBasePath = import.meta.env.PUBLIC_BASE_PATH || base;
 
 /**
  * Language-prefixed URLs, such as /uk/tools/, render the same route as their
@@ -7,9 +10,11 @@ import { stripLanguagePrefix, hasLanguagePrefix } from '$lib/translation-helper.
  * @param {{ url: URL }} event
  */
 export function reroute({ url }) {
-  if (!hasLanguagePrefix(url.pathname)) {
+  const appPathname = getAppPathname(url.pathname, routingBasePath);
+
+  if (!hasLanguagePrefix(appPathname)) {
     return;
   }
 
-  return stripLanguagePrefix(url.pathname);
+  return stripLanguagePrefix(appPathname);
 }

@@ -1,6 +1,3 @@
-// Compatibility alias: resource detail pages now live under /tools/[slug]/.
-export { entries } from '../../tools/[slug]/+page.js';
-
 import { redirectLegacyToolRoute } from '$lib/content/technical/legacy-tool-route-redirects.js';
 
 export function load({ url }) {
