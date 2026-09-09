@@ -9,7 +9,6 @@ import { base } from '$app/paths';
 export function staticAssetUrl(path) {
   return `${base}${path}`;
 }
-
 /**
  * Icon Park icons are stored locally in static/icons/icon-park/.
  *
