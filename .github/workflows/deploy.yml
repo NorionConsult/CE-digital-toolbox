@@ -44,6 +44,7 @@ jobs:
       - name: Build site
         run: npm run build
         env:
+          BASE_PATH: /CE-digital-toolbox
           PUBLIC_BASE_PATH: /CE-digital-toolbox
 
       - name: Upload GitHub Pages artifact

@@ -15,6 +15,9 @@ export function reroute({ url }) {
   if (!hasLanguagePrefix(appPathname)) {
     return;
   }
+  
+  const routedPathname = stripLanguagePrefix(appPathname);
+  const basePath = url.pathname.startsWith(routingBasePath) ? routingBasePath : '';
 
-  return stripLanguagePrefix(appPathname);
+  return `${basePath}${routedPathname}`;
 }

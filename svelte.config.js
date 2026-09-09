@@ -12,7 +12,7 @@ import adapter from '@sveltejs/adapter-static';
   - This GitHub project page: PUBLIC_BASE_PATH=/CE-digital-toolbox
   - Custom domain at root, for example https://tools.unido.org: BASE_PATH is empty
 */
-const base = process.env.BASE_PATH ?? '';
+const base = process.env.BASE_PATH ?? process.env.PUBLIC_BASE_PATH ?? '';
 const deployBase = process.env.BASE_PATH || process.env.PUBLIC_BASE_PATH || '';
 
 function handlePrerenderHttpError({ status, path, message }) {
@@ -36,7 +36,7 @@ const config = {
       // GitHub Pages serves the static files from the build folder.
       pages: 'build',
       assets: 'build',
-      fallback: undefined,
+      fallback: '404.html',
       precompress: false,
       strict: true
     }),
