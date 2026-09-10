@@ -10,6 +10,15 @@
   /** @type {'card' | 'hero' | 'inline'} */
   export let variant = 'card';
 
+  const labels = {
+    journeyPhases: {
+      en: 'Journey phases',
+      uk: 'Фази шляху',
+      ro: 'Fazele parcursului',
+      hy: 'Ճանապարհի փուլերը'
+    }
+  };
+
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: phaseLabelMap = new Map(
     journeyPhases.map((phase) => [translate(phase.title, 'en'), translate(phase.title, currentLanguage)])
@@ -25,7 +34,7 @@
   class="journey-phase-badges"
   class:journey-phase-badges-hero={variant === 'hero'}
   class:journey-phase-badges-inline={variant === 'inline'}
-  aria-label="Journey phases"
+  aria-label={translate(labels.journeyPhases, currentLanguage)}
 >
   {#each phases as phase}
     <span class="journey-phase-badge {getJourneyPhaseClass(phase)}">{getPhaseLabel(phase)}</span>

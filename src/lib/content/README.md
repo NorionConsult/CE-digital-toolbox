@@ -36,6 +36,8 @@ editable/tools/tool-catalogue.js      Tool cards, tool pages, taxonomy and tool 
 editable/cases/cases.js              Case cards, taxonomy and case pages
 
 technical/tool-catalogue-utils.js     Tool normalisation, filters and automatic button behaviour
+technical/case-catalogue-utils.js     Case normalisation and createCase helper
+technical/journey-phase-page-utils.js  Journey phase page assembly helper
 technical/phase-badge-colours.js      Journey phase badge colour matching
 technical/registries/journey-phases.js Ordered list of journey phase files
 technical/registries/sector-guides.js  Ordered list of sector guide files
@@ -190,7 +192,7 @@ Important editing notes:
 - Edit visible text, lists, image paths and captions freely.
 - Keep `slug`, `sectionId`, `id`, `resourceTag` and `colourClass` unchanged unless the website structure is also being updated.
 - A pathway card and its detailed section are connected when `sectionId` and `id` contain the same value.
-- `_shared.js` assembles shared journey phase data and normally should not be edited.
+- Shared page assembly is handled in `src/lib/content/technical/journey-phase-page-utils.js`. Editors should normally not need to edit it.
 - Page order is controlled in `src/lib/content/technical/registries/journey-phases.js`.
 
 ### Learn Phase Learning Resource Cards
@@ -280,6 +282,14 @@ src/lib/content/editable/cases/cases.js
 ```
 
 Copy one complete `createCase({ ... })` block and update its values. Give it a unique `id` and `slug`. The `slug` becomes its page URL.
+
+Technical case cleanup and filter normalisation are handled in:
+
+```text
+src/lib/content/technical/case-catalogue-utils.js
+```
+
+Editors should normally leave that file alone and only edit the case records in `cases.js`.
 
 Use arrays when a case has more than one country, sector or R strategy:
 

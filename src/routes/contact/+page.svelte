@@ -3,8 +3,17 @@
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import { contactPage } from '$lib/content/editable/pages/contact-page.js';
-  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
+  import { getLanguageFromPathname, localizeContent, translate } from '$lib/translation-helper.js';
   import { staticAssetUrl } from '$lib/utils/assets.js';
+
+  const labels = {
+    contactEmailAddresses: {
+      en: 'Contact email addresses',
+      uk: 'Контактні адреси електронної пошти',
+      ro: 'Adrese de e-mail de contact',
+      hy: 'Կոնտակտային էլ. փոստի հասցեներ'
+    }
+  };
 
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: currentContactPage = localizeContent(contactPage, currentLanguage);
@@ -84,7 +93,7 @@
         <p><InlineText text={currentContactPage.contactDetails} /></p>
       </div>
 
-      <div class="contact-email-grid" aria-label="Contact email addresses">
+      <div class="contact-email-grid" aria-label={translate(labels.contactEmailAddresses, currentLanguage)}>
         {#each currentContactPage.contactEmails as contact}
           <article class:featured-contact={contact.featured} class="contact-email-card">
             <h3>

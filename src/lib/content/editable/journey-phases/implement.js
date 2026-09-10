@@ -1,4 +1,4 @@
-import { defineJourneyPhasePage } from './_shared.js';
+import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils.js';
 
 /*
   PHASE 5: IMPLEMENT

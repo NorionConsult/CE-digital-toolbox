@@ -26,8 +26,21 @@
   */
   const labels = {
     phase: { en: 'Phase', uk: 'Фаза', ro: 'Faza', hy: 'Փուլ' },
+    diagramLabel: {
+      en: 'Interactive SME journey phase diagram',
+      uk: 'Інтерактивна діаграма шляху МСП',
+      ro: 'Diagramă interactivă a parcursului IMM',
+      hy: 'ՓՄՁ ուղու ինտերակտիվ դիագրամ'
+    },
     openDescriptionPrefix: { en: 'Open', uk: 'Відкрити', ro: 'Deschide', hy: 'Բացել' },
-    openDescriptionSuffix: { en: 'phase description', uk: 'опис фази', ro: 'descrierea fazei', hy: 'փուլի նկարագրությունը' }
+    openDescriptionSuffix: { en: 'phase description', uk: 'опис фази', ro: 'descrierea fazei', hy: 'փուլի նկարագրությունը' },
+    closeDescription: {
+      en: 'Close selected phase description',
+      uk: 'Закрити опис вибраної фази',
+      ro: 'Închide descrierea fazei selectate',
+      hy: 'Փակել ընտրված փուլի նկարագրությունը'
+    },
+    viewPhase: { en: 'View phase', uk: 'Переглянути фазу', ro: 'Vezi faza', hy: 'Դիտել փուլը' }
   };
 
   /** @type {JourneyPhaseStep[]} */
@@ -207,7 +220,7 @@
     <div
       class:has-popup={activePhase !== null}
       class="journey-diagram-chart"
-      aria-label={translate({ en: 'Interactive SME journey phase diagram' }, currentLanguage)}
+      aria-label={translate(labels.diagramLabel, currentLanguage)}
     >
       <div class="journey-steps">
         <div class="journey-line" aria-hidden="true"></div>
@@ -256,7 +269,7 @@
             <button
               type="button"
               class="journey-diagram-close"
-              aria-label={translate({ en: 'Close selected phase description' }, currentLanguage)}
+              aria-label={translate(labels.closeDescription, currentLanguage)}
               on:click={() => (activePhaseNumber = '')}
             >
               <span
@@ -272,7 +285,7 @@
 
             <div class="journey-diagram-actions">
               <a href="{base}{localizePath(activePhase.href, currentLanguage)}" class="journey-diagram-go-link">
-                {translate({ en: 'View phase' }, currentLanguage)}
+                {translate(labels.viewPhase, currentLanguage)}
                 <span
                   class="link-arrow"
                   style={`--icon-url: url("${iconParkUrl('arrow-right')}");`}

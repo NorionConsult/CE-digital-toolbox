@@ -6,12 +6,22 @@ export const footer = {
   logos: [
     {
       src: '/logos/EU-logo.png',
-      alt: 'European Union logo',
+      alt: {
+        en: 'European Union logo',
+        uk: 'Логотип Європейського Союзу',
+        ro: 'Sigla Uniunii Europene',
+        hy: 'Եվրոպական միության լոգո'
+      },
       width: '185px'
     },
     {
       src: '/logos/EU4Green-logo.png',
-      alt: 'EU4Green logo',
+      alt: {
+        en: 'EU4Green logo',
+        uk: 'Логотип EU4Green',
+        ro: 'Sigla EU4Green',
+        hy: 'EU4Green լոգո'
+      },
       width: '72px'
     }
   ],

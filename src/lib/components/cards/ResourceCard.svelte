@@ -16,7 +16,13 @@
     effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
     provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
-    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' }
+    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' },
+    resourceMetadata: {
+      en: 'Resource metadata',
+      uk: 'Метадані ресурсу',
+      ro: 'Metadatele resursei',
+      hy: 'Ռեսուրսի մետատվյալներ'
+    }
   };
 
   $: isCompact = variant === 'compact';
@@ -35,7 +41,7 @@
     <p class="resource-description">{currentResource.description}</p>
   </div>
 
-  <dl class="resource-meta" aria-label="Resource metadata">
+  <dl class="resource-meta" aria-label={translate(labels.resourceMetadata, currentLanguage)}>
     <div>
       <dt>{translate(labels.effort, currentLanguage)}</dt>
       <dd>{effortLabel}</dd>

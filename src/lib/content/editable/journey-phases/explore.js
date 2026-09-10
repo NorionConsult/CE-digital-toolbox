@@ -1,4 +1,4 @@
-import { defineJourneyPhasePage } from './_shared.js';
+import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils.js';
 
 /*
   PHASE 3: EXPLORE
@@ -57,9 +57,9 @@ const pathwaySection = {
         hy: 'Օգտագործեք կառուցվածքային գործիքներ՝ պարզելու համար, թե որ ռազմավարություններն են իրագործելի եւ համապատասխան ձեր բիզնեսի, ոլորտի եւ մատակարարման շղթայի համար։'
       },
       keyOutputs: [
-        'A shared visual map of relevant circular strategies',
-        'A clear picture of current circular activities',
-        'A long-list of feasible options for your business'
+        { en: 'A shared visual map of relevant circular strategies', uk: 'Спільна візуальна карта релевантних циркулярних стратегій', ro: 'O hartă vizuală comună a strategiilor circulare relevante', hy: 'Համապատասխան շրջանաձեւ ռազմավարությունների ընդհանուր տեսողական քարտեզ' },
+        { en: 'A clear picture of current circular activities', uk: 'Чітке уявлення про поточні циркулярні дії', ro: 'O imagine clară a activităților circulare actuale', hy: 'Ընթացիկ շրջանաձեւ գործողությունների հստակ պատկեր' },
+        { en: 'A long-list of feasible options for your business', uk: 'Довгий список здійсненних варіантів для вашого бізнесу', ro: 'O listă extinsă de opțiuni fezabile pentru afacerea ta', hy: 'Ձեր բիզնեսի համար իրագործելի տարբերակների երկար ցուցակ' }
       ]
     },
     {
@@ -73,8 +73,8 @@ const pathwaySection = {
         hy: 'Ուսումնասիրեք, թե ինչպես կարող է ձեր շրջանաձեւ լուծումը արժեք ստեղծել հաճախորդների եւ ձեր բիզնեսի համար։'
       },
       keyOutputs: [
-        'A clearer view of possible circular value models',
-        'A stronger concept for customer and business value creation'
+        { en: 'A clearer view of possible circular value models', uk: 'Чіткіше бачення можливих циркулярних моделей цінності', ro: 'O perspectivă mai clară asupra posibilelor modele circulare de valoare', hy: 'Հնարավոր շրջանաձեւ արժեքի մոդելների ավելի հստակ պատկեր' },
+        { en: 'A stronger concept for customer and business value creation', uk: 'Сильніша концепція створення цінності для клієнтів і бізнесу', ro: 'Un concept mai solid pentru crearea de valoare pentru clienți și afacere', hy: 'Հաճախորդների եւ բիզնեսի համար արժեք ստեղծելու ավելի ուժեղ հայեցակարգ' }
       ]
     },
     {
@@ -88,9 +88,9 @@ const pathwaySection = {
         hy: 'Խոստումնալից շրջանաձեւ ռազմավարությունները վերածեք ավելի հստակ լուծումների գաղափարների, որոնք կարելի է քննարկել, բարելավել եւ պատրաստել գնահատման համար։'
       },
       keyOutputs: [
-        'Bundled ideas and stronger solution concepts',
-        'A clearer view of which solutions fit your business',
-        'Initial concepts ready to evaluate in the next phase'
+        { en: 'Bundled ideas and stronger solution concepts', uk: 'Згруповані ідеї та сильніші концепції рішень', ro: 'Idei grupate și concepte de soluții mai solide', hy: 'Միավորված գաղափարներ եւ ավելի ուժեղ լուծումների հայեցակարգեր' },
+        { en: 'A clearer view of which solutions fit your business', uk: 'Чіткіше бачення того, які рішення підходять вашому бізнесу', ro: 'O perspectivă mai clară asupra soluțiilor care se potrivesc afacerii tale', hy: 'Ավելի հստակ պատկեր, թե որ լուծումներն են համապատասխանում ձեր բիզնեսին' },
+        { en: 'Initial concepts ready to evaluate in the next phase', uk: 'Початкові концепції, готові до оцінювання в наступній фазі', ro: 'Concepte inițiale pregătite pentru evaluare în faza următoare', hy: 'Նախնական հայեցակարգեր, որոնք պատրաստ են գնահատման հաջորդ փուլում' }
       ]
     }
   ]
@@ -146,7 +146,12 @@ const identifyOptionsSection = {
   */
   circularStrategiesWorkshop: {
     subtitle: { en: 'Explore possible circular strategies', uk: 'Дослідіть можливі циркулярні стратегії', ro: 'Explorează posibile strategii circulare', hy: 'Ուսումնասիրեք հնարավոր շրջանաձեւ ռազմավարությունները' },
-    title: 'Circular Strategies Wheel Workshop',
+    title: {
+      en: 'Circular Strategies Wheel Workshop',
+      uk: 'Воркшоп Circular Strategies Wheel',
+      ro: 'Atelierul Circular Strategies Wheel',
+      hy: 'Circular Strategies Wheel աշխատարան'
+    },
     icon: 'recycling',
     introduction: {
       en: "The Circular Strategies Wheel gives your team a shared visual overview of circular strategies across the three phases of a product or service's life: start of life, product life and end of life. It turns circularity from an abstract idea into something tangible and actionable, helping your team connect relevant strategies to your business context. By working through it together, you will identify key opportunities, areas of interest and practical barriers, creating a grounded, team-owned starting point for building your circular business model.",
@@ -228,8 +233,18 @@ const shapeValueModelSection = {
   title: { en: 'Shape the Value Model', uk: 'Сформуйте модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորեք արժեքի մոդելը' },
   resourceTag: 'explore:shape-value-model',
   paragraphs: [
-    'A circular solution also needs a clear value model. Use this section to explore how your solution could create value for customers, reduce waste or costs, strengthen relationships and support your business goals.',
-    'These circular value models can help you think through how a concept could work commercially before you evaluate it in the next phase.'
+    {
+      en: 'A circular solution also needs a clear value model. Use this section to explore how your solution could create value for customers, reduce waste or costs, strengthen relationships and support your business goals.',
+      uk: 'Циркулярне рішення також потребує чіткої моделі цінності. Використовуйте цей розділ, щоб дослідити, як ваше рішення може створювати цінність для клієнтів, зменшувати відходи або витрати, зміцнювати відносини та підтримувати бізнес-цілі.',
+      ro: 'O soluție circulară are nevoie și de un model de valoare clar. Folosește această secțiune pentru a explora cum soluția ta poate crea valoare pentru clienți, reduce deșeurile sau costurile, consolida relațiile și sprijini obiectivele afacerii.',
+      hy: 'Շրջանաձեւ լուծումը նույնպես պետք է ունենա հստակ արժեքի մոդել։ Օգտագործեք այս բաժինը՝ ուսումնասիրելու համար, թե ինչպես կարող է ձեր լուծումը արժեք ստեղծել հաճախորդների համար, նվազեցնել թափոնները կամ ծախսերը, ամրապնդել հարաբերությունները եւ աջակցել բիզնես նպատակներին։'
+    },
+    {
+      en: 'These circular value models can help you think through how a concept could work commercially before you evaluate it in the next phase.',
+      uk: 'Ці циркулярні моделі цінності допоможуть продумати, як концепція може працювати комерційно, перш ніж ви оціните її в наступній фазі.',
+      ro: 'Aceste modele circulare de valoare te pot ajuta să analizezi cum ar putea funcționa comercial un concept înainte de a-l evalua în faza următoare.',
+      hy: 'Այս շրջանաձեւ արժեքի մոդելները կօգնեն մտածել, թե ինչպես կարող է հայեցակարգը աշխատել առեւտրային առումով՝ նախքան հաջորդ փուլում դրա գնահատումը։'
+    }
   ],
   /*
     CIRCULAR VALUE MODEL CARDS
@@ -237,43 +252,67 @@ const shapeValueModelSection = {
     below. Icons use local Icon Park SVG files from static/icons/icon-park/.
   */
   businessModelsTitle: { en: 'Circular value models', uk: 'Циркулярні моделі цінності', ro: 'Modele circulare de valoare', hy: 'Շրջանաձեւ արժեքի մոդելներ' },
-  businessModelsIntro:
-    "The circular options below detail different strategies for making your business more circular. Each option below represents a proven way to create commercial value while keeping products, materials or resources in use for longer. || As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well.",
+  businessModelsIntro: {
+    en: "The circular options below detail different strategies for making your business more circular. Each option below represents a proven way to create commercial value while keeping products, materials or resources in use for longer. || As an SME, you do not need to adopt all five; most businesses start by introducing just one or two that fit naturally with what they already do well.",
+    uk: 'Циркулярні варіанти нижче описують різні стратегії, які можуть зробити ваш бізнес більш циркулярним. Кожен варіант показує перевірений спосіб створювати комерційну цінність, водночас довше утримуючи продукти, матеріали або ресурси у використанні. || Як МСП, вам не потрібно впроваджувати всі п’ять моделей. Більшість бізнесів починає з однієї або двох, які природно поєднуються з тим, що вони вже добре роблять.',
+    ro: 'Opțiunile circulare de mai jos descriu strategii diferite pentru a face afacerea mai circulară. Fiecare opțiune reprezintă o modalitate testată de a crea valoare comercială, menținând în același timp produsele, materialele sau resursele în uz mai mult timp. || Ca IMM, nu trebuie să adopți toate cele cinci modele. Cele mai multe afaceri încep cu unul sau două care se potrivesc firesc cu ceea ce fac deja bine.',
+    hy: 'Ստորեւ ներկայացված շրջանաձեւ տարբերակները նկարագրում են ձեր բիզնեսը ավելի շրջանաձեւ դարձնելու տարբեր ռազմավարություններ։ Յուրաքանչյուր տարբերակ ներկայացնում է առեւտրային արժեք ստեղծելու փորձված եղանակ՝ միաժամանակ արտադրանքը, նյութերը կամ ռեսուրսները ավելի երկար պահելով օգտագործման մեջ։ || Որպես ՓՄՁ՝ պետք չէ կիրառել բոլոր հինգը։ Բիզնեսների մեծ մասը սկսում է մեկ կամ երկու մոդելից, որոնք բնականորեն համապատասխանում են իրենց արդեն լավ արածին։'
+  },
   businessModelCards: [
     {
-      title: 'Product as a Service (PaaS)',
+      title: { en: 'Product as a Service (PaaS)', uk: 'Продукт як послуга (PaaS)', ro: 'Produs ca serviciu (PaaS)', hy: 'Ապրանքը որպես ծառայություն (PaaS)' },
       icon: 'delivery',
-      text:
-        "Instead of selling a product, you sell its function: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable.",
-      example: 'Leasing industrial machinery with full maintenance included.'
+      text: {
+        en: "Instead of selling a product, you sell its function: the customer pays to use it, not to own it. The customer typically pays based on usage or time under a short- or long-term contract, while the provider keeps ownership of the product throughout its life. This creates a strong incentive to design products that are durable, easy to maintain and repair, and able to stay in use for longer. The model can also create a closer, ongoing relationship with customers, since the provider is often responsible for maintenance and servicing throughout the contract. For the business, revenue becomes recurring rather than one-off, which can make income more predictable.",
+        uk: 'Замість продажу продукту ви продаєте його функцію: клієнт платить за користування, а не за володіння. Зазвичай клієнт платить залежно від використання або часу за коротко- чи довгостроковим договором, а постачальник зберігає право власності на продукт протягом усього строку його життя. Це створює сильний стимул проєктувати продукти довговічними, простими в обслуговуванні та ремонті й здатними довше залишатися у використанні. Модель також може створити ближчі й постійні відносини з клієнтами, оскільки постачальник часто відповідає за технічне обслуговування протягом договору. Для бізнесу дохід стає повторюваним, а не одноразовим, що може зробити його більш передбачуваним.',
+        ro: 'În loc să vinzi un produs, vinzi funcția lui: clientul plătește pentru utilizare, nu pentru proprietate. De obicei, clientul plătește în funcție de utilizare sau timp, printr-un contract pe termen scurt sau lung, iar furnizorul păstrează proprietatea asupra produsului pe toată durata de viață. Acest lucru creează un stimulent puternic pentru proiectarea unor produse durabile, ușor de întreținut și reparat, care pot rămâne în uz mai mult timp. Modelul poate crea și o relație mai apropiată și continuă cu clienții, deoarece furnizorul este adesea responsabil de întreținere și service pe durata contractului. Pentru afacere, veniturile devin recurente, nu punctuale, ceea ce le poate face mai previzibile.',
+        hy: 'Ապրանք վաճառելու փոխարեն դուք վաճառում եք դրա գործառույթը․ հաճախորդը վճարում է օգտագործման, ոչ թե սեփականության համար։ Սովորաբար հաճախորդը վճարում է օգտագործման կամ ժամանակի հիման վրա՝ կարճաժամկետ կամ երկարաժամկետ պայմանագրով, իսկ մատակարարը պահպանում է արտադրանքի սեփականությունը դրա կյանքի ողջ ընթացքում։ Սա ուժեղ խթան է ստեղծում նախագծելու արտադրանք, որը դիմացկուն է, հեշտ է սպասարկել եւ վերանորոգել, եւ կարող է ավելի երկար մնալ օգտագործման մեջ։ Մոդելը կարող է նաեւ ստեղծել հաճախորդների հետ ավելի մոտ եւ շարունակական հարաբերություն, քանի որ մատակարարը հաճախ պատասխանատու է սպասարկման համար պայմանագրի ընթացքում։ Բիզնեսի համար եկամուտը դառնում է կրկնվող, ոչ թե մեկանգամյա, ինչը կարող է այն դարձնել ավելի կանխատեսելի։'
+      },
+      example: { en: 'Leasing industrial machinery with full maintenance included.', uk: 'Промислове обладнання в лізинг із повним технічним обслуговуванням.', ro: 'Leasing pentru utilaje industriale cu întreținere completă inclusă.', hy: 'Արդյունաբերական սարքավորումների լիզինգ՝ ամբողջական սպասարկմամբ։' }
     },
     {
-      title: 'Resource Recovery',
+      title: { en: 'Resource Recovery', uk: 'Відновлення ресурсів', ro: 'Recuperarea resurselor', hy: 'Ռեսուրսների վերականգնում' },
       icon: 'recycling-pool',
-      text:
-        "Instead of discarding resources on your waste streams (e.g. biproducts, residues), you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. It often requires investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you would otherwise throw away.",
-      example: 'Using production off-cuts to create secondary products.'
+      text: {
+        en: "Instead of discarding resources on your waste streams (e.g. by-products, residues), you treat it as a resource in its own right; something you can sell, reuse or trade with other businesses. This works best when you have a reasonably steady volume and quality of material flowing through your operations, so recovery is worth the effort. It often requires investment in sorting, processing or storage, and may involve building relationships with other businesses that can use what you would otherwise throw away.",
+        uk: 'Замість того щоб викидати ресурси у потоках відходів, наприклад побічні продукти або залишки, ви розглядаєте їх як самостійний ресурс: те, що можна продати, повторно використати або обміняти з іншими бізнесами. Це найкраще працює, коли через ваші операції проходить достатньо стабільний обсяг і якість матеріалу, щоб відновлення було виправданим. Часто потрібні інвестиції в сортування, обробку або зберігання, а також налагодження відносин з іншими бізнесами, які можуть використати те, що інакше було б викинуто.',
+        ro: 'În loc să elimini resursele din fluxurile de deșeuri, de exemplu subproduse sau reziduuri, le tratezi ca resurse în sine: ceva ce poți vinde, reutiliza sau schimba cu alte afaceri. Acest model funcționează cel mai bine atunci când ai un volum și o calitate relativ stabile ale materialelor care trec prin operațiunile tale, astfel încât recuperarea să merite efortul. Deseori necesită investiții în sortare, procesare sau depozitare și poate implica relații cu alte afaceri care pot folosi ceea ce altfel ai arunca.',
+        hy: 'Թափոնների հոսքերում առկա ռեսուրսները, օրինակ՝ կողմնակի արտադրանքները կամ մնացորդները, դեն նետելու փոխարեն դրանք դիտարկում եք որպես առանձին ռեսուրս՝ բան, որը կարող եք վաճառել, կրկնօգտագործել կամ փոխանակել այլ բիզնեսների հետ։ Սա լավագույնս աշխատում է, երբ ձեր գործողությունների միջով անցնող նյութի ծավալը եւ որակը բավականաչափ կայուն են, որպեսզի վերականգնումը արժենա ջանքը։ Այն հաճախ պահանջում է ներդրում տեսակավորման, մշակման կամ պահեստավորման մեջ եւ կարող է ներառել հարաբերությունների ստեղծում այլ բիզնեսների հետ, որոնք կարող են օգտագործել այն, ինչ դուք այլապես կնետեիք։'
+      },
+      example: { en: 'Using production off-cuts to create secondary products.', uk: 'Використання виробничих обрізків для створення вторинних продуктів.', ro: 'Folosirea resturilor de producție pentru a crea produse secundare.', hy: 'Արտադրական կտրվածքների օգտագործում երկրորդային արտադրանք ստեղծելու համար։' }
     },
     {
-      title: 'Extended Product Life',
+      title: { en: 'Extended Product Life', uk: 'Подовження строку служби продукту', ro: 'Durată de viață extinsă a produsului', hy: 'Արտադրանքի կյանքի երկարացում' },
       icon: 'history',
-      text:
-        'Instead of a product being sold once and eventually discarded, you keep it in use for as long as possible through repair, upgrades and resale. This means thinking about the whole lifecycle of a product, not just the point of sale. Design decisions made early on, such as modularity, ease of disassembly and standard components, directly determine how easy repair and refurbishment will be later.',
-      example: 'Offering a refurbishment programme for electronics.'
+      text: {
+        en: 'Instead of a product being sold once and eventually discarded, you keep it in use for as long as possible through repair, upgrades and resale. This means thinking about the whole lifecycle of a product, not just the point of sale. Design decisions made early on, such as modularity, ease of disassembly and standard components, directly determine how easy repair and refurbishment will be later.',
+        uk: 'Замість того щоб продати продукт один раз і зрештою його викинути, ви утримуєте його у використанні якомога довше через ремонт, оновлення та перепродаж. Це означає думати про весь життєвий цикл продукту, а не лише про момент продажу. Ранні дизайнерські рішення, такі як модульність, легкість розбирання та стандартні компоненти, безпосередньо визначають, наскільки простими будуть ремонт і відновлення пізніше.',
+        ro: 'În loc ca un produs să fie vândut o singură dată și apoi eliminat, îl menții în uz cât mai mult timp posibil prin reparații, actualizări și revânzare. Aceasta înseamnă să te gândești la întregul ciclu de viață al produsului, nu doar la momentul vânzării. Deciziile de design luate devreme, precum modularitatea, ușurința de dezasamblare și componentele standard, determină direct cât de ușoare vor fi ulterior reparația și recondiționarea.',
+        hy: 'Ապրանքը մեկ անգամ վաճառելու եւ վերջում դեն նետելու փոխարեն այն հնարավորինս երկար պահում եք օգտագործման մեջ՝ վերանորոգման, արդիականացման եւ վերավաճառքի միջոցով։ Սա նշանակում է մտածել արտադրանքի ամբողջ կյանքի ցիկլի մասին, ոչ միայն վաճառքի պահին։ Վաղ ընդունված դիզայնի որոշումները, օրինակ՝ մոդուլայնությունը, ապամոնտաժման հեշտությունը եւ ստանդարտ բաղադրիչները, ուղղակիորեն որոշում են, թե որքան հեշտ կլինի հետագայում վերանորոգումը եւ վերականգնումը։'
+      },
+      example: { en: 'Offering a refurbishment programme for electronics.', uk: 'Програма відновлення електроніки.', ro: 'Oferirea unui program de recondiționare pentru electronice.', hy: 'Էլեկտրոնիկայի վերականգնման ծրագրի առաջարկ։' }
     },
     {
-      title: 'Sharing Platforms',
+      title: { en: 'Sharing Platforms', uk: 'Платформи спільного використання', ro: 'Platforme de partajare', hy: 'Համօգտագործման հարթակներ' },
       icon: 'share-one',
-      text:
-        'Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that many products sit unused for most of their life. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has environmental benefits and can also be more cost-effective for users than ownership.',
-      example: 'Tool-sharing service for construction small-medium enterprises (SMEs) in a industrial park.'
+      text: {
+        en: 'Instead of each customer owning their own product, several users share access to the same one. This addresses idle capacity; the fact that many products sit unused for most of their life. By pooling access across multiple users, you can deliver the same level of use from fewer physical assets, which has environmental benefits and can also be more cost-effective for users than ownership.',
+        uk: 'Замість того щоб кожен клієнт володів власним продуктом, кілька користувачів спільно отримують доступ до одного й того самого продукту. Це вирішує проблему простою: багато продуктів більшу частину свого життя залишаються невикористаними. Об’єднуючи доступ для кількох користувачів, можна забезпечити той самий рівень використання з меншою кількістю фізичних активів, що має екологічні переваги й може бути економічно вигіднішим для користувачів, ніж володіння.',
+        ro: 'În loc ca fiecare client să dețină propriul produs, mai mulți utilizatori împart accesul la același produs. Acest lucru abordează capacitatea neutilizată: faptul că multe produse stau nefolosite cea mai mare parte a vieții lor. Prin punerea accesului în comun pentru mai mulți utilizatori, poți livra același nivel de utilizare cu mai puține active fizice, ceea ce are beneficii de mediu și poate fi mai rentabil pentru utilizatori decât proprietatea.',
+        hy: 'Յուրաքանչյուր հաճախորդի կողմից սեփական արտադրանք ունենալու փոխարեն մի քանի օգտատերեր կիսում են նույն արտադրանքի հասանելիությունը։ Սա լուծում է չօգտագործվող կարողության խնդիրը․ շատ ապրանքներ իրենց կյանքի մեծ մասում չեն օգտագործվում։ Մի քանի օգտատերերի համար հասանելիությունը միավորելով՝ կարող եք նույն օգտագործման մակարդակը ապահովել ավելի քիչ ֆիզիկական ակտիվներով, ինչը ունի բնապահպանական օգուտներ եւ օգտատերերի համար կարող է ավելի ծախսարդյունավետ լինել, քան սեփականությունը։'
+      },
+      example: { en: 'Tool-sharing service for construction small-medium enterprises (SMEs) in an industrial park.', uk: 'Сервіс спільного користування інструментами для будівельних МСП в індустріальному парку.', ro: 'Serviciu de partajare a uneltelor pentru IMM-uri din construcții într-un parc industrial.', hy: 'Գործիքների համօգտագործման ծառայություն շինարարական ՓՄՁ-ների համար արդյունաբերական պարկում։' }
     },
     {
-      title: 'Circular Supply Chains',
+      title: { en: 'Circular Supply Chains', uk: 'Циркулярні ланцюги постачання', ro: 'Lanțuri de aprovizionare circulare', hy: 'Շրջանաձեւ մատակարարման շղթաներ' },
       icon: 'link-one',
-      text:
-        'Instead of focusing only on what happens to your product after it is sold, you focus on what goes into it in the first place by sourcing recycled or secondary materials rather than virgin ones. This typically requires closer collaboration with suppliers, because recycled or secondary materials often vary more in quality or supply than virgin materials. Over time, it can reduce exposure to virgin material price volatility and strengthen supplier relationships.',
-      example: 'Switching to recycled feedstock and partnering with a local recycler.'
+      text: {
+        en: 'Instead of focusing only on what happens to your product after it is sold, you focus on what goes into it in the first place by sourcing recycled or secondary materials rather than virgin ones. This typically requires closer collaboration with suppliers, because recycled or secondary materials often vary more in quality or supply than virgin materials. Over time, it can reduce exposure to virgin material price volatility and strengthen supplier relationships.',
+        uk: 'Замість того щоб зосереджуватися лише на тому, що відбувається з продуктом після продажу, ви звертаєте увагу на те, що входить у нього з самого початку, використовуючи перероблені або вторинні матеріали замість первинних. Зазвичай це потребує тіснішої співпраці з постачальниками, оскільки перероблені або вторинні матеріали часто більше відрізняються за якістю чи доступністю, ніж первинні. З часом це може зменшити залежність від коливань цін на первинні матеріали та зміцнити відносини з постачальниками.',
+        ro: 'În loc să te concentrezi doar pe ce se întâmplă cu produsul după vânzare, te concentrezi pe ce intră în el de la început, aprovizionându-te cu materiale reciclate sau secundare în locul celor virgine. De obicei, acest lucru necesită o colaborare mai strânsă cu furnizorii, deoarece materialele reciclate sau secundare pot varia mai mult ca nivel de calitate sau disponibilitate decât materialele virgine. În timp, poate reduce expunerea la volatilitatea prețurilor materialelor virgine și poate întări relațiile cu furnizorii.',
+        hy: 'Միայն այն բանի վրա կենտրոնանալու փոխարեն, թե ինչ է տեղի ունենում ձեր արտադրանքի հետ վաճառքից հետո, դուք կենտրոնանում եք այն բանի վրա, թե ինչ է սկզբից մտնում դրա մեջ՝ առաջնային նյութերի փոխարեն ձեռք բերելով վերամշակված կամ երկրորդային նյութեր։ Սա սովորաբար պահանջում է ավելի սերտ համագործակցություն մատակարարների հետ, քանի որ վերամշակված կամ երկրորդային նյութերը հաճախ ավելի շատ են տարբերվում որակով կամ մատակարարմամբ, քան առաջնային նյութերը։ Ժամանակի ընթացքում դա կարող է նվազեցնել առաջնային նյութերի գների տատանումների ազդեցությունը եւ ամրապնդել մատակարարների հետ հարաբերությունները։'
+      },
+      example: { en: 'Switching to recycled feedstock and partnering with a local recycler.', uk: 'Перехід на перероблену сировину та партнерство з місцевим переробником.', ro: 'Trecerea la materii prime reciclate și parteneriatul cu un reciclator local.', hy: 'Վերամշակված հումքի անցում եւ համագործակցություն տեղական վերամշակողի հետ։' }
     }
   ],
   /*
@@ -281,8 +320,12 @@ const shapeValueModelSection = {
     This block appears after the accordion cards and before the relevant tools.
   */
   afterBusinessModelsTitle: { en: 'Stakeholder and value chain perspectives', uk: 'Перспективи зацікавлених сторін і ланцюга цінності', ro: 'Perspectivele părților interesate și ale lanțului valoric', hy: 'Շահագրգիռ կողմերի եւ արժեքի շղթայի տեսանկյուններ' },
-  afterBusinessModelsText:
-    'The core of any marketable circular business is the value proposition for users, customers and partners. In addition to exploring circular value models, it is important to understand how stakeholders experience the value offered by a new model. To build this understanding, it is relevant to map the stakeholders involved and review the value chains as they work today. The relevant tools below can help you do this, including tools for value chain mapping and user interviews, so your exploration is guided by the people and relationships that matter most.'
+  afterBusinessModelsText: {
+    en: 'The core of any marketable circular business is the value proposition for users, customers and partners. In addition to exploring circular value models, it is important to understand how stakeholders experience the value offered by a new model. To build this understanding, it is relevant to map the stakeholders involved and review the value chains as they work today. The relevant tools below can help you do this, including tools for value chain mapping and user interviews, so your exploration is guided by the people and relationships that matter most.',
+    uk: 'Основою будь-якого ринкового циркулярного бізнесу є ціннісна пропозиція для користувачів, клієнтів і партнерів. Окрім вивчення циркулярних моделей цінності, важливо зрозуміти, як зацікавлені сторони сприймають цінність, яку пропонує нова модель. Щоб сформувати це розуміння, варто закартувати залучені зацікавлені сторони та переглянути, як ланцюги цінності працюють сьогодні. Інструменти нижче допоможуть це зробити, зокрема через картування ланцюга цінності та інтерв’ю з користувачами, щоб ваше дослідження спиралося на людей і відносини, які мають найбільше значення.',
+    ro: 'Nucleul oricărei afaceri circulare viabile pe piață este propunerea de valoare pentru utilizatori, clienți și parteneri. Pe lângă explorarea modelelor circulare de valoare, este important să înțelegi cum experimentează părțile interesate valoarea oferită de un model nou. Pentru a construi această înțelegere, este util să cartografiezi părțile interesate implicate și să revizuiești lanțurile valorice așa cum funcționează astăzi. Instrumentele relevante de mai jos te pot ajuta, inclusiv prin cartografierea lanțului valoric și interviuri cu utilizatorii, astfel încât explorarea ta să fie ghidată de oamenii și relațiile care contează cel mai mult.',
+    hy: 'Ցանկացած շուկայում կիրառելի շրջանաձեւ բիզնեսի հիմքում օգտատերերի, հաճախորդների եւ գործընկերների համար արժեքային առաջարկն է։ Շրջանաձեւ արժեքի մոդելները ուսումնասիրելուց բացի կարեւոր է հասկանալ, թե ինչպես են շահագրգիռ կողմերը ընկալում նոր մոդելի առաջարկած արժեքը։ Այս ըմբռնումը կառուցելու համար օգտակար է քարտեզագրել ներգրավված շահագրգիռ կողմերին եւ վերանայել, թե ինչպես են արժեքի շղթաները այսօր աշխատում։ Ստորեւ ներկայացված համապատասխան գործիքները կարող են օգնել այս հարցում, այդ թվում՝ արժեքի շղթայի քարտեզագրման եւ օգտատերերի հարցազրույցների միջոցով, որպեսզի ձեր ուսումնասիրությունը առաջնորդվի ամենակարեւոր մարդկանցով եւ հարաբերություններով։'
+  }
 };
 
 /* 6. DETAILED SECTION 3 */
@@ -291,7 +334,12 @@ const developSolutionsSection = {
   title: { en: 'Develop Solutions', uk: 'Розробіть рішення', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
   resourceTag: 'explore:develop-solutions',
   paragraphs: [
-    'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and evaluated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.'
+    {
+      en: 'Once you have identified some relevant circular strategies, mapped the stakeholders or value chains, the next step is to ask: What could these circular strategies look like in practice in our business? || This is where you stop thinking in abstract terms such as repair, reuse or reduce and turn these into actual ideas. Through the process of exploration, it is relevant to innovate and think new ideas in order to change the business-as-usual ways of doing things. || Combine, refine and shape early ideas into concepts that can be reviewed and evaluated in the next phase, using the relevant tools below. At this stage it is also relevant to stay open and explore a wide range of options, even if they seem far-fetched or challenging. The goal is to generate a list of ideas that can be narrowed down later based on feasibility, impact and alignment with your business goals.',
+      uk: 'Після того як ви визначили релевантні циркулярні стратегії та закартували зацікавлені сторони або ланцюги цінності, наступне запитання таке: як ці циркулярні стратегії можуть виглядати на практиці в нашому бізнесі? || Саме тут ви перестаєте мислити абстрактними словами, такими як ремонт, повторне використання чи скорочення, і перетворюєте їх на реальні ідеї. У процесі дослідження важливо інновувати й пропонувати нові ідеї, щоб змінювати звичні способи роботи. || Поєднуйте, уточнюйте й формулюйте ранні ідеї у концепції, які можна переглянути й оцінити в наступній фазі, використовуючи інструменти нижче. На цьому етапі також важливо залишатися відкритими й досліджувати широкий спектр варіантів, навіть якщо вони здаються сміливими або складними. Мета - створити список ідей, який пізніше можна звузити за здійсненністю, впливом і відповідністю бізнес-цілям.',
+      ro: 'După ce ai identificat câteva strategii circulare relevante și ai cartografiat părțile interesate sau lanțurile valorice, următorul pas este să întrebi: cum ar putea arăta aceste strategii circulare în practică în afacerea noastră? || Aici încetezi să gândești în termeni abstracți precum reparare, reutilizare sau reducere și îi transformi în idei concrete. În procesul de explorare, este important să inovezi și să gândești idei noi pentru a schimba modul obișnuit de lucru. || Combină, rafinează și modelează ideile inițiale în concepte care pot fi analizate și evaluate în faza următoare, folosind instrumentele relevante de mai jos. În această etapă este important să rămâi deschis și să explorezi o gamă largă de opțiuni, chiar dacă par îndrăznețe sau dificile. Scopul este să generezi o listă de idei care poate fi restrânsă ulterior pe baza fezabilității, impactului și alinierii cu obiectivele afacerii.',
+      hy: 'Երբ բացահայտել եք որոշ համապատասխան շրջանաձեւ ռազմավարություններ եւ քարտեզագրել շահագրգիռ կողմերին կամ արժեքի շղթաները, հաջորդ քայլն է հարցնել՝ ինչպիսի՞ն կարող են լինել այս շրջանաձեւ ռազմավարությունները գործնականում մեր բիզնեսում։ || Այստեղ դուք դադարում եք մտածել վերացական հասկացություններով, ինչպիսիք են վերանորոգումը, կրկնօգտագործումը կամ նվազեցումը, եւ դրանք վերածում եք իրական գաղափարների։ Ուսումնասիրության ընթացքում կարեւոր է նորարարել եւ մտածել նոր գաղափարներ՝ սովորական աշխատանքային ձեւերը փոխելու համար։ || Միավորեք, հստակեցրեք եւ ձեւավորեք վաղ գաղափարները հայեցակարգերի, որոնք կարելի է վերանայել եւ գնահատել հաջորդ փուլում՝ օգտագործելով ստորեւ ներկայացված համապատասխան գործիքները։ Այս փուլում նաեւ կարեւոր է բաց մնալ եւ ուսումնասիրել տարբերակների լայն շրջանակ, նույնիսկ եթե դրանք թվում են հեռու կամ բարդ։ Նպատակը գաղափարների ցանկ ստեղծելն է, որը հետագայում կարելի է նեղացնել՝ ըստ իրագործելիության, ազդեցության եւ բիզնես նպատակների հետ համապատասխանության։'
+    }
   ],
   /*
     Relevant tools are connected in src/lib/content/editable/tools/tool-catalogue.js.
@@ -304,14 +352,14 @@ const developSolutionsSection = {
 const phaseSummary = {
   title: { en: 'Phase Summary', uk: 'Підсумок фази', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
-    'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.',
-    'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.'
+    { en: 'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.', uk: 'Скористайтеся цим чеклістом, щоб підтвердити, що ви розумієте циркулярні принципи та визначили релевантні стратегії для вашого бізнесу.', ro: 'Folosește această listă pentru a confirma că înțelegi principiile circulare și ai identificat strategii relevante pentru afacerea ta.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ հասկանում եք շրջանաձեւ սկզբունքները եւ բացահայտել եք ձեր բիզնեսի համար համապատասխան ռազմավարություններ։' },
+    { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступної фази, позначте всі пункти й натисніть кнопку після чекліста або поверніться на головну сторінку, щоб знайти іншу відповідну фазу, секторний інструмент чи каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
   ],
   checklist: [
-    'A clear understanding of the 9R framework can support circular redesign',
-    'Shared understanding with your team on circular strategies',
-    'Familiarised yourself with circular options and value model that you can evaluate in the next phase',
-    'Developed ideas or identified options that can become valuable circular solutions for your business. '
+    { en: 'A clear understanding of the 9R framework can support circular redesign', uk: 'Чітке розуміння рамки 9R може підтримати циркулярний редизайн', ro: 'O înțelegere clară a cadrului 9R poate sprijini redesignul circular', hy: '9R շրջանակի հստակ ըմբռնումը կարող է աջակցել շրջանաձեւ վերադիզայնին' },
+    { en: 'Shared understanding with your team on circular strategies', uk: 'Спільне розуміння циркулярних стратегій у вашій команді', ro: 'O înțelegere comună cu echipa asupra strategiilor circulare', hy: 'Թիմի հետ շրջանաձեւ ռազմավարությունների ընդհանուր ըմբռնում' },
+    { en: 'Familiarised yourself with circular options and value model that you can evaluate in the next phase', uk: 'Ознайомлено з циркулярними варіантами та моделлю цінності, які можна оцінити в наступній фазі', ro: 'Te-ai familiarizat cu opțiuni circulare și un model de valoare care pot fi evaluate în faza următoare', hy: 'Ծանոթացել եք շրջանաձեւ տարբերակներին եւ արժեքի մոդելին, որոնք կարող եք գնահատել հաջորդ փուլում' },
+    { en: 'Developed ideas or identified options that can become valuable circular solutions for your business.', uk: 'Розроблено ідеї або визначено варіанти, які можуть стати цінними циркулярними рішеннями для вашого бізнесу.', ro: 'Ai dezvoltat idei sau ai identificat opțiuni care pot deveni soluții circulare valoroase pentru afacerea ta.', hy: 'Մշակել եք գաղափարներ կամ բացահայտել տարբերակներ, որոնք կարող են դառնալ արժեքավոր շրջանաձեւ լուծումներ ձեր բիզնեսի համար։' }
   ]
 };
 

@@ -23,7 +23,9 @@
       hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձեւ ռազմավարությունները։'
     },
     descriptionTitle: { en: 'Description of case', uk: 'Опис кейсу', ro: 'Descrierea cazului', hy: 'Օրինակի նկարագրություն' },
-    about: { en: 'About', uk: 'Про кейс', ro: 'Despre', hy: 'Մասին' }
+    about: { en: 'About', uk: 'Про кейс', ro: 'Despre', hy: 'Մասին' },
+    caseSectors: { en: 'Case sectors', uk: 'Сектори кейсу', ro: 'Sectoarele cazului', hy: 'Օրինակի ոլորտները' },
+    caseTaxonomy: { en: 'Case taxonomy', uk: 'Таксономія кейсу', ro: 'Taxonomia cazului', hy: 'Օրինակի դասակարգում' }
   };
 
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
@@ -55,7 +57,7 @@
       <a href="{base}{localizePath('/cases/', currentLanguage)}" class="back-link">
         {translate(labels.backToCases, currentLanguage)}
       </a>
-      <div class="case-badges" aria-label="Case sectors">
+      <div class="case-badges" aria-label={translate(labels.caseSectors, currentLanguage)}>
         {#each sectorBadges as sector}
           <SectorBadge {sector} />
         {/each}
@@ -94,7 +96,7 @@
       </section>
     </article>
 
-    <aside class="case-taxonomy" aria-label="Case taxonomy">
+    <aside class="case-taxonomy" aria-label={translate(labels.caseTaxonomy, currentLanguage)}>
       <h2>{translate(labels.about, currentLanguage)}</h2>
       <dl>
         {#each taxonomyRows as row}

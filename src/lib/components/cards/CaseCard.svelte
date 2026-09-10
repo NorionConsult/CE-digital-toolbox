@@ -13,7 +13,9 @@
     companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
     country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
     rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
-    notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' }
+    notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' },
+    caseSectors: { en: 'Case sectors', uk: 'Сектори кейсу', ro: 'Sectoarele cazului', hy: 'Օրինակի ոլորտները' },
+    caseTaxonomy: { en: 'Case taxonomy', uk: 'Таксономія кейсу', ro: 'Taxonomia cazului', hy: 'Օրինակի դասակարգում' }
   };
 
   $: isCompact = variant === 'compact';
@@ -29,7 +31,7 @@
 
 <article class="case-card" class:case-card-compact={isCompact}>
   <div class="case-card-heading">
-    <div class="case-badges" aria-label="Case sectors">
+    <div class="case-badges" aria-label={translate(labels.caseSectors, currentLanguage)}>
       {#each sectorBadges as sector}
         <SectorBadge {sector} />
       {/each}
@@ -38,7 +40,7 @@
     <p>{currentCaseStudy.summary}</p>
   </div>
 
-  <dl aria-label="Case taxonomy">
+  <dl aria-label={translate(labels.caseTaxonomy, currentLanguage)}>
     <div>
       <dt>{translate(labels.companyName, currentLanguage)}</dt>
       <dd>{currentCaseStudy.companyName}</dd>

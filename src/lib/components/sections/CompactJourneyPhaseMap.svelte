@@ -1,18 +1,27 @@
 <script>
   import { base } from '$app/paths';
   import { page } from '$app/stores';
-  import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
+  import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
 
   /** @type {any[]} */
   export let phases = [];
   /** @type {string} */
   export let activeSlug = '';
 
+  const labels = {
+    journeyOverview: {
+      en: 'Journey phases overview',
+      uk: 'Огляд фаз шляху',
+      ro: 'Prezentarea fazelor parcursului',
+      hy: 'Ճանապարհի փուլերի ակնարկ'
+    }
+  };
+
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: currentPhases = localizeContent(phases, currentLanguage);
 </script>
 
-<nav class="compact-journey-map" aria-label="Journey phases overview">
+<nav class="compact-journey-map" aria-label={translate(labels.journeyOverview, currentLanguage)}>
   <div class="compact-journey-line" aria-hidden="true"></div>
 
   {#each currentPhases as phase}

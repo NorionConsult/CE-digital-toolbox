@@ -40,6 +40,18 @@
       uk: 'Мова',
       ro: 'Limbă',
       hy: 'Լեզու'
+    },
+    programmeLogos: {
+      en: 'Programme logos',
+      uk: 'Логотипи програми',
+      ro: 'Siglele programului',
+      hy: 'Ծրագրի լոգոները'
+    },
+    mainNavigation: {
+      en: 'Main navigation',
+      uk: 'Головна навігація',
+      ro: 'Navigare principală',
+      hy: 'Հիմնական նավարկություն'
     }
   };
 
@@ -96,7 +108,7 @@
       <div
         class="container partner-logo-bar-content"
         style={`--header-partner-logo-height: ${currentSite.headerPartnerLogos.logoHeight};`}
-        aria-label="Programme logos"
+        aria-label={translate(menuLabels.programmeLogos, currentLanguage)}
       >
         {#each currentSite.headerPartnerLogos.logos as logo}
           <img
@@ -131,7 +143,12 @@
         <span></span>
       </button>
 
-      <nav id="main-navigation" class:menu-open={menuOpen} class="main-nav" aria-label="Main navigation">
+      <nav
+        id="main-navigation"
+        class:menu-open={menuOpen}
+        class="main-nav"
+        aria-label={translate(menuLabels.mainNavigation, currentLanguage)}
+      >
         {#each currentSite.navigation as item}
           <a href={getLocalizedHref(item.href)} on:click={() => (menuOpen = false)}>{item.label}</a>
         {/each}

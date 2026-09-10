@@ -1,4 +1,4 @@
-import { defineJourneyPhasePage } from './_shared.js';
+import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils.js';
 
 /*
   PHASE 6: MONITOR
@@ -88,40 +88,40 @@ const choosingIndicatorsSection = {
       title: { en: 'Material Use', uk: 'Використання матеріалів', ro: 'Utilizarea materialelor', hy: 'Նյութերի օգտագործում' },
       icon: 'recycling',
       items: [
-        '% recycled content in products',
-        'Raw material consumption (kg)',
-        'Virgin material reduction (%)',
-        'Waste generated per unit output'
+        { en: '% recycled content in products', uk: '% переробленого вмісту в продуктах', ro: '% conținut reciclat în produse', hy: 'արտադրանքում վերամշակված բովանդակության %' },
+        { en: 'Raw material consumption (kg)', uk: 'Споживання сировини (кг)', ro: 'Consum de materii prime (kg)', hy: 'Հումքի սպառում (կգ)' },
+        { en: 'Virgin material reduction (%)', uk: 'Скорочення первинних матеріалів (%)', ro: 'Reducerea materialelor virgine (%)', hy: 'Առաջնային նյութերի նվազեցում (%)' },
+        { en: 'Waste generated per unit output', uk: 'Відходи, утворені на одиницю продукції', ro: 'Deșeuri generate per unitate de producție', hy: 'Արտադրանքի մեկ միավորի հաշվով առաջացած թափոններ' }
       ]
     },
     {
       title: { en: 'Product Life', uk: 'Строк служби продукту', ro: 'Durata de viață a produsului', hy: 'Արտադրանքի կյանքի տեւողություն' },
       icon: 'tool',
       items: [
-        'Product average lifespan',
-        'Repair & maintenance revenue',
-        'Return/take-back rate',
-        'Products sold refurbished vs new'
+        { en: 'Product average lifespan', uk: 'Середній строк служби продукту', ro: 'Durata medie de viață a produsului', hy: 'Արտադրանքի միջին ծառայության ժամկետ' },
+        { en: 'Repair & maintenance revenue', uk: 'Дохід від ремонту та обслуговування', ro: 'Venituri din reparații și întreținere', hy: 'Վերանորոգման եւ սպասարկման եկամուտ' },
+        { en: 'Return/take-back rate', uk: 'Рівень повернення/зворотного приймання', ro: 'Rata de returnare/preluare', hy: 'Վերադարձի/հետվերցման մակարդակ' },
+        { en: 'Products sold refurbished vs new', uk: 'Продані відновлені продукти порівняно з новими', ro: 'Produse recondiționate vândute comparativ cu produse noi', hy: 'Վաճառված վերականգնված ապրանքներ՝ նորերի համեմատ' }
       ]
     },
     {
       title: { en: 'Circular Revenue', uk: 'Циркулярний дохід', ro: 'Venituri circulare', hy: 'Շրջանաձեւ եկամուտ' },
       icon: 'wallet',
       items: [
-        'Revenue from circular services',
-        'Cost savings from waste reduction',
-        'Circular vs linear revenue ratio',
-        'Customer retention in service models'
+        { en: 'Revenue from circular services', uk: 'Дохід від циркулярних послуг', ro: 'Venituri din servicii circulare', hy: 'Շրջանաձեւ ծառայություններից եկամուտ' },
+        { en: 'Cost savings from waste reduction', uk: 'Економія витрат завдяки зменшенню відходів', ro: 'Economii de costuri din reducerea deșeurilor', hy: 'Թափոնների նվազեցումից ծախսերի խնայողություն' },
+        { en: 'Circular vs linear revenue ratio', uk: 'Співвідношення циркулярного та лінійного доходу', ro: 'Raportul dintre veniturile circulare și cele liniare', hy: 'Շրջանաձեւ եւ գծային եկամտի հարաբերակցություն' },
+        { en: 'Customer retention in service models', uk: 'Утримання клієнтів у сервісних моделях', ro: 'Retenția clienților în modele de servicii', hy: 'Հաճախորդների պահպանում ծառայության մոդելներում' }
       ]
     },
     {
       title: { en: 'Environmental', uk: 'Екологічні показники', ro: 'Mediu', hy: 'Բնապահպանական' },
       icon: 'earth',
       items: [
-        'Carbon dioxide (CO2) emissions per unit',
-        'Energy from renewable sources',
-        'Water consumption (litres/unit)',
-        'Waste to landfill (tonnes/year)'
+        { en: 'Carbon dioxide (CO2) emissions per unit', uk: 'Викиди діоксиду вуглецю (CO2) на одиницю', ro: 'Emisii de dioxid de carbon (CO2) per unitate', hy: 'Ածխաթթու գազի (CO2) արտանետումներ մեկ միավորի հաշվով' },
+        { en: 'Energy from renewable sources', uk: 'Енергія з відновлюваних джерел', ro: 'Energie din surse regenerabile', hy: 'Էներգիա վերականգնվող աղբյուրներից' },
+        { en: 'Water consumption (litres/unit)', uk: 'Споживання води (літри/одиницю)', ro: 'Consum de apă (litri/unitate)', hy: 'Ջրի սպառում (լիտր/միավոր)' },
+        { en: 'Waste to landfill (tonnes/year)', uk: 'Відходи на полігон (тонн/рік)', ro: 'Deșeuri la depozitare (tone/an)', hy: 'Աղբավայր ուղարկվող թափոններ (տոննա/տարի)' }
       ]
     }
   ]

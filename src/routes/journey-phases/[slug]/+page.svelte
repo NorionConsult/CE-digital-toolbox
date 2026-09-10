@@ -653,7 +653,11 @@
             href="{base}{localizePath('/guided-pathways/#journey-phases', currentLanguage)}"
             class="back-link journey-back-link summary-copy-next-link"
           >
-            <span class="back-link-arrow" aria-hidden="true"></span>
+            <span
+              class="back-link-arrow"
+              style={`--icon-url: url("${iconParkUrl('arrow-left')}");`}
+              aria-hidden="true"
+            ></span>
             {currentJourneyPhasePage.summaryBackLink}
           </a>
         </div>

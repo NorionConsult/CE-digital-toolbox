@@ -1,4 +1,4 @@
-import { defineJourneyPhasePage } from './_shared.js';
+import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils.js';
 
 /*
   PHASE 4: EVALUATE
@@ -58,8 +58,8 @@ const pathwaySection = {
         hy: 'Գնահատեք կարճ ցուցակում ներառված շրջանաձեւ տարբերակները ըստ ազդեցության, իրագործելիության, ռիսկերի եւ ձեր ընթացիկ գործողություններին ու նպատակներին համապատասխանության։'
       },
       keyOutputs: [
-        'Circular options screened against relevant criteria',
-        'A clearer view of feasibility and potential impact'
+        { en: 'Circular options screened against relevant criteria', uk: 'Циркулярні варіанти перевірено за релевантними критеріями', ro: 'Opțiuni circulare analizate după criterii relevante', hy: 'Շրջանաձեւ տարբերակները զտվել են համապատասխան չափանիշներով' },
+        { en: 'A clearer view of feasibility and potential impact', uk: 'Чіткіше бачення здійсненності та потенційного впливу', ro: 'O perspectivă mai clară asupra fezabilității și impactului potențial', hy: 'Իրագործելիության եւ հնարավոր ազդեցության ավելի հստակ պատկեր' }
       ]
     },
     {
@@ -73,8 +73,8 @@ const pathwaySection = {
         hy: 'Հասկացեք խոչընդոտները, նպաստող գործոնները եւ ռիսկերը, որոնք անհրաժեշտ է հաշվի առնել գաղափարից ավելի ուժեղ շրջանաձեւ բիզնես հիմնավորման անցնելու համար։'
       },
       keyOutputs: [
-        'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis',
-        'A shortlist of one to three priority strategies'
+        { en: 'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis', uk: 'Аналіз бар’єрів і Strengths, Weaknesses, Opportunities and Threats (SWOT)', ro: 'Analiza barierelor și Strengths, Weaknesses, Opportunities and Threats (SWOT)', hy: 'Խոչընդոտների եւ Strengths, Weaknesses, Opportunities and Threats (SWOT) վերլուծություն' },
+        { en: 'A shortlist of one to three priority strategies', uk: 'Короткий список із однієї-трьох пріоритетних стратегій', ro: 'O listă scurtă de una-trei strategii prioritare', hy: 'Մեկից երեք առաջնահերթ ռազմավարությունների կարճ ցուցակ' }
       ]
     },
     {
@@ -88,8 +88,8 @@ const pathwaySection = {
         hy: 'Պատրաստեք փոքր մասշտաբի փորձարկում՝ նախքան ամբողջական իրականացումը՝ ներառելով նյութական հոսքերը, գործընկերներին եւ սովորելու նպատակները։'
       },
       keyOutputs: [
-        'Pilot logic mapped',
-        'Testing assumptions and learning goals defined'
+        { en: 'Pilot logic mapped', uk: 'Логіку пілоту закартовано', ro: 'Logica pilotului cartografiată', hy: 'Պիլոտի տրամաբանությունը քարտեզագրված է' },
+        { en: 'Testing assumptions and learning goals defined', uk: 'Визначено припущення для тестування та навчальні цілі', ro: 'Ipoteze de testare și obiective de învățare definite', hy: 'Սահմանված են փորձարկման ենթադրությունները եւ սովորելու նպատակները' }
       ]
     }
   ]
@@ -97,11 +97,11 @@ const pathwaySection = {
 
 /* 4. DETAILED SECTION 1 */
 const shortlistStrategiesOptions = [
-  'Product as a Service (PaaS)',
-  'Resource Recovery',
-  'Extended Product Life',
-  'Sharing Platforms',
-  'Circular Supply Chains'
+  { en: 'Product as a Service (PaaS)', uk: 'Продукт як послуга (PaaS)', ro: 'Produs ca serviciu (PaaS)', hy: 'Ապրանքը որպես ծառայություն (PaaS)' },
+  { en: 'Resource Recovery', uk: 'Відновлення ресурсів', ro: 'Recuperarea resurselor', hy: 'Ռեսուրսների վերականգնում' },
+  { en: 'Extended Product Life', uk: 'Подовження строку служби продукту', ro: 'Durată de viață extinsă a produsului', hy: 'Արտադրանքի կյանքի երկարացում' },
+  { en: 'Sharing Platforms', uk: 'Платформи спільного використання', ro: 'Platforme de partajare', hy: 'Համօգտագործման հարթակներ' },
+  { en: 'Circular Supply Chains', uk: 'Циркулярні ланцюги постачання', ro: 'Lanțuri de aprovizionare circulare', hy: 'Շրջանաձեւ մատակարարման շղթաներ' }
 ];
 
 const shortlistStrategiesSection = {

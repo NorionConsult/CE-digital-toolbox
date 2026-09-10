@@ -24,7 +24,13 @@
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
     provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
     access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' },
-    none: { en: 'None', uk: 'Немає', ro: 'Niciuna', hy: 'Չկա' }
+    none: { en: 'None', uk: 'Немає', ro: 'Niciuna', hy: 'Չկա' },
+    resourceTaxonomy: {
+      en: 'Resource taxonomy',
+      uk: 'Таксономія ресурсу',
+      ro: 'Taxonomia resursei',
+      hy: 'Ռեսուրսի դասակարգում'
+    }
   };
 
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
@@ -109,7 +115,7 @@
 
     </article>
 
-    <aside class="resource-taxonomy" aria-label="Resource taxonomy">
+    <aside class="resource-taxonomy" aria-label={translate(labels.resourceTaxonomy, currentLanguage)}>
       <h2>{translate(labels.about, currentLanguage)}</h2>
       <dl>
         {#each taxonomyRows as row}

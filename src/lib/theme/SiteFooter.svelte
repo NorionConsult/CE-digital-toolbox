@@ -2,7 +2,16 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { site } from '$lib/content/editable/global/site.js';
-  import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
+  import { getLanguageFromPathname, localizeContent, translate } from '$lib/translation-helper.js';
+
+  const labels = {
+    programmeLogos: {
+      en: 'Programme logos',
+      uk: 'Логотипи програми',
+      ro: 'Siglele programului',
+      hy: 'Ծրագրի լոգոները'
+    }
+  };
 
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: currentSite = localizeContent(site, currentLanguage);
@@ -11,7 +20,7 @@
 <footer id="contact" class="site-footer">
   <div class="container footer-content">
     <div class="footer-logo-area">
-      <div class="footer-logos" aria-label="Programme logos">
+      <div class="footer-logos" aria-label={translate(labels.programmeLogos, currentLanguage)}>
         {#each currentSite.footerLogos as logo}
           <div class="footer-logo-cell" style:--logo-width={logo.width}>
             <img src="{base}{logo.src}" alt={logo.alt} />

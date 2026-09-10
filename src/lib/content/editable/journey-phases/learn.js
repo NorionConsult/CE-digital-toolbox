@@ -1,4 +1,4 @@
-import { defineJourneyPhasePage } from './_shared.js';
+import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils.js';
 
 /*
   PHASE 1: LEARN
@@ -142,62 +142,104 @@ const LearningresourcesSection = {
     cards: [
       {
         courseTitle: 'Circular Economy explained (video playlist)',
-        shortDescription:
-          'A short curated playlist of whiteboard-style explainer videos from the Ellen MacArthur Foundation, walking through the core idea of the circular economy and why it matters for business.',
+        shortDescription: {
+          en: 'A short curated playlist of whiteboard-style explainer videos from the Ellen MacArthur Foundation, walking through the core idea of the circular economy and why it matters for business.',
+          uk: 'Коротка добірка пояснювальних відео у стилі whiteboard від Ellen MacArthur Foundation, що знайомить з основною ідеєю циркулярної економіки та її значенням для бізнесу.',
+          ro: 'O scurtă selecție de videoclipuri explicative de tip whiteboard de la Ellen MacArthur Foundation, care prezintă ideea de bază a economiei circulare și de ce contează pentru afaceri.',
+          hy: 'Ellen MacArthur Foundation-ի կարճ ընտրված տեսաշար՝ whiteboard ոճի բացատրական տեսանյութերով, որը ներկայացնում է շրջանաձեւ տնտեսության հիմնական գաղափարը եւ դրա կարեւորությունը բիզնեսի համար։'
+        },
         language: 'English',
         provider: 'Ellen MacArthur Foundation',
         url: 'https://www.ellenmacarthurfoundation.org/playlist-circular-economy-explained',
-        buttonLabel: 'Open resource',
+        buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
-          'A free, bite-sized video collection that introduces the circular economy concept including the well-known explainer narrated by Dame Ellen MacArthur herself, which uses her solo round-the-world sailing experience to illustrate the difference between a linear "take-make-waste" model and a circular one.'
+          {
+            en: 'A free, bite-sized video collection that introduces the circular economy concept including the well-known explainer narrated by Dame Ellen MacArthur herself, which uses her solo round-the-world sailing experience to illustrate the difference between a linear "take-make-waste" model and a circular one.',
+            uk: 'Безкоштовна коротка відеодобірка, що знайомить з концепцією циркулярної економіки, зокрема з відомим поясненням від самої Dame Ellen MacArthur, яка використовує свій досвід одиночної навколосвітньої подорожі під вітрилами, щоб показати різницю між лінійною моделлю "take-make-waste" і циркулярною моделлю.',
+            ro: 'O colecție gratuită de videoclipuri scurte care introduce conceptul de economie circulară, inclusiv cunoscutul material explicativ narat chiar de Dame Ellen MacArthur, care folosește experiența sa de navigație solo în jurul lumii pentru a ilustra diferența dintre modelul liniar "take-make-waste" și unul circular.',
+            hy: 'Անվճար, կարճ տեսանյութերի հավաքածու, որը ներկայացնում է շրջանաձեւ տնտեսության գաղափարը, ներառյալ հայտնի բացատրական տեսանյութը՝ Dame Ellen MacArthur-ի ձայնավորմամբ, որտեղ նա իր շուրջերկրյա միայնակ նավարկության փորձով ցույց է տալիս գծային "take-make-waste" մոդելի եւ շրջանաձեւ մոդելի տարբերությունը։'
+          }
         ],
         learningGoals: [
-          'Understand the basic difference between a linear and a circular economy',
-          'Understand why finite resources make the current "take-make-waste" model unsustainable',
-          'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms'
+          { en: 'Understand the basic difference between a linear and a circular economy', uk: 'Зрозуміти базову різницю між лінійною та циркулярною економікою', ro: 'Înțelege diferența de bază dintre economia liniară și cea circulară', hy: 'Հասկանալ գծային եւ շրջանաձեւ տնտեսության հիմնական տարբերությունը' },
+          { en: 'Understand why finite resources make the current "take-make-waste" model unsustainable', uk: 'Зрозуміти, чому обмежені ресурси роблять нинішню модель "take-make-waste" несталою', ro: 'Înțelege de ce resursele finite fac actualul model "take-make-waste" nesustenabil', hy: 'Հասկանալ, թե ինչու են սահմանափակ ռեսուրսները ներկայիս "take-make-waste" մոդելը դարձնում անկայուն' },
+          { en: 'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms', uk: 'Побачити практичні приклади збереження цінності, такі як ремануфактура та каскадне використання матеріалів, простими словами', ro: 'Vezi exemple reale de păstrare a valorii, precum remanufacturarea și utilizarea în cascadă a materialelor, explicate simplu', hy: 'Տեսնել արժեքի պահպանման իրական օրինակներ, օրինակ՝ վերարտադրություն եւ նյութերի կասկադային օգտագործում, պարզ լեզվով' }
         ],
         whyTakeCourse: [
-          "At only a few minutes per video, this is a fast way to build a non-technical understanding of the circular economy before moving into more detailed toolbox content. It's an ideal starting point for staff who have never encountered the concept before and need a plain-language explanation."
+          {
+            en: "At only a few minutes per video, this is a fast way to build a non-technical understanding of the circular economy before moving into more detailed toolbox content. It's an ideal starting point for staff who have never encountered the concept before and need a plain-language explanation.",
+            uk: 'Оскільки кожне відео триває лише кілька хвилин, це швидкий спосіб сформувати нетехнічне розуміння циркулярної економіки перед переходом до детальнішого контенту toolbox. Це добра відправна точка для працівників, які раніше не стикалися з цією концепцією і потребують простого пояснення.',
+            ro: 'Cu videoclipuri de doar câteva minute, aceasta este o modalitate rapidă de a construi o înțelegere non-tehnică a economiei circulare înainte de a trece la conținut mai detaliat din toolbox. Este un punct de pornire ideal pentru personalul care nu a întâlnit conceptul până acum și are nevoie de o explicație clară.',
+            hy: 'Քանի որ յուրաքանչյուր տեսանյութ ընդամենը մի քանի րոպե է, սա արագ միջոց է շրջանաձեւ տնտեսության ոչ տեխնիկական ըմբռնում ձեւավորելու համար՝ նախքան toolbox-ի ավելի մանրամասն բովանդակությանը անցնելը։ Սա լավ մեկնարկային կետ է այն աշխատակիցների համար, ովքեր նախկինում չեն հանդիպել այս գաղափարին եւ կարիք ունեն պարզ բացատրության։'
+          }
         ]
       },
       {
         courseTitle: 'Circular Economy in Industry',
-        shortDescription:
-          'A ten-part e-learning course covering circular economy principles and their application across industrial value chains, developed for green-transition skills building.',
+        shortDescription: {
+          en: 'A ten-part e-learning course covering circular economy principles and their application across industrial value chains, developed for green-transition skills building.',
+          uk: 'Електронний курс із десяти частин про принципи циркулярної економіки та їх застосування в промислових ланцюгах цінності, розроблений для розвитку навичок зеленого переходу.',
+          ro: 'Un curs e-learning în zece părți despre principiile economiei circulare și aplicarea lor în lanțurile valorice industriale, dezvoltat pentru formarea competențelor de tranziție verde.',
+          hy: 'Տասը մասից բաղկացած էլեկտրոնային ուսուցման դասընթաց շրջանաձեւ տնտեսության սկզբունքների եւ դրանց կիրառման մասին արդյունաբերական արժեքի շղթաներում՝ մշակված կանաչ անցման հմտություններ զարգացնելու համար։'
+        },
         language: 'English',
         provider: 'United Nations Industrial Development Organisation (UNIDO)',
         url: 'https://www.unido.org/learning-resources/circular-economy-industry',
-        buttonLabel: 'Open resource',
+        buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
-          'A structured, modular e-learning course that progresses from the economic foundations of the circular economy through to applied industrial topics: circular design, value retention strategies such as remanufacturing, reconditioning and refurbishing, recycling processes, circularity in use and consumption, the circular bioeconomy, trade and environment linkages, and the role of renewable energy in circular, low-carbon industrial systems.'
+          {
+            en: 'A structured, modular e-learning course that progresses from the economic foundations of the circular economy through to applied industrial topics: circular design, value retention strategies such as remanufacturing, reconditioning and refurbishing, recycling processes, circularity in use and consumption, the circular bioeconomy, trade and environment linkages, and the role of renewable energy in circular, low-carbon industrial systems.',
+            uk: 'Структурований модульний електронний курс, що переходить від економічних основ циркулярної економіки до прикладних промислових тем: циркулярний дизайн, стратегії збереження цінності, такі як ремануфактура, відновлення та рефабрикація, процеси переробки, циркулярність у використанні та споживанні, циркулярна біоекономіка, зв’язки між торгівлею й довкіллям та роль відновлюваної енергії в циркулярних низьковуглецевих промислових системах.',
+            ro: 'Un curs e-learning structurat și modular care pornește de la fundamentele economice ale economiei circulare și ajunge la teme industriale aplicate: design circular, strategii de păstrare a valorii precum remanufacturarea, recondiționarea și refurbishing-ul, procese de reciclare, circularitate în utilizare și consum, bioeconomia circulară, legături între comerț și mediu și rolul energiei regenerabile în sistemele industriale circulare cu emisii reduse de carbon.',
+            hy: 'Կառուցվածքային, մոդուլային էլեկտրոնային դասընթաց, որը սկսվում է շրջանաձեւ տնտեսության տնտեսական հիմքերից եւ անցնում կիրառական արդյունաբերական թեմաների՝ շրջանաձեւ դիզայն, արժեքի պահպանման ռազմավարություններ, ինչպիսիք են վերարտադրությունը, վերականգնումը եւ թարմացումը, վերամշակման գործընթացներ, շրջանաձեւություն օգտագործման եւ սպառման մեջ, շրջանաձեւ կենսատնտեսություն, առեւտրի եւ շրջակա միջավայրի կապեր, ինչպես նաեւ վերականգնվող էներգիայի դերը շրջանաձեւ եւ ցածր ածխածնային արդյունաբերական համակարգերում։'
+          }
         ],
         learningGoals: [
-          'Build a solid conceptual and economic foundation in circular economy principles',
-          'Learn how circular design and value-retention strategies, such as remanufacturing, refurbishing and recycling, apply across industrial value chains',
-          'Understand how circularity connects to broader systems such as the bioeconomy, trade, and renewable energy'
+          { en: 'Build a solid conceptual and economic foundation in circular economy principles', uk: 'Сформувати міцну концептуальну та економічну основу принципів циркулярної економіки', ro: 'Construiește o bază conceptuală și economică solidă în principiile economiei circulare', hy: 'Ձեւավորել շրջանաձեւ տնտեսության սկզբունքների ամուր հայեցակարգային եւ տնտեսական հիմք' },
+          { en: 'Learn how circular design and value-retention strategies, such as remanufacturing, refurbishing and recycling, apply across industrial value chains', uk: 'Дізнатися, як циркулярний дизайн і стратегії збереження цінності, такі як ремануфактура, відновлення та переробка, застосовуються в промислових ланцюгах цінності', ro: 'Învață cum se aplică designul circular și strategiile de păstrare a valorii, precum remanufacturarea, recondiționarea și reciclarea, în lanțurile valorice industriale', hy: 'Սովորել, թե ինչպես են շրջանաձեւ դիզայնը եւ արժեքի պահպանման ռազմավարությունները, օրինակ՝ վերարտադրությունը, վերականգնումը եւ վերամշակումը, կիրառվում արդյունաբերական արժեքի շղթաներում' },
+          { en: 'Understand how circularity connects to broader systems such as the bioeconomy, trade, and renewable energy', uk: 'Зрозуміти, як циркулярність пов’язана з ширшими системами, такими як біоекономіка, торгівля та відновлювана енергія', ro: 'Înțelege cum se conectează circularitatea la sisteme mai largi precum bioeconomia, comerțul și energia regenerabilă', hy: 'Հասկանալ, թե ինչպես է շրջանաձեւությունը կապվում ավելի լայն համակարգերի հետ, ինչպիսիք են կենսատնտեսությունը, առեւտուրը եւ վերականգնվող էներգիան' }
         ],
         whyTakeCourse: [
-          'This course goes well beyond a basic introduction, offering a comprehensive, progressive curriculum that is directly relevant to industrial and manufacturing small-medium enterprises (SMEs). Because it is modular, learners can work through it section by section and revisit specific topics, such as remanufacturing or circular design, as they apply concepts to their own business. It is a strong next step once the basic vocabulary from an introductory resource has been established.'
+          {
+            en: 'This course goes well beyond a basic introduction, offering a comprehensive, progressive curriculum that is directly relevant to industrial and manufacturing small-medium enterprises (SMEs). Because it is modular, learners can work through it section by section and revisit specific topics, such as remanufacturing or circular design, as they apply concepts to their own business. It is a strong next step once the basic vocabulary from an introductory resource has been established.',
+            uk: 'Цей курс виходить далеко за межі базового вступу й пропонує комплексну послідовну програму, безпосередньо релевантну для промислових і виробничих МСП. Завдяки модульній структурі учасники можуть проходити його по розділах і повертатися до конкретних тем, таких як ремануфактура або циркулярний дизайн, коли застосовують концепції у власному бізнесі. Це сильний наступний крок після засвоєння базової термінології з вступного ресурсу.',
+            ro: 'Acest curs depășește cu mult o introducere de bază, oferind un curriculum cuprinzător și progresiv, direct relevant pentru IMM-urile industriale și de producție. Pentru că este modular, cursanții îl pot parcurge pe secțiuni și pot reveni la teme specifice, precum remanufacturarea sau designul circular, pe măsură ce aplică conceptele în propria afacere. Este un pas următor solid după stabilirea vocabularului de bază dintr-o resursă introductivă.',
+            hy: 'Այս դասընթացը շատ ավելին է, քան բազային ներածություն՝ առաջարկելով համապարփակ եւ աստիճանական ծրագիր, որը անմիջապես համապատասխան է արդյունաբերական եւ արտադրական ՓՄՁ-ներին։ Քանի որ այն մոդուլային է, սովորողները կարող են այն անցնել բաժին առ բաժին եւ վերադառնալ կոնկրետ թեմաների, օրինակ՝ վերարտադրություն կամ շրջանաձեւ դիզայն, երբ հասկացությունները կիրառում են իրենց բիզնեսում։ Սա լավ հաջորդ քայլ է, երբ ներածական ռեսուրսից արդեն ձեւավորվել է հիմնական բառապաշարը։'
+          }
         ]
       },
       {
         courseTitle: 'SWITCH circular economy journey',
-        shortDescription:
-          'A circular economy programme which aims to support micro-enterprises and small-medium enterprises (SMEs) with specific tracks that walk businesses through circular economy practices via games and journey phases.',
+        shortDescription: {
+          en: 'A circular economy programme which aims to support micro-enterprises and small-medium enterprises (SMEs) with specific tracks that walk businesses through circular economy practices via games and journey phases.',
+          uk: 'Програма з циркулярної економіки, що підтримує мікро-, малі та середні підприємства через спеціальні треки, які проводять бізнес через практики циркулярної економіки за допомогою ігор і етапів шляху.',
+          ro: 'Un program de economie circulară care sprijină microîntreprinderile și întreprinderile mici și mijlocii prin trasee specifice ce ghidează afacerile prin practici circulare, folosind jocuri și etape de parcurs.',
+          hy: 'Շրջանաձեւ տնտեսության ծրագիր, որի նպատակն է աջակցել միկրո, փոքր եւ միջին ձեռնարկություններին հատուկ ուղիների միջոցով, որոնք խաղերի եւ ճանապարհի փուլերի օգնությամբ բիզնեսներին անցկացնում են շրջանաձեւ տնտեսության գործելակերպերով։'
+        },
         language: 'English',
         provider: 'SWITCH to Circular Economy Value Chains',
         url: 'https://switch.circle-economy.com/',
-        buttonLabel: 'Open resource',
+        buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
-          'An interactive, gamified online platform built specifically for Micro, small and medium-sized enterprise (MSME) suppliers in developing countries who are part of global value chains. Users pick a sector track, such as Textiles, Plastics & Packaging, or Electronics & Information and Communication Technology (ICT), then work through a series of interactive games and journey phases. Each phase presents sector-relevant circular economy content followed by interactive questions, covering topics like recycling barriers and traceability. A free login is required, which enables personalised progress tracking across tracks.'
+          {
+            en: 'An interactive, gamified online platform built specifically for Micro, small and medium-sized enterprise (MSME) suppliers in developing countries who are part of global value chains. Users pick a sector track, such as Textiles, Plastics & Packaging, or Electronics & Information and Communication Technology (ICT), then work through a series of interactive games and journey phases. Each phase presents sector-relevant circular economy content followed by interactive questions, covering topics like recycling barriers and traceability. A free login is required, which enables personalised progress tracking across tracks.',
+            uk: 'Інтерактивна гейміфікована онлайн-платформа, створена спеціально для постачальників-мікро-, малих і середніх підприємств у країнах, що розвиваються, які є частиною глобальних ланцюгів цінності. Користувачі обирають секторний трек, наприклад Textiles, Plastics & Packaging або Electronics & Information and Communication Technology (ICT), а потім проходять серію інтерактивних ігор і фаз. Кожна фаза містить секторно релевантний контент про циркулярну економіку та інтерактивні запитання на теми, як-от бар’єри переробки та простежуваність. Потрібна безкоштовна реєстрація, яка дає змогу персонально відстежувати прогрес у різних треках.',
+            ro: 'O platformă online interactivă și gamificată, creată special pentru furnizorii microîntreprinderi și IMM-uri din țări în curs de dezvoltare care fac parte din lanțuri valorice globale. Utilizatorii aleg un traseu sectorial, precum Textiles, Plastics & Packaging sau Electronics & Information and Communication Technology (ICT), apoi parcurg o serie de jocuri interactive și etape. Fiecare etapă prezintă conținut de economie circulară relevant pentru sector, urmat de întrebări interactive, pe teme precum barierele de reciclare și trasabilitatea. Este necesară o autentificare gratuită, care permite urmărirea personalizată a progresului pe trasee.',
+            hy: 'Ինտերակտիվ, խաղայնացված առցանց հարթակ, որը հատուկ ստեղծված է զարգացող երկրներում համաշխարհային արժեքային շղթաների մաս կազմող միկրո, փոքր եւ միջին ձեռնարկություն մատակարարների համար։ Օգտատերերը ընտրում են ոլորտային ուղի, օրինակ՝ Textiles, Plastics & Packaging կամ Electronics & Information and Communication Technology (ICT), ապա անցնում են ինտերակտիվ խաղերի եւ փուլերի շարք։ Յուրաքանչյուր փուլ ներկայացնում է ոլորտին համապատասխան շրջանաձեւ տնտեսության բովանդակություն, որին հաջորդում են ինտերակտիվ հարցեր՝ վերամշակման խոչընդոտների եւ հետագծելիության նման թեմաներով։ Պահանջվում է անվճար մուտք, որը թույլ է տալիս անհատականացված կերպով հետեւել առաջընթացին տարբեր ուղիներում։'
+          }
         ],
         learningGoals: [
-          "Identify circular economy opportunities and challenges specific to your sector's value chain, such as textiles, plastics, or electronics",
-          'Understand practical barriers to recycling and how to address them',
-          'Learn the basics of material traceability for transparency in a circular supply chain'
+          { en: "Identify circular economy opportunities and challenges specific to your sector's value chain, such as textiles, plastics, or electronics", uk: 'Визначити можливості та виклики циркулярної економіки, специфічні для ланцюга цінності вашого сектору, наприклад текстилю, пластику чи електроніки', ro: 'Identifică oportunități și provocări de economie circulară specifice lanțului valoric al sectorului tău, precum textile, plastic sau electronice', hy: 'Բացահայտել ձեր ոլորտի արժեքի շղթային հատուկ շրջանաձեւ տնտեսության հնարավորություններն ու մարտահրավերները, օրինակ՝ տեքստիլ, պլաստիկ կամ էլեկտրոնիկա' },
+          { en: 'Understand practical barriers to recycling and how to address them', uk: 'Зрозуміти практичні бар’єри переробки та способи їх подолання', ro: 'Înțelege barierele practice în reciclare și cum pot fi abordate', hy: 'Հասկանալ վերամշակման գործնական խոչընդոտները եւ ինչպես լուծել դրանք' },
+          { en: 'Learn the basics of material traceability for transparency in a circular supply chain', uk: 'Вивчити основи простежуваності матеріалів для прозорості в циркулярному ланцюгу постачання', ro: 'Învață elementele de bază ale trasabilității materialelor pentru transparență într-un lanț de aprovizionare circular', hy: 'Սովորել նյութերի հետագծելիության հիմունքները շրջանաձեւ մատակարարման շղթայում թափանցիկության համար' }
         ],
         whyTakeCourse: [
-          "Unlike generic introductory resources, this tool is purpose-built for you as an SME supplier operating within larger value chains, with content tailored to your specific sector rather than the circular economy in the abstract. Its game-based, interactive format makes it a practical, hands-on complement to more conceptual resources - well suited if you\'re ready to apply circular thinking directly to your own sector and supply-chain role."
+          {
+            en: "Unlike generic introductory resources, this tool is purpose-built for you as an SME supplier operating within larger value chains, with content tailored to your specific sector rather than the circular economy in the abstract. Its game-based, interactive format makes it a practical, hands-on complement to more conceptual resources - well suited if you\'re ready to apply circular thinking directly to your own sector and supply-chain role.",
+            uk: 'На відміну від загальних вступних ресурсів, цей інструмент створений спеціально для вас як МСП-постачальника, що працює у більших ланцюгах цінності, з контентом, адаптованим до вашого сектору, а не до циркулярної економіки загалом. Його ігровий інтерактивний формат робить його практичним доповненням до більш концептуальних ресурсів і добре підходить, якщо ви готові застосувати циркулярне мислення безпосередньо до свого сектору та ролі в ланцюгу постачання.',
+            ro: 'Spre deosebire de resursele introductive generale, acest instrument este creat special pentru tine ca furnizor IMM care operează în lanțuri valorice mai mari, cu conținut adaptat sectorului tău, nu economiei circulare în abstract. Formatul său interactiv, bazat pe jocuri, îl face o completare practică și aplicată a resurselor mai conceptuale, potrivită dacă ești gata să aplici gândirea circulară direct în sectorul și rolul tău din lanțul de aprovizionare.',
+            hy: 'Ընդհանուր ներածական ռեսուրսներից տարբեր՝ այս գործիքը հատուկ ստեղծված է ձեզ համար՝ որպես ավելի մեծ արժեքային շղթաներում գործող ՓՄՁ մատակարարի, եւ բովանդակությունը հարմարեցված է ձեր ոլորտին, ոչ թե շրջանաձեւ տնտեսության վերացական գաղափարին։ Դրա խաղային եւ ինտերակտիվ ձեւաչափը այն դարձնում է գործնական լրացում ավելի հայեցակարգային ռեսուրսներին եւ լավ է համապատասխանում, եթե պատրաստ եք շրջանաձեւ մտածողությունը ուղղակիորեն կիրառել ձեր ոլորտում եւ մատակարարման շղթայում ունեցած դերում։'
+          }
         ]
       }
     ]

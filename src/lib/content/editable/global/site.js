@@ -52,7 +52,12 @@ export const site = {
   },
   headerLogo: {
     src: '/logos/site_logo.svg',
-    alt: 'Circular Economy Toolbox logo'
+    alt: {
+      en: 'Circular Economy Toolbox logo',
+      uk: 'Логотип Інструментарію циркулярної економіки',
+      ro: 'Sigla setului de instrumente pentru economia circulară',
+      hy: 'Շրջանաձեւ տնտեսության գործիքակազմի լոգո'
+    }
   },
   /*
     Partner logos shown in the global header menu area on every page.
@@ -64,12 +69,22 @@ export const site = {
     logos: [
       {
         src: '/logos/EU-logo-header.png',
-        alt: 'European Union logo',
+        alt: {
+          en: 'European Union logo',
+          uk: 'Логотип Європейського Союзу',
+          ro: 'Sigla Uniunii Europene',
+          hy: 'Եվրոպական միության լոգո'
+        },
         width: 'clamp(180px, 20vw, 245px)'
       },
       {
         src: '/logos/EU4Green-logo-header.png',
-        alt: 'EU4Green logo',
+        alt: {
+          en: 'EU4Green logo',
+          uk: 'Логотип EU4Green',
+          ro: 'Sigla EU4Green',
+          hy: 'EU4Green լոգո'
+        },
         width: 'clamp(70px, 8vw, 96px)'
       }
     ]
