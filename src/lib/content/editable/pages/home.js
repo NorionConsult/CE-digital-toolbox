@@ -28,7 +28,7 @@ export const home = {
       en: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs across different industries. Get started by following a guided flow that introduces the tools or by freely browsing tools in the catalogue.',
       uk: 'Цей цифровий інструментарій надає структурований огляд цифрових інструментів, які підтримують перехід малих і середніх підприємств з різних галузей до практик циркулярної економіки. Почніть із покрокового маршруту або вільно переглядайте інструменти в каталозі.',
       ro: 'Acest set digital de instrumente oferă o prezentare structurată a instrumentelor digitale care sprijină tranziția întreprinderilor mici și mijlocii din diferite sectoare către practici de economie circulară. Începe urmând un parcurs ghidat sau explorează liber instrumentele din catalog.',
-      hy: 'Այս թվային գործիքակազմը տալիս է տարբեր ոլորտների փոքր եւ միջին ձեռնարկությունների համար շրջանաձեւ տնտեսության գործելակերպերին անցումը աջակցող թվային գործիքների կառուցվածքային ակնարկ։ Սկսեք ուղեցույցով կամ ազատորեն դիտեք գործիքների կատալոգը։'
+      hy: 'Այս թվային գործիքակազմը ներկայացնում է տարբեր ոլորտների փոքր և միջին ձեռնարկություններին (ՓՄՁ) շրջանաձև տնտեսության գործելակերպերին անցնելու հարցում աջակցող թվային գործիքների կառուցվածքային ակնարկ։ Սկսեք՝ հետևելով ուղեցույցներին կամ ազատորեն ուսումնասիրեք գործիքների կատալոգը։'
     },
     primaryButton: {
       en: 'Follow guided pathways',
