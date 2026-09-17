@@ -34,7 +34,7 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'identify-options', label: { en: 'Identify options', uk: 'Визначити варіанти', ro: 'Identifică opțiuni', hy: 'Գտնել տարբերակներ' } },
+  { sectionId: 'identify-options', label: { en: 'Identify options', uk: 'Визначити варіанти', ro: 'Identifică opțiuni', hy: 'Բացահայտել տարբերակները' } },
   { sectionId: 'shape-value-model', label: { en: 'Shape value model', uk: 'Сформувати модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորել արժեքի մոդելը' } },
   { sectionId: 'develop-solutions', label: { en: 'Develop solutions', uk: 'Розробити рішення', ro: 'Dezvoltă soluții', hy: 'Մշակել լուծումներ' } }
 ];
@@ -49,7 +49,7 @@ const pathwaySection = {
     {
       sectionId: 'identify-options',
       number: '1',
-      title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Գտեք ձեր տարբերակները' },
+      title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Բացահայտեք ձեր տարբերակները' },
       description: {
         en: 'Use structured tools to map which strategies are feasible and relevant for your specific business, sector and supply chain.',
         uk: 'Використовуйте структуровані інструменти, щоб визначити, які стратегії є здійсненними й релевантними для вашого бізнесу, сектору та ланцюга постачання.',
@@ -99,7 +99,7 @@ const pathwaySection = {
 /* 4. DETAILED SECTION 1 */
 const identifyOptionsSection = {
   id: 'identify-options',
-  title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Գտեք ձեր տարբերակները' },
+  title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Բացահայտեք ձեր տարբերակները' },
   resourceTag: 'explore:identify-options',
   paragraphs: [
     {
@@ -180,7 +180,7 @@ const identifyOptionsSection = {
       ],
       listTitle: { en: 'You will need:', uk: 'Вам знадобиться:', ro: 'Vei avea nevoie de:', hy: 'Ձեզ պետք կլինի՝' },
       items: [
-        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Полотно Circular Strategies Wheel, надруковане у форматі A1 і розміщене так, щоб усі могли до нього дістатися', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Circular Strategies Wheel կտավը՝ տպված A1 չափով եւ տեղադրված բոլորի համար հասանելի վայրում' },
+        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Полотно Circular Strategies Wheel, надруковане у форматі A1 і розміщене так, щоб усі могли до нього дістатися', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Circular Strategies Wheel ձևանմուշը՝ տպված A1 չափով եւ տեղադրված բոլորի համար հասանելի վայրում' },
         { en: 'Post-its in three colours: green for opportunities, yellow for curiosities and pink for challenges', uk: 'Стікери трьох кольорів: зелені для можливостей, жовті для запитань/цікавості та рожеві для викликів', ro: 'Post-it-uri în trei culori: verde pentru oportunități, galben pentru curiozități și roz pentru provocări', hy: 'Post-it նշումներ երեք գույնով՝ կանաչը հնարավորությունների, դեղինը հետաքրքրությունների, վարդագույնը մարտահրավերների համար' },
         { en: 'Pens for everyone', uk: 'Ручки для всіх', ro: 'Pixuri pentru toți', hy: 'Գրիչներ բոլորի համար' }
       ],

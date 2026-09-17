@@ -546,7 +546,7 @@ const toolCatalogue = [
         en: "Helps you rapidly assess which circular business models best fit their situation using a scored matrix approach.",
         uk: "Допомагає вам швидко оцінити, які циклічні бізнес-моделі найкраще відповідають їхній ситуації, використовуючи підхід оціненої матриці.",
         ro: "Vă ajută să evaluați rapid care modele de afaceri circulare se potrivesc cel mai bine cu situația lor, folosind o abordare cu matrice cu punctaj.",
-        hy: "Օգնում է ձեզ արագ գնահատել, թե որ շրջանաձև բիզնես մոդելներն են լավագույնս համապատասխանում իրենց իրավիճակին՝ օգտագործելով գնահատված մատրիցային մոտեցումը:"
+        hy: "Օգնում է ձեզ արագ գնահատել, թե որ շրջանաձև բիզնես մոդելներն են լավագույնս համապատասխանում իրենց իրավիճակին՝ օգտագործելով գնահատված մատրիցային մոտեցումը։"
       },
     about:
       {
@@ -668,7 +668,7 @@ const toolCatalogue = [
         en: "Provides you with an overview of the current trends and key questions in the circular economy space with the aim of inspiring discussions and brainstorms.",
         uk: "Надає огляд поточних тенденцій і ключових питань у просторі циркулярної економіки з метою надихнути на дискусії та мозкові штурми.",
         ro: "Vă oferă o imagine de ansamblu asupra tendințelor actuale și a întrebărilor cheie din spațiul economiei circulare, cu scopul de a inspira discuții și brainstorming.",
-        hy: "Ձեզ տրամադրում է շրջանաձև տնտեսության ոլորտում առկա միտումների և հիմնական հարցերի ակնարկ՝ նպատակ ունենալով ոգեշնչել քննարկումները և մտքերի փոթորիկը:"
+        hy: "Ներկայացնում է շրջանաձև տնտեսության արդի միտումների և առանցքային հարցերի ընդհանուր պատկերը՝ նպաստելով քննարկումներին և նոր գաղափարների ձևավորմանը։"
       },
     about:
       {
@@ -728,7 +728,7 @@ const toolCatalogue = [
         en: "Helps companies identify suitable circular design strategies for their products through a guided decision process.",
         uk: "Допомагає компаніям визначити відповідні стратегії циклічного проектування для своїх продуктів за допомогою керованого процесу прийняття рішень.",
         ro: "Ajută companiile să identifice strategii adecvate de proiectare circulară pentru produsele lor printr-un proces de decizie ghidat.",
-        hy: "Օգնում է ընկերություններին որոշել իրենց արտադրանքի համար հարմար շրջանաձև նախագծման ռազմավարությունները՝ առաջնորդվող որոշումների գործընթացի միջոցով:"
+        hy: "Օգնում է ընկերություններին որոշել իրենց արտադրանքի համար հարմար շրջանաձև նախագծման ռազմավարությունները՝ առաջնորդվող որոշումների գործընթացի միջոցով։"
       },
     about:
       {
@@ -1255,7 +1255,7 @@ const toolCatalogue = [
         en: "Supports circularity and identifies strategies for extending product life while reducing environmental impact.",
         uk: "Підтримує циркулярність і визначає стратегії продовження терміну служби продукту при одночасному зниженні впливу на навколишнє середовище.",
         ro: "Sprijină circularitatea și identifică strategii pentru prelungirea duratei de viață a produsului, reducând în același timp impactul asupra mediului.",
-        hy: "Աջակցում է շրջանաձևությանը և բացահայտում է արտադրանքի կյանքը երկարացնելու ռազմավարությունները՝ միաժամանակ նվազեցնելով շրջակա միջավայրի վրա ազդեցությունը:"
+        hy: "Աջակցում է շրջանաձևությանը և բացահայտում է արտադրանքի կյանքը երկարացնելու ռազմավարությունները՝ միաժամանակ նվազեցնելով շրջակա միջավայրի վրա ազդեցությունը։"
       },
     about:
       {
@@ -2732,7 +2732,7 @@ const toolCatalogue = [
         en: "A template for shortlisting circular options and assigning responsibility for reviewing feasibility.",
         uk: "Шаблон для короткого списку циркулярних варіантів і призначення відповідальності за перевірку здійсненності.",
         ro: "Un șablon pentru selectarea opțiunilor circulare pe lista scurtă și atribuirea responsabilității pentru revizuirea fezabilității.",
-        hy: "Շրջանաձև տարբերակների կարճ ցուցակում ընտրելու և իրագործելիության վերանայման պատասխանատվությունը վերապահելու ձևանմուշ:"
+        hy: "Շրջանաձև տարբերակների կարճ ցուցակում ընտրելու և իրագործելիության վերանայման պատասխանատվությունը վերապահելու ձևանմուշ։"
       },
     about:
       {
@@ -2909,7 +2909,7 @@ const toolCatalogue = [
         en: "Reframe problem insights as open-ended How Might We questions, turning challenges into opportunities and creating a productive launchpad for brainstorming.",
         uk: "Переформулюйте уявлення про проблеми як відкриті питання «Як ми можемо», перетворюючи виклики на можливості та створюючи продуктивну панель для мозкового штурму.",
         ro: "Reîncadrați perspectivele problemei ca întrebări deschise How Might We, transformând provocările în oportunități și creând o platformă de lansare productivă pentru brainstorming.",
-        hy: "Խնդիրների պատկերացումները վերակառուցեք որպես բաց հարցադրումներ «Ինչպես կարող ենք մենք»՝ մարտահրավերները վերածելով հնարավորությունների և ստեղծելով արդյունավետ գործարկման հարթակ ուղեղային փոթորկի համար:"
+        hy: "Խնդիրների վերլուծական տվյալները վերակառուցեք որպես բաց հարցադրումներ «Ինչպես կարող ենք մենք»՝ մարտահրավերները վերածելով հնարավորությունների և ստեղծելով արդյունավետ գործարկման հարթակ ուղեղային փոթորկի համար։"
       },
     about:
       {
@@ -2968,7 +2968,7 @@ const toolCatalogue = [
         en: "A method for moving from a large volume of individual ideas to a smaller set of robust composite solutions.",
         uk: "Метод переходу від великого обсягу окремих ідей до меншого набору надійних комплексних рішень.",
         ro: "O metodă de trecere de la un volum mare de idei individuale la un set mai mic de soluții compozite robuste.",
-        hy: "Անհատական ​​գաղափարների մեծ ծավալից դեպի ամուր կոմպոզիտային լուծումների ավելի փոքր շարք անցնելու մեթոդ:"
+        hy: "Անհատական գաղափարների մեծ ծավալից դեպի ամուր կոմպոզիտային լուծումների ավելի փոքր շարք անցնելու մեթոդ։"
       },
     about:
       {
@@ -3027,7 +3027,7 @@ const toolCatalogue = [
         en: "A method for developing bundled ideas into polished, testable concepts that address the original design challenge.",
         uk: "Метод для розробки комплексних ідей у ​​відшліфовані концепції, які можна перевірити, які вирішують завдання оригінального дизайну.",
         ro: "O metodă de dezvoltare a ideilor grupate în concepte șlefuite, testabile, care abordează provocarea originală de proiectare.",
-        hy: "Համակցված գաղափարները զարգացնելու մեթոդ՝ հղկված, փորձարկվող գաղափարների մեջ, որոնք լուծում են սկզբնական դիզայնի մարտահրավերը:"
+        hy: "Համակցված գաղափարները զարգացնելու մեթոդ՝ հղկված, փորձարկվող գաղափարների մեջ, որոնք լուծում են սկզբնական դիզայնի մարտահրավերը։"
       },
     about:
       {
@@ -3086,7 +3086,7 @@ const toolCatalogue = [
         en: "A workshop that challenges participants to redesign a commercial carpet tile to be safe and circular.",
         uk: "Семінар, на якому учасникам пропонується змінити дизайн комерційної килимової плитки, щоб вона була безпечною та круглою.",
         ro: "Un atelier care provoacă participanții să reproiecteze o placă de covor comercială pentru a fi sigură și circulară.",
-        hy: "Սեմինար, որը մարտահրավեր է նետում մասնակիցներին վերանախագծել առևտրային գորգի սալիկը՝ անվտանգ և շրջանաձև լինելու համար:"
+        hy: "Սեմինար, որը մարտահրավեր է նետում մասնակիցներին վերանախագծել առևտրային գորգի սալիկը՝ անվտանգ և շրջանաձև լինելու համար։"
       },
     about:
       {
@@ -3145,7 +3145,7 @@ const toolCatalogue = [
         en: "A collection of canvas-based tools for assessing, ideating, developing and communicating circular economy strategies.",
         uk: "Колекція інструментів на основі канви для оцінювання, розробки ідей, розробки та передачі стратегій циклічної економіки.",
         ro: "O colecție de instrumente bazate pe pânză pentru evaluarea, ideea, dezvoltarea și comunicarea strategiilor de economie circulară.",
-        hy: "Շրջանաձև տնտեսության ռազմավարությունների գնահատման, պատկերացումների, մշակման և հաղորդակցման համար կտավների վրա հիմնված գործիքների հավաքածու:"
+        hy: "Շրջանաձև տնտեսության ռազմավարությունների գնահատման, վերլուծական տվյալների, մշակման և հաղորդակցման համար ձևանմուշների վրա հիմնված գործիքների հավաքածու։"
       },
     about:
       {
@@ -4354,7 +4354,7 @@ const toolCatalogue = [
         en: "To understand your current value chain and identify where circular opportunities may exist.",
         uk: "Щоб зрозуміти ваш поточний ланцюжок створення вартості та визначити, де можуть існувати циклічні можливості.",
         ro: "Pentru a înțelege lanțul valoric actual și a identifica unde pot exista oportunități circulare.",
-        hy: "Հասկանալու ձեր ընթացիկ արժեքային շղթան և պարզելու, թե որտեղ կարող են լինել շրջանաձև հնարավորություններ:"
+        hy: "Հասկանալու ձեր ընթացիկ արժեքային շղթան և պարզելու, թե որտեղ կարող են լինել շրջանաձև հնարավորություններ։"
       },
     about:
       {
@@ -4416,7 +4416,7 @@ const toolCatalogue = [
         en: "To understand user needs, behaviours and barriers before designing circular solutions.",
         uk: "Зрозуміти потреби користувачів, поведінку та бар’єри перед розробкою циклічних рішень.",
         ro: "Pentru a înțelege nevoile, comportamentele și barierele utilizatorilor înainte de a proiecta soluții circulare.",
-        hy: "Հասկանալ օգտագործողի կարիքները, վարքագիծը և խոչընդոտները՝ նախքան շրջանաձև լուծումներ մշակելը:"
+        hy: "Օգնում է հասկանալ օգտագործողի կարիքները, վարքագիծը և խոչընդոտները՝ նախքան շրջանաձև լուծումներ մշակելը։"
       },
     about:
       {
@@ -4976,7 +4976,7 @@ const toolCatalogue = [
         en: "To understand what different stakeholders gain or lose from a circular solution and identify opportunities for creating shared value.",
         uk: "Щоб зрозуміти, що отримують або втрачають різні зацікавлені сторони від кругового рішення, і визначити можливості для створення спільної цінності.",
         ro: "Pentru a înțelege ce câștigă sau pierde diferitele părți interesate dintr-o soluție circulară și să identifice oportunități de creare a valorii comune.",
-        hy: "Հասկանալ, թե տարբեր շահագրգիռ կողմեր ​​ինչ են շահում կամ կորցնում շրջանաձև լուծումից և բացահայտել ընդհանուր արժեք ստեղծելու հնարավորությունները:"
+        hy: "Հասկանալ, թե տարբեր շահագրգիռ կողմեր ինչ են շահում կամ կորցնում շրջանաձև լուծումից և բացահայտել ընդհանուր արժեք ստեղծելու հնարավորությունները։"
       },
     about:
       {
@@ -5039,7 +5039,7 @@ const toolCatalogue = [
         en: "To understand the stakeholders, relationships and flows surrounding your business.",
         uk: "Щоб зрозуміти зацікавлені сторони, відносини та потоки, що оточують ваш бізнес.",
         ro: "Pentru a înțelege părțile interesate, relațiile și fluxurile din jurul afacerii dvs.",
-        hy: "Հասկանալու շահագրգիռ կողմերին, հարաբերություններն ու հոսքերը, որոնք շրջապատում են ձեր բիզնեսը:"
+        hy: "Հասկանալու շահագրգիռ կողմերին, հարաբերություններն ու հոսքերը, որոնք շրջապատում են ձեր բիզնեսը։"
       },
     about:
       {
