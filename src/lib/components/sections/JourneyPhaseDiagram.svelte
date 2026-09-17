@@ -49,7 +49,7 @@
       number: '1',
       panelSide: 'left',
       edgePhase: true,
-      phaseName: { en: 'Learn', uk: 'Навчання', ro: 'Învață', hy: 'Սովորել' },
+      phaseName: { en: 'Learn', uk: 'Навчання', ro: 'Învață', hy: 'Ծանոթանալ' },
       formerLabel: { en: 'Start with the basics', uk: 'Почніть з основ', ro: 'Începe cu elementele de bază', hy: 'Սկսեք հիմունքներից' },
       shortDescription: { en: 'Understand basic CE concepts', uk: 'Зрозумійте базові поняття циркулярної економіки', ro: 'Înțelege conceptele de bază ale economiei circulare', hy: 'Հասկացեք շրջանաձեւ տնտեսության հիմնական գաղափարները' },
       popUpText: {
@@ -85,7 +85,7 @@
       edgePhase: false,
       phaseName: { en: 'Explore', uk: 'Дослідження', ro: 'Explorează', hy: 'Ուսումնասիրել' },
       formerLabel: { en: 'Explore practical options', uk: 'Дослідіть практичні варіанти', ro: 'Explorează opțiuni practice', hy: 'Ուսումնասիրեք գործնական տարբերակներ' },
-      shortDescription: { en: 'Brainstorm and integrate circular principles', uk: 'Генеруйте ідеї та інтегруйте циркулярні принципи', ro: 'Generează idei și integrează principii circulare', hy: 'Գեներացրեք գաղափարներ եւ ներառեք շրջանաձեւ սկզբունքներ' },
+      shortDescription: { en: 'Brainstorm and integrate circular principles', uk: 'Генеруйте ідеї та інтегруйте циркулярні принципи', ro: 'Generează idei și integrează principii circulare', hy: 'Ձևավորեք նոր գաղափարներ և դրանցում ներառեք շրջանաձև տնտեսության սկզբունքները' },
       popUpText: {
         en: 'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
         uk: 'Якщо ви знаєте свої основні виклики й хочете застосувати циркулярні стратегії, принципи дизайну та ідеї, що відповідають вашому бізнес-контексту, ця фаза для вас. Вона допомагає перейти від оцінювання до можливих рішень, згенерувати варіанти й підготувати міцнішу основу для вибору подальших дій.',
@@ -100,7 +100,7 @@
       number: '4',
       panelSide: 'right',
       edgePhase: false,
-      phaseName: { en: 'Evaluate', uk: 'Оцінка потенціалу', ro: 'Analizează', hy: 'Վերլուծել' },
+      phaseName: { en: 'Evaluate', uk: 'Оцінка потенціалу', ro: 'Analizează', hy: 'Գնահատել' },
       formerLabel: { en: 'Evaluate what can work', uk: 'Оцініть, що може спрацювати', ro: 'Analizează ce poate funcționa', hy: 'Գնահատեք, թե ինչը կարող է աշխատել' },
       shortDescription: { en: 'Review and prioritize Circular Economy options', uk: 'Перегляньте й пріоритезуйте варіанти циркулярної економіки', ro: 'Revizuiește și prioritizează opțiunile de economie circulară', hy: 'Վերանայեք եւ առաջնահերթեցրեք շրջանաձեւ տնտեսության տարբերակները' },
       popUpText: {
@@ -134,7 +134,7 @@
       number: '6',
       panelSide: 'right',
       edgePhase: true,
-      phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մոնիթորինգ' },
+      phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկել' },
       formerLabel: { en: 'Track and keep improving', uk: 'Відстежуйте й покращуйте', ro: 'Urmărește și îmbunătățește continuu', hy: 'Հետեւեք եւ շարունակ բարելավեք' },
       shortDescription: { en: 'Review and track progress', uk: 'Переглядайте й відстежуйте прогрес', ro: 'Revizuiește și urmărește progresul', hy: 'Վերանայեք եւ հետեւեք առաջընթացին' },
       popUpText: {

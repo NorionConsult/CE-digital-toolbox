@@ -55,7 +55,7 @@ export const guidedPathways = {
         en: '**Where are you on the SME journey?** || Use this interactive diagram to understand which phase is most suitable for you to start with.',
         uk: '**Де ви перебуваєте на шляху МСП?** || Скористайтеся цією інтерактивною схемою, щоб зрозуміти, з якої фази вам найкраще почати.',
         ro: '**Unde te afli în parcursul IMM?** || Folosește această diagramă interactivă pentru a înțelege care fază este cea mai potrivită pentru început.',
-        hy: '**Որտե՞ղ եք գտնվում ՓՄՁ ճանապարհին։** || Օգտագործեք այս ինտերակտիվ գծապատկերը՝ հասկանալու համար, թե որ փուլից է առավել հարմար սկսել։'
+        hy: '**ՓՄՁ-ների անցման գործընթացի ո՞ր փուլում եք գտնվում։** || Օգտագործեք այս ինտերակտիվ գծապատկերը՝ հասկանալու համար, թե որ փուլից է առավել հարմար սկսել։'
       }
     }
   },

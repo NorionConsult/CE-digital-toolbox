@@ -14,7 +14,7 @@ const taxonomyLabels = {
       en: 'Learn',
       uk: 'Навчання',
       ro: 'Învățare',
-      hy: 'Սովորել'
+      hy: 'Ծանոթանալ'
     },
     Assess: {
       en: 'Assess',
@@ -32,7 +32,7 @@ const taxonomyLabels = {
       en: 'Evaluate',
       uk: 'Аналіз',
       ro: 'Analiză',
-      hy: 'Վերլուծել'
+      hy: 'Գնահատել'
     },
     Implement: {
       en: 'Implement',
