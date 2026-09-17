@@ -23,7 +23,7 @@
     format: { en: 'Format', uk: 'Формат', ro: 'Format', hy: 'Ձեւաչափ' },
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
     provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
-    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' },
+    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Հասանելիություն' },
     none: { en: 'None', uk: 'Немає', ro: 'Niciuna', hy: 'Չկա' },
     resourceTaxonomy: {
       en: 'Resource taxonomy',

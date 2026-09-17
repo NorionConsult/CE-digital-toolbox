@@ -844,7 +844,7 @@ const toolCatalogue = [
         en: "Assists you in self evaluating your current standing in their circular journey by asking simple questions and providing insights based on answers.",
         uk: "Допомагає вам самостійно оцінити ваше поточне становище в їхній круговій подорожі, ставлячи прості запитання та надаючи ідеї на основі відповідей.",
         ro: "Vă ajută să vă autoevaluați situația actuală în călătoria lor circulară punând întrebări simple și oferind perspective bazate pe răspunsuri.",
-        hy: "Օգնում է ձեզ ինքնուրույն գնահատել ձեր ներկայիս դիրքը իրենց շրջանաձև ճանապարհորդության ընթացքում՝ տալով պարզ հարցեր և տրամադրելով պատկերացումներ՝ հիմնված պատասխանների վրա:"
+        hy: "Պարզ հարցերի միջոցով օգնում է ինքնուրույն գնահատել շրջանաձև տնտեսությանն անցնելու գործընթացում ձեր ներկայիս փուլը և պատասխանների հիման վրա տրամադրում համապատասխան գնահատական ու առաջարկություններ։"
       },
     about:
       {
@@ -902,7 +902,7 @@ const toolCatalogue = [
       en: "Helps you benchmark your current Circular Economy level and understand key gaps.",
       uk: "Допоможе вам порівняти ваш поточний рівень циркулярної економіки та зрозуміти ключові прогалини.",
       ro: "Vă ajută să evaluați nivelul actual de economie circulară și să înțelegeți lacunele cheie.",
-      hy: "Օգնում է գնահատել ձեր ընթացիկ շրջանաձև տնտեսության մակարդակը և հասկանալ հիմնական բացերը:"
+      hy: "Օգնում է գնահատել ձեր ընթացիկ շրջանաձև տնտեսության մակարդակը և հասկանալ հիմնական բացերը։"
     },
     about:
       {
@@ -960,7 +960,7 @@ const toolCatalogue = [
       en: "Assesses organisational readiness for resource efficiency and circularity.",
       uk: "Оцінює організаційну готовність до ресурсоефективності та циркулярності.",
       ro: "Evaluează gradul de pregătire organizațional pentru eficiența resurselor și circularitate.",
-      hy: "Գնահատում է կազմակերպչական պատրաստվածությունը ռեսուրսների արդյունավետության և շրջանաձևության համար:"
+      hy: "Գնահատում է կազմակերպչական պատրաստվածությունը ռեսուրսների արդյունավետության և շրջանաձևության համար։"
     },
     about:
       {
@@ -1019,7 +1019,7 @@ const toolCatalogue = [
         en: "Maps materials used in production and helps to showcase material flows of your products",
         uk: "Картографує матеріали, що використовуються у виробництві, і допомагає продемонструвати матеріальні потоки вашої продукції",
         ro: "Mapează materialele utilizate în producție și ajută la prezentarea fluxurilor de materiale ale produselor dvs",
-        hy: "Քարտեզագրում է արտադրության մեջ օգտագործվող նյութերը և օգնում ցուցադրել ձեր արտադրանքի նյութական հոսքերը"
+        hy: "Քարտեզագրում է արտադրության մեջ օգտագործվող նյութերը և տեսողականորեն ներկայացնում արտադրանքի նյութական հոսքերը։"
       },
     about:
       {
@@ -1078,7 +1078,7 @@ const toolCatalogue = [
       en: "Visualises the material flow data of your products/services",
       uk: "Візуалізує дані про матеріальні потоки ваших продуктів/послуг",
       ro: "Vizualizează datele fluxului de materiale ale produselor/serviciilor dvs",
-      hy: "Պատկերացնում է ձեր արտադրանքի/ծառայությունների նյութական հոսքի տվյալները"
+      hy: "Պատկերում է ձեր արտադրանքի կամ ծառայությունների նյութական հոսքերի տվյալները։"
     },
     about:
       {
@@ -1136,7 +1136,7 @@ const toolCatalogue = [
       en: "The tool provides a range of sustainable consumption and production indicators for identifying unsustainable hotspots at country and sector level, pointing to where policy action is needed.",
       uk: "Інструмент надає низку індикаторів сталого споживання та виробництва для виявлення нестабільних гарячих точок на рівні країни та сектору, вказуючи, де потрібні політичні дії.",
       ro: "Instrumentul oferă o serie de indicatori durabili de consum și producție pentru identificarea punctelor fierbinți nesustenabile la nivel de țară și de sector, indicând unde este nevoie de acțiuni politice.",
-      hy: "Գործիքը տրամադրում է կայուն սպառման և արտադրության մի շարք ցուցանիշներ՝ երկրի և հատվածի մակարդակով անկայուն թեժ կետերը բացահայտելու համար՝ մատնանշելով, թե որտեղ է անհրաժեշտ քաղաքականության գործողությունները:"
+      hy: "Գործիքը ներկայացնում է կայուն սպառման և արտադրության մի շարք ցուցանիշներ, որոնք օգնում են երկրի և ոլորտի մակարդակով բացահայտել կայունության տեսանկյունից խնդրահարույց ուղղությունները և հասկանալ, թե որտեղ է անհրաժեշտ քաղաքական միջամտություն։"
     },
     about:
       {
@@ -1196,7 +1196,7 @@ const toolCatalogue = [
         en: "Displays carbon footprint and eco-cost results by lifecycle stage, with additional Life Cycle Impact Assessment (LCIA) insights to identify the most impactful processes",
         uk: "Відображає результати вуглецевого сліду та ековартості за етапами життєвого циклу з додатковою оцінкою впливу життєвого циклу (LCIA) для визначення найбільш впливових процесів",
         ro: "Afișează rezultatele amprentei de carbon și ale costurilor ecologice pe etapele ciclului de viață, cu informații suplimentare privind evaluarea impactului ciclului de viață (LCIA) pentru a identifica procesele cu cel mai mare impact",
-        hy: "Ցուցադրում է ածխածնի հետքը և էկո-արժեքի արդյունքներն ըստ կյանքի ցիկլի փուլի՝ կյանքի ցիկլի ազդեցության գնահատման (LCIA) լրացուցիչ պատկերացումներով՝ ամենաազդեցիկ գործընթացները բացահայտելու համար:"
+        hy: "Ներկայացնում է ածխածնային հետքի և էկոլոգիական ծախսերի գնահատման արդյունքներն ըստ կյանքի ցիկլի փուլերի, ինչպես նաև կյանքի ցիկլի ազդեցության գնահատման (LCIA) լրացուցիչ տվյալներ՝ շրջակա միջավայրի վրա առավել մեծ ազդեցություն ունեցող գործընթացները բացահայտելու համար։"
       },
     about:
       {

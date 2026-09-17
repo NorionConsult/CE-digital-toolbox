@@ -16,7 +16,7 @@
     effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
     provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
-    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Մուտք' },
+    access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Հասանելիություն' },
     resourceMetadata: {
       en: 'Resource metadata',
       uk: 'Метадані ресурсу',
