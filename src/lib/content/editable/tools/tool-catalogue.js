@@ -51,7 +51,7 @@ const toolCatalogue = [
         en: "The SME Reporting Tool helps small businesses create annual greenhouse gas emission reports and track their reduction efforts.",
         uk: "Інструмент звітування SME допомагає малим підприємствам створювати щорічні звіти про викиди парникових газів і відстежувати їх зусилля щодо зменшення викидів.",
         ro: "Instrumentul de raportare pentru IMM-uri ajută întreprinderile mici să creeze rapoarte anuale privind emisiile de gaze cu efect de seră și să urmărească eforturile lor de reducere.",
-        hy: "ՓՄՁ հաշվետվության գործիքն օգնում է փոքր բիզնեսին ստեղծել ջերմոցային գազերի արտանետումների տարեկան հաշվետվություններ և հետևել դրանց կրճատման ջանքերին:"
+        hy: "ՓՄՁ հաշվետվության գործիքն օգնում է փոքր բիզնեսներին կազմել ջերմոցային գազերի արտանետումների տարեկան հաշվետվություններ և հետևել արտանետումների կրճատման ուղղությամբ իրականացվող աշխատանքներին։"
       },
     /* Longer description of the tool which appears on the tool page. Add links like [visible link text](https://example.com). To split paragraphs in one text field, write || between paragraphs. */
       about:
@@ -1955,7 +1955,7 @@ const toolCatalogue = [
         en: "A cloud-based construction waste and sustainability tracking platform for waste, materials, carbon, water and transport emissions.",
         uk: "Хмарна платформа для відстеження будівельних відходів і сталого розвитку для відходів, матеріалів, вуглецю, води та транспортних викидів.",
         ro: "O platformă de urmărire a deșeurilor din construcții și a durabilității bazată pe cloud pentru deșeuri, materiale, emisii de carbon, apă și transport.",
-        hy: "Թափոնների, նյութերի, ածխածնի, ջրի և տրանսպորտի արտանետումների համար ամպի վրա հիմնված շինարարական թափոնների և կայունության հետագծման հարթակ:"
+        hy: "Թափոնների, նյութերի, ածխածնի, ջրի և տրանսպորտի արտանետումների համար ամպի վրա հիմնված շինարարական թափոնների և կայունության հետագծման հարթակ։"
       },
     about:
       {
@@ -2015,7 +2015,7 @@ const toolCatalogue = [
         en: "An EU framework for assessing and reporting building sustainability performance across the full lifecycle.",
         uk: "Рамкова основа ЄС для оцінки та звітності про стійкість будівлі протягом повного життєвого циклу.",
         ro: "Un cadru UE pentru evaluarea și raportarea performanței în domeniul sustenabilității clădirii pe întreg ciclul de viață.",
-        hy: "ԵՄ շրջանակ՝ ողջ կյանքի ընթացքում կայունության կառուցման կատարողականը գնահատելու և զեկուցելու համար:"
+        hy: "ԵՄ շրջանակ՝ ողջ կյանքի ընթացքում կայունության կառուցման կատարողականը գնահատելու և զեկուցելու համար։"
       },
     about:
       {
@@ -2075,7 +2075,7 @@ const toolCatalogue = [
         en: "A carbon calculator for farms and growers that produces carbon output reports for farm, product and supply-chain emissions work.",
         uk: "Калькулятор вуглецю для ферм і виробників, який створює звіти про викиди вуглецю для роботи на фермах, продуктах і ланцюгах постачання.",
         ro: "Un calculator de carbon pentru fermele și cultivatorii care produce rapoarte de producție de carbon pentru lucrările de emisii ale fermelor, ale produselor și ale lanțului de aprovizionare.",
-        hy: "Ածխածնի հաշվիչ ֆերմերային տնտեսությունների և աճեցողների համար, որը արտադրում է ածխածնի ելքի հաշվետվություններ ֆերմերային տնտեսությունների, արտադրանքի և մատակարարման շղթայի արտանետումների աշխատանքների համար:"
+        hy: "Ածխածնի հաշվիչ ֆերմերային տնտեսությունների և աճեցողների համար, որը արտադրում է ածխածնի ելքի հաշվետվություններ ֆերմերային տնտեսությունների, արտադրանքի և մատակարարման շղթայի արտանետումների աշխատանքների համար։"
       },
     about:
       {
@@ -2135,7 +2135,7 @@ const toolCatalogue = [
         en: "A circularity self-assessment tool designed to help food companies understand their circular economy maturity level.",
         uk: "Інструмент самооцінки замкнутості, розроблений, щоб допомогти харчовим компаніям зрозуміти свій рівень зрілості циклічної економіки.",
         ro: "Un instrument de autoevaluare a circularității conceput pentru a ajuta companiile alimentare să înțeleagă nivelul de maturitate al economiei circulare.",
-        hy: "Շրջանաձևության ինքնագնահատման գործիք, որը նախատեսված է սննդամթերքի ընկերություններին օգնելու հասկանալ իրենց շրջանաձև տնտեսության հասունության մակարդակը:"
+        hy: "Շրջանաձևության ինքնագնահատման գործիք, որը նախատեսված է սննդամթերքի ընկերություններին օգնելու հասկանալ իրենց շրջանաձև տնտեսության հասունության մակարդակը։"
       },
     about:
       {
@@ -2195,7 +2195,7 @@ const toolCatalogue = [
         en: "A set of six practical tools for agri-SMEs, entrepreneur support organisations and practitioners working with circular agribusinesses.",
         uk: "Набір із шести практичних інструментів для аграрних малих і середніх підприємств, організацій підтримки підприємців і практиків, які працюють із циклічним агробізнесом.",
         ro: "Un set de șase instrumente practice pentru IMM-uri agricole, organizații de sprijinire a antreprenorilor și practicieni care lucrează cu agro-afacerile circulare.",
-        hy: "Վեց գործնական գործիքների հավաքածու ագրոՓՄՁ-ների, ձեռնարկատերերին աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի հետ աշխատող մասնագետների համար:"
+        hy: "Վեց գործնական գործիքների հավաքածու ագրոՓՄՁ-ների, ձեռնարկատերերին աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի հետ աշխատող մասնագետների համար։"
       },
     about:
       {
@@ -2555,7 +2555,7 @@ const toolCatalogue = [
         en: "A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.",
         uk: "Чотирьохетапна структура «Плануй-Виконуй-Перевіряй-Дій», яка допомагає МСП інтерпретувати результати, визначати першопричини та планувати цілеспрямовані покращення.",
         ro: "Un cadru în patru etape Planificați-Efectuați-Verificați-Acționați, care ajută IMM-urile să interpreteze rezultatele, să identifice cauzele fundamentale și să planifice îmbunătățiri vizate.",
-        hy: "Չորս քայլ Plan-Do-Check-Act շրջանակ, որն օգնում է ՓՄՁ-ներին մեկնաբանել արդյունքները, բացահայտել հիմնական պատճառները և պլանավորել նպատակային բարելավումներ:"
+        hy: "Չորս քայլ Plan-Do-Check-Act շրջանակ, որն օգնում է ՓՄՁ-ներին մեկնաբանել արդյունքները, բացահայտել հիմնական պատճառները և պլանավորել նպատակային բարելավումներ։"
       },
     about:
       {
@@ -2614,7 +2614,7 @@ const toolCatalogue = [
         en: "A visual canvas tool to map circular ecosystems, review what is and is not working, and redesign a circular business model from real results.",
         uk: "Інструмент візуального полотна для картографування кругових екосистем, перегляду того, що працює, а що не працює, і перепроектування циклічної бізнес-моделі на основі реальних результатів.",
         ro: "Un instrument de pânză vizuală pentru a mapa ecosistemele circulare, a revizui ceea ce funcționează sau nu și a reproiecta un model de afaceri circular din rezultate reale.",
-        hy: "Վիզուալ կտավ գործիք՝ շրջանաձև էկոհամակարգերը քարտեզագրելու, վերանայելու, թե ինչն է աշխատում և ինչ չէ, և վերանախագծում է շրջանաձև բիզնես մոդել իրական արդյունքներից:"
+        hy: "Վիզուալ ձևանմուշ գործիք՝ շրջանաձև էկոհամակարգերը քարտեզագրելու, վերանայելու, թե ինչն է աշխատում և ինչ չէ, և վերանախագծում է շրջանաձև բիզնես մոդել իրական արդյունքներից։"
       },
     about:
       {
@@ -3548,7 +3548,7 @@ const toolCatalogue = [
         en: "Supports reuse of building materials salvaged from damaged buildings.",
         uk: "Підтримує повторне використання будівельних матеріалів, врятованих із пошкоджених будівель.",
         ro: "Sprijină reutilizarea materialelor de construcție recuperate din clădirile deteriorate.",
-        hy: "Աջակցում է վնասված շենքերից փրկված շինանյութերի վերաօգտագործմանը:"
+        hy: "Աջակցում է վնասված շենքերից փրկված շինանյութերի վերաօգտագործմանը։"
       },
     about:
       {
@@ -3664,7 +3664,7 @@ const toolCatalogue = [
         en: "Estimates the volume of waste generated by war-related building damage.",
         uk: "Оцінює обсяг відходів, утворених у результаті пошкодження будівель, пов’язаних із війною.",
         ro: "Estimează volumul de deșeuri generate de daunele clădirilor cauzate de război.",
-        hy: "Գնահատում է պատերազմի պատճառով շենքերի վնասման արդյունքում առաջացած թափոնների ծավալը:"
+        hy: "Գնահատում է պատերազմի պատճառով շենքերի վնասման արդյունքում առաջացած թափոնների ծավալը։"
       },
     about:
       {
@@ -3948,7 +3948,7 @@ const toolCatalogue = [
         en: "Reports and guidelines on building energy efficiency retrofits.",
         uk: "Звіти та рекомендації щодо енергоефективної модернізації будівель.",
         ro: "Rapoarte și orientări privind modernizarea eficienței energetice a clădirilor.",
-        hy: "Շենքերի էներգաարդյունավետության վերազինման վերաբերյալ հաշվետվություններ և ուղեցույցներ:"
+        hy: "Շենքերի էներգաարդյունավետության վերազինման վերաբերյալ հաշվետվություններ և ուղեցույցներ։"
       },
     about:
       {
