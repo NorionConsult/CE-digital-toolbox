@@ -1434,7 +1434,7 @@ const toolCatalogue = [
         en: "To simulate running a circular electronics company making decisions on resource management, production processes, and revenue models, while responding to external disruptions such as policy changes and market shocks that test the resilience of circular vs. linear strategies",
         uk: "Змоделювати роботу електронної компанії циклічного циклу, яка приймає рішення щодо управління ресурсами, виробничими процесами та моделями доходів, реагуючи на зовнішні збої, такі як зміни політики та ринкові потрясіння, які перевіряють стійкість циклічних проти лінійних стратегій.",
         ro: "Pentru a simula conducerea unei companii de electronice circulare care ia decizii cu privire la gestionarea resurselor, procesele de producție și modelele de venituri, răspunzând în același timp la perturbări externe, cum ar fi schimbările de politică și șocurile pieței care testează rezistența strategiilor circulare vs. liniare",
-        hy: "Մոդելավորել շրջանաձև էլեկտրոնիկայի ընկերության գործունեությունը, որը որոշումներ է կայացնում ռեսուրսների կառավարման, արտադրական գործընթացների և եկամուտների մոդելների վերաբերյալ՝ միաժամանակ արձագանքելով արտաքին խափանումներին, ինչպիսիք են քաղաքականության փոփոխությունները և շուկայական ցնցումները, որոնք ստուգում են շրջանաձև և գծային ռազմավարությունների ճկունությունը:"
+        hy: "Օգնում է մոդելավորել շրջանաձև էլեկտրոնիկայի ընկերության գործունեությունը, որը որոշումներ է կայացնում ռեսուրսների կառավարման, արտադրական գործընթացների և եկամուտների մոդելների վերաբերյալ՝ միաժամանակ արձագանքելով արտաքին խափանումներին, ինչպիսիք են քաղաքականության փոփոխությունները և շուկայական ցնցումները, որոնք ստուգում են շրջանաձև և գծային ռազմավարությունների ճկունությունը։"
       },
     about:
       {
@@ -1491,7 +1491,7 @@ const toolCatalogue = [
         en: "The openLCA software tool aims to assist users in performing a self-assessment and includes free demo sessions on how to use the tool.",
         uk: "Програмний інструмент openLCA має на меті допомогти користувачам у виконанні самооцінки та включає безкоштовні демонстраційні сесії щодо використання інструменту.",
         ro: "Instrumentul software openLCA își propune să ajute utilizatorii să efectueze o autoevaluare și include sesiuni demo gratuite despre cum să folosească instrumentul.",
-        hy: "OpenLCA ծրագրային գործիքը նպատակ ունի օգնել օգտատերերին ինքնագնահատում կատարելիս և ներառում է անվճար ցուցադրական նիստեր, թե ինչպես օգտագործել գործիքը:"
+        hy: "OpenLCA ծրագրային գործիքը նպատակ ունի օգնել օգտատերերին ինքնագնահատում կատարելիս և ներառում է անվճար ցուցադրական նիստեր, թե ինչպես օգտագործել գործիքը։"
       },
     about:
       {
@@ -1547,7 +1547,7 @@ const toolCatalogue = [
         en: "A simplified eco-design tool for early-stage packaging design decisions, showing the recyclability impact of design choices before production begins.",
         uk: "Спрощений інструмент еко-дизайну для прийняття рішень щодо дизайну упаковки на ранніх стадіях, який показує вплив вибору дизайну на придатність до переробки ще до початку виробництва.",
         ro: "Un instrument simplificat de proiectare ecologică pentru deciziile de proiectare a ambalajelor în stadiu incipient, care arată impactul asupra reciclabilității al alegerilor de proiectare înainte de începerea producției.",
-        hy: "Պարզեցված էկո-դիզայնի գործիք փաթեթավորման նախագծման վաղ փուլերում որոշումների համար, որը ցույց է տալիս դիզայնի ընտրության վերամշակելիության ազդեցությունը մինչև արտադրությունը սկսելը:"
+        hy: "Պարզեցված էկոնախագծումի գործիք փաթեթավորման նախագծման վաղ փուլերում որոշումների համար, որը ցույց է տալիս դիզայնի ընտրության վերամշակելիության ազդեցությունը մինչև արտադրությունը սկսելը։"
       },
     about:
       {
@@ -1603,7 +1603,7 @@ const toolCatalogue = [
         en: "A free web tool that assesses packaging across five system-wide dimensions, including design for recyclability, community access and packaging fate.",
         uk: "Безкоштовний веб-інструмент, який оцінює упаковку за п’ятьма загальносистемними параметрами, включно з придатністю до переробки, доступом для спільноти та долею упаковки.",
         ro: "Un instrument web gratuit care evaluează ambalajul în cinci dimensiuni la nivelul întregului sistem, inclusiv designul pentru reciclare, accesul comunității și soarta ambalajului.",
-        hy: "Անվճար վեբ գործիք, որը գնահատում է փաթեթավորումը ամբողջ համակարգի հինգ չափսերով, ներառյալ վերամշակման, համայնքի հասանելիության և փաթեթավորման ճակատագիրը:"
+        hy: "Անվճար վեբ գործիք, որը գնահատում է փաթեթավորումը ամբողջ համակարգի հինգ չափանիշներով, ներառյալ վերամշակման, համայնքի հասանելիության և փաթեթավորման ճակատագիրը։"
       },
     about:
       {
@@ -1659,7 +1659,7 @@ const toolCatalogue = [
         en: "A data-driven planning tool that calculates the circularity of plastic packaging and helps companies model reduction, reuse, redesign and substitution solutions.",
         uk: "Інструмент планування на основі даних, який розраховує циркулярність пластикової упаковки та допомагає компаніям моделювати рішення щодо скорочення, повторного використання, редизайну та заміни.",
         ro: "Un instrument de planificare bazat pe date care calculează circularitatea ambalajelor din plastic și ajută companiile să modeleze soluții de reducere, reutilizare, reproiectare și înlocuire.",
-        hy: "Տվյալների վրա հիմնված պլանավորման գործիք, որը հաշվարկում է պլաստիկ փաթեթավորման շրջանաձևությունը և օգնում ընկերություններին մոդելավորել կրճատման, վերաօգտագործման, վերանախագծման և փոխարինման լուծումներ:"
+        hy: "Տվյալների վրա հիմնված պլանավորման գործիք, որը հաշվարկում է պլաստիկ փաթեթավորման շրջանաձևությունը և օգնում ընկերություններին մոդելավորել կրճատման, վերաօգտագործման, վերանախագծման և փոխարինման լուծումներ։"
       },
     about:
       {
