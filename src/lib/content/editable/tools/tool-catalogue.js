@@ -1775,7 +1775,7 @@ const toolCatalogue = [
         en: "A free standardised methodology and tool for hotels to calculate the carbon footprint of stays and meetings.",
         uk: "Безкоштовна стандартизована методологія та інструмент для готелів для розрахунку вуглецевого сліду перебування та зустрічей.",
         ro: "O metodologie și un instrument standardizat gratuit pentru hoteluri pentru a calcula amprenta de carbon a sejururilor și întâlnirilor.",
-        hy: "Անվճար ստանդարտացված մեթոդաբանություն և գործիք հյուրանոցների համար՝ կացության և հանդիպումների ածխածնի հետքը հաշվարկելու համար:"
+        hy: "Անվճար ստանդարտացված մեթոդաբանություն և գործիք հյուրանոցների համար՝ կացության և հանդիպումների ածխածնի հետքը հաշվարկելու համար։"
       },
     about:
       {
@@ -1835,7 +1835,7 @@ const toolCatalogue = [
         en: "A diagnostic tool for tourism SMEs that profiles progress towards digital and green transformation and identifies opportunities to improve competitiveness.",
         uk: "Інструмент діагностики для туристичних МСП, який описує прогрес у напрямку цифрової та екологічної трансформації та визначає можливості для підвищення конкурентоспроможності.",
         ro: "Un instrument de diagnosticare pentru IMM-urile din turism care profilează progresul către transformarea digitală și ecologică și identifică oportunități de îmbunătățire a competitivității.",
-        hy: "Զբոսաշրջության ՓՄՁ-ների համար ախտորոշիչ գործիք, որը բնութագրում է առաջընթացը դեպի թվային և կանաչ փոխակերպում և բացահայտում մրցունակությունը բարելավելու հնարավորությունները:"
+        hy: "Զբոսաշրջության ՓՄՁ-ների համար ախտորոշիչ գործիք, որը բնութագրում է առաջընթացը դեպի թվային և կանաչ փոխակերպում և բացահայտում մրցունակությունը բարելավելու հնարավորությունները։"
       },
     about:
       {
@@ -1895,7 +1895,7 @@ const toolCatalogue = [
         en: "A circular economy management and monitoring tool for tourism businesses and destinations.",
         uk: "Інструмент управління економікою замкнутого циклу та моніторингу для туристичних підприємств і напрямків.",
         ro: "Un instrument de management și monitorizare a economiei circulare pentru întreprinderile și destinațiile turistice.",
-        hy: "Շրջանաձև տնտեսության կառավարման և մոնիտորինգի գործիք զբոսաշրջային բիզնեսների և ուղղությունների համար:"
+        hy: "Շրջանաձև տնտեսության կառավարման և մոնիտորինգի գործիք զբոսաշրջային բիզնեսների և ուղղությունների համար։"
       },
     about:
       {
