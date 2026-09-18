@@ -372,7 +372,7 @@ const toolCatalogue = [
         en: "Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) template, sticky notes, real-time team editing, and voting tools for a structured online workshop.",
         uk: "Безкоштовна онлайн-дошка для спільної роботи з готовим шаблоном сильних і слабких сторін, можливостей і загроз (SWOT), наліпками, командним редагуванням у режимі реального часу та інструментами голосування для структурованого онлайн-семінару.",
         ro: "Tablă albă colaborativă online gratuită cu șablon SWOT (Strengths, Weaknesses, Opportunities and Threats), note lipicioase, editare în timp real în echipă și instrumente de vot pentru un atelier online structurat.",
-        hy: "Անվճար առցանց համագործակցային գրատախտակ՝ պատրաստի ուժեղ, թույլ կողմեր, հնարավորություններ և սպառնալիքներ (SWOT) ձևանմուշով, կպչուն գրառումներով, իրական ժամանակում թիմային խմբագրումով և քվեարկության գործիքներով՝ կառուցվածքային առցանց սեմինարի համար:"
+        hy: "Անվճար առցանց համագործակցային գրատախտակ՝ ուժեղ և թույլ կողմերի, հնարավորությունների ու սպառնալիքների (SWOT) վերլուծության պատրաստի ձևանմուշով, կպչուն գրառումներով, իրական ժամանակում թիմային խմբագրման և քվեարկության գործիքներով՝ կառուցվածքային առցանց աշխատաժողով անցկացնելու համար։"
       },
     about:
       {
@@ -607,7 +607,7 @@ const toolCatalogue = [
         en: "Online calculator that builds a data-backed business case for circular investment by computing financial return, payback time, and emissions impact using discounted cash flow logic.",
         uk: "Онлайн-калькулятор, який будує бізнес-обґрунтування циклічних інвестицій, обчислюючи фінансову віддачу, час окупності та вплив викидів за допомогою логіки дисконтованого грошового потоку.",
         ro: "Calculator online care construiește un caz de afaceri bazat pe date pentru investiții circulare, calculând randamentul financiar, timpul de rambursare și impactul emisiilor folosind logica fluxului de numerar redus.",
-        hy: "Առցանց հաշվիչ, որը ստեղծում է տվյալների վրա հիմնված բիզնես գործ՝ շրջանաձև ներդրումների համար՝ հաշվարկելով ֆինանսական վերադարձը, վերադարձի ժամանակը և արտանետումների ազդեցությունը՝ օգտագործելով զեղչված դրամական հոսքերի տրամաբանությունը:"
+        hy: "Առցանց հաշվիչ, որն օգնում է գնահատել շրջանաձև ներդրումների տնտեսական հիմնավորվածությունը՝ հաշվարկելով ներդրման ֆինանսական եկամտաբերությունը, հետգնման ժամկետը և արտանետումների վրա ազդեցությունը՝ զեղչված դրամական հոսքերի մեթոդի կիրառմամբ։"
       },
     about:
       {
@@ -1374,7 +1374,7 @@ const toolCatalogue = [
         en: "To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage",
         uk: "Допомогти командам візуально скласти карту та спроектувати замкнуті матеріальні цикли для свого бізнесу, накресливши, як матеріали, продукти та процеси перетікають між учасниками циклічної системи, і визначивши, які сторони мають бути залучені на кожному етапі",
         ro: "Pentru a ajuta echipele să mapeze vizual și să proiecteze bucle de materiale închise pentru afacerea lor, schițând modul în care materialele, produsele și procesele circulă între actori într-un sistem circular și identificând părțile care trebuie implicate în fiecare etapă",
-        hy: "Օգնել թիմերին տեսողականորեն քարտեզագրել և նախագծել փակ նյութական օղակներ իրենց բիզնեսի համար՝ ուրվագծելով, թե ինչպես են նյութերը, ապրանքները և գործընթացները հոսում շրջանաձև համակարգի դերակատարների միջև և բացահայտելով, թե որ կողմերը պետք է ներգրավվեն յուրաքանչյուր փուլում:"
+        hy: "Օգնում է թիմերին տեսողականորեն քարտեզագրել և նախագծել բիզնեսի նյութական փակ շրջափուլերը՝ ցույց տալով նյութերի, արտադրանքի և գործընթացների շարժը շրջանաձև համակարգի տարբեր մասնակիցների միջև և սահմանելով, թե յուրաքանչյուր փուլում որ կողմերը պետք է ներգրավվեն։"
       },
     about:
       {
@@ -2791,7 +2791,7 @@ const toolCatalogue = [
         en: "A toolkit for identifying inefficiencies, customer pain points and circular business model opportunities.",
         uk: "Набір інструментів для визначення неефективності, проблемних точок клієнтів і можливостей циклічної бізнес-моделі.",
         ro: "Un set de instrumente pentru identificarea ineficiențelor, punctelor critice ale clienților și oportunităților de model de afaceri circular.",
-        hy: "Գործիքակազմ՝ անարդյունավետությունները, հաճախորդների ցավի կետերը և բիզնես մոդելի շրջանաձև հնարավորությունները բացահայտելու համար:"
+        hy: "Գործիքակազմ՝ անարդյունավետությունները, հաճախորդների հիմնական խնդիրները և բիզնես մոդելի շրջանաձև հնարավորությունները բացահայտելու համար։"
       },
     about:
       {
@@ -2850,7 +2850,7 @@ const toolCatalogue = [
         en: "A scoring matrix for assessing design flaws in a product lifecycle and identifying circular design improvement suggestions.",
         uk: "Матриця балів для оцінки недоліків дизайну в життєвому циклі продукту та визначення пропозицій щодо циклічного вдосконалення дизайну.",
         ro: "O matrice de punctaj pentru evaluarea defectelor de design în ciclul de viață al unui produs și identificarea sugestiilor de îmbunătățire a designului circular.",
-        hy: "Գնահատման մատրիցա՝ արտադրանքի կյանքի ցիկլի նախագծման թերությունները գնահատելու և դիզայնի բարելավման շրջանաձև առաջարկները բացահայտելու համար:"
+        hy: "Գնահատման մատրիցա՝ արտադրանքի կյանքի ցիկլի նախագծման թերությունները գնահատելու և դիզայնի բարելավման շրջանաձև առաջարկները բացահայտելու համար։"
       },
     about:
       {
@@ -4478,7 +4478,7 @@ const toolCatalogue = [
         en: "To assess the circularity, opportunities and financing risks of a circular project.",
         uk: "Оцінити циркулярність, можливості та фінансові ризики циркулярного проекту.",
         ro: "Pentru a evalua circularitatea, oportunitățile și riscurile de finanțare ale unui proiect circular.",
-        hy: "Շրջանաձև ծրագրի շրջանակայինությունը, հնարավորությունները և ֆինանսավորման ռիսկերը գնահատելու համար:"
+        hy: "Շրջանաձև ծրագրի շրջանակայինությունը, հնարավորությունները և ֆինանսավորման ռիսկերը գնահատելու համար։"
       },
     about:
       {
@@ -4541,7 +4541,7 @@ const toolCatalogue = [
         en: "To turn assumptions about a new solution into clear experiments that can be tested.",
         uk: "Щоб перетворити припущення щодо нового рішення в чіткі експерименти, які можна перевірити.",
         ro: "Pentru a transforma ipotezele despre o nouă soluție în experimente clare care pot fi testate.",
-        hy: "Նոր լուծման մասին ենթադրությունները վերածել պարզ փորձերի, որոնք կարող են փորձարկվել:"
+        hy: "Նոր լուծման մասին ենթադրությունները վերածել պարզ փորձերի, որոնք կարող են փորձարկվել։"
       },
     about:
       {
@@ -4604,7 +4604,7 @@ const toolCatalogue = [
         en: "To compare circular concepts and decide which ideas are worth pursuing.",
         uk: "Щоб порівняти циклічні концепції та вирішити, які ідеї варто реалізувати.",
         ro: "Pentru a compara concepte circulare și a decide ce idei merită urmărite.",
-        hy: "Համեմատել շրջանաձև հասկացությունները և որոշել, թե որ գաղափարներն են արժե հետապնդել:"
+        hy: "Համեմատել շրջանաձև հասկացությունները և որոշել, թե որ գաղափարներն են արժե հետապնդել։"
       },
     about:
       {
@@ -4732,7 +4732,7 @@ const toolCatalogue = [
         en: "To identify which circular ideas should be taken forward first.",
         uk: "Щоб визначити, які циклічні ідеї слід просувати в першу чергу.",
         ro: "Pentru a identifica ce idei circulare ar trebui promovate mai întâi.",
-        hy: "Որոշելու համար, թե որ շրջանաձև գաղափարները պետք է առաջ տանել առաջինը:"
+        hy: "Որոշելու համար, թե որ շրջանաձև գաղափարները պետք է առաջ տանել առաջինը։"
       },
     about:
       {
@@ -5102,7 +5102,7 @@ const toolCatalogue = [
         en: "To turn a circular idea into a tangible prototype and test it with users before investing in full development.",
         uk: "Щоб перетворити кругову ідею на реальний прототип і протестувати його з користувачами, перш ніж інвестувати в повну розробку.",
         ro: "Pentru a transforma o idee circulară într-un prototip tangibil și a o testa cu utilizatorii înainte de a investi în dezvoltarea completă.",
-        hy: "Շրջանաձև գաղափարը շոշափելի նախատիպի վերածելու և այն օգտատերերի հետ փորձարկելու համար նախքան ամբողջական զարգացման մեջ ներդրումներ կատարելը:"
+        hy: "Շրջանաձև գաղափարը շոշափելի նախատիպի վերածելու և այն օգտատերերի հետ փորձարկելու համար նախքան ամբողջական զարգացման մեջ ներդրումներ կատարելը։"
       },
     about:
       {
@@ -5165,7 +5165,7 @@ const toolCatalogue = [
         en: "Life Cycle Assessment (LCA)-based environmental impact measurement platform for textiles and apparel products.",
         uk: "Платформа для вимірювання впливу на навколишнє середовище текстилю та одягу на основі оцінки життєвого циклу (LCA).",
         ro: "Platformă de măsurare a impactului asupra mediului bazată pe evaluarea ciclului de viață (LCA) pentru textile și produse de îmbrăcăminte.",
-        hy: "Կյանքի ցիկլի գնահատման (LCA) վրա հիմնված շրջակա միջավայրի վրա ազդեցության չափման հարթակ տեքստիլի և հագուստի արտադրանքի համար:"
+        hy: "Կյանքի ցիկլի գնահատման (LCA) վրա հիմնված շրջակա միջավայրի վրա ազդեցության չափման հարթակ տեքստիլի և հագուստի արտադրանքի համար։"
       },
     about:
       {
@@ -5230,7 +5230,7 @@ const toolCatalogue = [
         en: "A circularity calculator that measures how effectively a product keeps its materials in use throughout its life cycle.",
         uk: "Калькулятор циркулярності, який вимірює, наскільки ефективно продукт зберігає свої матеріали у використанні протягом усього життєвого циклу.",
         ro: "Un calculator de circularitate care măsoară cât de eficient un produs își menține materialele în uz pe tot parcursul ciclului său de viață.",
-        hy: "Շրջանաձևության հաշվիչ, որը չափում է, թե որքան արդյունավետ է արտադրանքը օգտագործում իր նյութերն իր կյանքի ցիկլի ընթացքում:"
+        hy: "Շրջանաձևության հաշվիչ, որը չափում է, թե որքան արդյունավետ է արտադրանքը օգտագործում իր նյութերն իր կյանքի ցիկլի ընթացքում։"
       },
     about:
       {
