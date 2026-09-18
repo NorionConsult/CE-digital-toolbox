@@ -1715,7 +1715,7 @@ const toolCatalogue = [
         en: "A practical toolbox divided into 13 topics that match Green Key criteria and help tourism SMEs prepare for circular and environmental improvements.",
         uk: "Практичний інструментарій, поділений на 13 тем, які відповідають критеріям Зеленого ключа та допомагають малим і середнім підприємствам у сфері туризму підготуватися до циклічних і екологічних покращень.",
         ro: "O cutie de instrumente practice împărțită în 13 subiecte care se potrivesc criteriilor cheie verde și ajută IMM-urile din turism să se pregătească pentru îmbunătățiri circulare și de mediu.",
-        hy: "Գործնական գործիքների տուփ, որը բաժանված է 13 թեմաների, որոնք համապատասխանում են Green Key չափանիշներին և օգնում են զբոսաշրջային ՓՄՁ-ներին նախապատրաստվել շրջանաձև և բնապահպանական բարելավմանը:"
+        hy: "Գործնական գործիքակազմ, որը բաժանված է 13 թեմաների, որոնք համապատասխանում են Green Key չափանիշներին և օգնում են զբոսաշրջային ՓՄՁ-ներին նախապատրաստվել շրջանաձև և բնապահպանական բարելավմանը։"
       },
     about:
       {
@@ -2255,7 +2255,7 @@ const toolCatalogue = [
         en: "Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.",
         uk: "Практичні інструменти вимірювання та відстеження для агропродовольчих підприємств для кількісної оцінки харчових відходів, виявлення гарячих точок і встановлення цілей скорочення.",
         ro: "Instrumente practice de măsurare și urmărire pentru întreprinderile agroalimentare pentru a cuantifica risipa alimentară, a identifica punctele fierbinți și a stabili obiective de reducere.",
-        hy: "Գործնական չափման և հետևելու գործիքներ ագրոպարենային բիզնեսի համար՝ սննդամթերքի թափոնները քանակականացնելու, թեժ կետերը բացահայտելու և կրճատման թիրախներ սահմանելու համար:"
+        hy: "Գործնական չափման և հետևելու գործիքներ ագրոպարենային բիզնեսի համար՝ սննդամթերքի թափոնները քանակականացնելու, խնդրահարույց ուղղությունները բացահայտելու և կրճատման նպատակներ սահմանելու համար։"
       },
     about:
       {
@@ -2315,7 +2315,7 @@ const toolCatalogue = [
         en: "A step-by-step toolbox that helps apparel brands adopt circular business models and independently drive circular innovation.",
         uk: "Покроковий набір інструментів, який допомагає брендам одягу запроваджувати кругові бізнес-моделі та самостійно впроваджувати циклічні інновації.",
         ro: "O cutie de instrumente pas cu pas care ajută mărcile de îmbrăcăminte să adopte modele de afaceri circulare și să conducă independent inovația circulară.",
-        hy: "Քայլ առ քայլ գործիքների տուփ, որն օգնում է հագուստի ապրանքանիշերին ընդունել շրջանաձև բիզնես մոդելներ և ինքնուրույն առաջ մղել շրջանաձև նորարարություն:"
+        hy: "Քայլ առ քայլ գործիքակազմ, որն օգնում է հագուստի ապրանքանիշերին ընդունել շրջանաձև բիզնես մոդելներ և ինքնուրույն առաջ մղել շրջանաձև նորարարություն։"
       },
     about:
       {
@@ -2375,7 +2375,7 @@ const toolCatalogue = [
         en: "An EU mapping tool and network for textile collection, sorting and recycling infrastructure.",
         uk: "Інструмент картографування ЄС та мережа для інфраструктури збору, сортування та переробки текстилю.",
         ro: "Un instrument de cartografiere a UE și o rețea pentru infrastructura de colectare, sortare și reciclare a textilelor.",
-        hy: "ԵՄ քարտեզագրման գործիք և ցանց տեքստիլի հավաքման, տեսակավորման և վերամշակման ենթակառուցվածքների համար:"
+        hy: "ԵՄ քարտեզագրման գործիք և ցանց տեքստիլի հավաքման, տեսակավորման և վերամշակման ենթակառուցվածքների համար։"
       },
     about:
       {
@@ -2435,7 +2435,7 @@ const toolCatalogue = [
         en: "A fibre traceability platform using embedded tracers and blockchain to authenticate sustainability claims from raw material to finished garment.",
         uk: "Платформа відстеження волокна, яка використовує вбудовані трасувальники та блокчейн для підтвердження автентичності тверджень щодо екологічності від сировини до готового одягу.",
         ro: "O platformă de trasabilitate a fibrelor care utilizează trasoare încorporate și blockchain pentru a autentifica afirmațiile de sustenabilitate de la materia primă până la îmbrăcămintea finită.",
-        hy: "Օպտիկամանրաթելային հետագծելիության հարթակ, որն օգտագործում է ներկառուցված հետագծեր և բլոկչեյն՝ հաստատելու կայունության պահանջները հումքից մինչև պատրաստի հագուստ:"
+        hy: "Օպտիկամանրաթելային հետագծելիության հարթակ, որն օգտագործում է ներկառուցված հետագծեր և բլոկչեյն՝ հաստատելու կայունության պահանջները հումքից մինչև պատրաստի հագուստ։"
       },
     about:
       {
@@ -2495,7 +2495,7 @@ const toolCatalogue = [
         en: "An industry measurement suite for environmental and social sustainability across textile supply chains.",
         uk: "Набір галузевих вимірювань для екологічної та соціальної стійкості в ланцюгах постачання текстилю.",
         ro: "O suită de măsurare a industriei pentru sustenabilitatea socială și de mediu în lanțurile de aprovizionare cu textile.",
-        hy: "Արդյունաբերության չափման հավաքածու՝ բնապահպանական և սոցիալական կայունության համար տեքստիլ մատակարարման շղթաներում:"
+        hy: "Արդյունաբերության չափման հավաքածու՝ բնապահպանական և սոցիալական կայունության համար տեքստիլ մատակարարման շղթաներում։"
       },
     about:
       {
@@ -3204,7 +3204,7 @@ const toolCatalogue = [
         en: "A database mapping textile sorting and recycling capacity.",
         uk: "База даних, що відображає потужності сортування та переробки текстилю.",
         ro: "O bază de date care prezintă capacitatea de sortare și reciclare a textilelor.",
-        hy: "Տեքստիլի տեսակավորման և վերամշակման կարողությունների քարտեզագրման տվյալների բազա:"
+        hy: "Տեքստիլի տեսակավորման և վերամշակման կարողությունների քարտեզագրման տվյալների բազա։"
       },
     about:
       {
@@ -3264,7 +3264,7 @@ const toolCatalogue = [
         en: "Software for building Life Cycle Assessment (LCA)-based Digital Product Passports for fashion and apparel products.",
         uk: "Програмне забезпечення для створення цифрових паспортів продуктів на основі оцінки життєвого циклу (LCA) для товарів моди та одягу.",
         ro: "Software pentru construirea de pașapoarte pentru produse digitale bazate pe evaluarea ciclului de viață (LCA) pentru produse de modă și îmbrăcăminte.",
-        hy: "Նորաձևության և հագուստի ապրանքների համար կյանքի ցիկլի գնահատման (LCA) վրա հիմնված թվային արտադրանքի անձնագրեր ստեղծելու ծրագրակազմ:"
+        hy: "Նորաձևության և հագուստի ապրանքների համար կյանքի ցիկլի գնահատման (LCA) վրա հիմնված թվային արտադրանքի անձնագրեր ստեղծելու ծրագրակազմ։"
       },
     about:
       {
@@ -4852,7 +4852,7 @@ const toolCatalogue = [
         en: "Webpage introducing circular economy principles and their link to organic agriculture, with a downloadable introductory booklet.",
         uk: "Веб-сторінка, на якій представлені принципи циклічної економіки та їх зв’язок з органічним сільським господарством, а також ознайомчий буклет, який можна завантажити.",
         ro: "Pagina web care prezintă principiile economiei circulare și legătura acestora cu agricultura ecologică, cu o broșură introductivă descărcabilă.",
-        hy: "Վեբ էջ, որը ներկայացնում է շրջանաձև տնտեսության սկզբունքները և դրանց կապը օրգանական գյուղատնտեսության հետ՝ ներբեռնվող ներածական գրքույկով:"
+        hy: "Վեբ էջ, որը ներկայացնում է շրջանաձև տնտեսության սկզբունքները և դրանց կապը օրգանական գյուղատնտեսության հետ՝ ներբեռնվող ներածական գրքույկով։"
       },
     about:
       {
@@ -4914,7 +4914,7 @@ const toolCatalogue = [
         en: "Directory of training courses on organic agriculture and circular economy, including a dedicated circular economy course.",
         uk: "Довідник навчальних курсів з органічного сільського господарства та економіки замкнутого циклу, включаючи спеціальний курс економіки замкнутого циклу.",
         ro: "Director de cursuri de formare privind agricultura ecologică și economia circulară, inclusiv un curs dedicat economiei circulare.",
-        hy: "Օրգանական գյուղատնտեսության և շրջանաձև տնտեսության վերաբերյալ վերապատրաստման դասընթացների տեղեկատու, ներառյալ շրջանաձև տնտեսության հատուկ դասընթաց:"
+        hy: "Օրգանական գյուղատնտեսության և շրջանաձև տնտեսության վերաբերյալ վերապատրաստման դասընթացների տեղեկատու, ներառյալ շրջանաձև տնտեսության հատուկ դասընթաց։"
       },
     about:
       {
