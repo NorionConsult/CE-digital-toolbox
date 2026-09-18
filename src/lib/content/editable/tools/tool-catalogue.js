@@ -314,7 +314,7 @@ const toolCatalogue = [
         en: "Tool for crystallising your circular business model by reflecting on its key building blocks, including your value proposition, infrastructure, customers and financing.",
         uk: "Інструмент для кристалізації вашої циклічної бізнес-моделі шляхом аналізу її основних будівельних блоків, зокрема вашої ціннісної пропозиції, інфраструктури, клієнтів і фінансування.",
         ro: "Instrument pentru cristalizarea modelului dvs. de afaceri circular, reflectând asupra elementelor sale cheie, inclusiv propunerea dvs. de valoare, infrastructura, clienții și finanțarea.",
-        hy: "Գործիք՝ ձեր շրջանաձև բիզնես մոդելը բյուրեղացնելու համար՝ անդրադառնալով դրա հիմնական շինարարական բլոկներին, ներառյալ ձեր արժեքի առաջարկը, ենթակառուցվածքը, հաճախորդներին և ֆինանսավորումը:"
+        hy: "Գործիք, որն օգնում է հստակեցնել ձեր շրջանաձև բիզնես մոդելը՝ դիտարկելով դրա հիմնական բաղադրիչները, այդ թվում՝ արժեքային առաջարկը, ենթակառուցվածքը, հաճախորդներին և ֆինանսավորումը։"
       },
     about:
       {
@@ -431,7 +431,7 @@ const toolCatalogue = [
         en: "Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.",
         uk: "Онлайн-оцінка, яка кількісно оцінює циркулярну продуктивність матеріальних потоків, відходів і використання ресурсів, із вказівками для покращення результатів і встановлення цілей SMART.",
         ro: "Evaluare online care cuantifică performanța circulară în fluxurile de materiale, deșeurile și utilizarea resurselor, cu îndrumări pentru îmbunătățirea rezultatelor și stabilirea obiectivelor SMART.",
-        hy: "Առցանց գնահատում, որը քանակականացնում է շրջանաձև կատարողականությունը նյութական հոսքերի, թափոնների և ռեսուրսների օգտագործման միջև՝ արդյունքները բարելավելու և SMART թիրախներ սահմանելու ուղեցույցով:"
+        hy: "Առցանց գնահատման գործիք, որը քանակապես գնահատում է շրջանաձևության ցուցանիշները՝ նյութական հոսքերի, թափոնների և ռեսուրսների օգտագործման տեսանկյունից, ինչպես նաև տրամադրում է արդյունքների բարելավման և SMART նպատակների սահմանման ուղեցույց։"
       },
     about:
       {
@@ -488,7 +488,7 @@ const toolCatalogue = [
         en: "Adapts the classic Business Model Canvas to map circular value creation, delivery, and capture for a chosen circular business model.",
         uk: "Адаптує класичну бізнес-модель Canvas для відображення циклічного створення цінності, доставки та захоплення для вибраної циклічної бізнес-моделі.",
         ro: "Adaptează modelul de afaceri clasic Canvas pentru a mapa crearea, livrarea și captarea valorii circulare pentru un model de afaceri circular ales.",
-        hy: "Հարմարեցնում է դասական Բիզնես մոդելի կտավը՝ շրջանաձև արժեք ստեղծելու, առաքելու և գրավելու համար ընտրված շրջանաձև բիզնես մոդելի համար:"
+        hy: "Դասական բիզնես մոդելի ձևանմուշի հարմարեցված տարբերակ, որն օգնում է ընտրված շրջանաձև բիզնես մոդելի համար սահմանել արժեքի ստեղծման, հաճախորդին փոխանցման և ստացման եղանակները։"
       },
     about:
       {

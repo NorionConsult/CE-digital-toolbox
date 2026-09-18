@@ -124,7 +124,7 @@ const taxonomyLabels = {
       en: 'Plastics',
       uk: 'Пластмаси',
       ro: 'Materiale plastice',
-      hy: 'Պլաստմասսա'
+      hy: 'Պլաստիկ'
     },
     Recycling: {
       en: 'Recycling',
