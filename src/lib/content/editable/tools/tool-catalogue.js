@@ -59,7 +59,7 @@ const toolCatalogue = [
         en: "The SME Reporting Tool is provided as a free resource to enable you to create a climate report summarising your annual greenhouse gas emissions, including the actions you are taking and the impact of your emissions reduction effort.",
         uk: "Інструмент звітності SME надається як безкоштовний ресурс, щоб ви могли створити кліматичний звіт, у якому підсумовуються ваші щорічні викиди парникових газів, включаючи дії, які ви вживаєте, і вплив ваших зусиль щодо скорочення викидів.",
         ro: "Instrumentul de raportare pentru IMM-uri este oferit ca o resursă gratuită pentru a vă permite să creați un raport climatic care să rezumă emisiile dvs. anuale de gaze cu efect de seră, inclusiv acțiunile pe care le întreprindeți și impactul efortului dumneavoastră de reducere a emisiilor.",
-        hy: "ՓՄՁ հաշվետվության գործիքը տրամադրվում է որպես անվճար ռեսուրս, որը հնարավորություն է տալիս ստեղծել կլիմայական հաշվետվություն՝ ամփոփելով ձեր ջերմոցային գազերի տարեկան արտանետումները, ներառյալ ձեր ձեռնարկած գործողությունները և արտանետումների նվազեցման ջանքերի ազդեցությունը:"
+        hy: "ՓՄՁ հաշվետվության գործիքը տրամադրվում է որպես անվճար ռեսուրս, որը հնարավորություն է տալիս ստեղծել կլիմայական հաշվետվություն՝ ամփոփելով ձեր ջերմոցային գազերի տարեկան արտանետումները, այդ թվում՝ ձեր ձեռնարկած գործողությունները և արտանետումների նվազեցման ջանքերի ազդեցությունը։"
       },
     /* journeyPhases is an array of the exact names of the journey phases where this tool is relevant. Use one or more of these values: Learn, Assess, Explore, Evaluate, Implement, Monitor. */
       journeyPhases: ['Monitor', 'Evaluate', 'Explore'],
@@ -90,7 +90,7 @@ const toolCatalogue = [
         en: "Be ready with your measurable data and metrics to be used within the platform.",
         uk: "Будьте готові до того, що ваші вимірювані дані та показники будуть використовуватися на платформі.",
         ro: "Fiți gata cu datele și valorile dvs. măsurabile pentru a fi utilizate în cadrul platformei.",
-        hy: "Պատրաստ եղեք ձեր չափելի տվյալներին և չափանիշներին, որոնք կօգտագործվեն հարթակում:"
+        hy: "Պատրաստ եղեք ձեր չափելի տվյալներին և չափանիշներին, որոնք կօգտագործվեն հարթակում։"
       },
     /* output is a short text description of the output of the tool. This can be a report, a certificate, a plan, or any other tangible result. */
     output: {
@@ -132,7 +132,7 @@ const toolCatalogue = [
         en: "Circulytics is a framework of indicators for tracking circular economy performance. It allows companies to highlight successes in transition, and identify where to focus efforts for improvement in line with the three principles of a circular economy, all driven by design: eliminate waste and pollution, circulate products and materials, and regenerate nature.",
         uk: "Circulytics — це система показників для відстеження ефективності циклічної економіки. Це дозволяє компаніям підкреслювати успіхи в перехідний період і визначати, на чому зосередити зусилля для вдосконалення відповідно до трьох принципів циркулярної економіки, які керуються дизайном: усунення відходів і забруднення, циркуляція продуктів і матеріалів і відродження природи.",
         ro: "Circulytics este un cadru de indicatori pentru urmărirea performanței economiei circulare. Permite companiilor să evidențieze succesele în tranziție și să identifice unde să concentreze eforturile pentru îmbunătățire în conformitate cu cele trei principii ale unei economii circulare, toate conduse de proiectare: eliminarea deșeurilor și a poluării, circulația produselor și materialelor și regenerarea naturii.",
-        hy: "Circulytics-ը ցիկլային տնտեսության կատարողականին հետևելու ցուցիչների շրջանակ է: Այն թույլ է տալիս ընկերություններին ընդգծել անցումային շրջանի հաջողությունները և որոշել, թե որտեղ պետք է կենտրոնացնեն բարելավմանն ուղղված ջանքերը շրջանաձև տնտեսության երեք սկզբունքներին համապատասխան, որոնք բոլորն էլ առաջնորդվում են դիզայնով. վերացնել թափոնները և աղտոտվածությունը, շրջանառել ապրանքներն ու նյութերը և վերականգնել բնությունը:"
+        hy: "Circulytics-ը ցիկլային տնտեսության կատարողականին հետևելու ցուցիչների շրջանակ է: Այն թույլ է տալիս ընկերություններին ընդգծել անցումային շրջանի հաջողությունները և որոշել, թե որտեղ պետք է կենտրոնացնեն բարելավմանն ուղղված ջանքերը շրջանաձև տնտեսության երեք սկզբունքներին համապատասխան, որոնք բոլորն էլ առաջնորդվում են դիզայնով. վերացնել թափոնները և աղտոտվածությունը, շրջանառել ապրանքներն ու նյութերը և վերականգնել բնությունը։"
       },
     journeyPhases: ['Monitor'],
      placements: {
@@ -162,7 +162,7 @@ const toolCatalogue = [
         en: "You will gain a better understanding of what it means to measure circularity within the value chain.",
         uk: "Ви краще зрозумієте, що означає вимірювати циклічність у ланцюжку створення вартості.",
         ro: "Veți obține o mai bună înțelegere a ceea ce înseamnă măsurarea circularității în cadrul lanțului valoric.",
-        hy: "Դուք ավելի լավ կհասկանաք, թե ինչ է նշանակում չափել շրջանաձևությունը արժեքային շղթայում:"
+        hy: "Դուք ավելի լավ կհասկանաք, թե ինչ է նշանակում չափել շրջանաձևությունը արժեքային շղթայում։"
       },
     bestFor: {
       en: "SMEs in all sectors",
@@ -195,7 +195,7 @@ const toolCatalogue = [
         en: "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.\tRegister/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clicking on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.\tSelf-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.\tReview recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.\tShortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.\tManage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
         uk: "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. Відповідаючи на коротке самооцінювання, підприємства отримують індивідуальні рекомендації щодо скорочення викидів, скорочення витрат, підвищення стійкості та створення практичної дорожньої карти сталого розвитку з відстеженням прогресу та чіткими пріоритетами.|| **Як працює Climate Action Planner**|| **1.\tЗареєструйтесь/увійдіть:** На сторінці «Створення плану дій щодо клімату», куди веде вас посилання, натисніть «Доступ до планувальника дій щодо клімату», коли ви потрапите на сторінку, а потім натисніть «Увійти». Як новий користувач, створіть безкоштовний обліковий запис, натиснувши «Зареєструватися», і виберіть, чи зареєструватися як «Користувач інструменту» або як «відданий бізнес».  Заповніть поля з вашим ім'ям, електронною поштою та встановіть пароль. Якщо у вас уже є обліковий запис, ви можете увійти замість нього. || **2.\tСамооцінка:** Дайте відповіді на детальну анкету, яка охоплює споживання енергії, ланцюжки постачання, залучення працівників і управління відходами. Попереднє вимірювання викидів не потрібне. || **3.\tОзнайомтеся з рекомендаціями:** Інструмент бере з бібліотеки понад 750 дій і пропонує ті, що адаптовані до вашого сектору, цілей і ключових сфер викидів. || **4.\tВибір дій:** Порівняйте стратегії, прочитайте подробиці про кожну (бізнес і потенційний вплив) і виберіть ті, які відповідають вашим можливостям і часовому графіку. || **5.\tКеруйте своїм планом:** Ваш спеціальний план дій розміщено на інформаційній панелі, де ви можете відстежувати прогрес, переглядати докладнішу інформацію про подальші дії та завантажувати звіт.",
         ro: "Planificatorul de acțiuni climatice SME Climate Hub este un instrument online gratuit care ajută IMM-urile să creeze un plan de acțiune climatic personalizat. Răspunzând la o scurtă autoevaluare, companiile primesc recomandări personalizate pentru a reduce emisiile, a reduce costurile, a îmbunătăți reziliența și a construi o foaie de parcurs practică de durabilitate, cu urmărirea progresului și priorități clare.|| **Cum funcționează Planificatorul de acțiuni climatice**|| **1.\tÎnregistrați-vă/conectați-vă:** Din pagina „Construiți un plan de acțiune pentru climă”, unde vă duce linkul de aici, faceți clic pe „Accesați Planificatorul de acțiuni pentru climă” odată ce ajungeți pe pagină, apoi faceți clic pe „Autentificare”. În calitate de utilizator nou, creați un cont gratuit făcând clic pe „Înscrieți-vă” și alegeți fie să vă înscrieți ca „Utilizator instrument” fie ca „afacere angajată”.  Completați câmpurile cu numele dvs., adresa de e-mail și setați o parolă. Dacă aveți deja un cont, vă puteți conecta în schimb. || **2.\tAuto-evaluare:** Răspundeți la un chestionar detaliat care acoperă utilizarea energiei, lanțurile de aprovizionare, implicarea angajaților și gestionarea deșeurilor. Nu este necesară măsurarea prealabilă a emisiilor. || **3.\tRecomandări de revizuire:** Instrumentul extrage dintr-o bibliotecă de peste 750 de acțiuni și suprafețe adaptate sectorului dvs., obiectivelor și zonelor cheie de emisii. || **4.\tLista scurtă de acțiuni:** Comparați strategiile, citiți detalii despre fiecare (caz de afaceri și impact potențial) și alegeți-le pe cele care se potrivesc cu capacitățile și cronologia dvs. || **5.\tGestionați-vă planul:** Planul dvs. de acțiune personalizat ajunge într-un tablou de bord unde puteți urmări progresul, puteți vedea mai multe detalii despre acțiunile ulterioare și puteți descărca un raport.",
-        hy: "SME Climate Hub Climate Action Planner-ը անվճար առցանց գործիք է, որն օգնում է ՓՄՁ-ներին ստեղծել հարմարեցված կլիմայի գործողությունների ծրագիր: Պատասխանելով կարճ ինքնագնահատման՝ ձեռնարկությունները ստանում են համապատասխան առաջարկություններ՝ նվազեցնելու արտանետումները, կրճատել ծախսերը, բարելավել ճկունությունը և կառուցել գործնական կայունության ճանապարհային քարտեզ՝ առաջընթացի հետևումով և հստակ առաջնահերթություններով:|| **Ինչպես է աշխատում Կլիմայի գործողությունների պլանավորողը**|| **1.\tԳրանցվեք/մուտք գործեք՝** «Կառուցեք կլիմայի գործողությունների ծրագիր» էջից, որտեղ ձեզ տանում է հղումը, սեղմեք «Access Climate Action Planner»-ը, երբ վայրէջք կատարեք էջին, այնուհետև սեղմեք «Մուտք գործել»: Որպես նոր օգտվող, ստեղծեք անվճար հաշիվ՝ սեղմելով «Գրանցվել» և ընտրեք գրանցվել որպես «Գործիքների օգտատեր» կամ «պարտավոր բիզնես»:  Լրացրեք դաշտերը ձեր անունով, էլ.փոստով և սահմանեք գաղտնաբառ: Եթե ​​արդեն ունեք հաշիվ, փոխարենը կարող եք մուտք գործել: || **2.\tԻնքնագնահատում. ** Պատասխանեք խորը սուզված հարցաշարի, որը ներառում է էներգիայի օգտագործումը, մատակարարման շղթաները, աշխատակիցների ներգրավվածությունը և թափոնների կառավարումը: Արտանետումների նախնական չափումներ չեն պահանջվում: || **3.\tՎերանայեք առաջարկությունները.** Գործիքը դուրս է բերվում 750+ գործողությունների գրադարանից և ընդգրկում է այնպիսի գործողություն, որը հարմարեցված է ձեր ոլորտին, նպատակներին և հիմնական արտանետումների ոլորտներին: || **4.\tԳործողությունների կարճ ցուցակ.** Համեմատեք ռազմավարությունները, կարդացեք մանրամասներ յուրաքանչյուրի վերաբերյալ (բիզնեսի դեպք և հնարավոր ազդեցություն) և ընտրեք ձեր հնարավորություններին և ժամանակացույցին համապատասխանող գործողությունները: || **5.\tԿառավարեք ձեր պլանը.** Ձեր հատուկ գործողությունների ծրագիրը տեղադրվում է վահանակում, որտեղ կարող եք հետևել առաջընթացին, դիտել հետագա գործողությունների վերաբերյալ ավելի շատ մանրամասներ և ներբեռնել հաշվետվություն:"
+        hy: "SME Climate Hub Climate Action Planner-ը անվճար առցանց գործիք է, որն օգնում է ՓՄՁ-ներին ստեղծել հարմարեցված կլիմայի գործողությունների ծրագիր: Պատասխանելով կարճ ինքնագնահատման՝ ձեռնարկությունները ստանում են համապատասխան առաջարկություններ՝ նվազեցնելու արտանետումները, կրճատել ծախսերը, բարելավել ճկունությունը և կառուցել գործնական կայունության ճանապարհային քարտեզ՝ առաջընթացի հետևումով և հստակ առաջնահերթություններով։|| **Ինչպես է աշխատում Կլիմայի գործողությունների պլանավորողը**|| **1.\tԳրանցվեք/մուտք գործեք՝** «Կառուցեք կլիմայի գործողությունների ծրագիր» էջից, որտեղ ձեզ տանում է հղումը, սեղմեք «Access Climate Action Planner»-ը, երբ վայրէջք կատարեք էջին, այնուհետև սեղմեք «Մուտք գործել»: Որպես նոր օգտվող, ստեղծեք անվճար հաշիվ՝ սեղմելով «Գրանցվել» և ընտրեք գրանցվել որպես «Գործիքների օգտատեր» կամ «պարտավոր բիզնես»:  Լրացրեք դաշտերը ձեր անունով, էլ.փոստով և սահմանեք գաղտնաբառ: Եթե ​​արդեն ունեք հաշիվ, փոխարենը կարող եք մուտք գործել: || **2.\tԻնքնագնահատում. ** Պատասխանեք խորը սուզված հարցաշարի, որը ներառում է էներգիայի օգտագործումը, մատակարարման շղթաները, աշխատակիցների ներգրավվածությունը և թափոնների կառավարումը: Արտանետումների նախնական չափումներ չեն պահանջվում: || **3.\tՎերանայեք առաջարկությունները.** Գործիքը դուրս է բերվում 750+ գործողությունների գրադարանից և ընդգրկում է այնպիսի գործողություն, որը հարմարեցված է ձեր ոլորտին, նպատակներին և հիմնական արտանետումների ոլորտներին: || **4.\tԳործողությունների կարճ ցուցակ.** Համեմատեք ռազմավարությունները, կարդացեք մանրամասներ յուրաքանչյուրի վերաբերյալ (բիզնեսի դեպք և հնարավոր ազդեցություն) և ընտրեք ձեր հնարավորություններին և ժամանակացույցին համապատասխանող գործողությունները: || **5.\tԿառավարեք ձեր պլանը.** Ձեր հատուկ գործողությունների ծրագիրը տեղադրվում է վահանակում, որտեղ կարող եք հետևել առաջընթացին, դիտել հետագա գործողությունների վերաբերյալ ավելի շատ մանրամասներ և ներբեռնել հաշվետվություն:"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -225,7 +225,7 @@ const toolCatalogue = [
         en: "Actions aligned to your industry and business goals. Practical steps, business case insights, expected impacts, and a roadmap with trackable actions and priorities.",
         uk: "Дії, узгоджені з вашою галуззю та бізнес-цілями. Практичні кроки, аналіз бізнес-кейсу, очікуваний вплив і дорожня карта з діями та пріоритетами, які можна відстежити.",
         ro: "Acțiuni aliniate la industria și obiectivele dvs. de afaceri. Pași practici, perspective de business case, impacturi așteptate și o foaie de parcurs cu acțiuni și priorități urmăribile.",
-        hy: "Գործողություններ, որոնք համահունչ են ձեր ոլորտի և բիզնեսի նպատակներին: Գործնական քայլեր, բիզնես դեպքերի պատկերացումներ, ակնկալվող ազդեցություններ և հետագծելի գործողություններով և առաջնահերթություններով ճանապարհային քարտեզ:"
+        hy: "Գործողություններ, որոնք համահունչ են ձեր ոլորտի և բիզնեսի նպատակներին: Գործնական քայլեր, բիզնես դեպքերի վերլուծական տվյալներ, ակնկալվող ազդեցություններ և հետագծելի գործողություններով և առաջնահերթություններով ճանապարհային քարտեզ։"
       },
     bestFor: {
       en: "small-medium enterprises (SMEs) in all sectors",
@@ -3836,7 +3836,7 @@ const toolCatalogue = [
         en: "Provides direct access to sorting bins and recyclable pickup for Armenian organisations.",
         uk: "Надає вірменським організаціям прямий доступ до сортувальних баків і збору вторинної сировини.",
         ro: "Oferă acces direct la coșurile de sortare și la colectarea reciclabile organizațiilor armene.",
-        hy: "Հայկական կազմակերպություններին ապահովում է ուղղակի մուտք դեպի տեսակավորման աղբամաններ և վերամշակվող պիկապ:"
+        hy: "Հայկական կազմակերպություններին ապահովում է ուղղակի մուտք դեպի տեսակավորման աղբամաններ և վերամշակվող պիկապ։"
       },
     about:
       {
@@ -3892,7 +3892,7 @@ const toolCatalogue = [
         en: "An e-learning course on inclusive green economies and resource efficiency.",
         uk: "Електронний навчальний курс із інклюзивної зеленої економіки та ефективного використання ресурсів.",
         ro: "Un curs de e-learning despre economii verzi inclusive și eficiența resurselor.",
-        hy: "Էլեկտրոնային ուսուցման դասընթաց՝ ներառական կանաչ տնտեսությունների և ռեսուրսների արդյունավետության վերաբերյալ:"
+        hy: "Էլեկտրոնային ուսուցման դասընթաց՝ ներառական կանաչ տնտեսությունների և ռեսուրսների արդյունավետության վերաբերյալ։"
       },
     about:
       {
@@ -4008,7 +4008,7 @@ const toolCatalogue = [
         en: "Resources supporting Resource Efficient and Cleaner Production implementation.",
         uk: "Ресурси, що підтримують впровадження ресурсоефективного та чистого виробництва.",
         ro: "Resurse care sprijină implementarea unei producții mai eficiente și mai curate.",
-        hy: "Ռեսուրսներ, որոնք աջակցում են ռեսուրսների արդյունավետ և մաքուր արտադրության իրականացմանը:"
+        hy: "Ռեսուրսներ, որոնք աջակցում են ռեսուրսների արդյունավետ և մաքուր արտադրության իրականացմանը։"
       },
     about:
       {
@@ -4120,7 +4120,7 @@ const toolCatalogue = [
         en: "A free self-assessment platform for evaluating how well steel packaging is designed for recycling.",
         uk: "Безкоштовна платформа самооцінки для оцінки того, наскільки сталева упаковка розроблена для переробки.",
         ro: "O platformă gratuită de autoevaluare pentru a evalua cât de bine sunt proiectate ambalajele din oțel pentru reciclare.",
-        hy: "Անվճար ինքնագնահատման հարթակ՝ գնահատելու համար, թե որքան լավ է պողպատե փաթեթավորումը նախատեսված վերամշակման համար:"
+        hy: "Անվճար ինքնագնահատման հարթակ՝ գնահատելու համար, թե որքան լավ է պողպատե փաթեթավորումը նախատեսված վերամշակման համար։"
       },
     about:
       {
@@ -4176,7 +4176,7 @@ const toolCatalogue = [
         en: "A free self-assessment platform for evaluating how well alumminium packaging is designed for recycling.",
         uk: "Безкоштовна платформа самооцінки для оцінки того, наскільки добре алюмінієва упаковка розроблена для переробки.",
         ro: "O platformă gratuită de autoevaluare pentru a evalua cât de bine sunt proiectate ambalajele din aluminiu pentru reciclare.",
-        hy: "Անվճար ինքնագնահատման հարթակ՝ գնահատելու համար, թե որքան լավ է ալյումինե փաթեթավորումը նախատեսված վերամշակման համար:"
+        hy: "Անվճար ինքնագնահատման հարթակ՝ գնահատելու համար, թե որքան լավ է ալյումինե փաթեթավորումը նախատեսված վերամշակման համար։"
       },
     about:
       {
@@ -4294,7 +4294,7 @@ const toolCatalogue = [
         en: "To develop circular product-service systems and new ways of creating value.",
         uk: "Розвивати циркулярні системи продуктів і послуг і нові способи створення вартості.",
         ro: "Să dezvolte sisteme circulare produse-servicii și noi modalități de a crea valoare.",
-        hy: "Մշակել ապրանք-ծառայության շրջանաձև համակարգեր և արժեք ստեղծելու նոր ուղիներ:"
+        hy: "Օգնում է մշակել ապրանք-ծառայության շրջանաձև համակարգեր և արժեք ստեղծելու նոր ուղիներ։"
       },
     about:
       {
@@ -4794,7 +4794,7 @@ const toolCatalogue = [
         en: "Interactive Power BI dashboard for finding licensed waste and recycling operators by waste type.",
         uk: "Інтерактивна інформаційна панель Power BI для пошуку ліцензованих операторів утилізації та переробки відходів за типом відходів.",
         ro: "Tabloul de bord interactiv Power BI pentru găsirea operatorilor autorizați de deșeuri și reciclare pe tip de deșeu.",
-        hy: "Power BI-ի ինտերակտիվ վահանակ՝ ըստ թափոնների տեսակի լիցենզավորված թափոնների և վերամշակման օպերատորներին գտնելու համար:"
+        hy: "Power BI-ի ինտերակտիվ վահանակ՝ ըստ թափոնների տեսակի լիցենզավորված թափոնների և վերամշակման օպերատորներին գտնելու համար։"
       },
     about:
       {
