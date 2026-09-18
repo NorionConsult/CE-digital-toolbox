@@ -125,7 +125,7 @@ const toolCatalogue = [
         en: "A guide to show you which analytics to use to best measure the circularity of your operations.",
         uk: "Посібник, який покаже вам, яку аналітику використовувати, щоб найкраще виміряти циклічність ваших операцій.",
         ro: "Un ghid pentru a vă arăta ce analize să utilizați pentru a măsura cel mai bine circularitatea operațiunilor dvs.",
-        hy: "Ուղեցույց, որը ցույց կտա ձեզ, թե որ վերլուծություններն օգտագործել ձեր գործողությունների շրջանաձևությունը լավագույնս չափելու համար:"
+        hy: "Ուղեցույց, որն օգնում է ընտրել ձեր գործունեության շրջանաձևության մակարդակը լավագույնս չափելու համար անհրաժեշտ վերլուծական գործիքները։:"
       },
     about:
       {
@@ -188,7 +188,7 @@ const toolCatalogue = [
         en: "A climate action plan outlines how an organisation will reduce greenhouse gas emissions and prepare for the impacts of climate change.",
         uk: "План дій щодо клімату визначає, як організація зменшить викиди парникових газів і підготується до наслідків зміни клімату.",
         ro: "Un plan de acțiune pentru climă subliniază modul în care o organizație va reduce emisiile de gaze cu efect de seră și se va pregăti pentru impactul schimbărilor climatice.",
-        hy: "Կլիմայի գործողությունների ծրագիրը նախանշում է, թե ինչպես է կազմակերպությունը կրճատելու ջերմոցային գազերի արտանետումները և պատրաստվելու կլիմայի փոփոխության ազդեցությանը:"
+        hy: "Կլիմայական գործողությունների ծրագիրը սահմանում է, թե ինչպես է կազմակերպությունը կրճատելու ջերմոցային գազերի արտանետումները և նախապատրաստվելու կլիմայի փոփոխության հետևանքներին։"
       },
     about:
       {
@@ -251,7 +251,7 @@ const toolCatalogue = [
         en: "A practical set of canvases designed to help businesses move from early circular action to intentional, long-term change.",
         uk: "Практичний набір полотен, розроблений, щоб допомогти підприємствам перейти від ранніх циклічних дій до навмисних, довгострокових змін.",
         ro: "Un set practic de pânze concepute pentru a ajuta companiile să treacă de la acțiunea circulară timpurie la schimbarea intenționată, pe termen lung.",
-        hy: "Կտավների գործնական հավաքածու, որը նախատեսված է բիզնեսին օգնելու վաղ շրջանաձև գործողություններից անցնել միտումնավոր, երկարաժամկետ փոփոխության:"
+        hy: "Գործնական ձևանմուշների հավաքածու, որը նախատեսված է օգնելու բիզնեսներին սկզբնական շրջանաձև նախաձեռնություններից անցնել նպատակային և երկարաժամկետ փոփոխությունների։"
       },
     about:
       {
@@ -2673,7 +2673,7 @@ const toolCatalogue = [
         en: "A canvas for mapping concrete, actionable steps for putting a circular strategy into practice once solutions have been identified.",
         uk: "Полотно для відображення конкретних дієвих кроків для практичної реалізації циклічної стратегії після того, як рішення визначено.",
         ro: "O pânză pentru cartografierea pașilor concreti, acționabili, pentru punerea în practică a unei strategii circulare odată ce soluțiile au fost identificate.",
-        hy: "Կտավ՝ կոնկրետ, գործող քայլերի քարտեզագրման համար՝ լուծումների հայտնաբերումից հետո շրջանաձև ռազմավարությունը գործնականում կիրառելու համար:"
+        hy: "Կտավ՝ կոնկրետ, գործող քայլերի քարտեզագրման համար՝ լուծումների հայտնաբերումից հետո շրջանաձև ռազմավարությունը գործնականում կիրառելու համար։"
       },
     about:
       {
@@ -4667,7 +4667,7 @@ const toolCatalogue = [
         en: "To plan a real-world pilot and test whether a circular solution can work in practice.",
         uk: "Щоб спланувати пілотний проект у реальному світі та перевірити, чи може кругове рішення працювати на практиці.",
         ro: "Pentru a planifica un pilot în lumea reală și a testa dacă o soluție circulară poate funcționa în practică.",
-        hy: "Պլանավորել իրական աշխարհի օդաչու և ստուգել, ​​թե արդյոք շրջանաձև լուծումը կարող է գործնականում աշխատել:"
+        hy: "Պլանավորել իրական աշխարհի օդաչու և ստուգել, թե արդյոք շրջանաձև լուծումը կարող է գործնականում աշխատել։"
       },
     about:
       {
