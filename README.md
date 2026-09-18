@@ -87,6 +87,15 @@ Translation helper and supported language setup:
 src/lib/translation-helper.js
 ```
 
+Cookie banner and analytics tracking:
+
+```text
+src/lib/content/editable/global/cookie-consent.js
+src/lib/components/global/CookieConsentBanner.svelte
+src/lib/analytics.js
+docs/analytics-tracking-plan.md
+```
+
 Colours, fonts and shared visual style:
 
 ```text
@@ -231,6 +240,30 @@ Preview the built site:
 
 ```bash
 npm run preview
+```
+
+## Analytics Setup
+
+The website is prepared for a consent-first Google Tag Manager setup. Analytics
+does not load until a visitor accepts analytics cookies in the banner.
+
+The GTM container id is configured with:
+
+```text
+PUBLIC_GTM_ID
+```
+
+The current placeholder is shown in `.env.example`:
+
+```text
+PUBLIC_GTM_ID=GTM-XXXXXXX
+```
+
+Replace this with the UNIDO-owned GTM container id after migration. The
+tracking event plan is documented in:
+
+```text
+docs/analytics-tracking-plan.md
 ```
 
 ## Deployment

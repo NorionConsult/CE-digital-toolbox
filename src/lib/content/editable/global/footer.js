@@ -31,6 +31,15 @@ export const footer = {
     ro: '© 2026 Programul EU4 GreenRecovery East. Toate drepturile rezervate. Licențiat Uniunii Europene conform condițiilor.',
     hy: '© 2026 EU4 GreenRecovery East ծրագիր։ Բոլոր իրավունքները պաշտպանված են։ Լիցենզավորված է Եվրոպական միությանը՝ պայմանների համաձայն։'
   },
+  privacyPolicy: {
+    label: {
+      en: 'Privacy Policy',
+      uk: 'Політика конфіденційності',
+      ro: 'Politica de confidențialitate',
+      hy: 'Գաղտնիության քաղաքականություն'
+    },
+    href: '/privacy-policy/'
+  },
   disclaimer: {
     en: 'This website is funded by the European Union. Its content are the sole responsibility of the EU4Green Recovery East programme, financed by the European Union. The content of the website belongs to the authors and does not necessarily reflect the views of the European Union, its members or the Governments of the Eastern Partnership Countries. This website and any content included herein are without prejudice to the status of, or sovereignty over, any territory, to the delimitation of international frontiers and boundaries, and to the name of any territory, city or area. Furthermore, neither the EU nor the EU4Green Recovery East programme are liable for risks arising from the use of this website or any third-party tools.',
     uk: 'Цей вебсайт фінансується Європейським Союзом. Його зміст є виключною відповідальністю програми EU4Green Recovery East, що фінансується Європейським Союзом. Зміст вебсайту належить авторам і не обов’язково відображає погляди Європейського Союзу, його держав-членів або урядів країн Східного партнерства. Цей вебсайт і будь-який розміщений на ньому вміст не впливають на статус чи суверенітет будь-якої території, визначення міжнародних кордонів і меж або назву будь-якої території, міста чи місцевості. Крім того, ні ЄС, ні програма EU4Green Recovery East не несуть відповідальності за ризики, що виникають унаслідок використання цього вебсайту або будь-яких сторонніх інструментів.',

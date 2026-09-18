@@ -6,6 +6,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
@@ -15,6 +16,15 @@
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: currentSite = localizeContent(site, currentLanguage);
   $: currentSector = localizeContent(sector, currentLanguage);
+
+  function trackSectorCardClick() {
+    trackSelectContent({
+      contentType: 'sector_card',
+      contentId: currentSector.slug,
+      itemName: currentSector.title,
+      sourceArea: 'guided_pathways_sector'
+    });
+  }
 </script>
 
 <article class="sector-card">
@@ -22,7 +32,11 @@
   <p class="sector-number">{currentSector.number}</p>
   <h3>{currentSector.title}</h3>
   <p><InlineText text={currentSector.description} /></p>
-  <a href="{base}{localizePath(`/sectors/${currentSector.slug}/`, currentLanguage)}" class="sector-link">
+  <a
+    href="{base}{localizePath(`/sectors/${currentSector.slug}/`, currentLanguage)}"
+    class="sector-link"
+    on:click={trackSectorCardClick}
+  >
     {currentSite.labels.viewSector}
     <span
       class="link-arrow"

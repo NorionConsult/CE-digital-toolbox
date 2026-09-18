@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import { trackFormLinkClick } from '$lib/analytics.js';
   import { contactPage } from '$lib/content/editable/pages/contact-page.js';
   import { getLanguageFromPathname, localizeContent, translate } from '$lib/translation-helper.js';
   import { staticAssetUrl } from '$lib/utils/assets.js';
@@ -43,6 +44,20 @@
     return `mailto:${email.trim()}`;
   }
 
+  /**
+   * @param {string} formType
+   * @param {{ title: string; url: string }} form
+   */
+  function trackContactFormClick(formType, form) {
+    if (isPlaceholderUrl(form.url)) return;
+
+    trackFormLinkClick({
+      formType,
+      formTitle: form.title,
+      linkUrl: form.url
+    });
+  }
+
 </script>
 
 <svelte:head>
@@ -68,6 +83,7 @@
           href={getButtonHref(currentContactPage.feedbackForm.url)}
           target={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : '_blank'}
           rel={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : 'noreferrer'}
+          on:click={() => trackContactFormClick('feedback', currentContactPage.feedbackForm)}
         >
           {currentContactPage.feedbackForm.buttonLabel}
         </a>
@@ -81,6 +97,7 @@
           href={getButtonHref(currentContactPage.testimonyForm.url)}
           target={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : '_blank'}
           rel={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : 'noreferrer'}
+          on:click={() => trackContactFormClick('experience_certificate_nomination', currentContactPage.testimonyForm)}
         >
           {currentContactPage.testimonyForm.buttonLabel}
         </a>

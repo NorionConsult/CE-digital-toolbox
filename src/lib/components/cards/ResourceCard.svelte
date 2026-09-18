@@ -5,6 +5,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { translateTaxonomyDisplay, translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
   import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
@@ -32,6 +33,15 @@
   $: effortLabel = translateTaxonomyValue(currentResource.effortDisplay ?? currentResource.effort, 'effort', currentLanguage);
   $: languageLabel = translateTaxonomyDisplay(currentResource.languageDisplay ?? currentResource.language, 'languages', currentLanguage);
   $: accessLabel = translateTaxonomyValue(currentResource.accessDisplay ?? currentResource.access, 'access', currentLanguage);
+
+  function trackToolCardClick() {
+    trackSelectContent({
+      contentType: 'tool_card',
+      contentId: currentResource.slug,
+      itemName: currentResource.title,
+      sourceArea: isCompact ? 'embedded_resource_grid' : 'tools_catalogue'
+    });
+  }
 </script>
 
 <article class="tool-card resource-card" class:resource-card-compact={isCompact}>
@@ -60,7 +70,13 @@
     </div>
   </dl>
 
-  <a href="{base}{localizePath(`/tools/${currentResource.slug}/`, currentLanguage)}" class="resource-link" target="_blank" rel="noreferrer">
+  <a
+    href="{base}{localizePath(`/tools/${currentResource.slug}/`, currentLanguage)}"
+    class="resource-link"
+    target="_blank"
+    rel="noreferrer"
+    on:click={trackToolCardClick}
+  >
     {currentSite.labels.viewResource}
   </a>
 </article>

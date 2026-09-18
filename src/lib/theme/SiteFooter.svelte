@@ -2,7 +2,12 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { site } from '$lib/content/editable/global/site.js';
-  import { getLanguageFromPathname, localizeContent, translate } from '$lib/translation-helper.js';
+  import {
+    getLanguageFromPathname,
+    localizeContent,
+    localizePath,
+    translate
+  } from '$lib/translation-helper.js';
 
   const labels = {
     programmeLogos: {
@@ -30,6 +35,15 @@
 
       {#if currentSite.footerCopyright}
         <p class="footer-copyright">{currentSite.footerCopyright}</p>
+      {/if}
+
+      {#if currentSite.footerPrivacyPolicy}
+        <a
+          class="footer-privacy-link"
+          href="{base}{localizePath(currentSite.footerPrivacyPolicy.href, currentLanguage)}"
+        >
+          {currentSite.footerPrivacyPolicy.label}
+        </a>
       {/if}
     </div>
 
@@ -91,6 +105,21 @@
     font-size: 0.68rem;
     line-height: 1.35;
     font-weight: 400;
+  }
+
+  .footer-privacy-link {
+    width: fit-content;
+    color: var(--blue);
+    font-size: 0.68rem;
+    line-height: 1.35;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.16em;
+  }
+
+  .footer-privacy-link:hover,
+  .footer-privacy-link:focus-visible {
+    color: var(--button-highlight);
   }
 
   @media (max-width: 960px) {

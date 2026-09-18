@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { journeyPhasePage } from '$lib/content/editable/pages/journey-phase-page.js';
   import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
   import { site } from '$lib/content/editable/global/site.js';
@@ -87,6 +88,18 @@
   function preventLockedSummaryNavigation(event) {
     if (!isSummaryComplete) {
       event.preventDefault();
+      return;
+    }
+
+    if (nextPhase) {
+      trackSelectContent({
+        contentType: 'next_phase',
+        contentId: nextPhase.slug,
+        itemName: nextPhase.title,
+        sourceArea: 'phase_summary',
+        source_phase: journeyPhase.slug,
+        target_phase: nextPhase.slug
+      });
     }
   }
 </script>

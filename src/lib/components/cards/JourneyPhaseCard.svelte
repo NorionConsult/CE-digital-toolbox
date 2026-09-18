@@ -6,6 +6,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { getLanguageFromPathname, localizeContent, localizePath } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
@@ -15,6 +16,15 @@
   $: currentLanguage = getLanguageFromPathname($page.url.pathname, base);
   $: currentSite = localizeContent(site, currentLanguage);
   $: currentJourneyPhase = localizeContent(journeyPhase, currentLanguage);
+
+  function trackJourneyPhaseCardClick() {
+    trackSelectContent({
+      contentType: 'journey_phase_card',
+      contentId: currentJourneyPhase.slug,
+      itemName: currentJourneyPhase.title,
+      sourceArea: 'guided_pathways_journey_phase'
+    });
+  }
 </script>
 
 <article class="phase-card {currentJourneyPhase.colourClass}">
@@ -24,7 +34,11 @@
     <p><InlineText text={currentJourneyPhase.description} /></p>
   </div>
 
-  <a href="{base}{localizePath(`/journey-phases/${currentJourneyPhase.slug}/`, currentLanguage)}" class="phase-link">
+  <a
+    href="{base}{localizePath(`/journey-phases/${currentJourneyPhase.slug}/`, currentLanguage)}"
+    class="phase-link"
+    on:click={trackJourneyPhaseCardClick}
+  >
     {currentSite.labels.viewPhase}
     <span
       class="link-arrow"

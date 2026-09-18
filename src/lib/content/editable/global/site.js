@@ -95,6 +95,7 @@ export const site = {
   */
   footerLogos: footer.logos,
   footerCopyright: footer.copyright,
+  footerPrivacyPolicy: footer.privacyPolicy,
   footerDisclaimer: footer.disclaimer,
   labels: buttonLabels,
   /*

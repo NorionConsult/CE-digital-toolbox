@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import SectorBadge from '$lib/components/cards/SectorBadge.svelte';
   import RichText from '$lib/components/formatting/RichText.svelte';
+  import { trackCaseSourceClick } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { translateTaxonomyDisplay, translateTaxonomyList } from '$lib/content/technical/taxonomy-labels.js';
   import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
@@ -45,6 +46,14 @@
   ];
 
   $: caseLink = currentCaseStudy.caseLink;
+
+  function trackOpenCaseSource() {
+    trackCaseSourceClick({
+      caseSlug: currentCaseStudy.slug,
+      caseTitle: currentCaseStudy.companyName,
+      linkUrl: caseLink
+    });
+  }
 </script>
 
 <svelte:head>
@@ -66,7 +75,13 @@
       <RichText text={currentCaseStudy.summary} className="case-summary" />
 
       {#if caseLink}
-        <a class="primary-button case-source-link" href={caseLink} target="_blank" rel="noreferrer">
+        <a
+          class="primary-button case-source-link"
+          href={caseLink}
+          target="_blank"
+          rel="noreferrer"
+          on:click={trackOpenCaseSource}
+        >
           {currentSite.labels.openCase}
         </a>
       {/if}

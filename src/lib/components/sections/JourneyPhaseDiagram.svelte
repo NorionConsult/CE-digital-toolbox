@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { tick } from 'svelte';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
   import { iconParkUrl } from '$lib/utils/assets.js';
 
@@ -162,9 +163,22 @@
   /**
    * @param {JourneyPhaseStep} phase
    */
+  function getPhaseSlug(phase) {
+    return phase.href.split('/').filter(Boolean).at(-1) ?? phase.number;
+  }
+
+  /**
+   * @param {JourneyPhaseStep} phase
+   */
   async function selectPhase(phase) {
     activePhaseNumber = phase.number;
     hasSelectedPhase = true;
+    trackSelectContent({
+      contentType: 'journey_phase_diagram_step',
+      contentId: getPhaseSlug(phase),
+      itemName: phase.phaseName,
+      sourceArea: 'sme_journey_interactive_diagram'
+    });
 
     if (typeof window !== 'undefined' && window.matchMedia('(max-width: 720px)').matches) {
       await tick();
@@ -211,6 +225,19 @@
       selectPhase(phase);
     }
   }
+
+  /**
+   * @param {JourneyPhaseStep} phase
+   * @param {string} sourceArea
+   */
+  function trackPhaseLinkClick(phase, sourceArea) {
+    trackSelectContent({
+      contentType: 'journey_phase_link',
+      contentId: getPhaseSlug(phase),
+      itemName: phase.phaseName,
+      sourceArea
+    });
+  }
 </script>
 
 <svelte:window on:keydown={closeOnEscape} />
@@ -249,7 +276,10 @@
             >
               <p class="journey-step-number">{translate(labels.phase, currentLanguage)} {phase.number}</p>
               <h4>
-                <a href="{base}{localizePath(phase.href, currentLanguage)}" on:click|stopPropagation>
+                <a
+                  href="{base}{localizePath(phase.href, currentLanguage)}"
+                  on:click|stopPropagation={() => trackPhaseLinkClick(phase, 'sme_journey_step_title')}
+                >
                   {phase.phaseName}
                 </a>
               </h4>
@@ -284,7 +314,11 @@
             </div>
 
             <div class="journey-diagram-actions">
-              <a href="{base}{localizePath(activePhase.href, currentLanguage)}" class="journey-diagram-go-link">
+              <a
+                href="{base}{localizePath(activePhase.href, currentLanguage)}"
+                class="journey-diagram-go-link"
+                on:click={() => trackPhaseLinkClick(activePhase, 'sme_journey_selected_panel')}
+              >
                 {translate(labels.viewPhase, currentLanguage)}
                 <span
                   class="link-arrow"
@@ -718,9 +752,8 @@
     }
 
     .journey-diagram-pop-up {
-      max-height: min(420px, calc(100vh - 32px));
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+      max-height: none;
+      overflow: visible;
       padding: 16px;
       border-radius: 15px;
     }

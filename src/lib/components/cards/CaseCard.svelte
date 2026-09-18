@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import { page } from '$app/stores';
+  import { trackSelectContent } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { translateTaxonomyDisplay, translateTaxonomyList } from '$lib/content/technical/taxonomy-labels.js';
   import { getLanguageFromPathname, localizeContent, localizePath, translate } from '$lib/translation-helper.js';
@@ -27,6 +28,15 @@
     : translate(labels.notSpecified, currentLanguage);
   $: countryText = translateTaxonomyDisplay(currentCaseStudy.countryDisplay || currentCaseStudy.country, 'countries', currentLanguage);
   $: sectorBadges = currentCaseStudy.sectors?.length ? currentCaseStudy.sectors : [currentCaseStudy.sector];
+
+  function trackCaseCardClick() {
+    trackSelectContent({
+      contentType: 'case_card',
+      contentId: currentCaseStudy.slug,
+      itemName: currentCaseStudy.companyName,
+      sourceArea: isCompact ? 'embedded_case_grid' : 'cases_catalogue'
+    });
+  }
 </script>
 
 <article class="case-card" class:case-card-compact={isCompact}>
@@ -55,7 +65,13 @@
     </div>
   </dl>
 
-  <a href="{base}{localizePath(`/cases/${currentCaseStudy.slug}/`, currentLanguage)}" class="case-link" target="_blank" rel="noreferrer">
+  <a
+    href="{base}{localizePath(`/cases/${currentCaseStudy.slug}/`, currentLanguage)}"
+    class="case-link"
+    target="_blank"
+    rel="noreferrer"
+    on:click={trackCaseCardClick}
+  >
     {currentSite.labels.viewCase}
   </a>
 </article>

@@ -3,6 +3,7 @@
   import { page } from '$app/stores';
   import RichText from '$lib/components/formatting/RichText.svelte';
   import ResourceBadges from '$lib/components/cards/ResourceBadges.svelte';
+  import { trackToolLink } from '$lib/analytics.js';
   import { site } from '$lib/content/editable/global/site.js';
   import { translateTaxonomyDisplay, translateTaxonomyList, translateTaxonomyValue } from '$lib/content/technical/taxonomy-labels.js';
   import { isDownloadableToolLink } from '$lib/content/technical/tool-catalogue-utils.js';
@@ -66,6 +67,15 @@
     [translate(labels.access, currentLanguage), accessText]
   ];
 
+  function trackMainToolLink() {
+    trackToolLink({
+      toolSlug: currentResource.slug,
+      toolTitle: currentResource.title,
+      linkUrl: toolHref,
+      linkType: isDownloadableTool ? 'download' : 'open'
+    });
+  }
+
 </script>
 
 <svelte:head>
@@ -92,6 +102,7 @@
         target={shouldDownloadTool ? undefined : '_blank'}
         rel={shouldDownloadTool ? undefined : 'noreferrer'}
         download={shouldDownloadTool ? '' : undefined}
+        on:click={trackMainToolLink}
       >
         {isDownloadableTool ? currentSite.labels.downloadTool : currentSite.labels.openTool}
       </a>
