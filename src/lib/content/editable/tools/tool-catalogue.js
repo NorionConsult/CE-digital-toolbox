@@ -2195,7 +2195,7 @@ const toolCatalogue = [
         en: "A set of six practical tools for agri-SMEs, entrepreneur support organisations and practitioners working with circular agribusinesses.",
         uk: "Набір із шести практичних інструментів для аграрних малих і середніх підприємств, організацій підтримки підприємців і практиків, які працюють із циклічним агробізнесом.",
         ro: "Un set de șase instrumente practice pentru IMM-uri agricole, organizații de sprijinire a antreprenorilor și practicieni care lucrează cu agro-afacerile circulare.",
-        hy: "Վեց գործնական գործիքների հավաքածու ագրոՓՄՁ-ների, ձեռնարկատերերին աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի հետ աշխատող մասնագետների համար։"
+        hy: "Վեց գործնական գործիքների հավաքածու ագրոՓՄՁ-ների, ձեռնարկատերերին աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի հետ աշխատող մասնագետների համար։" 
       },
     about:
       {
@@ -3324,7 +3324,7 @@ const toolCatalogue = [
         en: "Automates the assessment of environmental, social and governance (ESG) factors of Ukrainian companies.",
         uk: "Автоматизує оцінку екологічних, соціальних та управлінських факторів (ESG) українських компаній.",
         ro: "Automatizează evaluarea factorilor de mediu, sociali și de guvernanță (ESG) ai companiilor ucrainene.",
-        hy: "Ավտոմատացնում է ուկրաինական ընկերությունների բնապահպանական, սոցիալական և կառավարման (ESG) գործոնների գնահատումը:"
+        hy: "Ավտոմատացնում է ուկրաինական ընկերությունների բնապահպանական, սոցիալական և կառավարման (ESG) գործոնների գնահատումը։"
       },
     about:
       {
@@ -3380,7 +3380,7 @@ const toolCatalogue = [
         en: "Collects and systematises environmental, social and governance data for enterprises.",
         uk: "Збирає та систематизує екологічні, соціальні та управлінські дані для підприємств.",
         ro: "Colectează și sistematizează date de mediu, sociale și de guvernanță pentru întreprinderi.",
-        hy: "Հավաքում և համակարգում է ձեռնարկությունների բնապահպանական, սոցիալական և կառավարման տվյալները:"
+        hy: "Հավաքում և համակարգում է ձեռնարկությունների բնապահպանական, սոցիալական և կառավարման տվյալները։"
       },
     about:
       {
@@ -3436,7 +3436,7 @@ const toolCatalogue = [
         en: "A marketplace for selling sorted recyclables to certified buyers and reducing waste costs.",
         uk: "Ринок для продажу відсортованої вторинної сировини сертифікованим покупцям і зниження витрат на відходи.",
         ro: "O piață pentru vânzarea materialelor reciclabile sortate cumpărătorilor certificați și pentru reducerea costurilor deșeurilor.",
-        hy: "Վկայագրված գնորդներին տեսակավորված վերամշակվող նյութեր վաճառելու և թափոնների ծախսերը նվազեցնելու շուկա:"
+        hy: "Վկայագրված գնորդներին տեսակավորված վերամշակվող նյութեր վաճառելու և թափոնների ծախսերը նվազեցնելու շուկա։"
       },
     about:
       {
@@ -3492,7 +3492,7 @@ const toolCatalogue = [
         en: "A public space for putting zero waste principles into practice through sorting, reuse and repair.",
         uk: "Громадський простір для практичного впровадження принципів нульових відходів шляхом сортування, повторного використання та ремонту.",
         ro: "Un spațiu public pentru punerea în practică a principiilor zero deșeuri prin sortare, reutilizare și reparare.",
-        hy: "Հանրային տարածք՝ զրոյական թափոնների սկզբունքները գործնականում կիրառելու համար՝ տեսակավորման, վերաօգտագործման և վերանորոգման միջոցով:"
+        hy: "Հանրային տարածք՝ զրոյական թափոնների սկզբունքները գործնականում կիրառելու համար՝ տեսակավորման, վերաօգտագործման և վերանորոգման միջոցով։"
       },
     about:
       {
@@ -3608,7 +3608,7 @@ const toolCatalogue = [
         en: "An online map for finding where to hand over sorted recyclables across Ukraine.",
         uk: "Онлайн карта, де можна здати відсортовану вторсировину по Україні.",
         ro: "O hartă online pentru a găsi unde să predați materiale reciclabile sortate în Ucraina.",
-        hy: "Առցանց քարտեզ՝ գտնելու, թե որտեղ կարելի է հանձնել տեսակավորված վերամշակվող նյութերն ամբողջ Ուկրաինայում:"
+        hy: "Առցանց քարտեզ՝ գտնելու, թե որտեղ կարելի է հանձնել տեսակավորված վերամշակվող նյութերն ամբողջ Ուկրաինայում։"
       },
     about:
       {
@@ -3724,7 +3724,7 @@ const toolCatalogue = [
         en: "A step-by-step guide showing how waste management infrastructure projects have been delivered.",
         uk: "Покроковий посібник, який показує, як реалізовувалися проекти інфраструктури управління відходами.",
         ro: "Un ghid pas cu pas care arată cum au fost livrate proiectele de infrastructură de gestionare a deșeurilor.",
-        hy: "Քայլ առ քայլ ուղեցույց, որը ցույց է տալիս, թե ինչպես են իրականացվել թափոնների կառավարման ենթակառուցվածքային նախագծերը:"
+        hy: "Քայլ առ քայլ ուղեցույց, որը ցույց է տալիս, թե ինչպես են իրականացվել թափոնների կառավարման ենթակառուցվածքային նախագծերը։"
       },
     about:
       {
@@ -3780,7 +3780,7 @@ const toolCatalogue = [
         en: "A localised toolkit helping Armenian SMEs apply circular design principles.",
         uk: "Локалізований набір інструментів, який допомагає вірменським МСП застосовувати принципи кругового проектування.",
         ro: "Un set de instrumente localizat care ajută IMM-urile armene să aplice principiile de proiectare circulară.",
-        hy: "Տեղայնացված գործիքակազմ, որն օգնում է հայկական ՓՄՁ-ներին կիրառել շրջանաձև նախագծման սկզբունքները:"
+        hy: "Տեղայնացված գործիքակազմ, որն օգնում է հայկական ՓՄՁ-ներին կիրառել շրջանաձև նախագծման սկզբունքները։"
       },
     about:
       {
