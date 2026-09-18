@@ -29,12 +29,40 @@ export const cookieConsent = {
     ro: 'Respinge cookie-urile opționale',
     hy: 'Մերժել ոչ պարտադիր cookie-ները'
   },
+  //This is the name of the button to open the cookie settings pop-up//
   settingsLabel: {
     en: 'Cookie settings',
     uk: 'Налаштування cookies',
     ro: 'Setări cookie',
     hy: 'Cookie կարգավորումներ'
   },
+  //This is the yellow button to the left side ogf the page//
+  backToTopLabel: {
+    en: 'Go to top',
+    uk: 'До початку сторінки',
+    ro: 'Mergi sus',
+    hy: 'Գնալ վերև'
+  },
+  privacyPolicyPrefix: {
+    en: ' Read our ',
+    uk: ' Докладніше читайте в нашій ',
+    ro: ' Citește ',
+    hy: ' Կարդացեք մեր '
+  },
+  privacyPolicyLabel: {
+    en: 'Privacy Policy',
+    uk: 'Політиці конфіденційності',
+    ro: 'Politica de confidențialitate',
+    hy: 'Գաղտնիության քաղաքականությունը'
+  },
+  privacyPolicySuffix: {
+    en: ' for more information.',
+    uk: ' для отримання додаткової інформації.',
+    ro: ' pentru mai multe informații.',
+    hy: ' լրացուցիչ տեղեկությունների համար։'
+  },
+  //This is the text for the privacy policy in the cookie consent banner//
+  privacyPolicyHref: '/privacy-policy/',
   statusAccepted: {
     en: 'Analytics cookies are currently accepted.',
     uk: 'Аналітичні cookies наразі прийняті.',

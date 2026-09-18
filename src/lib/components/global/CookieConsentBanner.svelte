@@ -208,6 +208,10 @@
 
   .back-to-top-button,
   .cookie-settings-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 96px;
     padding: 9px 12px;
     border: 0;
     border-radius: 999px;
