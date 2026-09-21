@@ -4361,7 +4361,7 @@ const toolCatalogue = [
         en: "The As-Is Value Chain Mapping tool helps your team build a shared picture of how your current value chain works before trying to redesign it. It takes you through the different stages of the value chain and helps distinguish between activities controlled by your organisation and those carried out by suppliers, customers or other partners. || For each stage, the team maps the resources being used, important stakeholders, inefficiencies and wider influences such as regulation or market trends. Connections between these elements are then made visible, revealing where resources or capabilities are underused, where value is lost and where collaboration may be required.",
         uk: "Інструмент відображення ланцюжка вартості «як є» допомагає вашій команді створити спільну картину того, як працює ваш поточний ланцюг створення вартості, перш ніж намагатися його перепроектувати. Він проведе вас через різні етапи ланцюжка створення вартості та допоможе розрізнити діяльність, яку контролює ваша організація, від діяльності, яку здійснюють постачальники, клієнти чи інші партнери. || Для кожного етапу команда планує ресурси, які використовуються, важливі зацікавлені сторони, неефективність і ширші впливи, такі як регулювання або ринкові тенденції. Тоді зв’язки між цими елементами стають видимими, показуючи, де ресурси чи можливості використовуються недостатньо, де втрачається цінність і де може знадобитися співпраця.",
         ro: "Instrumentul As-Is Value Chain Mapping vă ajută echipa să construiască o imagine comună a modului în care funcționează lanțul dvs. valoric actual înainte de a încerca să-l reproiecteze. Vă conduce prin diferitele etape ale lanțului valoric și vă ajută să faceți distincția între activitățile controlate de organizația dvs. și cele desfășurate de furnizori, clienți sau alți parteneri. || Pentru fiecare etapă, echipa cartografiază resursele utilizate, părțile interesate importante, ineficiențele și influențele mai largi, cum ar fi reglementările sau tendințele pieței. Conexiunile dintre aceste elemente sunt apoi făcute vizibile, dezvăluind unde resursele sau capacitățile sunt subutilizate, unde se pierde valoare și unde poate fi necesară colaborarea.",
-        hy: "As-Is Value Chain Mapping գործիքն օգնում է ձեր թիմին ընդհանուր պատկերացում կազմել այն մասին, թե ինչպես է աշխատում ձեր ընթացիկ արժեքային շղթան՝ նախքան այն վերաձևավորելու փորձը: Այն ձեզ տանում է արժեքային շղթայի տարբեր փուլերի միջով և օգնում է տարբերակել ձեր կազմակերպության կողմից վերահսկվող և մատակարարների, հաճախորդների կամ այլ գործընկերների կողմից իրականացվող գործողությունները: || Յուրաքանչյուր փուլի համար թիմը քարտեզագրում է օգտագործվող ռեսուրսները, կարևոր շահագրգիռ կողմերը, անարդյունավետությունը և ավելի լայն ազդեցությունները, ինչպիսիք են կարգավորումը կամ շուկայի միտումները: Այնուհետև այս տարրերի միջև կապերը տեսանելի են դառնում՝ բացահայտելով, թե որտեղ են ռեսուրսները կամ հնարավորությունները թերօգտագործված, որտեղ արժեքը կորչում է և որտեղ կարող է անհրաժեշտ լինել համագործակցություն:"
+        hy: "As-Is Value Chain Mapping գործիքն օգնում է ձեր թիմին ընդհանուր վերլուծական տվյալ կազմել այն մասին, թե ինչպես է աշխատում ձեր ընթացիկ արժեքային շղթան՝ նախքան այն վերաձևավորելու փորձը: Այն ձեզ տանում է արժեքային շղթայի տարբեր փուլերի միջով և օգնում է տարբերակել ձեր կազմակերպության կողմից վերահսկվող և մատակարարների, հաճախորդների կամ այլ գործընկերների կողմից իրականացվող գործողությունները։ || Յուրաքանչյուր փուլի համար թիմը քարտեզագրում է օգտագործվող ռեսուրսները, կարևոր շահագրգիռ կողմերը, անարդյունավետությունը և ավելի լայն ազդեցությունները, ինչպիսիք են կարգավորումը կամ շուկայի միտումները: Այնուհետև այս տարրերի միջև կապերը տեսանելի են դառնում՝ բացահայտելով, թե որտեղ են ռեսուրսները կամ հնարավորությունները թերօգտագործված, որտեղ արժեքը կորչում է և որտեղ կարող է անհրաժեշտ լինել համագործակցություն։"
       },
     journeyPhases: ['Assess', 'Explore'],
     placements: {
@@ -4383,21 +4383,21 @@ const toolCatalogue = [
         en: "Bring together participants with knowledge from different parts and levels of the organisation. Print the worksheet in a large format or recreate it on a digital whiteboard, and have sticky notes and pens ready.",
         uk: "Об’єднайте учасників із знаннями з різних частин та рівнів організації. Роздрукуйте робочий аркуш у великому форматі або відтворіть його на цифровій дошці та приготуйте нотатки та ручки.",
         ro: "Reunește participanții cu cunoștințe din diferite părți și niveluri ale organizației. Imprimați foaia de lucru într-un format mare sau recreați-o pe o tablă digitală și aveți pregătite note lipicioase și pixuri.",
-        hy: "Միավորել մասնակիցներին կազմակերպության տարբեր մասերից և մակարդակներից ունեցած գիտելիքներով: Տպեք աշխատաթերթը մեծ ձևաչափով կամ վերստեղծեք այն թվային գրատախտակի վրա և պատրաստեք կպչուն գրառումներ և գրիչներ:"
+        hy: "Միավորել մասնակիցներին կազմակերպության տարբեր մասերից և մակարդակներից ունեցած գիտելիքներով: Տպեք աշխատաթերթը մեծ ձևաչափով կամ վերստեղծեք այն թվային գրատախտակի վրա և պատրաստեք կպչուն գրառումներ և գրիչներ։"
       },
     output:
       {
         en: "A visual map of the current value chain showing key stages, resources, stakeholders, inefficiencies and external influences.",
         uk: "Візуальна карта поточного ланцюжка створення вартості, що показує ключові етапи, ресурси, зацікавлених сторін, неефективність і зовнішні впливи.",
         ro: "O hartă vizuală a lanțului valoric actual care arată etapele cheie, resursele, părțile interesate, ineficiențele și influențele externe.",
-        hy: "Ընթացիկ արժեքային շղթայի տեսողական քարտեզ, որը ցույց է տալիս հիմնական փուլերը, ռեսուրսները, շահագրգիռ կողմերը, անարդյունավետությունը և արտաքին ազդեցությունները:"
+        hy: "Ընթացիկ արժեքային շղթայի տեսողական քարտեզ, որը ցույց է տալիս հիմնական փուլերը, ռեսուրսները, շահագրգիռ կողմերը, անարդյունավետությունը և արտաքին ազդեցությունները։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) that want to understand their current system before identifying circular strategies, redesigning their value chain or engaging new partners.",
         uk: "Малі та середні підприємства (МСП), які хочуть зрозуміти свою поточну систему, перш ніж визначати циклічні стратегії, переробляти свій ланцюжок створення вартості або залучати нових партнерів.",
         ro: "Întreprinderile mici și mijlocii (IMM-uri) care doresc să-și înțeleagă sistemul actual înainte de a identifica strategii circulare, de a-și reproiecta lanțul valoric sau de a angaja noi parteneri.",
-        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ցանկանում են հասկանալ իրենց ներկայիս համակարգը՝ նախքան շրջանաձև ռազմավարությունները բացահայտելը, իրենց արժեքային շղթան վերանախագծելը կամ նոր գործընկերներ ներգրավելը:"
+        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ցանկանում են հասկանալ իրենց ներկայիս համակարգը՝ նախքան շրջանաձև ռազմավարությունները բացահայտելը, իրենց արժեքային շղթան վերանախագծելը կամ նոր գործընկերներ ներգրավելը։"
       },
     format: {
       en: "Printable worksheet",
@@ -4423,7 +4423,7 @@ const toolCatalogue = [
         en: "User interviews help you understand how customers, users and other stakeholders actually experience a product, service or system. In a circular economy context, this is important because solutions such as reuse, repair, sharing, take-back and product-service models often depend on people changing behaviours or interacting with a product in new ways. || The worksheet supports the preparation of a semi-structured interview plan based on research questions. It encourages open questions, follow-up questions and systematic recording of insights across interviewees, so recurring needs, challenges and patterns can inform circular solution development.",
         uk: "Інтерв’ю з користувачами допомагають зрозуміти, як клієнти, користувачі та інші зацікавлені сторони насправді відчувають продукт, послугу чи систему. У контексті циклічної економіки це важливо, оскільки такі рішення, як повторне використання, ремонт, спільне використання, повернення та моделі обслуговування продукту, часто залежать від того, чи люди змінюють поведінку або взаємодіють із продуктом по-новому. || Робочий аркуш підтримує підготовку напівструктурованого плану інтерв’ю на основі запитань дослідження. Він заохочує відкриті запитання, додаткові запитання та систематичний запис думок співбесідників, тому повторювані потреби, виклики та шаблони можуть стати основою для циклічної розробки рішень.",
         ro: "Interviurile cu utilizatorii vă ajută să înțelegeți modul în care clienții, utilizatorii și alte părți interesate experimentează de fapt un produs, serviciu sau sistem. Într-un context de economie circulară, acest lucru este important, deoarece soluțiile precum reutilizarea, repararea, partajarea, preluarea și modelele de produse-servicii depind adesea de schimbarea comportamentului oamenilor sau de interacțiunea cu un produs în moduri noi. || Fișa de lucru sprijină pregătirea unui plan de interviu semistructurat bazat pe întrebări de cercetare. Încurajează întrebările deschise, întrebările ulterioare și înregistrarea sistematică a perspectivelor între intervievați, astfel încât nevoile, provocările și modelele recurente pot informa dezvoltarea de soluții circulare.",
-        hy: "Օգտատերերի հարցազրույցները օգնում են ձեզ հասկանալ, թե ինչպես են հաճախորդները, օգտվողները և այլ շահագրգիռ կողմերը իրականում զգում ապրանքը, ծառայությունը կամ համակարգը: Շրջանաձև տնտեսության համատեքստում դա կարևոր է, քանի որ լուծումները, ինչպիսիք են վերաօգտագործումը, վերանորոգումը, փոխանակումը, հետ վերցնելը և արտադրանքի սպասարկման մոդելները, հաճախ կախված են մարդկանց վարքագիծը փոխելու կամ ապրանքի հետ նոր ձևերով փոխազդեցությունից: || Աշխատանքային թերթիկը աջակցում է հետազոտական ​​հարցերի հիման վրա կիսակառույց հարցազրույցի պլանի պատրաստմանը: Այն խրախուսում է բաց հարցերը, հետագա հարցերը և հարցվածների միջև պատկերացումների համակարգված գրանցումը, այնպես որ կրկնվող կարիքները, մարտահրավերները և օրինաչափությունները կարող են տեղեկացնել շրջանաձև լուծումների մշակմանը:"
+        hy: "Օգտատերերի հարցազրույցները օգնում են ձեզ հասկանալ, թե ինչպես են հաճախորդները, օգտվողները և այլ շահագրգիռ կողմերը իրականում զգում ապրանքը, ծառայությունը կամ համակարգը: Շրջանաձև տնտեսության համատեքստում դա կարևոր է, քանի որ լուծումները, ինչպիսիք են վերաօգտագործումը, վերանորոգումը, փոխանակումը, հետ վերցնելը և արտադրանքի սպասարկման մոդելները, հաճախ կախված են մարդկանց վարքագիծը փոխելու կամ ապրանքի հետ նոր ձևերով փոխազդեցությունից։ || Աշխատանքային թերթիկը աջակցում է հետազոտական հարցերի հիման վրա կիսակառույց հարցազրույցի պլանի պատրաստմանը: Այն խրախուսում է բաց հարցերը, հետագա հարցերը և հարցվածների միջև վերլուծական տվյալների համակարգված գրանցումը, այնպես որ կրկնվող կարիքները, մարտահրավերները և օրինաչափությունները կարող են տեղեկացնել շրջանաձև լուծումների մշակմանը։"
       },
     journeyPhases: ['Assess', 'Explore'],
     placements: {
@@ -4438,28 +4438,28 @@ const toolCatalogue = [
       en: "1-2 weeks, including preparation, interviews and collection of insights",
       uk: "1-2 тижні, включно з підготовкою, інтерв’ю та збором інсайтів",
       ro: "1-2 săptămâni, inclusiv pregătirea, interviurile și colectarea de informații",
-      hy: "1-2 շաբաթ՝ ներառյալ նախապատրաստումը, հարցազրույցները և պատկերացումների հավաքագրումը"
+      hy: "1-2 շաբաթ՝ ներառյալ նախապատրաստումը, հարցազրույցները և վերլուծական տվյալների հավաքագրումը"
     },
     preparationNeeded:
       {
         en: "Define what you need to learn and which user or stakeholder groups you need to speak to.",
         uk: "Визначте, що вам потрібно навчитися та з якими групами користувачів або зацікавлених сторін вам потрібно поговорити.",
         ro: "Definiți ce trebuie să învățați și cu ce utilizatori sau grupuri de părți interesate trebuie să vorbiți.",
-        hy: "Սահմանեք, թե ինչ պետք է սովորեք, և որ օգտագործողների կամ շահագրգիռ կողմերի հետ պետք է խոսեք:"
+        hy: "Սահմանեք, թե ինչ պետք է սովորեք, և որ օգտագործողների կամ շահագրգիռ կողմերի հետ պետք է խոսեք։"
       },
     output:
       {
         en: "Structured qualitative insights into user needs, behaviours, motivations, barriers and opportunities.",
         uk: "Структуроване якісне уявлення про потреби, поведінку, мотивацію, перешкоди та можливості користувачів.",
         ro: "Perspective calitative structurate asupra nevoilor utilizatorilor, comportamentelor, motivațiilor, barierelor și oportunităților.",
-        hy: "Օգտագործողների կարիքների, վարքագծի, դրդապատճառների, խոչընդոտների և հնարավորությունների վերաբերյալ կառուցվածքային որակական պատկերացումներ:"
+        hy: "Օգտագործողների կարիքների, վարքագծի, դրդապատճառների, խոչընդոտների և հնարավորությունների վերաբերյալ կառուցվածքային որակական վերլուծական տվյալներ։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) developing solutions where customer or user behaviour is important, including reuse, repair, sharing, return systems and service models.",
         uk: "Малі та середні підприємства (МСП), які розробляють рішення, у яких важлива поведінка клієнтів або користувачів, зокрема системи повторного використання, ремонту, спільного використання, повернення та моделі обслуговування.",
         ro: "Întreprinderile mici și mijlocii (IMM-uri) dezvoltă soluții în care comportamentul clienților sau utilizatorilor este important, inclusiv reutilizarea, repararea, partajarea, sistemele de returnare și modelele de servicii.",
-        hy: "Փոքր և միջին ձեռնարկությունները (ՓՄՁ) լուծումներ են մշակում, որտեղ հաճախորդի կամ օգտագործողի վարքագիծը կարևոր է, ներառյալ վերաօգտագործումը, վերանորոգումը, փոխանակումը, վերադարձման համակարգերը և սպասարկման մոդելները:"
+        hy: "Փոքր և միջին ձեռնարկությունները (ՓՄՁ) լուծումներ են մշակում, որտեղ հաճախորդի կամ օգտագործողի վարքագիծը կարևոր է, ներառյալ վերաօգտագործումը, վերանորոգումը, փոխանակումը, վերադարձման համակարգերը և սպասարկման մոդելները։"
       },
     format: {
       en: "Printable interview planning worksheet",
@@ -4485,7 +4485,7 @@ const toolCatalogue = [
         en: "CEvaluator is an online checklist for examining a circular project from both a circularity and financing perspective. It was originally developed to help financial organisations assess circular investment cases, but it can also help small-medium enterprises (SMEs) prepare a circular project or financing application. || The assessment considers circular design and production, circular use models, value retention, environmental sustainability, opportunities and risks. Rather than producing a single circularity percentage, CEvaluator provides a qualitative overview of how a project performs across different dimensions and where additional evidence or risk mitigation may be needed.",
         uk: "CEvaluator — це контрольний онлайн-перелік для аналізу циклічного проекту як з погляду циклізму, так і з точки зору фінансування. Спочатку він був розроблений, щоб допомогти фінансовим організаціям оцінити випадки циклічного інвестування, але він також може допомогти малим і середнім підприємствам (МСП) підготувати циклічний проект або заявку на фінансування. || Оцінка враховує циклічне проектування та виробництво, циклічні моделі використання, збереження вартості, екологічну стійкість, можливості та ризики. Замість того, щоб створювати єдиний відсоток циклічності, CEvaluator надає якісний огляд того, як проект працює в різних вимірах і де можуть знадобитися додаткові докази або зниження ризику.",
         ro: "CEvaluator este o listă de verificare online pentru examinarea unui proiect circular atât din perspectiva circularității, cât și din perspectiva finanțării. A fost dezvoltat inițial pentru a ajuta organizațiile financiare să evalueze cazurile de investiții circulare, dar poate ajuta și întreprinderile mici și mijlocii (IMM-uri) să pregătească un proiect circular sau o cerere de finanțare. || Evaluarea ia în considerare proiectarea și producția circulară, modelele de utilizare circulară, păstrarea valorii, sustenabilitatea mediului, oportunitățile și riscurile. În loc să producă un singur procent de circularitate, CEvaluator oferă o imagine de ansamblu calitativă a modului în care un proiect funcționează în diferite dimensiuni și unde ar putea fi necesare dovezi suplimentare sau atenuarea riscurilor.",
-        hy: "CEvaluator-ը առցանց ստուգաթերթ է՝ շրջանաձև նախագիծը թե՛ շրջանաձևության, թե՛ ֆինանսավորման տեսանկյունից ուսումնասիրելու համար: Այն ի սկզբանե մշակվել է ֆինանսական կազմակերպություններին օգնելու գնահատել շրջաբերական ներդրումների դեպքերը, սակայն այն կարող է նաև օգնել փոքր միջին ձեռնարկություններին (ՓՄՁ) պատրաստել շրջանաձև նախագիծ կամ ֆինանսավորման հայտ: || Գնահատումը հաշվի է առնում շրջանաձև ձևավորում և արտադրություն, շրջանաձև օգտագործման մոդելներ, արժեքների պահպանում, շրջակա միջավայրի կայունություն, հնարավորություններ և ռիսկեր: Շրջանաձևության մեկ տոկոս ստեղծելու փոխարեն CEvaluator-ը որակական ակնարկ է տալիս այն մասին, թե ինչպես է նախագիծը գործում տարբեր հարթություններում և որտեղ կարող են անհրաժեշտ լինել լրացուցիչ ապացույցներ կամ ռիսկի նվազեցում:"
+        hy: "CEvaluator-ը առցանց ստուգաթերթ է՝ շրջանաձև նախագիծը թե՛ շրջանաձևության, թե՛ ֆինանսավորման տեսանկյունից ուսումնասիրելու համար: Այն ի սկզբանե մշակվել է ֆինանսական կազմակերպություններին օգնելու գնահատել շրջաբերական ներդրումների դեպքերը, սակայն այն կարող է նաև օգնել փոքր միջին ձեռնարկություններին (ՓՄՁ) պատրաստել շրջանաձև նախագիծ կամ ֆինանսավորման հայտ։ || Գնահատումը հաշվի է առնում շրջանաձև ձևավորում և արտադրություն, շրջանաձև օգտագործման մոդելներ, արժեքների պահպանում, շրջակա միջավայրի կայունություն, հնարավորություններ և ռիսկեր: Շրջանաձևության մեկ տոկոս ստեղծելու փոխարեն CEvaluator-ը որակական ակնարկ է տալիս այն մասին, թե ինչպես է նախագիծը գործում տարբեր հարթություններում և որտեղ կարող են անհրաժեշտ լինել լրացուցիչ ապացույցներ կամ ռիսկի նվազեցում։"
       },
     journeyPhases: ['Assess', 'Evaluate'],
     placements: {
@@ -4501,28 +4501,28 @@ const toolCatalogue = [
         en: "Variable, depending on the complexity of the project and how much supporting information is already available.",
         uk: "Змінна залежно від складності проекту та обсягу супровідної інформації, яка вже доступна.",
         ro: "Variabil, în funcție de complexitatea proiectului și de câte informații de sprijin sunt deja disponibile.",
-        hy: "Փոփոխական՝ կախված ծրագրի բարդությունից և օժանդակող տեղեկություններից արդեն հասանելի:"
+        hy: "Փոփոխական՝ կախված ծրագրի բարդությունից և օժանդակող տեղեկություններից արդեն հասանելի։"
       },
     preparationNeeded:
       {
         en: "Have a clear description of the project and business model available, together with evidence on circular activities, environmental performance, financing needs, risks and expected benefits.",
         uk: "Мати доступний чіткий опис проекту та бізнес-моделі разом із доказами циклічної діяльності, екологічної ефективності, потреб у фінансуванні, ризиків та очікуваних вигод.",
         ro: "Aveți la dispoziție o descriere clară a proiectului și a modelului de afaceri, împreună cu dovezi privind activitățile circulare, performanța de mediu, nevoile de finanțare, riscurile și beneficiile așteptate.",
-        hy: "Ունեցեք մատչելի ծրագրի և բիզնես մոդելի հստակ նկարագրություն՝ շրջաբերական գործունեության, բնապահպանական կատարողականի, ֆինանսավորման կարիքների, ռիսկերի և ակնկալվող օգուտների վերաբերյալ ապացույցների հետ միասին:"
+        hy: "Ունեցեք մատչելի ծրագրի և բիզնես մոդելի հստակ նկարագրություն՝ շրջաբերական գործունեության, բնապահպանական կատարողականի, ֆինանսավորման կարիքների, ռիսկերի և ակնկալվող օգուտների վերաբերյալ ապացույցների հետ միասին։"
       },
     output:
       {
         en: "A qualitative overview of circular performance together with relevant opportunities and risks for financing the project.",
         uk: "Якісний огляд циклічного виконання разом із відповідними можливостями та ризиками для фінансування проекту.",
         ro: "O imagine de ansamblu calitativă a performanței circulare împreună cu oportunități și riscuri relevante pentru finanțarea proiectului.",
-        hy: "Շրջանաձև կատարողականի որակական ակնարկ՝ ծրագրի ֆինանսավորման համար համապատասխան հնարավորությունների և ռիսկերի հետ միասին:"
+        hy: "Շրջանաձև կատարողականի որակական ակնարկ՝ ծրագրի ֆինանսավորման համար համապատասխան հնարավորությունների և ռիսկերի հետ միասին։"
       },
     bestFor:
       {
         en: "Circular small-medium enterprises (SMEs) preparing an investment or funding case, as well as organisations evaluating whether a circular project is ready for financing.",
         uk: "Циклічні малі та середні підприємства (МСП), які готують обґрунтування інвестицій або фінансування, а також організації, які оцінюють, чи циклічний проект готовий до фінансування.",
         ro: "Întreprinderi mici-mijlocii circulare (IMM-uri) care pregătesc un caz de investiție sau finanțare, precum și organizații care evaluează dacă un proiect circular este pregătit pentru finanțare.",
-        hy: "Շրջանաձև փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք պատրաստում են ներդրումային կամ ֆինանսավորման գործ, ինչպես նաև կազմակերպությունները, որոնք գնահատում են, թե արդյոք շրջանաձև նախագիծը պատրաստ է ֆինանսավորման:"
+        hy: "Շրջանաձև փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք պատրաստում են ներդրումային կամ ֆինանսավորման գործ, ինչպես նաև կազմակերպությունները, որոնք գնահատում են, թե արդյոք շրջանաձև նախագիծը պատրաստ է ֆինանսավորման։"
       },
     format: {
       en: "Online assessment",
@@ -4548,7 +4548,7 @@ const toolCatalogue = [
         en: "The Test Card helps your team test whether the assumptions behind a new product, service or business model hold up in practice before committing substantial resources to implementation. Instead of relying on discussion or intuition, the tool turns an assumption into a structured experiment with clear evidence and a predefined threshold for success. || For a circular solution, this could involve testing whether customers will return a product, whether they are willing to pay for repair or rental, whether a supplier will accept recovered materials, or whether a new service can operate at an acceptable cost.",
         uk: "Тестова картка допомагає вашій команді перевірити, чи витримуються на практиці припущення, що лежать в основі нового продукту, послуги чи бізнес-моделі, перш ніж виділяти значні ресурси для впровадження. Замість того, щоб покладатися на обговорення чи інтуїцію, інструмент перетворює припущення на структурований експеримент із чіткими доказами та заздалегідь визначеним порогом успіху. || Для циклічного рішення це може включати перевірку того, чи покупці повернуть продукт, чи готові вони платити за ремонт або оренду, чи прийме постачальник відновлені матеріали або чи може нова послуга працювати за прийнятною ціною.",
         ro: "Cardul de testare vă ajută echipa să testeze dacă ipotezele din spatele unui nou produs, serviciu sau model de afaceri rezistă în practică înainte de a angaja resurse substanțiale pentru implementare. În loc să se bazeze pe discuții sau intuiție, instrumentul transformă o presupunere într-un experiment structurat cu dovezi clare și un prag predefinit pentru succes. || Pentru o soluție circulară, aceasta ar putea implica testarea dacă clienții vor returna un produs, dacă sunt dispuși să plătească pentru reparație sau închiriere, dacă un furnizor va accepta materiale recuperate sau dacă un nou serviciu poate funcționa la un cost acceptabil.",
-        hy: "Փորձարկման քարտն օգնում է ձեր թիմին ստուգել, ​​թե արդյոք նոր արտադրանքի, ծառայության կամ բիզնես մոդելի հիմքում ընկած ենթադրությունները գործնականում կպահպանվեն՝ նախքան ներդրման համար նշանակալի ռեսուրսներ տրամադրելը: Քննարկման կամ ինտուիցիայի վրա հենվելու փոխարեն՝ գործիքը ենթադրությունը վերածում է կառուցվածքային փորձի՝ հստակ ապացույցներով և հաջողության նախապես սահմանված շեմով: || Շրջանաձև լուծման համար սա կարող է ներառել ստուգում՝ արդյոք հաճախորդները կվերադարձնեն ապրանքը, պատրաստ են վճարել վերանորոգման կամ վարձակալության համար, արդյոք մատակարարը կընդունի վերականգնված նյութերը, թե արդյոք նոր ծառայությունը կարող է գործել ընդունելի գնով:"
+        hy: "Փորձարկման քարտն օգնում է ձեր թիմին ստուգել, թե արդյոք նոր արտադրանքի, ծառայության կամ բիզնես մոդելի հիմքում ընկած ենթադրությունները գործնականում կպահպանվեն՝ նախքան ներդրման համար նշանակալի ռեսուրսներ տրամադրելը: Քննարկման կամ ինտուիցիայի վրա հենվելու փոխարեն՝ գործիքը ենթադրությունը վերածում է կառուցվածքային փորձի՝ հստակ ապացույցներով և հաջողության նախապես սահմանված շեմով։ || Շրջանաձև լուծման համար սա կարող է ներառել ստուգում՝ արդյոք հաճախորդները կվերադարձնեն ապրանքը, պատրաստ են վճարել վերանորոգման կամ վարձակալության համար, արդյոք մատակարարը կընդունի վերականգնված նյութերը, թե արդյոք նոր ծառայությունը կարող է գործել ընդունելի գնով։"
       },
     journeyPhases: ['Evaluate', 'Implement'],
     placements: {
@@ -4564,28 +4564,28 @@ const toolCatalogue = [
         en: "Around 30-60 minutes to design an individual test, followed by the time required to carry out the experiment.",
         uk: "Приблизно 30-60 хвилин на розробку індивідуального тесту, а потім час, необхідний для проведення експерименту.",
         ro: "Aproximativ 30-60 de minute pentru a proiecta un test individual, urmat de timpul necesar pentru realizarea experimentului.",
-        hy: "Մոտ 30-60 րոպե անհատական ​​թեստ մշակելու համար, որին հաջորդում է փորձը կատարելու համար պահանջվող ժամանակը:"
+        hy: "Մոտ 30-60 րոպե անհատական թեստ մշակելու համար, որին հաջորդում է փորձը կատարելու համար պահանջվող ժամանակը։"
       },
     preparationNeeded:
       {
         en: "Start with a circular solution or business-model concept that you want to evaluate. Identify the assumptions that are most important for the idea to succeed.",
         uk: "Почніть із кругового рішення або концепції бізнес-моделі, яку ви хочете оцінити. Визначте припущення, які є найважливішими для успіху ідеї.",
         ro: "Începeți cu o soluție circulară sau un concept de model de afaceri pe care doriți să îl evaluați. Identificați ipotezele care sunt cele mai importante pentru ca ideea să aibă succes.",
-        hy: "Սկսեք շրջանաձև լուծումից կամ բիզնես մոդելի հայեցակարգից, որը ցանկանում եք գնահատել: Բացահայտեք այն ենթադրությունները, որոնք առավել կարևոր են գաղափարի հաջողության համար:"
+        hy: "Սկսեք շրջանաձև լուծումից կամ բիզնես մոդելի հայեցակարգից, որը ցանկանում եք գնահատել: Բացահայտեք այն ենթադրությունները, որոնք առավել կարևոր են գաղափարի հաջողության համար։"
       },
     output:
       {
         en: "A clearly defined experiment describing the assumption to test, how it will be tested, what evidence will be collected and the threshold for success.",
         uk: "Чітко визначений експеримент, що описує припущення для перевірки, як воно буде перевірено, які докази будуть зібрані та поріг успіху.",
         ro: "Un experiment clar definit care descrie ipoteza de testat, cum va fi testată, ce dovezi vor fi colectate și pragul de succes.",
-        hy: "Հստակ սահմանված փորձ, որը նկարագրում է փորձարկման ենթադրությունը, ինչպես է այն փորձարկվելու, ինչ ապացույցներ են հավաքվելու և հաջողության շեմը:"
+        hy: "Հստակ սահմանված փորձ, որը նկարագրում է փորձարկման ենթադրությունը, ինչպես է այն փորձարկվելու, ինչ ապացույցներ են հավաքվելու և հաջողության շեմը։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) that have developed a circular concept but still need evidence about demand, behaviour, operations, partnerships, pricing or other assumptions.",
         uk: "Малі та середні підприємства (МСП), які розробили циклічну концепцію, але все ще потребують доказів щодо попиту, поведінки, діяльності, партнерства, ціноутворення чи інших припущень.",
         ro: "Întreprinderile mici și mijlocii (IMM-uri) care au dezvoltat un concept circular, dar au nevoie de dovezi despre cerere, comportament, operațiuni, parteneriate, prețuri sau alte ipoteze.",
-        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք մշակել են շրջանաձև հայեցակարգ, բայց դեռ կարիք ունեն պահանջարկի, վարքագծի, գործառնությունների, գործընկերությունների, գնագոյացման կամ այլ ենթադրությունների վերաբերյալ ապացույցների:"
+        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք մշակել են շրջանաձև հայեցակարգ, բայց դեռ կարիք ունեն պահանջարկի, վարքագծի, գործառնությունների, գործընկերությունների, գնագոյացման կամ այլ ենթադրությունների վերաբերյալ ապացույցների։"
       },
     format: {
       en: "Printable test card / digital worksheet",
@@ -4611,7 +4611,7 @@ const toolCatalogue = [
         en: "The Circular Designs Evaluation Pack helps your team assess and compare circular product and service concepts before investing further time and resources in development. Instead of looking only at environmental benefits, the tool examines each concept from three perspectives: whether it creates value for users, whether it makes sense for the organisation and whether it is likely to benefit the environment. || Concepts can then be positioned according to their potential and difficulty of implementation. This makes it easier to distinguish quick opportunities, ideas requiring further development and more ambitious concepts that could deliver significant benefits but require substantial organisational change.",
         uk: "Пакет оцінки Circular Designs Evaluation Pack допоможе вашій команді оцінити та порівняти концепції циклічних продуктів і послуг, перш ніж вкладати час і ресурси в розробку. Замість того, щоб дивитися лише на переваги для навколишнього середовища, інструмент розглядає кожну концепцію з трьох точок зору: чи створює вона цінність для користувачів, чи має вона сенс для організації та чи може вона принести користь навколишньому середовищу. || Тоді концепції можна позиціонувати відповідно до їхнього потенціалу та складності реалізації. Це полегшує розрізнення швидких можливостей, ідей, які потребують подальшого розвитку, та більш амбітних концепцій, які можуть принести значні переваги, але потребують істотних організаційних змін.",
         ro: "Pachetul de evaluare Circular Designs vă ajută echipa să evalueze și să compare conceptele circulare de produse și servicii înainte de a investi mai mult timp și resurse în dezvoltare. În loc să se uite doar la beneficiile de mediu, instrumentul examinează fiecare concept din trei perspective: dacă creează valoare pentru utilizatori, dacă are sens pentru organizație și dacă este probabil să beneficieze de mediu. || Conceptele pot fi apoi poziționate în funcție de potențialul și dificultatea lor de implementare. Acest lucru facilitează distingerea oportunităților rapide, a ideilor care necesită dezvoltare ulterioară și a conceptelor mai ambițioase care ar putea oferi beneficii semnificative, dar necesită schimbări organizaționale substanțiale.",
-        hy: "Circular Designs Evaluation Pack-ն օգնում է ձեր թիմին գնահատել և համեմատել ապրանքների և ծառայությունների շրջանակային հայեցակարգերը՝ նախքան հետագա ժամանակ և ռեսուրսներ ներդնել զարգացման մեջ: Միայն բնապահպանական օգուտները դիտարկելու փոխարեն, գործիքը յուրաքանչյուր հայեցակարգ ուսումնասիրում է երեք տեսանկյունից. || Այնուհետև հասկացությունները կարող են տեղակայվել ըստ դրանց ներուժի և իրականացման դժվարության: Սա հեշտացնում է արագ հնարավորությունները, հետագա զարգացում պահանջող գաղափարները և ավելի հավակնոտ հայեցակարգերը, որոնք կարող են զգալի օգուտներ բերել, բայց պահանջում են էական կազմակերպչական փոփոխություններ:"
+        hy: "Circular Designs Evaluation Pack-ն օգնում է ձեր թիմին գնահատել և համեմատել ապրանքների և ծառայությունների շրջանակային հայեցակարգերը՝ նախքան հետագա ժամանակ և ռեսուրսներ ներդնել զարգացման մեջ: Միայն բնապահպանական օգուտները դիտարկելու փոխարեն, գործիքը յուրաքանչյուր հայեցակարգ ուսումնասիրում է երեք տեսանկյունից. || Այնուհետև հասկացությունները կարող են տեղակայվել ըստ դրանց ներուժի և իրականացման դժվարության: Սա հեշտացնում է արագ հնարավորությունները, հետագա զարգացում պահանջող գաղափարները և ավելի հավակնոտ հայեցակարգերը, որոնք կարող են զգալի օգուտներ բերել, բայց պահանջում են էական կազմակերպչական փոփոխություններ։"
       },
     journeyPhases: ['Explore', 'Evaluate'],
     placements: {
@@ -4627,28 +4627,28 @@ const toolCatalogue = [
         en: "Approximately 45-60 minutes for 1-3 concepts. More complex concepts may require additional research before the assessment can be completed.",
         uk: "Приблизно 45-60 хвилин на 1-3 концепції. Для більш складних концепцій може знадобитися додаткове дослідження перед завершенням оцінювання.",
         ro: "Aproximativ 45-60 de minute pentru 1-3 concepte. Conceptele mai complexe pot necesita cercetări suplimentare înainte ca evaluarea să poată fi finalizată.",
-        hy: "Մոտավորապես 45-60 րոպե 1-3 հասկացությունների համար: Ավելի բարդ հասկացությունները կարող են պահանջել լրացուցիչ հետազոտություն, նախքան գնահատումն ավարտելը:"
+        hy: "Մոտավորապես 45-60 րոպե 1-3 հասկացությունների համար: Ավելի բարդ հասկացությունները կարող են պահանջել լրացուցիչ հետազոտություն, նախքան գնահատումն ավարտելը։"
       },
     preparationNeeded:
       {
         en: "Select one to three circular concepts to compare and describe each one briefly. Ideally involve people who understand customers, operations, sustainability and the commercial side of the business.",
         uk: "Виберіть від одного до трьох циклічних понять, щоб порівняти та коротко описати кожне. В ідеалі залучайте людей, які розуміються на клієнтах, діяльності, стійкості та комерційній стороні бізнесу.",
         ro: "Selectați unul până la trei concepte circulare pentru a le compara și a le descrie pe scurt. În mod ideal, implicați oameni care înțeleg clienții, operațiunile, sustenabilitatea și partea comercială a afacerii.",
-        hy: "Ընտրեք մեկից երեք շրջանաձև հասկացություն՝ համեմատելու և յուրաքանչյուրը համառոտ նկարագրելու համար: Իդեալում ներգրավել մարդկանց, ովքեր հասկանում են հաճախորդներին, գործառնությունները, կայունությունը և բիզնեսի առևտրային կողմը:"
+        hy: "Ընտրեք մեկից երեք շրջանաձև հասկացություն՝ համեմատելու և յուրաքանչյուրը համառոտ նկարագրելու համար: Իդեալում ներգրավել մարդկանց, ովքեր հասկանում են հաճախորդներին, գործառնությունները, կայունությունը և բիզնեսի առևտրային կողմը։"
       },
     output:
       {
         en: "A structured comparison of circular concepts showing user value, organisational value, environmental benefits, implementation challenges and questions requiring further investigation.",
         uk: "Структуроване порівняння циклічних концепцій, що показує цінність користувача, організаційну цінність, переваги для навколишнього середовища, проблеми впровадження та питання, які потребують подальшого дослідження.",
         ro: "O comparație structurată a conceptelor circulare care arată valoarea utilizatorului, valoarea organizațională, beneficiile de mediu, provocările de implementare și întrebările care necesită investigații suplimentare.",
-        hy: "Շրջանաձև հասկացությունների կառուցվածքային համեմատություն, որը ցույց է տալիս օգտագործողի արժեքը, կազմակերպչական արժեքը, բնապահպանական օգուտները, իրականացման մարտահրավերները և լրացուցիչ ուսումնասիրություն պահանջող հարցեր:"
+        hy: "Շրջանաձև հասկացությունների կառուցվածքային համեմատություն, որը ցույց է տալիս օգտագործողի արժեքը, կազմակերպչական արժեքը, բնապահպանական օգուտները, իրականացման մարտահրավերները և լրացուցիչ ուսումնասիրություն պահանջող հարցեր։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) that have generated several circular product or service ideas and need to decide which concepts should progress.",
         uk: "Малі та середні підприємства (МСП), які створили кілька циклічних ідей щодо продуктів або послуг і мають вирішити, які концепції слід розвивати.",
         ro: "Întreprinderile mici și mijlocii (IMM-uri) care au generat mai multe idei circulare de produse sau servicii și trebuie să decidă care concepte ar trebui să progreseze.",
-        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ստեղծել են մի քանի շրջանաձև ապրանքների կամ ծառայությունների գաղափարներ և պետք է որոշեն, թե որ հայեցակարգերը պետք է առաջընթաց գրանցեն:"
+        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ստեղծել են մի քանի շրջանաձև ապրանքների կամ ծառայությունների գաղափարներ և պետք է որոշեն, թե որ հայեցակարգերը պետք է առաջընթաց գրանցեն։"
       },
     format: {
       en: "Printable evaluation canvas",
@@ -4674,7 +4674,7 @@ const toolCatalogue = [
         en: "The Circular Pilot Canvas helps your team turn a promising circular concept into a structured real-world pilot. It is designed around three fundamental questions: Is there demand for the solution? Is the circular business model worthwhile? And can the organisations involved actually deliver it? || The canvas brings these questions together across value proposition, circular business model, and feasibility and readiness. The team defines what the pilot will test, who needs to participate, what value the solution creates, how circularity will be measured and how responsibilities are distributed.",
         uk: "Circular Pilot Canvas допоможе вашій команді перетворити багатообіцяючу кругову концепцію на структурований пілот у реальному світі. Він розроблений навколо трьох основних питань: чи є попит на рішення? Чи варта циклічна бізнес-модель? І чи можуть залучені організації це реалізувати? || Полотно об’єднує ці питання щодо ціннісних пропозицій, циклічної бізнес-моделі, здійсненності та готовності. Команда визначає, що тестуватиме пілот, хто має брати участь, яку цінність створює рішення, як буде вимірюватися циклічність і як розподіляються обов’язки.",
         ro: "Circular Pilot Canvas vă ajută echipa să transforme un concept circular promițător într-un pilot structurat din lumea reală. Este conceput în jurul a trei întrebări fundamentale: Există cerere pentru soluție? Merită modelul de afaceri circular? Și pot organizațiile implicate să-l livreze? || Pânza reunește aceste întrebări prin propunerea de valoare, modelul de afaceri circular și fezabilitate și pregătire. Echipa definește ce va testa pilotul, cine trebuie să participe, ce valoare creează soluția, cum va fi măsurată circularitatea și cum sunt distribuite responsabilitățile.",
-        hy: "Circular Pilot Canvas-ն օգնում է ձեր թիմին խոստումնալից շրջանաձև հայեցակարգը վերածել կառուցվածքային իրական աշխարհի օդաչուի: Այն նախագծված է երեք հիմնարար հարցի շուրջ. կա՞ լուծման պահանջարկ: Արժե՞ արդյոք շրջանաձև բիզնես մոդելը: Իսկ ներգրավված կազմակերպությունները կարո՞ղ են իրականում մատուցել այն: || Կտավը միավորում է այս հարցերը արժեքի առաջարկի, շրջանաձև բիզնես մոդելի և իրագործելիության և պատրաստակամության վերաբերյալ: Թիմը սահմանում է, թե ինչ է փորձարկելու օդաչուն, ով պետք է մասնակցի, ինչ արժեք է ստեղծում լուծումը, ինչպես է չափվելու շրջանաձևությունը և ինչպես են բաշխվում պարտականությունները:"
+        hy: "Circular Pilot Canvas-ն օգնում է ձեր թիմին խոստումնալից շրջանաձև հայեցակարգը վերածել կառուցվածքային իրական աշխարհի օդաչուի: Այն նախագծված է երեք հիմնարար հարցի շուրջ. կա՞ լուծման պահանջարկ: Արժե՞ արդյոք շրջանաձև բիզնես մոդելը: Իսկ ներգրավված կազմակերպությունները կարո՞ղ են իրականում մատուցել այն։ || Կտավը միավորում է այս հարցերը արժեքային առաջարկի, շրջանաձև բիզնես մոդելի և իրագործելիության և պատրաստակամության վերաբերյալ: Թիմը սահմանում է, թե ինչ է փորձարկելու օդաչուն, ով պետք է մասնակցի, ինչ արժեք է ստեղծում լուծումը, ինչպես է չափվելու շրջանաձևությունը և ինչպես են բաշխվում պարտականությունները։"
       },
     journeyPhases: ['Evaluate','Implement'],
     placements: {
@@ -4692,28 +4692,28 @@ const toolCatalogue = [
         en: "Approximately 1.5 to 2 hours for an initial pilot-planning workshop.",
         uk: "Приблизно 1,5-2 години для початкового семінару з планування пілотного проекту.",
         ro: "Aproximativ 1,5 până la 2 ore pentru un atelier inițial de planificare pilot.",
-        hy: "Մոտավորապես 1,5-ից 2 ժամ նախնական փորձնական պլանավորման սեմինարի համար:"
+        hy: "Մոտավորապես 1,5-ից 2 ժամ նախնական փորձնական պլանավորման սեմինարի համար։"
       },
     preparationNeeded:
       {
         en: "A circular solution selected for further development. Bring together the organisations or functions needed to deliver the pilot and prepare initial information on customers, partners, benefits, costs and operational requirements.",
         uk: "Кругове рішення, обране для подальшого розвитку. Об’єднайте організації або функції, необхідні для виконання пілотного проекту, і підготуйте початкову інформацію про клієнтів, партнерів, переваги, витрати та операційні вимоги.",
         ro: "O soluție circulară selectată pentru dezvoltare ulterioară. Reunește organizațiile sau funcțiile necesare pentru a livra pilotul și pregăti informații inițiale despre clienți, parteneri, beneficii, costuri și cerințe operaționale.",
-        hy: "Հետագա զարգացման համար ընտրված շրջանաձև լուծում: Միավորել կազմակերպությունները կամ գործառույթները, որոնք անհրաժեշտ են փորձնական առաքման համար և նախապատրաստել նախնական տեղեկատվություն հաճախորդների, գործընկերների, օգուտների, ծախսերի և գործառնական պահանջների վերաբերյալ:"
+        hy: "Հետագա զարգացման համար ընտրված շրջանաձև լուծում: Միավորել կազմակերպությունները կամ գործառույթները, որոնք անհրաժեշտ են փորձնական առաքման համար և նախապատրաստել նախնական տեղեկատվություն հաճախորդների, գործընկերների, օգուտների, ծախսերի և գործառնական պահանջների վերաբերյալ։"
       },
     output:
       {
         en: "A structured pilot plan covering what will be tested, stakeholders, expected benefits, circularity goals, costs, risks, roles, success criteria, and timeline.",
         uk: "Структурований пілотний план, який охоплює те, що буде перевірено, зацікавлених сторін, очікувані вигоди, цілі циркулярності, витрати, ризики, ролі, критерії успіху та графік.",
         ro: "Un plan pilot structurat care acoperă ceea ce va fi testat, părțile interesate, beneficiile așteptate, obiectivele de circularitate, costurile, riscurile, rolurile, criteriile de succes și calendarul.",
-        hy: "Կառուցվածքային փորձնական պլան, որը ներառում է այն, ինչ կփորձարկվի, շահագրգիռ կողմերը, ակնկալվող օգուտները, շրջանաձևության նպատակները, ծախսերը, ռիսկերը, դերերը, հաջողության չափանիշները և ժամանակացույցը:"
+        hy: "Կառուցվածքային փորձնական պլան, որը ներառում է այն, ինչ կփորձարկվի, շահագրգիռ կողմերը, ակնկալվող օգուտները, շրջանաձևության նպատակները, ծախսերը, ռիսկերը, դերերը, հաջողության չափանիշները և ժամանակացույցը։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) that want to test a circular product, service or business model with customers and value-chain partners under real-world conditions.",
         uk: "Малі та середні підприємства (МСП), які хочуть протестувати циркулярний продукт, послугу чи бізнес-модель із клієнтами та партнерами в ланцюжку створення вартості в реальних умовах.",
         ro: "Întreprinderi mici și mijlocii (IMM-uri) care doresc să testeze un produs circular, un serviciu sau un model de afaceri cu clienții și partenerii lanțului valoric în condiții reale.",
-        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ցանկանում են իրական աշխարհի պայմաններում փորձարկել շրջանաձև արտադրանք, ծառայություն կամ բիզնես մոդել հաճախորդների և արժեշղթայի գործընկերների հետ:"
+        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք ցանկանում են իրական աշխարհի պայմաններում փորձարկել շրջանաձև արտադրանք, ծառայություն կամ բիզնես մոդել հաճախորդների և արժեշղթայի գործընկերների հետ։"
       },
     format: {
       en: "Printable canvas",
@@ -4739,7 +4739,7 @@ const toolCatalogue = [
         en: "The Prioritising Circular Solutions tool helps your team move from a long list of circular ideas to a smaller number of priorities for further development. It is particularly useful after an ideation workshop, when many possible actions have been generated but it is not yet clear which ones deserve attention first. || The team consolidates the ideas and positions them on a visual matrix according to expected impact, contribution or effort required and timing. The result is a practical first prioritisation that can feed into business-case development, feasibility assessment or implementation planning.",
         uk: "Інструмент Prioritizing Circular Solutions допомагає вашій команді перейти від довгого списку циклічних ідей до меншої кількості пріоритетів для подальшого розвитку. Це особливо корисно після семінару з ідей, коли було згенеровано багато можливих дій, але ще не ясно, які з них заслуговують на увагу першими. || Команда консолідує ідеї та розміщує їх на візуальній матриці відповідно до очікуваного впливу, внеску чи необхідних зусиль і часу. Результатом є практичне першочергове визначення пріоритетів, яке можна використати для розробки бізнес-кейсів, оцінки здійсненності або планування впровадження.",
         ro: "Instrumentul de prioritizare a soluțiilor circulare vă ajută echipa să treacă de la o listă lungă de idei circulare la un număr mai mic de priorități pentru dezvoltare ulterioară. Este deosebit de util după un atelier de ideație, când au fost generate multe acțiuni posibile, dar nu este încă clar care dintre ele merită mai întâi atenție. || Echipa consolidează ideile și le poziționează pe o matrice vizuală în funcție de impactul așteptat, contribuția sau efortul necesar și calendarul. Rezultatul este o primă prioritizare practică, care poate alimenta dezvoltarea unui caz de afaceri, evaluarea fezabilității sau planificarea implementării.",
-        hy: "The Prioritizing Circular Solutions գործիքն օգնում է ձեր թիմին շրջանաձև գաղափարների երկար ցուցակից անցնել ավելի փոքր թվով առաջնահերթությունների հետագա զարգացման համար: Այն հատկապես օգտակար է մտահղացման սեմինարից հետո, երբ ստեղծվել են բազմաթիվ հնարավոր գործողություններ, բայց դեռ պարզ չէ, թե որոնք են առաջինն արժանի ուշադրության: || Թիմը համախմբում է գաղափարները և դրանք տեղադրում տեսողական մատրիցի վրա՝ ըստ ակնկալվող ազդեցության, ներդրման կամ պահանջվող ջանքերի և ժամանակի: Արդյունքը գործնական առաջին առաջնահերթություն է, որը կարող է սնվել բիզնեսի զարգացման, տեխնիկատնտեսական հիմնավորման կամ իրականացման պլանավորման մեջ:"
+        hy: "The Prioritizing Circular Solutions գործիքն օգնում է ձեր թիմին շրջանաձև գաղափարների երկար ցուցակից անցնել ավելի փոքր թվով առաջնահերթությունների հետագա զարգացման համար: Այն հատկապես օգտակար է մտահղացման սեմինարից հետո, երբ ստեղծվել են բազմաթիվ հնարավոր գործողություններ, բայց դեռ պարզ չէ, թե որոնք են առաջինն արժանի ուշադրության։ || Թիմը համախմբում է գաղափարները և դրանք տեղադրում տեսողական մատրիցի վրա՝ ըստ ակնկալվող ազդեցության, ներդրման կամ պահանջվող ջանքերի և ժամանակի: Արդյունքը գործնական առաջին առաջնահերթություն է, որը կարող է սնվել բիզնեսի զարգացման, տեխնիկատնտեսական հիմնավորման կամ իրականացման պլանավորման մեջ։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -4761,21 +4761,21 @@ const toolCatalogue = [
         en: "Bring the circular ideas or solutions generated during earlier analysis or ideation activities. Remove obvious duplicates and formulate each idea clearly enough for comparison.",
         uk: "Принесіть циклічні ідеї чи рішення, згенеровані під час попереднього аналізу чи діяльності з розробки ідей. Видаліть очевидні дублікати та сформулюйте кожну ідею достатньо чітко для порівняння.",
         ro: "Aduceți ideile circulare sau soluțiile generate în timpul activităților anterioare de analiză sau ideare. Eliminați duplicatele evidente și formulați fiecare idee suficient de clar pentru comparație.",
-        hy: "Բերեք շրջանաձև գաղափարներ կամ լուծումներ, որոնք առաջացել են ավելի վաղ վերլուծության կամ գաղափարի գործունեության ընթացքում: Հեռացրեք ակնհայտ կրկնօրինակները և ձևակերպեք յուրաքանչյուր գաղափար բավականին հստակ համեմատության համար:"
+        hy: "Բերեք շրջանաձև գաղափարներ կամ լուծումներ, որոնք առաջացել են ավելի վաղ վերլուծության կամ գաղափարի գործունեության ընթացքում: Հեռացրեք ակնհայտ կրկնօրինակները և ձևակերպեք յուրաքանչյուր գաղափար բավականին հստակ համեմատության համար։"
       },
     output:
       {
         en: "A visual prioritisation of circular solutions, including a small number of high-priority actions to take forward.",
         uk: "Візуальна пріоритезація циклічних рішень, включаючи невелику кількість високопріоритетних дій для подальшого виконання.",
         ro: "O prioritizare vizuală a soluțiilor circulare, inclusiv un număr mic de acțiuni cu prioritate înaltă de urmat.",
-        hy: "Շրջանաձև լուծումների տեսողական առաջնահերթություն, ներառյալ առաջնահերթության փոքր թվով գործողություններ:"
+        hy: "Շրջանաձև լուծումների տեսողական առաջնահերթություն, ներառյալ առաջնահերթության փոքր թվով գործողություններ։"
       },
     bestFor:
       {
         en: "Small-medium enterprises (SMEs) that have identified several possible circular actions and need a quick, collaborative method for agreeing what to focus on first.",
         uk: "Малі та середні підприємства (МСП), які визначили кілька можливих циклічних дій і потребують швидкого спільного методу для узгодження, на чому зосередитися в першу чергу.",
         ro: "Întreprinderile mici și mijlocii (IMM-uri) care au identificat mai multe acțiuni circulare posibile și au nevoie de o metodă rapidă, de colaborare, pentru a conveni pe ce să se concentreze mai întâi.",
-        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք հայտնաբերել են մի քանի հնարավոր շրջանաձև գործողություններ և արագ, համագործակցային մեթոդի կարիք ունեն՝ համաձայնեցնելու, թե ինչի վրա պետք է առաջին հերթին կենտրոնանալ:"
+        hy: "Փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք հայտնաբերել են մի քանի հնարավոր շրջանաձև գործողություններ և արագ, համագործակցային մեթոդի կարիք ունեն՝ համաձայնեցնելու, թե ինչի վրա պետք է առաջին հերթին կենտրոնանալ։"
       },
     format: {
       en: "Printable prioritisation matrix",
@@ -4801,7 +4801,7 @@ const toolCatalogue = [
         en: "Built under the Waste Statistics - Key Facilitator for the Circular Economy project, this dashboard pulls data from the Environment Agency on authorised waste management operators, their permits and contact details. Users can search by waste type to identify licensed recyclers or collectors and access relevant permit documents.",
         uk: "Ця інформаційна панель, створена в рамках проекту Waste Statistics - Key Facilitator for the Circular Economy, збирає дані з Агентства з навколишнього середовища про авторизованих операторів поводження з відходами, їхні дозволи та контактну інформацію. Користувачі можуть шукати за типом відходів, щоб ідентифікувати ліцензованих переробників або збирачів і отримати доступ до відповідних дозвільних документів.",
         ro: "Construit în cadrul proiectului Statistica deșeurilor - Facilitator cheie pentru proiectul economiei circulare, acest tablou de bord extrage date de la Agenția de Mediu despre operatorii autorizați de gestionare a deșeurilor, autorizațiile și datele de contact ale acestora. Utilizatorii pot căuta după tipul de deșeuri pentru a identifica reciclatorii sau colectorii autorizați și pentru a accesa documentele de autorizare relevante.",
-        hy: "Կառուցվել է «Թափոնների վիճակագրություն. Շրջանաձև տնտեսության հիմնական օժանդակող» ծրագրի ներքո՝ այս վահանակը շրջակա միջավայրի գործակալությունից հավաքում է տվյալներ թափոնների կառավարման լիազորված օպերատորների, նրանց թույլտվությունների և կոնտակտային տվյալների վերաբերյալ: Օգտատերերը կարող են որոնել ըստ թափոնների տեսակի՝ բացահայտելու լիցենզավորված վերամշակողներին կամ հավաքողներին և մուտք գործելու համապատասխան թույլտվության փաստաթղթեր:"
+        hy: "Կառուցվել է «Թափոնների վիճակագրություն. Շրջանաձև տնտեսության հիմնական օժանդակող» ծրագրի ներքո՝ այս վահանակը շրջակա միջավայրի գործակալությունից հավաքում է տվյալներ թափոնների կառավարման լիազորված օպերատորների, նրանց թույլտվությունների և կոնտակտային տվյալների վերաբերյալ: Օգտատերերը կարող են որոնել ըստ թափոնների տեսակի՝ բացահայտելու լիցենզավորված վերամշակողներին կամ հավաքողներին և մուտք գործելու համապատասխան թույլտվության փաստաթղթեր։"
       },
     journeyPhases: ['Implement'],
     sector: ['Cross-sector', 'Waste Management', 'Recycling'],
@@ -4826,14 +4826,14 @@ const toolCatalogue = [
         en: "A list of authorised operators with permit details and contact information per waste type.",
         uk: "Список уповноважених операторів з деталями дозволу та контактною інформацією для кожного типу відходів.",
         ro: "O listă a operatorilor autorizați cu detalii de autorizație și informații de contact pentru fiecare tip de deșeu.",
-        hy: "Լիազորված օպերատորների ցանկ՝ թույլտվության մանրամասներով և կոնտակտային տվյալներով՝ ըստ թափոնների տեսակի:"
+        hy: "Լիազորված օպերատորների ցանկ՝ թույլտվության մանրամասներով և կոնտակտային տվյալներով՝ ըստ թափոնների տեսակի։"
       },
     bestFor:
       {
         en: "Businesses, local authorities and citizens looking to identify a licensed recycler or waste operator for a specific waste stream.",
         uk: "Компанії, місцеві органи влади та громадяни, які шукають ліцензованого переробника або оператора відходів для певного потоку відходів.",
         ro: "Întreprinderi, autorități locale și cetățeni care doresc să identifice un reciclator autorizat sau un operator de deșeuri pentru un anumit flux de deșeuri.",
-        hy: "Ձեռնարկությունները, տեղական իշխանությունները և քաղաքացիները, ովքեր ցանկանում են բացահայտել լիցենզավորված վերամշակողին կամ թափոնների օպերատորին որոշակի թափոնների հոսքի համար:"
+        hy: "Ձեռնարկությունները, տեղական իշխանությունները և քաղաքացիները, ովքեր ցանկանում են բացահայտել լիցենզավորված վերամշակողին կամ թափոնների օպերատորին որոշակի թափոնների հոսքի համար։"
       },
     format: {
       en: "Digital tool",
@@ -4859,7 +4859,7 @@ const toolCatalogue = [
         en: "Part of Organic Armenia's All Green educational platform, this page explains circular economy principles as an alternative to the linear produce-use-discard model and connects them to organic agriculture practices such as composting, returning crop residues to soil and renewable energy use. || It links to the Armenian booklet Circular Economy and Organic Agriculture: Their Connection, Composting, prepared under the EU-funded Circular Future programme in cooperation with Impact Hub Yerevan and Environment and Health NGO.",
         uk: "Ця сторінка є частиною освітньої платформи All Green від Organic Armenia. Ця сторінка пояснює принципи циклічної економіки як альтернативу лінійній моделі виробництва-використання-викидання та пов’язує їх із методами органічного сільського господарства, такими як компостування, повернення рослинних залишків у ґрунт та використання відновлюваної енергії. || Це посилання на вірменський буклет «Циркулярна економіка та органічне сільське господарство: їх зв’язок, компостування», підготовлений у рамках фінансованої ЄС програми Circular Future у співпраці з Impact Hub Yerevan та НУО «Навколишнє середовище та здоров’я».",
         ro: "Parte a platformei educaționale All Green a Organic Armenia, această pagină explică principiile economiei circulare ca o alternativă la modelul liniar produs-utilizare-aruncare și le conectează la practicile agriculturii organice, cum ar fi compostarea, returnarea reziduurilor de culturi în sol și utilizarea energiei regenerabile. || Se leagă de broșura armeană Circular Economy and Organic Agriculture: Their Connection, Composting, pregătită în cadrul programului Circular Future, finanțat de UE, în cooperare cu Impact Hub Yerevan și ONG-ul pentru mediu și sănătate.",
-        hy: "Organic Armenia-ի All Green կրթական հարթակի մաս՝ այս էջը բացատրում է շրջանաձև տնտեսության սկզբունքները՝ որպես այլընտրանք արտադրություն-օգտագործում-չեղարկում գծային մոդելին և կապում դրանք օրգանական գյուղատնտեսության պրակտիկաների հետ, ինչպիսիք են կոմպոստացումը, բերքի մնացորդները հող վերադարձնելը և վերականգնվող էներգիայի օգտագործումը: || Այն կապվում է «Շրջանաձև տնտեսություն և օրգանական գյուղատնտեսություն. դրանց միացում, կոմպոստացում» գրքույկին, որը պատրաստվել է ԵՄ կողմից ֆինանսավորվող «Շրջանային ապագա» ծրագրի շրջանակներում՝ «Իմփաքթ Հաբ Երևան»-ի և «Շրջակա միջավայր և առողջություն» ՀԿ-ի հետ համատեղ:"
+        hy: "Organic Armenia-ի All Green կրթական հարթակի մաս՝ այս էջը բացատրում է շրջանաձև տնտեսության սկզբունքները՝ որպես այլընտրանք արտադրություն-օգտագործում-չեղարկում գծային մոդելին և կապում դրանք օրգանական գյուղատնտեսության պրակտիկաների հետ, ինչպիսիք են կոմպոստացումը, բերքի մնացորդները հող վերադարձնելը և վերականգնվող էներգիայի օգտագործումը։ || Այն կապվում է «Շրջանաձև տնտեսություն և օրգանական գյուղատնտեսություն. դրանց միացում, կոմպոստացում» գրքույկին, որը պատրաստվել է ԵՄ կողմից ֆինանսավորվող «Շրջանային ապագա» ծրագրի շրջանակներում՝ «Իմփաքթ Հաբ Երևան»-ի և «Շրջակա միջավայր և առողջություն» ՀԿ-ի հետ համատեղ։"
       },
     journeyPhases: ['Learn'],
     placements: {
@@ -4921,7 +4921,7 @@ const toolCatalogue = [
         en: "Organic Armenia Training lists professional development courses run by Organic Armenia. It includes Organic Agriculture: From Introduction to Practical Application and Circular Future, an online course covering circular economy principles, zero-waste approaches and composting or vermicomposting as circular economy examples in organic production. || Some listed courses may show as completed, so the page can function as both a course catalogue and a place to check whether new cohorts are planned.",
         uk: "Organic Armenia Training містить перелік курсів професійного розвитку, які проводить Organic Armenia. Він включає в себе «Органічне сільське господарство: від вступу до практичного застосування та циклічного майбутнього», онлайн-курс, що охоплює принципи циклічної економіки, безвідходні підходи та компостування або вермікомпостування як приклади циклічної економіки в органічному виробництві. || Деякі перелічені курси можуть відображатися як завершені, тому сторінка може функціонувати як каталог курсів і місце, де можна перевірити, чи заплановані нові когорти.",
         ro: "Organic Armenia Training listează cursurile de dezvoltare profesională organizate de Organic Armenia. Acesta include Agricultura ecologică: de la introducere la aplicarea practică și viitorul circular, un curs online care acoperă principiile economiei circulare, abordările zero deșeuri și compostarea sau vermicompostarea ca exemple de economie circulară în producția ecologică. || Unele cursuri enumerate pot apărea ca finalizate, astfel încât pagina poate funcționa atât ca catalog de cursuri, cât și ca loc pentru a verifica dacă sunt planificate noi cohorte.",
-        hy: "Օրգանիկ Արմենիա Թրեյնինգում ներկայացված են Օրգանիկ Արմենիայի կողմից անցկացվող մասնագիտական ​​զարգացման դասընթացները: Այն ներառում է Օրգանական գյուղատնտեսություն. ներածությունից մինչև գործնական կիրառություն և շրջանաձև ապագա, առցանց դասընթաց, որն ընդգրկում է շրջանաձև տնտեսության սկզբունքները, զրոյական թափոնների մոտեցումները և կոմպոստավորումը կամ վերմիկոմպոստավորումը՝ որպես շրջանաձև տնտեսության օրինակներ օրգանական արտադրության մեջ: || Թվարկված որոշ դասընթացներ կարող են ցուցադրվել որպես ավարտված, այնպես որ էջը կարող է գործել և որպես դասընթացների կատալոգ և տեղ ստուգելու, թե արդյոք նախատեսվում են նոր խմբեր:"
+        hy: "Օրգանիկ Արմենիա Թրեյնինգում ներկայացված են Օրգանիկ Արմենիայի կողմից անցկացվող մասնագիտական զարգացման դասընթացները: Այն ներառում է Օրգանական գյուղատնտեսություն. ներածությունից մինչև գործնական կիրառություն և շրջանաձև ապագա, առցանց դասընթաց, որն ընդգրկում է շրջանաձև տնտեսության սկզբունքները, զրոյական թափոնների մոտեցումները և կոմպոստավորումը կամ վերմիկոմպոստավորումը՝ որպես շրջանաձև տնտեսության օրինակներ օրգանական արտադրության մեջ։ || Թվարկված որոշ դասընթացներ կարող են ցուցադրվել որպես ավարտված, այնպես որ էջը կարող է գործել և որպես դասընթացների կատալոգ և տեղ ստուգելու, թե արդյոք նախատեսվում են նոր խմբեր։"
       },
     journeyPhases: ['Learn'],
     placements: {
