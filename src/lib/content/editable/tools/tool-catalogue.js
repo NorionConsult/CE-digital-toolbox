@@ -2857,7 +2857,7 @@ const toolCatalogue = [
         en: "The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.",
         uk: "Матриця оцінки Design for X (DfX) базується на аналізі гарячих точок і допомагає командам оцінювати ресурсомісткі продукти, щоб визначити, де зміни дизайну можуть покращити циркулярність.",
         ro: "Matricea de punctaj Design for X (DfX) se bazează pe analiza hotspot-ului și ajută echipele să evalueze produsele care necesită mult resurse pentru a identifica locurile în care modificările de proiectare ar putea îmbunătăți circularitatea.",
-        hy: "Դիզայն X-ի համար (DfX) գնահատման մատրիցը հիմնված է թեժ կետերի վերլուծության վրա և թիմերին օգնում է գնահատել ռեսուրսներով ինտենսիվ արտադրանքները՝ պարզելու, թե դիզայնի փոփոխությունները որտեղ կարող են բարելավել շրջանաձևությունը:"
+        hy: "Դիզայն X-ի համար (DfX) գնահատման մատրիցը հիմնված է թեժ կետերի վերլուծության վրա և թիմերին օգնում է գնահատել ռեսուրսներով ինտենսիվ արտադրանքները՝ պարզելու, թե դիզայնի փոփոխությունները որտեղ կարող են բարելավել շրջանաձևությունը։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2878,7 +2878,7 @@ const toolCatalogue = [
       en: "Printout of scoring sheet, post-its, pens and product samples or specifications.",
       uk: "Роздруківка аркуша оцінки, листків, ручок і зразків продуктів або специфікацій.",
       ro: "Imprimare a foii de punctaj, post-it-uri, pixuri și mostre de produse sau specificații.",
-      hy: "Վարկանիշային թերթիկի, գրիչների, գրիչների և արտադրանքի նմուշների կամ բնութագրերի տպագրություն:"
+      hy: "Վարկանիշային թերթիկի, գրիչների, գրիչների և արտադրանքի նմուշների կամ բնութագրերի տպագրություն։"
     },
     output: {
       en: "Circular design improvement suggestions for your products",
@@ -2916,7 +2916,7 @@ const toolCatalogue = [
         en: "The How Might We method from Technical University of Denmark (DTU)'s Design Kit is a simple but powerful reframing technique used in human-centred design. Teams take insight statements gathered from research and rephrase them as How Might We questions, a format that implies a solution is possible without prescribing what it should be. The method is used in the ideation phase to open creative space before brainstorming. A well-crafted question is neither too narrow, which limits ideas, nor too broad, which makes it hard to act on.",
         uk: "Метод «Як ми можемо» від Технічного університету Данії (DTU) Design Kit — це проста, але потужна техніка рефреймінгу, яка використовується в проектуванні, орієнтованому на людину. Команди беруть висновки, зібрані в результаті дослідження, і перефразують їх у запитання «Як ми можемо» — формат, який означає, що рішення можливе, не вказуючи, яким воно має бути. Метод використовується на етапі ідеї, щоб відкрити творчий простір перед мозковим штурмом. Добре сформульоване запитання не є ані надто вузьким, що обмежує ідеї, ані надто широким, що ускладнює його виконання.",
         ro: "Metoda How Might We de la setul de design al Universității Tehnice din Danemarca (DTU) este o tehnică de reîncadrare simplă, dar puternică, utilizată în proiectarea centrată pe om. Echipele preiau declarații de perspectivă adunate din cercetare și le reformulează ca întrebări Cum am putea noi, un format care implică că o soluție este posibilă fără a prescrie ceea ce ar trebui să fie. Metoda este folosită în faza de ideare pentru a deschide spațiul creativ înainte de brainstorming. O întrebare bine pusă la punct nu este nici prea restrânsă, ceea ce limitează ideile, nici prea amplă, ceea ce face greu să acționezi.",
-        hy: "How Might We մեթոդը Դանիայի Տեխնիկական համալսարանի (DTU) Design Kit-ից պարզ, բայց հզոր վերակառուցման տեխնիկա է, որն օգտագործվում է մարդակենտրոն դիզայնում: Թիմերը վերցնում են հետազոտության արդյունքում հավաքված խորաթափանց հայտարարությունները և դրանք վերափոխում են որպես «Ինչպես կարող ենք մենք հարցեր», ձևաչափ, որը ենթադրում է, որ լուծումը հնարավոր է առանց նախանշելու, թե ինչ պետք է լինի: Մեթոդն օգտագործվում է մտահղացման փուլում՝ մտագրոհից առաջ ստեղծագործական տարածք բացելու համար: Լավ մշակված հարցը ոչ շատ նեղ է, ինչը սահմանափակում է գաղափարները, և ոչ էլ չափազանց լայն, ինչը դժվարացնում է գործելը:"
+        hy: "How Might We մեթոդը Դանիայի Տեխնիկական համալսարանի (DTU) Design Kit-ից պարզ, բայց հզոր վերակառուցման տեխնիկա է, որն օգտագործվում է մարդակենտրոն դիզայնում: Թիմերը վերցնում են հետազոտության արդյունքում հավաքված խորաթափանց հայտարարությունները և դրանք վերափոխում են որպես «Ինչպես կարող ենք մենք հարցեր», ձևաչափ, որը ենթադրում է, որ լուծումը հնարավոր է առանց նախանշելու, թե ինչ պետք է լինի: Մեթոդն օգտագործվում է մտահղացման փուլում՝ մտագրոհից առաջ ստեղծագործական տարածք բացելու համար: Լավ մշակված հարցը ոչ շատ նեղ է, ինչը սահմանափակում է գաղափարները, և ոչ էլ չափազանց լայն, ինչը դժվարացնում է գործելը։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2937,7 +2937,7 @@ const toolCatalogue = [
       en: "Existing insight statements from prior research, plus pens and post-its.",
       uk: "Існуючі висновки з попередніх досліджень, а також ручки та листочки.",
       ro: "Declarații de perspectivă existente din cercetări anterioare, plus pixuri și post-it-uri.",
-      hy: "Գոյություն ունեցող պատկերացումներ նախորդ հետազոտություններից, գումարած գրիչներ և գրառումներ:"
+      hy: "Գոյություն ունեցող վերլուծական տվյալներ նախորդ հետազոտություններից, գումարած գրիչներ և գրառումներ։"
     },
     output: {
       en: "A set of How Might We questions to guide ideation",
@@ -2949,7 +2949,7 @@ const toolCatalogue = [
       en: "Design teams in the ideation phase that have gathered user insights and want solution-neutral design challenges",
       uk: "Команди дизайнерів на етапі розробки ідей, які зібрали інформацію про користувачів і хочуть, щоб завдання дизайну були нейтральними щодо рішень",
       ro: "Echipe de proiectare în faza de ideare care au adunat informații despre utilizatori și doresc provocări de proiectare neutre pentru soluții",
-      hy: "Գաղափարման փուլում գտնվող նախագծային թիմեր, որոնք հավաքել են օգտատերերի պատկերացումները և ցանկանում են լուծել չեզոք դիզայնի մարտահրավերներ"
+      hy: "Գաղափարման փուլում գտնվող նախագծային թիմեր, որոնք հավաքել են օգտատերերի վերլուծական տվյալները և ցանկանում են լուծել չեզոք դիզայնի մարտահրավերներ"
     },
     format: {
       en: "Print out",
@@ -2975,7 +2975,7 @@ const toolCatalogue = [
         en: "Bundle Ideas is an IDEO.org method for moving from divergent brainstorming to convergent concept development by clustering, combining and synthesising the strongest elements across concepts.",
         uk: "Bundle Ideas — це метод IDEO.org для переходу від дивергентного мозкового штурму до розробки конвергентної концепції шляхом кластеризації, комбінування та синтезу найсильніших елементів концепцій.",
         ro: "Bundle Ideas este o metodă IDEO.org pentru trecerea de la brainstorming divergent la dezvoltarea conceptului convergent prin gruparea, combinarea și sintetizarea celor mai puternice elemente din concepte.",
-        hy: "Bundle Ideas-ը IDEO.org-ի մեթոդ է՝ տարբերվող ուղեղային գրոհից դեպի կոնվերգենտ հայեցակարգի մշակում անցնելու համար՝ խմբավորելով, համադրելով և սինթեզելով ամենաուժեղ տարրերը հասկացությունների միջև:"
+        hy: "Bundle Ideas-ը IDEO.org-ի մեթոդ է՝ տարբերվող ուղեղային գրոհից դեպի կոնվերգենտ հայեցակարգի մշակում անցնելու համար՝ խմբավորելով, համադրելով և սինթեզելով ամենաուժեղ տարրերը հասկացությունների միջև։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2996,7 +2996,7 @@ const toolCatalogue = [
       en: "A wall or board covered with ideas and drawings from a prior brainstorm session, plus pens and post-its.",
       uk: "Стіна або дошка, покрита ідеями та малюнками з попереднього мозкового штурму, а також ручки та листочки.",
       ro: "Un perete sau o tablă acoperită cu idei și desene dintr-o sesiune anterioară de brainstorming, plus pixuri și post-it-uri.",
-      hy: "Պատ կամ տախտակ, որը ծածկված է մտքերով և նկարներով, ինչպես նաև գրիչներ և գրիչներ:"
+      hy: "Պատ կամ տախտակ, որը ծածկված է մտքերով և նկարներով, ինչպես նաև գրիչներ և գրիչներ։"
     },
     output: {
       en: "Coherent idea groupings or early-stage solution concepts ready to be developed and shared",
@@ -3034,7 +3034,7 @@ const toolCatalogue = [
         en: "Create a Concept is an IDEO.org method that bridges ideation and prototyping. Teams turn their strongest idea clusters into coherent concepts that are more complete than raw ideas but not yet final solutions.",
         uk: "Create a Concept — це метод IDEO.org, який поєднує ідеї та прототипи. Команди перетворюють свої найсильніші кластери ідей на послідовні концепції, які є більш повними, ніж необроблені ідеї, але ще не є остаточними рішеннями.",
         ro: "Create a Concept este o metodă IDEO.org care face legătura între idee și prototipare. Echipele își transformă cele mai puternice grupuri de idei în concepte coerente, care sunt mai complete decât ideile brute, dar nu sunt încă soluții finale.",
-        hy: "Ստեղծել հայեցակարգը IDEO.org մեթոդ է, որը կամրջում է մտահղացումն ու նախատիպավորումը: Թիմերն իրենց ամենաուժեղ գաղափարների կլաստերները վերածում են համահունչ հասկացությունների, որոնք ավելի ամբողջական են, քան հում գաղափարները, բայց դեռևս վերջնական լուծումներ չեն:"
+        hy: "Ստեղծել հայեցակարգը IDEO.org մեթոդ է, որը կամրջում է մտահղացումն ու նախատիպավորումը: Թիմերն իրենց ամենաուժեղ գաղափարների կլաստերները վերածում են համահունչ հասկացությունների, որոնք ավելի ամբողջական են, քան հում գաղափարները, բայց դեռևս վերջնական լուծումներ չեն։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -3055,7 +3055,7 @@ const toolCatalogue = [
       en: "Bundled idea clusters from a prior session, plus pens, post-its and paper.",
       uk: "Збірні групи ідей із попереднього заняття, а також ручки, листки та папір.",
       ro: "Pachete de idei dintr-o sesiune anterioară, plus pixuri, post-it-uri și hârtie.",
-      hy: "Նախորդ նիստից ստացված գաղափարների կլաստերներ, գումարած գրիչներ, գրառումներ և թուղթ:"
+      hy: "Նախորդ նիստից ստացված գաղափարների կլաստերներ, գումարած գրիչներ, գրառումներ և թուղթ։"
     },
     output: {
       en: "One or more robust concept drafts ready to be tested with end users",
@@ -3093,7 +3093,7 @@ const toolCatalogue = [
         en: "This Ellen MacArthur Foundation workshop helps users understand the implications of choosing materials for circular products, including the need to design out chemicals of concern and enable material recovery.",
         uk: "Цей семінар Фонду Еллен Макартур допомагає користувачам зрозуміти наслідки вибору матеріалів для круглих виробів, зокрема необхідність розробки хімічних речовин, що викликають занепокоєння, і відновлення матеріалів.",
         ro: "Acest atelier al Fundației Ellen MacArthur îi ajută pe utilizatori să înțeleagă implicațiile alegerii materialelor pentru produse circulare, inclusiv necesitatea de a proiecta substanțele chimice care prezintă motive de îngrijorare și de a permite recuperarea materialelor.",
-        hy: "Ellen MacArthur Foundation-ի այս սեմինարն օգնում է օգտատերերին հասկանալ շրջանաձև արտադրանքի համար նյութեր ընտրելու հետևանքները, ներառյալ մտահոգիչ քիմիական նյութերը մշակելու և նյութի վերականգնումը հնարավոր դարձնելու անհրաժեշտությունը:"
+        hy: "Ellen MacArthur Foundation-ի այս սեմինարն օգնում է օգտատերերին հասկանալ շրջանաձև արտադրանքի համար նյութեր ընտրելու հետևանքները, ներառյալ մտահոգիչ քիմիական նյութերը մշակելու և նյութի վերականգնումը հնարավոր դարձնելու անհրաժեշտությունը։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -3114,7 +3114,7 @@ const toolCatalogue = [
       en: "Works best with a diverse team from different backgrounds.",
       uk: "Найкраще працює з різноманітною командою з різним професійним становищем.",
       ro: "Funcționează cel mai bine cu o echipă diversă din medii diferite.",
-      hy: "Լավագույնս աշխատում է տարբեր ծագում ունեցող տարբեր թիմի հետ:"
+      hy: "Լավագույնս աշխատում է տարբեր ծագում ունեցող տարբեր թիմի հետ։"
     },
     output: {
       en: "Three redesign concepts documented with a memorable name",
@@ -3152,7 +3152,7 @@ const toolCatalogue = [
         en: "The Ecodesign Toolkit by EcoDesign Circle is an open-access collection of downloadable PDFs and interactive Mural boards for circular and ecodesign work across products, services, systems and business models.",
         uk: "Набір інструментів екодизайну від EcoDesign Circle — це колекція PDF-файлів, які можна завантажити, та інтерактивних настінних дошок із відкритим доступом для циклічної роботи та роботи з екодизайну в продуктах, послугах, системах і бізнес-моделях.",
         ro: "Setul de instrumente pentru ecodesign de la EcoDesign Circle este o colecție cu acces deschis de PDF-uri descărcabile și panouri murale interactive pentru lucrări circulare și de proiectare ecologică pentru produse, servicii, sisteme și modele de afaceri.",
-        hy: "EcoDesign Circle-ի կողմից Ecodesign Toolkit-ը ներբեռնվող PDF ֆայլերի և ինտերակտիվ որմնանկարների սալիկների բաց հասանելի հավաքածու է՝ արտադրանքների, ծառայությունների, համակարգերի և բիզնես մոդելների վրա շրջանաձև և էկոնախագծման աշխատանքների համար:"
+        hy: "EcoDesign Circle-ի կողմից Ecodesign Toolkit-ը ներբեռնվող PDF ֆայլերի և ինտերակտիվ որմնանկարների սալիկների բաց հասանելի հավաքածու է՝ արտադրանքների, ծառայությունների, համակարգերի և բիզնես մոդելների վրա շրջանաձև և էկոնախագծման աշխատանքների համար։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -3173,7 +3173,7 @@ const toolCatalogue = [
       en: "Low; most tools are available as free PDF downloads and/or Mural online boards.",
       uk: "Низький; більшість інструментів доступні як безкоштовні файли для завантаження у форматі PDF та/або онлайн-дошки з фресками.",
       ro: "Scăzut; majoritatea instrumentelor sunt disponibile ca descărcări gratuite PDF și/sau panouri murale online.",
-      hy: "Ցածր; գործիքների մեծ մասը հասանելի են որպես PDF անվճար ներբեռնումներ և/կամ Mural առցանց տախտակներ:"
+      hy: "Ցածր; գործիքների մեծ մասը հասանելի են որպես PDF անվճար ներբեռնումներ և/կամ Mural առցանց տախտակներ։"
     },
     output: {
       en: "Completed canvases, design briefs, business model concepts, ecodesign assessments or pitch materials",
@@ -3211,7 +3211,7 @@ const toolCatalogue = [
         en: "This Waste and Resources Action Programme (WRAP) database maps textile sorting and recycling infrastructure, helping brands, waste managers and local authorities match textile waste streams with suitable sorting and recycling partners. It supports the development of end-of-life routes for used and unwanted textiles.",
         uk: "Ця база даних Програми дій щодо відходів і ресурсів (WRAP) відображає інфраструктуру сортування та переробки текстилю, допомагаючи брендам, менеджерам з утилізації відходів і місцевій владі зіставляти потоки текстильних відходів із відповідними партнерами з сортування та переробки. Він підтримує розробку шляхів виходу з ладу використаного та непотрібного текстилю.",
         ro: "Această bază de date a Programului de acțiune privind deșeurile și resursele (WRAP) hărtește infrastructura de sortare și reciclare a textilelor, ajutând mărcile, administratorii de deșeuri și autoritățile locale să potrivească fluxurile de deșeuri textile cu parteneri adecvați de sortare și reciclare. Sprijină dezvoltarea rutelor de sfârșit de viață pentru textile uzate și nedorite.",
-        hy: "Թափոնների և ռեսուրսների գործողությունների ծրագրի (WRAP) տվյալների բազան քարտեզագրում է տեքստիլի տեսակավորման և վերամշակման ենթակառուցվածքը՝ օգնելով ապրանքանիշերին, թափոնների կառավարիչներին և տեղական իշխանություններին համապատասխանեցնել տեքստիլ թափոնների հոսքերը համապատասխան տեսակավորման և վերամշակման գործընկերների հետ: Այն աջակցում է օգտագործված և անցանկալի տեքստիլի համար ժամկետանց երթուղիների մշակմանը:"
+        hy: "Թափոնների և ռեսուրսների գործողությունների ծրագրի (WRAP) տվյալների բազան քարտեզագրում է տեքստիլի տեսակավորման և վերամշակման ենթակառուցվածքը՝ օգնելով ապրանքանիշերին, թափոնների կառավարիչներին և տեղական իշխանություններին համապատասխանեցնել տեքստիլ թափոնների հոսքերը համապատասխան տեսակավորման և վերամշակման գործընկերների հետ: Այն աջակցում է օգտագործված և անցանկալի տեքստիլի համար ժամկետանց երթուղիների մշակմանը։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -3271,7 +3271,7 @@ const toolCatalogue = [
         en: "Carbonfact runs product-level life cycle assessments across a brand catalogue and publishes the results as consumer-facing Digital Product Passports with Quick Response (QR) codes. It covers 16 Product Environmental Footprint (PEF) environmental indicators and the French Eco-Score, helping brands and suppliers prepare for upcoming EU textile Digital Product Passport (DPP) requirements.",
         uk: "Carbonfact проводить оцінку життєвого циклу на рівні продукту в каталозі бренду та публікує результати у вигляді цифрових паспортів продуктів із кодами швидкого реагування (QR). Він охоплює 16 екологічних індикаторів впливу продукту на навколишнє середовище (PEF) і французький Eco-Score, допомагаючи брендам і постачальникам підготуватися до майбутніх вимог ЄС щодо цифрового паспорта текстильного продукту (DPP).",
         ro: "Carbonfact efectuează evaluări ale ciclului de viață la nivel de produs într-un catalog de marcă și publică rezultatele ca pașapoarte digitale pentru produse cu coduri QR (Quick Response) destinate consumatorilor. Acesta acoperă 16 indicatori de mediu privind amprenta ecologică a produsului (PEF) și Scorul Ecologic al francez, ajutând mărcile și furnizorii să se pregătească pentru viitoarele cerințe ale UE pentru produse textile digitale (DPP).",
-        hy: "Carbonfact-ն իրականացնում է արտադրանքի մակարդակի կյանքի ցիկլի գնահատումներ ապրանքանիշի կատալոգում և արդյունքները հրապարակում է որպես սպառողների համար նախատեսված թվային արտադրանքի անձնագրեր՝ արագ արձագանքման (QR) կոդերով: Այն ընդգրկում է 16 Ապրանքի շրջակա միջավայրի հետքի (PEF) բնապահպանական ցուցիչները և ֆրանսիական էկո գնահատականը՝ օգնելով ապրանքանիշերին և մատակարարներին նախապատրաստվել ԵՄ տեքստիլ արտադրանքի թվային անձնագրի (DPP) առաջիկա պահանջներին:"
+        hy: "Carbonfact-ն իրականացնում է արտադրանքի մակարդակի կյանքի ցիկլի գնահատումներ ապրանքանիշի կատալոգում և արդյունքները հրապարակում է որպես սպառողների համար նախատեսված թվային արտադրանքի անձնագրեր՝ արագ արձագանքման (QR) կոդերով: Այն ընդգրկում է 16 Ապրանքի շրջակա միջավայրի հետքի (PEF) բնապահպանական ցուցիչները և ֆրանսիական էկո գնահատականը՝ օգնելով ապրանքանիշերին և մատակարարներին նախապատրաստվել ԵՄ տեքստիլ արտադրանքի թվային անձնագրի (DPP) առաջիկա պահանջներին։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -3331,7 +3331,7 @@ const toolCatalogue = [
         en: "YouControl Environmental, social and governance (ESG) Profile helps users check Ukrainian companies by name or Unified State Register of Enterprises and Organizations of Ukraine (EDRPOU) code, review an environmental, social and governance (ESG) profile, and use automated sustainability assessment as a pre-screen before deeper due diligence.",
         uk: "YouControl Environmental, Social and Governance (ESG) Profile допомагає користувачам перевіряти українські компанії за назвою або кодом ЄДРПОУ, переглядати екологічний, соціальний та управлінський профіль (ESG) і використовувати автоматизовану оцінку сталого розвитку як попередню перевірку перед поглибленою перевіркою.",
         ro: "Profilul YouControl Environmental, Social and Governance (ESG) îi ajută pe utilizatori să verifice companiile ucrainene după nume sau după codul Registrului de stat unificat al întreprinderilor și organizațiilor din Ucraina (EDRPOU), să revizuiască un profil de mediu, social și de guvernanță (ESG) și să utilizeze evaluarea automată a sustenabilității ca pre-evaluare înainte de o diligență mai profundă.",
-        hy: "YouControl Environmental, Social and Management (ESG) պրոֆիլն օգնում է օգտատերերին ստուգել ուկրաինական ընկերություններին անունով կամ Ուկրաինայի ձեռնարկությունների և կազմակերպությունների միասնական պետական ​​ռեգիստրի ծածկագրով (EDRPOU), վերանայել բնապահպանական, սոցիալական և կառավարման (ESG) պրոֆիլը և օգտագործել կայունության ավտոմատացված գնահատումը որպես նախնական էկրան՝ ավելի խորը ուսումնասիրությունից առաջ:"
+        hy: "YouControl Environmental, Social and Management (ESG) պրոֆիլն օգնում է օգտատերերին ստուգել ուկրաինական ընկերություններին անունով կամ Ուկրաինայի ձեռնարկությունների և կազմակերպությունների միասնական պետական ռեգիստրի ծածկագրով (EDRPOU), վերանայել բնապահպանական, սոցիալական և կառավարման (ESG) պրոֆիլը և օգտագործել կայունության ավտոմատացված գնահատումը որպես նախնական էկրան՝ ավելի խորը ուսումնասիրությունից առաջ։"
       },
     journeyPhases: ['Assess'],
     sector: 'Cross-sector',
@@ -3387,7 +3387,7 @@ const toolCatalogue = [
         en: "SaveEcoBot Environmental, social and governance (ESG) gives users access to a catalogue of company documents, permits, licences, reports, declarations, inspections and environmental records. It supports a standardised environmental, social and governance (ESG) compliance check and downloadable PDF extracts for due diligence.",
         uk: "SaveEcoBot Environmental, Social and Management (ESG) надає користувачам доступ до каталогу документів компанії, дозволів, ліцензій, звітів, декларацій, інспекцій та екологічних записів. Він підтримує стандартизовану перевірку на відповідність вимогам екологічного, соціального та державного управління (ESG) і завантажувані PDF-витяги для належної перевірки.",
         ro: "SaveEcoBot Environmental, social and governance (ESG) oferă utilizatorilor acces la un catalog de documente ale companiei, permise, licențe, rapoarte, declarații, inspecții și înregistrări de mediu. Acesta acceptă o verificare standardizată a conformității de mediu, social și guvernanță (ESG) și extrase PDF descărcabile pentru diligență.",
-        hy: "SaveEcoBot Environmental, Social and Management (ESG) օգտվողներին հնարավորություն է տալիս օգտվել ընկերության փաստաթղթերի, թույլտվությունների, լիցենզիաների, հաշվետվությունների, հայտարարագրերի, ստուգումների և բնապահպանական գրառումների կատալոգից: Այն աջակցում է ստանդարտացված բնապահպանական, սոցիալական և կառավարման (ESG) համապատասխանության ստուգում և ներբեռնվող PDF քաղվածքներ պատշաճ ուսումնասիրության համար:"
+        hy: "SaveEcoBot Environmental, Social and Management (ESG) օգտվողներին հնարավորություն է տալիս օգտվել ընկերության փաստաթղթերի, թույլտվությունների, լիցենզիաների, հաշվետվությունների, հայտարարագրերի, ստուգումների և բնապահպանական գրառումների կատալոգից: Այն աջակցում է ստանդարտացված բնապահպանական, սոցիալական և կառավարման (ESG) համապատասխանության ստուգում և ներբեռնվող PDF քաղվածքներ պատշաճ ուսումնասիրության համար։"
       },
     journeyPhases: ['Assess'],
     sector: 'Cross-sector',
@@ -3443,7 +3443,7 @@ const toolCatalogue = [
         en: "Recycle allows businesses to register, sort and accumulate recyclable materials, request pickup, and receive payment after carrier weighing. It supports documentation and waste reporting for participating organisations.",
         uk: "Recycle дозволяє підприємствам реєструвати, сортувати та накопичувати вторинну сировину, вимагати самовивозу та отримувати оплату після зважування. Він підтримує документацію та звітність про відходи для організацій-учасниць.",
         ro: "Reciclarea permite companiilor să înregistreze, să sorteze și să acumuleze materiale reciclabile, să solicite ridicarea și să primească plata după cântărirea transportatorului. Acesta sprijină documentarea și raportarea deșeurilor pentru organizațiile participante.",
-        hy: "Վերամշակումը թույլ է տալիս ձեռնարկություններին գրանցել, տեսակավորել և կուտակել վերամշակվող նյութերը, պահանջել վերցնել և ստանալ վճարում կրիչի կշռումից հետո: Այն աջակցում է մասնակից կազմակերպությունների փաստաթղթերի և թափոնների մասին հաշվետվությունների ներկայացմանը:"
+        hy: "Վերամշակումը թույլ է տալիս ձեռնարկություններին գրանցել, տեսակավորել և կուտակել վերամշակվող նյութերը, պահանջել վերցնել և ստանալ վճարում կրիչի կշռումից հետո: Այն աջակցում է մասնակից կազմակերպությունների փաստաթղթերի և թափոնների մասին հաշվետվությունների ներկայացմանը։"
       },
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
@@ -3499,7 +3499,7 @@ const toolCatalogue = [
         en: "EcoHub Zero Waste Kharkiv provides sorting rules, a self-service deep sorting station, a Reuse Lab, and paid support services such as re-sorting, consultation and delivery.",
         uk: "EcoHub Zero Waste Kharkiv надає правила сортування, станцію глибокого сортування самообслуговування, Reuse Lab та платні послуги підтримки, такі як пересортування, консультації та доставка.",
         ro: "EcoHub Zero Waste Kharkiv oferă reguli de sortare, o stație de sortare profundă cu autoservire, un laborator de reutilizare și servicii de asistență plătite, cum ar fi resortarea, consultarea și livrarea.",
-        hy: "EcoHub Zero Waste Kharkiv-ը տրամադրում է տեսակավորման կանոններ, ինքնասպասարկման խորը տեսակավորման կայան, Վերօգտագործման լաբորատորիա և վճարովի օժանդակ ծառայություններ, ինչպիսիք են վերատեսակավորումը, խորհրդատվությունը և առաքումը:"
+        hy: "EcoHub Zero Waste Kharkiv-ը տրամադրում է տեսակավորման կանոններ, ինքնասպասարկման խորը տեսակավորման կայան, Վերօգտագործման լաբորատորիա և վճարովի օժանդակ ծառայություններ, ինչպիսիք են վերատեսակավորումը, խորհրդատվությունը և առաքումը։"
       },
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
@@ -3555,7 +3555,7 @@ const toolCatalogue = [
         en: "CC Yard and Zero Waste Yard in Kharkiv collect, sort, record and store reusable building materials such as bricks, timber, windows, doors, roofing and sanitary ware so they can return to use in repair and reconstruction.",
         uk: "CC Yard та Zero Waste Yard у Харкові займаються збором, сортуванням, обліком та зберіганням будівельних матеріалів багаторазового використання, таких як цегла, деревина, вікна, двері, покрівля та сантехніка, щоб їх можна було використовувати при ремонті та реконструкції.",
         ro: "CC Yard și Zero Waste Yard din Harkiv colectează, sortează, înregistrează și stochează materiale de construcție reutilizabile, cum ar fi cărămizi, cherestea, ferestre, uși, acoperișuri și obiecte sanitare, astfel încât să poată reveni pentru a fi utilizate în reparații și reconstrucție.",
-        hy: "CC Yard-ը և Zero Waste Yard-ը Խարկովում հավաքում, տեսակավորում, գրանցում և պահում են բազմակի օգտագործման շինանյութեր, ինչպիսիք են աղյուսները, փայտանյութը, պատուհանները, դռները, տանիքները և սանտեխնիկան, որպեսզի դրանք կարողանան օգտագործել վերանորոգման և վերակառուցման մեջ:"
+        hy: "CC Yard-ը և Zero Waste Yard-ը Խարկովում հավաքում, տեսակավորում, գրանցում և պահում են բազմակի օգտագործման շինանյութեր, ինչպիսիք են աղյուսները, փայտանյութը, պատուհանները, դռները, տանիքները և սանտեխնիկան, որպեսզի դրանք կարողանան օգտագործել վերանորոգման և վերակառուցման մեջ։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -3615,7 +3615,7 @@ const toolCatalogue = [
         en: "The map helps users find nearby recycling collection points, check accepted materials, read sorting guidance, add missing points and report closed points.",
         uk: "Карта допомагає користувачам знаходити найближчі пункти збору вторинної сировини, перевіряти прийнятні матеріали, читати вказівки щодо сортування, додавати відсутні пункти та повідомляти про закриті пункти.",
         ro: "Harta îi ajută pe utilizatori să găsească puncte de colectare pentru reciclare din apropiere, să verifice materialele acceptate, să citească îndrumările de sortare, să adauge puncte lipsă și să raporteze punctele închise.",
-        hy: "Քարտեզն օգնում է օգտատերերին գտնել մոտակա վերամշակման հավաքման կետերը, ստուգել ընդունված նյութերը, կարդալ տեսակավորման ուղեցույցը, ավելացնել բացակայող կետերը և հայտնել փակ կետերը:"
+        hy: "Քարտեզն օգնում է օգտատերերին գտնել մոտակա վերամշակման հավաքման կետերը, ստուգել ընդունված նյութերը, կարդալ տեսակավորման ուղեցույցը, ավելացնել բացակայող կետերը և հայտնել փակ կետերը։"
       },
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
@@ -3671,7 +3671,7 @@ const toolCatalogue = [
         en: "The calculator helps users estimate demolition waste by selecting building type, development type, storeys and relevant damage conditions such as fire or asbestos-containing materials.",
         uk: "Калькулятор допомагає користувачам оцінити відходи від знесення, вибравши тип будівлі, тип забудови, поверховість і відповідні умови пошкодження, такі як пожежа або матеріали, що містять азбест.",
         ro: "Calculatorul ajută utilizatorii să estimeze deșeurile din demolări selectând tipul clădirii, tipul de dezvoltare, etajele și condițiile relevante de deteriorare, cum ar fi incendiul sau materialele care conțin azbest.",
-        hy: "Հաշվիչը օգնում է օգտատերերին գնահատել քանդման թափոնները՝ ընտրելով շենքի տեսակը, զարգացման տեսակը, հարկերը և համապատասխան վնասի պայմանները, ինչպիսիք են հրդեհը կամ ասբեստ պարունակող նյութերը:"
+        hy: "Հաշվիչը օգնում է օգտատերերին գնահատել քանդման թափոնները՝ ընտրելով շենքի տեսակը, զարգացման տեսակը, հարկերը և համապատասխան վնասի պայմանները, ինչպիսիք են հրդեհը կամ ասբեստ պարունակող նյութերը։"
       },
     journeyPhases: ['Assess'],
     placements: {
