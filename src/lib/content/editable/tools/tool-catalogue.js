@@ -1522,7 +1522,7 @@ const toolCatalogue = [
       en: "A wide range of options depending on the use, however most important for SMEs this tool can support a Life Cycle Assessment (LCA) model of your company's carbon footprint, based on existing databases and resulting in models that support your LCA reporting.",
       uk: "Широкий діапазон опцій залежно від використання, але найважливіше для малих і середніх підприємств цей інструмент може підтримувати модель оцінки життєвого циклу (LCA) вуглецевого сліду вашої компанії на основі існуючих баз даних і в результаті створювати моделі, які підтримують вашу звітність LCA.",
       ro: "O gamă largă de opțiuni în funcție de utilizare, dar cel mai important pentru IMM-uri, acest instrument poate susține un model de evaluare a ciclului de viață (LCA) a amprentei de carbon a companiei dvs., bazat pe bazele de date existente și care rezultă în modele care sprijină raportarea dvs. LCA.",
-      hy: "Ընտրանքների լայն շրջանակ՝ կախված կիրառությունից, սակայն ամենակարևորը ՓՄՁ-ների համար այս գործիքը կարող է աջակցել ձեր ընկերության ածխածնի հետքի կյանքի ցիկլի գնահատման (LCA) մոդելին, որը հիմնված է առկա տվյալների բազաների վրա և հանգեցնում է մոդելների, որոնք աջակցում են ձեր LCA հաշվետվություններին:"
+      hy: "Ընտրանքների լայն շրջանակ՝ կախված կիրառությունից, սակայն ամենակարևորը ՓՄՁ-ների համար այս գործիքը կարող է աջակցել ձեր ընկերության ածխածնի հետքի կյանքի ցիկլի գնահատման (LCA) մոդելին, որը հիմնված է առկա տվյալների բազաների վրա և հանգեցնում է մոդելների, որոնք աջակցում են ձեր LCA հաշվետվություններին։"
     },
     bestFor: {
       en: "All SMEs concerned with climate and emissions reduction",
@@ -1554,7 +1554,7 @@ const toolCatalogue = [
         en: "The BPF Eco Tool Finder is a searchable directory from the British Plastics Federation for sustainable packaging design resources. It lets users filter by resource type (interactive tools, recyclability guides, Life Cycle Assessment (LCA) tools, recycled content, eLearning), plastic material (Polyethylene Terephthalate (PET), High-Density Polyethylene (HDPE), Polyvinyl Chloride (PVC), etc.), and product type (bottles, caps, trays, films, and more).",
         uk: "BPF Eco Tool Finder – це каталог із можливістю пошуку від Британської федерації пластмас для ресурсів екологічного дизайну упаковки. Він дозволяє користувачам фільтрувати за типом ресурсу (інтерактивні інструменти, посібники з переробки, інструменти оцінки життєвого циклу (LCA), перероблений вміст, електронне навчання), пластиковим матеріалом (поліетилентерефталат (ПЕТ), поліетилен високої щільності (HDPE), полівінілхлорид (ПВХ) тощо) і типом продукту (пляшки, кришки, лотки, плівки тощо).",
         ro: "BPF Eco Tool Finder este un director care poate fi căutat de la British Plastics Federation pentru resurse de design durabil al ambalajelor. Permite utilizatorilor să filtreze după tipul de resursă (instrumente interactive, ghiduri de reciclare, instrumente de evaluare a ciclului de viață (LCA), conținut reciclat, eLearning), material plastic (polietilen tereftalat (PET), polietilenă de înaltă densitate (HDPE), clorură de polivinil (PVC), etc.) și tip de produs (sticle, capace și altele).",
-        hy: "BPF Eco Tool Finder-ը Բրիտանական Պլաստիկ Ֆեդերացիայի կողմից որոնելի գրացուցակ է՝ կայուն փաթեթավորման նախագծման ռեսուրսների համար: Այն թույլ է տալիս օգտատերերին զտել ըստ ռեսուրսի տեսակի (ինտերակտիվ գործիքներ, վերամշակման ուղեցույցներ, կյանքի ցիկլի գնահատման (LCA) գործիքներ, վերամշակված բովանդակություն, էլեկտրոնային ուսուցում), պլաստիկ նյութեր (Պոլիէթիլենային տերեֆտալատ (PET), բարձր խտության պոլիէթիլեն (HDPE), պոլիվինիլ քլորիդ (PVC) և այլն) և թաղանթներ, թաղանթներ և այլն:"
+        hy: "BPF Eco Tool Finder-ը Բրիտանական Պլաստիկ Ֆեդերացիայի կողմից որոնելի գրացուցակ է՝ կայուն փաթեթավորման նախագծման ռեսուրսների համար: Այն թույլ է տալիս օգտատերերին զտել ըստ ռեսուրսի տեսակի (ինտերակտիվ գործիքներ, վերամշակման ուղեցույցներ, կյանքի ցիկլի գնահատման (LCA) գործիքներ, վերամշակված բովանդակություն, էլեկտրոնային ուսուցում), պլաստիկ նյութեր (Պոլիէթիլենային տերեֆտալատ (PET), բարձր խտության պոլիէթիլեն (HDPE), պոլիվինիլ քլորիդ (PVC) և այլն) և թաղանթներ, թաղանթներ և այլն։"
       },
     journeyPhases: ['Assess'],
     sector: 'Plastics',
@@ -1572,13 +1572,13 @@ const toolCatalogue = [
       en: "An overview of your businesses packaging needs.",
       uk: "Огляд потреб вашого бізнесу в упаковці.",
       ro: "O privire de ansamblu asupra nevoilor de ambalare ale afacerii dvs.",
-      hy: "Ձեր բիզնեսի փաթեթավորման կարիքների ակնարկ:"
+      hy: "Ձեր բիզնեսի փաթեթավորման կարիքների ակնարկ։"
     },
     output: {
       en: "A deeper understanding of how to best utilise plastic packaging in an effective manner.",
       uk: "Глибше розуміння того, як найкраще ефективно використовувати пластикову упаковку.",
       ro: "O înțelegere mai profundă a modului de utilizare optimă a ambalajelor din plastic într-un mod eficient.",
-      hy: "Ավելի խորը պատկերացում, թե ինչպես կարելի է լավագույնս օգտագործել պլաստիկ փաթեթավորումը արդյունավետ կերպով:"
+      hy: "Ավելի խորը վերլուծական տվյալ, թե ինչպես կարելի է լավագույնս օգտագործել պլաստիկ փաթեթավորումը արդյունավետ կերպով։"
     },
     bestFor: {
       en: "Packaging designers, brand managers and retailers at the early design stage",
@@ -1610,7 +1610,7 @@ const toolCatalogue = [
         en: "The tool goes beyond technical recyclability to help brands, retailers and packaging designers understand system-level recyclability, improvement recommendations and Extended Producer Responsibility (EPR) compliance guidance.",
         uk: "Інструмент виходить за рамки технічної переробки, щоб допомогти брендам, роздрібним торговцям і дизайнерам упаковки зрозуміти можливість переробки на системному рівні, рекомендації щодо вдосконалення та вказівки щодо дотримання розширеної відповідальності виробника (EPR).",
         ro: "Instrumentul depășește reciclabilitatea tehnică pentru a ajuta mărcile, comercianții cu amănuntul și designerii de ambalaje să înțeleagă reciclabilitatea la nivel de sistem, recomandările de îmbunătățire și îndrumările de conformitate cu responsabilitatea extinsă a producătorului (EPR).",
-        hy: "Գործիքը գերազանցում է տեխնիկական վերամշակման հնարավորությունը՝ օգնելու ապրանքանիշերին, մանրածախ վաճառողներին և փաթեթավորման դիզայներներին հասկանալ համակարգի մակարդակի վերամշակելիությունը, բարելավման առաջարկությունները և Արտադրողի ընդլայնված պատասխանատվության (EPR) համապատասխանության ուղեցույցը:"
+        hy: "Գործիքը գերազանցում է տեխնիկական վերամշակման հնարավորությունը՝ օգնելու ապրանքանիշերին, մանրածախ վաճառողներին և փաթեթավորման դիզայներներին հասկանալ համակարգի մակարդակի վերամշակելիությունը, բարելավման առաջարկությունները և Արտադրողի ընդլայնված պատասխանատվության (EPR) համապատասխանության ուղեցույցը։"
       },
     journeyPhases: ['Assess'],
     sector: 'Plastics',
@@ -1628,7 +1628,7 @@ const toolCatalogue = [
       en: "Know your packaging format, material and design features.",
       uk: "Знайте формат упаковки, матеріал і особливості дизайну.",
       ro: "Cunoaște-ți formatul de ambalare, materialul și caracteristicile de design.",
-      hy: "Իմացեք ձեր փաթեթավորման ձևաչափը, նյութը և դիզայնի առանձնահատկությունները:"
+      hy: "Իմացեք ձեր փաթեթավորման ձևաչափը, նյութը և դիզայնի առանձնահատկությունները։"
     },
     output: {
       en: "System-level recyclability assessment, improvement recommendations and Extended Producer Responsibility (EPR) compliance guidance",
@@ -1666,7 +1666,7 @@ const toolCatalogue = [
         en: "Recyclass online analysis tool is a digital tool to help companies improve plastic packaging strategy, reduce plastic waste and build actionable strategies with cost and carbon impact metrics.",
         uk: "Інструмент онлайн-аналізу Recyclass — це цифровий інструмент, який допомагає компаніям покращити стратегію пластикової упаковки, зменшити кількість пластикових відходів і розробити ефективні стратегії з показниками вартості та впливу вуглецю.",
         ro: "Instrumentul de analiză online Recyclass este un instrument digital care ajută companiile să îmbunătățească strategia de ambalare din plastic, să reducă deșeurile de plastic și să construiască strategii acționabile cu indicatori de cost și impact asupra carbonului.",
-        hy: "Recyclass առցանց վերլուծության գործիքը թվային գործիք է, որն օգնում է ընկերություններին բարելավել պլաստիկ փաթեթավորման ռազմավարությունը, նվազեցնել պլաստիկ թափոնները և կառուցել գործող ռազմավարություններ՝ ծախսերի և ածխածնի ազդեցության չափման ցուցանիշներով:"
+        hy: "Recyclass առցանց վերլուծության գործիքը թվային գործիք է, որն օգնում է ընկերություններին բարելավել պլաստիկ փաթեթավորման ռազմավարությունը, նվազեցնել պլաստիկ թափոնները և կառուցել գործող ռազմավարություններ՝ ծախսերի և ածխածնի ազդեցության չափման ցուցանիշներով։"
       },
     journeyPhases: ['Explore'],
     sector: 'Plastics',
@@ -1684,19 +1684,19 @@ const toolCatalogue = [
       en: "Detailed packaging data by type, weight and volume, plus current sustainability targets.",
       uk: "Детальні дані про упаковку за типом, вагою та об’ємом, а також поточні цілі щодо сталого розвитку.",
       ro: "Date detaliate de ambalare în funcție de tip, greutate și volum, plus obiectivele actuale de sustenabilitate.",
-      hy: "Մանրամասն փաթեթավորման տվյալներ ըստ տեսակի, քաշի և ծավալի, գումարած ընթացիկ կայունության թիրախները:"
+      hy: "Մանրամասն փաթեթավորման տվյալներ ըստ տեսակի, քաշի և ծավալի, գումարած ընթացիկ կայունության նպատակները։"
     },
     output: {
       en: "Product-specific analysis with recyclability score and class. The analysis results can be downloaded but signing up is required for that part.",
       uk: "Аналіз конкретного продукту з показником придатності до переробки та класом. Результати аналізу можна завантажити, але для цього потрібно зареєструватися.",
       ro: "Analiză specifică produsului cu scorul de reciclare și clasa. Rezultatele analizei pot fi descărcate, dar este necesară înregistrarea pentru acea parte.",
-      hy: "Արտադրանքի հատուկ վերլուծություն՝ վերամշակելիության գնահատականով և դասակարգով: Վերլուծության արդյունքները կարելի է ներբեռնել, սակայն գրանցումը պարտադիր է այդ մասի համար:"
+      hy: "Արտադրանքի հատուկ վերլուծություն՝ վերամշակելիության գնահատականով և դասակարգով: Վերլուծության արդյունքները կարելի է ներբեռնել, սակայն գրանցումը պարտադիր է այդ մասի համար։"
     },
     bestFor: {
       en: "Manufacturers, brands and retailers using or designing plastic packaging.",
       uk: "Виробники, бренди та роздрібні торговці, які використовують або розробляють пластикову упаковку.",
       ro: "Producători, mărci și comercianți cu amănuntul care utilizează sau proiectează ambalaje din plastic.",
-      hy: "Արտադրողներ, ապրանքանիշեր և մանրածախ առևտուր, որոնք օգտագործում կամ նախագծում են պլաստիկ փաթեթավորում:"
+      hy: "Արտադրողներ, ապրանքանիշեր և մանրածախ առևտուր, որոնք օգտագործում կամ նախագծում են պլաստիկ փաթեթավորում։"
     },
     format: {
       en: "Online analysis tool",
@@ -1722,7 +1722,7 @@ const toolCatalogue = [
         en: "The Green Key Toolbox brings together helpful tips, ready-to-use templates and real-world best practice examples for tourism businesses working towards Green Key certification and improved environmental standards.",
         uk: "Набір інструментів «Зелений ключ» об’єднує корисні поради, готові до використання шаблони та практичні приклади передового досвіду для туристичних компаній, які працюють над сертифікацією «Зелений ключ» і покращують екологічні стандарти.",
         ro: "Green Key Toolbox reunește sfaturi utile, șabloane gata de utilizat și exemple de bune practici din lumea reală pentru întreprinderile din turism care lucrează pentru certificarea Green Key și standarde de mediu îmbunătățite.",
-        hy: "Green Key Toolbox-ը միավորում է օգտակար խորհուրդներ, օգտագործման համար պատրաստ ձևանմուշներ և իրական աշխարհի լավագույն փորձի օրինակներ զբոսաշրջային բիզնեսների համար, ովքեր աշխատում են Green Key հավաստագրման և բարելավված բնապահպանական չափանիշների ուղղությամբ:"
+        hy: "Green Key Toolbox-ը միավորում է օգտակար խորհուրդներ, օգտագործման համար պատրաստ ձևանմուշներ և իրական աշխարհի լավագույն փորձի օրինակներ զբոսաշրջային բիզնեսների համար, ովքեր աշխատում են Green Key հավաստագրման և բարելավված բնապահպանական չափանիշների ուղղությամբ։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -1782,7 +1782,7 @@ const toolCatalogue = [
         en: "The Hotel Carbon Measurement Initiative (HCMI) is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements. The tool provides guides on how to use the templates to calculate carbon footprint for guestrooms and meetings, among others, on energy and consumption data. The offline excel sheet provides a structure approach to carbon accounting, and the guides together with the excel example provide a clear method to follow. As a result, you can generate a report with essential information to support your sustainability strategy and communicate your progress to stakeholders.",
         uk: "Hotel Carbon Measurement Initiative (HCMI) — це всесвітньо визнаний інструмент вимірювання вуглецю для індустрії гостинності, який надає готелям стандартизовані дані для відстеження викидів, порівняння з аналогами та задоволення вимог корпоративних покупців. Інструмент надає вказівки щодо використання шаблонів для розрахунку вуглецевого сліду для номерів і зустрічей, серед іншого, на основі даних про енергію та споживання. Офлайновий аркуш Excel забезпечує структурний підхід до обліку вуглецю, а посібники разом із прикладом Excel пропонують чіткий метод, якому слід слідувати. У результаті ви можете створити звіт із необхідною інформацією для підтримки вашої стратегії сталого розвитку та повідомити про свій прогрес зацікавленим сторонам.",
         ro: "Hotel Carbon Measurement Initiative (HCMI) este un instrument de măsurare a carbonului recunoscut la nivel mondial pentru industria ospitalității, oferind hotelurilor date standardizate pentru a urmări emisiile, a compara cu echivalentul și pentru a îndeplini cerințele cumpărătorilor corporativi. Instrumentul oferă ghiduri despre cum să utilizați șabloanele pentru a calcula amprenta de carbon pentru camere de oaspeți și întâlniri, printre altele, privind datele de energie și consum. Fișa excel offline oferă o abordare structurală a contabilității carbonului, iar ghidurile împreună cu exemplul excel oferă o metodă clară de urmat. Ca rezultat, puteți genera un raport cu informații esențiale pentru a vă sprijini strategia de durabilitate și pentru a comunica progresul dvs. părților interesate.",
-        hy: "Հյուրանոցային ածխածնի չափման նախաձեռնությունը (HCMI) հյուրընկալության ոլորտի համար ածխածնի չափման գլոբալ ճանաչված գործիք է, որը հյուրանոցներին տալիս է ստանդարտացված տվյալներ՝ արտանետումները հետևելու, հասակակիցների համեմատ համեմատության և կորպորատիվ գնորդների պահանջները բավարարելու համար: Գործիքը ուղեցույցներ է տալիս այն մասին, թե ինչպես օգտագործել ձևանմուշները հյուրերի սենյակների և հանդիպումների համար ածխածնի հետքը հաշվարկելու համար, ի թիվս այլոց, էներգիայի և սպառման տվյալների վերաբերյալ: Օֆլայն excel թերթիկը տրամադրում է ածխածնի հաշվառման կառուցվածքային մոտեցում, իսկ ուղեցույցները excel օրինակի հետ միասին ապահովում են հստակ մեթոդ, որը պետք է հետևել: Որպես արդյունք, դուք կարող եք ստեղծել հաշվետվություն, որը պարունակում է կարևոր տեղեկատվություն՝ աջակցելու ձեր կայունության ռազմավարությանը և ձեր առաջընթացը շահագրգիռ կողմերին հաղորդելու համար:"
+        hy: "Հյուրանոցային ածխածնի չափման նախաձեռնությունը (HCMI) հյուրընկալության ոլորտի համար ածխածնի չափման գլոբալ ճանաչված գործիք է, որը հյուրանոցներին տալիս է ստանդարտացված տվյալներ՝ արտանետումները հետևելու, հասակակիցների համեմատ համեմատության և կորպորատիվ գնորդների պահանջները բավարարելու համար: Գործիքը ուղեցույցներ է տալիս այն մասին, թե ինչպես օգտագործել ձևանմուշները հյուրերի սենյակների և հանդիպումների համար ածխածնի հետքը հաշվարկելու համար, ի թիվս այլոց, էներգիայի և սպառման տվյալների վերաբերյալ: Օֆլայն excel թերթիկը տրամադրում է ածխածնի հաշվառման կառուցվածքային մոտեցում, իսկ ուղեցույցները excel օրինակի հետ միասին ապահովում են հստակ մեթոդ, որը պետք է հետևել: Որպես արդյունք, դուք կարող եք ստեղծել հաշվետվություն, որը պարունակում է կարևոր տեղեկատվություն՝ աջակցելու ձեր կայունության ռազմավարությանը և ձեր առաջընթացը շահագրգիռ կողմերին հաղորդելու համար։"
       },
     journeyPhases: ['Monitor'],
     placements: {
@@ -1798,13 +1798,13 @@ const toolCatalogue = [
       en: "a half day or ongoing, data input per billing period.",
       uk: "півдня або постійно, введення даних за розрахунковий період.",
       ro: "o jumătate de zi sau în curs de desfășurare, introducerea datelor pe perioadă de facturare.",
-      hy: "կես օր կամ շարունակական, տվյալների մուտքագրում յուրաքանչյուր հաշվարկային ժամանակահատվածի համար:"
+      hy: "կես օր կամ շարունակական, տվյալների մուտքագրում յուրաքանչյուր հաշվարկային ժամանակահատվածի համար։"
     },
     preparationNeeded: {
       en: "Energy, water and fuel consumption data by property with the correct amounts and units.",
       uk: "Дані про споживання енергії, води та палива за властивостями з правильними кількостями та одиницями.",
       ro: "Date despre consumul de energie, apă și combustibil pe proprietate, cu cantitățile și unitățile corecte.",
-      hy: "Էներգիայի, ջրի և վառելիքի սպառման տվյալներ ըստ սեփականության՝ ճիշտ քանակներով և միավորներով:"
+      hy: "Էներգիայի, ջրի և վառելիքի սպառման տվյալներ ըստ սեփականության՝ ճիշտ քանակներով և միավորներով։"
     },
     output: {
       en: "Carbon footprint per occupied room, per meeting space hour and total property",
@@ -1842,7 +1842,7 @@ const toolCatalogue = [
         en: "The Cross-Re-Tour Automated Assessment Tool is a free online diagnostic tool for tourism SMEs. It assesses environmental practices, innovation capacity and strategic orientation to help businesses understand their wider sustainability readiness.",
         uk: "Інструмент автоматичної оцінки Cross-Re-Tour — це безкоштовний онлайн-інструмент діагностики для туристичних МСП. Він оцінює екологічні практики, інноваційний потенціал і стратегічну орієнтацію, щоб допомогти підприємствам зрозуміти їх ширшу готовність до сталого розвитку.",
         ro: "Instrumentul de evaluare automată Cross-Re-Tour este un instrument de diagnostic online gratuit pentru IMM-urile din turism. Evaluează practicile de mediu, capacitatea de inovare și orientarea strategică pentru a ajuta întreprinderile să înțeleagă gradul lor de pregătire pentru durabilitate.",
-        hy: "Cross-Re-Tour Automated Assessment Tool-ը զբոսաշրջության ՓՄՁ-ների համար անվճար առցանց ախտորոշիչ գործիք է: Այն գնահատում է բնապահպանական պրակտիկան, նորարարական կարողությունները և ռազմավարական կողմնորոշումը, որպեսզի օգնի բիզնեսներին հասկանալ իրենց ավելի լայն կայունության պատրաստակամությունը:"
+        hy: "Cross-Re-Tour Automated Assessment Tool-ը զբոսաշրջության ՓՄՁ-ների համար անվճար առցանց ախտորոշիչ գործիք է: Այն գնահատում է բնապահպանական պրակտիկան, նորարարական կարողությունները և ռազմավարական կողմնորոշումը, որպեսզի օգնի բիզնեսներին հասկանալ իրենց ավելի լայն կայունության պատրաստակամությունը։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1864,7 +1864,7 @@ const toolCatalogue = [
       en: "No preparation requirements are listed; the tool is designed to be completed from existing business knowledge.",
       uk: "Вимоги до підготовки не вказано; Інструмент розроблений таким чином, щоб доповнити наявні бізнес-знання.",
       ro: "Nu sunt enumerate cerințe de pregătire; instrumentul este conceput pentru a fi completat din cunoștințele de afaceri existente.",
-      hy: "Նախապատրաստման պահանջներ նշված չեն. գործիքը նախագծված է, որպեսզի լրացվի առկա բիզնես գիտելիքներից:"
+      hy: "Նախապատրաստման պահանջներ նշված չեն. գործիքը նախագծված է, որպեսզի լրացվի առկա բիզնես գիտելիքներից։"
     },
     output: {
       en: "Profile across strategic orientation, innovation capabilities and sustainable innovation capabilities",
@@ -1902,7 +1902,7 @@ const toolCatalogue = [
         en: "The Circular Tourism Tools assess tourism impact from a circular economy perspective at destination and industry level. The assessment produces scores, collaboration ratings and a curated dataset of global best practices.",
         uk: "Інструменти циркулярного туризму оцінюють вплив туризму з точки зору циркулярної економіки на рівні напрямків і галузей. Оцінка дає бали, рейтинги співпраці та підібраний набір даних передових світових практик.",
         ro: "Instrumentele de turism circulare evaluează impactul turismului dintr-o perspectivă a economiei circulare la nivel de destinație și industrie. Evaluarea produce scoruri, evaluări de colaborare și un set de date organizat de bune practici globale.",
-        hy: "Շրջանաձև զբոսաշրջության գործիքները գնահատում են զբոսաշրջության ազդեցությունը շրջանաձև տնտեսության տեսանկյունից նպատակակետի և արդյունաբերության մակարդակում: Գնահատումը տալիս է միավորներ, համագործակցության վարկանիշներ և համաշխարհային լավագույն փորձի համադրված տվյալների հավաքածու:"
+        hy: "Շրջանաձև զբոսաշրջության գործիքները գնահատում են զբոսաշրջության ազդեցությունը շրջանաձև տնտեսության տեսանկյունից նպատակակետի և արդյունաբերության մակարդակում: Գնահատումը տալիս է միավորներ, համագործակցության վարկանիշներ և համաշխարհային լավագույն փորձի համադրված տվյալների հավաքածու։"
       },
     journeyPhases: ['Monitor', 'Assess'],
     placements: {
@@ -1924,7 +1924,7 @@ const toolCatalogue = [
       en: "Basic understanding of energy, water, waste, sourcing practices and stakeholder relationships is helpful.",
       uk: "Корисно базове розуміння енергії, води, відходів, практик джерел і відносин із зацікавленими сторонами.",
       ro: "Înțelegerea de bază a energiei, apei, deșeurilor, practicilor de aprovizionare și a relațiilor cu părțile interesate este utilă.",
-      hy: "Օգտակար է էներգիայի, ջրի, թափոնների, աղբյուրների ստացման պրակտիկայի և շահագրգիռ կողմերի փոխհարաբերությունների հիմնական ըմբռնումը:"
+      hy: "Օգտակար է էներգիայի, ջրի, թափոնների, աղբյուրների ստացման պրակտիկայի և շահագրգիռ կողմերի փոխհարաբերությունների հիմնական ըմբռնումը։"
     },
     output: {
       en: "Circularity score, question breakdown, collaboration rating and best-practice dataset",
@@ -1984,7 +1984,7 @@ const toolCatalogue = [
       en: "Project registration required; scales from 1 to 100+ projects.",
       uk: "Необхідна реєстрація проекту; масштаби від 1 до 100+ проектів.",
       ro: "Este necesară înregistrarea proiectului; scala de la 1 la 100+ proiecte.",
-      hy: "Պահանջվում է նախագծի գրանցում; մասշտաբներ 1-ից մինչև 100+ նախագծեր:"
+      hy: "Պահանջվում է նախագծի գրանցում; մասշտաբներ 1-ից մինչև 100+ նախագծեր։"
     },
     output: {
       en: "Project waste reports, carbon calculations and Building Research Establishment Environmental Assessment Method (BREEAM) evidence packages",
@@ -2022,7 +2022,7 @@ const toolCatalogue = [
         en: "Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements. It is an assessment and reporting tool with guidance, templates and e-learning modules to support building sustainability across the full lifecycle, from design to construction, operation and end-of-life. The framework contributes and supports alignment across other EU directives and standards, including the Sustainable Finance, Energy Performance of Buildings Directive (EPBD), Sustainable Development Goals (SDGs) and the European Green Deal. Depending on the manual, elearning module or ressource you choose, the time required, language and access can vary.",
         uk: "Рівень(-и) допомагає будівельним МСП вимірювати та звітувати про стійкість будівель щодо вуглецю, матеріалів, води, охорони здоров’я та вартості життєвого циклу, підтримуючи узгодження з вимогами ЄС щодо стійкості. Це інструмент оцінки та звітності з інструкціями, шаблонами та модулями електронного навчання для підтримки стійкості будівель протягом усього життєвого циклу, від проектування до будівництва, експлуатації та завершення життєвого циклу. Рамкова основа сприяє і підтримує узгодження інших директив і стандартів ЄС, включаючи Стале фінансування, Директиву про енергетичну ефективність будівель (EPBD), Цілі сталого розвитку (ЦСР) і Європейську зелену угоду. Залежно від вибраного посібника, модуля електронного навчання чи ресурсу необхідний час, мова та доступ можуть відрізнятися.",
         ro: "Level(s) ajută IMM-urile din construcții să măsoare și să raporteze durabilitatea clădirii în ceea ce privește carbonul, materialele, apă, sănătatea și costurile ciclului de viață, susținând alinierea la cerințele UE de durabilitate. Este un instrument de evaluare și raportare cu îndrumări, șabloane și module de e-learning pentru a sprijini sustenabilitatea clădirii pe întreg ciclul de viață, de la proiectare la construcție, operare și sfârșitul vieții. Cadrul contribuie și sprijină alinierea la alte directive și standarde ale UE, inclusiv Finanțarea durabilă, Directiva privind performanța energetică a clădirilor (EPBD), Obiectivele de dezvoltare durabilă (ODD) și Pactul ecologic european. În funcție de manualul, modulul de elearning sau resursa pe care o alegeți, timpul necesar, limba și accesul pot varia.",
-        hy: "Մակարդակ(ներ)ը օգնում է շինարարական ՓՄՁ-ներին չափել և զեկուցել շինարարության կայունությունը ածխածնի, նյութերի, ջրի, առողջության և կյանքի ցիկլի ծախսերի առումով՝ աջակցելով ԵՄ կայունության պահանջներին համապատասխանեցմանը: Այն գնահատման և հաշվետվության գործիք է՝ ուղեցույցներով, ձևանմուշներով և էլեկտրոնային ուսուցման մոդուլներով՝ աջակցելու շենքի կայունությանը ողջ կյանքի ընթացքում՝ նախագծումից մինչև շինարարություն, շահագործում և ժամկետի ավարտ: Շրջանակը նպաստում և աջակցում է ԵՄ այլ դիրեկտիվների և ստանդարտների համապատասխանեցմանը, ներառյալ Կայուն ֆինանսավորումը, Շենքերի էներգետիկ արդյունավետության հրահանգը (EPBD), Կայուն զարգացման նպատակները (SDGs) և Եվրոպական կանաչ գործարքը: Կախված ձեր ընտրած ձեռնարկից, էլեկտրոնային ուսուցման մոդուլից կամ ռեսուրսից, պահանջվող ժամանակը, լեզուն և հասանելիությունը կարող են տարբեր լինել:"
+        hy: "Մակարդակ(ներ)ը օգնում է շինարարական ՓՄՁ-ներին չափել և զեկուցել շինարարության կայունությունը ածխածնի, նյութերի, ջրի, առողջության և կյանքի ցիկլի ծախսերի առումով՝ աջակցելով ԵՄ կայունության պահանջներին համապատասխանեցմանը: Այն գնահատման և հաշվետվության գործիք է՝ ուղեցույցներով, ձևանմուշներով և էլեկտրոնային ուսուցման մոդուլներով՝ աջակցելու շենքի կայունությանը ողջ կյանքի ընթացքում՝ նախագծումից մինչև շինարարություն, շահագործում և ժամկետի ավարտ: Շրջանակը նպաստում և աջակցում է ԵՄ այլ դիրեկտիվների և ստանդարտների համապատասխանեցմանը, ներառյալ Կայուն ֆինանսավորումը, Շենքերի էներգետիկ արդյունավետության հրահանգը (EPBD), Կայուն զարգացման նպատակները (SDGs) և Եվրոպական կանաչ գործարքը: Կախված ձեր ընտրած ձեռնարկից, էլեկտրոնային ուսուցման մոդուլից կամ ռեսուրսից, պահանջվող ժամանակը, լեզուն և հասանելիությունը կարող են տարբեր լինել։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2044,7 +2044,7 @@ const toolCatalogue = [
       en: "None for basic use; building data for full Life Cycle Assessment (LCA).",
       uk: "Немає для базового використання; дані будівлі для повної оцінки життєвого циклу (LCA).",
       ro: "Niciuna pentru utilizare de bază; date de construcție pentru evaluarea completă a ciclului de viață (LCA).",
-      hy: "Հիմնական օգտագործման համար չկա; Կառուցման տվյալներ կյանքի ցիկլի ամբողջական գնահատման համար (LCA):"
+      hy: "Հիմնական օգտագործման համար չկա; Կառուցման տվյալներ կյանքի ցիկլի ամբողջական գնահատման համար (LCA)։"
     },
     output: {
       en: "Lifecycle sustainability assessment and compliance report",
