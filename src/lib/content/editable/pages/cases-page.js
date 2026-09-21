@@ -10,7 +10,7 @@ export const casesPage = {
     en: 'Get concrete examples and inspiration from real-world applications of circular economy practices. Browse existing case studies and filter them by sector, R strategy and country.',
     uk: 'Отримайте конкретні приклади та натхнення з реального застосування практик циркулярної економіки. Переглядайте наявні кейси та фільтруйте їх за сектором, R-стратегією і країною.',
     ro: 'Găsește exemple concrete și inspirație din aplicarea reală a practicilor de economie circulară. Explorează studiile de caz existente și filtrează-le după sector, strategie R și țară.',
-    hy: 'Գտեք կոնկրետ օրինակներ եւ ոգեշնչում շրջանաձեւ տնտեսության իրական գործելակերպերից։ Դիտեք առկա օրինակները եւ զտեք դրանք ըստ ոլորտի, R ռազմավարության եւ երկրի։'
+    hy: 'Գտեք կոնկրետ օրինակներ և ոգեշնչում շրջանաձև տնտեսության իրական գործելակերպերից։ Դիտեք առկա օրինակները և զտեք դրանք ըստ ոլորտի, R ռազմավարության և երկրի։'
   },
   searchLabel: { en: 'Search', uk: 'Пошук', ro: 'Caută', hy: 'Որոնում' },
   searchPlaceholder: { en: 'Search by company, sector, country, R strategy or description', uk: 'Шукайте за компанією, сектором, країною, R-стратегією або описом', ro: 'Caută după companie, sector, țară, strategie R sau descriere', hy: 'Որոնել ըստ ընկերության, ոլորտի, երկրի, R ռազմավարության կամ նկարագրության' },
