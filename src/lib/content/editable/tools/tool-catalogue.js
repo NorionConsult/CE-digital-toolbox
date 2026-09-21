@@ -2082,7 +2082,7 @@ const toolCatalogue = [
         en: "The Farm Carbon Toolkit calculator is designed for farmers and growers, and can also support researchers, agricultural professionals and consultants delivering carbon footprints.",
         uk: "Калькулятор Farm Carbon Toolkit призначений для фермерів і виробників, а також може допомогти дослідникам, професіоналам у сільському господарстві та консультантам надавати вуглецеві сліди.",
         ro: "Calculatorul Farm Carbon Toolkit este conceput pentru fermieri și cultivatori și poate sprijini, de asemenea, cercetătorii, profesioniștii în agricultură și consultanții care livrează amprenta de carbon.",
-        hy: "Farm Carbon Toolkit հաշվիչը նախատեսված է ֆերմերների և աճեցողների համար և կարող է նաև աջակցել հետազոտողներին, գյուղատնտեսության ոլորտի մասնագետներին և խորհրդատուներին, որոնք առաքում են ածխածնի հետքեր:"
+        hy: "Farm Carbon Toolkit հաշվիչը նախատեսված է ֆերմերների և աճեցողների համար և կարող է նաև աջակցել հետազոտողներին, գյուղատնտեսության ոլորտի մասնագետներին և խորհրդատուներին, որոնք առաքում են ածխածնի հետքեր։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -2104,7 +2104,7 @@ const toolCatalogue = [
       en: "Overview of your land, produce inputs and outputs.",
       uk: "Огляд вашої землі, виробництво входів і виходів.",
       ro: "Privire de ansamblu asupra terenului dvs., produceți intrări și ieșiri.",
-      hy: "Ձեր հողի ակնարկ, արտադրեք մուտքեր և ելքեր:"
+      hy: "Ձեր հողի ակնարկ, արտադրեք մուտքեր և ելքեր։"
     },
     output: {
       en: "Carbon output report",
@@ -2142,7 +2142,7 @@ const toolCatalogue = [
         en: "The Food Circularity Check is an online self-assessment developed for food and agri-food businesses. It gives companies a structured picture of how circular their operations are and where gaps and opportunities exist.",
         uk: "Food Circularity Check – це онлайн-система самооцінки, розроблена для харчових та агропродовольчих підприємств. Це дає компаніям структуроване уявлення про те, наскільки циркулярною є їхня діяльність, а також прогалини та можливості.",
         ro: "Verificarea Circularității Alimentare este o autoevaluare online dezvoltată pentru întreprinderile alimentare și agroalimentare. Oferă companiilor o imagine structurată a cât de circulare sunt operațiunile lor și unde există lacune și oportunități.",
-        hy: "Սննդի շրջանառության ստուգումը առցանց ինքնագնահատում է, որը մշակվել է պարենային և ագրոպարենային բիզնեսների համար: Այն ընկերություններին տալիս է կառուցվածքային պատկեր այն մասին, թե որքան շրջանաձև են նրանց գործունեությունը և որտեղ կան բացեր և հնարավորություններ:"
+        hy: "Սննդի շրջանառության ստուգումը առցանց ինքնագնահատում է, որը մշակվել է պարենային և ագրոպարենային բիզնեսների համար: Այն ընկերություններին տալիս է կառուցվածքային պատկեր այն մասին, թե որքան շրջանաձև են նրանց գործունեությունը և որտեղ կան բացեր և հնարավորություններ։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -2164,7 +2164,7 @@ const toolCatalogue = [
       en: "Production and supply-chain data needed.",
       uk: "Необхідні дані про виробництво та ланцюг постачання.",
       ro: "Sunt necesare date privind producția și lanțul de aprovizionare.",
-      hy: "Անհրաժեշտ է արտադրության և մատակարարման շղթայի տվյալներ:"
+      hy: "Անհրաժեշտ է արտադրության և մատակարարման շղթայի տվյալներ։"
     },
     output: {
       en: "Downloadable summary showing completion percentage across six categories",
@@ -2202,7 +2202,7 @@ const toolCatalogue = [
         en: "The Circular Toolkit by O-Farms supports SMEs in finding inspiration for circular product development, assessing circularity, discovering opportunities, amplifying impact and increasing revenue.",
         uk: "Circular Toolkit від O-Farms допомагає малим і середнім підприємствам знайти натхнення для циклічної розробки продуктів, оцінити циклічність, виявити можливості, посилити вплив і збільшити дохід.",
         ro: "Setul de instrumente circular de la O-Farms sprijină IMM-urile în găsirea de inspirație pentru dezvoltarea de produse circulare, evaluarea circularității, descoperirea oportunităților, amplificarea impactului și creșterea veniturilor.",
-        hy: "O-Farms-ի Circular Toolkit-ն աջակցում է ՓՄՁ-ներին՝ ոգեշնչում գտնելու շրջանաձև արտադրանքի մշակման, շրջանաձևության գնահատման, հնարավորությունների բացահայտման, ազդեցության ուժեղացման և եկամուտների ավելացման հարցում:"
+        hy: "O-Farms-ի Circular Toolkit-ն աջակցում է ՓՄՁ-ներին՝ ոգեշնչում գտնելու շրջանաձև արտադրանքի մշակման, շրջանաձևության գնահատման, հնարավորությունների բացահայտման, ազդեցության ուժեղացման և եկամուտների ավելացման հարցում։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2224,7 +2224,7 @@ const toolCatalogue = [
       en: "Farm nutrient and input data required.",
       uk: "Необхідні дані про поживні речовини та вхідні дані для ферми.",
       ro: "Sunt necesare date privind nutrienții și intrarea în fermă.",
-      hy: "Պահանջվում են ֆերմերային սննդանյութերի և մուտքային տվյալներ:"
+      hy: "Պահանջվում են ֆերմերային սննդանյութերի և մուտքային տվյալներ։"
     },
     output: {
       en: "Completed worksheets to guide internal decisions and external conversations about circular strategy",
@@ -2262,7 +2262,7 @@ const toolCatalogue = [
         en: "This Waste and Resources Action Programme (WRAP) data capture sheet supports the Target, Measure, Act principles for food waste reduction and aligns with Sustainable Development Goal 12.3 and the international Food Loss & Waste Standard.",
         uk: "Ця таблиця збору даних Програми дій щодо відходів і ресурсів (WRAP) підтримує принципи «Ціль, міра, дія» для зменшення харчових відходів і відповідає Цілі сталого розвитку 12.3 і міжнародному стандарту щодо втрат і відходів їжі.",
         ro: "Această fișă de captare a datelor Programului de acțiune privind deșeurile și resursele (WRAP) susține principiile țintă, măsură, act pentru reducerea risipei alimentare și se aliniază cu Obiectivul de dezvoltare durabilă 12.3 și cu Standardul internațional privind pierderile și risipa de alimente.",
-        hy: "Թափոնների և ռեսուրսների գործողությունների ծրագրի (WRAP) տվյալների հավաքագրման թերթիկը աջակցում է սննդամթերքի թափոնների նվազեցման նպատակային, չափման, գործողության սկզբունքներին և համահունչ է Կայուն զարգացման նպատակին 12.3-ին և սննդի կորստի և թափոնների միջազգային ստանդարտին:"
+        hy: "Թափոնների և ռեսուրսների գործողությունների ծրագրի (WRAP) տվյալների հավաքագրման թերթիկը աջակցում է սննդամթերքի թափոնների նվազեցման նպատակային, չափման, գործողության սկզբունքներին և համահունչ է Կայուն զարգացման նպատակին 12.3-ին և սննդի կորստի և թափոնների միջազգային ստանդարտին։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -2284,7 +2284,7 @@ const toolCatalogue = [
       en: "Basic food waste data helpful.",
       uk: "Корисні основні дані про харчові відходи.",
       ro: "Datele de bază privind risipa alimentară sunt utile.",
-      hy: "Սննդամթերքի թափոնների հիմնական տվյալները օգտակար են:"
+      hy: "Սննդամթերքի թափոնների հիմնական տվյալները օգտակար են։"
     },
     output: {
       en: "Waste measurement reports, hotspot analysis and action plan",
@@ -2322,7 +2322,7 @@ const toolCatalogue = [
         en: "The Circular Toolbox guides apparel brands through a five-step circular innovation process, from team formation and customer understanding to prototyping, fine-tuning and piloting a new concept.",
         uk: "Circular Toolbox проводить бренди одягу через п’ятиетапний циклічний інноваційний процес, від формування команди та розуміння клієнта до прототипування, тонкого налаштування та пілотування нової концепції.",
         ro: "Cutia de instrumente circulară ghidează mărcile de îmbrăcăminte printr-un proces circular de inovare în cinci pași, de la formarea echipei și înțelegerea clienților până la crearea de prototipuri, reglarea fină și pilotarea unui nou concept.",
-        hy: "Circular Toolbox-ն առաջնորդում է հագուստի ապրանքանիշերը հինգ քայլից բաղկացած շրջանաձև նորարարական գործընթացի միջոցով՝ սկսած թիմի ձևավորումից և հաճախորդների ըմբռնումից մինչև նոր հայեցակարգի նախատիպավորում, ճշգրտում և փորձարկում:"
+        hy: "Circular Toolbox-ն առաջնորդում է հագուստի ապրանքանիշերը հինգ քայլից բաղկացած շրջանաձև նորարարական գործընթացի միջոցով՝ սկսած թիմի ձևավորումից և հաճախորդների ըմբռնումից մինչև նոր հայեցակարգի նախատիպավորում, ճշգրտում և փորձարկում։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2344,7 +2344,7 @@ const toolCatalogue = [
       en: "Leadership sign-off and a cross-functional team.",
       uk: "Підтвердження лідерства та міжфункціональна команда.",
       ro: "Semnarea conducerii și o echipă interfuncțională.",
-      hy: "Ղեկավարության ստորագրում և բազմաֆունկցիոնալ թիմ:"
+      hy: "Ղեկավարության ստորագրում և բազմագործունակ թիմ։"
     },
     output: {
       en: "Guided five-step circular innovation process from team formation to piloting",
@@ -2382,7 +2382,7 @@ const toolCatalogue = [
         en: "Re.Hub connects businesses to Europe's textile recycling network and helps identify local collection, sorting and recycling partners to close textile material loops.",
         uk: "Re.Hub об’єднує підприємства з європейською мережею переробки текстилю та допомагає знайти місцевих партнерів зі збору, сортування та переробки, щоб закрити петлі текстильних матеріалів.",
         ro: "Re.Hub conectează întreprinderile la rețeaua europeană de reciclare a textilelor și ajută la identificarea partenerilor locali de colectare, sortare și reciclare pentru a închide buclele de materiale textile.",
-        hy: "Re.Hub-ը միացնում է բիզնեսները Եվրոպայի տեքստիլի վերամշակման ցանցին և օգնում է բացահայտել տեղական հավաքման, տեսակավորման և վերամշակման գործընկերներին՝ փակելու տեքստիլ նյութերի օղակները:"
+        hy: "Re.Hub-ը միացնում է բիզնեսները Եվրոպայի տեքստիլի վերամշակման ցանցին և օգնում է բացահայտել տեղական հավաքման, տեսակավորման և վերամշակման գործընկերներին՝ փակելու տեքստիլ նյութերի օղակները։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2442,7 +2442,7 @@ const toolCatalogue = [
         en: "Fibretrace gives textile businesses end-to-end visibility of the supply chain, supporting verified sustainability claims from fibre to finished product.",
         uk: "Fibretrace надає текстильним підприємствам наскрізну видимість ланцюга постачання, підтримуючи перевірені заяви про екологічність від волокна до готового продукту.",
         ro: "Fibretrace oferă companiilor din textile vizibilitate de la capăt la capăt a lanțului de aprovizionare, susținând afirmațiile verificate de sustenabilitate de la fibre până la produsul finit.",
-        hy: "Fibretrace-ը տեքստիլ ձեռնարկություններին տալիս է մատակարարման շղթայի վերջնական տեսանելիություն՝ աջակցելով կայունության հաստատված պահանջներին մանրաթելից մինչև պատրաստի արտադրանք:"
+        hy: "Fibretrace-ը տեքստիլ ձեռնարկություններին տալիս է մատակարարման շղթայի վերջնական տեսանելիություն՝ աջակցելով կայունության հաստատված պահանջներին մանրաթելից մինչև պատրաստի արտադրանք։"
       },
     journeyPhases: ['Monitor', 'Assess'],
     placements: {
@@ -2464,7 +2464,7 @@ const toolCatalogue = [
       en: "Platform onboarding needed.",
       uk: "Потрібна адаптація платформи.",
       ro: "Este necesară integrarea platformei.",
-      hy: "Պահանջվում է պլատֆորմի տեղադրում:"
+      hy: "Պահանջվում է պլատֆորմի տեղադրում։"
     },
     output: {
       en: "Real-time supply-chain traceability data",
@@ -2502,7 +2502,7 @@ const toolCatalogue = [
         en: "The Higg Product Module and Higg Materials Sustainability Index provide insights into the environmental impacts of materials and products so designers and organisations can assess, compare and communicate impact performance.",
         uk: "Модуль продукту Хігга та індекс стійкості матеріалів Хігга дають уявлення про вплив матеріалів і продуктів на навколишнє середовище, щоб дизайнери та організації могли оцінювати, порівнювати та повідомляти про ефективність впливу.",
         ro: "Modulul de produse Higg și Indexul de durabilitate a materialelor Higg oferă perspective asupra impactului asupra mediului al materialelor și produselor, astfel încât designerii și organizațiile să poată evalua, compara și comunica performanța impactului.",
-        hy: "Higg Product Module-ը և Higg Materials Sustainability Index-ը տրամադրում են պատկերացումներ նյութերի և արտադրանքի շրջակա միջավայրի վրա ազդեցության մասին, որպեսզի դիզայներներն ու կազմակերպությունները կարողանան գնահատել, համեմատել և հաղորդել ազդեցության կատարողականը:"
+        hy: "Higg Product Module-ը և Higg Materials Sustainability Index-ը տրամադրում են վերլուծական տվյալներ նյութերի և արտադրանքի շրջակա միջավայրի վրա ազդեցության մասին, որպեսզի դիզայներներն ու կազմակերպությունները կարողանան գնահատել, համեմատել և հաղորդել ազդեցության կատարողականը։"
       },
     journeyPhases: ['Monitor'],
     placements: {
@@ -2562,7 +2562,7 @@ const toolCatalogue = [
         en: "The Plan, Do, Check, Act (PDCA) cycle is a continuous improvement framework that works well for circular economy implementation. You can use as an overall project management tool to review results of implemented actions, decide what to adjust, set new targets and implement improvements. The framework is simple yet powerful, and is essential in systematic reviews. || The tool provider also offers templates with more advanced versions of the PDCA framework, including problem solving templates with more detailed fields and other formats such as Excel sheets and google sheets. If the template is too simplified for your use-case, review the more detailed templates in their website: [HERE](https://www.smartsheet.com/content/pdca-templates). These templates can also be utilised to inform your own review document frameworks, wherever these are located for best follow-up.",
         uk: "Цикл «Плануй, виконуй, перевіряй, дій» (PDCA) — це система безперервного вдосконалення, яка добре працює для впровадження циклічної економіки. Ви можете використовувати як загальний інструмент управління проектом, щоб переглядати результати впроваджених дій, вирішувати, що потрібно скоригувати, установлювати нові цілі та впроваджувати вдосконалення. Структура проста, але потужна, необхідна для систематичних оглядів. || Постачальник інструментів також пропонує шаблони з розширенішими версіями інфраструктури PDCA, включаючи шаблони вирішення проблем із детальнішими полями та іншими форматами, такими як таблиці Excel і таблиці Google. Якщо шаблон занадто спрощений для вашого випадку використання, перегляньте детальніші шаблони на їх веб-сайті: [HERE](https://www.smartsheet.com/content/pdca-templates). Ці шаблони також можна використовувати для інформування ваших власних структур перевірки документів, де б вони не були розташовані для найкращого подальшого виконання.",
         ro: "Ciclul Planificați, faceți, verificați, acționați (PDCA) este un cadru de îmbunătățire continuă care funcționează bine pentru implementarea economiei circulare. Puteți utiliza ca instrument general de management de proiect pentru a revizui rezultatele acțiunilor implementate, a decide ce să ajusteze, a stabili noi obiective și a implementa îmbunătățiri. Cadrul este simplu, dar puternic și este esențial în revizuirile sistematice. || Furnizorul de instrumente oferă, de asemenea, șabloane cu versiuni mai avansate ale cadrului PDCA, inclusiv șabloane de rezolvare a problemelor cu câmpuri mai detaliate și alte formate, cum ar fi foile Excel și foile Google. Dacă șablonul este prea simplificat pentru cazul dvs. de utilizare, examinați șabloanele mai detaliate de pe site-ul lor: [HERE](https://www.smartsheet.com/content/pdca-templates). Aceste șabloane pot fi, de asemenea, utilizate pentru a vă informa propriile cadre ale documentelor de revizuire, oriunde se află acestea, pentru o urmărire optimă.",
-        hy: "Պլան, արա, ստուգում, ակտ (PDCA) ցիկլը շարունակական բարելավման շրջանակ է, որը լավ է աշխատում շրջանաձև տնտեսության իրականացման համար: Դուք կարող եք օգտագործել որպես ծրագրի կառավարման ընդհանուր գործիք՝ իրականացված գործողությունների արդյունքները վերանայելու, որոշելու, թե ինչ հարմարեցնել, սահմանել նոր թիրախներ և իրականացնել բարելավումներ: Շրջանակը պարզ է, բայց հզոր և կարևոր է համակարգված վերանայումների համար: || Գործիքի մատակարարը նաև առաջարկում է ձևանմուշներ PDCA շրջանակի ավելի առաջադեմ տարբերակներով, ներառյալ խնդիրների լուծման ձևանմուշներ ավելի մանրամասն դաշտերով և այլ ձևաչափերով, ինչպիսիք են Excel թերթերը և google թերթերը: Եթե ​​ձևանմուշը չափազանց պարզեցված է ձեր օգտագործման դեպքում, վերանայեք ավելի մանրամասն ձևանմուշները իրենց կայքում. [HERE](https://www.smartsheet.com/content/pdca-templates). Այս ձևանմուշները կարող են օգտագործվել նաև ձեր սեփական վերանայման փաստաթղթերի շրջանակները տեղեկացնելու համար, որտեղ էլ որ դրանք գտնվում են լավագույն հետևելու համար:"
+        hy: "Գործիքի մատակարարը նաև առաջարկում է ձևանմուշներ PDCA շրջանակի ավելի առաջադեմ տարբերակներով, ներառյալ խնդիրների լուծման ձևանմուշներ ավելի մանրամասն դաշտերով և այլ ձևաչափերով, ինչպիսիք են Excel թերթերը և google թերթերը: Եթե ձևանմուշը չափազանց պարզեցված է ձեր օգտագործման դեպքում, վերանայեք ավելի մանրամասն ձևանմուշները իրենց կայքում.  [HERE](https://www.smartsheet.com/content/pdca-templates). Այս ձևանմուշները կարող են օգտագործվել նաև ձեր սեփական վերանայման փաստաթղթերի շրջանակները տեղեկացնելու համար, որտեղ էլ որ դրանք գտնվում են լավագույն հետևելու համար։"
       },
     journeyPhases: ['Explore', 'Evaluate', 'Monitor'],
     placements: {
@@ -2583,7 +2583,7 @@ const toolCatalogue = [
       en: "Collect relevant data and results from the previous implementation cycle for the review part of the PDCA process.",
       uk: "Зберіть відповідні дані та результати попереднього циклу реалізації для частини перегляду процесу PDCA.",
       ro: "Colectați date și rezultate relevante din ciclul de implementare anterior pentru partea de revizuire a procesului PDCA.",
-      hy: "Հավաքեք համապատասխան տվյալներ և արդյունքներ նախորդ իրականացման շրջանից՝ PDCA գործընթացի վերանայման մասի համար:"
+      hy: "Հավաքեք համապատասխան տվյալներ և արդյունքներ նախորդ իրականացման շրջանից՝ PDCA գործընթացի վերանայման մասի համար։"
     },
     output: {
       en: "Prioritised action plan for the next circular improvement cycle",
@@ -2595,7 +2595,7 @@ const toolCatalogue = [
       en: "All SMEs working with improvement cycles and continuous processes, especially those already implementing circular actions and ready to refine their efforts in a structured way.",
       uk: "Усі МСП, які працюють із циклами вдосконалення та безперервними процесами, особливо ті, які вже впроваджують циклічні дії та готові вдосконалювати свої зусилля структурованим способом.",
       ro: "Toate IMM-urile care lucrează cu cicluri de îmbunătățire și procese continue, în special cele care implementează deja acțiuni circulare și sunt gata să-și rafineze eforturile într-un mod structurat.",
-      hy: "Բոլոր ՓՄՁ-ները, որոնք աշխատում են բարելավման ցիկլերով և շարունակական գործընթացներով, հատկապես նրանք, ովքեր արդեն իրականացնում են շրջանաձև գործողություններ և պատրաստ են կատարելագործել իրենց ջանքերը կառուցվածքային ձևով:"
+      hy: "Բոլոր ՓՄՁ-ները, որոնք աշխատում են բարելավման ցիկլերով և շարունակական գործընթացներով, հատկապես նրանք, ովքեր արդեն իրականացնում են շրջանաձև գործողություններ և պատրաստ են կատարելագործել իրենց ջանքերը կառուցվածքային ձևով։"
     },
     format: {
       en: "PDF template",
@@ -2621,7 +2621,7 @@ const toolCatalogue = [
         en: "The Circulab Business Ecosystem Canvas guides teams through reviewing a current circular model, identifying which value flows are working, which partners to engage differently and where circular revenue opportunities remain untapped.",
         uk: "Circulab Business Ecosystem Canvas допомагає командам переглядати поточну циркулярну модель, визначаючи, які потоки цінностей працюють, яких партнерів залучати по-іншому та де можливості циркулярного доходу залишаються невикористаними.",
         ro: "Circulab Business Ecosystem Canvas ghidează echipele prin revizuirea unui model circular actual, identificând ce fluxuri de valoare funcționează, ce parteneri să se implice diferit și unde oportunitățile de venituri circulare rămân neexploatate.",
-        hy: "Circulab Business Ecosystem Canvas-ը թիմերին ուղղորդում է ընթացիկ շրջանաձև մոդելի վերանայման միջոցով՝ բացահայտելով, թե որ արժեքային հոսքերն են գործում, որ գործընկերներն են տարբեր կերպ ներգրավվելու և որտեղ են եկամուտների շրջանաձև հնարավորությունները մնում չօգտագործված:"
+        hy: "Circulab Business Ecosystem Canvas-ը թիմերին ուղղորդում է ընթացիկ շրջանաձև մոդելի վերանայման միջոցով՝ բացահայտելով, թե որ արժեքային հոսքերն են գործում, որ գործընկերներն են տարբեր կերպ ներգրավվելու և որտեղ են եկամուտների շրջանաձև հնարավորությունները մնում չօգտագործված։"
       },
     journeyPhases: ['Assess', 'Monitor'],
     placements: {
@@ -2642,13 +2642,13 @@ const toolCatalogue = [
       en: "Gather measurement data and key results from your indicators before the session.",
       uk: "Зберіть дані вимірювань і ключові результати за своїми індикаторами перед сеансом.",
       ro: "Adunați date de măsurare și rezultate cheie de la indicatorii dvs. înainte de sesiune.",
-      hy: "Նիստից առաջ հավաքեք չափման տվյալները և հիմնական արդյունքները ձեր ցուցանիշներից:"
+      hy: "Նիստից առաջ հավաքեք չափման տվյալները և հիմնական արդյունքները ձեր ցուցանիշներից։"
     },
     output: {
       en: "Updated circular business model canvas with identified improvements",
       uk: "Оновлене полотно кругової бізнес-моделі з виявленими покращеннями",
       ro: "Modelul de afaceri circular actualizat cu îmbunătățiri identificate",
-      hy: "Թարմացված շրջանաձև բիզնես մոդելի կտավ՝ հայտնաբերված բարելավումներով"
+      hy: "Թարմացված շրջանաձև բիզնես մոդելի ձևանմուշ՝ հայտնաբերված բարելավումներով"
     },
     bestFor: {
       en: "SMEs already implementing circular actions and ready to refine their model",
@@ -2680,7 +2680,7 @@ const toolCatalogue = [
         en: "This implementation canvas is part of the Circular Business Development Canvas Pack. It supports teams in turning chosen circular strategies into concrete roadmaps with actions, owners and timelines.",
         uk: "Це полотно реалізації є частиною Circular Business Development Canvas Pack. Він допомагає командам перетворювати вибрані кругові стратегії на конкретні дорожні карти з діями, власниками та часовими рамками.",
         ro: "Această pânză de implementare face parte din Circular Business Development Canvas Pack. Acesta sprijină echipele în transformarea strategiilor circulare alese în foi de parcurs concrete cu acțiuni, proprietari și calendare.",
-        hy: "Այս իրականացման կտավը Circular Business Development Canvas Pack-ի մի մասն է: Այն աջակցում է թիմերին՝ ընտրված շրջանաձև ռազմավարությունները վերածելու կոնկրետ ճանապարհային քարտեզների՝ գործողությունների, սեփականատերերի և ժամանակացույցի հետ:"
+        hy: "Այս իրականացման ձևանմուշը Circular Business Development Canvas Pack-ի մի մասն է: Այն աջակցում է թիմերին՝ ընտրված շրջանաձև ռազմավարությունները վերածելու կոնկրետ ճանապարհային քարտեզների՝ գործողությունների, սեփականատերերի և ժամանակացույցի հետ։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -2701,7 +2701,7 @@ const toolCatalogue = [
       en: "A Miro account, your circular strategy or audit outputs, and relevant team members or stakeholders.",
       uk: "Обліковий запис Miro, ваша циклічна стратегія або результати аудиту, а також відповідні члени команди чи зацікавлені сторони.",
       ro: "Un cont Miro, strategia dvs. circulară sau rezultatele auditului și membrii echipei sau părțile interesate relevanți.",
-      hy: "Miro հաշիվը, ձեր շրջանաձև ռազմավարությունը կամ աուդիտի արդյունքները և համապատասխան թիմի անդամները կամ շահագրգիռ կողմերը:"
+      hy: "Miro հաշիվը, ձեր շրջանաձև ռազմավարությունը կամ աուդիտի արդյունքները և համապատասխան թիմի անդամները կամ շահագրգիռ կողմերը։"
     },
     output: {
       en: "Structured implementation plan with defined actions, owners and timelines",
@@ -2713,7 +2713,7 @@ const toolCatalogue = [
       en: "Teams ready to move from strategy to execution after audit and ideation canvases",
       uk: "Команди, готові перейти від стратегії до реалізації після аудиту та аналізу ідей",
       ro: "Echipe gata să treacă de la strategie la execuție după pânzele de audit și ideare",
-      hy: "Թիմերը պատրաստ են անցնելու ռազմավարությունից կատարման աուդիտից և գաղափարական կտավներից հետո"
+      hy: "Թիմերը պատրաստ են անցնելու ռազմավարությունից կատարման աուդիտից և գաղափարական ձևանմուշներից հետո"
     },
     format: {
       en: "Online collaborative whiteboard (Miro template)",
@@ -2739,7 +2739,7 @@ const toolCatalogue = [
         en: "This resource helps teams move from screened business models to a shortlist of one to three priority strategies that can be developed into a business case.",
         uk: "Цей ресурс допомагає командам переходити від перевірених бізнес-моделей до короткого списку з однієї-трьох пріоритетних стратегій, які можна розвинути в бізнес-кейс.",
         ro: "Această resursă ajută echipele să treacă de la modele de afaceri verificate la o listă scurtă de una până la trei strategii prioritare care pot fi dezvoltate într-un caz de afaceri.",
-        hy: "Այս ռեսուրսը թիմերին օգնում է ստուգված բիզնես մոդելներից անցնել մեկից երեք առաջնահերթ ռազմավարությունների կարճ ցուցակ, որոնք կարող են վերածվել բիզնեսի:"
+        hy: "Այս ռեսուրսը թիմերին օգնում է ստուգված բիզնես մոդելներից անցնել մեկից երեք առաջնահերթ ռազմավարությունների կարճ ցուցակ, որոնք կարող են վերածվել բիզնեսի։"
       },
     journeyPhases: ['Explore', 'Evaluate'],
     placements: {
@@ -2760,7 +2760,7 @@ const toolCatalogue = [
       en: "Basic knowledge of your options, a pen and the printout.",
       uk: "Базове знання ваших можливостей, ручка та роздруківка.",
       ro: "Cunoștințe de bază despre opțiunile dvs., un stilou și tipărirea.",
-      hy: "Ձեր ընտրանքների, գրիչի և տպագրության հիմնական գիտելիքները:"
+      hy: "Ձեր ընտրանքների, գրիչի և տպագրության հիմնական գիտելիքները։"
     },
     output: {
       en: "Filled-out shortlist of circular options with responsibilities and priorities",
@@ -2798,7 +2798,7 @@ const toolCatalogue = [
         en: "The Business Model Development Toolkit guides teams through exercises to assess five linear-model inefficiencies, reflect on customer pain points and explore circular business sub-models before choosing opportunities to develop further.",
         uk: "Інструментарій розробки бізнес-моделі допоможе командам виконати вправи для оцінки п’яти неефективності лінійної моделі, обміркувати проблемні точки клієнтів і дослідити циклічні підмоделі бізнесу, перш ніж вибрати можливості для подальшого розвитку.",
         ro: "Setul de instrumente de dezvoltare a modelelor de afaceri ghidează echipele prin exerciții pentru a evalua cinci ineficiențe ale modelului liniar, pentru a reflecta asupra punctelor dureroase ale clienților și a explora submodele circulare de afaceri înainte de a alege oportunitățile de dezvoltare în continuare.",
-        hy: "Բիզնես մոդելի զարգացման գործիքակազմը թիմերին ուղղորդում է վարժությունների միջոցով՝ գնահատելու հինգ գծային մոդելի անարդյունավետությունը, արտացոլելու հաճախորդների ցավի կետերը և ուսումնասիրելու բիզնեսի ենթամոդելները՝ նախքան հետագա զարգացման հնարավորություններ ընտրելը:"
+        hy: "Բիզնես մոդելի զարգացման գործիքակազմը թիմերին ուղղորդում է վարժությունների միջոցով՝ գնահատելու հինգ գծային մոդելի անարդյունավետությունը, արտացոլելու հաճախորդների հիմնական խնդիրները և ուսումնասիրելու բիզնեսի ենթամոդելները՝ նախքան հետագա զարգացման հնարավորություններ ընտրելը։"
       },
     journeyPhases: ['Explore','Evaluate'],
     placements: {
@@ -2819,13 +2819,13 @@ const toolCatalogue = [
       en: "Basic knowledge of company operations, a pen and the playbook printouts.",
       uk: "Базові знання про діяльність компанії, ручка та роздруківки посібника.",
       ro: "Cunoștințe de bază despre operațiunile companiei, un stilou și tipărite de playbook.",
-      hy: "Ընկերության գործունեության հիմնական իմացություն, գրիչ և խաղատախտակի տպագրություն:"
+      hy: "Ընկերության գործունեության հիմնական իմացություն, գրիչ և խաղատախտակի տպագրություն։"
     },
     output: {
       en: "Identified inefficiencies, assessed potential circular business opportunities that lead to a concrete idea.",
       uk: "Виявлено неефективність, оцінено потенційні кругові бізнес-можливості, які призвели до конкретної ідеї.",
       ro: "Identificarea ineficiențelor, evaluarea potențialelor oportunități circulare de afaceri care conduc la o idee concretă.",
-      hy: "Բացահայտվել են անարդյունավետությունները, գնահատվել են պոտենցիալ շրջանաձև բիզնես հնարավորությունները, որոնք հանգեցնում են կոնկրետ գաղափարի:"
+      hy: "Բացահայտվել են անարդյունավետությունները, գնահատվել են պոտենցիալ շրջանաձև բիզնես հնարավորությունները, որոնք հանգեցնում են կոնկրետ գաղափարի։"
     },
     bestFor: {
       en: "All SMEs exploring which circular business models suit their company",
