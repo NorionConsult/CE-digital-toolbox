@@ -21,7 +21,7 @@
       en: 'How does this case apply circular strategies?',
       uk: 'Як цей кейс застосовує циркулярні стратегії?',
       ro: 'Cum aplică acest caz strategiile circulare?',
-      hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձեւ ռազմավարությունները։'
+      hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձև ռազմավարությունները։'
     },
     descriptionTitle: { en: 'Description of case', uk: 'Опис кейсу', ro: 'Descrierea cazului', hy: 'Օրինակի նկարագրություն' },
     about: { en: 'About', uk: 'Про кейс', ro: 'Despre', hy: 'Մասին' },
