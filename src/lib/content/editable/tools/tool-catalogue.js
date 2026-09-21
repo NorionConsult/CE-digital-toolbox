@@ -770,7 +770,7 @@ const toolCatalogue = [
       en: "Manufacturing small-medium enterprises (SMEs), product developers, and companies exploring circular product design or redesign.",
       uk: "Виробничі малі та середні підприємства (МСП), розробники продуктів і компанії, які вивчають круговий дизайн або редизайн продукту.",
       ro: "Întreprinderi de producție mici și mijlocii (IMM-uri), dezvoltatori de produse și companii care explorează proiectarea sau reproiectarea circulară a produselor.",
-      hy: "Արտադրող փոքր և միջին ձեռնարկություններ (ՓՄՁ), արտադրանք մշակողներ և ընկերություններ, որոնք ուսումնասիրում են արտադրանքի շրջանաձև ձևավորում կամ վերանախագծում:"
+      hy: "Արտադրող փոքր և միջին ձեռնարկություններ (ՓՄՁ), արտադրանք մշակողներ և ընկերություններ, որոնք ուսումնասիրում են արտադրանքի շրջանաձև ձևավորում կամ վերանախագծում։"
     },
     format: {
       en: "Digital tool",
@@ -795,7 +795,7 @@ const toolCatalogue = [
         en: "The Circular Strategies Wheel gives your team a shared visual overview of circular strategies across the three phases of a product or service's life: start of life, product life, and end of life. It turns circularity from an abstract idea into something tangible and actionable, helping your team connect relevant strategies to your business context. By working through it together, you identify key opportunities, areas of interest, and practical barriers, creating a grounded, team-owned starting point for building your circular business model.",
         uk: "Колесо циклічних стратегій надає вашій команді спільний візуальний огляд циклічних стратегій на трьох етапах життєвого циклу продукту чи послуги: початок життєвого циклу, життєвий цикл продукту та кінець життєвого циклу. Він перетворює циркулярність із абстрактної ідеї на щось відчутне та дієве, допомагаючи вашій команді зв’язати релевантні стратегії з контекстом вашого бізнесу. Працюючи над ним разом, ви визначаєте ключові можливості, сфери інтересів і практичні перешкоди, створюючи обґрунтовану командну відправну точку для побудови вашої циклічної бізнес-моделі.",
         ro: "Roata Strategiilor Circulare oferă echipei dvs. o imagine de ansamblu comună a strategiilor circulare în cele trei faze ale vieții unui produs sau serviciu: începutul vieții, viața produsului și sfârșitul vieții. Transformă circularitatea dintr-o idee abstractă în ceva tangibil și acționabil, ajutându-ți echipa să conecteze strategiile relevante la contextul tău de afaceri. Lucrând împreună, identificați oportunitățile cheie, domeniile de interes și barierele practice, creând un punct de plecare bazat, deținut de echipă, pentru construirea modelului dvs. de afaceri circular.",
-        hy: "Circular Strategies Wheel-ը ձեր թիմին տալիս է արտադրանքի կամ ծառայության կյանքի երեք փուլերի շրջանակային ռազմավարությունների ընդհանուր տեսողական ակնարկ՝ կյանքի սկիզբ, արտադրանքի ժամկետ և կյանքի ավարտ: Այն շրջանաձևությունը վերացական գաղափարից վերածում է շոշափելի և գործող բանի՝ օգնելով ձեր թիմին համապատասխան ռազմավարությունները կապել ձեր բիզնեսի համատեքստին: Միասին աշխատելով դրա միջոցով՝ դուք բացահայտում եք հիմնական հնարավորությունները, հետաքրքրությունների ոլորտները և գործնական խոչընդոտները՝ ստեղծելով հիմնավորված, թիմային ելակետ՝ ձեր շրջանաձև բիզնես մոդելը կառուցելու համար:"
+        hy: "Circular Strategies Wheel-ը ձեր թիմին տալիս է արտադրանքի կամ ծառայության կյանքի երեք փուլերի շրջանակային ռազմավարությունների ընդհանուր տեսողական ակնարկ՝ կյանքի սկիզբ, արտադրանքի ժամկետ և կյանքի ավարտ: Այն շրջանաձևությունը վերացական գաղափարից վերածում է շոշափելի և գործող բանի՝ օգնելով ձեր թիմին համապատասխան ռազմավարությունները կապել ձեր բիզնեսի համատեքստին: Միասին աշխատելով դրա միջոցով՝ դուք բացահայտում եք հիմնական հնարավորությունները, հետաքրքրությունների ոլորտները և գործնական խոչընդոտները՝ ստեղծելով հիմնավորված, թիմային ելակետ՝ ձեր շրջանաձև բիզնես մոդելը կառուցելու համար։"
       },
     journeyPhases: ['Explore'],
     sector: 'Cross-sector',
@@ -851,7 +851,7 @@ const toolCatalogue = [
         en: "This Up2Circ Circularity Assessment Tool will help you to become familiar with the circular economy, score how well you integrate circular strategies into your business, and discover opportunities for improvement and challenges to address.",
         uk: "Цей Інструмент оцінки замкнутості Up2Circ допоможе вам ознайомитися з економікою замкнутого циклу, оцінити, наскільки добре ви інтегруєте циклічні стратегії у свій бізнес, а також виявити можливості для вдосконалення та проблеми, які потрібно вирішити.",
         ro: "Acest instrument de evaluare a circularității Up2Circ vă va ajuta să vă familiarizați cu economia circulară, să notați cât de bine integrați strategiile circulare în afacerea dvs. și să descoperiți oportunități de îmbunătățire și provocări de abordat.",
-        hy: "Այս Up2Circ Circularity Assessment Tool-ը կօգնի ձեզ ծանոթանալ շրջանաձև տնտեսությանը, գնահատել, թե որքան լավ եք ինտեգրում շրջանաձև ռազմավարությունները ձեր բիզնեսում և բացահայտել բարելավման հնարավորություններ և մարտահրավերներ, որոնք պետք է լուծվեն:"
+        hy: "Այս Up2Circ Circularity Assessment Tool-ը կօգնի ձեզ ծանոթանալ շրջանաձև տնտեսությանը, գնահատել, թե որքան լավ եք ինտեգրում շրջանաձև ռազմավարությունները ձեր բիզնեսում և բացահայտել բարելավման հնարավորություններ և մարտահրավերներ, որոնք պետք է լուծվեն։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -909,7 +909,7 @@ const toolCatalogue = [
         en: "Learn to make smart material choices by asking the right questions. These steps will help you make better choices about what materials go into your products as well as their impact on the wider system.",
         uk: "Навчіться робити розумний вибір матеріалу, ставлячи правильні запитання. Ці кроки допоможуть вам зробити кращий вибір щодо матеріалів, які використовуються у ваших продуктах, а також їхнього впливу на ширшу систему.",
         ro: "Învață să faci alegeri inteligente de materiale punând întrebările potrivite. Acești pași vă vor ajuta să faceți alegeri mai bune cu privire la materialele care intră în produsele dvs., precum și la impactul acestora asupra sistemului mai larg.",
-        hy: "Սովորեք խելացի նյութերի ընտրություն կատարել՝ տալով ճիշտ հարցեր: Այս քայլերը կօգնեն ձեզ ավելի լավ ընտրություն կատարել, թե ինչ նյութեր են մտնում ձեր արտադրանքի մեջ, ինչպես նաև դրանց ազդեցությունն ավելի լայն համակարգի վրա:"
+        hy: "Սովորեք խելացի նյութերի ընտրություն կատարել՝ տալով ճիշտ հարցեր: Այս քայլերը կօգնեն ձեզ ավելի լավ ընտրություն կատարել, թե ինչ նյութեր են մտնում ձեր արտադրանքի մեջ, ինչպես նաև դրանց ազդեցությունն ավելի լայն համակարգի վրա։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -936,13 +936,13 @@ const toolCatalogue = [
       en: "Circular Economy (CE) maturity overview across 5 dimensions with visual output and priority recommendations.",
       uk: "Огляд зрілості циркулярної економіки (CE) у 5 вимірах із наочними результатами та пріоритетними рекомендаціями.",
       ro: "Prezentare generală a maturității economiei circulare (CE) pe 5 dimensiuni, cu rezultate vizuale și recomandări prioritare.",
-      hy: "Circular Economy (CE) հասունության ակնարկ 5 հարթություններում` տեսողական արդյունքով և առաջնահերթ առաջարկություններով:"
+      hy: "Circular Economy (CE) հասունության ակնարկ 5 հարթություններում` տեսողական արդյունքով և առաջնահերթ առաջարկություններով։"
     },
     bestFor: {
       en: "small-medium enterprises (SMEs) new to circular economy want a quick, accessible starting point.",
       uk: "малі та середні підприємства (МСП), які новачки в циркулярній економіці, хочуть отримати швидку та доступну стартову точку.",
       ro: "Întreprinderile mici și mijlocii (IMM-uri) nou în economia circulară doresc un punct de plecare rapid și accesibil.",
-      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք նոր են շրջագայական տնտեսության մեջ, ցանկանում են արագ, մատչելի մեկնարկային կետ:"
+      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք նոր են շրջագայական տնտեսության մեջ, ցանկանում են արագ, մատչելի մեկնարկային կետ։"
     },
     format: {
       en: "PDF",
@@ -967,7 +967,7 @@ const toolCatalogue = [
         en: "I-GO helps you become more productive, competitive, and resilient by making it easier to access tailored knowledge and support services on resource efficiency. It is the I-GO Assistant tool that guides businesses through self-assessment, suggests practical improvements, and connects them with customised support based on your specific needs.",
         uk: "I-GO допомагає вам стати більш продуктивними, конкурентоспроможними та стійкими, спрощуючи доступ до спеціалізованих знань і послуг підтримки з ефективного використання ресурсів. Це інструмент I-GO Assistant, який проводить бізнес через самооцінку, пропонує практичні вдосконалення та зв’язує їх із індивідуальною підтримкою на основі ваших конкретних потреб.",
         ro: "I-GO vă ajută să deveniți mai productiv, mai competitiv și mai rezistent, facilitând accesul la cunoștințe personalizate și servicii de asistență privind eficiența resurselor. Este instrumentul I-GO Assistant care ghidează companiile prin autoevaluare, sugerează îmbunătățiri practice și le conectează cu asistență personalizată în funcție de nevoile dumneavoastră specifice.",
-        hy: "I-GO-ն օգնում է ձեզ դառնալ ավելի արդյունավետ, մրցունակ և ճկուն՝ հեշտացնելով հարմարեցված գիտելիքների հասանելիությունը և ռեսուրսների արդյունավետության աջակցության ծառայությունները: Դա I-GO Assistant գործիքն է, որն ուղղորդում է բիզնեսին ինքնագնահատման միջոցով, առաջարկում գործնական բարելավումներ և կապում դրանք հարմարեցված աջակցության հետ՝ հիմնված ձեր հատուկ կարիքների վրա:"
+        hy: "I-GO-ն օգնում է ձեզ դառնալ ավելի արդյունավետ, մրցունակ և ճկուն՝ հեշտացնելով հարմարեցված գիտելիքների հասանելիությունը և ռեսուրսների արդյունավետության աջակցության ծառայությունները: Դա I-GO Assistant գործիքն է, որն ուղղորդում է բիզնեսին ինքնագնահատման միջոցով, առաջարկում գործնական բարելավումներ և կապում դրանք հարմարեցված աջակցության հետ՝ հիմնված ձեր հատուկ կարիքների վրա։"
       },
     journeyPhases: ['Assess', 'Explore'],
     placements: {
@@ -1000,7 +1000,7 @@ const toolCatalogue = [
       en: "small-medium enterprises (SMEs) with some sustainability activity looking for a more structured review.",
       uk: "малі та середні підприємства (МСП), які займаються певною діяльністю у сфері сталого розвитку, потребують більш структурованого огляду.",
       ro: "întreprinderi mici și mijlocii (IMM-uri) cu o anumită activitate de durabilitate care caută o revizuire mai structurată.",
-      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք ունեն որոշակի կայուն գործունեություն, որոնք փնտրում են ավելի կառուցվածքային վերանայում:"
+      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ), որոնք ունեն որոշակի կայուն գործունեություն, որոնք փնտրում են ավելի կառուցվածքային վերանայում։"
     },
     format: {
       en: "Digital tool",
@@ -1026,7 +1026,7 @@ const toolCatalogue = [
         en: "Material Flow Analysis (MFA) gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.",
         uk: "Аналіз матеріальних потоків (MFA) дає кількісний огляд потоків матеріалів у певній системі, якою, наприклад, може бути потік матеріалів у виробничій компанії. MFA завжди складається з межі системи, одного або кількох процесів, матеріальних потоків і запасів матеріалів у процесах.",
         ro: "Analiza fluxului de materiale (MFA) oferă o imagine de ansamblu cantitativă a fluxului de materiale într-un sistem definit, care, de exemplu, poate fi fluxul de materiale într-o companie de producție. Un MFA constă întotdeauna dintr-o limită de sistem, unul sau mai multe procese, fluxuri de materiale și stocuri de materiale în cadrul proceselor.",
-        hy: "Նյութերի հոսքի վերլուծությունը (MFA) տալիս է որոշակի համակարգում նյութերի հոսքի քանակական ակնարկ, որը, օրինակ, կարող է լինել նյութերի հոսքը արտադրական ընկերությունում: MFA-ն միշտ բաղկացած է համակարգի սահմանից, մեկ կամ մի քանի գործընթացներից, նյութերի հոսքերից և գործընթացներում նյութերի պաշարներից:"
+        hy: "Նյութերի հոսքի վերլուծությունը (MFA) տալիս է որոշակի համակարգում նյութերի հոսքի քանակական ակնարկ, որը, օրինակ, կարող է լինել նյութերի հոսքը արտադրական ընկերությունում: MFA-ն միշտ բաղկացած է համակարգի սահմանից, մեկ կամ մի քանի գործընթացներից, նյութերի հոսքերից և գործընթացներում նյութերի պաշարներից։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1054,7 +1054,7 @@ const toolCatalogue = [
         en: "Overview of flows of materials in the system. Overview of the quantities and type of materials utilised in the system.",
         uk: "Огляд потоків матеріалів у системі. Огляд кількості та типу матеріалів, що використовуються в системі.",
         ro: "Prezentare generală a fluxurilor de materiale în sistem. Prezentare generală a cantităților și tipului de materiale utilizate în sistem.",
-        hy: "Համակարգում նյութերի հոսքերի ակնարկ: Համակարգում օգտագործվող նյութերի քանակի և տեսակի ակնարկ:"
+        hy: "Համակարգում նյութերի հոսքերի ակնարկ: Համակարգում օգտագործվող նյութերի քանակի և տեսակի ակնարկ։"
       },
     bestFor: {
       en: "small-medium enterprises (SMEs) with physical products",
@@ -1085,7 +1085,7 @@ const toolCatalogue = [
         en: "STAN allows users to create graphical Material Flow Analysis (MFA) models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.",
         uk: "STAN дозволяє користувачам створювати графічні моделі аналізу матеріальних потоків (MFA) з використанням попередньо визначених елементів, таких як процеси, потоки, межі системи та текстові поля. Користувачі можуть вводити або імпортувати такі дані, як масові потоки, запаси, концентрації та коефіцієнти перенесення між різними рівнями (матеріали, речовини, енергія) і періодами часу. Програмне забезпечення може автоматично обчислювати невідомі значення та візуалізувати результати як діаграми Санкі, де ширина потоку представляє величини. Моделі також можна роздрукувати або експортувати, а Microsoft Excel використовується для імпорту та експорту даних.",
         ro: "STAN permite utilizatorilor să creeze modele grafice de analiză a fluxului de materiale (MFA) folosind elemente predefinite, cum ar fi procese, fluxuri, limite de sistem și câmpuri de text. Utilizatorii pot introduce sau importa date precum fluxuri de masă, stocuri, concentrații și coeficienți de transfer pe diferite straturi (materiale, substanțe, energie) și perioade de timp. Software-ul poate calcula automat valori necunoscute și poate vizualiza rezultatele ca diagrame Sankey, unde lățimile debitului reprezintă cantități. Modelele pot fi, de asemenea, imprimate sau exportate, iar Microsoft Excel este utilizat pentru importarea și exportul de date.",
-        hy: "STAN-ը թույլ է տալիս օգտվողներին ստեղծել նյութի հոսքի վերլուծության (MFA) գրաֆիկական մոդելներ՝ օգտագործելով նախապես սահմանված տարրեր, ինչպիսիք են գործընթացները, հոսքերը, համակարգի սահմանները և տեքստային դաշտերը: Օգտագործողները կարող են մուտքագրել կամ ներմուծել տվյալներ, ինչպիսիք են զանգվածային հոսքերը, պաշարները, կոնցենտրացիաները և փոխանցման գործակիցները տարբեր շերտերով (նյութեր, նյութեր, էներգիա) և ժամանակաշրջաններում: Ծրագիրը կարող է ավտոմատ կերպով հաշվարկել անհայտ արժեքները և պատկերացնել արդյունքները որպես Sankey դիագրամներ, որտեղ հոսքի լայնությունները ներկայացնում են քանակություններ: Մոդելները կարող են նաև տպվել կամ արտահանվել, իսկ Microsoft Excel-ն օգտագործվում է տվյալների ներմուծման և արտահանման համար:"
+        hy: "STAN-ը թույլ է տալիս օգտվողներին ստեղծել նյութի հոսքի վերլուծության (MFA) գրաֆիկական մոդելներ՝ օգտագործելով նախապես սահմանված տարրեր, ինչպիսիք են գործընթացները, հոսքերը, համակարգի սահմանները և տեքստային դաշտերը: Օգտագործողները կարող են մուտքագրել կամ ներմուծել տվյալներ, ինչպիսիք են զանգվածային հոսքերը, պաշարները, կոնցենտրացիաները և փոխանցման գործակիցները տարբեր շերտերով (նյութեր, նյութեր, էներգիա) և ժամանակաշրջաններում: Ծրագիրը կարող է ավտոմատ կերպով հաշվարկել անհայտ արժեքները և պատկերացնել արդյունքները որպես Sankey դիագրամներ, որտեղ հոսքի լայնությունները ներկայացնում են քանակություններ: Մոդելները կարող են նաև տպվել կամ արտահանվել, իսկ Microsoft Excel-ն օգտագործվում է տվյալների ներմուծման և արտահանման համար։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1106,7 +1106,7 @@ const toolCatalogue = [
       en: "Preparing the material data, their quantity and uses.",
       uk: "Підготовка матеріальних даних, їх кількість та використання.",
       ro: "Pregatirea datelor materialelor, cantitatea si utilizarile acestora.",
-      hy: "Նյութական տվյալների, դրանց քանակի և օգտագործման պատրաստում:"
+      hy: "Նյութական տվյալների, դրանց քանակի և օգտագործման պատրաստում։"
     },
     output: {
       en: "Material Flow Analysis (MFA) graphics",
@@ -1143,7 +1143,7 @@ const toolCatalogue = [
         en: "The Sustainable Consumption and Production Hotspots Analysis Tool (SCP-HAT) Country Profile tool provides an overview of a country's environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis. For you as an SMEs, it can be used to identify the most relevant sustainability hotspots for your sector and country, helping you prioritise actions and investments to improve environmental performance. The tool contains data for Ukraine, Moldova, Georgia, Armenia, and Azerbaijan and data can be compared across countries.",
         uk: "Інструмент аналізу гарячих точок сталого споживання та виробництва (SCP-HAT) Інструмент профілю країни надає огляд екологічної ефективності країни в ключових сферах політики сталого споживання та виробництва, включаючи використання матеріалів, зміну клімату, енергію, воду та забруднення. Це допомагає політикам, неурядовим організаціям і громадськості визначати гарячі точки сталого розвитку та відстежувати екологічні тенденції за допомогою індикаторів, візуалізації даних і аналізу на рівні країни. Для вас, як малого та середнього бізнесу, його можна використовувати для визначення найбільш відповідних гарячих точок сталого розвитку для вашого сектору та країни, допомагаючи вам визначити пріоритети дій та інвестицій для покращення екологічної ефективності. Інструмент містить дані для України, Молдови, Грузії, Вірменії та Азербайджану, і дані можна порівнювати між країнами.",
         ro: "Instrumentul de analiză a punctelor fierbinți de consum și producție durabilă (SCP-HAT) Instrumentul Profilul țării oferă o privire de ansamblu asupra performanței de mediu a unei țări în domeniile cheie de politică de consum și producție durabile, inclusiv utilizarea materialelor, schimbările climatice, energie, apă și poluare. Acesta ajută factorii de decizie, ONG-urile și publicul să identifice punctele critice de sustenabilitate și să urmărească tendințele de mediu prin indicatori, vizualizări de date și analize la nivel de țară. Pentru dvs., în calitate de IMM, poate fi folosit pentru a identifica cele mai relevante puncte fierbinți de sustenabilitate pentru sectorul și țara dvs., ajutându-vă să prioritizați acțiunile și investițiile pentru îmbunătățirea performanței de mediu. Instrumentul conține date pentru Ucraina, Moldova, Georgia, Armenia și Azerbaidjan, iar datele pot fi comparate între țări.",
-        hy: "Կայուն սպառման և արտադրության թեժ կետերի վերլուծության գործիքը (SCP-HAT) Երկրի պրոֆիլի գործիքը տրամադրում է երկրի բնապահպանական գործունեության ակնարկը կայուն սպառման և արտադրության քաղաքականության հիմնական ոլորտներում, ներառյալ նյութերի օգտագործումը, կլիմայի փոփոխությունը, էներգիան, ջուրը և աղտոտումը: Այն օգնում է քաղաքականություն մշակողներին, ՀԿ-ներին և հանրությանը բացահայտել կայունության թեժ կետերը և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով: Ձեզ՝ որպես ՓՄՁ-ների, այն կարող է օգտագործվել ձեր ոլորտի և երկրի համար կայունության առավել համապատասխան թեժ կետերը բացահայտելու համար՝ օգնելով ձեզ առաջնահերթություն տալ գործողություններին և ներդրումներին՝ բարելավելու բնապահպանական արդյունավետությունը: Գործիքը պարունակում է տվյալներ Ուկրաինայի, Մոլդովայի, Վրաստանի, Հայաստանի և Ադրբեջանի համար, և տվյալները կարելի է համեմատել տարբեր երկրների միջև:"
+        hy: "Կայուն սպառման և արտադրության թեժ կետերի վերլուծության գործիքը (SCP-HAT) Երկրի պրոֆիլի գործիքը տրամադրում է երկրի բնապահպանական գործունեության ակնարկը կայուն սպառման և արտադրության քաղաքականության հիմնական ոլորտներում, ներառյալ նյութերի օգտագործումը, կլիմայի փոփոխությունը, էներգիան, ջուրը և աղտոտումը: Այն օգնում է քաղաքականություն մշակողներին, ՀԿ-ներին և հանրությանը բացահայտել կայունության խնդրահարույց ուղղությունները և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով: Ձեզ՝ որպես ՓՄՁ-ների, այն կարող է օգտագործվել ձեր ոլորտի և երկրի համար կայունության առավել համապատասխան խնդրահարույց ուղղությունները բացահայտելու համար՝ օգնելով ձեզ առաջնահերթություն տալ գործողություններին և ներդրումներին՝ բարելավելու բնապահպանական արդյունավետությունը: Գործիքը պարունակում է տվյալներ Ուկրաինայի, Մոլդովայի, Վրաստանի, Հայաստանի և Ադրբեջանի համար, և տվյալները կարելի է համեմատել տարբեր երկրների միջև։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1164,20 +1164,20 @@ const toolCatalogue = [
       en: "No preparation needed, the data is in the platform itself.",
       uk: "Підготовка не потрібна, дані знаходяться на самій платформі.",
       ro: "Nu este nevoie de pregătire, datele sunt în platformă în sine.",
-      hy: "Նախապատրաստման կարիք չկա, տվյալները գտնվում են հենց հարթակում:"
+      hy: "Նախապատրաստման կարիք չկա, տվյալները գտնվում են հենց հարթակում։"
     },
     output:
       {
         en: "Users can identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.",
         uk: "Користувачі можуть визначати гарячі точки сталого розвитку та відстежувати екологічні тенденції за допомогою індикаторів, візуалізації даних та аналізу на рівні країни.",
         ro: "Utilizatorii pot identifica punctele critice de sustenabilitate și pot urmări tendințele de mediu prin indicatori, vizualizări de date și analize la nivel de țară.",
-        hy: "Օգտագործողները կարող են բացահայտել կայունության թեժ կետերը և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով:"
+        hy: "Օգտագործողները կարող են բացահայտել կայունության խնդրահարույց ուղղությունները և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով։"
       },
     bestFor: {
       en: "All SMEs across all sectors interested in data at national and sector levels.",
       uk: "Усі МСП у всіх секторах зацікавлені в даних на національному та галузевому рівнях.",
       ro: "Toate IMM-urile din toate sectoarele interesate de date la nivel național și sectorial.",
-      hy: "Բոլոր ՓՄՁ-ները բոլոր ոլորտներում, որոնք շահագրգռված են ազգային և ոլորտային մակարդակներում տվյալների մեջ:"
+      hy: "Բոլոր ՓՄՁ-ները բոլոր ոլորտներում, որոնք շահագրգռված են ազգային և ոլորտային մակարդակներում տվյալների մեջ։"
     },
     format: {
       en: "Digital platform with databases",
@@ -1203,7 +1203,7 @@ const toolCatalogue = [
         en: "The Circular Strategies Scanner helps manufacturing companies understand, map, and improve their circular economy strategies across products and operations. It is typically used in workshops to identify current initiatives, explore new opportunities for circularity, and support innovation and shared strategic vision.",
         uk: "Circular Strategies Scanner допомагає виробничим компаніям зрозуміти, відобразити та вдосконалити свої стратегії циклічної економіки для різних продуктів і операцій. Зазвичай він використовується на семінарах для виявлення поточних ініціатив, вивчення нових можливостей циклічного розвитку та підтримки інновацій і спільного стратегічного бачення.",
         ro: "Scanerul de strategii circulare ajută companiile de producție să înțeleagă, să mapați și să-și îmbunătățească strategiile de economie circulară pentru produse și operațiuni. Este de obicei folosit în ateliere pentru a identifica inițiativele actuale, pentru a explora noi oportunități de circularitate și pentru a sprijini inovația și viziunea strategică comună.",
-        hy: "Circular Strategies Scanner-ն օգնում է արտադրական ընկերություններին հասկանալ, քարտեզագրել և բարելավել իրենց շրջանաձև տնտեսության ռազմավարությունները ապրանքների և գործառնությունների մեջ: Այն սովորաբար օգտագործվում է սեմինարների ժամանակ՝ բացահայտելու ընթացիկ նախաձեռնությունները, ուսումնասիրելու նոր հնարավորությունները շրջանաձևության համար և աջակցելու նորարարությանը և ընդհանուր ռազմավարական տեսլականին:"
+        hy: "Circular Strategies Scanner-ն օգնում է արտադրական ընկերություններին հասկանալ, քարտեզագրել և բարելավել իրենց շրջանաձև տնտեսության ռազմավարությունները ապրանքների և գործառնությունների մեջ: Այն սովորաբար օգտագործվում է սեմինարների ժամանակ՝ բացահայտելու ընթացիկ նախաձեռնությունները, ուսումնասիրելու նոր հնարավորությունները շրջանաձևության համար և աջակցելու նորարարությանը և ընդհանուր ռազմավարական տեսլականին։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1230,7 +1230,7 @@ const toolCatalogue = [
       en: "Carbon footprint and eco-cost results by lifecycle stage.",
       uk: "Результати викидів вуглецю та екологічних витрат за етапами життєвого циклу.",
       ro: "Amprenta de carbon și rezultatele eco-costurilor pe etapele ciclului de viață.",
-      hy: "Ածխածնի հետքը և էկո-արժեքի արդյունքներն ըստ կյանքի ցիկլի փուլի:"
+      hy: "Ածխածնի հետքը և էկոլոգիական ծախսերի արդյունքներն ըստ կյանքի ցիկլի փուլի։"
     },
     bestFor: {
       en: "Manufacturing SMEs with physical products",
@@ -1262,7 +1262,7 @@ const toolCatalogue = [
         en: "Future adaptive design helps companies reduce business risks in circular business models by creating durable, flexible, and upgradeable products that remain useful and attractive over longer lifetimes. The approach provides tools and methods to support circular business innovation, improve profitability, identify strategies for extending product life, and reduce environmental impact.",
         uk: "Адаптивний дизайн майбутнього допомагає компаніям зменшити бізнес-ризики в циклічних бізнес-моделях, створюючи довговічні, гнучкі та оновлювані продукти, які залишаються корисними та привабливими протягом тривалого терміну служби. Цей підхід надає інструменти та методи для підтримки циркулярних бізнес-інновацій, підвищення прибутковості, визначення стратегій продовження терміну служби продукту та зменшення впливу на навколишнє середовище.",
         ro: "Designul adaptiv viitor ajută companiile să reducă riscurile de afaceri în modelele de afaceri circulare prin crearea de produse durabile, flexibile și actualizabile, care rămân utile și atractive pe o durată mai lungă de viață. Abordarea oferă instrumente și metode pentru a sprijini inovația circulară în afaceri, a îmbunătăți profitabilitatea, a identifica strategii pentru prelungirea duratei de viață a produsului și pentru a reduce impactul asupra mediului.",
-        hy: "Ապագա հարմարվողական դիզայնն օգնում է ընկերություններին նվազեցնել բիզնեսի ռիսկերը շրջանաձև բիզնես մոդելներում՝ ստեղծելով դիմացկուն, ճկուն և արդիականացվող ապրանքներ, որոնք մնում են օգտակար և գրավիչ ավելի երկար ժամկետներում: Մոտեցումը տրամադրում է գործիքներ և մեթոդներ՝ աջակցելու շրջանաձև բիզնեսի նորարարությանը, բարելավելու շահութաբերությունը, բացահայտելու արտադրանքի ժամկետը երկարացնելու ռազմավարությունները և նվազեցնել շրջակա միջավայրի վրա ազդեցությունը:"
+        hy: "Ապագա հարմարվողական դիզայնն օգնում է ընկերություններին նվազեցնել բիզնեսի ռիսկերը շրջանաձև բիզնես մոդելներում՝ ստեղծելով դիմացկուն, ճկուն և արդիականացվող ապրանքներ, որոնք մնում են օգտակար և գրավիչ ավելի երկար ժամկետներում: Մոտեցումը տրամադրում է գործիքներ և մեթոդներ՝ աջակցելու շրջանաձև բիզնեսի նորարարությանը, բարելավելու շահութաբերությունը, բացահայտելու արտադրանքի ժամկետը երկարացնելու ռազմավարությունները և նվազեցնել շրջակա միջավայրի վրա ազդեցությունը։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1289,13 +1289,13 @@ const toolCatalogue = [
       en: "Design-focused hotspots; adaptation opportunities for circularity.",
       uk: "Гарячі точки, орієнтовані на дизайн; можливості адаптації для круговості.",
       ro: "Hotspot-uri axate pe design; oportunități de adaptare pentru circularitate.",
-      hy: "Դիզայնի վրա կենտրոնացած թեժ կետեր; հարմարվողականության հնարավորություններ շրջանաձևության համար:"
+      hy: "Դիզայնի վրա կենտրոնացած թեժ կետեր; հարմարվողականության հնարավորություններ շրջանաձևության համար։"
     },
     bestFor: {
       en: "SMEs working with product or process design for circular business models.",
       uk: "Малі та середні підприємства, які працюють із проектуванням продуктів або процесів для циклічних бізнес-моделей.",
       ro: "IMM-uri care lucrează cu design de produs sau proces pentru modele de afaceri circulare.",
-      hy: "ՓՄՁ-ներ, որոնք աշխատում են արտադրանքի կամ գործընթացի նախագծման հետ՝ շրջանաձև բիզնես մոդելների համար:"
+      hy: "ՓՄՁ-ներ, որոնք աշխատում են արտադրանքի կամ գործընթացի նախագծման հետ՝ շրջանաձև բիզնես մոդելների համար։"
     },
     format: {
       en: "PDF",
@@ -1381,7 +1381,7 @@ const toolCatalogue = [
         en: "The Circular Loop Designer is a browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
         uk: "Circular Loop Designer — це інструмент для малювання на базі браузера, який дозволяє командам малювати замкнуті цикли матеріалів за допомогою спеціально створеної бібліотеки значків і стрілок. Користувачі можуть почати з порожнього полотна або вибрати з низки готових прикладів, що охоплюють чотири типи циклічної логіки циклу: максимально повне закриття матеріального циклу; утримання матеріалів в обігу якомога довше; пошук і зберігання матеріалів якомога на місці; і радикально зменшити використання матеріалу по всій петлі. Стрілки позначено кольором, щоб відрізнити стійкі потоки (зелені), традиційні потоки (червоні) та потоки, які ще розробляються (сині), що дозволяє легко показати поточний стан разом із бажаним майбутнім станом. Сторони та ролі можна додавати на кожному етапі циклу, перетворюючи діаграму на карту зацікавлених сторін, а також на карту матеріальних потоків.",
         ro: "Circular Loop Designer este un instrument de desen bazat pe browser care permite echipelor să schițeze bucle închise de material folosind o bibliotecă special creată de pictograme și săgeți. Utilizatorii pot începe de la o pânză goală sau pot selecta dintr-o gamă de exemple pre-construite, acoperind patru tipuri de logică a buclei circulare: închiderea unei bucle de material cât mai complet posibil; menținerea materialelor în circulație cât mai mult timp posibil; aprovizionarea și păstrarea materialelor cât mai local posibil; și reducerea radicală a utilizării materialelor de-a lungul buclei. Săgețile sunt codificate cu culori pentru a distinge fluxurile durabile (verde), fluxurile tradiționale (roșu) și fluxurile încă în curs de dezvoltare (albastru), ceea ce face mai ușor să afișați starea actuală alături de starea viitoare dorită. Partidele și rolurile pot fi adăugate la fiecare etapă a buclei, transformând diagrama într-o hartă a părților interesate, precum și într-o hartă a fluxului de materiale.",
-        hy: "The Circular Loop Designer-ը բրաուզերի վրա հիմնված գծագրման գործիք է, որը թիմերին թույլ է տալիս ուրվագծել փակ նյութերի օղակները՝ օգտագործելով սրբապատկերների և սլաքների հատուկ կառուցված գրադարանը: Օգտատերերը կարող են սկսել դատարկ կտավից կամ ընտրել մի շարք նախապես պատրաստված օրինակներից, որոնք ներառում են չորս տեսակի շրջանաձև օղակի տրամաբանություն. նյութերը հնարավորինս երկար պահել շրջանառության մեջ. հնարավորինս տեղական նյութերի մատակարարում և պահպանում. և արմատապես նվազեցնելով նյութի օգտագործումը ամբողջ օղակում: Սլաքները գունավոր կոդավորված են՝ տարբերակելու կայուն հոսքերը (կանաչ), ավանդական հոսքերը (կարմիր) և հոսքերը դեռ մշակման փուլում են (կապույտ), ինչը հեշտացնում է ներկայիս վիճակը ցանկալի ապագա վիճակի կողքին ցուցադրելու համար: Կողմերն ու դերերը կարող են ավելացվել օղակի յուրաքանչյուր փուլում՝ դիագրամը վերածելով շահագրգիռ կողմերի քարտեզի, ինչպես նաև նյութի հոսքի քարտեզի:"
+        hy: "The Circular Loop Designer-ը բրաուզերի վրա հիմնված գծագրման գործիք է, որը թիմերին թույլ է տալիս ուրվագծել փակ նյութերի օղակները՝ օգտագործելով սրբապատկերների և սլաքների հատուկ կառուցված գրադարանը: Օգտատերերը կարող են սկսել դատարկ ձևանմուշից կամ ընտրել մի շարք նախապես պատրաստված օրինակներից, որոնք ներառում են չորս տեսակի շրջանաձև օղակի տրամաբանություն. նյութերը հնարավորինս երկար պահել շրջանառության մեջ. հնարավորինս տեղական նյութերի մատակարարում և պահպանում. և արմատապես նվազեցնելով նյութի օգտագործումը ամբողջ օղակում: Սլաքները գունավոր կոդավորված են՝ տարբերակելու կայուն հոսքերը (կանաչ), ավանդական հոսքերը (կարմիր) և հոսքերը դեռ մշակման փուլում են (կապույտ), ինչը հեշտացնում է ներկայիս վիճակը ցանկալի ապագա վիճակի կողքին ցուցադրելու համար: Կողմերն ու դերերը կարող են ավելացվել օղակի յուրաքանչյուր փուլում՝ դիագրամը վերածելով շահագրգիռ կողմերի քարտեզի, ինչպես նաև նյութի հոսքի քարտեզի։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -1414,7 +1414,7 @@ const toolCatalogue = [
       en: "SMEs at starter level who want to make their circular strategy concrete and visual — particularly useful for communicating loop designs to partners, suppliers, or internal stakeholders who need to see the full picture before committing",
       uk: "Малі та середні підприємства на початковому рівні, які хочуть зробити свою циклічну стратегію конкретною та візуальною — особливо корисною для передачі проектів циклів партнерам, постачальникам або внутрішнім зацікавленим сторонам, яким потрібно бачити повну картину, перш ніж здійснювати зобов’язання",
       ro: "IMM-uri la nivel de începător care doresc să-și facă strategia circulară concretă și vizuală — deosebit de utilă pentru comunicarea proiectelor de bucle către parteneri, furnizori sau părți interesate interne care trebuie să vadă imaginea completă înainte de a se angaja",
-      hy: "Սկսնակ մակարդակի ՓՄՁ-ները, ովքեր ցանկանում են իրենց շրջանաձև ռազմավարությունը դարձնել կոնկրետ և տեսողական."
+      hy: "Սկսնակ մակարդակի ՓՄՁ-ները, ովքեր ցանկանում են ձեր շրջանաձև ռազմավարությունը դարձնել կոնկրետ և տեսողական։"
     },
     format: {
       en: "Online platform",
@@ -1441,7 +1441,7 @@ const toolCatalogue = [
         en: "ecoCEO is a free, web-based serious game developed by the Flemish Institute for Technological Research (VITO) with support from European Institute of Innovation and Technology (EIT) Raw Materials. Players manage a company producing electronic goods (microchips, smartphones, and e-bikes) making decisions on which raw materials to use, which production processes to invest in, and which revenue models to adopt. The game tests those decisions against unforeseen events including policy measures, resource scarcity, and market disruptions, making visible how circular strategies (take-back systems, reuse, design-for-repair, product-service systems) improve business resilience compared to linear approaches. This tool is designed to engage youth between 15-18 years old of age, but can also be used with adult learners. It is best for SMEs working in the educational sector and engaging youth or professionals through gamification and experiential learning.",
         uk: "ecoCEO — це безкоштовна серйозна веб-гра, розроблена Фламандським інститутом технологічних досліджень (VITO) за підтримки Європейського інституту інновацій і технологій (EIT) Raw Materials. Гравці керують компанією, що виробляє електронні товари (мікрочіпи, смартфони та електровелосипеди), приймаючи рішення про те, яку сировину використовувати, у які виробничі процеси інвестувати та які моделі прибутку прийняти. Гра перевіряє ці рішення на непередбачені події, включаючи політичні заходи, дефіцит ресурсів і збої на ринку, показуючи, як циклічні стратегії (системи повернення, повторне використання, проектування для ремонту, системи продуктів і послуг) покращують стійкість бізнесу порівняно з лінійними підходами. Цей інструмент призначений для залучення молоді віком від 15 до 18 років, але його також можна використовувати з дорослими учнями. Це найкраще для МСП, які працюють в освітньому секторі та залучають молодь або професіоналів через гейміфікацію та навчання на досвіді.",
         ro: "ecoCEO este un joc serios gratuit, bazat pe web, dezvoltat de Institutul Flamand de Cercetare Tehnologică (VITO) cu sprijinul materiilor prime Institutului European de Inovare și Tehnologie (EIT). Jucătorii administrează o companie care produce bunuri electronice (microcipuri, smartphone-uri și biciclete electrice) luând decizii cu privire la materii prime să folosească, în ce procese de producție să investească și ce modele de venituri să adopte. Jocul testează acele decizii împotriva evenimentelor neprevăzute, inclusiv măsurile de politică, deficitul de resurse și perturbările pieței, făcând vizibil modul în care strategiile circulare (sisteme de preluare, reutilizare, proiectare pentru reparare, sisteme de produse-servicii) îmbunătățesc rezistența afacerii în comparație cu abordările liniare. Acest instrument este conceput pentru a implica tinerii cu vârsta cuprinsă între 15 și 18 ani, dar poate fi folosit și cu cursanții adulți. Este cel mai bun pentru IMM-urile care lucrează în sectorul educațional și care implică tineri sau profesioniști prin gamification și învățare experiențială.",
-        hy: "ecoCEO-ն անվճար, վեբ վրա հիմնված լուրջ խաղ է, որը մշակվել է Ֆլամանդական տեխնոլոգիական հետազոտությունների ինստիտուտի (VITO) կողմից՝ Նորարարությունների և տեխնոլոգիաների եվրոպական ինստիտուտի (EIT) հումքի աջակցությամբ: Խաղացողները ղեկավարում են էլեկտրոնային ապրանքներ (միկրոչիպեր, սմարթֆոններ և էլեկտրոնային հեծանիվներ) արտադրող ընկերություն՝ որոշումներ կայացնելով, թե որ հումքն օգտագործեն, որ արտադրական գործընթացներում ներդրումներ կատարեն և եկամուտների որ մոդելներ ընդունեն: Խաղը փորձարկում է այդ որոշումները անկանխատեսելի իրադարձությունների դեմ, ներառյալ քաղաքականության միջոցառումները, ռեսուրսների սակավությունը և շուկայի խափանումները՝ տեսանելի դարձնելով, թե ինչպես են շրջանաձև ռազմավարությունները (հետ վերցնելու համակարգեր, վերաօգտագործում, դիզայն՝ վերանորոգման համար, արտադրանքի սպասարկման համակարգեր) բարելավում են բիզնեսի ճկունությունը՝ համեմատած գծային մոտեցումների հետ: Այս գործիքը նախատեսված է 15-18 տարեկան երիտասարդներին ներգրավելու համար, բայց կարող է օգտագործվել նաև չափահաս սովորողների հետ: Դա լավագույնն է կրթական ոլորտում աշխատող ՓՄՁ-ների համար և ներգրավում երիտասարդներին կամ մասնագետներին խաղային և փորձառական ուսուցման միջոցով:"
+        hy: "ecoCEO-ն անվճար, վեբ վրա հիմնված լուրջ խաղ է, որը մշակվել է Ֆլամանդական տեխնոլոգիական հետազոտությունների ինստիտուտի (VITO) կողմից՝ Նորարարությունների և տեխնոլոգիաների եվրոպական ինստիտուտի (EIT) հումքի աջակցությամբ: Խաղացողները ղեկավարում են էլեկտրոնային ապրանքներ (միկրոչիպեր, սմարթֆոններ և էլեկտրոնային հեծանիվներ) արտադրող ընկերություն՝ որոշումներ կայացնելով, թե որ հումքն օգտագործեն, որ արտադրական գործընթացներում ներդրումներ կատարեն և եկամուտների որ մոդելներ ընդունեն: Խաղը փորձարկում է այդ որոշումները անկանխատեսելի իրադարձությունների դեմ, ներառյալ քաղաքականության միջոցառումները, ռեսուրսների սակավությունը և շուկայի խափանումները՝ տեսանելի դարձնելով, թե ինչպես են շրջանաձև ռազմավարությունները (հետ վերցնելու համակարգեր, վերաօգտագործում, դիզայն՝ վերանորոգման համար, արտադրանքի սպասարկման համակարգեր) բարելավում են բիզնեսի ճկունությունը՝ համեմատած գծային մոտեցումների հետ: Այս գործիքը նախատեսված է 15-18 տարեկան երիտասարդներին ներգրավելու համար, բայց կարող է օգտագործվել նաև չափահաս սովորողների հետ: Դա լավագույնն է կրթական ոլորտում աշխատող ՓՄՁ-ների համար և ներգրավում երիտասարդներին կամ մասնագետներին խաղային և փորձառական ուսուցման միջոցով։"
       },
     journeyPhases: ['Implement'],
     sector: 'Cross-sector',
@@ -1459,7 +1459,7 @@ const toolCatalogue = [
       en: "Sign up is required to access the game but no installation required, as it is a web-based platform. No prior knowledge of circular economy is required.",
       uk: "Для доступу до гри потрібна реєстрація, але інсталяція не потрібна, оскільки це веб-платформа. Попередніх знань про циркулярну економіку не потрібно.",
       ro: "Este necesară înregistrarea pentru a accesa jocul, dar nu necesită instalare, deoarece este o platformă bazată pe web. Nu sunt necesare cunoștințe prealabile despre economia circulară.",
-      hy: "Խաղին մուտք գործելու համար գրանցվեք, բայց տեղադրում չի պահանջվում, քանի որ այն վեբ հարթակ է: Շրջանաձև տնտեսության վերաբերյալ նախնական գիտելիքներ չեն պահանջվում:"
+      hy: "Խաղին մուտք գործելու համար գրանցվեք, բայց տեղադրում չի պահանջվում, քանի որ այն վեբ հարթակ է: Շրջանաձև տնտեսության վերաբերյալ նախնական գիտելիքներ չեն պահանջվում։"
     },
     output: {
       en: "Understanding of how circular business decisions (recycling, take-back, repair, product-service systems) affect company performance and resilience; discussion material for debriefing on circular economy strategy trade-offs",
@@ -1498,7 +1498,7 @@ const toolCatalogue = [
         en: "openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.",
         uk: "openLCA — це модульний інструмент для оцінки стійкості та моделювання життєвого циклу. Він має відкритий вихідний код, його можна налаштувати та використовувати для створення моделей різного рівня складності.",
         ro: "openLCA este un instrument modular pentru evaluarea durabilității și modelarea ciclului de viață. Este open source, personalizabil și poate fi folosit pentru a crea modele la diferite niveluri de complexitate.",
-        hy: "openLCA-ն մոդուլային գործիք է կայունության գնահատման և կյանքի ցիկլի մոդելավորման համար: Այն բաց կոդով է, կարգավորելի և կարող է օգտագործվել բարդության տարբեր մակարդակների մոդելներ ստեղծելու համար:"
+        hy: "openLCA-ն մոդուլային գործիք է կայունության գնահատման և կյանքի ցիկլի մոդելավորման համար: Այն բաց կոդով է, կարգավորելի և կարող է օգտագործվել բարդության տարբեր մակարդակների մոդելներ ստեղծելու համար։"
       },
     journeyPhases: ['Assess', 'Evaluate', 'Monitor'],
     sector: 'Cross-sector',
@@ -1516,7 +1516,7 @@ const toolCatalogue = [
       en: "You will need the emissions data of your company to make your own assessments and some skills to apply Life Cycle Assessment (LCA) methodology.",
       uk: "Вам знадобляться дані про викиди вашої компанії, щоб зробити власну оцінку, а також деякі навички для застосування методології оцінки життєвого циклу (LCA).",
       ro: "Veți avea nevoie de datele privind emisiile companiei dvs. pentru a vă face propriile evaluări și de unele abilități pentru a aplica metodologia de evaluare a ciclului de viață (LCA).",
-      hy: "Ձեզ անհրաժեշտ կլինեն ձեր ընկերության արտանետումների տվյալները՝ ձեր սեփական գնահատումներն անելու և կյանքի ցիկլի գնահատման (LCA) մեթոդաբանությունը կիրառելու որոշ հմտություններ:"
+      hy: "Ձեզ անհրաժեշտ կլինեն ձեր ընկերության արտանետումների տվյալները՝ ձեր սեփական գնահատումներն անելու և կյանքի ցիկլի գնահատման (LCA) մեթոդաբանությունը կիրառելու որոշ հմտություններ։"
     },
     output: {
       en: "A wide range of options depending on the use, however most important for SMEs this tool can support a Life Cycle Assessment (LCA) model of your company's carbon footprint, based on existing databases and resulting in models that support your LCA reporting.",
