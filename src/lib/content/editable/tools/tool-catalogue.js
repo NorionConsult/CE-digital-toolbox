@@ -258,7 +258,7 @@ const toolCatalogue = [
         en: "The Roadmap to Circular Business is a workshop tool that helps organisations turn circular economy ideas into a practical action plan. It supports teams in defining their circular ambition, prioritising actions, assigning responsibilities, and planning next steps. The output is a circular transition roadmap with clear priorities, milestones, and ownership.",
         uk: "Дорожня карта до кругового бізнесу – це інструмент семінару, який допомагає організаціям перетворити ідеї циклічної економіки на практичний план дій. Він підтримує команди у визначенні їхніх кругових амбіцій, пріоритетності дій, розподілі обов’язків і плануванні наступних кроків. Результатом є циклічна дорожня карта переходу з чіткими пріоритетами, віхами та власністю.",
         ro: "Foaia de parcurs pentru afaceri circulare este un instrument de atelier care ajută organizațiile să transforme ideile de economie circulară într-un plan de acțiune practic. Acesta sprijină echipele în definirea ambiției lor circulare, prioritizarea acțiunilor, atribuirea responsabilităților și planificarea pașilor următori. Rezultatul este o foaie de parcurs de tranziție circulară cu priorități clare, repere și asumare.",
-        hy: "Շրջանաձև բիզնեսի ճանապարհային քարտեզը սեմինարի գործիք է, որն օգնում է կազմակերպություններին շրջանաձև տնտեսության գաղափարները վերածել գործնական գործողությունների ծրագրի: Այն աջակցում է թիմերին իրենց շրջանաձև հավակնությունները սահմանելու, գործողությունների առաջնահերթությունը, պարտականություններ նշանակելու և հաջորդ քայլերը պլանավորելու հարցում: Արդյունքը շրջանաձև անցումային ճանապարհային քարտեզ է՝ հստակ առաջնահերթություններով, հիմնաքարերով և սեփականության իրավունքով:"
+        hy: "Շրջանաձև բիզնեսի ճանապարհային քարտեզը սեմինարի գործիք է, որն օգնում է կազմակերպություններին շրջանաձև տնտեսության գաղափարները վերածել գործնական գործողությունների ծրագրի: Այն աջակցում է թիմերին իրենց շրջանաձև հավակնությունները սահմանելու, գործողությունների առաջնահերթությունը, պարտականություններ նշանակելու և հաջորդ քայլերը պլանավորելու հարցում: Արդյունքը շրջանաձև անցումային ճանապարհային քարտեզ է՝ հստակ առաջնահերթություններով, հիմնաքարերով և սեփականության իրավունքով։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -282,7 +282,7 @@ const toolCatalogue = [
         en: "Basic understanding of the organisation's circular opportunities, current capabilities, and key stakeholders. No detailed sustainability data is required. Access to a Miro account to use it in its intended format.",
         uk: "Базове розуміння кругових можливостей організації, поточних можливостей і ключових зацікавлених сторін. Детальні дані про стійкість не потрібні. Доступ до облікового запису Miro, щоб використовувати його в призначеному форматі.",
         ro: "Înțelegerea de bază a oportunităților circulare ale organizației, a capacităților actuale și a părților interesate cheie. Nu sunt necesare date detaliate despre sustenabilitate. Acces la un cont Miro pentru a-l utiliza în formatul dorit.",
-        hy: "Կազմակերպության շրջանաձև հնարավորությունների, ընթացիկ հնարավորությունների և հիմնական շահագրգիռ կողմերի հիմնական պատկերացում: Կայունության վերաբերյալ մանրամասն տվյալներ չեն պահանջվում: Մուտք գործեք Miro հաշիվ՝ այն իր նախատեսված ձևաչափով օգտագործելու համար:"
+        hy: "Կազմակերպության շրջանաձև հնարավորությունների, ընթացիկ հնարավորությունների և հիմնական շահագրգիռ կողմերի հիմնական վերլուծական տվյալ: Կայունության վերաբերյալ մանրամասն տվյալներ չեն պահանջվում: Մուտք գործեք Miro հաշիվ՝ այն իր նախատեսված ձևաչափով օգտագործելու համար։"
       },
     output: {
       en: "A roadmap and plan to lead your business towards circular strategy implementation",
@@ -295,7 +295,7 @@ const toolCatalogue = [
         en: "All small-medium enterprises (SMEs), particularly SMEs ready to move from opportunity identification to implementation.",
         uk: "Усі малі та середні підприємства (МСП), особливо МСП, готові перейти від визначення можливостей до впровадження.",
         ro: "Toate întreprinderile mici și mijlocii (IMM-uri), în special IMM-urile gata să treacă de la identificarea oportunităților la implementare.",
-        hy: "Բոլոր փոքր-միջին ձեռնարկությունները (ՓՄՁ), հատկապես ՓՄՁ-ները, որոնք պատրաստ են հնարավորությունների բացահայտումից անցնելու իրականացմանը:"
+        hy: "Բոլոր փոքր-միջին ձեռնարկությունները (ՓՄՁ), հատկապես ՓՄՁ-ները, որոնք պատրաստ են հնարավորությունների բացահայտումից անցնելու իրականացմանը։"
       },
     format: {
       en: "Online collaborative board (Miro)",
@@ -321,7 +321,7 @@ const toolCatalogue = [
         en: "A structured road mapping tool developed for manufacturing companies. Guides businesses through mapping their current state, defining ambitions, and building a concrete roadmap with prioritised actions. The tool uses a visual canvas approach with facilitation guidance, making it well suited to use in team workshops. Outputs include a prioritised action plan with owners and timelines.",
         uk: "Інструмент структурованого планування доріг, розроблений для виробничих компаній. Скеровує бізнес через відображення поточного стану, визначення амбіцій і побудову конкретної дорожньої карти з пріоритетними діями. Інструмент використовує підхід візуального полотна з інструкціями фасилітації, що робить його добре придатним для використання в групових семінарах. Результати включають пріоритетний план дій із власниками та часовими рамками.",
         ro: "Un instrument structurat de cartografiere a drumurilor dezvoltat pentru companiile producătoare. Ghidează companiile prin maparea stării lor actuale, definirea ambițiilor și construirea unei foi de parcurs concrete cu acțiuni prioritizate. Instrumentul folosește o abordare vizuală a pânzei cu îndrumări de facilitare, ceea ce îl face foarte potrivit pentru utilizare în atelierele de echipă. Rezultatele includ un plan de acțiune prioritizat cu proprietarii și termenele.",
-        hy: "Կառուցվածքային ճանապարհային քարտեզագրման գործիք, որը մշակվել է արտադրական ընկերությունների համար: Առաջնորդում է բիզնեսին իրենց ներկայիս վիճակի քարտեզագրման, հավակնությունների սահմանման և առաջնահերթ գործողություններով կոնկրետ ճանապարհային քարտեզ կառուցելու միջոցով: Գործիքը օգտագործում է վիզուալ կտավային մոտեցում՝ հեշտացնող ուղղորդմամբ՝ այն լավ պիտանի դարձնելով թիմային սեմինարներում օգտագործելու համար: Արդյունքները ներառում են առաջնահերթ գործողությունների ծրագիր սեփականատերերի հետ և ժամանակացույցեր:"
+        hy: "Կառուցվածքային ճանապարհային քարտեզագրման գործիք, որը մշակվել է արտադրական ընկերությունների համար: Առաջնորդում է բիզնեսին իրենց ներկայիս վիճակի քարտեզագրման, հավակնությունների սահմանման և առաջնահերթ գործողություններով կոնկրետ ճանապարհային քարտեզ կառուցելու միջոցով: Գործիքը օգտագործում է վիզուալ ձևանմուշային մոտեցում՝ հեշտացնող ուղղորդմամբ՝ այն լավ պիտանի դարձնելով թիմային սեմինարներում օգտագործելու համար: Արդյունքները ներառում են առաջնահերթ գործողությունների ծրագիր սեփականատերերի հետ և ժամանակացույցեր։"
       },
     journeyPhases: ['Implement'],
     sector: 'Manufacturing',
@@ -340,13 +340,13 @@ const toolCatalogue = [
         en: "A shortlisted circular opportunity or business model concept, plus basic customer, partner and financial information.",
         uk: "Концепція кругової можливості або бізнес-моделі короткого списку, а також основна інформація про клієнта, партнера та фінансову інформацію.",
         ro: "O oportunitate circulară pe lista scurtă sau un concept de model de afaceri, plus informații de bază privind clienții, partenerii și informațiile financiare.",
-        hy: "Շրջանաձև հնարավորություն կամ բիզնես մոդելի հայեցակարգ, գումարած հիմնական հաճախորդի, գործընկերոջ և ֆինանսական տեղեկատվություն:"
+        hy: "Շրջանաձև հնարավորություն կամ բիզնես մոդելի հայեցակարգ, գումարած հիմնական հաճախորդի, գործընկերոջ և ֆինանսական տեղեկատվություն։"
       },
     output: {
       en: "A completed Circular Business Model Canvas containing a vision statement.",
       uk: "Завершена кругова бізнес-модель Canvas, що містить заяву про бачення.",
       ro: "O pânză de model de afaceri circulară completată care conține o declarație de viziune.",
-      hy: "Ավարտված շրջանաձև բիզնես մոդելի կտավ, որը պարունակում է տեսլականի հայտարարություն:"
+      hy: "Ավարտված շրջանաձև բիզնես մոդելի ձևանմուշ, որը պարունակում է տեսլականի հայտարարություն։"
     },
     bestFor: {
       en: "Manufacturing/production small-medium enterprises (SMEs)",
@@ -379,7 +379,7 @@ const toolCatalogue = [
         en: "A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities. To access Miro templates, you frist need a user. You can create a free user to access the templates, if you do not have a Miro account. Once you can access the templates, you can follow the instructions to use them. || **Step by step guide** || **1.\tSet the objective:** Define what you're analysing and keep the scope specific so the analysis stays focused. ||**2.\tGather the right people:** Pull in a small group with different perspectives (ops, sales, finance, etc.). || **3.\tList Strengths:** Internal, positive factors: what you do well, unique resources, etc. || **4.\tList Weaknesses:** Internal, negative factors: gaps, resource constraints, etc.|| **5.\tList Opportunities:** External, positive factors: market trends, gaps you could exploit, emerging needs.|| **6.\tList Threats:** External, negative factors: competition, regulatory shifts, etc. || **7.\tRank items** by impact and likelihood so you're not treating everything as equally urgent.|| **8.\tMatch strengths to opportunities** to see where you can go on offense, and weaknesses to threats to see where you're most exposed. || **9.\tPick two or three priorities** per quadrant and assign owners and next steps.",
         uk: "Аналіз сильних і слабких сторін, можливостей і загроз (SWOT), застосований до циклічних бізнес-моделей, вивчає чотири виміри для створення чіткої стратегічної картини. Сильні сторони визначають те, що ваша організація вже робить добре, слабкі сторони виявляють внутрішні прогалини, можливості дивляться назовні за сприятливих умов, а загрози вловлюють зовнішні ризики. Справжня цінність полягає в динамічному використанні цих параметрів для виявлення пріоритетів і вразливостей. Щоб отримати доступ до шаблонів Miro, вам спочатку потрібен користувач. Ви можете створити безкоштовного користувача для доступу до шаблонів, якщо у вас немає облікового запису Miro. Отримавши доступ до шаблонів, ви можете дотримуватись інструкцій щодо їх використання. || **Покроковий посібник** || **1.\tПоставте ціль:** Визначте, що ви аналізуєте, і зберігайте конкретні рамки, щоб аналіз залишався зосередженим. ||**2.\tЗберіть потрібних людей:** об’єднайте невелику групу з різними поглядами (операції, продажі, фінанси тощо). || **3.\tПерелічіть сильні сторони:** Внутрішні позитивні фактори: те, що ви робите добре, унікальні ресурси тощо. || **4.\tПерелічіть слабкі сторони:** Внутрішні, негативні фактори: прогалини, обмеження ресурсів тощо.|| **5.\tСписок можливостей:** Зовнішні, позитивні фактори: ринкові тенденції, прогалини, якими ви можете скористатися, нові потреби.|| **6.\tСписок загроз:** Зовнішні, негативні фактори: конкуренція, нормативні зміни тощо. || **7.\tРозташуйте елементи** за впливом і ймовірністю, щоб не розглядати все як однаково термінове.|| **8.\tЗіставте сильні сторони з можливостями**, щоб побачити, де ви можете атакувати, і слабкі сторони з загрозами, щоб побачити, де ви найбільше піддані. || **9.\tВиберіть два або три пріоритети** на квадрант і призначте власників і наступні кроки.",
         ro: "O analiză SWOT (Strengths, Weaknesses, Opportunities and Threats) aplicată modelelor circulare de afaceri examinează patru dimensiuni pentru a construi o imagine strategică clară. Punctele forte identifică ceea ce organizația dvs. face deja bine, punctele slabe expun lacune interne, oportunitățile privesc spre exterior condiții favorabile, iar amenințările captează riscurile externe. Valoarea reală provine din utilizarea dinamică a acestor dimensiuni pentru a dezvălui prioritățile și vulnerabilitățile. Pentru a accesa șabloanele Miro, mai întâi aveți nevoie de un utilizator. Puteți crea un utilizator gratuit pentru a accesa șabloanele, dacă nu aveți un cont Miro. Odată ce puteți accesa șabloanele, puteți urma instrucțiunile pentru a le folosi. || **Ghid pas cu pas** || **1.\tStabiliți obiectivul:** Definiți ceea ce analizați și mențineți domeniul de aplicare specific, astfel încât analiza să rămână concentrată. ||**2.\tAdunați oamenii potriviți:** Atrageți un grup mic cu perspective diferite (operații, vânzări, finanțe etc.). || **3.\tListează punctele forte:** Factori interni, pozitivi: ceea ce faci bine, resurse unice etc. || **4.\tListați punctele slabe:** Factori interni, negativi: lacune, constrângeri de resurse etc.|| **5.\tLista de oportunitati:** Factori externi, pozitivi: tendintele pietei, lacunele pe care le-ati putea exploata, nevoile emergente.|| **6.\tLista amenințărilor:** Factori externi, negativi: concurență, schimbări de reglementare etc. || **7.\tClasifică articolele** după impact și probabilitate, astfel încât să nu tratezi totul ca la fel de urgent.|| **8.\tPotriviți punctele forte cu oportunitățile** pentru a vedea unde puteți ajunge în atac și punctele slabe cu amenințările pentru a vedea unde ești cel mai expus. || **9.\tAlegeți două sau trei priorități** pe cadran și atribuiți proprietari și pașii următori.",
-        hy: "Ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծությունը, որը կիրառվում է շրջանաձև բիզնես մոդելների համար, ուսումնասիրում է չորս հարթություն՝ հստակ ռազմավարական պատկեր ստեղծելու համար: Ուժեղ կողմերը բացահայտում են այն, ինչ ձեր կազմակերպությունն արդեն լավ է անում, թույլ կողմերը բացահայտում են ներքին բացերը, հնարավորությունները արտաքինից են նայում բարենպաստ պայմաններին, իսկ սպառնալիքները գրավում են արտաքին ռիսկերը: Իրական արժեքը գալիս է առաջնահերթություններն ու խոցելիությունները բացահայտելու համար այս չափումները դինամիկ կերպով օգտագործելուց: Miro-ի կաղապարներ մուտք գործելու համար նախ անհրաժեշտ է օգտատեր: Դուք կարող եք ստեղծել անվճար օգտվող՝ կաղապարներին մուտք գործելու համար, եթե չունեք Miro հաշիվ: Երբ դուք կարող եք մուտք գործել ձևանմուշներ, կարող եք հետևել դրանք օգտագործելու հրահանգներին: || **Քայլ առ քայլ ուղեցույց** || **1.\tՍահմանեք նպատակը.** Սահմանեք, թե ինչ եք վերլուծում և կոնկրետ պահեք շրջանակը, որպեսզի վերլուծությունը մնա կենտրոնացված: ||**2.\tՀավաքեք ճիշտ մարդկանց.** Քաշեք փոքր խմբի մեջ՝ տարբեր հեռանկարներով (օպերացիա, վաճառք, ֆինանսներ և այլն): || **3.\tՑանկի ուժեղ կողմեր.** Ներքին, դրական գործոններ՝ ինչ եք անում լավ, յուրահատուկ ռեսուրսներ և այլն: || **4.\tԹվարկեք թույլ կողմերը.** Ներքին, բացասական գործոններ՝ բացեր, ռեսուրսների սահմանափակումներ և այլն:|| **5.\tԹվարկեք հնարավորությունները.** Արտաքին, դրական գործոններ. շուկայի միտումներ, բացեր, որոնք դուք կարող եք օգտագործել, առաջացող կարիքներ:|| **6.\tԹվարկեք սպառնալիքները.** Արտաքին, բացասական գործոններ՝ մրցակցություն, կարգավորող փոփոխություններ և այլն: || **7.\tԴասակարգեք տարրերը** ըստ ազդեցության և հավանականության, որպեսզի ամեն ինչ նույնքան հրատապ չհամարեք:|| **8.\tՀամեմատեք ուժեղ կողմերը հնարավորությունների հետ**՝ տեսնելու, թե որտեղ կարող եք վիրավորվել, իսկ թույլ կողմերը՝ սպառնալիքներին, որպեսզի տեսնեք, թե որտեղ եք ամենաշատը ենթարկվում: || **9.\tԸնտրեք երկու կամ երեք առաջնահերթություն** յուրաքանչյուր քառորդի համար և նշանակեք սեփականատերերին և հաջորդ քայլերը:"
+        hy: "Ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծությունը, որը կիրառվում է շրջանաձև բիզնես մոդելների համար, ուսումնասիրում է չորս հարթություն՝ հստակ ռազմավարական պատկեր ստեղծելու համար: Ուժեղ կողմերը բացահայտում են այն, ինչ ձեր կազմակերպությունն արդեն լավ է անում, թույլ կողմերը բացահայտում են ներքին բացերը, հնարավորությունները արտաքինից են նայում բարենպաստ պայմաններին, իսկ սպառնալիքները գրավում են արտաքին ռիսկերը: Իրական արժեքը գալիս է առաջնահերթություններն ու խոցելիությունները բացահայտելու համար այս չափումները դինամիկ կերպով օգտագործելուց: Miro-ի կաղապարներ մուտք գործելու համար նախ անհրաժեշտ է օգտատեր: Դուք կարող եք ստեղծել անվճար օգտվող՝ կաղապարներին մուտք գործելու համար, եթե չունեք Miro հաշիվ: Երբ դուք կարող եք մուտք գործել ձևանմուշներ, կարող եք հետևել դրանք օգտագործելու հրահանգներին։ || **Քայլ առ քայլ ուղեցույց** || **1.\tՍահմանեք նպատակը.** Սահմանեք, թե ինչ եք վերլուծում և կոնկրետ պահեք շրջանակը, որպեսզի վերլուծությունը մնա կենտրոնացված: ||**2.\tՀավաքեք ճիշտ մարդկանց.** Քաշեք փոքր խմբի մեջ՝ տարբեր հեռանկարներով (օպերացիա, վաճառք, ֆինանսներ և այլն): || **3.\tՑանկի ուժեղ կողմեր.** Ներքին, դրական գործոններ՝ ինչ եք անում լավ, յուրահատուկ ռեսուրսներ և այլն: || **4.\tԹվարկեք թույլ կողմերը.** Ներքին, բացասական գործոններ՝ բացեր, ռեսուրսների սահմանափակումներ և այլն:|| **5.\tԹվարկեք հնարավորությունները.** Արտաքին, դրական գործոններ. շուկայի միտումներ, բացեր, որոնք դուք կարող եք օգտագործել, առաջացող կարիքներ:|| **6.\tԹվարկեք սպառնալիքները.** Արտաքին, բացասական գործոններ՝ մրցակցություն, կարգավորող փոփոխություններ և այլն: || **7.\tԴասակարգեք տարրերը** ըստ ազդեցության և հավանականության, որպեսզի ամեն ինչ նույնքան հրատապ չհամարեք:|| **8.\tՀամեմատեք ուժեղ կողմերը հնարավորությունների հետ**՝ տեսնելու, թե որտեղ կարող եք վիրավորվել, իսկ թույլ կողմերը՝ սպառնալիքներին, որպեսզի տեսնեք, թե որտեղ եք ամենաշատը ենթարկվում: || **9.\tԸնտրեք երկու կամ երեք առաջնահերթություն** յուրաքանչյուր քառորդի համար և նշանակեք սեփականատերերին և հաջորդ քայլերը:"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -406,19 +406,19 @@ const toolCatalogue = [
       en: "Completed Strengths, Weaknesses, Opportunities and Threats (SWOT) matrix with prioritised actions; exportable for sharing with team or advisors.",
       uk: "Заповнена матриця сильних і слабких сторін, можливостей і загроз (SWOT) із пріоритетними діями; можна експортувати для спільного використання з командою або радниками.",
       ro: "Matricea finalizată a punctelor forte, punctelor slabe, oportunităților și amenințărilor (SWOT) cu acțiuni prioritizate; exportabil pentru partajare cu echipa sau consilieri.",
-      hy: "Ավարտված ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) մատրիցա՝ առաջնահերթ գործողություններով. արտահանելի՝ թիմի կամ խորհրդատուների հետ կիսվելու համար:"
+      hy: "Ավարտված ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) մատրիցա՝ առաջնահերթ գործողություններով. արտահանելի՝ թիմի կամ խորհրդատուների հետ կիսվելու համար։"
     },
     bestFor: {
       en: "small-medium enterprises (SMEs) running the transition readiness workshop from Phase 4 with their team.",
       uk: "малі та середні підприємства (МСП), які разом зі своєю командою проводять семінар з підготовки до переходу з Фази 4.",
       ro: "întreprinderi mici și mijlocii (IMM-uri) care desfășoară împreună cu echipa atelierul de pregătire pentru tranziție din Faza 4.",
-      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ) իրենց թիմի հետ անցումային պատրաստության սեմինարն անցկացնում են 4-րդ փուլից:"
+      hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ) իրենց թիմի հետ անցումային պատրաստության սեմինարն անցկացնում են 4-րդ փուլից։"
     },
     format: {
       en: "Either online Miro board or PDF if printed.",
       uk: "Онлайн-дошка Miro або PDF, якщо роздруковано.",
       ro: "Fie placa Miro online, fie PDF, dacă este tipărit.",
-      hy: "Կամ առցանց Miro տախտակ կամ PDF, եթե տպագրված է:"
+      hy: "Կամ առցանց Miro տախտակ կամ PDF, եթե տպագրված է։"
     },
     toolLink: 'https://miro.com/strategic-planning/swot-analysis/'
   },
@@ -438,7 +438,7 @@ const toolCatalogue = [
         en: "The Circular Transition Indicators (CTI) indicators and methodology are one of the main building blocks that the Global Circularity Protocol (GCP) uses for circularity metrics and the protocol is designed to align with International Organization for Standardization (ISO) 59020, European Sustainability Reporting Standards (ESRS) E5, Global Reporting Initiative (GRI) and the Greenhouse Gas Protocol. CTI Tool was developed together with the World Business Council for Sustainable Development (WBCSD) for applying the CTI in practice. By using CTI Tool you build the material level data and indicators that the GCP expects, which means you can reuse your CTI work when you start working with the GCP.",
         uk: "Індикатори циклічного переходу (CTI) і методологія є одними з основних будівельних блоків, які Глобальний протокол круговості (GCP) використовує для показників циклізму, і протокол розроблений для узгодження з Міжнародною організацією зі стандартизації (ISO) 59020, Європейськими стандартами звітності про сталий розвиток (ESRS) E5, Глобальною ініціативою звітності (GRI) і Протоколом парникових газів. CTI Tool був розроблений спільно з Всесвітньою діловою радою зі сталого розвитку (WBCSD) для практичного застосування CTI. Використовуючи інструмент CTI, ви створюєте дані та індикатори на рівні матеріалу, які очікує GCP, що означає, що ви можете повторно використовувати свою роботу CTI, коли починаєте працювати з GCP.",
         ro: "Indicatorii și metodologia indicatorilor de tranziție circulară (CTI) sunt unul dintre principalele blocuri pe care Global Circularity Protocol (GCP) le folosește pentru metricile de circularitate, iar protocolul este conceput pentru a se alinia cu Organizația Internațională pentru Standardizare (ISO) 59020, Standardele europene de raportare pentru sustenabilitate (ESRS) E5, Global Reporting Initiative (GRI) și Protocolul pentru gaze cu efect de seră. Instrumentul CTI a fost dezvoltat împreună cu Consiliul Mondial de Afaceri pentru Dezvoltare Durabilă (WBCSD) pentru aplicarea CTI în practică. Folosind instrumentul CTI, construiți datele și indicatorii la nivel de material la care se așteaptă GCP, ceea ce înseamnă că vă puteți reutiliza munca CTI atunci când începeți să lucrați cu GCP.",
-        hy: "Circular Transition Indicators (CTI) ցուցիչները և մեթոդաբանությունը հիմնական կառուցվածքային բլոկներից են, որոնք օգտագործում է Գլոբալ շրջանաձևության արձանագրությունը (GCP) շրջանաձևության չափումների համար, և արձանագրությունը նախագծված է ստանդարտացման միջազգային կազմակերպության (ISO) 59020, Եվրոպական կայունության հաշվետվության ստանդարտների (ESRS) E5, (GGRI) և Greenhouse Global Reporting Procol-ին համապատասխանեցնելու համար: CTI գործիքը մշակվել է Կայուն զարգացման համաշխարհային բիզնես խորհրդի (WBCSD) հետ համատեղ՝ CTI-ն գործնականում կիրառելու համար: Օգտագործելով CTI գործիքը, դուք ստեղծում եք նյութի մակարդակի տվյալներ և ցուցիչներ, որոնք ակնկալում է GCP-ն, ինչը նշանակում է, որ դուք կարող եք նորից օգտագործել ձեր CTI աշխատանքը, երբ սկսեք աշխատել GCP-ի հետ:"
+        hy: "Circular Transition Indicators (CTI) ցուցիչները և մեթոդաբանությունը հիմնական կառուցվածքային բլոկներից են, որոնք օգտագործում է Գլոբալ շրջանաձևության արձանագրությունը (GCP) շրջանաձևության չափումների համար, և արձանագրությունը նախագծված է ստանդարտացման միջազգային կազմակերպության (ISO) 59020, Եվրոպական կայունության հաշվետվության ստանդարտների (ESRS) E5, (GGRI) և Greenhouse Global Reporting Procol-ին համապատասխանեցնելու համար: CTI գործիքը մշակվել է Կայուն զարգացման համաշխարհային բիզնես խորհրդի (WBCSD) հետ համատեղ՝ CTI-ն գործնականում կիրառելու համար: Օգտագործելով CTI գործիքը, դուք ստեղծում եք նյութի մակարդակի տվյալներ և ցուցիչներ, որոնք ակնկալում է GCP-ն, ինչը նշանակում է, որ դուք կարող եք նորից օգտագործել ձեր CTI աշխատանքը, երբ սկսեք աշխատել GCP-ի հետ։"
       },
     journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
@@ -456,14 +456,14 @@ const toolCatalogue = [
       en: "Prepare the relevant business, material flow and resource use data before starting.",
       uk: "Перед початком підготуйте відповідні дані про бізнес, матеріальні потоки та використання ресурсів.",
       ro: "Pregătiți datele relevante de afaceri, fluxul de materiale și utilizarea resurselor înainte de a începe.",
-      hy: "Նախքան սկսելը պատրաստեք համապատասխան բիզնեսի, նյութական հոսքի և ռեսուրսների օգտագործման տվյալները:"
+      hy: "Նախքան սկսելը պատրաստեք համապատասխան բիզնեսի, նյութական հոսքի և ռեսուրսների օգտագործման տվյալները։"
     },
     output:
       {
         en: "Circular performance score; risk and opportunity analysis; prioritised actions and SMART improvement targets.",
         uk: "Оцінка кругового виконання; аналіз ризиків і можливостей; пріоритетні дії та цілі вдосконалення SMART.",
         ro: "Scorul de performanță circular; analiza riscurilor și oportunităților; acțiunile prioritizate și obiectivele de îmbunătățire SMART.",
-        hy: "Շրջանաձև կատարման միավոր; ռիսկերի և հնարավորությունների վերլուծություն; առաջնահերթ գործողություններ և SMART բարելավման թիրախներ:"
+        hy: "Շրջանաձև կատարման միավոր; ռիսկերի և հնարավորությունների վերլուծություն; առաջնահերթ գործողություններ և SMART բարելավման նպատակներ։"
       },
     bestFor: {
       en: "All small-medium enterprises (SMEs)",
@@ -495,7 +495,7 @@ const toolCatalogue = [
         en: "The Circular Business Development Canvas Pack aims to empower businesses to transition from traditional linear models to innovative circular practices. By focusing on reducing waste, enhancing resource efficiency, and closing the loop, these canvases provide a structured approach to embedding circular economy principles into core operations, customers, and revenue. The ultimate goal is to foster a regenerative business model that benefits   the environment and drives economic value and social impact. A step-by-step guide on how to carry out this workshop can be found within the circular canvas pack.",
         uk: "Пакет Circular Business Development Canvas Pack має на меті надати компаніям можливість переходити від традиційних лінійних моделей до інноваційних циклічних практик. Зосереджуючись на зменшенні відходів, підвищенні ресурсоефективності та замиканні циклу, ці полотна забезпечують структурований підхід до впровадження принципів циклічної економіки в основні операції, клієнтів і дохід. Кінцевою метою є сприяння регенераційній бізнес-моделі, яка приносить користь навколишньому середовищу та забезпечує економічну цінність і соціальний вплив. Покрокову інструкцію щодо проведення цього семінару можна знайти в круглому пакеті полотен.",
         ro: "Pachetul Circular Business Development Canvas are scopul de a împuternici întreprinderile să treacă de la modelele liniare tradiționale la practici circulare inovatoare. Concentrându-se pe reducerea deșeurilor, îmbunătățirea eficienței resurselor și închiderea buclei, aceste pânze oferă o abordare structurată pentru încorporarea principiilor economiei circulare în operațiunile de bază, clienții și veniturile. Scopul final este de a promova un model de afaceri regenerativ care aduce beneficii mediului și generează valoare economică și impact social. Un ghid pas cu pas despre cum să desfășurați acest atelier poate fi găsit în pachetul de pânză circulară.",
-        hy: "Circular Business Development Canvas Pack-ը նպատակ ունի հզորացնել բիզնեսին ավանդական գծային մոդելներից անցնելու նորարարական շրջանաձև պրակտիկայի: Կենտրոնանալով թափոնների կրճատման, ռեսուրսների արդյունավետության բարձրացման և օղակը փակելու վրա՝ այս կտավները կառուցվածքային մոտեցում են ապահովում՝ հիմնական գործառնությունների, հաճախորդների և եկամուտների մեջ շրջանաձև տնտեսության սկզբունքները ներառելու համար: Վերջնական նպատակն է խթանել վերականգնվող բիզնես մոդելը, որն օգուտ կբերի շրջակա միջավայրին և խթանում է տնտեսական արժեքն ու սոցիալական ազդեցությունը: Այս սեմինարն իրականացնելու քայլ առ քայլ ուղեցույցը կարելի է գտնել շրջանաձև կտավի փաթեթում:"
+        hy: "Circular Business Development Canvas Pack-ը նպատակ ունի հզորացնել բիզնեսին ավանդական գծային մոդելներից անցնելու նորարարական շրջանաձև պրակտիկայի: Կենտրոնանալով թափոնների կրճատման, ռեսուրսների արդյունավետության բարձրացման և օղակը փակելու վրա՝ այս ձևանմուշները կառուցվածքային մոտեցում են ապահովում՝ հիմնական գործառնությունների, հաճախորդների և եկամուտների մեջ շրջանաձև տնտեսության սկզբունքները ներառելու համար: Վերջնական նպատակն է խթանել վերականգնվող բիզնես մոդելը, որն օգուտ կբերի շրջակա միջավայրին և խթանում է տնտեսական արժեքն ու սոցիալական ազդեցությունը: Այս սեմինարն իրականացնելու քայլ առ քայլ ուղեցույցը կարելի է գտնել շրջանաձև ձևանմուշի փաթեթում։"
       },
     journeyPhases: ['Evaluate'],
     sector: 'Cross-sector',
@@ -520,13 +520,13 @@ const toolCatalogue = [
         en: "Completed circular Business Model Canvas (BMC); clear view of how the circular business model changes your operations.",
         uk: "Завершена кругова бізнес-модель Canvas (BMC); чітке уявлення про те, як циркулярна бізнес-модель змінює ваші операції.",
         ro: "Modelul de afaceri circular (BMC) finalizat; vedere clară a modului în care modelul circular de afaceri vă schimbă operațiunile.",
-        hy: "Ավարտված շրջանաձև բիզնես մոդելի կտավ (BMC); հստակ պատկերացում, թե ինչպես է շրջանաձև բիզնես մոդելը փոխում ձեր գործունեությունը:"
+        hy: "Ավարտված շրջանաձև բիզնես մոդելի ձևանմուշ (BMC); հստակ վերլուծական տվյալ, թե ինչպես է շրջանաձև բիզնես մոդելը փոխում ձեր գործունեությունը։"
       },
     bestFor: {
       en: "small-medium enterprises (SMEs) that have identified a preferred circular business model and want to develop it in detail.",
       uk: "малі та середні підприємства (МСП), які визначили бажану циркулярну бізнес-модель і хочуть її детально розробити.",
       ro: "întreprinderi mici și mijlocii (IMM-uri) care au identificat un model de afaceri circular preferat și doresc să-l dezvolte în detaliu.",
-      hy: "փոքր-միջին ձեռնարկություններ (ՓՄՁ), որոնք բացահայտել են նախընտրելի շրջանաձև բիզնես մոդել և ցանկանում են այն մանրամասն զարգացնել:"
+      hy: "փոքր-միջին ձեռնարկություններ (ՓՄՁ), որոնք բացահայտել են նախընտրելի շրջանաձև բիզնես մոդել և ցանկանում են այն մանրամասն զարգացնել։"
     },
     format: {
       en: "PDF",
@@ -553,7 +553,7 @@ const toolCatalogue = [
         en: "With the Quickscan Circular Business Model (CBM) you gain insight into the possibilities of a circular business model for your company. You use a questionnaire to assess where you are now when it comes to sustainable and circular entrepreneurship. You then explore the possibilities for a more circular business model by choosing a basic type of circular business model and selecting options for building blocks such as the organisational form and the revenue model.",
         uk: "За допомогою кругової бізнес-моделі Quickscan (CBM) ви дізнаєтеся про можливості циклічної бізнес-моделі для вашої компанії. Ви використовуєте анкету, щоб оцінити, де ви зараз перебуваєте, коли справа доходить до сталого та циклічного підприємництва. Потім ви досліджуєте можливості для більш циклічної бізнес-моделі, вибираючи базовий тип циклічної бізнес-моделі та вибираючи параметри для будівельних блоків, таких як організаційна форма та модель доходу.",
         ro: "Cu Quickscan Circular Business Model (CBM) obțineți o perspectivă asupra posibilităților unui model de afaceri circular pentru compania dumneavoastră. Folosiți un chestionar pentru a evalua unde vă aflați acum când vine vorba de antreprenoriat sustenabil și circular. Apoi explorați posibilitățile pentru un model de afaceri mai circular, alegând un tip de bază de model de afaceri circular și selectând opțiuni pentru blocuri, cum ar fi forma organizațională și modelul de venituri.",
-        hy: "Quickscan Circular Business Model-ի (CBM) միջոցով դուք պատկերացում եք ստանում ձեր ընկերության համար շրջանաձև բիզնես մոդելի հնարավորությունների մասին: Դուք հարցաշար եք օգտագործում՝ գնահատելու համար, թե որտեղ եք այժմ, երբ խոսքը վերաբերում է կայուն և շրջանաձև ձեռներեցությանը: Այնուհետև դուք ուսումնասիրում եք ավելի շրջանաձև բիզնես մոդելի հնարավորությունները՝ ընտրելով շրջանաձև բիզնես մոդելի հիմնական տեսակը և ընտրելով այնպիսի բլոկների կառուցման տարբերակներ, ինչպիսիք են կազմակերպչական ձևը և եկամտի մոդելը:"
+        hy: "Quickscan Circular Business Model-ի (CBM) միջոցով դուք վերլուծական տվյալ եք ստանում ձեր ընկերության համար շրջանաձև բիզնես մոդելի հնարավորությունների մասին: Դուք հարցաշար եք օգտագործում՝ գնահատելու համար, թե որտեղ եք այժմ, երբ խոսքը վերաբերում է կայուն և շրջանաձև ձեռներեցությանը: Այնուհետև դուք ուսումնասիրում եք ավելի շրջանաձև բիզնես մոդելի հնարավորությունները՝ ընտրելով շրջանաձև բիզնես մոդելի հիմնական տեսակը և ընտրելով այնպիսի բլոկների կառուցման տարբերակներ, ինչպիսիք են կազմակերպչական ձևը և եկամտի մոդելը։"
       },
     journeyPhases: ['Evaluate', 'Assess'],
     placements: {
@@ -575,19 +575,19 @@ const toolCatalogue = [
         en: "General knowledge of your business and the opportunities you have identified in the previous phase.",
         uk: "Загальні знання про ваш бізнес і можливості, які ви визначили на попередньому етапі.",
         ro: "Cunoștințe generale despre afacerea dvs. și oportunitățile pe care le-ați identificat în faza anterioară.",
-        hy: "Ընդհանուր գիտելիքներ ձեր բիզնեսի և այն հնարավորությունների մասին, որոնք դուք բացահայտել եք նախորդ փուլում:"
+        hy: "Ընդհանուր գիտելիքներ ձեր բիզնեսի և այն հնարավորությունների մասին, որոնք դուք բացահայտել եք նախորդ փուլում։"
       },
     output: {
       en: "Prioritised Circular Business Model (CBM) shortlist; scored overview of options; basis for business case development.",
       uk: "Пріоритетизована кругова бізнес-модель (CBM) короткий список; оцінений огляд варіантів; основа для розробки бізнес-кейсів.",
       ro: "Lista scurtă a modelului circular de afaceri prioritar (CBM); vedere de ansamblu punctat asupra opțiunilor; baza pentru dezvoltarea cazului de afaceri.",
-      hy: "Առաջնահերթ շրջանաձև բիզնես մոդելի (CBM) կարճ ցուցակ; ընտրանքների գնահատված ակնարկ; բիզնես գործի զարգացման հիմք:"
+      hy: "Առաջնահերթ շրջանաձև բիզնես մոդելի (CBM) կարճ ցուցակ; ընտրանքների գնահատված ակնարկ; տնտեսական հիմնավորումի զարգացման հիմք։"
     },
     bestFor: {
       en: "small-medium enterprises (SMEs) new to circular business modelling wanting a structured starting point.",
       uk: "малі та середні підприємства (МСП), які не знайомі з циклічним бізнес-моделюванням, яким потрібна структурована стартова точка.",
       ro: "întreprinderile mici-mijlocii (IMM-uri) nou în modelarea circulară de afaceri care doresc un punct de plecare structurat.",
-      hy: "փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք նոր են շրջաձև բիզնես մոդելավորման մեջ, որոնք ցանկանում են կառուցվածքային մեկնարկային կետ:"
+      hy: "փոքր և միջին ձեռնարկություններ (ՓՄՁ), որոնք նոր են շրջաձև բիզնես մոդելավորման մեջ, որոնք ցանկանում են կառուցվածքային մեկնարկային կետ։"
     },
     format: {
       en: "Excel",
@@ -614,7 +614,7 @@ const toolCatalogue = [
         en: "Calculate your sustainability Return on Investment (ROI). Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.",
         uk: "Розрахуйте рентабельність інвестицій (ROI). Створіть своє ділове обґрунтування та доведіть цінність вашої роботи зі сталого розвитку. Перегляньте фінансову віддачу, період окупності та вплив на викиди інвестицій у сталий розвиток на основі ваших вкладів і реальних рушійних сил бізнесу. Моделюйте реальні бізнес-сценарії, перевіряйте фактори, що впливають на витрати та заощадження, кількісно оцінюйте фінансовий вплив і вплив викидів вуглецю, а також експортуйте зведення, готове для прийняття рішень.",
         ro: "Calculați-vă rentabilitatea investiției (ROI) pentru sustenabilitate. Construiește-ți cazul de afaceri și dovedește valoarea muncii tale în domeniul durabilității. Vedeți rentabilitatea financiară, perioada de rambursare și impactul asupra emisiilor de investiții în sustenabilitate pe baza contribuțiilor dvs. și a factorilor de afaceri reali. Modelați scenarii de afaceri reale, testați factorii de cost și economii, cuantificați impactul financiar și de carbon și exportați un rezumat gata de decizie.",
-        hy: "Հաշվարկեք ձեր կայուն ներդրումների վերադարձը (ROI): Կառուցեք ձեր բիզնեսի գործը և ապացուցեք ձեր կայուն աշխատանքի արժեքը: Տեսեք կայունության ներդրումների ֆինանսական վերադարձը, վերադարձի ժամկետը և արտանետումների ազդեցությունը՝ հիմնված ձեր ներդրումների և բիզնեսի իրական դրդապատճառների վրա: Մոդել իրական բիզնեսի սցենարներ, փորձարկեք ծախսերի և խնայողությունների դրդապատճառները, քանակականացրեք ֆինանսական և ածխածնի ազդեցությունը և արտահանեք որոշումների համար պատրաստ ամփոփագիր:"
+        hy: "Հաշվարկեք ձեր կայուն ներդրումների վերադարձը (ROI): Կառուցեք ձեր բիզնեսի գործը և ապացուցեք ձեր կայուն աշխատանքի արժեքը: Տեսեք կայունության ներդրումների ֆինանսական եկամտաբերությունը, վերադարձի ժամկետը և արտանետումների ազդեցությունը՝ հիմնված ձեր ներդրումների և բիզնեսի իրական դրդապատճառների վրա: Մոդել իրական բիզնեսի սցենարներ, փորձարկեք ծախսերի և խնայողությունների դրդապատճառները, քանակականացրեք ֆինանսական և ածխածնի ազդեցությունը և արտահանեք որոշումների համար պատրաստ ամփոփագիր։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -635,7 +635,7 @@ const toolCatalogue = [
       en: "Prepare relevant investment, cost, savings and emissions data before starting.",
       uk: "Перед початком підготуйте відповідні дані про інвестиції, витрати, заощадження та викиди.",
       ro: "Pregătiți date relevante privind investițiile, costurile, economiile și emisiile înainte de a începe.",
-      hy: "Նախքան սկսելը պատրաստեք համապատասխան ներդրումների, ծախսերի, խնայողությունների և արտանետումների տվյալները:"
+      hy: "Նախքան սկսելը պատրաստեք համապատասխան ներդրումների, ծախսերի, խնայողությունների և արտանետումների տվյալները։"
     },
     output:
       {
@@ -649,7 +649,7 @@ const toolCatalogue = [
         en: "SMEs building a financial case for a circular investment, pilot project, or green finance application.",
         uk: "Малі та середні підприємства створюють фінансове обґрунтування циклічного інвестування, пілотного проекту або програми зеленого фінансування.",
         ro: "IMM-urile construiesc un caz financiar pentru o investiție circulară, un proiect pilot sau o aplicație de finanțare ecologică.",
-        hy: "ՓՄՁ-ները ֆինանսական գործ են ստեղծում շրջանաձև ներդրումների, փորձնական ծրագրի կամ կանաչ ֆինանսավորման հայտի համար:"
+        hy: "ՓՄՁ-ները ֆինանսական գործ են ստեղծում շրջանաձև ներդրումների, փորձնական ծրագրի կամ կանաչ ֆինանսավորման հայտի համար։"
       },
     format: {
       en: "Digital tool",
@@ -703,7 +703,7 @@ const toolCatalogue = [
         en: "Identified circular economy trends, opportunities, threats, and discussion inputs for Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis or future business model ideas.",
         uk: "Визначені тенденції циклічної економіки, можливості, загрози та вхідні дані для обговорення для аналізу сильних і слабких сторін, можливостей і загроз (SWOT) або ідей майбутніх бізнес-моделей.",
         ro: "Tendințele, oportunitățile, amenințările și inputurile pentru discuții ale economiei circulare au fost identificate pentru analiza punctelor forte, punctelor slabe, oportunităților și amenințărilor (SWOT) sau idei de modele de afaceri viitoare.",
-        hy: "Սահմանել է շրջանաձև տնտեսության միտումները, հնարավորությունները, սպառնալիքները և քննարկման մուտքերը ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծության կամ ապագա բիզնես մոդելի գաղափարների համար:"
+        hy: "Սահմանել է շրջանաձև տնտեսության միտումները, հնարավորությունները, սպառնալիքները և քննարկման մուտքերը ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծության կամ ապագա բիզնես մոդելի գաղափարների համար։"
       },
     bestFor: {
       en: "All small-medium enterprises (SMEs)",
@@ -735,7 +735,7 @@ const toolCatalogue = [
         en: "An ideation tool that helps you explore and identify the most suitable circular pathways for your products. Based on best practices from other companies, you answer a few questions and receive tailored circular strategy recommendations. Simple, free, and requires no prior circular economy expertise.",
         uk: "Інструмент ідей, який допоможе вам досліджувати та визначати найбільш підходящі кільцеві шляхи для ваших продуктів. На основі передового досвіду інших компаній ви відповідаєте на кілька запитань і отримуєте індивідуальні рекомендації щодо циклічної стратегії. Простий, безкоштовний і не потребує попереднього досвіду в економіці замкнутого циклу.",
         ro: "Un instrument de ideare care vă ajută să explorați și să identificați cele mai potrivite căi circulare pentru produsele dvs. Pe baza celor mai bune practici de la alte companii, răspundeți la câteva întrebări și primiți recomandări de strategii circulare personalizate. Simplu, gratuit și nu necesită experiență anterioară în economia circulară.",
-        hy: "Գաղափարման գործիք, որն օգնում է ձեզ ուսումնասիրել և բացահայտել ձեր արտադրանքի համար ամենահարմար շրջանաձև ուղիները: Այլ ընկերությունների լավագույն փորձի հիման վրա դուք պատասխանում եք մի քանի հարցերի և ստանում եք հարմարեցված շրջանաձև ռազմավարության առաջարկություններ: Պարզ, անվճար և չի պահանջում շրջանաձև տնտեսության նախնական փորձաքննություն:"
+        hy: "Գաղափարման գործիք, որն օգնում է ձեզ ուսումնասիրել և բացահայտել ձեր արտադրանքի համար ամենահարմար շրջանաձև ուղիները: Այլ ընկերությունների լավագույն փորձի հիման վրա դուք պատասխանում եք մի քանի հարցերի և ստանում եք հարմարեցված շրջանաձև ռազմավարության առաջարկություններ: Պարզ, անվճար և չի պահանջում շրջանաձև տնտեսության նախնական փորձաքննություն։"
       },
     journeyPhases: ['Explore', 'Evaluate'],
     placements: {
@@ -757,14 +757,14 @@ const toolCatalogue = [
         en: "Users should have basic knowledge of their product, materials, lifecycle, and business model.",
         uk: "Користувачі повинні мати базові знання про свій продукт, матеріали, життєвий цикл і бізнес-модель.",
         ro: "Utilizatorii ar trebui să aibă cunoștințe de bază despre produsul lor, materialele, ciclul de viață și modelul de afaceri.",
-        hy: "Օգտագործողները պետք է ունենան հիմնական գիտելիքներ իրենց արտադրանքի, նյութերի, կյանքի ցիկլի և բիզնես մոդելի մասին:"
+        hy: "Օգտագործողները պետք է ունենան հիմնական գիտելիքներ իրենց արտադրանքի, նյութերի, կյանքի ցիկլի և բիզնես մոդելի մասին։"
       },
     output:
       {
         en: "Suggested circular design strategies and guidance on relevant circular economy approaches for the product.",
         uk: "Запропоновані стратегії циклічного проектування та вказівки щодо відповідних підходів циклічної економіки для продукту.",
         ro: "Strategii de proiectare circulară sugerate și îndrumări privind abordările relevante ale economiei circulare pentru produs.",
-        hy: "Առաջարկվող շրջանաձև նախագծման ռազմավարություններ և ուղեցույց արտադրանքի համար համապատասխան շրջանաձև տնտեսության մոտեցումների վերաբերյալ:"
+        hy: "Առաջարկվող շրջանաձև նախագծման ռազմավարություններ և ուղեցույց արտադրանքի համար համապատասխան շրջանաձև տնտեսության մոտեցումների վերաբերյալ։"
       },
     bestFor: {
       en: "Manufacturing small-medium enterprises (SMEs), product developers, and companies exploring circular product design or redesign.",
