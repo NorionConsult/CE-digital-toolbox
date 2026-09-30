@@ -163,7 +163,7 @@ export const foodAndAgricultureRelevantToolsSection = {
 export const foodAndAgriculture = {
   number: { en: 'Sector 2', uk: 'Сектор 2', ro: 'Sector 2', hy: 'Ոլորտ 2' },
   slug: 'food-and-agriculture',
-  title: { en: 'Food and Agriculture', uk: 'Харчова промисловість і сільське господарство', ro: 'Alimentație și agricultură', hy: 'Սնունդ եւ գյուղատնտեսություն' },
+  title: { en: 'Food and Agriculture', uk: 'Продовольство та сільське господарство', ro: 'Alimentație și agricultură', hy: 'Սնունդ եւ գյուղատնտեսություն' },
   description: { en: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.', uk: 'Цей секторний путівник надає інструменти, кейси та практичні рекомендації для МСП у харчовій промисловості та сільському господарстві, які впроваджують практики циркулярної економіки.', ro: 'Acest ghid sectorial oferă instrumente, cazuri și orientări practice pentru IMM-urile din alimentație și agricultură care adoptă practici de economie circulară.', hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղեցույցներ սննդի ու գյուղատնտեսության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։' },
   image: '/images/sectors/agriculture.jpg',
   imageAlt: { en: 'Food and Agriculture sector', uk: 'Сектор харчової промисловості та сільського господарства', ro: 'Sectorul alimentației și agriculturii', hy: 'Սննդի եւ գյուղատնտեսության ոլորտ' },

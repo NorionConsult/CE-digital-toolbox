@@ -10,7 +10,7 @@ import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils
 const phaseCard = {
   number: '05',
   slug: 'implement',
-  shortName: { en: 'Phase 5', uk: 'Фаза 5', ro: 'Faza 5', hy: 'Փուլ 5' },
+  shortName: { en: 'Phase 5', uk: 'Етап 5', ro: 'Faza 5', hy: 'Փուլ 5' },
   title: { en: 'Implement', uk: 'Впровадження', ro: 'Implementează', hy: 'Իրականացնել' },
   colourClass: 'phase-card-dark',
   description: {

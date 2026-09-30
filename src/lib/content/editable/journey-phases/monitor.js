@@ -10,7 +10,7 @@ import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils
 const phaseCard = {
   number: '06',
   slug: 'monitor',
-  shortName: { en: 'Phase 6', uk: 'Фаза 6', ro: 'Faza 6', hy: 'Փուլ 6' },
+  shortName: { en: 'Phase 6', uk: 'Етап 6', ro: 'Faza 6', hy: 'Փուլ 6' },
   title: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկել' },
   colourClass: 'phase-card-outline',
   description: {

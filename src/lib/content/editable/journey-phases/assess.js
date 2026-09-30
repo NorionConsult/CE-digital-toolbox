@@ -10,7 +10,7 @@ import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils
 const phaseCard = {
   number: '02',
   slug: 'assess',
-  shortName: { en: 'Phase 2', uk: 'Фаза 2', ro: 'Faza 2', hy: 'Փուլ 2' },
+  shortName: { en: 'Phase 2', uk: 'Етап 2', ro: 'Faza 2', hy: 'Փուլ 2' },
   title: { en: 'Assess', uk: 'Оцінювання', ro: 'Evaluează', hy: 'Գնահատել' },
   colourClass: 'phase-card-lime',
   description: {

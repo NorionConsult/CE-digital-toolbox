@@ -106,7 +106,7 @@ export const site = {
     {
       label: {
         en: 'Follow guides',
-        uk: 'Перейти до путівників',
+        uk: 'Дороговказ',
         ro: 'Urmează ghidurile',
         hy: 'Հետեւել ուղեցույցներին'
       },
@@ -124,7 +124,7 @@ export const site = {
     {
       label: {
         en: 'Find Cases',
-        uk: 'Знайти кейси',
+        uk: 'Приклади',
         ro: 'Găsește studii de caz',
         hy: 'Գտնել օրինակներ'
       },

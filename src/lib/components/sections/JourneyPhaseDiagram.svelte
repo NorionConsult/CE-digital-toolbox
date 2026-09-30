@@ -41,7 +41,7 @@
       ro: 'Închide descrierea fazei selectate',
       hy: 'Փակել ընտրված փուլի նկարագրությունը'
     },
-    viewPhase: { en: 'View phase', uk: 'Переглянути фазу', ro: 'Vezi faza', hy: 'Դիտել փուլը' }
+    viewPhase: { en: 'View phase', uk: 'Переглянути етап', ro: 'Vezi faza', hy: 'Դիտել փուլը' }
   };
 
   /** @type {JourneyPhaseStep[]} */
@@ -52,10 +52,10 @@
       edgePhase: true,
       phaseName: { en: 'Learn', uk: 'Навчання', ro: 'Învață', hy: 'Ծանոթանալ' },
       formerLabel: { en: 'Start with the basics', uk: 'Почніть з основ', ro: 'Începe cu elementele de bază', hy: 'Սկսեք հիմունքներից' },
-      shortDescription: { en: 'Understand basic CE concepts', uk: 'Зрозумійте базові поняття циркулярної економіки', ro: 'Înțelege conceptele de bază ale economiei circulare', hy: 'Հասկացեք շրջանաձեւ տնտեսության հիմնական գաղափարները' },
+      shortDescription: { en: 'Understand basic CE concepts', uk: 'Опанування базових концепцій циркулярної економіки', ro: 'Înțelege conceptele de bază ale economiei circulare', hy: 'Հասկացեք շրջանաձեւ տնտեսության հիմնական գաղափարները' },
       popUpText: {
         en: 'If you are new to circular economy and need a shared language and basic overview, then this phase is relevant for you. This phase introduces the core concepts of circular economy and resource efficient cleaner production.',
-        uk: 'Якщо ви лише знайомитеся з циркулярною економікою і потребуєте спільної мови та базового огляду, ця фаза для вас. Вона знайомить з основними поняттями циркулярної економіки та ресурсоефективного чистого виробництва.',
+        uk: 'Якщо Ви новачок у циркулярній економіці й прагнете розібратися в базових термінах та загальних принципах, почніть із цього етапу. Він знайомить із головними концепціями циркулярної економіки та ресурсоефективного й чистого виробництва (РЕЧВ).',
         ro: 'Dacă ești la început cu economia circulară și ai nevoie de un limbaj comun și o privire de ansamblu, această fază este relevantă pentru tine. Ea introduce conceptele de bază ale economiei circulare și ale producției mai curate și eficiente în utilizarea resurselor.',
         hy: 'Եթե նոր եք ծանոթանում շրջանաձեւ տնտեսությանը եւ ձեզ պետք է ընդհանուր լեզու ու հիմնական ակնարկ, այս փուլը ձեզ համար է։ Այն ներկայացնում է շրջանաձեւ տնտեսության եւ ռեսուրսաարդյունավետ մաքուր արտադրության հիմնական գաղափարները։'
       },
@@ -69,7 +69,7 @@
       edgePhase: false,
       phaseName: { en: 'Assess', uk: 'Оцінювання', ro: 'Evaluează', hy: 'Գնահատել' },
       formerLabel: { en: 'Find your starting point', uk: 'Знайдіть свою відправну точку', ro: 'Găsește punctul de plecare', hy: 'Գտեք ձեր մեկնարկային կետը' },
-      shortDescription: { en: 'Map and identify potential for improvement', uk: 'Картуйте й визначайте потенціал для покращення', ro: 'Cartografiază și identifică potențialul de îmbunătățire', hy: 'Քարտեզագրեք եւ գտեք բարելավման ներուժը' },
+      shortDescription: { en: 'Map and identify potential for improvement', uk: 'Картування та визначення потенціалу для вдосконалення', ro: 'Cartografiază și identifică potențialul de îmbunătățire', hy: 'Քարտեզագրեք եւ գտեք բարելավման ներուժը' },
       popUpText: {
         en: 'If you already have some interest in circular economy or resource efficiency but need a clearer picture of your resource flows and hotspots, then this phase is relevant for you. This phase helps you understand where your business stands today and identify gaps, priorities, and areas where improvement is possible.',
         uk: 'Якщо ви вже цікавитеся циркулярною економікою або ресурсоефективністю, але потребуєте чіткішої картини своїх ресурсних потоків і гарячих точок, ця фаза для вас. Вона допомагає зрозуміти поточний стан бізнесу, прогалини, пріоритети та сфери для покращення.',
@@ -86,7 +86,7 @@
       edgePhase: false,
       phaseName: { en: 'Explore', uk: 'Дослідження', ro: 'Explorează', hy: 'Ուսումնասիրել' },
       formerLabel: { en: 'Explore practical options', uk: 'Дослідіть практичні варіанти', ro: 'Explorează opțiuni practice', hy: 'Ուսումնասիրեք գործնական տարբերակներ' },
-      shortDescription: { en: 'Brainstorm and integrate circular principles', uk: 'Генеруйте ідеї та інтегруйте циркулярні принципи', ro: 'Generează idei și integrează principii circulare', hy: 'Ձևավորեք նոր գաղափարներ և դրանցում ներառեք շրջանաձև տնտեսության սկզբունքները' },
+      shortDescription: { en: 'Brainstorm and integrate circular principles', uk: 'Генерування ідей та інтеграція циркулярних принципів', ro: 'Generează idei și integrează principii circulare', hy: 'Ձևավորեք նոր գաղափարներ և դրանցում ներառեք շրջանաձև տնտեսության սկզբունքները' },
       popUpText: {
         en: 'If you know your main challenges and want to apply circular strategies, design principles and ideas that could fit your business context, then this phase is relevant for you. This phase helps you move from assessment to possible solutions, generate options, and prepare a stronger basis for deciding what to take forward.',
         uk: 'Якщо ви знаєте свої основні виклики й хочете застосувати циркулярні стратегії, принципи дизайну та ідеї, що відповідають вашому бізнес-контексту, ця фаза для вас. Вона допомагає перейти від оцінювання до можливих рішень, згенерувати варіанти й підготувати міцнішу основу для вибору подальших дій.',
@@ -101,9 +101,9 @@
       number: '4',
       panelSide: 'right',
       edgePhase: false,
-      phaseName: { en: 'Evaluate', uk: 'Оцінка потенціалу', ro: 'Analizează', hy: 'Գնահատել' },
+      phaseName: { en: 'Evaluate', uk: 'Пріоритизація', ro: 'Analizează', hy: 'Գնահատել' },
       formerLabel: { en: 'Evaluate what can work', uk: 'Оцініть, що може спрацювати', ro: 'Analizează ce poate funcționa', hy: 'Գնահատեք, թե ինչը կարող է աշխատել' },
-      shortDescription: { en: 'Review and prioritize Circular Economy options', uk: 'Перегляньте й пріоритезуйте варіанти циркулярної економіки', ro: 'Revizuiește și prioritizează opțiunile de economie circulară', hy: 'Վերանայեք եւ առաջնահերթեցրեք շրջանաձեւ տնտեսության տարբերակները' },
+      shortDescription: { en: 'Review and prioritize Circular Economy options', uk: 'Розгляд і пріоритизація рішень із циркулярної економіки', ro: 'Revizuiește și prioritizează opțiunile de economie circulară', hy: 'Վերանայեք եւ առաջնահերթեցրեք շրջանաձեւ տնտեսության տարբերակները' },
       popUpText: {
         en: 'If you have identified possible circular options, but need to compare their feasibility, risks, barriers, opportunities, and potential benefits, then this phase is relevant for you. This phase helps you test whether your opportunities make sense strategically, technically, operationally, and financially before investing more time and resources.',
         uk: 'Якщо ви визначили можливі циркулярні варіанти, але потрібно порівняти їхню здійсненність, ризики, бар’єри, можливості та потенційні вигоди, ця фаза для вас. Вона допомагає перевірити, чи мають ваші можливості стратегічний, технічний, операційний і фінансовий сенс до того, як вкладати більше часу й ресурсів.',
@@ -120,7 +120,7 @@
       edgePhase: false,
       phaseName: { en: 'Implement', uk: 'Впровадження', ro: 'Implementează', hy: 'Իրականացնել' },
       formerLabel: { en: 'Turn plans into action', uk: 'Перетворіть плани на дії', ro: 'Transformă planurile în acțiuni', hy: 'Վերածեք պլանները գործողությունների' },
-      shortDescription: { en: 'Plan and realise your selected ideas', uk: 'Плануйте й реалізуйте вибрані ідеї', ro: 'Planifică și realizează ideile selectate', hy: 'Պլանավորեք եւ իրականացրեք ընտրված գաղափարները' },
+      shortDescription: { en: 'Plan and realise your selected ideas', uk: 'Планування та втілення обраних ідей', ro: 'Planifică și realizează ideile selectate', hy: 'Պլանավորեք եւ իրականացրեք ընտրված գաղափարները' },
       popUpText: {
         en: 'If you have prioritised a circular opportunity and now need to define responsibilities, partners, milestones, and activities, then this phase is relevant for you. This phase helps you turn selected options into concrete actions, test ideas in practice and build momentum through realistic implementation steps.',
         uk: 'Якщо ви пріоритезували циркулярну можливість і тепер маєте визначити відповідальність, партнерів, етапи та дії, ця фаза для вас. Вона допомагає перетворити вибрані варіанти на конкретні дії, випробувати ідеї на практиці та рухатися вперед через реалістичні кроки впровадження.',
@@ -137,7 +137,7 @@
       edgePhase: true,
       phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկել' },
       formerLabel: { en: 'Track and keep improving', uk: 'Відстежуйте й покращуйте', ro: 'Urmărește și îmbunătățește continuu', hy: 'Հետեւեք եւ շարունակ բարելավեք' },
-      shortDescription: { en: 'Review and track progress', uk: 'Переглядайте й відстежуйте прогрес', ro: 'Revizuiește și urmărește progresul', hy: 'Վերանայեք եւ հետեւեք առաջընթացին' },
+      shortDescription: { en: 'Review and track progress', uk: 'Перегляд і відстеження прогресу', ro: 'Revizuiește și urmărește progresul', hy: 'Վերանայեք եւ հետեւեք առաջընթացին' },
       popUpText: {
         en: 'If you have implemented or tested circular actions, and you need simple indicators, data and feedback loops to understand what is working, then this phase is relevant for you. This phase helps you track results, improve over time, and share your experience.',
         uk: 'Якщо ви впровадили або протестували циркулярні дії й потребуєте простих показників, даних і циклів зворотного зв’язку, щоб зрозуміти, що працює, ця фаза для вас. Вона допомагає відстежувати результати, вдосконалюватися з часом і ділитися досвідом.',
