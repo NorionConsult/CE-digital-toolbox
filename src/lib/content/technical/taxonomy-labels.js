@@ -80,7 +80,7 @@ const taxonomyLabels = {
     },
     'Cross-sector': {
       en: 'Cross-sector',
-      uk: 'Міжсекторний',
+      uk: 'Міжгалузевий',
       ro: 'Transsectorial',
       hy: 'Միջոլորտային'
     },
@@ -122,7 +122,7 @@ const taxonomyLabels = {
     },
     Plastics: {
       en: 'Plastics',
-      uk: 'Пластмаси',
+      uk: 'Пластик',
       ro: 'Materiale plastice',
       hy: 'Պլաստիկ'
     },
@@ -330,13 +330,13 @@ const taxonomyLabels = {
   effort: {
     Low: {
       en: 'Low',
-      uk: 'Низькі',
+      uk: 'Низька',
       ro: 'Redus',
       hy: 'Ցածր'
     },
     Medium: {
       en: 'Medium',
-      uk: 'Середні',
+      uk: 'Середня',
       ro: 'Mediu',
       hy: 'Միջին'
     },

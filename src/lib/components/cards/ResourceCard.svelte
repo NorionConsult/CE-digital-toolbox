@@ -14,7 +14,7 @@
   export let variant = 'default';
 
   const labels = {
-    effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
+    effort: { en: 'Effort', uk: 'Складність', ro: 'Efort', hy: 'Ջանք' },
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },
     provider: { en: 'Provider', uk: 'Постачальник', ro: 'Furnizor', hy: 'Մատակարար' },
     access: { en: 'Access', uk: 'Доступ', ro: 'Acces', hy: 'Հասանելիություն' },
