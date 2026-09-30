@@ -110,7 +110,7 @@ export const guidedPathways = {
       title: { en: 'Textiles', uk: 'Текстиль', ro: 'Textile', hy: 'Տեքստիլ' },
       description: {
         en: 'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.',
-        uk: 'Цей галузевий путівник надає інструменти та поради для текстильних МСП, які хочуть впроваджувати практики циркулярної економіки.',
+        uk: 'Цей посібник пропонує інструменти та рекомендації для малих і середніх підприємств у текстильній галузі щодо впровадження практик циркулярної економіки.',
         ro: 'Acest ghid sectorial oferă instrumente și îndrumare pentru IMM-urile din textile care adoptă practici de economie circulară.',
         hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ եւ ուղղորդում տեքստիլի ՓՄՁ-ների համար՝ շրջանաձեւ տնտեսության գործելակերպեր կիրառելու նպատակով։'
       },
@@ -123,7 +123,7 @@ export const guidedPathways = {
       title: { en: 'Tourism', uk: 'Туризм', ro: 'Turism', hy: 'Զբոսաշրջություն' },
       description: {
         en: 'This sector guide provides practical guidance for tourism and hospitality small-medium enterprises (SMEs) adopting circular economy practices.',
-        uk: 'Цей галузевий путівник надає практичні поради для МСП у сфері туризму та гостинності, які впроваджують практики циркулярної економіки.',
+        uk: 'Цей посібник містить практичні рекомендації для малого та середнього бізнесу у туристичній галузі, які впроваджують практики циркулярної економіки.',
         ro: 'Acest ghid sectorial oferă îndrumare practică pentru IMM-urile din turism și ospitalitate care adoptă practici de economie circulară.',
         hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործնական ուղղորդում զբոսաշրջության եւ հյուրընկալության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։'
       },
