@@ -81,7 +81,7 @@ export const guidedPathways = {
     {
       number: { en: 'Sector 1', uk: 'Сектор 1', ro: 'Sectorul 1', hy: 'Ոլորտ 1' },
       slug: 'construction',
-      title: { en: 'Construction', uk: 'Будівництво', ro: 'Construcții', hy: 'Շինարարություն' },
+      title: { en: 'Construction', uk: 'Туризм', ro: 'Construcții', hy: 'Շինարարություն' },
       description: {
         en: 'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
         uk: 'Цей галузевий путівник надає інструменти, кейси та практичні поради для будівельних МСП, які впроваджують практики циркулярної економіки.',
