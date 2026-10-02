@@ -5,7 +5,7 @@
 */
 export const journeyPhasePage = {
   backLink: { en: 'Back to journey phases', uk: 'Назад до етапів шляху', ro: 'Înapoi la fazele parcursului', hy: 'Վերադառնալ անցման փուլերին' },
-  summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх фаз шляху', ro: 'Înapoi la toate fazele parcursului', hy: 'Վերադառնալ բոլոր փուլերին' },
+  summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх етапів', ro: 'Înapoi la toate fazele parcursului', hy: 'Վերադառնալ բոլոր փուլերին' },
   keyOutputs: { en: 'Key outputs:', uk: 'Ключові результати:', ro: 'Rezultate principale:', hy: 'Հիմնական արդյունքներ․' },
   start: { en: 'Start', uk: 'Почати', ro: 'Începe', hy: 'Սկսել' },
   step: { en: 'Step', uk: 'Крок', ro: 'Pasul', hy: 'Քայլ' },
@@ -24,8 +24,8 @@ export const journeyPhasePage = {
   openLargerImage: { en: 'Open larger image', uk: 'Відкрити збільшене зображення', ro: 'Deschide imaginea mărită', hy: 'Բացել ավելի մեծ պատկերը' },
   closeImage: { en: 'Close image', uk: 'Закрити зображення', ro: 'Închide imaginea', hy: 'Փակել պատկերը' },
   largerImage: { en: 'Larger journey phase image', uk: 'Збільшене зображення фази шляху', ro: 'Imagine mărită a fazei parcursului', hy: 'Ճանապարհի փուլի մեծացված պատկեր' },
-  checklist: { en: 'Checklist', uk: 'Чеклист', ro: 'Listă de verificare', hy: 'Ստուգաթերթ' },
-  nextPhase: { en: 'Next phase', uk: 'Наступна фаза', ro: 'Faza următoare', hy: 'Հաջորդ փուլ' },
+  checklist: { en: 'Checklist', uk: 'Чекліст', ro: 'Listă de verificare', hy: 'Ստուգաթերթ' },
+  nextPhase: { en: 'Next phase', uk: 'Наступний етап', ro: 'Faza următoare', hy: 'Հաջորդ փուլ' },
   finalCongratulations:
     { en: 'Congratulations! You have addressed the most important steps towards your circular economy transition! The work is ongoing, and re-evaluation is necessary to keep improving. Keep exploring:', uk: 'Вітаємо! Ви опрацювали найважливіші кроки на шляху до переходу до циркулярної економіки. Робота триває, а повторна оцінка допоможе й надалі вдосконалюватися. Продовжуйте досліджувати:', ro: 'Felicitări! Ai parcurs cei mai importanți pași ai tranziției tale către economia circulară. Munca este continuă, iar reevaluarea este necesară pentru îmbunătățire. Continuă să explorezi:', hy: 'Շնորհավորում ենք։ Դուք կատարել եք շրջանաձեւ տնտեսության անցման ամենակարեւոր քայլերը։ Աշխատանքը շարունակական է, իսկ վերագնահատումը անհրաժեշտ է հետագա բարելավման համար։ Շարունակեք ուսումնասիրել․' },
   exploreSectors: { en: 'Explore sectors', uk: 'Дослідити сектори', ro: 'Explorează sectoarele', hy: 'Ուսումնասիրել ոլորտները' },

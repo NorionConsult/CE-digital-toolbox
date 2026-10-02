@@ -350,7 +350,7 @@ const developSolutionsSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумок фази', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.', uk: 'Скористайтеся цим чеклістом, щоб підтвердити, що ви розумієте циркулярні принципи та визначили релевантні стратегії для вашого бізнесу.', ro: 'Folosește această listă pentru a confirma că înțelegi principiile circulare și ai identificat strategii relevante pentru afacerea ta.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ հասկանում եք շրջանաձեւ սկզբունքները եւ բացահայտել եք ձեր բիզնեսի համար համապատասխան ռազմավարություններ։' },
     { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступної фази, позначте всі пункти й натисніть кнопку після чекліста або поверніться на головну сторінку, щоб знайти іншу відповідну фазу, секторний інструмент чи каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }

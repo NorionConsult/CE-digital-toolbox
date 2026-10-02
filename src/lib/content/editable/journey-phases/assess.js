@@ -158,7 +158,7 @@ const hotspotSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумок фази', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you have mapped a practical baseline and identified your key hotspots.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що ви закартували практичну базову лінію та визначили ключові гарячі точки.', ro: 'Folosește această listă pentru a confirma că ai cartografiat o bază practică și ai identificat punctele critice principale.', hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ քարտեզագրել եք գործնական ելակետը եւ գտել հիմնական խնդրահարույց կետերը։' },
     { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступної фази, позначте всі пункти й натисніть кнопку після чекліста або поверніться на головну сторінку, щоб знайти іншу відповідну фазу, секторний інструмент чи каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
