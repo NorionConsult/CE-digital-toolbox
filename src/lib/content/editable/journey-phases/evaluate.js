@@ -25,7 +25,7 @@ const phaseCard = {
 const hero = {
   intro: {
     en: 'This phase focuses on prioritizing circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
-    uk: 'Цей етап присвячений пріоритезації можливостей циркулярної економіки через з´ясування їхньої практичної здійсненності, переваг, ризиків, бар´єрів та потенціалу створення доданої вартості.',
+    uk: "Цей етап присвячений пріоритезації можливостей циркулярної економіки через з´ясування їхньої практичної здійсненності, переваг, ризиків, бар´єрів та потенціалу створення доданої вартості.",
     ro: 'Această fază se concentrează pe prioritizarea oportunităților de economie circulară prin clarificarea fezabilității, beneficiilor, riscurilor, barierelor și potențialului de creare a valorii.',
     hy: 'Այս փուլը կենտրոնանում է շրջանաձեւ տնտեսության հնարավորությունների առաջնահերթեցման վրա՝ հստակեցնելով դրանց իրագործելիությունը, օգուտները, ռիսկերը, խոչընդոտները եւ արժեք ստեղծելու ներուժը։'
   },
