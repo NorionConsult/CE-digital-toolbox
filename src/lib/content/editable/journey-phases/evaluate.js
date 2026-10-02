@@ -12,7 +12,7 @@ const phaseCard = {
   number: '04',
   slug: 'evaluate',
   shortName: { en: 'Phase 4', uk: 'Етап 4', ro: 'Faza 4', hy: 'Փուլ 4' },
-  title: { en: 'Evaluate', uk: 'Оцінка', ro: 'Evaluează', hy: 'Գնահատել' },
+  title: { en: 'Evaluate', uk: 'Пріоритизація', ro: 'Evaluează', hy: 'Գնահատել' },
   colourClass: 'phase-card-blue',
   description: {
     en: 'Brings tools which support the transformation from linear to circular business models and the identification of risks, relevant barriers, and potential gains.',
@@ -97,9 +97,9 @@ const pathwaySection = {
 
 /* 4. DETAILED SECTION 1 */
 const shortlistStrategiesOptions = [
-  { en: 'Product as a Service (PaaS)', uk: 'Продукт як послуга (PaaS)', ro: 'Produs ca serviciu (PaaS)', hy: 'Ապրանքը որպես ծառայություն (PaaS)' },
+  { en: 'Product as a Service (PaaS)', uk: 'Продукт як послуга', ro: 'Produs ca serviciu (PaaS)', hy: 'Ապրանքը որպես ծառայություն (PaaS)' },
   { en: 'Resource Recovery', uk: 'Відновлення ресурсів', ro: 'Recuperarea resurselor', hy: 'Ռեսուրսների վերականգնում' },
-  { en: 'Extended Product Life', uk: 'Подовження строку служби продукту', ro: 'Durată de viață extinsă a produsului', hy: 'Արտադրանքի կյանքի երկարացում' },
+  { en: 'Extended Product Life', uk: 'Подовження життєвого циклу продукції', ro: 'Durată de viață extinsă a produsului', hy: 'Արտադրանքի կյանքի երկարացում' },
   { en: 'Sharing Platforms', uk: 'Платформи спільного використання', ro: 'Platforme de partajare', hy: 'Համօգտագործման հարթակներ' },
   { en: 'Circular Supply Chains', uk: 'Циркулярні ланцюги постачання', ro: 'Lanțuri de aprovizionare circulare', hy: 'Շրջանաձեւ մատակարարման շղթաներ' }
 ];
