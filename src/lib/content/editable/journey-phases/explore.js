@@ -24,7 +24,7 @@ const phaseCard = {
 const hero = {
   intro: {
     en: 'This phase supports the identification and comparison of possible circular economy choices. It can be used to explore strategies, generate ideas and move from assessment to practical opportunities.',
-    uk: 'Ця фаза підтримує визначення та порівняння можливих варіантів циркулярної економіки. Її можна використовувати для дослідження стратегій, генерування ідей і переходу від оцінювання до практичних можливостей.',
+    uk: 'Цей етап допомагає визначити та зіставити можливі циркулярні альтернативи. Він призначений для вивчення стратегій, генерації ідей і переходу від діагностики до практичних можливостей.',
     ro: 'Această fază sprijină identificarea și compararea opțiunilor posibile de economie circulară. Poate fi folosită pentru a explora strategii, a genera idei și a trece de la evaluare la oportunități practice.',
     hy: 'Այս փուլը աջակցում է շրջանաձեւ տնտեսության հնարավոր տարբերակների բացահայտմանը եւ համեմատությանը։ Այն կարելի է օգտագործել ռազմավարություններ ուսումնասիրելու, գաղափարներ ստեղծելու եւ գնահատումից գործնական հնարավորությունների անցնելու համար։'
   },
@@ -34,16 +34,16 @@ const hero = {
 
 /* 2. HERO SECTION BUTTONS */
 const sectionButtons = [
-  { sectionId: 'identify-options', label: { en: 'Identify options', uk: 'Визначити варіанти', ro: 'Identifică opțiuni', hy: 'Բացահայտել տարբերակները' } },
-  { sectionId: 'shape-value-model', label: { en: 'Shape value model', uk: 'Сформувати модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորել արժեքի մոդելը' } },
-  { sectionId: 'develop-solutions', label: { en: 'Develop solutions', uk: 'Розробити рішення', ro: 'Dezvoltă soluții', hy: 'Մշակել լուծումներ' } }
+  { sectionId: 'identify-options', label: { en: 'Identify options', uk: 'Визначення варіантів', ro: 'Identifică opțiuni', hy: 'Բացահայտել տարբերակները' } },
+  { sectionId: 'shape-value-model', label: { en: 'Shape value model', uk: 'Формування ціннісної моделі', ro: 'Modelează valoarea', hy: 'Ձեւավորել արժեքի մոդելը' } },
+  { sectionId: 'develop-solutions', label: { en: 'Develop solutions', uk: 'Опрацювання рішень', ro: 'Dezvoltă soluții', hy: 'Մշակել լուծումներ' } }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: { en: 'What option is applicable for you?', uk: 'Який варіант підходить вам?', ro: 'Ce opțiune ți se potrivește?', hy: 'Ո՞ր տարբերակն է ձեզ համապատասխանում։' },
+  title: { en: 'What option is applicable for you?', uk: 'Які варіанти підходять саме Вам?', ro: 'Ce opțiune ți se potrivește?', hy: 'Ո՞ր տարբերակն է ձեզ համապատասխանում։' },
   paragraphs: [
-    { en: 'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will consider which circular strategies are out there and how to redesign your products, services or value chains for the circular economy.', uk: 'Фаза дослідження поєднує оцінювання з ухваленням рішень. На основі того, що ви дізналися про свій бізнес, ви розглянете наявні циркулярні стратегії та способи переосмислення продуктів, послуг або ланцюгів створення цінності для циркулярної економіки.', ro: 'Faza Explorează face legătura dintre evaluare și luarea deciziilor. Pe baza a ceea ce ai aflat despre afacerea ta, vei analiza ce strategii circulare există și cum îți poți redesena produsele, serviciile sau lanțurile valorice pentru economia circulară.', hy: 'Ուսումնասիրել փուլը կապում է գնահատումը որոշումների կայացման հետ։ Ձեր բիզնեսի մասին սովորածի հիման վրա դուք կդիտարկեք առկա շրջանաձեւ ռազմավարությունները եւ ինչպես վերաձեւավորել արտադրանքը, ծառայությունները կամ արժեքի շղթաները շրջանաձեւ տնտեսության համար։' }
+    { en: 'The Explore phase bridges assessment with decision-making. Based on what you have learned about your business, you will consider which circular strategies are out there and how to redesign your products, services or value chains for the circular economy.', uk: 'Етап пошуку рішень поєднує діагностику з ухваленням рішень. Спираючись на результати оцінювання власного бізнесу, Ви проаналізуєте наявні циркулярні стратегії та з ʼясуєте, як переосмислити дизайн продукції, послуги чи ланцюги створення цінності відповідно до принципів циркулярної економіки.', ro: 'Faza Explorează face legătura dintre evaluare și luarea deciziilor. Pe baza a ceea ce ai aflat despre afacerea ta, vei analiza ce strategii circulare există și cum îți poți redesena produsele, serviciile sau lanțurile valorice pentru economia circulară.', hy: 'Ուսումնասիրել փուլը կապում է գնահատումը որոշումների կայացման հետ։ Ձեր բիզնեսի մասին սովորածի հիման վրա դուք կդիտարկեք առկա շրջանաձեւ ռազմավարությունները եւ ինչպես վերաձեւավորել արտադրանքը, ծառայությունները կամ արժեքի շղթաները շրջանաձեւ տնտեսության համար։' }
   ],
   cards: [
     {
@@ -52,45 +52,45 @@ const pathwaySection = {
       title: { en: 'Identify Your Options', uk: 'Визначте свої варіанти', ro: 'Identifică opțiunile', hy: 'Բացահայտեք ձեր տարբերակները' },
       description: {
         en: 'Use structured tools to map which strategies are feasible and relevant for your specific business, sector and supply chain.',
-        uk: 'Використовуйте структуровані інструменти, щоб визначити, які стратегії є здійсненними й релевантними для вашого бізнесу, сектору та ланцюга постачання.',
+        uk: 'Застосуйте структуровані інструменти, щоб визначити, які стратегії технічно й практично здійсненні та актуальні саме для вашого бізнесу, галузі та ланцюга постачання.',
         ro: 'Folosește instrumente structurate pentru a cartografia strategiile fezabile și relevante pentru afacerea, sectorul și lanțul tău de aprovizionare.',
         hy: 'Օգտագործեք կառուցվածքային գործիքներ՝ պարզելու համար, թե որ ռազմավարություններն են իրագործելի եւ համապատասխան ձեր բիզնեսի, ոլորտի եւ մատակարարման շղթայի համար։'
       },
       keyOutputs: [
         { en: 'A shared visual map of relevant circular strategies', uk: 'Спільна візуальна карта релевантних циркулярних стратегій', ro: 'O hartă vizuală comună a strategiilor circulare relevante', hy: 'Համապատասխան շրջանաձեւ ռազմավարությունների ընդհանուր տեսողական քարտեզ' },
-        { en: 'A clear picture of current circular activities', uk: 'Чітке уявлення про поточні циркулярні дії', ro: 'O imagine clară a activităților circulare actuale', hy: 'Ընթացիկ շրջանաձեւ գործողությունների հստակ պատկեր' },
-        { en: 'A long-list of feasible options for your business', uk: 'Довгий список здійсненних варіантів для вашого бізнесу', ro: 'O listă extinsă de opțiuni fezabile pentru afacerea ta', hy: 'Ձեր բիզնեսի համար իրագործելի տարբերակների երկար ցուցակ' }
+        { en: 'A clear picture of current circular activities', uk: 'Чітке розуміння вже впроваджених циркулярних практик', ro: 'O imagine clară a activităților circulare actuale', hy: 'Ընթացիկ շրջանաձեւ գործողությունների հստակ պատկեր' },
+        { en: 'A long-list of feasible options for your business', uk: 'Розширений перелік («довгий список») потенційних рішень для вашого підприємствау', ro: 'O listă extinsă de opțiuni fezabile pentru afacerea ta', hy: 'Ձեր բիզնեսի համար իրագործելի տարբերակների երկար ցուցակ' }
       ]
     },
     {
       sectionId: 'shape-value-model',
       number: '2',
-      title: { en: 'Shape the Value Model', uk: 'Сформуйте модель цінності', ro: 'Modelează valoarea', hy: 'Ձեւավորեք արժեքի մոդելը' },
+      title: { en: 'Shape the Value Model', uk: 'Формування ціннісної моделі', ro: 'Modelează valoarea', hy: 'Ձեւավորեք արժեքի մոդելը' },
       description: {
         en: 'Explore how your circular solution could deliver value for customers and your business.',
-        uk: 'Дослідіть, як ваше циркулярне рішення може створювати цінність для клієнтів і бізнесу.',
+        uk: 'Дослідіть, як обране циркулярне рішення створюватиме цінність для клієнтів і забезпечуватиме вигоду для вашого бізнесу.',
         ro: 'Explorează cum soluția ta circulară poate crea valoare pentru clienți și pentru afacerea ta.',
         hy: 'Ուսումնասիրեք, թե ինչպես կարող է ձեր շրջանաձեւ լուծումը արժեք ստեղծել հաճախորդների եւ ձեր բիզնեսի համար։'
       },
       keyOutputs: [
-        { en: 'A clearer view of possible circular value models', uk: 'Чіткіше бачення можливих циркулярних моделей цінності', ro: 'O perspectivă mai clară asupra posibilelor modele circulare de valoare', hy: 'Հնարավոր շրջանաձեւ արժեքի մոդելների ավելի հստակ պատկեր' },
-        { en: 'A stronger concept for customer and business value creation', uk: 'Сильніша концепція створення цінності для клієнтів і бізнесу', ro: 'Un concept mai solid pentru crearea de valoare pentru clienți și afacere', hy: 'Հաճախորդների եւ բիզնեսի համար արժեք ստեղծելու ավելի ուժեղ հայեցակարգ' }
+        { en: 'A clearer view of possible circular value models', uk: 'Чіткіше бачення можливих циркулярних моделей створення цінності', ro: 'O perspectivă mai clară asupra posibilelor modele circulare de valoare', hy: 'Հնարավոր շրջանաձեւ արժեքի մոդելների ավելի հստակ պատկեր' },
+        { en: 'A stronger concept for customer and business value creation', uk: 'Зріла концепція формування цінності для клієнтів і розвитку бізнесу', ro: 'Un concept mai solid pentru crearea de valoare pentru clienți și afacere', hy: 'Հաճախորդների եւ բիզնեսի համար արժեք ստեղծելու ավելի ուժեղ հայեցակարգ' }
       ]
     },
     {
       sectionId: 'develop-solutions',
       number: '3',
-      title: { en: 'Develop Solutions', uk: 'Розробіть рішення', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
+      title: { en: 'Develop Solutions', uk: 'Опрацювання рішень', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
       description: {
         en: 'Turn promising circular strategies into clearer solution concepts that can be discussed, improved and prepared for evaluation.',
-        uk: 'Перетворіть перспективні циркулярні стратегії на чіткіші концепції рішень, які можна обговорити, покращити й підготувати до оцінювання.',
+        uk: 'Перетворіть перспективні циркулярні стратегії на зрозумілі концепції рішень, які можна обговорити з командою, доопрацювати та підготувати до детальної оцінки й вибору.',
         ro: 'Transformă strategiile circulare promițătoare în concepte de soluții mai clare, care pot fi discutate, îmbunătățite și pregătite pentru evaluare.',
         hy: 'Խոստումնալից շրջանաձեւ ռազմավարությունները վերածեք ավելի հստակ լուծումների գաղափարների, որոնք կարելի է քննարկել, բարելավել եւ պատրաստել գնահատման համար։'
       },
       keyOutputs: [
-        { en: 'Bundled ideas and stronger solution concepts', uk: 'Згруповані ідеї та сильніші концепції рішень', ro: 'Idei grupate și concepte de soluții mai solide', hy: 'Միավորված գաղափարներ եւ ավելի ուժեղ լուծումների հայեցակարգեր' },
-        { en: 'A clearer view of which solutions fit your business', uk: 'Чіткіше бачення того, які рішення підходять вашому бізнесу', ro: 'O perspectivă mai clară asupra soluțiilor care se potrivesc afacerii tale', hy: 'Ավելի հստակ պատկեր, թե որ լուծումներն են համապատասխանում ձեր բիզնեսին' },
-        { en: 'Initial concepts ready to evaluate in the next phase', uk: 'Початкові концепції, готові до оцінювання в наступній фазі', ro: 'Concepte inițiale pregătite pentru evaluare în faza următoare', hy: 'Նախնական հայեցակարգեր, որոնք պատրաստ են գնահատման հաջորդ փուլում' }
+        { en: 'Bundled ideas and stronger solution concepts', uk: 'Згруповані ідеї та оформлені концепції рішень', ro: 'Idei grupate și concepte de soluții mai solide', hy: 'Միավորված գաղափարներ եւ ավելի ուժեղ լուծումների հայեցակարգեր' },
+        { en: 'A clearer view of which solutions fit your business', uk: 'Чітке розуміння, які саме рішення найкраще відповідають профілю вашого підприємства', ro: 'O perspectivă mai clară asupra soluțiilor care se potrivesc afacerii tale', hy: 'Ավելի հստակ պատկեր, թե որ լուծումներն են համապատասխանում ձեր բիզնեսին' },
+        { en: 'Initial concepts ready to evaluate in the next phase', uk: 'Початкові концепції, готові до оцінки й вибору на наступному етапі', ro: 'Concepte inițiale pregătite pentru evaluare în faza următoare', hy: 'Նախնական հայեցակարգեր, որոնք պատրաստ են գնահատման հաջորդ փուլում' }
       ]
     }
   ]
@@ -104,7 +104,7 @@ const identifyOptionsSection = {
   paragraphs: [
     {
       en: 'This section helps you translate broad circular economy strategies into options that relate directly to your products, operations and value chain.',
-      uk: 'Цей розділ допомагає перетворити широкі стратегії циркулярної економіки на варіанти, що безпосередньо пов’язані з вашими продуктами, операціями та ланцюгом цінності.',
+      uk: 'Цей розділ допомагає перетворити загальні стратегії циркулярної економіки у конкретні практичні рішення, безпосередньо повʼязані з вашою продукцією, виробничими процесами та ланцюгом створення цінності.',
       ro: 'Această secțiune te ajută să transformi strategiile generale de economie circulară în opțiuni legate direct de produsele, operațiunile și lanțul valoric al afacerii tale.',
       hy: 'Այս բաժինը օգնում է լայն շրջանաձեւ տնտեսության ռազմավարությունները վերածել տարբերակների, որոնք անմիջապես կապված են ձեր արտադրանքի, գործառնությունների եւ արժեքի շղթայի հետ։'
     }
@@ -119,17 +119,17 @@ const identifyOptionsSection = {
     title: { en: 'Circular Economy strategies', uk: 'Стратегії циркулярної економіки', ro: 'Strategii de economie circulară', hy: 'Շրջանաձեւ տնտեսության ռազմավարություններ' },
     description: {
       en: "The image below shows how the 9R strategies form a hierarchy of circular economy interventions, ranked according to how much value they preserve. At the top, R0 Refuse avoids the need for a product or resource altogether. R1 Rethink and R2 Reduce focus on using products and resources more efficiently, while R3-R6 Reuse, Repair, Refurbish and Remanufacture aim to keep products, components and their embedded value in use for as long as possible. || Further down the hierarchy, R7 Repurpose gives products or components a new function, R8 Recycle recovers material value through processing, and R9 Recover, typically through energy recovery, retains only a limited share of the original value. || The key principle is that the further down the hierarchy an intervention sits, the more of the economic, environmental and social value embedded in the product is generally lost. Recycling can therefore be important, but it should not automatically be the starting point for circular innovation.|| The framework can help challenge existing assumptions, identify a wider range of possible strategies and prioritise exploration of higher-value options before moving towards recycling or recovery. With this perspective in mind, you can move on to a practical workshop exercise to explore relevant circular strategies, or use other tools in the Explore phase to identify and develop possible options.",
-      uk: 'Зображення нижче показує, як стратегії 9R утворюють ієрархію циркулярних втручань, упорядковану за тим, скільки цінності вони зберігають. На верхньому рівні R0 Refuse допомагає взагалі уникнути потреби у продукті чи ресурсі. R1 Rethink і R2 Reduce зосереджуються на ефективнішому використанні продуктів і ресурсів, тоді як R3-R6 Reuse, Repair, Refurbish і Remanufacture спрямовані на те, щоб продукти, компоненти та їхня вбудована цінність залишалися у використанні якомога довше. || Нижче в ієрархії R7 Repurpose надає продуктам або компонентам нову функцію, R8 Recycle відновлює матеріальну цінність через переробку, а R9 Recover, зазвичай через енергетичне відновлення, зберігає лише обмежену частину початкової цінності. || Ключовий принцип полягає в тому, що чим нижче втручання розташоване в ієрархії, тим більше економічної, екологічної та соціальної цінності продукту зазвичай втрачається. Переробка може бути важливою, але вона не має автоматично бути стартовою точкою циркулярних інновацій.|| Ця рамка допомагає ставити під сумнів наявні припущення, визначати ширший спектр можливих стратегій і пріоритезувати варіанти з вищим збереженням цінності перед переходом до переробки або відновлення. З цією перспективою ви можете перейти до практичного воркшопу з вивчення релевантних циркулярних стратегій або використати інші інструменти фази Explore для визначення й розвитку можливих варіантів.',
+      uk: 'Наведена нижче схема демонструє, як стратегії моделі 9R формують ієрархію циркулярних підходів, упорядкованих за рівнем збереження цінності. На самій вершині – R0 Відмова (Refuse), що взагалі усуває потребу у виробі чи ресурсі. Стратегії R1 Переосмислення (Rethink) та R2 Скорочення (Reduce) спрямовані на ефективніше використання ресурсів і продукції. Рівні R3–R6: Повторне використання (Reuse), Ремонт (Repair), Модернізація (Refurbish) та Повторне виробництво (Remanufacture) покликані утримувати вироби, їхні складові частини та втілену в них цінність в обігу якомога довше. || Нижче за ієрархією розташовані: R7 Перепрофілювання (Repurpose), що дає виробам або компонентам нову функцію; R8 Перероблення (Recycle), що повертає цінність матеріалів шляхом їхнього перероблення на сировину; та R9 Відновлення (Recover), здебільшого через рекуперацію енергії, що зберігає лише незначну частку первинної цінності. || Ключовий принцип простий: що нижче розташований захід в ієрархії, то більша частина економічної, екологічної та соціальної цінності, закладеної у виробі, зазвичай безповоротно втрачається. Тому перероблення вторинної сировини хоч і важливе, але не має автоматично бути єдиною чи першою відправною точкою для циркулярних інновацій.|| Цей підхід допомагає переглянути усталені припущення, побачити значно ширший спектр рішень і надати пріоритет вивченню варіантів із вищим рівнем збереження цінності, перш ніж переходити до перероблення чи спалювання з утилізацією енергії. З огляду на це Ви можете перейти до практичного командного семінару для пошуку релевантних циркулярних стратегій або скористатися іншими інструментами Етапу 3 для формування переліку можливих рішень..',
       ro: 'Imaginea de mai jos arată cum strategiile 9R formează o ierarhie a intervențiilor de economie circulară, ordonate după câtă valoare păstrează. În partea de sus, R0 Refuse evită complet nevoia unui produs sau resursă. R1 Rethink și R2 Reduce se concentrează pe utilizarea mai eficientă a produselor și resurselor, iar R3-R6 Reuse, Repair, Refurbish și Remanufacture urmăresc să mențină produsele, componentele și valoarea lor în uz cât mai mult timp posibil. || Mai jos în ierarhie, R7 Repurpose oferă produselor sau componentelor o funcție nouă, R8 Recycle recuperează valoarea materială prin procesare, iar R9 Recover, de obicei prin recuperare energetică, păstrează doar o parte limitată din valoarea inițială. || Principiul-cheie este că, pe măsură ce o intervenție se află mai jos în ierarhie, se pierde de regulă mai mult din valoarea economică, de mediu și socială încorporată în produs. Reciclarea poate fi importantă, dar nu ar trebui să fie automat punctul de plecare pentru inovarea circulară.|| Acest cadru poate ajuta la provocarea presupunerilor existente, identificarea unei game mai largi de strategii și prioritizarea opțiunilor cu valoare mai mare înainte de a trece la reciclare sau recuperare. Cu această perspectivă, poți continua cu un atelier practic pentru explorarea strategiilor circulare relevante sau poți folosi alte instrumente din faza Explore pentru a identifica și dezvolta opțiuni posibile.',
       hy: 'Ստորեւ ներկայացված պատկերը ցույց է տալիս, թե ինչպես են 9R ռազմավարությունները կազմում շրջանաձեւ տնտեսության միջամտությունների հիերարխիա՝ դասավորված ըստ պահպանվող արժեքի։ Վերեւում R0 Refuse-ը ամբողջությամբ խուսափում է արտադրանքի կամ ռեսուրսի անհրաժեշտությունից։ R1 Rethink-ը եւ R2 Reduce-ը կենտրոնանում են արտադրանքի եւ ռեսուրսների ավելի արդյունավետ օգտագործման վրա, մինչդեռ R3-R6 Reuse, Repair, Refurbish եւ Remanufacture ռազմավարությունները նպատակ ունեն արտադրանքը, բաղադրիչները եւ դրանց մեջ ներդրված արժեքը հնարավորինս երկար պահել օգտագործման մեջ։ || Հիերարխիայի ավելի ներքեւում R7 Repurpose-ը ապրանքներին կամ բաղադրիչներին տալիս է նոր գործառույթ, R8 Recycle-ը վերամշակման միջոցով վերականգնում է նյութական արժեքը, իսկ R9 Recover-ը, սովորաբար էներգիայի վերականգնման միջոցով, պահպանում է սկզբնական արժեքի միայն սահմանափակ մասը։ || Հիմնական սկզբունքն այն է, որ որքան ավելի ներքեւ է միջամտությունը հիերարխիայում, այնքան ավելի շատ է սովորաբար կորցվում արտադրանքի մեջ ներդրված տնտեսական, բնապահպանական եւ սոցիալական արժեքը։ Վերամշակումը կարող է կարեւոր լինել, բայց այն չպետք է ավտոմատ կերպով լինի շրջանաձեւ նորարարության մեկնարկային կետը։|| Այս շրջանակը կարող է օգնել վերանայել առկա ենթադրությունները, բացահայտել հնարավոր ռազմավարությունների ավելի լայն շրջանակ եւ առաջնահերթություն տալ ավելի բարձր արժեք պահող տարբերակների ուսումնասիրությանը՝ նախքան վերամշակման կամ վերականգնման ուղղությամբ շարժվելը։ Այս տեսանկյունով կարող եք անցնել գործնական աշխատարանի՝ համապատասխան շրջանաձեւ ռազմավարությունները ուսումնասիրելու համար, կամ օգտագործել Explore փուլի այլ գործիքները՝ հնարավոր տարբերակները բացահայտելու եւ զարգացնելու համար։'
     },
     src: '/phase-content/phase-3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
     alt: { en: 'The 9R circular economy strategies arranged by value preservation', uk: 'Стратегії циркулярної економіки 9R, упорядковані за збереженням цінності', ro: 'Strategiile economiei circulare 9R organizate după păstrarea valorii', hy: '9R շրջանաձեւ տնտեսության ռազմավարությունները՝ դասավորված ըստ արժեքի պահպանման' },
     caption: {
-      en: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
-      uk: 'Ієрархія стратегій циркулярної економіки 9R. На основі: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
-      ro: 'Ierarhia 9R a strategiilor de economie circulară. Pe baza: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
-      hy: 'Շրջանաձեւ տնտեսության 9R ռազմավարությունների հիերարխիան։ Հիմնված է՝ United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations'
+      en: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Настанови Конференції європейських статистиків щодо вимірювання циркулярної економіки, Частина A: Концептуальні засади, показники та методологія вимірювання (ECE/CES/STAT/2023/5). United Nations',
+      uk: 'Ієрархія стратегій циркулярної економіки 9R. За матеріалами: Європейська економічна комісія ООН та Організація економічного співробітництва та розвитку (2024 р.). Настанови Конференції європейських статистиків щодо вимірювання циркулярної економіки, Частина A: Концептуальні засади, показники та методологія вимірювання (ECE/CES/STAT/2023/5). United Nations',
+      ro: 'Ierarhia 9R a strategiilor de economie circulară. Pe baza: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Настанови Конференції європейських статистиків щодо вимірювання циркулярної економіки, Частина A: Концептуальні засади, показники та методологія вимірювання (ECE/CES/STAT/2023/5). United Nations',
+      hy: 'Շրջանաձեւ տնտեսության 9R ռազմավարությունների հիերարխիան։ Հիմնված է՝ United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Настанови Конференції європейських статистиків щодо вимірювання циркулярної економіки, Частина A: Концептуальні засади, показники та методологія вимірювання (ECE/CES/STAT/2023/5). United Nations'
     },
     maxWidth: '680px',
     zoomable: true
@@ -145,23 +145,23 @@ const identifyOptionsSection = {
     The workshop appears immediately after the section paragraphs above.
   */
   circularStrategiesWorkshop: {
-    subtitle: { en: 'Explore possible circular strategies', uk: 'Дослідіть можливі циркулярні стратегії', ro: 'Explorează posibile strategii circulare', hy: 'Ուսումնասիրեք հնարավոր շրջանաձեւ ռազմավարությունները' },
+    subtitle: { en: 'Explore possible circular strategies', uk: 'ДПошук потенційних циркулярних стратегій', ro: 'Explorează posibile strategii circulare', hy: 'Ուսումնասիրեք հնարավոր շրջանաձեւ ռազմավարությունները' },
     title: {
       en: 'Circular Strategies Wheel Workshop',
-      uk: 'Воркшоп Circular Strategies Wheel',
+      uk: 'Семінар «Колесо циркулярних стратегій»',
       ro: 'Atelierul Circular Strategies Wheel',
       hy: 'Circular Strategies Wheel աշխատարան'
     },
     icon: 'recycling',
     introduction: {
       en: "The Circular Strategies Wheel gives your team a shared visual overview of circular strategies across the three phases of a product or service's life: start of life, product life and end of life. It turns circularity from an abstract idea into something tangible and actionable, helping your team connect relevant strategies to your business context. By working through it together, you will identify key opportunities, areas of interest and practical barriers, creating a grounded, team-owned starting point for building your circular business model.",
-      uk: 'Circular Strategies Wheel дає вашій команді спільний візуальний огляд циркулярних стратегій на трьох етапах життя продукту або послуги: початок життя, використання продукту та кінець життя. Він перетворює циркулярність з абстрактної ідеї на щось відчутне й практичне, допомагаючи пов’язати релевантні стратегії з вашим бізнес-контекстом. Працюючи з ним разом, ви визначите ключові можливості, сфери інтересу та практичні бар’єри і створите обґрунтовану командну відправну точку для побудови циркулярної бізнес-моделі.',
+      uk: '«Колесо циркулярних стратегій» дає команді спільне наочне уявлення про циркулярні підходи на трьох етапах життєвого циклу продукту чи послуги: створення виробу, період експлуатації та завершення життєвого циклу. Інструмент перетворює циркулярність з абстрактної ідеї на зрозумілі практичні дії та допомагає співставити необхідні стратегії зі специфікою вашого бізнесу. Працюючи разом, Ви визначите ключові можливості, перспективні напрями й практичні барʼєри, сформувавши спільну обґрунтовану основу для побудови власної циркулярної бізнес-моделі.',
       ro: 'Circular Strategies Wheel oferă echipei tale o imagine vizuală comună asupra strategiilor circulare în cele trei etape ale vieții unui produs sau serviciu: începutul vieții, viața produsului și sfârșitul vieții. Transformă circularitatea dintr-o idee abstractă în ceva concret și acționabil, ajutând echipa să conecteze strategiile relevante la contextul afacerii. Lucrând împreună cu acest instrument, veți identifica oportunități-cheie, zone de interes și bariere practice, creând un punct de pornire fundamentat și asumat de echipă pentru dezvoltarea modelului de afaceri circular.',
       hy: 'Circular Strategies Wheel-ը ձեր թիմին տալիս է շրջանաձեւ ռազմավարությունների ընդհանուր տեսողական պատկեր՝ արտադրանքի կամ ծառայության կյանքի երեք փուլերում՝ կյանքի սկիզբ, արտադրանքի կյանք եւ կյանքի ավարտ։ Այն շրջանաձեւությունը վերածում է վերացական գաղափարից շոշափելի եւ կիրառելի բանի՝ օգնելով թիմին կապել համապատասխան ռազմավարությունները ձեր բիզնես համատեքստի հետ։ Միասին աշխատելով՝ դուք կբացահայտեք հիմնական հնարավորությունները, հետաքրքրության ոլորտները եւ գործնական խոչընդոտները՝ ստեղծելով հիմնավորված, թիմի կողմից ընդունված մեկնարկային կետ շրջանաձեւ բիզնես մոդել կառուցելու համար։'
     },
     outcome: {
       en: 'By the end of the exercise, your team will have a prioritised view of the most relevant circular strategies, a shared understanding of key opportunities and obstacles, and a clear focus area for developing your circular business model.',
-      uk: 'Наприкінці вправи ваша команда матиме пріоритезований огляд найрелевантніших циркулярних стратегій, спільне розуміння ключових можливостей і перешкод та чітку фокусну сферу для розвитку циркулярної бізнес-моделі.',
+      uk: 'наприкінці вправи команда отримає пріоритетний перелік найактуальніших циркулярних стратегій, спільне розуміння ключових можливостей і перешкод, а також чіткий фокус для розвитку циркулярної бізнес-моделі.',
       ro: 'La finalul exercițiului, echipa ta va avea o imagine prioritizată a celor mai relevante strategii circulare, o înțelegere comună a oportunităților și obstacolelor-cheie și o zonă clară de focus pentru dezvoltarea modelului de afaceri circular.',
       hy: 'Վարժության ավարտին ձեր թիմը կունենա առավել համապատասխան շրջանաձեւ ռազմավարությունների առաջնահերթացված պատկեր, հիմնական հնարավորությունների ու խոչընդոտների ընդհանուր ըմբռնում եւ հստակ ուղղություն շրջանաձեւ բիզնես մոդելը զարգացնելու համար։'
     },
@@ -170,19 +170,19 @@ const identifyOptionsSection = {
       time: '5 min',
       text: {
         en: 'Print the Circular Strategies Wheel at A1 size and position it so the whole team can read and work on it at the same time, ideally on a wall at standing height. Make sure every participant has pens and a set of all three Post-it colours before you begin.',
-        uk: 'Надрукуйте Circular Strategies Wheel у форматі A1 і розмістіть так, щоб уся команда могла одночасно читати й працювати з ним, бажано на стіні на рівні очей. Перед початком переконайтеся, що кожен учасник має ручки та стікери всіх трьох кольорів.',
+        uk: 'Роздрукуйте шаблон «Колесо циркулярних стратегій» у форматі A1 та закріпіть його так, щоб уся команда могла вільно читати схему та працювати разом – найкраще на стіні на рівні очей. Переконайтеся, що перед початком роботи кожен учасник має ручку та набір стікерів усіх трьох кольорів.',
         ro: 'Tipărește Circular Strategies Wheel la dimensiunea A1 și amplasează-l astfel încât întreaga echipă să îl poată citi și folosi în același timp, ideal pe un perete la înălțimea de lucru. Înainte de început, asigură-te că fiecare participant are pixuri și seturi de Post-it în toate cele trei culori.',
         hy: 'Տպեք Circular Strategies Wheel-ը A1 չափով եւ տեղադրեք այնպես, որ ամբողջ թիմը կարողանա միաժամանակ կարդալ եւ աշխատել դրա վրա, ցանկալի է՝ պատին կանգնած բարձրության վրա։ Սկսելուց առաջ համոզվեք, որ յուրաքանչյուր մասնակից ունի գրիչներ եւ երեք գույնի Post-it նշումներ։'
       },
       details: [
-        { en: 'Time: 30-35 minutes', uk: 'Час: 30-35 хвилин', ro: 'Timp: 30-35 de minute', hy: 'Ժամանակ՝ 30-35 րոպե' },
-        { en: 'Best for: Teams of 3-8 people', uk: 'Найкраще для: команд із 3-8 людей', ro: 'Potrivit pentru: echipe de 3-8 persoane', hy: 'Լավագույնը՝ 3-8 հոգանոց թիմերի համար' }
+        { en: 'Time: 30-35 minutes', uk: 'Тривалість: 30-35 хвилин', ro: 'Timp: 30-35 de minute', hy: 'Ժամանակ՝ 30-35 րոպե' },
+        { en: 'Best for: Teams of 3-8 people', uk: 'Оптимальний склад: команди від 3 до 8 осіб', ro: 'Potrivit pentru: echipe de 3-8 persoane', hy: 'Լավագույնը՝ 3-8 հոգանոց թիմերի համար' }
       ],
-      listTitle: { en: 'You will need:', uk: 'Вам знадобиться:', ro: 'Vei avea nevoie de:', hy: 'Ձեզ պետք կլինի՝' },
+      listTitle: { en: 'You will need:', uk: 'Вам знадобляться:', ro: 'Vei avea nevoie de:', hy: 'Ձեզ պետք կլինի՝' },
       items: [
-        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Полотно Circular Strategies Wheel, надруковане у форматі A1 і розміщене так, щоб усі могли до нього дістатися', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Circular Strategies Wheel ձևանմուշը՝ տպված A1 չափով եւ տեղադրված բոլորի համար հասանելի վայրում' },
-        { en: 'Post-its in three colours: green for opportunities, yellow for curiosities and pink for challenges', uk: 'Стікери трьох кольорів: зелені для можливостей, жовті для запитань/цікавості та рожеві для викликів', ro: 'Post-it-uri în trei culori: verde pentru oportunități, galben pentru curiozități și roz pentru provocări', hy: 'Post-it նշումներ երեք գույնով՝ կանաչը հնարավորությունների, դեղինը հետաքրքրությունների, վարդագույնը մարտահրավերների համար' },
-        { en: 'Pens for everyone', uk: 'Ручки для всіх', ro: 'Pixuri pentru toți', hy: 'Գրիչներ բոլորի համար' }
+        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Шаблон «Колесо циркулярних стратегій», роздрукований у форматі A1 та розміщений у зручному для спільної роботи місці', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Circular Strategies Wheel ձևանմուշը՝ տպված A1 չափով եւ տեղադրված բոլորի համար հասանելի վայրում' },
+        { en: 'Post-its in three colours: green for opportunities, yellow for curiosities and pink for challenges', uk: 'Стікери трьох кольорів: зелені – для можливостей, жовті – для відкритих питань і цікавих ідей, рожеві – для викликів та обмежень', ro: 'Post-it-uri în trei culori: verde pentru oportunități, galben pentru curiozități și roz pentru provocări', hy: 'Post-it նշումներ երեք գույնով՝ կանաչը հնարավորությունների, դեղինը հետաքրքրությունների, վարդագույնը մարտահրավերների համար' },
+        { en: 'Pens for everyone', uk: 'Ручки або маркери для кожного учасника', ro: 'Pixuri pentru toți', hy: 'Գրիչներ բոլորի համար' }
       ],
       linkLabel: 'Circular Strategies Wheel Canvas',
       link:
@@ -331,7 +331,7 @@ const shapeValueModelSection = {
 /* 6. DETAILED SECTION 3 */
 const developSolutionsSection = {
   id: 'develop-solutions',
-  title: { en: 'Develop Solutions', uk: 'Розробіть рішення', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
+  title: { en: 'Develop Solutions', uk: 'Опрацювання рішень', ro: 'Dezvoltă soluții', hy: 'Մշակեք լուծումներ' },
   resourceTag: 'explore:develop-solutions',
   paragraphs: [
     {
