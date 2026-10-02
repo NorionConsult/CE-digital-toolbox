@@ -258,7 +258,7 @@ const phaseSummary = {
     },
     {
       en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.',
-      uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка зʼявиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити повний каталог інструментів.',
+      uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.',
       ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul care apare după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumentele sectoriale ori catalogul de instrumente.',
       hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ գտնելու համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը։'
     }
