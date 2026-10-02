@@ -155,7 +155,7 @@ export const foodAndAgricultureBarriersSection = {
 // placements in src/lib/content/editable/tools/tool-catalogue.js to display it automatically.
 export const foodAndAgricultureRelevantToolsSection = {
   id: 'relevant-tools',
-  title: { en: 'Relevant tools', uk: 'Релевантні інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' },
+  title: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' },
   intro: ''
 };
 
@@ -171,7 +171,7 @@ export const foodAndAgriculture = {
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: foodAndAgricultureIntroSection.id },
     { label: { en: 'Cases', uk: 'Кейси', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: foodAndAgricultureCasesSection.id },
     { label: { en: 'Barriers & opportunities', uk: 'Бар’єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: foodAndAgricultureBarriersSection.id },
-    { label: { en: 'Relevant tools', uk: 'Релевантні інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: foodAndAgricultureRelevantToolsSection.id }
+    { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: foodAndAgricultureRelevantToolsSection.id }
   ],
   sections: [
     foodAndAgricultureIntroSection,

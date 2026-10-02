@@ -6,8 +6,8 @@
 export const journeyPhasePage = {
   backLink: { en: 'Back to journey phases', uk: 'Назад до етапів шляху', ro: 'Înapoi la fazele parcursului', hy: 'Վերադառնալ անցման փուլերին' },
   summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх етапів', ro: 'Înapoi la toate fazele parcursului', hy: 'Վերադառնալ բոլոր փուլերին' },
-  keyOutputs: { en: 'Key outputs:', uk: 'Ключові результати:', ro: 'Rezultate principale:', hy: 'Հիմնական արդյունքներ․' },
-  start: { en: 'Start', uk: 'Почати', ro: 'Începe', hy: 'Սկսել' },
+  keyOutputs: { en: 'Key outputs:', uk: 'Основні результати:', ro: 'Rezultate principale:', hy: 'Հիմնական արդյունքներ․' },
+  start: { en: 'Start', uk: 'Розпочати', ro: 'Începe', hy: 'Սկսել' },
   step: { en: 'Step', uk: 'Крок', ro: 'Pasul', hy: 'Քայլ' },
   complete: { en: 'complete', uk: 'виконано', ro: 'finalizate', hy: 'ավարտված' },
   whatItMeans: { en: 'What it means', uk: 'Що це означає', ro: 'Ce înseamnă', hy: 'Ինչ է դա նշանակում' },
@@ -31,6 +31,6 @@ export const journeyPhasePage = {
   exploreSectors: { en: 'Explore sectors', uk: 'Дослідити сектори', ro: 'Explorează sectoarele', hy: 'Ուսումնասիրել ոլորտները' },
   seeCases: { en: 'See cases', uk: 'Переглянути кейси', ro: 'Vezi studiile de caz', hy: 'Դիտել օրինակները' },
   seeTools: { en: 'See tools', uk: 'Переглянути інструменти', ro: 'Vezi instrumentele', hy: 'Դիտել գործիքները' },
-  relatedTitle: { en: 'Relevant tools', uk: 'Релевантні інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' },
+  relatedTitle: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' },
   relatedEmpty: { en: 'No tools have been added for this phase yet.', uk: 'Для цієї фази ще не додано інструментів.', ro: 'Încă nu au fost adăugate instrumente pentru această fază.', hy: 'Այս փուլի համար դեռ գործիքներ չեն ավելացվել։' }
 };
