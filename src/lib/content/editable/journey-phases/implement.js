@@ -56,8 +56,8 @@ const pathwaySection = {
       },
       keyOutputs: [
         { en: 'Defined implementation actions', uk: 'Визначені заходи щодо впровадження', ro: 'Acțiuni de implementare definite', hy: 'Սահմանված իրականացման գործողություններ' },
-        { en: 'Named owners and responsibilities', uk: 'Призначені відповідальні та ролі', ro: 'Responsabili și responsabilități stabilite', hy: 'Նշված պատասխանատուներ եւ պարտականություններ' },
-        { en: 'Milestones and review schedule', uk: 'Етапи та графік перегляду', ro: 'Etape și calendar de revizuire', hy: 'Հանգրվաններ եւ վերանայման ժամանակացույց' }
+        { en: 'Named owners and responsibilities', uk: 'Призначені відповідальні особи та розподілені обов´язки', ro: 'Responsabili și responsabilități stabilite', hy: 'Նշված պատասխանատուներ եւ պարտականություններ' },
+        { en: 'Milestones and review schedule', uk: 'Контрольні точки (проміжні етапи) та графік моніторингу/перегляду', ro: 'Etape și calendar de revizuire', hy: 'Հանգրվաններ եւ վերանայման ժամանակացույց' }
       ]
     }
   ]
@@ -69,10 +69,10 @@ const implementationPlanSection = {
   title: { en: 'Implementation Plan & Roadmap', uk: 'План упровадження та дорожня карта', ro: 'Plan și foaie de parcurs pentru implementare', hy: 'Իրականացման պլան եւ ճանապարհային քարտեզ' },
   resourceTag: 'implement:implementation-plan',
   paragraphs: [
-    { en: 'Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage. At this point, the focus is no longer on choosing the idea, but on organising the work needed to make it happen.', uk: 'Планування впровадження перетворює вибрану циркулярну стратегію на послідовність практичних дій, якими бізнес може керувати. На цьому етапі фокус уже не на виборі ідеї, а на організації роботи, потрібної для її реалізації.', ro: 'Planificarea implementării transformă o strategie circulară selectată într-o succesiune de activități practice pe care afacerea le poate gestiona. În acest punct, accentul nu mai este pe alegerea ideii, ci pe organizarea muncii necesare pentru a o realiza.', hy: 'Իրականացման պլանավորումը ընտրված շրջանաձեւ ռազմավարությունը վերածում է գործնական գործողությունների հաջորդականության, որը բիզնեսը կարող է կառավարել։ Այս փուլում ուշադրությունը այլեւս գաղափարի ընտրության վրա չէ, այլ դրա իրականացման համար անհրաժեշտ աշխատանքի կազմակերպման։' },
-    { en: "Start by defining the scope: which circular opportunity is being implemented, which parts of the business it affects, the timeframe, and what is deliberately left out for this round. Then translate the opportunity into concrete actions, separating quick wins from longer structural changes.", uk: 'Почніть із визначення рамок: яка циркулярна можливість впроваджується, на які частини бізнесу вона впливає, які часові межі та що свідомо не включається в цей раунд. Потім перетворіть можливість на конкретні дії, відокремлюючи швидкі результати від довших структурних змін.', ro: 'Începe prin definirea domeniului: ce oportunitate circulară este implementată, ce părți ale afacerii afectează, care este perioada de timp și ce este lăsat intenționat în afara acestei runde. Apoi transformă oportunitatea în acțiuni concrete, separând câștigurile rapide de schimbările structurale mai lungi.', hy: 'Սկսեք շրջանակի սահմանումից՝ որ շրջանաձեւ հնարավորությունն է իրականացվում, բիզնեսի որ մասերի վրա է ազդում, ինչ ժամկետ ունի եւ ինչն է գիտակցաբար դուրս մնում այս փուլից։ Այնուհետեւ հնարավորությունը վերածեք կոնկրետ գործողությունների՝ արագ արդյունքները տարանջատելով ավելի երկար կառուցվածքային փոփոխություններից։' },
-    { en: 'A useful implementation roadmap combines actions, responsibilities, resources and milestones. Responsibilities clarify who leads, who supports, who signs off, and where external partners are needed. Resources cover budget, time, equipment, training and expertise. Milestones turn the plan into manageable steps, such as a process milestone, an output milestone or a review milestone, so progress can be checked and adjusted over time.', uk: 'Корисна дорожня карта впровадження поєднує дії, відповідальність, ресурси та етапи. Відповідальність уточнює, хто веде процес, хто підтримує, хто затверджує і де потрібні зовнішні партнери. Ресурси охоплюють бюджет, час, обладнання, навчання та експертизу. Етапи перетворюють план на керовані кроки, щоб прогрес можна було перевіряти й коригувати з часом.', ro: 'O foaie de parcurs utilă combină acțiuni, responsabilități, resurse și etape. Responsabilitățile clarifică cine conduce, cine sprijină, cine aprobă și unde sunt necesari parteneri externi. Resursele includ buget, timp, echipamente, instruire și expertiză. Etapele transformă planul în pași gestionabili, astfel încât progresul să poată fi verificat și ajustat în timp.', hy: 'Օգտակար իրականացման ճանապարհային քարտեզը համադրում է գործողությունները, պատասխանատվությունները, ռեսուրսները եւ հանգրվանները։ Պատասխանատվությունները հստակեցնում են՝ ով է առաջնորդում, ով է աջակցում, ով է հաստատում եւ որտեղ են անհրաժեշտ արտաքին գործընկերներ։ Ռեսուրսները ներառում են բյուջե, ժամանակ, սարքավորումներ, ուսուցում եւ փորձագիտություն։ Հանգրվանները պլանը դարձնում են կառավարելի քայլեր, որպեսզի առաջընթացը հնարավոր լինի ստուգել եւ ժամանակի ընթացքում հարմարեցնել։' },
-    { en: 'The result should be a practical roadmap that your team can revisit as the work evolves: clear enough to guide action, but flexible enough to adapt as you learn.', uk: 'Результатом має бути практична дорожня карта, до якої команда може повертатися в процесі роботи: достатньо чітка, щоб спрямовувати дії, і достатньо гнучка, щоб адаптуватися під час навчання.', ro: 'Rezultatul ar trebui să fie o foaie de parcurs practică, pe care echipa ta o poate revizita pe măsură ce munca evoluează: suficient de clară pentru a ghida acțiunea, dar suficient de flexibilă pentru a se adapta pe măsură ce învățați.', hy: 'Արդյունքը պետք է լինի գործնական ճանապարհային քարտեզ, որին թիմը կարող է վերադառնալ աշխատանքի ընթացքում՝ բավական հստակ գործողությունները ուղղորդելու համար եւ բավական ճկուն՝ սովորելու ընթացքում հարմարվելու համար։' }
+    { en: 'Implementation planning turns a selected circular strategy into a sequence of practical activities that the business can manage. At this point, the focus is no longer on choosing the idea, but on organising the work needed to make it happen.', uk: 'Планування впровадження перетворює обрану циркулярну стратегію на послідовність практичних дій, зрозумілих і посильних для підприємства. На цьому етапі увага зосереджена вже не на виборі ідеї, а на організації роботи, необхідної для її практичного втілення.', ro: 'Planificarea implementării transformă o strategie circulară selectată într-o succesiune de activități practice pe care afacerea le poate gestiona. În acest punct, accentul nu mai este pe alegerea ideii, ci pe organizarea muncii necesare pentru a o realiza.', hy: 'Իրականացման պլանավորումը ընտրված շրջանաձեւ ռազմավարությունը վերածում է գործնական գործողությունների հաջորդականության, որը բիզնեսը կարող է կառավարել։ Այս փուլում ուշադրությունը այլեւս գաղափարի ընտրության վրա չէ, այլ դրա իրականացման համար անհրաժեշտ աշխատանքի կազմակերպման։' },
+    { en: "Start by defining the scope: which circular opportunity is being implemented, which parts of the business it affects, the timeframe, and what is deliberately left out for this round. Then translate the opportunity into concrete actions, separating quick wins from longer structural changes.", uk: 'Почніть із визначення меж (обсягу робіт): яку саме циркулярну можливість Ви реалізуєте, які підрозділи чи напрями бізнесу це охоплює, які часові рамки встановлено, а що свідомо залишено поза увагою на цьому етапі. Після цього перетворіть загальну мету в конкретні заходи, розділивши швидкі практичні результати («швидкі перемоги») та глибші структурні зміни.', ro: 'Începe prin definirea domeniului: ce oportunitate circulară este implementată, ce părți ale afacerii afectează, care este perioada de timp și ce este lăsat intenționat în afara acestei runde. Apoi transformă oportunitatea în acțiuni concrete, separând câștigurile rapide de schimbările structurale mai lungi.', hy: 'Սկսեք շրջանակի սահմանումից՝ որ շրջանաձեւ հնարավորությունն է իրականացվում, բիզնեսի որ մասերի վրա է ազդում, ինչ ժամկետ ունի եւ ինչն է գիտակցաբար դուրս մնում այս փուլից։ Այնուհետեւ հնարավորությունը վերածեք կոնկրետ գործողությունների՝ արագ արդյունքները տարանջատելով ավելի երկար կառուցվածքային փոփոխություններից։' },
+    { en: 'A useful implementation roadmap combines actions, responsibilities, resources and milestones. Responsibilities clarify who leads, who supports, who signs off, and where external partners are needed. Resources cover budget, time, equipment, training and expertise. Milestones turn the plan into manageable steps, such as a process milestone, an output milestone or a review milestone, so progress can be checked and adjusted over time.', uk: 'Дієва дорожня карта впровадження поєднує заходи, зони відповідальності, ресурси та контрольні точки. Розподіл відповідальності чітко визначає, хто координує процес, хто допомагає у виконанні, хто затверджує результат і де саме потрібні зовнішні партнери. Ресурси охоплюють бюджет, робочий час команди, обладнання, навчання персоналу та залучення експертизи. Контрольні точки поділяють план на досяжні етапи – процесні, підсумкові або проміжні точки перегляду, – що дозволяє регулярно відстежувати прогрес і вчасно вносити корективи..', ro: 'O foaie de parcurs utilă combină acțiuni, responsabilități, resurse și etape. Responsabilitățile clarifică cine conduce, cine sprijină, cine aprobă și unde sunt necesari parteneri externi. Resursele includ buget, timp, echipamente, instruire și expertiză. Etapele transformă planul în pași gestionabili, astfel încât progresul să poată fi verificat și ajustat în timp.', hy: 'Օգտակար իրականացման ճանապարհային քարտեզը համադրում է գործողությունները, պատասխանատվությունները, ռեսուրսները եւ հանգրվանները։ Պատասխանատվությունները հստակեցնում են՝ ով է առաջնորդում, ով է աջակցում, ով է հաստատում եւ որտեղ են անհրաժեշտ արտաքին գործընկերներ։ Ռեսուրսները ներառում են բյուջե, ժամանակ, սարքավորումներ, ուսուցում եւ փորձագիտություն։ Հանգրվանները պլանը դարձնում են կառավարելի քայլեր, որպեսզի առաջընթացը հնարավոր լինի ստուգել եւ ժամանակի ընթացքում հարմարեցնել։' },
+    { en: 'The result should be a practical roadmap that your team can revisit as the work evolves: clear enough to guide action, but flexible enough to adapt as you learn.', uk: 'Результатом має стати практична дорожня карта, до якої команда зможе повертатися в ході роботи: достатньо чітка, щоб спрямовувати практичні дії, і водночас досить гнучка, щоб адаптуватися в міру набуття досвіду.', ro: 'Rezultatul ar trebui să fie o foaie de parcurs practică, pe care echipa ta o poate revizita pe măsură ce munca evoluează: suficient de clară pentru a ghida acțiunea, dar suficient de flexibilă pentru a se adapta pe măsură ce învățați.', hy: 'Արդյունքը պետք է լինի գործնական ճանապարհային քարտեզ, որին թիմը կարող է վերադառնալ աշխատանքի ընթացքում՝ բավական հստակ գործողությունները ուղղորդելու համար եւ բավական ճկուն՝ սովորելու ընթացքում հարմարվելու համար։' }
   ],
   /*
     IMPLEMENTATION PRINCIPLES INFO BOX:
@@ -82,27 +82,27 @@ const implementationPlanSection = {
   principleBox: {
     title: {
       en: 'Key principles for small-medium enterprises (SMEs)',
-      uk: 'Ключові принципи для малих і середніх підприємств (МСП)',
+      uk: 'Ключові принципи для малого та середнього бізнесу',
       ro: 'Principii-cheie pentru întreprinderile mici și mijlocii (IMM-uri)',
       hy: 'Հիմնական սկզբունքներ փոքր եւ միջին ձեռնարկությունների (ՓՄՁ) համար'
     },
     items: [
       {
-        title: { en: 'Start small', uk: 'Починайте з малого', ro: 'Începe cu pași mici', hy: 'Սկսեք փոքրից' },
+        title: { en: 'Start small', uk: 'Розпочинайте з малого', ro: 'Începe cu pași mici', hy: 'Սկսեք փոքրից' },
         icon: 'zoom-in',
         text: {
           en: 'Pick one or two circular actions to implement first. Success builds momentum and confidence for the next step.',
-          uk: 'Спершу оберіть одну-дві циркулярні дії для впровадження. Успіх створює імпульс і впевненість для наступного кроку.',
+          uk: 'Оберіть для початку одну або дві конкретні дії. Перші успішні результати створюють позитивну динаміку та додають упевненості для наступних кроків.',
           ro: 'Alege una sau două acțiuni circulare pentru început. Succesul creează elan și încredere pentru pasul următor.',
           hy: 'Սկզբում ընտրեք մեկ կամ երկու շրջանաձեւ գործողություն իրականացնելու համար։ Հաջողությունը ստեղծում է թափ եւ վստահություն հաջորդ քայլի համար։'
         }
       },
       {
-        title: { en: 'Involve your team', uk: 'Залучайте команду', ro: 'Implică echipa', hy: 'Ներգրավեք ձեր թիմը' },
+        title: { en: 'Involve your team', uk: 'Залучайте свою команду', ro: 'Implică echipa', hy: 'Ներգրավեք ձեր թիմը' },
         icon: 'personal-collection',
         text: {
           en: 'Implementation works best when the people who will carry out the actions have been part of designing them.',
-          uk: 'Впровадження працює найкраще, коли люди, які виконуватимуть дії, брали участь у їх розробці.',
+          uk: 'Впровадження найбільш результативне тоді, коли співробітники, які безпосередньо виконуватимуть завдання, брали участь у їхньому плануванні.',
           ro: 'Implementarea funcționează cel mai bine atunci când oamenii care vor realiza acțiunile au participat la proiectarea lor.',
           hy: 'Իրականացումը լավագույնս ստացվում է, երբ գործողություններն իրականացնող մարդիկ մասնակցել են դրանց նախագծմանը։'
         }
@@ -112,17 +112,17 @@ const implementationPlanSection = {
         icon: 'aiming',
         text: {
           en: 'Assign a named person, a specific date, and a measurable outcome to each action. Ambiguity is the most common reason implementation stalls.',
-          uk: 'Для кожної дії визначте відповідальну особу, конкретну дату та вимірюваний результат. Нечіткість найчастіше зупиняє впровадження.',
+          uk: 'Закріплюйте за кожним завданням конкретного виконавця, чіткий термін і вимірюваний результат. Невизначеність – найчастіша причина застою та затримки проєктів.',
           ro: 'Atribuie fiecărei acțiuni o persoană responsabilă, o dată concretă și un rezultat măsurabil. Ambiguitatea este cel mai frecvent motiv pentru care implementarea se blochează.',
           hy: 'Յուրաքանչյուր գործողության համար նշանակեք պատասխանատու անձ, կոնկրետ ամսաթիվ եւ չափելի արդյունք։ Անորոշությունը իրականացման կանգ առնելու ամենատարածված պատճառն է։'
         }
       },
       {
-        title: { en: 'Plan to adapt', uk: 'Плануйте адаптацію', ro: 'Planifică adaptarea', hy: 'Պլանավորեք հարմարվելու համար' },
+        title: { en: 'Plan to adapt', uk: 'Закладайте можливість змін', ro: 'Planifică adaptarea', hy: 'Պլանավորեք հարմարվելու համար' },
         icon: 'adjustment',
         text: {
           en: 'Your first implementation plan will change. Build in regular review points so you can adjust as you learn.',
-          uk: 'Перший план впровадження змінюватиметься. Закладіть регулярні точки перегляду, щоб коригувати його під час навчання.',
+          uk: 'Ваш початковий план неодмінно зазнаватиме правок. Передбачте регулярні контрольні зустрічі для перегляду та корекції плану відповідно до отриманих уроків.',
           ro: 'Primul tău plan de implementare se va schimba. Include puncte regulate de revizuire, astfel încât să îl poți ajusta pe măsură ce înveți.',
           hy: 'Ձեր առաջին իրականացման պլանը կփոխվի։ Ներառեք կանոնավոր վերանայման կետեր, որպեսզի կարողանաք հարմարվել սովորելու ընթացքում։'
         }
@@ -132,7 +132,7 @@ const implementationPlanSection = {
         icon: 'add-user',
         text: {
           en: 'Partners, advisors, and EU-funded programmes can provide resources, expertise, and funding small-medium enterprises (SMEs) can access.',
-          uk: 'Партнери, консультанти та програми, що фінансуються ЄС, можуть надати ресурси, експертизу й фінансування, доступні для МСП.',
+          uk: 'Партнери, консультанти та програми за підтримки ЄС можуть надати ресурси, експертні знання та фінансування, доступні для малого й середнього бізнесу.',
           ro: 'Partenerii, consilierii și programele finanțate de UE pot oferi resurse, expertiză și finanțare la care IMM-urile pot avea acces.',
           hy: 'Գործընկերները, խորհրդատուները եւ ԵՄ ֆինանսավորմամբ ծրագրերը կարող են տրամադրել ռեսուրսներ, փորձագիտություն եւ ֆինանսավորում, որոնց կարող են օգտվել ՓՄՁ-ները։'
         }
@@ -145,15 +145,15 @@ const implementationPlanSection = {
 const phaseSummary = {
   title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
-    { en: 'Use this checklist to confirm that you have a practical implementation plan, responsible owners and a workable delivery roadmap for your circular initiative.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що у вас є практичний план впровадження, відповідальні особи та робоча дорожня карта для циркулярної ініціативи.', ro: 'Folosește această listă pentru a confirma că ai un plan practic de implementare, responsabili desemnați și o foaie de parcurs funcțională pentru inițiativa circulară.', hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ ունեք գործնական իրականացման պլան, պատասխանատուներ եւ աշխատող ճանապարհային քարտեզ ձեր շրջանաձեւ նախաձեռնության համար։' },
+    { en: 'Use this checklist to confirm that you have a practical implementation plan, responsible owners and a workable delivery roadmap for your circular initiative.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви маєте практичний план упровадження, призначених відповідальних осіб та дієву дорожню карту реалізації вашої циркулярної ініціативи.', ro: 'Folosește această listă pentru a confirma că ai un plan practic de implementare, responsabili desemnați și o foaie de parcurs funcțională pentru inițiativa circulară.', hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ ունեք գործնական իրականացման պլան, պատասխանատուներ եւ աշխատող ճանապարհային քարտեզ ձեր շրջանաձեւ նախաձեռնության համար։' },
     { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
   ],
   checklist: [
-    { en: 'Defined the scope of the circular implementation initiative', uk: 'Визначено рамки циркулярної ініціативи з впровадження', ro: 'Ai definit domeniul inițiativei circulare de implementare', hy: 'Սահմանվել է շրջանաձեւ իրականացման նախաձեռնության շրջանակը' },
-    { en: 'Converted the selected strategy into concrete actions', uk: 'Вибрану стратегію перетворено на конкретні дії', ro: 'Ai transformat strategia selectată în acțiuni concrete', hy: 'Ընտրված ռազմավարությունը վերածվել է կոնկրետ գործողությունների' },
-    { en: 'Assigned owners, responsibilities and resources', uk: 'Призначено відповідальних, ролі та ресурси', ro: 'Ai atribuit responsabili, responsabilități și resurse', hy: 'Նշվել են պատասխանատուներ, պարտականություններ եւ ռեսուրսներ' },
-    { en: 'Created a roadmap with milestones and review points', uk: 'Створено дорожню карту з етапами та точками перегляду', ro: 'Ai creat o foaie de parcurs cu etape și momente de revizuire', hy: 'Ստեղծվել է ճանապարհային քարտեզ՝ հանգրվաններով եւ վերանայման կետերով' },
-    { en: 'Implemented your plan and roadmap!', uk: 'План і дорожню карту впроваджено!', ro: 'Ai implementat planul și foaia de parcurs!', hy: 'Իրականացրել եք պլանը եւ ճանապարհային քարտեզը։' }
+    { en: 'Defined the scope of the circular implementation initiative', uk: 'Визначено межі (обсяг завдань) ініціативи з упровадження циркулярного рішення', ro: 'Ai definit domeniul inițiativei circulare de implementare', hy: 'Սահմանվել է շրջանաձեւ իրականացման նախաձեռնության շրջանակը' },
+    { en: 'Converted the selected strategy into concrete actions', uk: 'Перетворено обрану стратегію в конкретні практичні дії', ro: 'Ai transformat strategia selectată în acțiuni concrete', hy: 'Ընտրված ռազմավարությունը վերածվել է կոնկրետ գործողությունների' },
+    { en: 'Assigned owners, responsibilities and resources', uk: 'Призначено відповідальних осіб, розподілено обов´язки та закріплено необхідні ресурси', ro: 'Ai atribuit responsabili, responsabilități și resurse', hy: 'Նշվել են պատասխանատուներ, պարտականություններ եւ ռեսուրսներ' },
+    { en: 'Created a roadmap with milestones and review points', uk: 'Створено дорожню карту із контрольними точками та графіком перегляду результатів', ro: 'Ai creat o foaie de parcurs cu etape și momente de revizuire', hy: 'Ստեղծվել է ճանապարհային քարտեզ՝ հանգրվաններով եւ վերանայման կետերով' },
+    { en: 'Implemented your plan and roadmap!', uk: 'Реалізовано ваш план і дорожню карту на практиці!', ro: 'Ai implementat planul și foaia de parcurs!', hy: 'Իրականացրել եք պլանը եւ ճանապարհային քարտեզը։' }
   ]
 };
 
