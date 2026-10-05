@@ -158,7 +158,7 @@ export const cases = [
     },
     summary: {
       en: "Banca de Alimente Moldova recovers safe, edible surplus food from agri-food companies and redistributes it through a national network of social services supporting vulnerable people.",
-      uk: "Banca de Alimente Moldova повертає безпечні їстівні надлишки продуктів харчування від агропродовольчих компаній і перерозподіляє їх через національну мережу соціальних служб, що підтримують уразливі верстви населення.",
+      uk: "Banca de Alimente Moldova вилучає безпечні їстівні надлишки харчових продуктів у агропродовольчих компаній та перерозподіляє їх через національну мережу соціальних служб для підтримки вразливих верств населення.",
       ro: "Banca de Alimente Moldova recuperează surplusul de alimente sigure, comestibile de la companiile agroalimentare și le redistribuie printr-o rețea națională de servicii sociale care sprijină persoanele vulnerabile.",
       hy: "Banca de Alimente Moldova-ն վերականգնում է անվտանգ, ուտելի սննդի ավելցուկը ագրոպարենային ընկերություններից և վերաբաշխում այն սոցիալական ծառայությունների ազգային ցանցի միջոցով, որն աջակցում է խոցելի մարդկանց։"
     },
@@ -316,7 +316,7 @@ export const cases = [
     },
     summary: {
       en: "This initiative establishes food forests in the community of Berdavan using regenerative agriculture techniques that restore soil health, increase biodiversity, and create long-term, low-input food production systems.",
-      uk: "Ця ініціатива створює продовольчі ліси в громаді Бердаван з використанням методів регенеративного сільського господарства, які відновлюють здоров’я ґрунту, збільшують біорізноманіття та створюють довгострокові системи виробництва продуктів харчування з низьким рівнем витрат.",
+      uk: "Ця ініціатива створює продовольчі ліси в громаді Бердаван, використовуючи методи регенеративного сільського господарства, які відновлюють родючість ґрунтів, підвищують біорізноманіття та формують довгострокові системи виробництва продуктів харчування з низьким рівнем витрат ресурсів.",
       ro: "Această inițiativă înființează păduri alimentare în comunitatea Berdavan folosind tehnici de agricultură regenerativă care restabilesc sănătatea solului, cresc biodiversitatea și creează sisteme de producție alimentară pe termen lung, cu aport redus.",
       hy: "Այս նախաձեռնությամբ Բերդավան համայնքում հիմնվում են պարենային անտառներ՝ օգտագործելով վերականգնողական գյուղատնտեսության մեթոդները, որոնք վերականգնում են հողի առողջությունը, բարձրացնում կենսաբազմազանությունը և ստեղծում սննդամթերքի արտադրության երկարաժամկետ, ցածր ներդրումային համակարգեր։"
     },
@@ -1313,7 +1313,7 @@ export const cases = [
     },
     summary: {
       en: "Eco Build Ukraine manufactures structural and insulation panels from compressed straw, an agricultural by-product, substituting a renewable, carbon-sequestering material for conventional construction inputs.",
-      uk: "«Еко Білд Україна» виробляє конструкційні та ізоляційні панелі зі спресованої соломи, побічного продукту сільського господарства, замінюючи звичайні будівельні матеріали поновлюваним матеріалом, що поглинає вуглець.",
+      uk: "Ця компанія виробляє конструкційні та ізоляційні панелі із пресованої соломи (побічного продукту сільського господарства), замінюючи традиційні будівельні матеріали відновлюваним матеріалом, що поглинає та утримує вуглець.",
       ro: "Eco Build Ukraine produce panouri structurale și izolatoare din paie comprimată, un produs secundar agricol, înlocuind un material regenerabil, de captare a carbonului, cu inputurile convenționale de construcție.",
       hy: "Eco Build Ukraine-ն արտադրում է կառուցվածքային և մեկուսիչ պանելներ սեղմված ծղոտից, որը գյուղատնտեսական կողմնակի արտադրանք է, որը փոխարինում է վերականգնվող, ածխածնի զավթիչ նյութը սովորական շինարարական նյութերի համար։"
     },

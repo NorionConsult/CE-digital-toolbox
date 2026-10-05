@@ -16,7 +16,7 @@ export const constructionIntroSection = {
   paragraphs: [
     {
       en: 'The construction sector includes the design, building, renovation and demolition of buildings and infrastructure. It is one of the largest users of raw materials and generates substantial amounts of waste, while also contributing significantly to energy use and greenhouse gas emissions. Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Circular economy practices can help the sector use materials more efficiently, extend the lifetime of buildings and components, and reduce the need for virgin resources, some which have potential to disrupt the sector due to low access and high demand (e.g. sand). Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering SMEs a competitive advantage in procurement and project differentiation.',
-      uk: 'Будівельний сектор охоплює проєктування, будівництво, реновацію та демонтаж будівель і інфраструктури. Це один із найбільших споживачів сировини, який утворює значні обсяги відходів і суттєво впливає на енергоспоживання та викиди парникових газів. Будівельні відходи та відходи знесення становлять приблизно 35% усіх відходів ЄС - найбільший потік відходів у Європі, тоді як рівні відновлення залишаються нижчими за цілі циркулярної економіки (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Практики циркулярної економіки можуть допомогти сектору ефективніше використовувати матеріали, продовжувати строк служби будівель і компонентів та зменшувати потребу в первинних ресурсах, деякі з яких можуть створювати ризики для сектору через обмежений доступ і високий попит, наприклад пісок. Міський видобуток - відновлення і повторне використання матеріалів з наявних конструкцій - швидко розвивається та може дати МСП конкурентну перевагу в закупівлях і диференціації проєктів.',
+      uk: 'Будівельний сектор охоплює проєктування, будівництво, реновацію та демонтаж будівель і інфраструктури. Він належить до найбільших споживачів первинної сировини та утворює колосальні обсяги відходів, зумовлюючи значну частку загального енергоспоживання та викидів парникових газів. Відходи будівництва та знесення становлять близько 35% усіх відходів у ЄС – це найбільший окремий потік відходів у Європі, проте рівень їх вторинного використання й відновлення досі залишається значно нижчим за цільові орієнтири циркулярної економіки (Джерело: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings). || Практики циркулярної економіки допомагають галузі раціональніше використовувати матеріали, подовжувати термін експлуатації будівель і конструктивних елементів, а також скорочувати потребу в первинних ресурсах. Дефіцит окремих із них уже зараз загрожує перебоями в роботі сектору через обмежену доступність на тлі високого попиту (наприклад, будівельного піску). «Міський майнінг» (видобуток і повторне використання матеріалів із наявних споруд під час демонтажу) – це напрям, що стрімко розвивається, забезпечуючи МСП відчутні конкурентні переваги під час участі в закупівлях і виділення серед конкурентів.',
       ro: 'Sectorul construcțiilor include proiectarea, construirea, renovarea și demolarea clădirilor și infrastructurii. Este unul dintre cei mai mari utilizatori de materii prime și generează cantități importante de deșeuri, contribuind totodată semnificativ la consumul de energie și emisiile de gaze cu efect de seră. Deșeurile din construcții și demolări reprezintă aproximativ 35% din toate deșeurile din UE, cel mai mare flux de deșeuri din Europa, însă ratele de recuperare rămân mult sub țintele economiei circulare (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Practicile de economie circulară pot ajuta sectorul să utilizeze materialele mai eficient, să prelungească durata de viață a clădirilor și componentelor și să reducă nevoia de resurse virgine, unele dintre acestea putând afecta sectorul din cauza accesului limitat și a cererii ridicate, de exemplu nisipul. Mineritul urban, prin recuperarea și reutilizarea materialelor din structuri existente, este o zonă în creștere care poate oferi IMM-urilor un avantaj competitiv în achiziții și diferențierea proiectelor.',
       hy: 'Շինարարության ոլորտը ներառում է շենքերի եւ ենթակառուցվածքների նախագծումը, կառուցումը, վերանորոգումը եւ ապամոնտաժումը։ Այն հումքային նյութերի խոշորագույն օգտագործողներից է եւ առաջացնում է մեծ քանակի թափոններ՝ միաժամանակ զգալիորեն նպաստելով էներգիայի սպառմանը եւ ջերմոցային գազերի արտանետումներին։ Շինարարության եւ ապամոնտաժման թափոնները կազմում են ԵՄ բոլոր թափոնների մոտ 35%-ը՝ Եվրոպայի ամենամեծ թափոնային հոսքը, սակայն վերականգնման մակարդակները դեռ զգալիորեն ցածր են շրջանաձեւ տնտեսության նպատակներից (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Շրջանաձեւ տնտեսության գործելակերպերը կարող են օգնել ոլորտին ավելի արդյունավետ օգտագործել նյութերը, երկարացնել շենքերի եւ բաղադրիչների ծառայության ժամկետը եւ նվազեցնել առաջնային ռեսուրսների կարիքը, որոնցից որոշները, օրինակ՝ ավազը, կարող են խափանումներ առաջացնել սահմանափակ հասանելիության եւ մեծ պահանջարկի պատճառով։ Քաղաքային հանքարդյունահանումը՝ առկա կառույցներից նյութերի վերականգնումն ու կրկնօգտագործումը, արագ զարգացող ուղղություն է, որը ՓՄՁ-ներին կարող է մրցակցային առավելություն տալ գնումների եւ նախագծերի տարբերակման մեջ։'
     }
@@ -32,7 +32,7 @@ export const constructionCasesSection = {
   title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Exemple de cazuri', hy: 'Օրինակներ' },
   intro: {
     en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the construction sector to find all relevant cases.',
-    uk: 'Наведені приклади показують, як стратегії та практики циркулярної економіки застосовувалися в реальному бізнесі. Щоб переглянути більше кейсів, відкрийте сторінку «Колекція кейсів» і відфільтруйте їх за будівельним сектором.',
+    uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи втілюються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, перейдіть до розділу «Добірка прикладів» та відфільтруйте матеріали за будівельною галуззю.',
     ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul construcțiilor.',
     hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ շինարարության ոլորտի։'
   },
@@ -46,10 +46,10 @@ export const constructionCasesSection = {
 // 3. Common barriers and opportunities
 export const constructionBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Поширені бар’єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
   intro: {
     en: 'Construction small-medium enterprises face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
-    uk: 'Будівельні МСП стикаються з бар’єрами даних, регулювання, витрат і навичок, тоді як реновація, паспорти матеріалів і ринки вторинних матеріалів відкривають нові можливості.',
+    uk: 'Малі та середні підприємства будівельної галузі стикаються з перешкодами, пов´язаними з браком даних, нормативним регулюванням, витратами та дефіцитом кваліфікованих кадрів. Водночас реновація, цифрові паспорти матеріалів та ринки вторинної сировини відкривають нові перспективи.',
     ro: 'IMM-urile din construcții se confruntă cu bariere legate de date, reglementare, costuri și competențe, în timp ce renovarea, pașapoartele materialelor și piețele materialelor secundare deschid noi oportunități.',
     hy: 'Շինարարական ՓՄՁ-ները բախվում են տվյալների, կարգավորման, ծախսերի եւ հմտությունների խոչընդոտների, մինչդեռ վերանորոգումը, նյութերի անձնագրերը եւ երկրորդային նյութերի շուկաները նոր հնարավորություններ են բացում։'
   },
@@ -59,7 +59,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Lack of material traceability data in existing building stock.',
-        uk: 'Відсутність даних про простежуваність матеріалів у наявному фонді будівель.',
+        uk: 'Брак даних щодо простежуваності матеріалів у наявному фонді будівель.',
         ro: 'Lipsa datelor de trasabilitate a materialelor în stocul existent de clădiri.',
         hy: 'Առկա շենքային ֆոնդում նյութերի հետագծելիության տվյալների պակաս։'
       },
@@ -68,7 +68,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Regulatory uncertainty around certification of recycled and salvaged materials.',
-        uk: 'Регуляторна невизначеність щодо сертифікації перероблених і врятованих матеріалів.',
+        uk: 'Нормативна невизначеність щодо сертифікації перероблених та повторно використаних матеріалів.',
         ro: 'Incertitudine de reglementare privind certificarea materialelor reciclate și recuperate.',
         hy: 'Վերամշակված եւ վերականգնված նյութերի հավաստագրման շուրջ կարգավորող անորոշություն։'
       },
@@ -77,7 +77,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Client and contractor resistance to longer design and planning timelines.',
-        uk: 'Опір клієнтів і підрядників довшим строкам проєктування та планування.',
+        uk: 'Спротив замовників і підрядників довшим термінам проєктування та планування.',
         ro: 'Rezistența clienților și contractorilor față de termene mai lungi de proiectare și planificare.',
         hy: 'Հաճախորդների եւ կապալառուների դիմադրություն նախագծման եւ պլանավորման ավելի երկար ժամկետներին։'
       },
@@ -86,7 +86,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Higher upfront cost of deconstruction compared with conventional demolition.',
-        uk: 'Вищі початкові витрати на деконструкцію порівняно зі звичайним знесенням.',
+        uk: 'Вищі початкові витрати на вибірковий демонтаж (деконструкцію) порівняно зі звичайним знесенням будівель.',
         ro: 'Costuri inițiale mai mari pentru deconstrucție comparativ cu demolarea convențională.',
         hy: 'Ապակառուցման ավելի բարձր նախնական ծախսեր՝ սովորական քանդման համեմատ։'
       },
@@ -95,7 +95,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Fragmented supply chains hinder the development of secondary-material markets.',
-        uk: 'Фрагментовані ланцюги постачання стримують розвиток ринків вторинних матеріалів.',
+        uk: 'Фрагментованість ланцюгів постачання, що стримує розвиток ринків вторинної сировини.',
         ro: 'Lanțurile de aprovizionare fragmentate împiedică dezvoltarea piețelor de materiale secundare.',
         hy: 'Մասնատված մատակարարման շղթաները խոչընդոտում են երկրորդային նյութերի շուկաների զարգացմանը։'
       },
@@ -104,7 +104,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Skills gaps in design for disassembly, adaptive reuse and material-passport creation.',
-        uk: 'Прогалини в навичках проєктування для розбирання, адаптивного повторного використання та створення паспортів матеріалів.',
+        uk: 'Дефіцит навичок і компетенцій у сферах проєктування з урахуванням демонтажу, адаптивного повторного використання та створення паспортів матеріалів.',
         ro: 'Lacune de competențe în proiectarea pentru dezasamblare, reutilizare adaptivă și crearea pașapoartelor materialelor.',
         hy: 'Հմտությունների պակաս՝ ապամոնտաժման, հարմարվողական կրկնօգտագործման եւ նյութերի անձնագրերի ստեղծման համար նախագծման ոլորտում։'
       },
@@ -115,7 +115,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Digital Building Passports enable material tracking, reuse planning and asset-value retention.',
-        uk: 'Цифрові паспорти будівель забезпечують відстеження матеріалів, планування повторного використання та збереження вартості активів.',
+        uk: 'Цифрові будівельні паспорти уможливлюють відстеження матеріалів, планування повторного використання та збереження вартості активів.',
         ro: 'Pașapoartele digitale ale clădirilor permit urmărirea materialelor, planificarea reutilizării și păstrarea valorii activelor.',
         hy: 'Շենքերի թվային անձնագրերը հնարավորություն են տալիս հետեւել նյութերին, պլանավորել կրկնօգտագործումը եւ պահպանել ակտիվների արժեքը։'
       },
@@ -124,7 +124,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Urban mining and material banks can reduce procurement costs and supply risk.',
-        uk: 'Міський видобуток і банки матеріалів можуть зменшити витрати на закупівлі та ризики постачання.',
+        uk: '«Міський майнінг» та банки матеріалів можуть знизити витрати на закупівлі й мінімізувати ризики постачання.',
         ro: 'Mineritul urban și băncile de materiale pot reduce costurile de achiziție și riscurile de aprovizionare.',
         hy: 'Քաղաքային հանքարդյունահանումը եւ նյութերի բանկերը կարող են նվազեցնել գնումների ծախսերը եւ մատակարարման ռիսկերը։'
       },
@@ -133,7 +133,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Green public procurement criteria increasingly favour circular construction small-medium enterprises (SMEs).',
-        uk: 'Критерії зелених державних закупівель дедалі більше підтримують циркулярні будівельні МСП.',
+        uk: 'Критерії зелених публічних закупівель дедалі більше надають перевагу циркулярним малим і середнім підприємствам у будівельній галузі.',
         ro: 'Criteriile de achiziții publice verzi favorizează tot mai mult IMM-urile din construcții cu soluții circulare.',
         hy: 'Կանաչ պետական գնումների չափանիշները ավելի ու ավելի են նպաստում շրջանաձեւ շինարարական ՓՄՁ-ներին։'
       },
@@ -142,7 +142,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'Modular and prefabricated construction supports disassembly and material reuse.',
-        uk: 'Модульне та збірне будівництво підтримує розбирання і повторне використання матеріалів.',
+        uk: 'Модульне та збірно-панельне будівництво сприяє простоті демонтажу й повторному використанню компонентів.',
         ro: 'Construcțiile modulare și prefabricate sprijină dezasamblarea și reutilizarea materialelor.',
         hy: 'Մոդուլային եւ նախապատրաստված շինարարությունը աջակցում է ապամոնտաժմանը եւ նյութերի կրկնօգտագործմանը։'
       },
@@ -151,7 +151,7 @@ export const constructionBarriersSection = {
     {
       text: {
         en: 'The growing secondary-material market creates opportunities for reclaimed stone, timber, brick and glass.',
-        uk: 'Зростаючий ринок вторинних матеріалів створює можливості для повторно використаного каменю, деревини, цегли та скла.',
+        uk: 'Зростання ринку вторинних матеріалів відкриває можливості для повторного використання каменю, деревини, цегли та скла.',
         ro: 'Piața în creștere a materialelor secundare creează oportunități pentru piatră, lemn, cărămidă și sticlă recuperate.',
         hy: 'Երկրորդային նյութերի աճող շուկան հնարավորություններ է ստեղծում վերականգնված քարի, փայտի, աղյուսի եւ ապակու համար։'
       },

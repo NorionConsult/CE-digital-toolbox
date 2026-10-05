@@ -12,7 +12,7 @@
 
   const labels = {
     backToCases: { en: 'Back to cases', uk: 'Назад до кейсів', ro: 'Înapoi la cazuri', hy: 'Վերադառնալ օրինակներին' },
-    companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
+    companyName: { en: 'Company name', uk: 'Назва компанії / ініціативи', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
     country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
     rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
     sector: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },

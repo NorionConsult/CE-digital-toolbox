@@ -11,7 +11,7 @@
   export let variant = 'default';
 
   const labels = {
-    companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
+    companyName: { en: 'Company name', uk: 'Назва компанії / ініціативи', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
     country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
     rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
     notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' },

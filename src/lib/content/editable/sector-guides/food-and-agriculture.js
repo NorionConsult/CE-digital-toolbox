@@ -16,7 +16,7 @@ export const foodAndAgricultureIntroSection = {
   paragraphs: [
     {
       en: 'The food and agriculture sector includes the production, processing, distribution and consumption of food and agricultural products. It depends directly on natural resources such as land, water and healthy soils, while also contributing to greenhouse gas emissions, biodiversity loss and organic waste. || The food and agriculture sector contributes approximately 10% of EU greenhouse gas emissions (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers (Source: FAO, 2011. Global food losses and food waste: Extent, causes and prevention). || Circular economy practices can help businesses reduce losses, make better use of by-products and resources, and support more sustainable and resilient food systems. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.',
-      uk: 'Сектор харчової промисловості та сільського господарства охоплює виробництво, переробку, розподіл і споживання харчових та аграрних продуктів. Він безпосередньо залежить від природних ресурсів, таких як земля, вода і здорові ґрунти, а також спричиняє викиди парникових газів, втрату біорізноманіття та органічні відходи. || Цей сектор відповідає приблизно за 10% викидів парникових газів у ЄС (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) і близько 70% світового споживання прісної води, тому є центральним для переходу до циркулярної економіки. До 30% виробленої у світі їжі втрачається, значною мірою на фермах і післязбиральних етапах до потрапляння до споживачів (Source: FAO, 2011. Global food losses and food waste: Extent, causes and prevention). || Практики циркулярної економіки можуть допомогти бізнесу зменшити втрати, краще використовувати побічні продукти та ресурси й підтримати сталіші та стійкіші продовольчі системи. Ключові можливості включають агроекологію, точне землеробство, валоризацію харчових відходів, короткі ланцюги постачання та аграрні біопереробні моделі.',
+      uk: 'Сектор продовольства та сільського господарства охоплює виробництво, перероблення, розподіл і споживання харчових продуктів та сільськогосподарської продукції. Він безпосередньо залежить від природних ресурсів, як-от земля, вода та здорові ґрунти, і водночас зумовлює викиди парникових газів, втрату біорізноманіття й утворення органічних відходів. || Галузь продовольства та сільського господарства генерує близько 10% викидів парникових газів у ЄС (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) і споживає близько 70% світових запасів прісної води, що робить його ключовим для переходу до циркулярної економіки. До 30% продовольства, виробленого у світі, втрачається або перетворюється на відходи, причому значна частина цих втрат відбувається безпосередньо на фермах та етапах первинного післязбирального перероблення ще до того, як продукція потрапляє до споживачів (Source: FAO, 2011). Global food losses and food waste: Extent, causes and prevention). || Практики циркулярної економіки можуть допомогти підприємствам зменшити втрати, раціональніше використовувати побічні продукти та ресурси, а також підтримати більш сталі та життєздатні продовольчі системи. До ключових можливостей циркулярної економіки належать агроекологія, точне землеробство, валоризація (корисне використання) харчових відходів, короткі ланцюги постачання та моделі сільськогосподарських біопереробних заводів.',
       ro: 'Sectorul alimentar și agricol include producția, procesarea, distribuția și consumul de produse alimentare și agricole. Depinde direct de resurse naturale precum terenul, apa și solurile sănătoase, contribuind totodată la emisiile de gaze cu efect de seră, pierderea biodiversității și deșeuri organice. || Sectorul alimentar și agricol generează aproximativ 10% din emisiile de gaze cu efect de seră ale UE (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) și reprezintă aproximativ 70% din consumul global de apă dulce, ceea ce îl face central pentru tranziția către economia circulară. Până la 30% din alimentele produse la nivel global sunt irosite, o mare parte la nivel de fermă și procesare post-recoltare înainte de a ajunge la consumatori (Source: FAO, 2011. Global food losses and food waste: Extent, causes and prevention). || Practicile de economie circulară pot ajuta afacerile să reducă pierderile, să valorifice mai bine subprodusele și resursele și să sprijine sisteme alimentare mai durabile și reziliente. Oportunitățile-cheie includ agroecologia, agricultura de precizie, valorificarea deșeurilor alimentare, lanțurile scurte de aprovizionare și modelele de biorafinărie agricolă.',
       hy: 'Սննդի եւ գյուղատնտեսության ոլորտը ներառում է սննդամթերքի եւ գյուղատնտեսական արտադրանքի արտադրությունը, մշակումը, բաշխումը եւ սպառումը։ Այն անմիջապես կախված է բնական ռեսուրսներից, ինչպիսիք են հողը, ջուրը եւ առողջ հողածածկույթը, միաժամանակ նպաստելով ջերմոցային գազերի արտանետումներին, կենսաբազմազանության կորստին եւ օրգանական թափոններին։ || Սննդի եւ գյուղատնտեսության ոլորտը կազմում է ԵՄ ջերմոցային գազերի արտանետումների մոտ 10%-ը (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) եւ քաղցրահամ ջրի համաշխարհային սպառման մոտ 70%-ը, ինչն այն դարձնում է շրջանաձեւ տնտեսության անցման առանցքային ոլորտ։ Աշխարհում արտադրված սննդի մինչեւ 30%-ը կորչում է, հաճախ ֆերմայում եւ բերքահավաքից հետո մշակման փուլերում՝ մինչեւ սպառողներին հասնելը (Source: FAO, 2011. Global food losses and food waste: Extent, causes and prevention). || Շրջանաձեւ տնտեսության գործելակերպերը կարող են օգնել բիզնեսներին նվազեցնել կորուստները, ավելի լավ օգտագործել կողմնակի արտադրանքներն ու ռեսուրսները եւ աջակցել ավելի կայուն ու դիմացկուն սննդային համակարգերի։ Հիմնական հնարավորություններն են ագրոէկոլոգիան, ճշգրիտ գյուղատնտեսությունը, սննդային թափոնների արժեւորումը, կարճ մատակարարման շղթաները եւ գյուղատնտեսական կենսավերամշակման մոդելները։'
     }
@@ -30,7 +30,7 @@ export const foodAndAgricultureIntroSection = {
 export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
   title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Exemple de cazuri', hy: 'Օրինակներ' },
-  intro: { en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.', uk: 'Наведені приклади показують, як стратегії та практики циркулярної економіки застосовувалися в реальному бізнесі. Щоб переглянути більше кейсів, відкрийте сторінку «Колекція кейсів» і відфільтруйте їх за сектором харчової промисловості та сільського господарства.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul alimentar și agricol.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ սննդի եւ գյուղատնտեսության ոլորտի։' },
+  intro: { en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.', uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи втілюються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, відвідайте сторінку «Добірка прикладів» та відфільтруйте матеріали за сектором продовольства та сільського господарства.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul alimentar și agricol.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ սննդի եւ գյուղատնտեսության ոլորտի։' },
   featuredCaseNames: [
     'Banca de Alimente Moldova',
     'Permaculture in Armenia',
@@ -41,8 +41,8 @@ export const foodAndAgricultureCasesSection = {
 // 3. Common barriers and opportunities
 export const foodAndAgricultureBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Поширені бар’єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
-  intro: { en: 'Agricultural small-medium enterprises (SMEs) face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.', uk: 'Аграрні МСП стикаються з інвестиційними, знаннєвими та регуляторними бар’єрами, тоді як нові ринки, технології та моделі відновлення поживних речовин створюють практичні можливості.', ro: 'IMM-urile agricole se confruntă cu bariere legate de investiții, cunoștințe și reglementare, în timp ce noile piețe, tehnologii și modele de recuperare a nutrienților creează oportunități practice.', hy: 'Գյուղատնտեսական ՓՄՁ-ները բախվում են ներդրումային, գիտելիքային եւ կարգավորող խոչընդոտների, մինչդեռ նոր շուկաները, տեխնոլոգիաները եւ սննդանյութերի վերականգնման մոդելները ստեղծում են գործնական հնարավորություններ։' },
+  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  intro: { en: 'Agricultural small-medium enterprises (SMEs) face investment, knowledge and regulatory barriers, while new markets, technologies and nutrient-recovery models are creating practical opportunities.', uk: 'Аграрні МСП стикаються із браком інвестицій, знань та регуляторними перешкодами, тоді як нові ринки, технології та моделі відновлення поживних речовин відкривають практичні можливості.', ro: 'IMM-urile agricole se confruntă cu bariere legate de investiții, cunoștințe și reglementare, în timp ce noile piețe, tehnologii și modele de recuperare a nutrienților creează oportunități practice.', hy: 'Գյուղատնտեսական ՓՄՁ-ները բախվում են ներդրումային, գիտելիքային եւ կարգավորող խոչընդոտների, մինչդեռ նոր շուկաները, տեխնոլոգիաները եւ սննդանյութերի վերականգնման մոդելները ստեղծում են գործնական հնարավորություններ։' },
   // Each bullet can include a `source`. Editors can update the statement and
   // its source together here. If no source is available, leave `source: ''`.
   barriers: [
@@ -58,7 +58,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Fragmented land ownership limits the scale of circular nutrient systems.',
-        uk: 'Фрагментована власність на землю обмежує масштабування циркулярних систем поживних речовин.',
+        uk: 'Фрагментованість землеволодіння обмежує масштаби систем циркулярного обігу поживних речовин.',
         ro: 'Proprietatea funciară fragmentată limitează extinderea sistemelor circulare de nutrienți.',
         hy: 'Հողի սեփականության մասնատվածությունը սահմանափակում է սննդանյութերի շրջանաձեւ համակարգերի մասշտաբավորումը։'
       },
@@ -67,7 +67,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Knowledge gaps among small farms on circular economy practices and returns.',
-        uk: 'Прогалини у знаннях малих фермерських господарств щодо практик циркулярної економіки та їхньої віддачі.',
+        uk: 'Брак знань серед дрібних фермерських господарств щодо практик циркулярної економіки та їхньої окупності.',
         ro: 'Lacune de cunoștințe în rândul fermelor mici privind practicile de economie circulară și beneficiile acestora.',
         hy: 'Փոքր տնտեսությունների շրջանում շրջանաձեւ տնտեսության գործելակերպերի եւ դրանց արդյունքների վերաբերյալ գիտելիքների պակաս։'
       },
@@ -76,7 +76,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Complex regulation around organic waste, nutrient recovery and biogas.',
-        uk: 'Складне регулювання органічних відходів, відновлення поживних речовин і біогазу.',
+        uk: 'Складне регулювання у сфері поводження з органічними відходами, відновлення поживних речовин і виробництва біогазу.',
         ro: 'Reglementări complexe privind deșeurile organice, recuperarea nutrienților și biogazul.',
         hy: 'Օրգանական թափոնների, սննդանյութերի վերականգնման եւ կենսագազի շուրջ բարդ կարգավորումներ։'
       },
@@ -85,7 +85,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Price competition from conventional non-circular producers.',
-        uk: 'Цінова конкуренція з боку традиційних нециркулярних виробників.',
+        uk: 'Цінова конкуренція з боку традиційних виробників, які не застосовують циркулярні підходи.',
         ro: 'Concurență de preț din partea producătorilor convenționali necirculari.',
         hy: 'Գնային մրցակցություն ավանդական ոչ շրջանաձեւ արտադրողների կողմից։'
       },
@@ -94,7 +94,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Short-term subsidy structures can discourage longer-term circular economy investment.',
-        uk: 'Короткострокові субсидійні механізми можуть зменшувати стимули до довгострокових інвестицій у циркулярну економіку.',
+        uk: 'Короткостроковий характер субсидій може стримувати довгострокові інвестиції в циркулярну економіку.',
         ro: 'Structurile de subvenții pe termen scurt pot descuraja investițiile pe termen lung în economia circulară.',
         hy: 'Կարճաժամկետ սուբսիդավորման համակարգերը կարող են նվազեցնել երկարաժամկետ շրջանաձեւ ներդրումների խթանները։'
       },
@@ -105,7 +105,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Growing consumer demand for organic, local and sustainably certified produce.',
-        uk: 'Зростає споживчий попит на органічну, місцеву та стало сертифіковану продукцію.',
+        uk: 'Зростання споживчого попиту на органічну, місцеву та сертифіковану сталу продукцію.',
         ro: 'Cererea consumatorilor pentru produse organice, locale și certificate sustenabil este în creștere.',
         hy: 'Աճում է սպառողների պահանջարկը օրգանական, տեղական եւ կայուն հավաստագրված արտադրանքի նկատմամբ։'
       },
@@ -114,7 +114,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Biogas and biomass energy from agricultural residues create new income streams.',
-        uk: 'Біогаз і енергія з біомаси з аграрних залишків створюють нові джерела доходу.',
+        uk: 'Виробництво енергії з біогазу та біомаси із сільськогосподарських залишків створює нові джерела доходу.',
         ro: 'Biogazul și energia din biomasă obținute din reziduuri agricole creează noi fluxuri de venituri.',
         hy: 'Գյուղատնտեսական մնացորդներից կենսագազն ու կենսազանգվածի էներգիան ստեղծում են եկամտի նոր աղբյուրներ։'
       },
@@ -123,7 +123,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Precision agriculture technology can significantly reduce input costs.',
-        uk: 'Технології точного землеробства можуть суттєво зменшити витрати на ресурси.',
+        uk: 'Технології точного землеробства можуть суттєво зменшити витрати на ресурси та засоби виробництва.',
         ro: 'Tehnologiile de agricultură de precizie pot reduce semnificativ costurile cu inputurile.',
         hy: 'Ճշգրիտ գյուղատնտեսության տեխնոլոգիաները կարող են զգալիորեն նվազեցնել ներդրվող ռեսուրսների ծախսերը։'
       },
@@ -132,7 +132,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Nutrient recovery from manure and slurry reduces dependence on synthetic fertilisers.',
-        uk: 'Відновлення поживних речовин із гною та гноївки зменшує залежність від синтетичних добрив.',
+        uk: 'Відновлення поживних речовин із гною та рідких органічних відходів тваринництва зменшує залежність від синтетичних добрив.',
         ro: 'Recuperarea nutrienților din gunoi de grajd și dejecții lichide reduce dependența de îngrășăminte sintetice.',
         hy: 'Գոմաղբից եւ հեղուկ գոմաղբից սննդանյութերի վերականգնումը նվազեցնում է կախվածությունը սինթետիկ պարարտանյութերից։'
       },
@@ -141,7 +141,7 @@ export const foodAndAgricultureBarriersSection = {
     {
       text: {
         en: 'Agri-food waste can become feedstock for bio-based materials and bioplastics.',
-        uk: 'Агропродовольчі відходи можуть стати сировиною для біоматеріалів і біопластиків.',
+        uk: 'Агропродовольчі відходи можуть слугувати сировиною для виробництва біоматеріалів і біопластику.',
         ro: 'Deșeurile agroalimentare pot deveni materie primă pentru materiale bio-bazate și bioplastice.',
         hy: 'Ագրոպարենային թափոնները կարող են դառնալ կենսահիմնված նյութերի եւ կենսապլաստիկների հումք։'
       },
@@ -164,7 +164,7 @@ export const foodAndAgriculture = {
   number: { en: 'Sector 2', uk: 'Сектор 2', ro: 'Sector 2', hy: 'Ոլորտ 2' },
   slug: 'food-and-agriculture',
   title: { en: 'Food and Agriculture', uk: 'Продовольство та сільське господарство', ro: 'Alimentație și agricultură', hy: 'Սնունդ եւ գյուղատնտեսություն' },
-  description: { en: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.', uk: 'Цей секторний путівник надає інструменти, кейси та практичні рекомендації для МСП у харчовій промисловості та сільському господарстві, які впроваджують практики циркулярної економіки.', ro: 'Acest ghid sectorial oferă instrumente, cazuri și orientări practice pentru IMM-urile din alimentație și agricultură care adoptă practici de economie circulară.', hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղեցույցներ սննդի ու գյուղատնտեսության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։' },
+  description: { en: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.', uk: 'Цей галузевий посібник містить інструменти, практичні приклади та рекомендації для МСП у сфері продовольства та сільського господарства, що впроваджують практики циркулярної економіки.', ro: 'Acest ghid sectorial oferă instrumente, cazuri și orientări practice pentru IMM-urile din alimentație și agricultură care adoptă practici de economie circulară.', hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղեցույցներ սննդի ու գյուղատնտեսության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։' },
   image: '/images/sectors/agriculture.jpg',
   imageAlt: { en: 'Food and Agriculture sector', uk: 'Сектор харчової промисловості та сільського господарства', ro: 'Sectorul alimentației și agriculturii', hy: 'Սննդի եւ գյուղատնտեսության ոլորտ' },
   navigation: [

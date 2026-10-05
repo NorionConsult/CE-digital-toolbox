@@ -192,7 +192,7 @@ const taxonomyLabels = {
     },
     'Reduce (R2)': {
       en: 'Reduce (R2)',
-      uk: 'Скорочення (R2)',
+      uk: 'Зменшення споживання (R2)',
       ro: 'Reducere (R2)',
       hy: 'Կրճատում (R2)'
     },
@@ -222,7 +222,7 @@ const taxonomyLabels = {
     },
     'Reuse (R3)': {
       en: 'Reuse (R3)',
-      uk: 'Повторне використання (R3)',
+      uk: 'Повторне використання / Перерозподіл (R3)',
       ro: 'Reutilizare (R3)',
       hy: 'Կրկնակի օգտագործում (R3)'
     }

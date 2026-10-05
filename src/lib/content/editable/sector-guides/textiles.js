@@ -20,7 +20,7 @@ export const textilesIntroSection = {
 export const textilesCasesSection = {
   id: 'case-examples',
   title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Exemple de cazuri', hy: 'Օրինակներ' },
-  intro: { en: "The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the textiles sector to find all relevant cases.", uk: 'Наведені приклади показують, як стратегії та практики циркулярної економіки застосовувалися в реальному бізнесі. Щоб переглянути більше кейсів, відкрийте сторінку «Колекція кейсів» і відфільтруйте їх за текстильним сектором.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul textilelor.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ տեքստիլի ոլորտի։' },
+  intro: { en: "The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the textiles sector to find all relevant cases.", uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи втілюються в реальному бізнесі. Щоб переглянути більше кейсів, відкрийте сторінку «Колекція кейсів» і відфільтруйте їх за текстильним сектором.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul textilelor.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ տեքստիլի ոլորտի։' },
   // Add exactly three case names from src/lib/content/editable/cases/cases.js.
   // These names control which cases appear on this sector guide page.
   // Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
@@ -33,7 +33,7 @@ export const textilesCasesSection = {
 
 export const textilesBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Поширені бар’єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
   intro: { en: 'Textile small-medium enterprises (SMEs) face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.', uk: 'Текстильні МСП стикаються з технічними, поведінковими та ринковими бар’єрами, тоді як нове регулювання і бізнес-моделі створюють сильні можливості.', ro: 'IMM-urile textile se confruntă cu bariere tehnice, comportamentale și de piață, în timp ce noile reglementări și modele de afaceri creează oportunități importante.', hy: 'Տեքստիլ ՓՄՁ-ները բախվում են տեխնիկական, վարքային եւ շուկայական խոչընդոտների, մինչդեռ նոր կարգավորումները եւ բիզնես մոդելները ստեղծում են ուժեղ հնարավորություններ։' },
   // Each bullet can include a `source`. Editors can update the statement and
   // its source together here. If no source is available, leave `source: ''`.
@@ -161,7 +161,7 @@ export const textiles = {
   number: { en: 'Sector 3', uk: 'Сектор 3', ro: 'Sector 3', hy: 'Ոլորտ 3' },
   slug: 'textiles',
   title: { en: 'Textiles', uk: 'Текстиль', ro: 'Textile', hy: 'Տեքստիլ' },
-  description: { en: 'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.', uk: 'Цей секторний путівник надає інструменти та рекомендації для текстильних МСП, які впроваджують практики циркулярної економіки.', ro: 'Acest ghid sectorial oferă instrumente și orientări pentru IMM-urile textile care adoptă practici de economie circulară.', hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ եւ ուղեցույցներ տեքստիլ ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։' },
+  description: { en: 'This sector guide provides tools and guidance for textile small-medium enterprises (SMEs) to adopt circular economy practices.', uk: 'Цей галузевий посібник містить інструменти та рекомендації МСП у текстильній галузі щодо впровадження практик циркулярної економіки.', ro: 'Acest ghid sectorial oferă instrumente și orientări pentru IMM-urile textile care adoptă practici de economie circulară.', hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ եւ ուղեցույցներ տեքստիլ ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։' },
   image: '/images/sectors/textiles.jpg',
   imageAlt: { en: 'Textiles sector', uk: 'Текстильний сектор', ro: 'Sectorul textilelor', hy: 'Տեքստիլի ոլորտ' },
   navigation: [
