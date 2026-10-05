@@ -32,7 +32,7 @@ export const constructionCasesSection = {
   title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Exemple de cazuri', hy: 'Օրինակներ' },
   intro: {
     en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the construction sector to find all relevant cases.',
-    uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи втілюються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, перейдіть до розділу «Добірка прикладів» та відфільтруйте матеріали за будівельною галуззю.',
+    uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи застосовуються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, перейдіть до розділу «Добірка прикладів» та відфільтруйте матеріали за будівельною галуззю.',
     ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul construcțiilor.',
     hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ շինարարության ոլորտի։'
   },

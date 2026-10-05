@@ -142,7 +142,7 @@ export const site = {
     {
       label: {
         en: 'Contact',
-        uk: 'Контакти',
+        uk: 'Зв´язатися з нами ',
         ro: 'Contact',
         hy: 'Կապ'
       },

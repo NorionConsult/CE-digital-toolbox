@@ -226,7 +226,7 @@ export const cases = [
     },
     summary: {
       en: "UNFLORIA SRL provides professional textile laundry, cleaning and restoration services that extend the useful life of clients' garments, linens, carpets and feather pillows.",
-      uk: "UNFLORIA SRL надає професійні послуги з прання, чищення та реставрації текстилю, які продовжують термін служби одягу, білизни, килимів і пухових подушок клієнтів.",
+      uk: "UNFLORIA SRL надає професійні послуги із прання, чищення та реставрації текстилю, подовжуючи термін корисного використання одягу, білизни, килимів і пір'яних подушок клієнтів.",
       ro: "UNFLORIA SRL furnizează servicii profesionale de spălătorie textile, curățenie și restaurare care prelungesc durata de viață utilă a articolelor de îmbrăcăminte, lenjerii, covoarelor și pernelor din pene ale clienților.",
       hy: "UNFLORIA SRL-ը տրամադրում է պրոֆեսիոնալ տեքստիլ լվացքի, մաքրման և վերականգնման ծառայություններ, որոնք երկարացնում են հաճախորդների հագուստի, սպիտակեղենի, գորգերի և փետուր բարձերի օգտակար կյանքը։"
     },
@@ -262,7 +262,7 @@ export const cases = [
     },
     summary: {
       en: "By Botany is developing Armenia's first domestically produced textile fiber from nettle plants, offering a sustainable, low-impact alternative to conventional cotton and synthetic fibers for the fashion industry.",
-      uk: "Компанія By Botany розробляє перше у Вірменії текстильне волокно вітчизняного виробництва з рослин кропиви дводомної, пропонуючи екологічну альтернативу звичайним бавовняним і синтетичним волокнам для індустрії моди.",
+      uk: "Компанія By Botany створює перше у Вірменії текстильне волокно власного виробництва із кропиви, пропонуючи індустрії моди екологічну альтернативу традиційній бавовні та синтетичним волокнам із низьким впливом на довкілля.",
       ro: "By Botany dezvoltă prima fibră textilă din Armenia produsă pe plan intern din plante de urzică, oferind o alternativă durabilă, cu impact redus, la bumbacul convențional și fibrele sintetice pentru industria modei.",
       hy: "By Botany-ը մշակում է Հայաստանում առաջին տեղական արտադրության տեքստիլ մանրաթելը՝ եղինջի բույսերից՝ առաջարկելով կայուն, ցածր ազդեցության այլընտրանք սովորական բամբակի և սինթետիկ մանրաթելերին նորաձևության արդյունաբերության համար։"
     },
@@ -1007,7 +1007,7 @@ export const cases = [
     },
     summary: {
       en: "Chystota is a professional cleaning service provider whose service-based model reduces overall consumption of cleaning equipment, chemicals and packaging compared to individual ownership.",
-      uk: "«Чистота» є професійним постачальником послуг з прибирання, чия модель, заснована на послугах, зменшує загальне споживання обладнання для прибирання, хімікатів та упаковки порівняно з індивідуальною власністю.",
+      uk: "«Чистота» – постачальник професійних клінінгових послуг, чия сервісна модель зменшує загальне споживання прибирального обладнання, хімічних засобів та паковання порівняно з їх придбанням в індивідуальну власність.",
       ro: "Chystota este un furnizor profesionist de servicii de curățenie al cărui model bazat pe servicii reduce consumul total de echipamente de curățare, substanțe chimice și ambalaje în comparație cu proprietatea individuală.",
       hy: "Chystota-ն պրոֆեսիոնալ մաքրման ծառայություններ մատուցող է, որի ծառայությունների վրա հիմնված մոդելը նվազեցնում է մաքրման սարքավորումների, քիմիական նյութերի և փաթեթավորման ընդհանուր սպառումը անհատական սեփականության համեմատ։"
     },
@@ -1449,7 +1449,7 @@ export const cases = [
     },
     summary: {
       en: "Kuziv Craft is an artisan brand that upcycles discarded denim garments into handmade designer bags, giving used textiles a new function and reducing demand for virgin textile materials.",
-      uk: "Kuziv Craft — це ремісничий бренд, який переробляє викинутий джинсовий одяг у дизайнерські сумки ручної роботи, надаючи використаному текстилю нову функцію та знижуючи попит на первинні текстильні матеріали.",
+      uk: "Kuziv Craft – крафтовий бренд, який перетворює відпрацьований джинсовий одяг на дизайнерські сумки ручної роботи (апсайклінг), надаючи вживаному текстилю нове призначення та зменшуючи попит на первинні текстильні матеріали.",
       ro: "Kuziv Craft este un brand artizanal care reciclează articolele de îmbrăcăminte din denim aruncate în genți de designer realizate manual, oferind textilelor uzate o nouă funcție și reducând cererea de materiale textile virgine.",
       hy: "Kuziv Craft-ը արհեստավոր ապրանքանիշ է, որը վերափոխում է ջինսե հագուստները ձեռագործ դիզայներական պայուսակների մեջ՝ օգտագործված տեքստիլներին տալով նոր գործառույթ և նվազեցնելով կուսական տեքստիլ նյութերի պահանջարկը։"
     },
