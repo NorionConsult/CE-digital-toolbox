@@ -12,7 +12,7 @@
 // 1. INTRODUCTION TO SECTOR
 export const foodAndAgricultureIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Вступ до сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: 'The food and agriculture sector includes the production, processing, distribution and consumption of food and agricultural products. It depends directly on natural resources such as land, water and healthy soils, while also contributing to greenhouse gas emissions, biodiversity loss and organic waste. || The food and agriculture sector contributes approximately 10% of EU greenhouse gas emissions (Source: European Environment Agency, 2025. Greenhouse gas emissions from agriculture) and accounts for around 70% of global freshwater consumption, making it central to the circular economy transition. Up to 30% of food produced globally is wasted, with much of this occurring at farm and post-harvest processing stages before reaching consumers (Source: FAO, 2011. Global food losses and food waste: Extent, causes and prevention). || Circular economy practices can help businesses reduce losses, make better use of by-products and resources, and support more sustainable and resilient food systems. Key circular economy opportunities include agroecology, precision farming, food-waste valorisation, short supply chains and agricultural biorefinery models.',
@@ -169,8 +169,8 @@ export const foodAndAgriculture = {
   imageAlt: { en: 'Food and Agriculture sector', uk: 'Сектор харчової промисловості та сільського господарства', ro: 'Sectorul alimentației și agriculturii', hy: 'Սննդի եւ գյուղատնտեսության ոլորտ' },
   navigation: [
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: foodAndAgricultureIntroSection.id },
-    { label: { en: 'Cases', uk: 'Кейси', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: foodAndAgricultureCasesSection.id },
-    { label: { en: 'Barriers & opportunities', uk: 'Бар’єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: foodAndAgricultureBarriersSection.id },
+    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: foodAndAgricultureCasesSection.id },
+    { label: { en: 'Barriers & opportunities', uk: 'Бар´єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: foodAndAgricultureBarriersSection.id },
     { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: foodAndAgricultureRelevantToolsSection.id }
   ],
   sections: [

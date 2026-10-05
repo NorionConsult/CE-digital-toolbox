@@ -3,7 +3,7 @@
   Individual case records are edited in cases.js.
 */
 export const casesPage = {
-  pageTitle: { en: 'Cases | Circular Economy Toolbox', uk: 'Кейси | Інструментарій циркулярної економіки', ro: 'Studii de caz | Set de instrumente pentru economia circulară', hy: 'Օրինակներ | Շրջանաձեւ տնտեսության գործիքակազմ' },
+  pageTitle: { en: 'Cases | Circular Economy Toolbox', uk: 'Практичні приклади  | Інструментарій циркулярної економіки', ro: 'Studii de caz | Set de instrumente pentru economia circulară', hy: 'Օրինակներ | Շրջանաձեւ տնտեսության գործիքակազմ' },
   eyebrow: { en: 'Case studies from companies', uk: 'Кейси компаній', ro: 'Studii de caz de la companii', hy: 'Ընկերությունների օրինակներ' },
   title: { en: 'Case collection', uk: 'Колекція кейсів', ro: 'Colecție de studii de caz', hy: 'Օրինակների հավաքածու' },
   intro: {

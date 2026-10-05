@@ -12,7 +12,7 @@
 // 1. INTRODUCTION TO SECTOR
 export const constructionIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Вступ до сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: 'The construction sector includes the design, building, renovation and demolition of buildings and infrastructure. It is one of the largest users of raw materials and generates substantial amounts of waste, while also contributing significantly to energy use and greenhouse gas emissions. Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Circular economy practices can help the sector use materials more efficiently, extend the lifetime of buildings and components, and reduce the need for virgin resources, some which have potential to disrupt the sector due to low access and high demand (e.g. sand). Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering SMEs a competitive advantage in procurement and project differentiation.',
@@ -176,7 +176,7 @@ export const construction = {
   title: { en: 'Construction', uk: 'Будівництво', ro: 'Construcții', hy: 'Շինարարություն' },
   description: {
     en: 'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
-    uk: 'Цей секторний путівник надає інструменти, кейси та практичні рекомендації для будівельних МСП, які впроваджують практики циркулярної економіки.',
+    uk: 'Цей галузевий посібник містить практичні інструменти, приклади з досвіду підприємств (кейси) та прикладні рекомендації для малого й середнього бізнесу будівельної галузі, що впроваджує практики циркулярної економіки.',
     ro: 'Acest ghid sectorial oferă instrumente, cazuri și orientări practice pentru IMM-urile din construcții care adoptă practici de economie circulară.',
     hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղեցույցներ շինարարական ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։'
   },
@@ -184,8 +184,8 @@ export const construction = {
   imageAlt: { en: 'Construction sector', uk: 'Будівельний сектор', ro: 'Sectorul construcțiilor', hy: 'Շինարարության ոլորտ' },
   navigation: [
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: constructionIntroSection.id },
-    { label: { en: 'Cases', uk: 'Кейси', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: constructionCasesSection.id },
-    { label: { en: 'Barriers & opportunities', uk: 'Бар’єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: constructionBarriersSection.id },
+    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: constructionCasesSection.id },
+    { label: { en: 'Barriers & opportunities', uk: 'Бар´єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: constructionBarriersSection.id },
     { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: constructionRelevantToolsSection.id }
   ],
   sections: [

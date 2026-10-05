@@ -12,7 +12,7 @@
 // 1. INTRODUCTION TO SECTOR
 export const tourismIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Вступ до сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: 'The tourism sector brings together accommodation, food services, transport, attractions and other activities that support visitors and destinations. Tourism contributes almost EUR 1.8 trillion to EU GDP and supports over 23 million jobs, approximately 10% of total economic output (Source: European Commission, 2024. Tourism across the EU) While it is an important source of income and employment, tourism can also place pressure on energy, water, materials and local ecosystems, while generating significant waste. Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems. || Applying circular economy practices can help tourism businesses reduce their environmental footprint, use resources more efficiently and contribute to the long-term sustainability of the destinations on which they depend.',
@@ -167,8 +167,8 @@ export const tourism = {
   imageAlt: { en: 'Tourism sector', uk: 'Туристичний сектор', ro: 'Sectorul turismului', hy: 'Զբոսաշրջության ոլորտ' },
   navigation: [
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: tourismIntroSection.id },
-    { label: { en: 'Cases', uk: 'Кейси', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: tourismCasesSection.id },
-    { label: { en: 'Barriers & opportunities', uk: 'Бар’єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: tourismBarriersSection.id },
+    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: tourismCasesSection.id },
+    { label: { en: 'Barriers & opportunities', uk: 'Бар´єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: tourismBarriersSection.id },
     { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: tourismRelevantToolsSection.id }
   ],
   sections: [

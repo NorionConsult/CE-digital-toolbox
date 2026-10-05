@@ -6,7 +6,7 @@
 
 export const textilesIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Вступ до сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: "The textile sector covers the production, processing and use of fibres, fabrics, clothing and other textile products. It relies heavily on raw materials, water, energy and chemicals, while generating significant waste and pollution across its value chain. The EU textile sector generates approximately 16 kg of textile waste per person annually (Source: European Environment Agency, 2024. Management of used and waste textiles in Europe's circular economy), with less than 1% recycled back into new fibres (Source: Ellen MacArthur Foundation, 2017. A new textiles economy: Redesigning fashion's future). || Engaging with circular economy practices can help businesses reduce resource use and waste, extend the life of products and materials, and build more resilient and sustainable value chains. Key circular economy opportunities include design for durability and disassembly, repair and resale services, fibre-to-fibre recycling, and clothing-as-a-service models.",
@@ -166,8 +166,8 @@ export const textiles = {
   imageAlt: { en: 'Textiles sector', uk: 'Текстильний сектор', ro: 'Sectorul textilelor', hy: 'Տեքստիլի ոլորտ' },
   navigation: [
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: textilesIntroSection.id },
-    { label: { en: 'Cases', uk: 'Кейси', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: textilesCasesSection.id },
-    { label: { en: 'Barriers & opportunities', uk: 'Бар’єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: textilesBarriersSection.id },
+    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: textilesCasesSection.id },
+    { label: { en: 'Barriers & opportunities', uk: 'Бар´єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: textilesBarriersSection.id },
     { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: textilesRelevantToolsSection.id }
   ],
   sections: [
