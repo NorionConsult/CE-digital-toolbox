@@ -141,7 +141,7 @@ const LearningresourcesSection = {
     },
     cards: [
       {
-        courseTitle: 'Пояснення циркулярної економіки (добірка відео)',
+        courseTitle: 'Circular Economy explained (video playlist)',
         shortDescription: {
           en: 'A short curated playlist of whiteboard-style explainer videos from the Ellen MacArthur Foundation, walking through the core idea of the circular economy and why it matters for business.',
           uk: 'Коротка тематична добірка анімаційних відеороликів від Фонду Еллен Макартур, де на простих схемах пояснюється суть циркулярної економіки та її практичне значення для бізнесу.',

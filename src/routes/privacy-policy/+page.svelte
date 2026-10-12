@@ -1,7 +1,7 @@
 <script>
   import { base } from '$app/paths';
   import { page } from '$app/stores';
-  import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import { privacyPolicyPage } from '$lib/content/editable/pages/privacy-policy.js';
   import { getLanguageFromPathname, localizeContent } from '$lib/translation-helper.js';
 
@@ -25,7 +25,7 @@
     {#each currentPrivacyPolicyPage.sections as section}
       <section class="privacy-policy-block">
         <h4>{section.title}</h4>
-        <p><InlineText text={section.body} /></p>
+        <RichText text={section.body} />
       </section>
     {/each}
   </div>
@@ -59,8 +59,10 @@
     line-height: 1.25;
   }
 
-  .privacy-policy-block p {
-    max-width: 760px;
+  .privacy-policy-block :global(p),
+  .privacy-policy-block :global(ol),
+  .privacy-policy-block :global(ul) {
+    max-width: 900px;
     color: var(--text);
   }
 </style>

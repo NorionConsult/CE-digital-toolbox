@@ -4,7 +4,7 @@
   EDITING NOTES:
   - The content below follows the same order as the page.
   - Edit text inside quotes and add or remove list entries as needed.
-  - To make a paragraph change in the text, add \r\n at the end of the line and continue the paragraph on the next line. Making a space in the code will NOT result in a line break on the page. Use \r\n to create a new paragraph.
+  - To make a paragraph change in the text, add || at the end of the line and continue the paragraph on the next line. Making a space in the code will NOT result in a line break on the page. Use || to create a new paragraph.
   - Keep `id`, `slug` and `sectionId` values unchanged unless the page structure and resource placement tags are also being changed.
   - Food and Agriculture case cards are edited separately in src/lib/content/editable/cases/cases.js.
 */
