@@ -47,10 +47,12 @@ const CASE_VALUE_OVERRIDES = {
   'it services': 'IT Services',
   'products-as-a-service': 'Products-as-a-Service',
   'recycle (r8)': 'Recycle (R8)',
+  'recover (r9)': 'Recover (R9)',
   'reduce (r2)': 'Reduce (R2)',
+  'refuse (r0)': 'Refuse (R0)',
   'refurbish (r5)': 'Refurbish (R5)',
+  'remanufacture (r6)': 'Remanufacture (R6)',
   'repair (r4)': 'Repair (R4)',
-  'repurpose (r6)': 'Repurpose (R6)',
   'repurpose (r7)': 'Repurpose (R7)',
   'rethink (r1)': 'Rethink (R1)',
   'reuse (r3)': 'Reuse (R3)',
@@ -61,6 +63,17 @@ const CASE_VALUE_OVERRIDES = {
 };
 
 const LOWERCASE_WORDS = new Set(['and', 'or', 'of', 'the', 'to', 'for', 'in', 'with']);
+
+/**
+ * Sort by R number before labels are translated, keeping the same order in every language.
+ * @param {string} a
+ * @param {string} b
+ */
+export function compareRStrategies(a, b) {
+  const aNumber = Number(a.match(/\(R(\d+)\)/i)?.[1] ?? Infinity);
+  const bNumber = Number(b.match(/\(R(\d+)\)/i)?.[1] ?? Infinity);
+  return aNumber - bNumber || a.localeCompare(b);
+}
 
 /**
  * @param {string[] | string | undefined} value

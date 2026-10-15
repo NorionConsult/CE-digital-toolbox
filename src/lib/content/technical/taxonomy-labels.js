@@ -116,7 +116,7 @@ const taxonomyLabels = {
     },
     Packaging: {
       en: 'Packaging',
-      uk: 'Пакування',
+      uk: 'Паковання',
       ro: 'Ambalaje',
       hy: 'Փաթեթավորում'
     },
@@ -208,11 +208,11 @@ const taxonomyLabels = {
       ro: 'Reparare (R4)',
       hy: 'Նորոգում (R4)'
     },
-    'Repurpose (R6)': {
-      en: 'Repurpose (R6)',
-      uk: 'Переорієнтація використання (R6)',
-      ro: 'Reutilizare pentru alt scop (R6)',
-      hy: 'Նոր նպատակով օգտագործում (R6)'
+    'Repurpose (R7)': {
+      en: 'Repurpose (R7)',
+      uk: 'Переорієнтація використання (R7)',
+      ro: 'Reutilizare pentru alt scop (R7)',
+      hy: 'Նոր նպատակով օգտագործում (R7)'
     },
     'Rethink (R1)': {
       en: 'Rethink (R1)',
