@@ -6,6 +6,7 @@
   import { trackSelectContent } from '$lib/analytics.js';
   import { journeyPhasePage } from '$lib/content/editable/pages/journey-phase-page.js';
   import { journeyPhases } from '$lib/content/technical/registries/journey-phases.js';
+  import { translateTaxonomyDisplay } from '$lib/content/technical/taxonomy-labels.js';
   import { site } from '$lib/content/editable/global/site.js';
   import ResourceCard from '$lib/components/cards/ResourceCard.svelte';
   import CompactJourneyPhaseMap from '$lib/components/sections/CompactJourneyPhaseMap.svelte';
@@ -526,7 +527,7 @@
                     <dl class="learning-resource-meta" aria-label={currentJourneyPhasePage.learningResource}>
                       <div>
                         <dt>{currentJourneyPhasePage.language}</dt>
-                        <dd>{card.language}</dd>
+                        <dd>{translateTaxonomyDisplay(card.language, 'languages', currentLanguage)}</dd>
                       </div>
                       <div>
                         <dt>{currentJourneyPhasePage.provider}</dt>

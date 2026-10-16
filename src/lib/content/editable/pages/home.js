@@ -26,7 +26,7 @@ export const home = {
     },
     text: {
       en: 'This digital toolbox provides a structured overview of digital tools that support the transition into circular economy practices for SMEs across different industries. Get started by following a guided flow that introduces the tools or by freely browsing tools in the catalogue.',
-      uk: 'Цей цифровий інструментарій містить структурований огляд цифрових рішень, які підтримують перехід малого та середнього бізнесу до практик циркулярної економіки в різних галузях.',
+      uk: 'Цей цифровий інструментарій містить структурований огляд цифрових рішень, які підтримують перехід малого та середнього бізнесу до практик циркулярної економіки в різних галузях. Розпочніть роботу з покрокового шляху, який знайомить із доступними інструментами, або переглядайте їх безпосередньо в каталозі.',
       ro: 'Acest set digital de instrumente oferă o prezentare structurată a instrumentelor digitale care sprijină tranziția întreprinderilor mici și mijlocii din diferite sectoare către practici de economie circulară. Începe urmând un parcurs ghidat sau explorează liber instrumentele din catalog.',
       hy: 'Այս թվային գործիքակազմը ներկայացնում է տարբեր ոլորտների փոքր և միջին ձեռնարկություններին (ՓՄՁ) շրջանաձև տնտեսության գործելակերպերին անցնելու հարցում աջակցող թվային գործիքների կառուցվածքային ակնարկ։ Սկսեք՝ հետևելով ուղեցույցներին կամ ազատորեն ուսումնասիրեք գործիքների կատալոգը։'
     },

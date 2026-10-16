@@ -19,7 +19,7 @@
     notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' },
     circularStrategiesTitle: {
       en: 'How does this case apply circular strategies?',
-      uk: 'Як цей кейс застосовує циркулярні стратегії?',
+      uk: 'Як у цьому прикладі застосовано циркулярні стратегії?',
       ro: 'Cum aplică acest caz strategiile circulare?',
       hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձև ռազմավարությունները։'
     },

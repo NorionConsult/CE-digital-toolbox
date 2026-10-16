@@ -96,10 +96,27 @@ card descriptions, footer text, page intros, tool descriptions and case
 descriptions.
 
 In the tool catalogue, the translated user-facing fields are normally
-`description`, `about`, `timeRequired`, `preparationNeeded`, `output`,
-`bestFor` and `format`. In the case catalogue, the translated user-facing
-fields are normally `summary`, `description`, `rStrategyDescription` and
-`imageAlt`.
+`title`, `provider`, `description`, `about`, `timeRequired`, `preparationNeeded`,
+`output`, `bestFor` and `format`. In the case catalogue, the translated
+user-facing fields are normally `companyName` (also the case title), `summary`,
+`description`, `rStrategyDescription` and `imageAlt`.
+
+Tool titles, provider names, case titles and Learn resource titles/providers
+already have empty `uk`, `ro` and `hy` slots. Add text to the desired language
+slot when a translated name is wanted. Leave it as `''` to show the original
+English name. For example:
+
+```js
+provider: {
+  en: 'SME Climate Hub',
+  uk: '',
+  ro: '',
+  hy: ''
+}
+```
+
+The same field supplies cards and detail pages, so editing it updates both.
+Keep the `en` value as the original name and keep ids and slugs unchanged.
 
 Do not translate technical values such as:
 
@@ -117,6 +134,9 @@ colour classes
 
 Those values connect pages, filters, links and assets together. They should stay
 stable even when the visible text changes language.
+For diagrams with translated artwork, editors can select a different existing
+image file for each language using the `src` paths described under
+[Translated diagrams](#translated-diagrams).
 
 Filter labels and badges such as sectors, countries, R strategies, access
 types, effort levels and tool languages are translated centrally in:
@@ -244,7 +264,7 @@ Each sector file follows the order in which content appears on the website:
 The sector files contain comments above every editable section. In general:
 
 - Edit `paragraphs` to change the Introduction to sector text.
-- Edit `featuredCaseNames` inside the sector's `CasesSection` to choose the case cards shown on that sector guide page. Use the visible company or case names from `src/lib/content/editable/cases/cases.js`.
+- Edit `featuredCaseNames` inside the sector's `CasesSection` to choose the case cards shown on that sector guide page. Use the English `companyName.en` value or the stable case slug from `src/lib/content/editable/cases/cases.js`.
 - Edit `intro`, `barriers` and `opportunities` inside the sector's `BarriersSection`.
 - Barriers and opportunities can include sources directly next to each bullet:
 
@@ -412,3 +432,53 @@ Icon Park SVG files are stored locally in `static/icons/icon-park/`.
 They use the pattern `icon-park-original-name.svg`, for example
 `icon-park-arrow-right.svg`. The SME journey phase image icons are stored in
 `static/icons/phase-icons/`.
+
+### Translated Diagrams
+
+The 9R diagram on Explore and the butterfly diagram on Learn have one image
+path per website language. Editors only need to upload the artwork and edit
+the corresponding `src` value in the editable content file.
+
+| Diagram | Upload folder | Editable content file | Image block |
+| --- | --- | --- | --- |
+| 9R | `static/phase-content/phase-3/` | `editable/journey-phases/explore.js` | `inlineImage.src` |
+| Butterfly | `static/phase-content/phase-1/` | `editable/journey-phases/learn.js` | The `image.src` block under Linear vs. circular |
+
+Content file paths above are relative to `src/lib/content/`.
+
+The 9R files currently available are `9R-diagram-EN.svg` and
+`9R-diagram-UK.svg`. Romanian and Armenian currently point to English:
+
+```js
+src: {
+  en: '/phase-content/phase-3/9R-diagram-EN.svg',
+  uk: '/phase-content/phase-3/9R-diagram-UK.svg',
+  ro: '/phase-content/phase-3/9R-diagram-EN.svg',
+  hy: '/phase-content/phase-3/9R-diagram-EN.svg'
+}
+```
+
+To add Romanian, for example:
+
+1. Upload `9R-diagram-RO.svg` to `static/phase-content/phase-3/`.
+2. In `explore.js`, change only the `ro` path to `/phase-content/phase-3/9R-diagram-RO.svg`.
+3. Open the Romanian Explore page and click the diagram to check its enlarged view too.
+
+For Armenian, follow the same steps with `9R-diagram-HY.svg` and `hy`.
+Use `uk` for Ukrainian, `ro` for Romanian and `hy` for Armenian in code;
+the filename suffixes are uppercase `UK`, `RO` and `HY`.
+
+The butterfly diagram currently uses `Butterfly-diagram-EN.png` for every
+language. To add a translation, upload `Butterfly-diagram-UK.png`,
+`Butterfly-diagram-RO.png` or `Butterfly-diagram-HY.png` to
+`static/phase-content/phase-1/`, then change only that language's path in
+`learn.js`. SVG artwork also works: use the actual filename and extension,
+such as `/phase-content/phase-1/Butterfly-diagram-UK.svg`.
+
+Keep paths pointing to English until the translated files are uploaded.
+An empty language value also falls back to `en`; a path to a missing file
+does not. Match filename capitalization and omit `static/` from the public
+path. The website adds its deployment base path automatically.
+
+The existing `alt` and `caption` language objects are separate from the image
+file selection. Edit them if the translated artwork needs different wording.

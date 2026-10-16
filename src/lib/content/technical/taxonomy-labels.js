@@ -30,7 +30,7 @@ const taxonomyLabels = {
     },
     Evaluate: {
       en: 'Evaluate',
-      uk: 'Аналіз',
+      uk: 'Пріоритизація',
       ro: 'Analiză',
       hy: 'Գնահատել'
     },
@@ -336,7 +336,7 @@ const taxonomyLabels = {
     },
     High: {
       en: 'High',
-      uk: 'Високі',
+      uk: "Висока",
       ro: 'Ridicat',
       hy: 'Բարձր'
     }

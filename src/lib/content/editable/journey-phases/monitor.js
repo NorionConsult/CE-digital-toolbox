@@ -159,10 +159,10 @@ const interpretingResultsSection = {
 
 /* 8. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you can measure circular progress and turn monitoring results into practical improvements.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви здатні вимірювати прогрес у впровадженні циркулярних підходів і перетворювати результати моніторингу на практичні вдосконалення.', ro: 'Folosește această listă pentru a confirma că poți măsura progresul circular și transforma rezultatele monitorizării în îmbunătățiri practice.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ կարող եք չափել շրջանաձեւ առաջընթացը եւ մոնիթորինգի արդյունքները վերածել գործնական բարելավումների։' },
-    { en: 'Monitoring is an ongoing process and the SME journey can be revisited', uk: 'Моніторинг – це безперервний процес, і до шляху МСП можна повертатися знову.', ro: 'Monitorizarea este un proces continuu, iar parcursul IMM poate fi revizitat.', hy: 'Մոնիթորինգը շարունակական գործընթաց է, եւ ՓՄՁ ուղին կարելի է նորից վերանայել։' }
+    { en: 'Monitoring is an ongoing process and the SME journey can be revisited.', uk: 'Моніторинг – це безперервний процес, і до шляху МСП можна повертатися знову.', ro: 'Monitorizarea este un proces continuu, iar parcursul IMM poate fi revizitat.', hy: 'Մոնիթորինգը շարունակական գործընթաց է, եւ ՓՄՁ ուղին կարելի է նորից վերանայել։' }
   ],
   checklist: [
     { en: 'Selected indicators that connect directly to circular goals', uk: 'Обрано показники (індикатори), які безпосередньо пов´язані з цілями циркулярності', ro: 'Ai selectat indicatori conectați direct la obiectivele circulare', hy: 'Ընտրվել են ցուցանիշներ, որոնք անմիջապես կապված են շրջանաձեւ նպատակների հետ' },

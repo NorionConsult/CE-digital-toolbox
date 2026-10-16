@@ -202,6 +202,12 @@ To translate a text value, keep it in the same editable file and replace the pla
 
 The main menu language selector stores the visitor's choice and keeps them on that language while they navigate. Slugs stay stable for now, so translated paths look like `/uk/tools/example-tool/` while the tool slug itself remains unchanged.
 
+The 9R and butterfly diagrams also support a different image file per language.
+Upload translated artwork to the relevant folder in `static/phase-content/`
+and update that language's `src` filename in the editable Learn or Explore file.
+See [Translated diagrams](src/lib/content/README.md#translated-diagrams) for
+folder paths, filenames and English fallback instructions.
+
 ## Run Locally
 
 Install dependencies:

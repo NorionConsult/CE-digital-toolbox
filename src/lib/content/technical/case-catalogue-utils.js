@@ -6,7 +6,7 @@
  * @typedef {{
  *   id: string;
  *   slug: string;
- *   companyName: string;
+ *   companyName: TranslatedText;
  *   country: string | string[];
  *   countries?: string[];
  *   countryDisplay?: string;

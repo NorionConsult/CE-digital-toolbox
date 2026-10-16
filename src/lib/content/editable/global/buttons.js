@@ -12,7 +12,7 @@ export const buttonLabels = {
   viewSector: { en: 'View sector tools', uk: 'Переглянути галузеві інструменти', ro: 'Vezi instrumentele sectoriale', hy: 'Դիտել ոլորտային գործիքները' },
   viewResource: { en: 'View tool', uk: 'Переглянути інструмент', ro: 'Vezi instrumentul', hy: 'Դիտել գործիքը' },
   viewCase: { en: 'View case', uk: 'Переглянути приклад', ro: 'Vezi studiul de caz', hy: 'Դիտել օրինակը' },
-  openTool: { en: 'Open tool', uk: 'Відкрити інструмент', ro: 'Deschide instrumentul', hy: 'Բացել գործիքը' },
+  openTool: { en: 'Open tool', uk: "Переглянути інструмент", ro: 'Deschide instrumentul', hy: 'Բացել գործիքը' },
   downloadTool: { en: 'Download tool', uk: 'Завантажити інструмент', ro: 'Descarcă instrumentul', hy: 'Ներբեռնել գործիքը' },
   openCase: { en: 'View case source', uk: 'Переглянути джерело прикладу', ro: 'Vezi sursa studiului de caz', hy: 'Դիտել օրինակի աղբյուրը' }
 };

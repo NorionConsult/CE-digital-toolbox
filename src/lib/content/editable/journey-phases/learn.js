@@ -86,13 +86,26 @@ const pathwaySection = {
         },
         {
           en: "A widely used way of illustrating the circular economy is the Ellen MacArthur Foundation’s **butterfly diagram** (shown below). The diagram depicts two main cycles, technical and biological, and shows how products, materials, and resources can circulate from use and consumption back into production processes, reducing waste and optimising resource use. || If you want to learn more, see the eLearning courses below to continue learning about the basic concepts of circular economy and resource efficiency.",
-          uk: 'Поширений спосіб пояснити циркулярну економіку - це **діаграма метелика** Фонду Еллен Макартур (нижче). Вона ілюструє два головні цикли – технічний і біологічний – та пояснює, як продукція, матеріали й ресурси можуть повертатися зі стадії використання та споживання назад у виробничі процеси, скорочуючи відходи й оптимізуючи використання сировини.|| Щоб дізнатися більше, перегляньте запропоновані нижче онлайн-курси з базових концепцій циркулярної економіки та ресурсоефективності.',
+          uk: 'Загальновизнаним способом візуалізації циркулярної економіки вважається«діаграма метелика» Фонду Еллен Макартур (подана нижче). Вона ілюструє два головні цикли – технічний і біологічний – та пояснює, як продукція, матеріали й ресурси можуть повертатися зі стадії використання та споживання назад у виробничі процеси, скорочуючи відходи й оптимізуючи використання сировини.|| Щоб дізнатися більше, перегляньте запропоновані нижче онлайн-курси з базових концепцій циркулярної економіки та ресурсоефективності.',
           ro: 'O modalitate des folosită pentru a ilustra economia circulară este **diagrama fluture** a Fundației Ellen MacArthur (prezentată mai jos). Diagrama arată două cicluri principale, tehnic și biologic, și explică modul în care produsele, materialele și resursele pot circula de la utilizare și consum înapoi în procesele de producție, reducând deșeurile și optimizând utilizarea resurselor. || Pentru a afla mai multe, vezi cursurile eLearning de mai jos despre conceptele de bază ale economiei circulare și eficienței resurselor.',
           hy: 'Շրջանաձեւ տնտեսությունը պատկերելու տարածված ձեւերից է Էլեն ՄակԱրթուր հիմնադրամի **թիթեռի դիագրամը** (ստորեւ)։ Այն ներկայացնում է երկու հիմնական շրջափուլ՝ տեխնիկական եւ կենսաբանական, եւ ցույց է տալիս, թե ինչպես կարող են ապրանքները, նյութերն ու ռեսուրսները օգտագործումից եւ սպառումից վերադառնալ արտադրական գործընթացներ՝ նվազեցնելով թափոնները եւ օպտիմալացնելով ռեսուրսների օգտագործումը։ || Ավելին իմանալու համար դիտեք ստորեւ ներկայացված էլեկտրոնային դասընթացները շրջանաձեւ տնտեսության եւ ռեսուրսաարդյունավետության հիմնական գաղափարների վերաբերյալ։'
         }
       ],
       image: {
-        src: '/phase-content/phase-1/Circular economy butterfly diagram.png',
+        /*
+          BUTTERFLY DIAGRAM TRANSLATIONS:
+          Upload translated artwork to static/phase-content/phase-1/, for example
+          Butterfly-diagram-UK.png, Butterfly-diagram-RO.png or Butterfly-diagram-HY.png.
+          Update only the matching language's `src` path below. SVG files also work:
+          use the actual filename and extension. Leave the English path in place
+          until the translated file is available. Omit static/ from these links.
+        */
+        src: {
+          en: '/phase-content/phase-1/Butterfly-diagram-EN.png',
+          uk: '/phase-content/phase-1/Butterfly-diagram-EN.png',
+          ro: '/phase-content/phase-1/Butterfly-diagram-EN.png',
+          hy: '/phase-content/phase-1/Butterfly-diagram-EN.png'
+        },
         alt: {
           en: 'Circular economy butterfly diagram showing technical and biological cycles',
           uk: 'Діаграма метелика циркулярної економіки з технічним і біологічним циклами',
@@ -118,6 +131,8 @@ const pathwaySection = {
   These cards do not create separate pages. Their button opens the `url` directly.
   Each card controls one full green container: card on the left, description
   text on the right.
+  `courseTitle` and `provider` have `en`, `uk`, `ro` and `hy` translation slots.
+  Leave a translation as '' to keep showing the original English name.
 */
 const LearningresourcesSection = {
   id: 'learning-resources',
@@ -135,13 +150,18 @@ const LearningresourcesSection = {
   learningResources: {
     labels: {
       badge: { en: 'Online course', uk: 'Онлайн-курс', ro: 'Curs online', hy: 'Առցանց դասընթաց' },
-      about: { en: 'What is this?', uk: 'Що це за ресурс?', ro: 'Ce este acesta?', hy: 'Ի՞նչ է սա։' },
+      about: { en: 'What is this?', uk: 'Що це за курс?', ro: 'Ce este acesta?', hy: 'Ի՞նչ է սա։' },
       learningGoals: { en: 'Learning goals', uk: 'Чого Ви навчитеся', ro: 'Obiective de învățare', hy: 'Ուսումնական նպատակներ' },
-      whyTakeCourse: { en: 'Why should I take this course?', uk: 'Чому варто переглянути цей курс?', ro: 'De ce să urmez acest curs?', hy: 'Ինչո՞ւ անցնել այս դասընթացը։' }
+      whyTakeCourse: { en: 'Why should I take this course?', uk: 'ЧЧому варто переглянути цей курс?', ro: 'De ce să urmez acest curs?', hy: 'Ինչո՞ւ անցնել այս դասընթացը։' }
     },
     cards: [
       {
-        courseTitle: 'Circular Economy explained (video playlist)',
+        courseTitle: {
+          en: 'Circular Economy explained (video playlist)',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         shortDescription: {
           en: 'A short curated playlist of whiteboard-style explainer videos from the Ellen MacArthur Foundation, walking through the core idea of the circular economy and why it matters for business.',
           uk: 'Коротка тематична добірка анімаційних відеороликів від Фонду Еллен Макартур, де на простих схемах пояснюється суть циркулярної економіки та її практичне значення для бізнесу.',
@@ -149,7 +169,12 @@ const LearningresourcesSection = {
           hy: 'Ellen MacArthur Foundation-ի կարճ ընտրված տեսաշար՝ գրատախտակի ոճով բացատրական տեսանյութերով, որը ներկայացնում է շրջանաձև տնտեսության հիմնական գաղափարը և դրա նշանակությունը բիզնեսի համար։'
         },
         language: 'English',
-        provider: 'Ellen MacArthur Foundation',
+        provider: {
+          en: 'Ellen MacArthur Foundation',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         url: 'https://www.ellenmacarthurfoundation.org/playlist-circular-economy-explained',
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
@@ -175,7 +200,12 @@ const LearningresourcesSection = {
         ]
       },
       {
-        courseTitle: 'Circular Economy in Industry',
+        courseTitle: {
+          en: 'Circular Economy in Industry',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         shortDescription: {
           en: 'A ten-part e-learning course covering circular economy principles and their application across industrial value chains, developed for green-transition skills building.',
           uk: 'Дистанційний курс із 10 модулів, присвячений принципам циркулярної економіки та їхньому застосуванню в промислових ланцюгах створення вартості. Розроблений для розвитку практичних навичок у межах «зеленого» переходу.',
@@ -183,7 +213,12 @@ const LearningresourcesSection = {
           hy: 'Տասը մասից բաղկացած էլեկտրոնային ուսուցման դասընթաց շրջանաձեւ տնտեսության սկզբունքների եւ դրանց կիրառման մասին արդյունաբերական արժեքի շղթաներում՝ մշակված կանաչ անցման հմտություններ զարգացնելու համար։'
         },
         language: 'English',
-        provider: 'United Nations Industrial Development Organisation (UNIDO)',
+        provider: {
+          en: 'United Nations Industrial Development Organisation (UNIDO)',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         url: 'https://www.unido.org/learning-resources/circular-economy-industry',
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
@@ -209,7 +244,12 @@ const LearningresourcesSection = {
         ]
       },
       {
-        courseTitle: 'SWITCH circular economy journey',
+        courseTitle: {
+          en: 'SWITCH circular economy journey',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         shortDescription: {
           en: 'A circular economy programme which aims to support micro-enterprises and small-medium enterprises (SMEs) with specific tracks that walk businesses through circular economy practices via games and journey phases.',
           uk: 'Програма з циркулярної економіки для підтримки мікро-, малих та середніх підприємств (ММСП) за спеціальними галузевими напрямами. Вона допомагає бізнесу поетапно опановувати циркулярні практики за допомогою навчальних ігор і покрокових етапів дорожньої карти.',
@@ -217,7 +257,12 @@ const LearningresourcesSection = {
           hy: 'Շրջանաձև տնտեսության ծրագիր, որն աջակցում է միկրո, փոքր և միջին ձեռնարկություններին՝ առաջարկելով ոլորտային ուղիներ, որոնց շրջանակում խաղերի և անցման փուլերի միջոցով ներկայացվում է շրջանաձև տնտեսության գործելակերպերի կիրառումը։'
         },
         language: 'English',
-        provider: 'SWITCH to Circular Economy Value Chains',
+        provider: {
+          en: 'SWITCH to Circular Economy Value Chains',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         url: 'https://switch.circle-economy.com/',
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
@@ -248,17 +293,17 @@ const LearningresourcesSection = {
 
 /* 5. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     {
       en: 'Use this checklist to confirm that you have a basic understanding of the key circular economy principles.',
-      uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви засвоїли базові принципи циркулярної економіки.',
+      uk: 'Скористайтеся цим контрольним списком (чеклістом), щоб переконатися, що ви маєте базове розуміння ключових принципів циркулярної економіки.',
       ro: 'Folosește această listă de verificare pentru a confirma că ai o înțelegere de bază a principiilor-cheie ale economiei circulare.',
       hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ ունեք շրջանաձեւ տնտեսության հիմնական սկզբունքների բազային պատկերացում։'
     },
     {
       en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.',
-      uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.',
+      uk: 'Щоб перейти до наступного етапу, натисніть кнопку, яка з’явиться після контрольного списку, якщо ви позначили всі пункти, або поверніться на головну сторінку, щоб знайти наступний відповідний етап чи галузевий інструмент або переглянути сторінку з усіма інструментами.',
       ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul care apare după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumentele sectoriale ori catalogul de instrumente.',
       hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ գտնելու համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը։'
     }

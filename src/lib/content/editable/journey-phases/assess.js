@@ -24,7 +24,7 @@ const phaseCard = {
 const hero = {
   intro: {
     en: 'This phase helps you assess your starting point. It includes tools and guidance for assessing circular economy maturity, identifying hotspots and establishing an initial baseline.',
-    uk: 'Цей етап допомагає визначити вашу вихідну точку. Він містить інструменти та рекомендації для оцінки рівня циркулярної зрілості бізнесу, виявлення проблемних зон («критичних точок») і формування базових показників.',
+    uk: 'Цей етап допомагає оцінити вихідну ситуацію. Він містить інструменти та рекомендації для оцінювання рівня зрілості циркулярної економіки, визначення ключових проблемних аспектів і формування початкового базового рівня.',
     ro: 'Această fază te ajută să îți evaluezi punctul de plecare. Include instrumente și orientări pentru evaluarea maturității economiei circulare, identificarea punctelor critice și stabilirea unei baze inițiale.',
     hy: 'Այս փուլը օգնում է գնահատել ձեր մեկնարկային կետը։ Այն ներառում է գործիքներ եւ ուղեցույցներ շրջանաձեւ տնտեսության հասունությունը գնահատելու, խնդրահարույց կետերը գտնելու եւ նախնական ելակետ սահմանելու համար։'
   },
@@ -36,7 +36,7 @@ const hero = {
 const sectionButtons = [
   { sectionId: 'maturity-assessment', label: { en: 'Assess maturity', uk: 'Оцінка зрілості', ro: 'Evaluează maturitatea', hy: 'Գնահատել հասունությունը' } },
   { sectionId: 'mapping-resources', label: { en: 'Map resources', uk: 'Картування ресурсів', ro: 'Cartografiază resursele', hy: 'Քարտեզագրել ռեսուրսները' } },
-  { sectionId: 'hotspot-analysis', label: { en: 'Analyse hotspots', uk: 'Аналіз «критичних точок»', ro: 'Analizează punctele critice', hy: 'Վերլուծել խնդրահարույց կետերը' } }
+  { sectionId: 'hotspot-analysis', label: { en: 'Analyse hotspots', uk: 'Аналізувати критичні точки', ro: 'Analizează punctele critice', hy: 'Վերլուծել խնդրահարույց կետերը' } }
 ];
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
@@ -51,7 +51,7 @@ const pathwaySection = {
     {
       sectionId: 'maturity-assessment',
       number: '1',
-      title: { en: 'Maturity Assessment', uk: 'Оцінювання зрілості', ro: 'Evaluarea maturității', hy: 'Հասունության գնահատում' },
+      title: { en: 'Maturity Assessment', uk: 'Оцінка зрілості', ro: 'Evaluarea maturității', hy: 'Հասունության գնահատում' },
       description: { en: 'Assess how circular your business already is across key dimensions.', uk: 'Оцініть рівень циркулярності вашого бізнесу за ключовими напрямами.', ro: 'Evaluează cât de circulară este deja afacerea ta în dimensiunile-cheie.', hy: 'Գնահատեք, թե որքան շրջանաձեւ է ձեր բիզնեսը հիմնական ուղղություններով։' },
       keyOutputs: [{ en: 'Circular Economy maturity score', uk: 'Рівень циркулярної зрілості бізнесу (у балах)', ro: 'Scor de maturitate în economia circulară', hy: 'Շրջանաձեւ տնտեսության հասունության գնահատական' }, { en: 'Priority areas', uk: 'Пріоритетні напрями для вдосконалення', ro: 'Zone prioritare', hy: 'Առաջնահերթ ոլորտներ' }]
     },
@@ -81,7 +81,7 @@ const pathwaySection = {
 */
 const maturitySection = {
   id: 'maturity-assessment',
-  title: { en: 'Maturity Assessment', uk: 'Оцінювання зрілості', ro: 'Evaluarea maturității', hy: 'Հասունության գնահատում' },
+  title: { en: 'Maturity Assessment', uk: 'Оцінка зрілості', ro: 'Evaluarea maturității', hy: 'Հասունության գնահատում' },
   resourceTag: 'assess:maturity-assessment',
   /* EDIT THIS BELOW */
   paragraphs: [
@@ -141,7 +141,7 @@ const hotspotSection = {
     }
   ],
   factbox: {
-    title: { en: 'Identify Hotspots', uk: 'Як виявити «критичні точки»', ro: 'Identifică punctele critice', hy: 'Գտեք խնդրահարույց կետերը' },
+    title: { en: 'Identify Hotspots', uk: 'Визначте критичні точки', ro: 'Identifică punctele critice', hy: 'Գտեք խնդրահարույց կետերը' },
     items: [
       { en: 'Review your input/output map and highlight the largest flows', uk: 'Проаналізуйте карту вхідних і вихідних потоків та позначте найбільші з них', ro: 'Revizuiește harta intrări/ieșiri și evidențiază cele mai mari fluxuri', hy: 'Վերանայեք մուտք/ելք քարտեզը եւ ընդգծեք ամենամեծ հոսքերը' },
       { en: 'Flag activities with high energy or water use', uk: 'Зверніть увагу на процеси з високим рівнем споживання енергії чи води', ro: 'Marchează activitățile cu consum ridicat de energie sau apă', hy: 'Նշեք բարձր էներգիայի կամ ջրի սպառում ունեցող գործողությունները' },
@@ -158,9 +158,9 @@ const hotspotSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
-    { en: 'Use this checklist to confirm that you have mapped a practical baseline and identified your key hotspots.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви сформували практичну базову лінію (вихідні показники) та визначили свої ключові критичні зони («гарячі точки»).', ro: 'Folosește această listă pentru a confirma că ai cartografiat o bază practică și ai identificat punctele critice principale.', hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ քարտեզագրել եք գործնական ելակետը եւ գտել հիմնական խնդրահարույց կետերը։' },
+    { en: 'Use this checklist to confirm that you have mapped a practical baseline and identified your key hotspots.', uk: 'Скористайтеся цим контрольним списком (чеклістом), щоб переконатися, що ви визначили практичний базовий рівень і виявили ключові проблемні/критичні аспекти.', ro: 'Folosește această listă pentru a confirma că ai cartografiat o bază practică și ai identificat punctele critice principale.', hy: 'Օգտագործեք այս ստուգաթերթը՝ համոզվելու համար, որ քարտեզագրել եք գործնական ելակետը եւ գտել հիմնական խնդրահարույց կետերը։' },
     { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
   ],
   checklist: [

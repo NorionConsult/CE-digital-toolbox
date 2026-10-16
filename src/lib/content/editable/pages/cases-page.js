@@ -8,14 +8,14 @@ export const casesPage = {
   title: { en: 'Case collection', uk: 'Колекція кейсів', ro: 'Colecție de studii de caz', hy: 'Օրինակների հավաքածու' },
   intro: {
     en: 'Get concrete examples and inspiration from real-world applications of circular economy practices. Browse existing case studies and filter them by sector, R strategy and country.',
-    uk: 'Отримайте конкретні приклади та натхнення з реального застосування практик циркулярної економіки. Переглядайте наявні кейси та фільтруйте їх за сектором, R-стратегією і країною.',
+    uk: 'Ознайомтеся з конкретними прикладами реального застосування практик циркулярної економіки. Переглядайте запропоновану добірку та фільтруйте приклади за сектором, R-стратегією і країною.',
     ro: 'Găsește exemple concrete și inspirație din aplicarea reală a practicilor de economie circulară. Explorează studiile de caz existente și filtrează-le după sector, strategie R și țară.',
     hy: 'Գտեք կոնկրետ օրինակներ և ոգեշնչում շրջանաձև տնտեսության իրական գործելակերպերից։ Դիտեք առկա օրինակները և զտեք դրանք ըստ ոլորտի, R ռազմավարության և երկրի։'
   },
   searchLabel: { en: 'Search', uk: 'Пошук', ro: 'Caută', hy: 'Որոնում' },
   searchPlaceholder: { en: 'Search by company, sector, country, R strategy or description', uk: 'Шукайте за компанією, сектором, країною, R-стратегією або описом', ro: 'Caută după companie, sector, țară, strategie R sau descriere', hy: 'Որոնել ըստ ընկերության, ոլորտի, երկրի, R ռազմավարության կամ նկարագրության' },
   filtersLabel: { en: 'Case filters', uk: 'Фільтри кейсів', ro: 'Filtre pentru studii de caz', hy: 'Օրինակների զտիչներ' },
-  sectorLabel: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },
+  sectorLabel: { en: 'Sector', uk: "Галузь", ro: 'Sector', hy: 'Ոլորտ' },
   rStrategyLabel: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
   countryLabel: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
   disabledSectorTitle: { en: 'No cases match this sector with the current filters', uk: 'Немає кейсів для цього сектору з поточними фільтрами', ro: 'Niciun studiu de caz nu corespunde acestui sector cu filtrele actuale', hy: 'Այս ոլորտին համապատասխան օրինակներ չկան ընթացիկ զտիչներով' },

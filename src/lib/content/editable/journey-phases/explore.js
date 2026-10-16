@@ -112,8 +112,14 @@ const identifyOptionsSection = {
   /*
     CIRCULAR ECONOMY STRATEGIES IMAGE:
     The description text appears below the subtitle and before the image.
-    Replace src to change the visual, or edit the text, alt text and caption below.
+    Edit the text, alt text and caption below as needed.
+    `src` has one image path per language. English and Ukrainian are available.
+    For Romanian or Armenian, upload 9R-diagram-RO.svg or 9R-diagram-HY.svg
+    to static/phase-content/phase-3/, then update only `src.ro` or `src.hy`.
+    Keep the English image path until the translated file is available.
+    Paths below start at /phase-content/; do not include static/ in the link.
   */
+ 
   inlineImage: {
     afterParagraph: 1,
     title: { en: 'Circular Economy strategies', uk: 'Стратегії циркулярної економіки', ro: 'Strategii de economie circulară', hy: 'Շրջանաձեւ տնտեսության ռազմավարություններ' },
@@ -123,7 +129,13 @@ const identifyOptionsSection = {
       ro: 'Imaginea de mai jos arată cum strategiile 9R formează o ierarhie a intervențiilor de economie circulară, ordonate după câtă valoare păstrează. În partea de sus, R0 Refuse evită complet nevoia unui produs sau resursă. R1 Rethink și R2 Reduce se concentrează pe utilizarea mai eficientă a produselor și resurselor, iar R3-R6 Reuse, Repair, Refurbish și Remanufacture urmăresc să mențină produsele, componentele și valoarea lor în uz cât mai mult timp posibil. || Mai jos în ierarhie, R7 Repurpose oferă produselor sau componentelor o funcție nouă, R8 Recycle recuperează valoarea materială prin procesare, iar R9 Recover, de obicei prin recuperare energetică, păstrează doar o parte limitată din valoarea inițială. || Principiul-cheie este că, pe măsură ce o intervenție se află mai jos în ierarhie, se pierde de regulă mai mult din valoarea economică, de mediu și socială încorporată în produs. Reciclarea poate fi importantă, dar nu ar trebui să fie automat punctul de plecare pentru inovarea circulară.|| Acest cadru poate ajuta la provocarea presupunerilor existente, identificarea unei game mai largi de strategii și prioritizarea opțiunilor cu valoare mai mare înainte de a trece la reciclare sau recuperare. Cu această perspectivă, poți continua cu un atelier practic pentru explorarea strategiilor circulare relevante sau poți folosi alte instrumente din faza Explore pentru a identifica și dezvolta opțiuni posibile.',
       hy: 'Ստորեւ ներկայացված պատկերը ցույց է տալիս, թե ինչպես են 9R ռազմավարությունները կազմում շրջանաձեւ տնտեսության միջամտությունների հիերարխիա՝ դասավորված ըստ պահպանվող արժեքի։ Վերեւում R0 Refuse-ը ամբողջությամբ խուսափում է արտադրանքի կամ ռեսուրսի անհրաժեշտությունից։ R1 Rethink-ը եւ R2 Reduce-ը կենտրոնանում են արտադրանքի եւ ռեսուրսների ավելի արդյունավետ օգտագործման վրա, մինչդեռ R3-R6 Reuse, Repair, Refurbish եւ Remanufacture ռազմավարությունները նպատակ ունեն արտադրանքը, բաղադրիչները եւ դրանց մեջ ներդրված արժեքը հնարավորինս երկար պահել օգտագործման մեջ։ || Հիերարխիայի ավելի ներքեւում R7 Repurpose-ը ապրանքներին կամ բաղադրիչներին տալիս է նոր գործառույթ, R8 Recycle-ը վերամշակման միջոցով վերականգնում է նյութական արժեքը, իսկ R9 Recover-ը, սովորաբար էներգիայի վերականգնման միջոցով, պահպանում է սկզբնական արժեքի միայն սահմանափակ մասը։ || Հիմնական սկզբունքն այն է, որ որքան ավելի ներքեւ է միջամտությունը հիերարխիայում, այնքան ավելի շատ է սովորաբար կորցվում արտադրանքի մեջ ներդրված տնտեսական, բնապահպանական եւ սոցիալական արժեքը։ Վերամշակումը կարող է կարեւոր լինել, բայց այն չպետք է ավտոմատ կերպով լինի շրջանաձեւ նորարարության մեկնարկային կետը։|| Այս շրջանակը կարող է օգնել վերանայել առկա ենթադրությունները, բացահայտել հնարավոր ռազմավարությունների ավելի լայն շրջանակ եւ առաջնահերթություն տալ ավելի բարձր արժեք պահող տարբերակների ուսումնասիրությանը՝ նախքան վերամշակման կամ վերականգնման ուղղությամբ շարժվելը։ Այս տեսանկյունով կարող եք անցնել գործնական աշխատարանի՝ համապատասխան շրջանաձեւ ռազմավարությունները ուսումնասիրելու համար, կամ օգտագործել Explore փուլի այլ գործիքները՝ հնարավոր տարբերակները բացահայտելու եւ զարգացնելու համար։'
     },
-    src: '/phase-content/phase-3/UNIDO_Digital Toolbox (EU4GREENRecoveryEast) - 9R diagram.svg',
+    /* The scr defines the image to be shown in the page - which is a diagram for the 9R. When translations are available, the image can be updated to show the translated version. The alt text and caption should also be updated to match the translation. */
+    src: {
+      en: '/phase-content/phase-3/9R-diagram-EN.svg',
+      uk: '/phase-content/phase-3/9R-diagram-UK.svg',
+      ro: '/phase-content/phase-3/9R-diagram-EN.svg',
+      hy: '/phase-content/phase-3/9R-diagram-EN.svg'
+    },
     alt: { en: 'The 9R circular economy strategies arranged by value preservation', uk: 'Стратегії циркулярної економіки 9R, упорядковані за збереженням цінності', ro: 'Strategiile economiei circulare 9R organizate după păstrarea valorii', hy: '9R շրջանաձեւ տնտեսության ռազմավարությունները՝ դասավորված ըստ արժեքի պահպանման' },
     caption: {
       en: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
@@ -350,7 +362,7 @@ const developSolutionsSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумки етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви опанували циркулярні принципи та визначили відповідні стратегії для свого підприємства.', ro: 'Folosește această listă pentru a confirma că înțelegi principiile circulare și ai identificat strategii relevante pentru afacerea ta.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ հասկանում եք շրջանաձեւ սկզբունքները եւ բացահայտել եք ձեր բիզնեսի համար համապատասխան ռազմավարություններ։' },
     { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }

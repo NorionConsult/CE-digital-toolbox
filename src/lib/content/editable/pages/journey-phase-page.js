@@ -5,7 +5,7 @@
 */
 export const journeyPhasePage = {
   backLink: { en: 'Back to journey phases', uk: 'Назад до етапів шляху', ro: 'Înapoi la fazele parcursului', hy: 'Վերադառնալ անցման փուլերին' },
-  summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх етапів', ro: 'Înapoi la toate fazele parcursului', hy: 'Վերադառնալ բոլոր փուլերին' },
+  summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх етапів шляху', ro: 'Înapoi la toate fazele parcursului', hy: 'Վերադառնալ բոլոր փուլերին' },
   keyOutputs: { en: 'Key outputs:', uk: 'Основні результати:', ro: 'Rezultate principale:', hy: 'Հիմնական արդյունքներ․' },
   start: { en: 'Start', uk: 'Розпочати', ro: 'Începe', hy: 'Սկսել' },
   step: { en: 'Step', uk: 'Крок', ro: 'Pasul', hy: 'Քայլ' },

@@ -26,7 +26,7 @@
     interactive SME journey diagram here. The visual layout is handled below.
   */
   const labels = {
-    phase: { en: 'Phase', uk: 'Фаза', ro: 'Faza', hy: 'Փուլ' },
+    phase: { en: 'Phase', uk: 'Етап', ro: 'Faza', hy: 'Փուլ' },
     diagramLabel: {
       en: 'Interactive SME journey phase diagram',
       uk: 'Інтерактивна діаграма шляху МСП',

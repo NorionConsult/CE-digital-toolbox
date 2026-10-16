@@ -18,7 +18,7 @@ function normaliseCaseReference(value) {
 
 /**
  * Editors choose featured sector cases by company/case name in the sector files.
- * This function accepts either the visible company name or the case slug, keeps
+ * This function accepts either the English company name or the case slug, keeps
  * the chosen order, and allows a manually selected cross-sector case when needed
  * for country balance. It falls back to the first matching sector cases if no
  * featured names are defined yet.
@@ -41,7 +41,7 @@ function getFeaturedSectorCases(casesSection, matchingCases, allCases) {
     const reference = normaliseCaseReference(caseName);
     const matchingCase = allCases.find(
       (caseStudy) =>
-        normaliseCaseReference(caseStudy.companyName) === reference ||
+        normaliseCaseReference(translate(caseStudy.companyName, 'en')) === reference ||
         normaliseCaseReference(caseStudy.slug) === reference
     );
 
