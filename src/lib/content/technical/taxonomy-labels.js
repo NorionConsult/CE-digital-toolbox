@@ -54,15 +54,9 @@ const taxonomyLabels = {
     }
   },
   sectors: {
-    'Agriculture and Food': {
-      en: 'Agriculture and Food',
-      uk: 'Сільське господарство та продовольство',
-      ro: 'Agricultură și alimentație',
-      hy: 'Գյուղատնտեսություն և սնունդ'
-    },
     Automotive: {
       en: 'Automotive',
-      uk: 'Автомобільна галузь',
+      uk: 'Автомобільна',
       ro: 'Automotive',
       hy: 'Ավտոմոբիլային ոլորտ'
     },
@@ -92,7 +86,7 @@ const taxonomyLabels = {
     },
     'Food and Agriculture': {
       en: 'Food and Agriculture',
-      uk: 'Продовольство та сільське господарство',
+      uk: 'Продовольство та с/г',
       ro: 'Alimentație și agricultură',
       hy: 'Սնունդ և գյուղատնտեսություն'
     },
@@ -110,7 +104,7 @@ const taxonomyLabels = {
     },
     'Mining and Minerals': {
       en: 'Mining and Minerals',
-      uk: 'Гірничодобувна галузь і мінерали',
+      uk: 'Гірничодобувна',
       ro: 'Minerit și minerale',
       hy: 'Հանքարդյունաբերություն և հանքանյութեր'
     },
@@ -210,7 +204,7 @@ const taxonomyLabels = {
     },
     'Repurpose (R7)': {
       en: 'Repurpose (R7)',
-      uk: 'Переорієнтація використання (R7)',
+      uk: 'Перепрофілювання (R7)',
       ro: 'Reutilizare pentru alt scop (R7)',
       hy: 'Նոր նպատակով օգտագործում (R7)'
     },

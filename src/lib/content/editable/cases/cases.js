@@ -152,7 +152,7 @@ export const cases = [
     slug: "asociatia-obsteasca-banca-de-alimente-banca-de-alimente-moldova",
     companyName: "Banca de Alimente Moldova",
     country: "Republic of Moldova",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reuse (R3)"],
     rStrategyDescription: {
       en: "Safe, edible products that can no longer be sold are redirected for their original purpose, human consumption; this also constitutes food-waste prevention, as products are recovered before becoming waste.",
@@ -186,7 +186,7 @@ export const cases = [
     slug: "garma-grup-srl",
     companyName: "Garma-Grup SRL",
     country: "Republic of Moldova",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Recycle (R8)", "Reduce (R2)"],
     rStrategyDescription: {
       en: "Biodegradable residues are biologically processed and their nutrients returned to agricultural use as organic fertilizer (Recycle); the model also decreases demand for conventional energy and synthetic fertilizers (Reduce).",
@@ -310,7 +310,7 @@ export const cases = [
     slug: "permaculture-in-armenia",
     companyName: "Permaculture in Armenia",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Regenerative, closed-loop agricultural design reduces the need for external inputs (synthetic fertilizer, irrigation) by working with natural ecosystem cycles.",
@@ -364,7 +364,7 @@ export const cases = [
     slug: "biohumus-production",
     companyName: "Biohumus Production",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Recycle (R8)"],
     rStrategyDescription: {
       en: "Agricultural organic waste is biologically converted (vermicomposting) into a fertilizer product, returning nutrients to agricultural use and substituting synthetic fertilizer inputs.",
@@ -553,7 +553,7 @@ export const cases = [
     slug: "lukashin-agricultural-cooperative",
     companyName: "Lukashin Agricultural Cooperative",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Recycle (R8)"],
     rStrategyDescription: {
       en: "Fruit processing residues (pits and peels) are reprocessed into new consumer products (oils, drinks, nutritional bars), recovering material value that would otherwise be lost to disposal.",
@@ -661,7 +661,7 @@ export const cases = [
     slug: "arminashogh-llc",
     companyName: "Arminashogh LLC",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Heat-recovery ventilation and resource-efficient baking processes reduce the energy (electricity and natural gas) required per unit of food produced.",
@@ -688,7 +688,7 @@ export const cases = [
     slug: "ashtarak-dzoo-llc",
     companyName: "Ashtarak Dzoo LLC",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Fuel switching, lighting upgrades, and improved insulation collectively reduce the energy intensity of poultry house heating and lighting operations.",
@@ -742,7 +742,7 @@ export const cases = [
     slug: "lukashin-agricultural-association-cc",
     companyName: "Lukashin Agricultural Association CC",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Solar drying and water-heating technology substitutes renewable energy for the electricity previously used in the fruit-drying process, reducing overall electricity consumption.",
@@ -823,7 +823,7 @@ export const cases = [
     slug: "lusia-food",
     companyName: "Lusia Food",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Improved housekeeping practices and equipment modernisation reduce both organic waste generation and energy consumption per unit of food product manufactured.",
@@ -850,7 +850,7 @@ export const cases = [
     slug: "erpin-agricultural-cooperative",
     companyName: "Erpin Agricultural Cooperative",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Process improvements identified through the Resource Efficient and Cleaner Production (RECP) audit reduce both biological (organic) waste generation and water consumption per unit of dairy product processed.",
@@ -877,7 +877,7 @@ export const cases = [
     slug: "rozfrood-llc",
     companyName: "Rozfrood LLC",
     country: "Armenia",
-    sector: ["Agriculture and Food"],
+    sector: ["Food and Agriculture"],
     rStrategies: ["Reduce (R2)"],
     rStrategyDescription: {
       en: "Process efficiency improvements and a shift toward renewable energy reduce the energy intensity of the energy-heavy freezing and cold-storage stages of food processing.",
@@ -1289,7 +1289,7 @@ export const cases = [
     },
     description: {
       en: "Univest Company, LLC is one of the largest packaging manufacturers in Ukraine. The company operates on a full-cycle basis, producing paper cups, containers, plates, boxes, salad bowls, and molded pulp lids for HoReCa, delivery services, retail, and petrol stations. || The enterprise replaces plastic and polyethylene with renewable and recyclable materials. In particular, the company produces UniCup cups and UniLids lids, which can be recycled after use and returned into the production cycle. || The use of paper and cellulose simplifies waste recycling, reduces dependence on virgin raw materials, and decreases plastic waste generation. In addition, Univest implements resource-efficient solutions, including a solar power plant and a closed-loop water system, which reduce energy and water consumption. || The environmental benefit lies in reduced waste generation, lower CO₂ emissions, and decreased environmental pressure. At the same time, the company gains economic advantages through material circularity and reduced dependence on expensive energy resources.",
-      uk: "ТОВ «Компанія «Юнівест» є одним з найбільших виробників упаковки в Україні. Компанія працює за повним циклом, виробляючи паперові стакани, контейнери, тарілки, коробки, салатниці, кришки з формованої целюлози для HoReCa, служб доставки, роздрібної торгівлі та АЗС. || Підприємство замінює пластик та поліетилен на відновлювані та перероблені матеріали. Зокрема, компанія виробляє чашки UniCup і кришки UniLids, які після використання можуть бути перероблені та повернуті у виробничий цикл. || Використання паперу та целюлози спрощує переробку відходів, зменшує залежність від первинної сировини та зменшує утворення пластикових відходів. Крім того, «Юнівест» впроваджує ресурсозберігаючі рішення, зокрема сонячну електростанцію та замкнуту систему водопостачання, які зменшують споживання енергії та води. || Вигода для навколишнього середовища полягає в зменшенні утворення відходів, менших викидах CO₂ і зменшенні тиску на навколишнє середовище. У той же час компанія отримує економічні переваги завдяки циркуляції матеріалів і зменшенню залежності від дорогих енергоресурсів.",
+      uk: "ТОВ «Компанія Юнівест» є одним з найбільших виробників упаковки в Україні. Компанія працює за повним циклом, виробляючи паперові стакани, контейнери, тарілки, коробки, салатниці, кришки з формованої целюлози для HoReCa, служб доставки, роздрібної торгівлі та АЗС. || Підприємство замінює пластик та поліетилен на відновлювані та перероблені матеріали. Зокрема, компанія виробляє чашки UniCup і кришки UniLids, які після використання можуть бути перероблені та повернуті у виробничий цикл. || Використання паперу та целюлози спрощує переробку відходів, зменшує залежність від первинної сировини та зменшує утворення пластикових відходів. Крім того, «Юнівест» впроваджує ресурсозберігаючі рішення, зокрема сонячну електростанцію та замкнуту систему водопостачання, які зменшують споживання енергії та води. || Вигода для навколишнього середовища полягає в зменшенні утворення відходів, менших викидах CO₂ і зменшенні тиску на навколишнє середовище. У той же час компанія отримує економічні переваги завдяки циркуляції матеріалів і зменшенню залежності від дорогих енергоресурсів.",
       ro: "Univest Company, LLC este unul dintre cei mai mari producători de ambalaje din Ucraina. Compania operează pe un ciclu complet, producând pahare de hârtie, recipiente, farfurii, cutii, boluri de salată și capace turnate de pulpă pentru HoReCa, servicii de livrare, comerț cu amănuntul și benzinării. || Întreprinderea înlocuiește plasticul și polietilena cu materiale regenerabile și reciclabile. În special, compania produce pahare UniCup și capace UniLids, care pot fi reciclate după utilizare și returnate în ciclul de producție. || Utilizarea hârtiei și a celulozei simplifică reciclarea deșeurilor, reduce dependența de materiile prime virgine și scade generarea de deșeuri din plastic. În plus, Univest implementează soluții eficiente din punct de vedere al resurselor, inclusiv o centrală solară și un sistem de apă în circuit închis, care reduc consumul de energie și apă. || Beneficiul pentru mediu constă în reducerea generării de deșeuri, emisii mai scăzute de CO₂ și scăderea presiunii asupra mediului. În același timp, compania câștigă avantaje economice prin circularitatea materială și dependența redusă de resurse energetice costisitoare.",
       hy: "Univest Company, LLC-ն Ուկրաինայի ամենամեծ փաթեթավորում արտադրողներից է: Ընկերությունը գործում է ամբողջ ցիկլի հիման վրա՝ արտադրելով թղթե բաժակներ, տարաներ, ափսեներ, տուփեր, աղցանների ամաններ և կաղապարված կափարիչներ HoReCa-ի, առաքման ծառայությունների, մանրածախ առևտրի և բենզալցակայանների համար։ || Ձեռնարկությունը պլաստիկն ու պոլիէթիլենը փոխարինում է վերականգնվող և վերամշակվող նյութերով։ Մասնավորապես, ընկերությունն արտադրում է UniCup բաժակներ և UniLids կափարիչներ, որոնք կարող են օգտագործվելուց հետո վերամշակվել և վերադարձվել արտադրության ցիկլ։ || Թղթի և ցելյուլոզայի օգտագործումը հեշտացնում է թափոնների վերամշակումը, նվազեցնում է կույս հումքից կախվածությունը և նվազեցնում պլաստիկ թափոնների արտադրությունը: Բացի այդ, Univest-ն իրականացնում է ռեսուրսների արդյունավետ լուծումներ, ներառյալ արևային էլեկտրակայան և փակ ջրային համակարգ, որոնք նվազեցնում են էներգիայի և ջրի սպառումը։ || Բնապահպանական օգուտը կապված է թափոնների արտադրության կրճատման, CO2-ի ցածր արտանետումների և շրջակա միջավայրի ճնշման նվազման մեջ: Միևնույն ժամանակ, ընկերությունը տնտեսական առավելություններ է ստանում նյութական շրջանաձևության և թանկ էներգառեսուրսներից կախվածության նվազեցման շնորհիվ։"
     },

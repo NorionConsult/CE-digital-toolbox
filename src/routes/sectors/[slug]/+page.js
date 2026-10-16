@@ -4,11 +4,6 @@ import { resources } from '$lib/content/editable/tools/tool-catalogue.js';
 import { cases } from '$lib/content/editable/cases/cases.js';
 import { translate } from '$lib/translation-helper.js';
 
-/** @type {Record<string, string[]>} */
-const sectorCaseAliases = {
-  'Food and Agriculture': ['Food and Agriculture', 'Agriculture and Food']
-};
-
 /**
  * @param {string} value
  * @returns {string}
@@ -83,11 +78,8 @@ export function load({ params }) {
       )
   );
   const sectorTitle = translate(sector.title, 'en');
-  const matchingCaseSectors = sectorCaseAliases[sectorTitle] ?? [sectorTitle];
   const matchingCases = cases.filter((caseStudy) =>
-    (caseStudy.filterValues?.sectors ?? []).some((caseSector) =>
-      matchingCaseSectors.includes(caseSector)
-    )
+    (caseStudy.filterValues?.sectors ?? []).includes(sectorTitle)
   );
   const relatedCases = getFeaturedSectorCases(sector.sections[1], matchingCases, cases);
 

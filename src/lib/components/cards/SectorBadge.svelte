@@ -9,7 +9,6 @@
 
   /** @type {Record<string, string>} */
   const knownColours = {
-    'Agriculture and Food': '#41a552',
     'Food and Agriculture': '#41a552',
     Construction: '#d9772e',
     Textiles: '#1d3d8f',

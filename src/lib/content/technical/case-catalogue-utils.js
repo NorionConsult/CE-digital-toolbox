@@ -31,6 +31,7 @@
 /** @type {Record<string, string>} */
 const CASE_VALUE_OVERRIDES = {
   agriculture: 'Food and Agriculture',
+  'agriculture and food': 'Food and Agriculture',
   'agriculture and agro-processing': 'Food and Agriculture',
   'agro-processing': 'Food and Agriculture',
   'buildings and construction': 'Construction',

@@ -11,11 +11,11 @@
   export let caseStudy;
 
   const labels = {
-    backToCases: { en: 'Back to cases', uk: 'Назад до кейсів', ro: 'Înapoi la cazuri', hy: 'Վերադառնալ օրինակներին' },
-    companyName: { en: 'Company name', uk: 'Назва компанії / ініціативи', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
+    backToCases: { en: 'Back to cases', uk: 'Назад до прикладів', ro: 'Înapoi la cazuri', hy: 'Վերադառնալ օրինակներին' },
+    companyName: { en: 'Company name', uk: 'Назва компанії', ro: 'Numele companiei', hy: 'Ընկերության անունը' },
     country: { en: 'Country', uk: 'Країна', ro: 'Țară', hy: 'Երկիր' },
     rStrategy: { en: 'R strategy', uk: 'R-стратегія', ro: 'Strategie R', hy: 'R ռազմավարություն' },
-    sector: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },
+    sector: { en: 'Sector', uk: 'Галузь', ro: 'Sector', hy: 'Ոլորտ' },
     notSpecified: { en: 'Not specified', uk: 'Не зазначено', ro: 'Nespecificat', hy: 'Նշված չէ' },
     circularStrategiesTitle: {
       en: 'How does this case apply circular strategies?',
@@ -23,9 +23,9 @@
       ro: 'Cum aplică acest caz strategiile circulare?',
       hy: 'Ինչպե՞ս է այս օրինակը կիրառում շրջանաձև ռազմավարությունները։'
     },
-    descriptionTitle: { en: 'Description of case', uk: 'Опис кейсу', ro: 'Descrierea cazului', hy: 'Օրինակի նկարագրություն' },
-    about: { en: 'About', uk: 'Про кейс', ro: 'Despre', hy: 'Մասին' },
-    caseSectors: { en: 'Case sectors', uk: 'Сектори кейсу', ro: 'Sectoarele cazului', hy: 'Օրինակի ոլորտները' },
+    descriptionTitle: { en: 'Description of case', uk: 'Опис прикладу', ro: 'Descrierea cazului', hy: 'Օրինակի նկարագրություն' },
+    about: { en: 'About', uk: 'Основна інформація', ro: 'Despre', hy: 'Մասին' },
+    caseSectors: { en: 'Case sectors', uk: 'Галузі кейсу', ro: 'Sectoarele cazului', hy: 'Օրինակի ոլորտները' },
     caseTaxonomy: { en: 'Case taxonomy', uk: 'Таксономія кейсу', ro: 'Taxonomia cazului', hy: 'Օրինակի դասակարգում' }
   };
 

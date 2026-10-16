@@ -39,6 +39,7 @@ const FILTER_LABELS = {
     'cross sector': 'Cross-sector',
     'cross-sector': 'Cross-sector',
     agriculture: 'Food and Agriculture',
+    'agriculture and food': 'Food and Agriculture',
     'food and agriculture': 'Food and Agriculture',
     'food-and-agriculture': 'Food and Agriculture',
     construction: 'Construction',

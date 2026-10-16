@@ -19,7 +19,7 @@
     bestFor: { en: 'Best for', uk: 'Найкраще підходить для', ro: 'Potrivit pentru', hy: 'Լավագույնը՝' },
     about: { en: 'About', uk: 'Про інструмент', ro: 'Despre', hy: 'Մասին' },
     journey: { en: 'SME journey', uk: 'Шлях МСП', ro: 'Parcursul IMM', hy: 'ՓՄՁ ուղին' },
-    sector: { en: 'Sector', uk: 'Сектор', ro: 'Sector', hy: 'Ոլորտ' },
+    sector: { en: 'Sector', uk: 'Галузь', ro: 'Sector', hy: 'Ոլորտ' },
     effort: { en: 'Effort', uk: 'Зусилля', ro: 'Efort', hy: 'Ջանք' },
     format: { en: 'Format', uk: 'Формат', ro: 'Format', hy: 'Ձեւաչափ' },
     language: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },

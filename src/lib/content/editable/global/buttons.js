@@ -14,5 +14,5 @@ export const buttonLabels = {
   viewCase: { en: 'View case', uk: 'Переглянути кейс', ro: 'Vezi studiul de caz', hy: 'Դիտել օրինակը' },
   openTool: { en: 'Open tool', uk: 'Відкрити інструмент', ro: 'Deschide instrumentul', hy: 'Բացել գործիքը' },
   downloadTool: { en: 'Download tool', uk: 'Завантажити інструмент', ro: 'Descarcă instrumentul', hy: 'Ներբեռնել գործիքը' },
-  openCase: { en: 'Visit company site', uk: 'Відвідати сайт компанії', ro: 'Vizitează site-ul companiei', hy: 'Այցելել ընկերության կայքը' }
+  openCase: { en: 'View case source', uk: 'Переглянути джерело прикладу', ro: 'Vezi sursa studiului de caz', hy: 'Դիտել օրինակի աղբյուրը' }
 };
