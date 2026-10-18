@@ -1,0 +1,1 @@
+import{e as n}from"./P8vin2Hf.js";import{r as o}from"./DFFqjreq.js";function s(){return o.map(e=>({slug:e.slug}))}function u({params:e}){const r=o.find(t=>t.slug===e.slug);if(!r)throw n(404,"Resource not found");return{resource:r}}const c=Object.freeze(Object.defineProperty({__proto__:null,entries:s,load:u},Symbol.toStringTag,{value:"Module"}));export{c as _,s as e};

@@ -1,1 +1,1 @@
-export const env={"PUBLIC_BASE_PATH":"/CE-digital-toolbox"}
+export const env={}
