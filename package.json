@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build",
-    "build-drupal": "npm install && BASE_PATH=/circular-economy-tools PUBLIC_BASE_PATH=/circular-economy-tools && npm run build",
+    "build-drupal": "npm install && BASE_PATH=/app/circular-economy-tools PUBLIC_BASE_PATH=/app/circular-economy-tools && npm run build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json"
   },
