@@ -248,6 +248,7 @@ Preview the built site:
 npm run preview
 ```
 
+
 ## Analytics Setup
 
 The website is prepared for a consent-first Google Tag Manager setup. Analytics
@@ -276,22 +277,45 @@ docs/analytics-tracking-plan.md
 
 The site is configured for static hosting through SvelteKit and can be deployed to GitHub Pages or another static host. PDF files and images in `static/` are copied into the final build automatically.
 
+Deployment is possible both in the production Drupal environment, hosted and published by UNIDO, as well as via GitHub Pages, published on Norion Consult's website or UNIDO's repository (unido/circular-economy-tools).
+
+### Deploying with Drupal
+For the production version of this site, a full static build is generated to the `build/` folder.
+
+To run the complete build process, including installing all dependencies, configuring the correct base path, run:
+```text
+npm run build-drupal
+```
+
+Because the published address is:
+```text
+https://www.unido.org/circular-economy-tools 
+```
+
+the Drupal build uses this base path:
+```text
+BASE_PATH=/app/circular-economy-tools
+PUBLIC_BASE_PATH=/app/circular-economy-tools
+```
+
+### Deploying with GitHub Pages
 For this repository, GitHub Pages should publish from **GitHub Actions**, not from a manually committed `build/` folder. The workflow is in:
 
 ```text
 .github/workflows/deploy.yml
 ```
 
-Because the published address is:
+Because the published address was:
 
 ```text
-https://norionconsult.github.io/CE-digital-toolbox/
+https://norionconsult.github.io/CE-digital-toolbox/ 
 ```
 
-the GitHub build uses this base path:
+the GitHub build used this base path:
 
 ```text
 BASE_PATH=/CE-digital-toolbox
+PUBLIC_BASE_PATH=/CE-digital-toolbox
 ```
 
 To publish:
