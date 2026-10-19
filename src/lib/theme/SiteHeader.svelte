@@ -18,6 +18,8 @@
   import { site } from '$lib/content/editable/global/site.js';
 
   const routingBasePath = import.meta.env.PUBLIC_BASE_PATH || base;
+  // Empty optional notices must stay hidden instead of falling back to English.
+  const languageDisclaimers = /** @type {Record<string, string>} */ (site.languageDisclaimer);
 
   let menuOpen = false;
   let selectedLanguage = 'en';
@@ -59,6 +61,7 @@
   $: selectedLanguage = currentLanguage;
   $: currentSite = localizeContent(site, currentLanguage);
   $: currentAppPath = getAppPathname($page.url.pathname, routingBasePath);
+  $: languageDisclaimer = languageDisclaimers[currentLanguage]?.trim() ?? '';
 
   /** @param {string} path */
   function getLocalizedHref(path) {
@@ -154,9 +157,13 @@
         {/each}
 
         <label class="language-selector">
+          {#if languageDisclaimer}
+            <span id="language-disclaimer" class="language-disclaimer">{languageDisclaimer}</span>
+          {/if}
           <select
             bind:value={selectedLanguage}
             aria-label={translate(menuLabels.language, currentLanguage)}
+            aria-describedby={languageDisclaimer ? 'language-disclaimer' : undefined}
             on:change={changeLanguage}
           >
             {#each languages as language}
@@ -211,17 +218,18 @@
   }
 
   .header-content {
-    display: flex;
-    justify-content: space-between;
+    /* Inherit the shared .container width so all site margins stay aligned. */
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     padding: 18px 0;
-    gap: 18px 22px;
+    gap: 12px 20px;
   }
 
   .site-brand {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     text-decoration: none;
     padding-left: 0;
     min-width: 0;
@@ -235,19 +243,20 @@
   }
 
   .site-logo {
-    font-size: clamp(1.55rem, 2vw, 1.9rem);
-    line-height: 1;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.1;
     text-transform: uppercase;
+    white-space: nowrap;
     min-width: 0;
   }
 
   .main-nav {
     display: flex;
-    gap: 16px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
-    margin-left: auto;
+    margin-left: 0;
     min-width: 0;
   }
 
@@ -255,8 +264,9 @@
     color: var(--dark);
     text-decoration: none;
     font-weight: 700;
-    font-size: clamp(0.82rem, 0.95vw, 0.95rem);
-    line-height: 1;
+    font-size: clamp(0.78rem, 0.95vw, 0.9rem);
+    line-height: 1.25;
+    white-space: nowrap;
   }
 
   .main-nav a:hover {
@@ -265,29 +275,46 @@
 
   .language-selector {
     display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    color: var(--dark);
+    flex-direction: column;
+    align-items: stretch;
+    flex: 0 0 auto;
+    gap: 5px;
+    /* The notice wraps inside this width instead of sizing the dropdown. */
+    width: 112px;
+    max-width: 112px;
+    color: #606060;
     font-weight: 700;
-    font-size: clamp(0.82rem, 0.95vw, 0.95rem);
+    font-size: 0.72rem;
     line-height: 1;
   }
 
+  .language-disclaimer {
+    font-size: 0.6rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+    text-align: center;
+  }
+
   .language-selector select {
-    min-width: 118px;
+    width: 100%;
+    min-width: 0;
     border: 0;
     border-radius: 10px;
-    padding: 8px 28px 8px 10px;
+    padding: 7px 24px 7px 8px;
     background-color: var(--white);
-    color: var(--dark);
+    color: var(--grey);
     font: inherit;
     cursor: pointer;
   }
 
   .language-selector select:hover,
   .language-selector select:focus-visible {
-    outline: 2px solid var(--green-secondary);
-    outline-offset: 2px;
+    outline: none;
+    outline-offset: 0px;
   }
 
   .language-crawl-links {
@@ -329,6 +356,17 @@
     outline: none;
   }
 
+  /* On narrower screens, give the brand and navigation one full row each. */
+  @media (min-width: 761px) and (max-width: 1240px) {
+    .header-content {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .main-nav {
+      justify-content: flex-start;
+    }
+  }
+
   @media (max-width: 760px) {
     .partner-logo-bar-content {
       gap: 16px;
@@ -360,9 +398,11 @@
     }
 
     .site-logo {
-      font-size: clamp(1rem, 5vw, 1.3rem);
-      line-height: 0.95;
-      overflow-wrap: anywhere;
+      font-size: clamp(0.85rem, 2.8vw, 1.15rem);
+      line-height: 1.15;
+      white-space: normal;
+      overflow-wrap: normal;
+      text-wrap: balance;
     }
 
     .menu-toggle {
@@ -392,24 +432,17 @@
       padding: 14px 0;
       font-size: 1rem;
       border-bottom: 1px solid rgba(10, 46, 54, 0.08);
+      white-space: normal;
     }
 
     .language-selector {
-      justify-content: space-between;
       padding: 14px 0;
       border-bottom: 1px solid rgba(10, 46, 54, 0.08);
     }
 
-    .language-selector select {
-      min-width: 150px;
-    }
   }
 
   @media (max-width: 420px) {
-    .site-logo {
-      font-size: clamp(0.85rem, 4.5vw, 1rem);
-    }
-
     .site-logo-image {
       height: clamp(20px, 5.5vw, 24px);
     }

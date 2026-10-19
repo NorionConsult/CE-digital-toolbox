@@ -53,6 +53,15 @@ src/lib/content/editable/global/
 
 Use `site.js` for the site name, header logo, header partner logos and main menu. Use `buttons.js` for shared button labels such as `View phase`, `View tool` and `Download tool`. Use `footer.js` for footer logos and copyright text.
 
+The optional text above the language selector is `languageDisclaimer` in
+`editable/global/site.js`. It starts as “Machine translation” with wording for
+English (`en`), Ukrainian (`uk`), Romanian (`ro`) and Armenian (`hy`). Edit each
+language's text there. After a language has been reviewed, set its value to `''`
+to hide the notice for that language. Clear all four values to hide it everywhere.
+Whitespace-only values are also hidden. This optional field does not fall back
+to English when empty; other translated fields keep their normal fallback.
+The layout and display rules live in `src/lib/theme/SiteHeader.svelte`.
+
 ## Translating Text
 
 The website supports these front-end languages:

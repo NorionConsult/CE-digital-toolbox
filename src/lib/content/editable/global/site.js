@@ -90,6 +90,19 @@ export const site = {
     ]
   },
   /*
+    Optional notice above the language selector on every page.
+    Edit the wording independently for each language. After a language has been
+    reviewed, set its text to '' to hide the notice for that language.
+    Unlike other translated fields, an empty value does not fall back to English.
+    Clear all four values to remove the notice throughout the website.
+  */
+  languageDisclaimer: {
+    en: 'Machine translation',
+    uk: 'Машинний переклад',
+    ro: 'Traducere automată',
+    hy: 'Մեքենայական թարգմանություն'
+  },
+  /*
     These footer and button values are imported from their own editor files.
     Keeping them here preserves the shared `site` object used by the page code.
   */
