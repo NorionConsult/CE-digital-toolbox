@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import { BASE_PATH } from './deployment.config.js';
 
 /*
   SvelteKit configuration for a static GitHub Pages deployment.
@@ -12,8 +13,8 @@ import adapter from '@sveltejs/adapter-static';
   - This GitHub project page: PUBLIC_BASE_PATH=/CE-digital-toolbox
   - Custom domain at root, for example https://tools.unido.org: BASE_PATH is empty
 */
-const base = process.env.BASE_PATH ?? process.env.PUBLIC_BASE_PATH ?? '';
-const deployBase = process.env.BASE_PATH || process.env.PUBLIC_BASE_PATH || '';
+const base = BASE_PATH;
+const deployBase = BASE_PATH;
 
 function handlePrerenderHttpError({ status, path, message }) {
   /*
