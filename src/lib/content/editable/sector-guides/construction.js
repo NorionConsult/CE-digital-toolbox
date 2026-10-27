@@ -12,7 +12,7 @@
 // 1. INTRODUCTION TO SECTOR
 export const constructionIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд галузі', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: 'The construction sector includes the design, building, renovation and demolition of buildings and infrastructure. It is one of the largest users of raw materials and generates substantial amounts of waste, while also contributing significantly to energy use and greenhouse gas emissions. Construction and demolition waste accounts for approximately 35% of all EU waste, the single largest waste stream in Europe, yet recovery rates remain far below circular economy targets (Source: Interreg Europe, 2022. Collection and recycling of construction and demolition waste: Key learnings.). || Circular economy practices can help the sector use materials more efficiently, extend the lifetime of buildings and components, and reduce the need for virgin resources, some which have potential to disrupt the sector due to low access and high demand (e.g. sand). Urban mining, recovering and reusing materials from existing structures, is a fast-growing area offering SMEs a competitive advantage in procurement and project differentiation.',
@@ -46,7 +46,7 @@ export const constructionCasesSection = {
 // 3. Common barriers and opportunities
 export const constructionBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  title: { en: 'Common barriers and opportunities', uk: "Поширені бар'єри та можливості", ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
   intro: {
     en: 'Construction small-medium enterprises face data, regulatory, cost and skills barriers, while renovation, material passports and secondary-material markets are opening new opportunities.',
     uk: 'Малі та середні підприємства будівельної галузі стикаються з перешкодами, пов´язаними з браком даних, нормативним регулюванням, витратами та дефіцитом кваліфікованих кадрів. Водночас реновація, цифрові паспорти матеріалів та ринки вторинної сировини відкривають нові перспективи.',

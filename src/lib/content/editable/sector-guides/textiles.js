@@ -6,7 +6,7 @@
 
 export const textilesIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд галузі', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: "The textile sector covers the production, processing and use of fibres, fabrics, clothing and other textile products. It relies heavily on raw materials, water, energy and chemicals, while generating significant waste and pollution across its value chain. The EU textile sector generates approximately 16 kg of textile waste per person annually (Source: European Environment Agency, 2024. Management of used and waste textiles in Europe's circular economy), with less than 1% recycled back into new fibres (Source: Ellen MacArthur Foundation, 2017. A new textiles economy: Redesigning fashion's future). || Engaging with circular economy practices can help businesses reduce resource use and waste, extend the life of products and materials, and build more resilient and sustainable value chains. Key circular economy opportunities include design for durability and disassembly, repair and resale services, fibre-to-fibre recycling, and clothing-as-a-service models.",
@@ -33,7 +33,7 @@ export const textilesCasesSection = {
 
 export const textilesBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  title: { en: 'Common barriers and opportunities', uk: "Поширені бар'єри та можливост", ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
   intro: { en: 'Textile small-medium enterprises (SMEs) face technical, behavioural and market barriers, while new regulation and business models are creating strong opportunities.', uk: 'Малі та середні підприємства у текстильній галузі стикаються з технічними, поведінковими та ринковими бар´єрами, тоді як нове регулювання та сучасні бізнес-моделі відкривають значні можливості.', ro: 'IMM-urile textile se confruntă cu bariere tehnice, comportamentale și de piață, în timp ce noile reglementări și modele de afaceri creează oportunități importante.', hy: 'Տեքստիլ ՓՄՁ-ները բախվում են տեխնիկական, վարքային եւ շուկայական խոչընդոտների, մինչդեռ նոր կարգավորումները եւ բիզնես մոդելները ստեղծում են ուժեղ հնարավորություններ։' },
   // Each bullet can include a `source`. Editors can update the statement and
   // its source together here. If no source is available, leave `source: ''`.

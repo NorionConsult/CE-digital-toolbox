@@ -12,7 +12,7 @@
 // 1. INTRODUCTION TO SECTOR
 export const tourismIntroSection = {
   id: 'introduction',
-  title: { en: 'Introduction to sector', uk: 'Огляд сектору', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
+  title: { en: 'Introduction to sector', uk: 'Огляд галузі', ro: 'Introducere în sector', hy: 'Ոլորտի ներածություն' },
   paragraphs: [
     {
       en: 'The tourism sector brings together accommodation, food services, transport, attractions and other activities that support visitors and destinations. Tourism contributes almost EUR 1.8 trillion to EU GDP and supports over 23 million jobs, approximately 10% of total economic output (Source: European Commission, 2024. Tourism across the EU) While it is an important source of income and employment, tourism can also place pressure on energy, water, materials and local ecosystems, while generating significant waste. Tourists consume three to four times more water per day than permanent residents, placing seasonal pressure on local infrastructure and ecosystems. || Applying circular economy practices can help tourism businesses reduce their environmental footprint, use resources more efficiently and contribute to the long-term sustainability of the destinations on which they depend.',
@@ -39,7 +39,7 @@ export const tourismCasesSection = {
 // 3. Common barriers and opportunities
 export const tourismBarriersSection = {
   id: 'barriers-opportunities',
-  title: { en: 'Common barriers and opportunities', uk: 'Типові бар´єри та можливості', ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
+  title: { en: 'Common barriers and opportunities', uk: "Поширені бар'єри та можливості", ro: 'Bariere și oportunități comune', hy: 'Ընդհանուր խոչընդոտներ եւ հնարավորություններ' },
   intro: { en: 'Tourism small-medium enterprises (SMEs) face investment, seasonality, reporting and capacity barriers, while traveller demand, certification and local circular supply chains are creating new opportunities.', uk: 'Малі та середні підприємства у сфері туризму стикаються із перешкодами, пов´язаними з браком інвестицій, сезонністю, звітністю та дефіцитом внутрішніх ресурсів, тоді як попит з боку мандрівників, екологічна сертифікація та локальні циркулярні ланцюги постачання відкривають нові можливості.', ro: 'IMM-urile din turism se confruntă cu bariere legate de investiții, sezonalitate, raportare și capacitate, în timp ce cererea călătorilor, certificarea și lanțurile locale circulare de aprovizionare creează noi oportunități.', hy: 'Զբոսաշրջային ՓՄՁ-ները բախվում են ներդրումային, սեզոնայնության, հաշվետվությունների եւ կարողությունների խոչընդոտների, մինչդեռ ճանապարհորդների պահանջարկը, հավաստագրումը եւ տեղական շրջանաձեւ մատակարարման շղթաները նոր հնարավորություններ են ստեղծում։' },
   // Each bullet can include a `source`. Editors can update the statement and
   // its source together here. If no source is available, leave `source: ''`.
