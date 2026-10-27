@@ -98,7 +98,7 @@ export const site = {
   */
   languageDisclaimer: {
     en: 'Machine translation',
-    uk: 'Машинний переклад',
+    uk: '',
     ro: 'Traducere automată',
     hy: 'Մեքենայական թարգմանություն'
   },
