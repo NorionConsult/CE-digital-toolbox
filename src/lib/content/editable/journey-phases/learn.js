@@ -168,7 +168,8 @@ const LearningresourcesSection = {
           ro: 'O scurtă selecție de videoclipuri explicative de tip whiteboard de la Ellen MacArthur Foundation, care prezintă ideea de bază a economiei circulare și de ce contează pentru afaceri.',
           hy: 'Ellen MacArthur Foundation-ի կարճ ընտրված տեսաշար՝ գրատախտակի ոճով բացատրական տեսանյութերով, որը ներկայացնում է շրջանաձև տնտեսության հիմնական գաղափարը և դրա նշանակությունը բիզնեսի համար։'
         },
-        language: 'English',
+        // Translate the displayed language name here; the resource itself remains in English.
+        language: { en: 'English', uk: 'Англійська', ro: 'Engleză', hy: 'Անգլերեն' },
         provider: {
           en: 'Ellen MacArthur Foundation',
           uk: '',
@@ -212,7 +213,7 @@ const LearningresourcesSection = {
           ro: 'Un curs e-learning în zece părți despre principiile economiei circulare și aplicarea lor în lanțurile valorice industriale, dezvoltat pentru formarea competențelor de tranziție verde.',
           hy: 'Տասը մասից բաղկացած էլեկտրոնային ուսուցման դասընթաց շրջանաձեւ տնտեսության սկզբունքների եւ դրանց կիրառման մասին արդյունաբերական արժեքի շղթաներում՝ մշակված կանաչ անցման հմտություններ զարգացնելու համար։'
         },
-        language: 'English',
+        language: { en: 'English', uk: 'Англійська', ro: 'Engleză', hy: 'Անգլերեն' },
         provider: {
           en: 'United Nations Industrial Development Organisation (UNIDO)',
           uk: '',
@@ -256,7 +257,7 @@ const LearningresourcesSection = {
           ro: 'Un program de economie circulară care sprijină microîntreprinderile și întreprinderile mici și mijlocii prin trasee specifice ce ghidează afacerile prin practici circulare, folosind jocuri și etape de parcurs.',
           hy: 'Շրջանաձև տնտեսության ծրագիր, որն աջակցում է միկրո, փոքր և միջին ձեռնարկություններին՝ առաջարկելով ոլորտային ուղիներ, որոնց շրջանակում խաղերի և անցման փուլերի միջոցով ներկայացվում է շրջանաձև տնտեսության գործելակերպերի կիրառումը։'
         },
-        language: 'English',
+        language: { en: 'English', uk: 'Англійська', ro: 'Engleză', hy: 'Անգլերեն' },
         provider: {
           en: 'SWITCH to Circular Economy Value Chains',
           uk: '',

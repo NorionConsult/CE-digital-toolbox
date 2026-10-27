@@ -20,6 +20,7 @@ Editors should normally avoid the technical folder unless a developer asks for a
 editable/global/site.js              Site name, header logo, partner logos, navigation and acronym guide
 editable/global/buttons.js           Shared button labels used across the website
 editable/global/footer.js            Footer logos and copyright text
+editable/global/error-messages.js    Missing sector, journey phase, case and tool messages
 
 editable/pages/home.js               Home page text
 editable/pages/guided-pathways.js    Guided pathways page text and overview sections
@@ -126,6 +127,18 @@ provider: {
 
 The same field supplies cards and detail pages, so editing it updates both.
 Keep the `en` value as the original name and keep ids and slugs unchanged.
+
+Learn resource cards also have a translated `language` field in
+`editable/journey-phases/learn.js`. Edit the displayed language name for each
+website language there; an empty value falls back to English. This label describes
+the resource's language and does not change the resource itself.
+
+The Evaluate questionnaire uses its `yesLabel` for the percentage result on
+screen and in the downloaded PDF. Edit it in `editable/journey-phases/evaluate.js`.
+The Explore workshop canvas link label is `circularStrategiesWorkshop.preparation.linkLabel`
+in `editable/journey-phases/explore.js`; it also has four language values.
+Missing-content error messages are translated in `editable/global/error-messages.js`
+using the language in the page URL.
 
 Do not translate technical values such as:
 

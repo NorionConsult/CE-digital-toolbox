@@ -227,7 +227,7 @@
       <p class="strategy-shortlist-questionnaire-result-message">
         {hasPotential ? positiveResult : negativeResult}
       </p>
-      <p class="strategy-shortlist-questionnaire-score">{yesPercentage}% Yes</p>
+      <p class="strategy-shortlist-questionnaire-score">{yesPercentage}% {yesLabel}</p>
     {:else}
       <p class="strategy-shortlist-questionnaire-result-message">
         {selectedBusinessModel ? incompleteText : selectBusinessModelText}
@@ -281,7 +281,7 @@
         <section class="strategy-shortlist-questionnaire-pdf-result">
           <div>
             <h2>{resultsTitle}</h2>
-            <strong>{yesPercentage}% Yes</strong>
+            <strong>{yesPercentage}% {yesLabel}</strong>
           </div>
           <p>{hasPotential ? positiveResult : negativeResult}</p>
         </section>

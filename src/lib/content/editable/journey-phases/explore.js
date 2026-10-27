@@ -139,7 +139,7 @@ const identifyOptionsSection = {
     alt: { en: 'The 9R circular economy strategies arranged by value preservation', uk: 'Стратегії циркулярної економіки 9R, упорядковані за збереженням цінності', ro: 'Strategiile economiei circulare 9R organizate după păstrarea valorii', hy: '9R շրջանաձեւ տնտեսության ռազմավարությունները՝ դասավորված ըստ արժեքի պահպանման' },
     caption: {
       en: 'The 9R hierarchy of circular economy strategies. Based on: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
-      uk: 'Ієрархія стратегій циркулярної економіки 9R. За матеріалами: Європейська економічна комісія ООН та Організація економічного співробітництва та розвитку (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
+      uk: "Ієрархія стратегій циркулярної економіки 9R. За матеріалами: Європейська економічна комісія ООН та Організація економічного співробітництва та розвитку (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). Організація Об'єднаних Націй.",
       ro: 'Ierarhia 9R a strategiilor de economie circulară. Pe baza: United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations',
       hy: 'Շրջանաձեւ տնտեսության 9R ռազմավարությունների հիերարխիան։ Հիմնված է՝ United Nations Economic Commission for Europe, & Organisation for Economic Co-operation and Development. (2024). Conference of European Statisticians guidelines for measuring circular economy, Part A: Conceptual framework, indicators and measurement framework (ECE/CES/STAT/2023/5). United Nations'
     },
@@ -179,7 +179,8 @@ const identifyOptionsSection = {
     },
     preparation: {
       title: { en: 'Preparation', uk: 'Підготовка', ro: 'Pregătire', hy: 'Նախապատրաստում' },
-      time: '5 min',
+      // Edit workshop timings in each language here; empty translations fall back to English.
+      time: { en: '5 min', uk: '5 хв', ro: '5 min', hy: '5 րոպե' },
       text: {
         en: 'Print the Circular Strategies Wheel at A1 size and position it so the whole team can read and work on it at the same time, ideally on a wall at standing height. Make sure every participant has pens and a set of all three Post-it colours before you begin.',
         uk: 'Роздрукуйте шаблон «Колесо циркулярних стратегій» у форматі A1 та закріпіть його так, щоб уся команда могла вільно читати схему та працювати разом – найкраще на стіні на рівні очей. Переконайтеся, що перед початком роботи кожен учасник має ручку та набір стікерів усіх трьох кольорів.',
@@ -196,7 +197,12 @@ const identifyOptionsSection = {
         { en: 'Post-its in three colours: green for opportunities, yellow for curiosities and pink for challenges', uk: 'Стікери трьох кольорів: зелені – для можливостей, жовті – для відкритих питань і цікавих ідей, рожеві – для викликів та обмежень', ro: 'Post-it-uri în trei culori: verde pentru oportunități, galben pentru curiozități și roz pentru provocări', hy: 'Post-it նշումներ երեք գույնով՝ կանաչը հնարավորությունների, դեղինը հետաքրքրությունների, վարդագույնը մարտահրավերների համար' },
         { en: 'Pens for everyone', uk: 'Ручки або маркери для кожного учасника', ro: 'Pixuri pentru toți', hy: 'Գրիչներ բոլորի համար' }
       ],
-      linkLabel: 'Circular Strategies Wheel Canvas',
+      linkLabel: {
+        en: 'Circular Strategies Wheel Canvas',
+        uk: 'Шаблон «Колесо циркулярних стратегій»',
+        ro: 'Șablonul „Roata strategiilor circulare”',
+        hy: '«Շրջանաձեւ ռազմավարությունների անիվ» ձևանմուշ'
+      },
       link:
         'https://ddc.dk/wp-content/uploads/2020/10/Circular_strategies_wheel_canvas.pdf'
     },
@@ -204,7 +210,7 @@ const identifyOptionsSection = {
       {
         number: '1',
         title: { en: 'Individual brainstorm', uk: 'Індивідуальний мозковий штурм', ro: 'Brainstorming individual', hy: 'Անհատական գաղափարների գեներացում' },
-        time: '10-15 min',
+        time: { en: '10-15 min', uk: '10-15 хв', ro: '10-15 min', hy: '10-15 րոպե' },
         text: {
           en: 'Working individually and in silence, each person reviews the circular strategies on the wheel and responds with Post-its: green for clear potential, yellow for areas of curiosity and pink for challenges or obstacles.',
           uk: 'Працюючи індивідуально та без взаємодії з іншими, кожен учасник ознайомлюється зі стратегіями циркулярної економіки на колесі та фіксує свої думки на стікерах відповідного кольору: зелені – для явного потенціалу й можливостей, жовті – для відкритих запитань чи цікавих ідей, рожеві – для викликів або перешкод.',
@@ -221,7 +227,7 @@ const identifyOptionsSection = {
       {
         number: '2',
         title: { en: 'Team discussion', uk: 'Командне обговорення', ro: 'Discuție în echipă', hy: 'Թիմային քննարկում' },
-        time: '10 min',
+        time: { en: '10 min', uk: '10 хв', ro: '10 min', hy: '10 րոպե' },
         text: {
           en: 'With all the Post-its on the wheel, review them together as a team across the three life-cycle phases. Discuss patterns, surprises, tensions and where opportunities or challenges overlap. The discussion should lead to one guiding question: what is most interesting for us to focus on when starting to build our circular business model?',
           uk: 'Коли всі стікери розміщено на схемі, проаналізуйте їх разом усією командою за трьома етапами життєвого циклу. Обговоріть спільні закономірності, несподівані ідеї, суперечності, а також ділянки, де можливості перетинаються з викликами. Результатом дискусії має стати відповідь на одне ключове запитання: на чому нам найдоцільніше зосередитися на старті формування власної циркулярної бізнес-моделі?',
@@ -365,7 +371,7 @@ const phaseSummary = {
   title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you understand the circular principles and have identified relevant strategies for your business.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви опанували циркулярні принципи та визначили відповідні стратегії для свого підприємства.', ro: 'Folosește această listă pentru a confirma că înțelegi principiile circulare și ai identificat strategii relevante pentru afacerea ta.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ հասկանում եք շրջանաձեւ սկզբունքները եւ բացահայտել եք ձեր բիզնեսի համար համապատասխան ռազմավարություններ։' },
-    { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
+    { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: "Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з'явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог рішень.", ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
   ],
   checklist: [
     { en: 'A clear understanding of the 9R framework can support circular redesign', uk: 'Сформовано чітке розуміння того, як модель 9R допомагає в циркулярному редизайні (переосмисленні продукції та процесів)', ro: 'O înțelegere clară a cadrului 9R poate sprijini redesignul circular', hy: '9R շրջանակի հստակ ըմբռնումը կարող է աջակցել շրջանաձեւ վերադիզայնին' },
