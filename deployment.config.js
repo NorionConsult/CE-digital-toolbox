@@ -1,1 +1,1 @@
-export const BASE_PATH = '/app/circular-economy-tools';
+export const BASE_PATH = '/CE-digital-toolbox';
