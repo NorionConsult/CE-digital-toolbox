@@ -216,7 +216,7 @@ const LearningresourcesSection = {
         language: { en: 'English', uk: 'Англійська', ro: 'Engleză', hy: 'Անգլերեն' },
         provider: {
           en: 'United Nations Industrial Development Organisation (UNIDO)',
-          uk: '',
+          uk: "Організація Об'єднаних Націй з промислового розвитку (ЮНІДО)",
           ro: '',
           hy: ''
         },
