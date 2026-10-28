@@ -97,7 +97,7 @@ export const site = {
     Clear all four values to remove the notice throughout the website. To remove one value only type in a space character.
   */
   languageDisclaimer: {
-    en: 'Machine translation',
+    en: '',
     uk: '',
     ro: 'Traducere automată',
     hy: 'Մեքենայական թարգմանություն'
