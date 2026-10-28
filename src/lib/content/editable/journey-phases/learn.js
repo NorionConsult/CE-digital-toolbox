@@ -154,30 +154,37 @@ const LearningresourcesSection = {
       learningGoals: { en: 'Learning goals', uk: 'Чого Ви навчитеся', ro: 'Obiective de învățare', hy: 'Ուսումնական նպատակներ' },
       whyTakeCourse: { en: 'Why should I take this course?', uk: 'ЧЧому варто переглянути цей курс?', ro: 'De ce să urmez acest curs?', hy: 'Ինչո՞ւ անցնել այս դասընթացը։' }
     },
+    /* The course containers are controlled by the `cards` array below. Add more courses by copying one object and changing the values of each card property*/
     cards: [
       {
+        /* Defines the course title*/
         courseTitle: {
           en: 'Circular Economy explained (video playlist)',
           uk: '',
           ro: '',
           hy: ''
         },
+        /* Defines the short description for the course */
         shortDescription: {
           en: 'A short curated playlist of whiteboard-style explainer videos from the Ellen MacArthur Foundation, walking through the core idea of the circular economy and why it matters for business.',
           uk: 'Коротка тематична добірка анімаційних відеороликів від Фонду Еллен Макартур, де на простих схемах пояснюється суть циркулярної економіки та її практичне значення для бізнесу.',
           ro: 'O scurtă selecție de videoclipuri explicative de tip whiteboard de la Ellen MacArthur Foundation, care prezintă ideea de bază a economiei circulare și de ce contează pentru afaceri.',
           hy: 'Ellen MacArthur Foundation-ի կարճ ընտրված տեսաշար՝ գրատախտակի ոճով բացատրական տեսանյութերով, որը ներկայացնում է շրջանաձև տնտեսության հիմնական գաղափարը և դրա նշանակությունը բիզնեսի համար։'
         },
-        // Translate the displayed language name here; the resource itself remains in English.
+        /* Translate the displayed language name here; the resource itself remains in English. */
         language: { en: 'English', uk: 'Англійська', ro: 'Engleză', hy: 'Անգլերեն' },
+        /* Specify the tool provider name here. Leave a translation as '' to keep showing the original English name. */
         provider: {
           en: 'Ellen MacArthur Foundation',
           uk: '',
           ro: '',
           hy: ''
         },
+        /* Add the URL link that leads to the course materials*/
         url: 'https://www.ellenmacarthurfoundation.org/playlist-circular-economy-explained',
+        /* Specify the button label for the course card. This is the text that appears on the button that opens the course URL. */
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
+        /* Add a description of the course here keep it short and concise. This text appears in the "What is this?" section of the course card. */
         aboutCourse: [
           {
             en: 'A free, bite-sized video collection that introduces the circular economy concept including the well-known explainer narrated by Dame Ellen MacArthur herself, which uses her solo round-the-world sailing experience to illustrate the difference between a linear "take-make-waste" model and a circular one.',
@@ -186,11 +193,13 @@ const LearningresourcesSection = {
             hy: 'Անվճար, կարճ տեսանյութերի հավաքածու, որը ներկայացնում է շրջանաձեւ տնտեսության գաղափարը, ներառյալ հայտնի բացատրական տեսանյութը՝ Dame Ellen MacArthur-ի ձայնավորմամբ, որտեղ նա իր շուրջերկրյա միայնակ նավարկության փորձով ցույց է տալիս գծային "take-make-waste" մոդելի եւ շրջանաձեւ մոդելի տարբերությունը։'
           }
         ],
+        /* Define the learning goals for the course */
         learningGoals: [
           { en: 'Understand the basic difference between a linear and a circular economy', uk: 'Зрозумієте базову відмінність між лінійною та циркулярною економікою.', ro: 'Înțelege diferența de bază dintre economia liniară și cea circulară', hy: 'Հասկանալ գծային եւ շրջանաձեւ տնտեսության հիմնական տարբերությունը' },
           { en: 'Understand why finite resources make the current "take-make-waste" model unsustainable', uk: 'Дізнаєтеся, чому вичерпність ресурсів робить сучасну лінійну модель нестабільною та безперспективною.', ro: 'Înțelege de ce resursele finite fac actualul model "take-make-waste" nesustenabil', hy: 'Հասկանալ, թե ինչու են սահմանափակ ռեսուրսները ներկայիս "take-make-waste" մոդելը դարձնում անկայուն' },
           { en: 'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms', uk: 'Побачите реальні практичні приклади збереження цінності (зокрема повторне виготовлення і каскадне використання матеріалів), пояснені простими словами', ro: 'Vezi exemple reale de păstrare a valorii, precum remanufacturarea și utilizarea în cascadă a materialelor, explicate simplu', hy: 'Տեսնել արժեքի պահպանման իրական օրինակներ, օրինակ՝ վերարտադրություն եւ նյութերի կասկադային օգտագործում, պարզ լեզվով' }
         ],
+        /* Define the reasons why someone should take this course. This text appears in the "Why should I take this course?" section of the course card.*/
         whyTakeCourse: [
           {
             en: "At only a few minutes per video, this is a fast way to build a non-technical understanding of the circular economy before moving into more detailed toolbox content. It's an ideal starting point for staff who have never encountered the concept before and need a plain-language explanation.",
