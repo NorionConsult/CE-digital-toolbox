@@ -57,7 +57,7 @@ For page views with content groups, use the custom `ce_page_view` data layer eve
 | `tool_download` | `tool_download` | `tool_slug`, `tool_title`, `link_url`, `link_type` | Which directly downloadable tools visitors take from individual tool pages. Enhanced Measurement may also register `file_download`. |
 | `select_content` with `content_type: case_card` | `select_content` | `content_type`, `content_id`, `item_name`, `source_area` | Which case cards visitors open from the case catalogue or embedded case sections. |
 | `case_source_click` | `case_source_click` | `case_slug`, `case_title`, `link_url` | Whether visitors click through from a case page to the company's source/site. Enhanced Measurement may also register this as an outbound `click`. |
-| `form_link_click` | `form_link_click` | `form_type`, `form_title`, `link_url` | Which Contact page forms visitors open, for example feedback or experience/certificate nomination. |
+| `form_link_click` | `form_link_click` | `form_type`, `form_title`, `link_url` | Opens of the combined Contact page form, with `form_type: feedback_and_contributions`. An empty form URL does not send an event. |
 
 ## GTM Notes
 
