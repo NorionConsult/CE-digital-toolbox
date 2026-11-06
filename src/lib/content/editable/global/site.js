@@ -78,6 +78,17 @@ export const site = {
         width: 'clamp(180px, 20vw, 245px)'
       },
       {
+        src: '/logos/UNIDO_logo.png',
+        href: 'https://www.unido.org/',
+        alt: {
+          en: 'UNIDO logo',
+          uk: 'Логотип ЮНІДО',
+          ro: 'Sigla UNIDO',
+          hy: 'ՄԱԱԶԿ-ի լոգո'
+        },
+        width: 'clamp(140px, 20vw, 260px)'
+      },
+      {
         src: '/logos/EU4Green-logo-header.png',
         alt: {
           en: 'EU4Green logo',

@@ -114,11 +114,14 @@
         aria-label={translate(menuLabels.programmeLogos, currentLanguage)}
       >
         {#each currentSite.headerPartnerLogos.logos as logo}
-          <img
-            src="{base}{logo.src}"
-            alt={logo.alt}
+          <svelte:element
+            this={logo.href ? 'a' : 'span'}
+            href={logo.href || undefined}
+            class="partner-logo"
             style={`--header-partner-logo-width: ${logo.width};`}
-          />
+          >
+            <img src="{base}{logo.src}" alt={logo.alt} />
+          </svelte:element>
         {/each}
       </div>
     </div>
@@ -197,17 +200,37 @@
   }
 
   .partner-logo-bar-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-    justify-content: space-between;
     gap: 28px;
     min-height: 68px;
     padding: 20px 0;
   }
 
+  .partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+  }
+
+  .partner-logo:first-child {
+    justify-content: flex-start;
+  }
+
+  .partner-logo:last-child {
+    justify-content: flex-end;
+  }
+
+  .partner-logo:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+  }
+
   .partner-logo-bar-content img {
     width: auto;
-    max-width: var(--header-partner-logo-width);
+    max-width: min(var(--header-partner-logo-width), 100%);
     height: var(--header-partner-logo-height, 26px);
     object-fit: contain;
   }
@@ -370,14 +393,12 @@
   @media (max-width: 760px) {
     .partner-logo-bar-content {
       gap: 16px;
-      justify-content: flex-start;
       min-height: 52px;
       padding: 10px 0;
     }
 
     .partner-logo-bar-content img {
       height: min(var(--header-partner-logo-height, 26px), 34px);
-      max-width: min(var(--header-partner-logo-width), calc((100% - 16px) / 2));
     }
 
     .header-content {
