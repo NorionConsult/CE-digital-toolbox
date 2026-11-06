@@ -90,6 +90,7 @@ export const site = {
       },
       {
         src: '/logos/EU4Green-logo-header.png',
+        href: 'https://www.eu4greenrecoveryeast.eu/',
         alt: {
           en: 'EU4Green logo',
           uk: 'Логотип EU4Green',

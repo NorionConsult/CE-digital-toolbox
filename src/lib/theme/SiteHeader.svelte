@@ -117,6 +117,8 @@
           <svelte:element
             this={logo.href ? 'a' : 'span'}
             href={logo.href || undefined}
+            target={logo.href ? '_blank' : undefined}
+            rel={logo.href ? 'noopener noreferrer' : undefined}
             class="partner-logo"
             style={`--header-partner-logo-width: ${logo.width};`}
           >
