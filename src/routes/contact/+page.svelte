@@ -20,8 +20,8 @@
   $: currentContactPage = localizeContent(contactPage, currentLanguage);
 
   /**
-   * Placeholder links use "#". When editors add real form URLs in
-   * contact-page.js, the buttons will open those forms in a new tab.
+   * An empty form URL keeps the button inactive. When editors add the real URL
+   * in contact-page.js, the button will open the form in a new tab.
    */
   /**
    * @param {string} url
@@ -74,35 +74,23 @@
 
 <section class="contact-section">
   <div class="container contact-layout">
-    <div class="contact-action-grid">
-      <article class="contact-action-card">
-        <h2>{currentContactPage.feedbackForm.title}</h2>
-        <p><InlineText text={currentContactPage.feedbackForm.text} /></p>
-        <a
-          class="primary-button"
-          href={getButtonHref(currentContactPage.feedbackForm.url)}
-          target={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : '_blank'}
-          rel={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : 'noreferrer'}
-          on:click={() => trackContactFormClick('feedback', currentContactPage.feedbackForm)}
-        >
-          {currentContactPage.feedbackForm.buttonLabel}
-        </a>
-      </article>
-
-      <article class="contact-action-card">
-        <h2>{currentContactPage.testimonyForm.title}</h2>
-        <p><InlineText text={currentContactPage.testimonyForm.text} /></p>
-        <a
-          class="primary-button"
-          href={getButtonHref(currentContactPage.testimonyForm.url)}
-          target={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : '_blank'}
-          rel={isPlaceholderUrl(currentContactPage.testimonyForm.url) ? undefined : 'noreferrer'}
-          on:click={() => trackContactFormClick('experience_certificate_nomination', currentContactPage.testimonyForm)}
-        >
-          {currentContactPage.testimonyForm.buttonLabel}
-        </a>
-      </article>
-    </div>
+    <article class="contact-action-card">
+      <h2>{currentContactPage.feedbackForm.title}</h2>
+      <p><InlineText text={currentContactPage.feedbackForm.text} /></p>
+      <a
+        class="primary-button"
+        href={getButtonHref(currentContactPage.feedbackForm.url)}
+        target={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : '_blank'}
+        rel={isPlaceholderUrl(currentContactPage.feedbackForm.url) ? undefined : 'noreferrer'}
+        aria-disabled={isPlaceholderUrl(currentContactPage.feedbackForm.url)}
+        on:click={(event) => {
+          if (isPlaceholderUrl(currentContactPage.feedbackForm.url)) event.preventDefault();
+          trackContactFormClick('feedback_and_contributions', currentContactPage.feedbackForm);
+        }}
+      >
+        {currentContactPage.feedbackForm.buttonLabel}
+      </a>
+    </article>
 
     <aside class="contact-details">
       <div class="contact-details-intro">
@@ -129,7 +117,8 @@
 
 <style>
   .contact-hero h1,
-  .contact-hero .subpage-intro {
+  .contact-hero .subpage-intro,
+  .contact-action-card p {
     max-width: 980px;
   }
 
@@ -167,7 +156,7 @@
 
   .contact-details p,
   .contact-action-card p {
-    margin: 0 0 22px;
+    margin: 0 0 16px;
   }
 
   .contact-details-intro {
@@ -230,25 +219,17 @@
     color: var(--dark);
   }
 
-  .contact-action-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-  }
-
   .contact-action-card {
     display: flex;
-    min-height: 330px;
     flex-direction: column;
   }
 
   .contact-action-card .primary-button {
     width: fit-content;
-    margin-top: auto;
+    margin-top: 0;
   }
 
   @media (max-width: 900px) {
-    .contact-action-grid,
     .contact-details-intro,
     .contact-email-grid {
       grid-template-columns: 1fr;

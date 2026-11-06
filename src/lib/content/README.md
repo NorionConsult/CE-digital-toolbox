@@ -181,6 +181,8 @@ src/lib/content/editable/pages/contact-page.js
 
 Edit the `contactEmails` list. Change only the `label` and `email` text unless you want to change which contact is highlighted. The website automatically uses the `email` value to create the clickable mail link. Country flags are set with `flagIcon`; these are local SVG files in `static/icons/circle-flags/`.
 
+The single feedback and contributions card is edited in `feedbackForm`. Set `feedbackForm.url` when the combined form is available; leave it as `''` to keep the button inactive. Its title, text and button label can be translated into all four languages.
+
 ## Guided Pathways Page
 
 To edit the page shown at `/guided-pathways/`, open:

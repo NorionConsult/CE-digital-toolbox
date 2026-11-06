@@ -1,6 +1,7 @@
 /*
   Edit this file for the Contact page.
-  Replace the button URL values once the feedback and testimony forms are ready.
+  Set feedbackForm.url once the combined feedback and contributions form is ready.
+  Leave it empty to display the button without opening a form.
   To update contact email links, edit only the "email" value below.
   The Contact page automatically turns each email into a clickable mailto link.
   The country flag icons are local SVG files in static/icons/circle-flags/.
@@ -11,17 +12,17 @@ export const contactPage = {
   eyebrow: { en: 'Contact', uk: 'Зв´язатися з нами ', ro: 'Contact', hy: 'Կապ' },
   title: { en: 'Share feedback', uk: 'Поділитися відгуком', ro: 'Trimite feedback', hy: 'Կիսվել կարծիքով' },
   intro: {
-    en: 'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, implementation stories or to request a certificate of contribution. Select and fill out the form that suits best for your case.',
-    uk: 'На цій сторінці Ви можете зв’язатися з командою платформи «Інструментарій циркулярної економіки»: залишити відгук, повідомити про технічні проблеми, запропонувати новий інструмент, розповісти про власний досвід упровадження або подати заявку на сертифікат за внесок у проєкт. Оберіть і заповніть форму, яка найкраще відповідає вашій меті.',
-    ro: 'Folosește această pagină pentru a contacta echipa Setului de instrumente pentru economia circulară cu feedback, probleme tehnice, sugestii de instrumente, povești de implementare sau pentru a solicita un certificat de contribuție. Selectează și completează formularul potrivit cazului tău.',
-    hy: 'Օգտագործեք այս էջը՝ Շրջանաձեւ տնտեսության գործիքակազմի թիմին հետադարձ կապ, տեխնիկական խնդիրներ, գործիքների առաջարկներ, իրականացման պատմություններ ուղարկելու կամ ներդրման վկայական խնդրելու համար։ Ընտրեք եւ լրացրեք ձեր դեպքին ամենահարմար ձեւը։'
+    en: 'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, implementation stories or to request a certificate of contribution. Complete the form below to share your feedback or contribution.',
+    uk: 'На цій сторінці Ви можете зв’язатися з командою платформи «Інструментарій циркулярної економіки»: залишити відгук, повідомити про технічні проблеми, запропонувати новий інструмент, розповісти про власний досвід упровадження або подати заявку на сертифікат за внесок у проєкт. Заповніть форму нижче, щоб поділитися відгуком або зробити внесок у проєкт.',
+    ro: 'Folosește această pagină pentru a contacta echipa Setului de instrumente pentru economia circulară cu feedback, probleme tehnice, sugestii de instrumente, povești de implementare sau pentru a solicita un certificat de contribuție. Completează formularul de mai jos pentru a trimite feedback sau o contribuție.',
+    hy: 'Օգտագործեք այս էջը՝ Շրջանաձեւ տնտեսության գործիքակազմի թիմին հետադարձ կապ, տեխնիկական խնդիրներ, գործիքների առաջարկներ, իրականացման պատմություններ ուղարկելու կամ ներդրման վկայական խնդրելու համար։ Լրացրեք ստորեւ ներկայացված ձեւը՝ ձեր կարծիքը հայտնելու կամ ծրագրում ներդրում ունենալու համար։'
   },
   contactDetailsTitle: { en: 'Contact us', uk: 'Зв’язатися з нами', ro: 'Contactează-ne', hy: 'Կապվեք մեզ հետ' },
   contactDetails: {
-    en: 'For other questions about the toolbox, contact the project team by email if your inquiry is not covered by one of the forms.',
-    uk: 'Маєте інші запитання щодо Інструментарію, для яких немає відповідної форми? Напишіть команді проєкту на електронну пошту.',
-    ro: 'Pentru alte întrebări despre setul de instrumente, contactează echipa proiectului prin e-mail dacă solicitarea ta nu este acoperită de unul dintre formulare.',
-    hy: 'Գործիքակազմի վերաբերյալ այլ հարցերի դեպքում կապվեք ծրագրի թիմի հետ էլ. փոստով, եթե ձեր հարցումը չի ընդգրկվում ձեւերից որեւէ մեկով։'
+    en: 'For other questions about the toolbox that are not covered by the form, contact the project team by email.',
+    uk: 'Якщо у Вас є інші запитання щодо Інструментарію, які не охоплює форма, напишіть команді проєкту на електронну пошту.',
+    ro: 'Pentru alte întrebări despre setul de instrumente care nu sunt acoperite de formular, contactează echipa proiectului prin e-mail.',
+    hy: 'Գործիքակազմի վերաբերյալ այլ հարցերի դեպքում, որոնք չեն ընդգրկվում ձեւում, կապվեք ծրագրի թիմի հետ էլ. փոստով։'
   },
   contactEmails: [
     {
@@ -46,25 +47,14 @@ export const contactPage = {
     }
   ],
   feedbackForm: {
-    title: { en: 'Report issues or feedback ', uk: 'Повідомити про проблему або залишити відгук', ro: 'Raportează probleme sau trimite feedback', hy: 'Հաղորդել խնդիրների մասին կամ թողնել կարծիք' },
+    title: { en: 'Feedback and contributions', uk: 'Відгуки та внесок у проєкт', ro: 'Feedback și contribuții', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
     text: {
-      en: 'Have you experienced any issues in this platform? Do you have any suggestions to improve the Toolbox or make it more useful for small-medium enterprises in the region? Use the form below to report an issue or provide feedback',
-      uk: 'Виникли складнощі під час користування платформою? Маєте пропозиції, як покращити Інструментарій або зробити його кориснішим для малого й середнього бізнесу в регіоні? Скористайтеся формою нижче, щоб повідомити про технічну несправність або поділитися відгуком.',
-      ro: 'Ai întâmpinat probleme pe această platformă? Ai sugestii pentru a îmbunătăți setul de instrumente sau pentru a-l face mai util IMM-urilor din regiune? Folosește formularul de mai jos pentru a raporta o problemă sau a trimite feedback.',
-      hy: 'Այս հարթակում խնդիրների հանդիպե՞լ եք։ Ունե՞ք առաջարկներ՝ գործիքակազմը բարելավելու կամ տարածաշրջանի ՓՄՁ-ների համար ավելի օգտակար դարձնելու համար։ Օգտագործեք ստորեւ նշված ձեւը՝ խնդիր հաղորդելու կամ կարծիք ուղարկելու համար։'
+      en: 'Have you encountered an issue, have suggestions for improving the Toolbox, or know of a tool we should include? You can also share your experiences using our tools, submit an implementation story or case, and request a certificate of contribution.',
+      uk: 'Ви зіткнулися з проблемою, маєте пропозиції щодо вдосконалення Інструментарію або знаєте інструмент, який варто додати? Ви також можете поділитися досвідом використання наших інструментів, надіслати історію впровадження чи практичний кейс і подати заявку на сертифікат за внесок у проєкт.',
+      ro: 'Ai întâmpinat o problemă, ai sugestii pentru îmbunătățirea setului de instrumente sau cunoști un instrument pe care ar trebui să îl includem? Poți, de asemenea, să împărtășești experiența ta de utilizare a instrumentelor noastre, să trimiți o poveste de implementare sau un studiu de caz și să soliciți un certificat de contribuție.',
+      hy: 'Հարթակից օգտվելիս խնդրի հանդիպե՞լ եք, ունե՞ք գործիքակազմը բարելավելու առաջարկներ կամ գիտե՞ք որեւէ գործիք, որը պետք է ներառենք։ Կարող եք նաեւ կիսվել մեր գործիքների օգտագործման ձեր փորձով, ներկայացնել իրականացման պատմություն կամ գործնական օրինակ եւ խնդրել ծրագրում ձեր ներդրումը հաստատող վկայական։'
     },
     buttonLabel: { en: 'Go to form', uk: 'Перейти до форми', ro: 'Mergi la formular', hy: 'Անցնել ձեւին' },
-    url: '#'
-  },
-  testimonyForm: {
-    title: { en: 'Share experiences, nominate tool and ask for a certificate', uk: 'Поділитися досвідом, запропонувати інструмент або отримати сертифікат', ro: 'Împărtășește experiențe, propune un instrument și solicită un certificat', hy: 'Կիսվեք փորձով, առաջարկեք գործիք եւ խնդրեք վկայական' },
-    text: {
-      en: 'Have you used one of the tools in the toolbox catalogue and had a good experience or case to share? Or do you have a tool that you would like to nominate, not currently in the tool catalogue, but that should be included? Use the form below to submit your experiences and request a certificate of participation. ',
-      uk: 'Ви вже користувалися інструментами з нашого каталогу й маєте успішний кейс або корисний досвід? Хочете порекомендувати інструмент, якого бракує на платформі? Заповніть форму нижче, щоб поділитися своїми результатами та подати заявку на отримання сертифіката учасника.',
-      ro: 'Ai folosit unul dintre instrumentele din catalog și ai o experiență bună sau un caz de împărtășit? Sau ai un instrument pe care ai dori să îl propui, care nu este încă în catalog, dar ar trebui inclus? Folosește formularul de mai jos pentru a transmite experiențele tale și pentru a solicita un certificat de participare.',
-      hy: 'Օգտագործե՞լ եք կատալոգի գործիքներից մեկը եւ ունե՞ք լավ փորձ կամ օրինակ, որով ցանկանում եք կիսվել։ Կամ ունե՞ք գործիք, որը դեռ կատալոգում չկա, բայց արժե ներառել։ Օգտագործեք ստորեւ նշված ձեւը՝ ձեր փորձը ներկայացնելու եւ մասնակցության վկայական խնդրելու համար։'
-    },
-    buttonLabel: { en: 'Go to form', uk: 'Перейти до форми', ro: 'Mergi la formular', hy: 'Անցնել ձեւին' },
-    url: '#'
+    url: ''
   }
 };
