@@ -33,7 +33,7 @@ export const aboutPage = {
     title: { en: 'Reach out to us', uk: 'Зв’язатися з нами', ro: 'Contactează-ne', hy: 'Կապվեք մեզ հետ' },
     text: {
       en: 'If you have any suggestions for tools, case studies, or other resources to include in the toolbox, please use the feedback form on the Contact page to share your ideas.',
-      uk: 'Якщо Ви маєте пропозиції щодо інструментів, практичних прикладів чи інших ресурсів, якими варто доповнити цей інструментарій, будь ласка, поділіться своїми ідеями через форму зворотного зв´язку на сторінці «Контакти».',
+      uk: 'Якщо Ви маєте пропозиції щодо інструментів, практичних прикладів чи інших ресурсів, якими варто доповнити цей інструментарій, будь ласка, поділіться своїми ідеями через форму зворотного зв´язку Якщо Ви маєте пропозиції щодо інструментів, практичних прикладів чи інших ресурсів, якими варто доповнити цей інструментарій, будь ласка, поділіться своїми ідеями через форму зворотного зв’язку. Для цього натисніть кнопку «Зв’язатися з нами».',
       ro: 'Dacă ai sugestii pentru instrumente, studii de caz sau alte resurse care ar trebui incluse în setul de instrumente, te rugăm să folosești formularul de feedback de pe pagina Contact pentru a ne transmite ideile tale.',
       hy: 'Եթե ունեք առաջարկներ գործիքների, օրինակների կամ այլ ռեսուրսների վերաբերյալ, որոնք արժե ներառել գործիքակազմում, խնդրում ենք օգտագործել Կապ էջի հետադարձ կապի ձեւը՝ ձեր գաղափարները կիսելու համար։'
     },

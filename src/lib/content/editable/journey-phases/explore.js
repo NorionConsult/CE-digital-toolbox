@@ -157,7 +157,7 @@ const identifyOptionsSection = {
     The workshop appears immediately after the section paragraphs above.
   */
   circularStrategiesWorkshop: {
-    subtitle: { en: 'Explore possible circular strategies', uk: 'ДПошук потенційних циркулярних стратегій', ro: 'Explorează posibile strategii circulare', hy: 'Ուսումնասիրեք հնարավոր շրջանաձեւ ռազմավարությունները' },
+    subtitle: { en: 'Explore possible circular strategies', uk: 'Пошук потенційних циркулярних стратегій', ro: 'Explorează posibile strategii circulare', hy: 'Ուսումնասիրեք հնարավոր շրջանաձեւ ռազմավարությունները' },
     title: {
       en: 'Circular Strategies Wheel Workshop',
       uk: 'Семінар «Колесо циркулярних стратегій»',
@@ -330,7 +330,7 @@ const shapeValueModelSection = {
         ro: 'În loc să te concentrezi doar pe ce se întâmplă cu produsul după vânzare, te concentrezi pe ce intră în el de la început, aprovizionându-te cu materiale reciclate sau secundare în locul celor virgine. De obicei, acest lucru necesită o colaborare mai strânsă cu furnizorii, deoarece materialele reciclate sau secundare pot varia mai mult ca nivel de calitate sau disponibilitate decât materialele virgine. În timp, poate reduce expunerea la volatilitatea prețurilor materialelor virgine și poate întări relațiile cu furnizorii.',
         hy: 'Միայն այն բանի վրա կենտրոնանալու փոխարեն, թե ինչ է տեղի ունենում ձեր արտադրանքի հետ վաճառքից հետո, դուք կենտրոնանում եք այն բանի վրա, թե ինչ է սկզբից մտնում դրա մեջ՝ առաջնային նյութերի փոխարեն ձեռք բերելով վերամշակված կամ երկրորդային նյութեր։ Սա սովորաբար պահանջում է ավելի սերտ համագործակցություն մատակարարների հետ, քանի որ վերամշակված կամ երկրորդային նյութերը հաճախ ավելի շատ են տարբերվում որակով կամ մատակարարմամբ, քան առաջնային նյութերը։ Ժամանակի ընթացքում դա կարող է նվազեցնել առաջնային նյութերի գների տատանումների ազդեցությունը եւ ամրապնդել մատակարարների հետ հարաբերությունները։'
       },
-      example: { en: 'Switching to recycled feedstock and partnering with a local recycler.', uk: 'Nерехід на вторинну полімерну гранулу та налагодження прямого партнерства з місцевим переробником відходів.', ro: 'Trecerea la materii prime reciclate și parteneriatul cu un reciclator local.', hy: 'Վերամշակված հումքի անցում եւ համագործակցություն տեղական վերամշակողի հետ։' }
+      example: { en: 'Switching to recycled feedstock and partnering with a local recycler.', uk: 'Перехід на вторинну полімерну гранулу та налагодження прямого партнерства з місцевим переробником відходів.', ro: 'Trecerea la materii prime reciclate și parteneriatul cu un reciclator local.', hy: 'Վերամշակված հումքի անցում եւ համագործակցություն տեղական վերամշակողի հետ։' }
     }
   ],
   /*
