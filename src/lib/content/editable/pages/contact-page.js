@@ -55,6 +55,6 @@ export const contactPage = {
       hy: 'Հարթակից օգտվելիս խնդրի հանդիպե՞լ եք, ունե՞ք գործիքակազմը բարելավելու առաջարկներ կամ գիտե՞ք որեւէ գործիք, որը պետք է ներառենք։ Կարող եք նաեւ կիսվել մեր գործիքների օգտագործման ձեր փորձով, ներկայացնել իրականացման պատմություն կամ գործնական օրինակ եւ խնդրել ծրագրում ձեր ներդրումը հաստատող վկայական։'
     },
     buttonLabel: { en: 'Go to form', uk: 'Перейти до форми', ro: 'Mergi la formular', hy: 'Անցնել ձեւին' },
-    url: ''
+    url: 'https://forms.cloud.microsoft/pages/responsepage.aspx?id=MUlqQlzsy0-dEDNj69-SgMNG0Zn1xb1LuR1JCdCDGdZURVZKMEVOSzkzSlQ3Tlg4R0YwNTg5MlZUMS4u&route=shorturl'
   }
 };
