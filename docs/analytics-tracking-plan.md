@@ -24,6 +24,9 @@ https://www.unido.org/circular-economy-tools
 - The consent and data layer helper is in `src/lib/analytics.js`.
 - Analytics consent is stored in the visitor's browser as `ce-toolbox-analytics-consent`.
 - Basic Consent Mode is used: GTM is blocked until analytics consent is accepted.
+- Withdrawing consent saves the rejected choice and refreshes any open toolbox tab that has already loaded GTM. A full refresh unloads Google's running scripts, including automatic measurement; a denied Consent Mode update alone can still allow cookieless pings. Requests already sent while consent was granted cannot be recalled.
+- Consent changes are applied across tabs on the same origin through browser storage events. Returning to a suspended tab also rechecks the saved preference. Visitors with a saved choice only see the banner again when they open Cookie settings (or clear the preference).
+- In every GTM analytics tag, require the additional consent `analytics_storage` under Advanced Settings > Consent Settings. Advertising consent remains denied; do not require advertising consent for these analytics tags.
 
 ## GTM Configuration Summary
 
@@ -64,4 +67,4 @@ For page views with content groups, use the custom `ce_page_view` data layer eve
 - Keep the GTM container minimal. For launch, it should only contain GA4 analytics tags unless UNIDO explicitly approves other tags.
 - Do not add tags that collect personal data.
 - Do not send form contents, email addresses, names, or certificate-related personal information to GA4.
-- If the GA4 Google tag sends automatic page views, avoid duplicate page view reporting by either disabling automatic page views in the tag configuration or using `ce_page_view` consistently as the page view trigger.
+- Use `ce_page_view` consistently as the page view trigger: set `send_page_view` to `false` on the base Google Analytics tag and disable browser-history page views in the GA4 stream's Enhanced Measurement settings.

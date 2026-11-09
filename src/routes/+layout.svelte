@@ -38,12 +38,13 @@
   }
 
   onMount(() => {
-    setupAnalyticsFromStoredConsent();
+    const stopConsentSync = setupAnalyticsFromStoredConsent();
     trackCurrentPage();
 
     window.addEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, trackCurrentPage);
 
     return () => {
+      stopConsentSync();
       window.removeEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, trackCurrentPage);
     };
   });

@@ -13,6 +13,9 @@ const CONSENT_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365;
 let gtmLoaded = false;
 let consentDefaultsInitialised = false;
 let lastPageViewKey = '';
+/** @type {string | null | undefined} */
+let appliedConsent;
+let analyticsStopped = false;
 
 /**
  * @param {string | null} status
@@ -41,7 +44,8 @@ function getDataLayer() {
  * @param {...any} args
  */
 function gtag(...args) {
-  getDataLayer().push(args);
+  // Google processes gtag commands as Arguments objects, not plain arrays.
+  getDataLayer().push(arguments);
 }
 
 function getAnalyticsConsentCookie() {
@@ -59,15 +63,15 @@ function getAnalyticsConsentCookie() {
 }
 
 /**
- * @param {typeof ANALYTICS_CONSENT_GRANTED | typeof ANALYTICS_CONSENT_DENIED} status
+ * @param {typeof ANALYTICS_CONSENT_GRANTED | typeof ANALYTICS_CONSENT_DENIED | null} status
  */
 function setAnalyticsConsentCookie(status) {
   if (!browser) return;
 
   const secureAttribute = window.location.protocol === 'https:' ? '; Secure' : '';
   document.cookie = `${encodeURIComponent(ANALYTICS_CONSENT_KEY)}=${encodeURIComponent(
-    status
-  )}; Max-Age=${CONSENT_COOKIE_MAX_AGE_SECONDS}; Path=/; SameSite=Lax${secureAttribute}`;
+    status ?? ''
+  )}; Max-Age=${status === null ? 0 : CONSENT_COOKIE_MAX_AGE_SECONDS}; Path=/; SameSite=Lax${secureAttribute}`;
 }
 
 /**
@@ -76,13 +80,13 @@ function setAnalyticsConsentCookie(status) {
 function setStoredAnalyticsConsent(status) {
   if (!browser) return;
 
+  // Write the fallback before notifying other tabs through localStorage.
+  setAnalyticsConsentCookie(status);
   try {
     window.localStorage.setItem(ANALYTICS_CONSENT_KEY, status);
   } catch {
     // Keep the banner usable in browsers where localStorage is restricted.
   }
-
-  setAnalyticsConsentCookie(status);
 }
 
 export function initialiseAnalyticsConsentDefaults() {
@@ -91,6 +95,8 @@ export function initialiseAnalyticsConsentDefaults() {
   consentDefaultsInitialised = true;
   gtag('consent', 'default', {
     ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
     analytics_storage: 'denied',
     functionality_storage: 'granted',
     security_storage: 'granted'
@@ -111,52 +117,83 @@ export function getAnalyticsConsent() {
 }
 
 export function hasAnalyticsConsent() {
-  return getAnalyticsConsent() === ANALYTICS_CONSENT_GRANTED;
+  return !analyticsStopped && getAnalyticsConsent() === ANALYTICS_CONSENT_GRANTED;
+}
+
+/** @param {string | null} status */
+function applyAnalyticsConsent(status) {
+  initialiseAnalyticsConsentDefaults();
+  if (status === appliedConsent || analyticsStopped) return;
+  appliedConsent = status;
+  lastPageViewKey = '';
+
+  if (status !== ANALYTICS_CONSENT_GRANTED && gtmLoaded) {
+    // A denied Consent Mode update alone still permits cookieless measurements.
+    // Unload the entire running container. The saved choice blocks it after reload.
+    // Reload the current URL so this works under both deployment base paths.
+    analyticsStopped = true;
+    window.location.reload();
+    return;
+  }
+
+  gtag('consent', 'update', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: status === ANALYTICS_CONSENT_GRANTED ? 'granted' : 'denied',
+    functionality_storage: 'granted',
+    security_storage: 'granted'
+  });
+  if (status === ANALYTICS_CONSENT_GRANTED) loadGoogleTagManager();
+  window.dispatchEvent(new CustomEvent(ANALYTICS_CONSENT_CHANGED_EVENT));
 }
 
 export function grantAnalyticsConsent() {
   if (!browser) return;
 
-  initialiseAnalyticsConsentDefaults();
   setStoredAnalyticsConsent(ANALYTICS_CONSENT_GRANTED);
-  gtag('consent', 'update', {
-    ad_storage: 'denied',
-    analytics_storage: 'granted',
-    functionality_storage: 'granted',
-    security_storage: 'granted'
-  });
-  loadGoogleTagManager();
-  window.dispatchEvent(new CustomEvent(ANALYTICS_CONSENT_CHANGED_EVENT));
+  applyAnalyticsConsent(ANALYTICS_CONSENT_GRANTED);
 }
 
 export function denyAnalyticsConsent() {
   if (!browser) return;
 
-  initialiseAnalyticsConsentDefaults();
   setStoredAnalyticsConsent(ANALYTICS_CONSENT_DENIED);
-  gtag('consent', 'update', {
-    ad_storage: 'denied',
-    analytics_storage: 'denied',
-    functionality_storage: 'granted',
-    security_storage: 'granted'
-  });
-  window.dispatchEvent(new CustomEvent(ANALYTICS_CONSENT_CHANGED_EVENT));
+  applyAnalyticsConsent(ANALYTICS_CONSENT_DENIED);
 }
 
 export function setupAnalyticsFromStoredConsent() {
-  if (!browser) return;
+  if (!browser) return () => {};
 
-  initialiseAnalyticsConsentDefaults();
-
-  if (hasAnalyticsConsent()) {
-    gtag('consent', 'update', {
-      ad_storage: 'denied',
-      analytics_storage: 'granted',
-      functionality_storage: 'granted',
-      security_storage: 'granted'
-    });
-    loadGoogleTagManager();
+  function syncStoredConsent() {
+    applyAnalyticsConsent(getAnalyticsConsent());
   }
+
+  /** @param {StorageEvent} event */
+  function handleStorageChange(event) {
+    if (event.storageArea !== window.localStorage) return;
+    if (event.key !== ANALYTICS_CONSENT_KEY && event.key !== null) return;
+
+    // Removing the preference (or clearing storage) must not restore a stale
+    // granted fallback cookie. Read current storage, since events can be queued.
+    const storedConsent = window.localStorage.getItem(ANALYTICS_CONSENT_KEY);
+    if (!isAnalyticsConsentChoice(storedConsent)) setAnalyticsConsentCookie(null);
+    syncStoredConsent();
+  }
+
+  window.addEventListener('storage', handleStorageChange);
+  // Also reconcile suspended tabs and the cookie fallback on returning to a tab.
+  window.addEventListener('focus', syncStoredConsent);
+  window.addEventListener('pageshow', syncStoredConsent);
+  document.addEventListener('visibilitychange', syncStoredConsent);
+  syncStoredConsent();
+
+  return () => {
+    window.removeEventListener('storage', handleStorageChange);
+    window.removeEventListener('focus', syncStoredConsent);
+    window.removeEventListener('pageshow', syncStoredConsent);
+    document.removeEventListener('visibilitychange', syncStoredConsent);
+  };
 }
 
 export function loadGoogleTagManager() {

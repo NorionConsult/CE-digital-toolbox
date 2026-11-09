@@ -7,7 +7,6 @@
     ANALYTICS_CONSENT_CHANGED_EVENT,
     ANALYTICS_CONSENT_DENIED,
     ANALYTICS_CONSENT_GRANTED,
-    ANALYTICS_CONSENT_KEY,
     denyAnalyticsConsent,
     getAnalyticsConsent,
     grantAnalyticsConsent,
@@ -36,29 +35,12 @@
     visible = !isAnalyticsConsentChoice(storedConsent);
   }
 
-  function hideAfterConsentChange() {
-    consentStatus = getAnalyticsConsent();
-    visible = false;
-  }
-
   onMount(() => {
     syncConsentFromStorage();
-
-    /**
-     * @param {StorageEvent} event
-     */
-    function handleStorageChange(event) {
-      if (event.key === ANALYTICS_CONSENT_KEY) {
-        syncConsentFromStorage();
-      }
-    }
-
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, hideAfterConsentChange);
+    window.addEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, syncConsentFromStorage);
 
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, hideAfterConsentChange);
+      window.removeEventListener(ANALYTICS_CONSENT_CHANGED_EVENT, syncConsentFromStorage);
     };
   });
 
