@@ -1,7 +1,8 @@
-import { base } from '$app/paths';
+import { BASE_PATH } from '../deployment.config.js';
 import { stripLanguagePrefix, hasLanguagePrefix, getAppPathname } from '$lib/translation-helper.js';
 
-const routingBasePath = import.meta.env.PUBLIC_BASE_PATH || base;
+// Universal hooks run during startup, before SvelteKit's browser paths are ready.
+const routingBasePath = BASE_PATH;
 
 /**
  * Language-prefixed URLs, such as /uk/tools/, render the same route as their
