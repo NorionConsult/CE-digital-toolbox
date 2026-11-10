@@ -2,15 +2,22 @@
 
 This website uses a consent-first Google Tag Manager setup. The GTM container is not loaded until a visitor accepts analytics cookies in the cookie banner.
 
-## Before UNIDO Launch
+## GTM Container Configuration
 
-The code currently uses this temporary placeholder:
+The default container in `src/lib/analytics.js` is the project's GTM container:
 
 ```text
-PUBLIC_GTM_ID=GTM-XXXXXXX
+PUBLIC_GTM_ID=GTM-WLH5LPL4
 ```
 
-The placeholder does not load Google Tag Manager. When the UNIDO-owned GTM container is ready, set `PUBLIC_GTM_ID` to the real container id in the GitHub Actions or hosting environment.
+The default is used when `PUBLIC_GTM_ID` is not supplied or is empty. A build-time
+`PUBLIC_GTM_ID` overrides it, allowing Norion's site to use a separate test
+container. An explicit `PUBLIC_GTM_ID=GTM-XXXXXXX` disables the GTM loader. Changing
+this environment variable requires rebuilding and deploying the static site.
+
+Use a GTM container ID (`GTM-...`) here. The GA4 Measurement ID `G-LQFWNESSZ0`
+belongs in the Google Analytics tags inside GTM. Do not add a second, direct
+`gtag.js` installation to the website.
 
 The expected production URL is:
 

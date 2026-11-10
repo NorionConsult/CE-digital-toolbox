@@ -254,19 +254,23 @@ npm run preview
 The website is prepared for a consent-first Google Tag Manager setup. Analytics
 does not load until a visitor accepts analytics cookies in the banner.
 
-The GTM container id is configured with:
+The default GTM container id in `src/lib/analytics.js` is `GTM-WLH5LPL4`.
+To use a different container, override it at build time with:
 
 ```text
 PUBLIC_GTM_ID
 ```
 
-The current placeholder is shown in `.env.example`:
+The project's container is also shown in `.env.example`:
 
 ```text
-PUBLIC_GTM_ID=GTM-XXXXXXX
+PUBLIC_GTM_ID=GTM-WLH5LPL4
 ```
 
-Replace this with the UNIDO-owned GTM container id after migration. The
+Use a separate test container through `PUBLIC_GTM_ID` when testing on Norion's
+site; otherwise, both copies send accepted analytics to the project's container.
+An explicit `PUBLIC_GTM_ID=GTM-XXXXXXX` disables the GTM loader. The GA4 Measurement
+ID (`G-LQFWNESSZ0`) is configured inside GTM, rather than in this variable. The
 tracking event plan is documented in:
 
 ```text

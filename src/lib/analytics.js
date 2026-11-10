@@ -6,8 +6,9 @@ export const ANALYTICS_CONSENT_GRANTED = 'granted';
 export const ANALYTICS_CONSENT_DENIED = 'denied';
 export const ANALYTICS_CONSENT_CHANGED_EVENT = 'ce-analytics-consent-changed';
 
-const TEMPORARY_GTM_ID = 'GTM-XXXXXXX';
-const GTM_ID = import.meta.env.PUBLIC_GTM_ID || TEMPORARY_GTM_ID;
+// Use the project's container by default; builds can override it for testing.
+const DEFAULT_GTM_ID = 'GTM-WLH5LPL4';
+const GTM_ID = (import.meta.env.PUBLIC_GTM_ID || DEFAULT_GTM_ID).trim();
 const CONSENT_COOKIE_MAX_AGE_SECONDS = 60 * 60 * 24 * 365;
 
 let gtmLoaded = false;
@@ -25,12 +26,11 @@ export function isAnalyticsConsentChoice(status) {
 }
 
 /**
- * The temporary GTM id keeps the implementation visible before migration while
- * avoiding failed network calls. Replace PUBLIC_GTM_ID with the real UNIDO
- * container id when the production container exists.
+ * Only GTM container IDs belong here, not GA4 Measurement IDs (G-...).
+ * An explicit placeholder override keeps analytics disabled for an untagged build.
  */
 function hasUsableGtmId() {
-  return /^GTM-[A-Z0-9]+$/i.test(GTM_ID) && GTM_ID !== TEMPORARY_GTM_ID;
+  return /^GTM-[A-Z0-9]+$/i.test(GTM_ID) && GTM_ID !== 'GTM-XXXXXXX';
 }
 
 function getDataLayer() {
