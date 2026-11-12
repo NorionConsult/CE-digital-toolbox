@@ -57,7 +57,7 @@ const toolCatalogue = [
         en: "The SME Reporting Tool helps small businesses create annual greenhouse gas emission reports and track their reduction efforts.",
         uk: "SME Reporting Tool допомагає малим і середнім підприємствам формувати річні звіти про викиди парникових газів та відстежувати заходи з їхнього скорочення.",
         ro: "Instrumentul de raportare pentru IMM-uri ajută întreprinderile mici să creeze rapoarte anuale privind emisiile de gaze cu efect de seră și să urmărească eforturile lor de reducere.",
-        hy: "ՓՄՁ-ների հաշվետվությունների կազմման գործիքն օգնում է փոքր բիզնեսներին պատրաստել ջերմոցային գազերի արտանետումների տարեկան հաշվետվություններ և հետևել արտանետումների կրճատմանն ուղղված իրենց ջանքերի առաջընթացին։"
+        hy: "ՓՄՁ հաշվետվության գործիքն օգնում է փոքր բիզնեսներին կազմել ջերմոցային գազերի արտանետումների տարեկան հաշվետվություններ և հետևել արտանետումների կրճատման ուղղությամբ իրականացվող աշխատանքներին։"
       },
     /* Longer description of the tool which appears on the tool page. Add links like [visible link text](https://example.com). To split paragraphs in one text field, write || between paragraphs. */
       about:
@@ -141,14 +141,14 @@ const toolCatalogue = [
         en: "A guide to show you which analytics to use to best measure the circularity of your operations.",
         uk: "Цей посібник допоможе визначити аналітичні інструменти та показники для якнайточнішого оцінювання рівня циркулярності Ваших операційних процесів.",
         ro: "Un ghid pentru a vă arăta ce analize să utilizați pentru a măsura cel mai bine circularitatea operațiunilor dvs.",
-        hy: "Ուղեցույց, որն օգնում է ընտրել համապատասխան վերլուծական գործիքներն ու ցուցանիշները՝ ձեր գործունեության շրջանաձևության մակարդակը լավագույնս գնահատելու համար։"
+        hy: "Ուղեցույց, որն օգնում է ընտրել ձեր գործունեության շրջանաձևության մակարդակը լավագույնս չափելու համար անհրաժեշտ վերլուծական գործիքները։"
       },
     about:
       {
         en: "Circulytics is a framework of indicators for tracking circular economy performance. It allows companies to highlight successes in transition, and identify where to focus efforts for improvement in line with the three principles of a circular economy, all driven by design: eliminate waste and pollution, circulate products and materials, and regenerate nature.",
         uk: "Circulytics – це система показників для відстеження результативності переходу до циркулярної економіки. Вона дає компаніям змогу висвітлювати успіхи на шляху трансформації та визначати пріоритетні напрями для вдосконалення відповідно до трьох базових принципів циркулярної економіки, закладених іще на етапі проєктування: усунення відходів і забруднення, забезпечення циркуляції продукції та матеріалів і відновлення природних систем.",
         ro: "Circulytics este un cadru de indicatori pentru urmărirea performanței economiei circulare. Permite companiilor să evidențieze succesele în tranziție și să identifice unde să concentreze eforturile pentru îmbunătățire în conformitate cu cele trei principii ale unei economii circulare, toate conduse de proiectare: eliminarea deșeurilor și a poluării, circulația produselor și materialelor și regenerarea naturii.",
-        hy: "Circulytics-ը ցիկլային տնտեսության կատարողականին հետևելու ցուցիչների շրջանակ է: Այն թույլ է տալիս ընկերություններին ընդգծել անցումային շրջանի հաջողությունները և որոշել, թե որտեղ պետք է կենտրոնացնեն բարելավմանն ուղղված ջանքերը շրջանաձև տնտեսության երեք սկզբունքներին համապատասխան, որոնք բոլորն էլ առաջնորդվում են դիզայնով. վերացնել թափոնները և աղտոտվածությունը, շրջանառել ապրանքներն ու նյութերը և վերականգնել բնությունը։"
+        hy: "Circulytics-ը շրջանաձև տնտեսության կատարողականին հետևելու ցուցանիշների շրջանակ է: Այն թույլ է տալիս ընկերություններին ընդգծել անցումային շրջանի հաջողությունները և որոշել, թե որտեղ պետք է կենտրոնացնեն բարելավմանն ուղղված ջանքերը շրջանաձև տնտեսության երեք սկզբունքներին համապատասխան, որոնք բոլորն էլ առաջնորդվում են դիզայնով. վերացնել թափոնները և աղտոտվածությունը, շրջանառել ապրանքներն ու նյութերը և վերականգնել բնությունը։"
       },
     journeyPhases: ['Monitor'],
      placements: {
@@ -214,14 +214,14 @@ const toolCatalogue = [
         en: "A climate action plan outlines how an organisation will reduce greenhouse gas emissions and prepare for the impacts of climate change.",
         uk: "Кліматичний план дій визначає, як саме організація скорочуватиме викиди парникових газів і готуватиметься до наслідків зміни клімату.",
         ro: "Un plan de acțiune pentru climă subliniază modul în care o organizație va reduce emisiile de gaze cu efect de seră și se va pregăti pentru impactul schimbărilor climatice.",
-        hy: "Կլիմայական գործողությունների ծրագիրը սահմանում է կազմակերպության կողմից ջերմոցային գազերի արտանետումների կրճատման և կլիմայի փոփոխության ազդեցություններին հարմարվելու համար նախատեսված միջոցառումները։"
+        hy: "Կլիմայական գործողությունների ծրագիրը սահմանում է, թե ինչպես է կազմակերպությունը կրճատելու ջերմոցային գազերի արտանետումները և նախապատրաստվելու կլիմայի փոփոխության հետևանքներին։"
       },
     about:
       {
         en: "The SME Climate Hub Climate Action Planner is a free online tool that helps SMEs create a customised climate action plan. By answering a short self-assessment, businesses receive tailored recommendations to reduce emissions, cut costs, improve resilience, and build a practical sustainability roadmap with progress tracking and clear priorities.|| **How the Climate Action Planner works**|| **1.\tRegister/log in:** From the \"Build a Climate Action Plan\" page where the link here takes you, click \"Access Climate Action Planner\" once you land on the page, then click on \"Login\". As a new user, create a free account by clicking on \"Sign up\", and choose either to sign up as a \"Tool user\" or a \"committed business\".  Fill out the fields with your name, email, and set a password. If you already have an account, you can log in instead. || **2.\tSelf-Assess:** Answer a deep-dive questionnaire covering energy usage, supply chains, employee engagement, and waste management. No prior emissions measurement needed. || **3.\tReview recommendations:** The tool pulls from a library of 750+ actions and surfaces ones tailored to your sector, goals, and key emissions areas. || **4.\tShortlist actions:** Compare strategies, read details on each (business case and potential impact), and pick the ones that fit your capabilities and timeline. || **5.\tManage your plan:** Your custom action plan lands in a dashboard where you can track progress, view more detail on further actions, and download a report.",
         uk: "SME Climate Hub Climate Action Planner – це безкоштовний онлайн-інструмент, який допомагає МСП створити індивідуальний план дій у сфері клімату. Відповівши на запитання короткої самооцінки, підприємства отримують адаптовані рекомендації щодо скорочення викидів, оптимізації витрат, підвищення стійкості та формування практичної дорожньої карти сталості з можливістю відстеження прогресу та чіткими пріоритетами. || **Принцип роботи Climate Action Planner:** || 1. **Зареєструйтеся/увійдіть:** на сторінці «Створення плану дій щодо клімату», куди веде Вас посилання, натисніть «Доступ до плану дій щодо клімату», коли Ви потрапите на сторінку, а потім натисніть «Увійти». Як новий користувач, створіть безкоштовний обліковий запис, натиснувши «Зареєструватися», і виберіть, чи зареєструватися як «Користувач інструменту» або як «Підприємство, що зобов’язалося». Заповніть поля з Вашим іменем, електронною поштою та встановіть пароль. Якщо у Вас уже є обліковий запис, Ви можете увійти замість нього. || 2. **Самооцінка:** дайте відповіді на запитання детального опитувальника, що охоплює споживання енергії, ланцюги постачання, залучення працівників та поводження з відходами. Попереднє вимірювання викидів не потрібне. || 3. **Ознайомлення з рекомендаціями:** інструмент здійснює вибірку з бази, яка налічує понад 750 заходів, пропонуючи саме ті, що відповідають Вашій галузі, цілям і ключовим джерелам викидів. || 4. **Відбір заходів:** зіставляйте різні стратегії, ознайомтеся з деталями кожного заходу (бізнес-обґрунтування та потенційний ефект) і виберіть рішення відповідно до власних можливостей і часових меж. || 5. **Керування планом:** сформований індивідуальний план дій відображається на інформаційній панелі, де Ви можете відстежувати прогрес, переглядати додаткові відомості щодо наступних дій та завантажувати звіт.",
         ro: "Planificatorul de acțiuni climatice SME Climate Hub este un instrument online gratuit care ajută IMM-urile să creeze un plan de acțiune climatic personalizat. Răspunzând la o scurtă autoevaluare, companiile primesc recomandări personalizate pentru a reduce emisiile, a reduce costurile, a îmbunătăți reziliența și a construi o foaie de parcurs practică de durabilitate, cu urmărirea progresului și priorități clare.|| **Cum funcționează Planificatorul de acțiuni climatice**|| **1.\tÎnregistrați-vă/conectați-vă:** Din pagina „Construiți un plan de acțiune pentru climă”, unde vă duce linkul de aici, faceți clic pe „Accesați Planificatorul de acțiuni pentru climă” odată ce ajungeți pe pagină, apoi faceți clic pe „Autentificare”. În calitate de utilizator nou, creați un cont gratuit făcând clic pe „Înscrieți-vă” și alegeți fie să vă înscrieți ca „Utilizator instrument” fie ca „afacere angajată”.  Completați câmpurile cu numele dvs., adresa de e-mail și setați o parolă. Dacă aveți deja un cont, vă puteți conecta în schimb. || **2.\tAuto-evaluare:** Răspundeți la un chestionar detaliat care acoperă utilizarea energiei, lanțurile de aprovizionare, implicarea angajaților și gestionarea deșeurilor. Nu este necesară măsurarea prealabilă a emisiilor. || **3.\tRecomandări de revizuire:** Instrumentul extrage dintr-o bibliotecă de peste 750 de acțiuni și suprafețe adaptate sectorului dvs., obiectivelor și zonelor cheie de emisii. || **4.\tLista scurtă de acțiuni:** Comparați strategiile, citiți detalii despre fiecare (caz de afaceri și impact potențial) și alegeți-le pe cele care se potrivesc cu capacitățile și cronologia dvs. || **5.\tGestionați-vă planul:** Planul dvs. de acțiune personalizat ajunge într-un tablou de bord unde puteți urmări progresul, puteți vedea mai multe detalii despre acțiunile ulterioare și puteți descărca un raport.",
-        hy: "SME Climate Hub Climate Action Planner-ը անվճար առցանց գործիք է, որն օգնում է ՓՄՁ-ներին ստեղծել հարմարեցված կլիմայի գործողությունների ծրագիր: Պատասխանելով կարճ ինքնագնահատման՝ ձեռնարկությունները ստանում են համապատասխան առաջարկություններ՝ նվազեցնելու արտանետումները, կրճատել ծախսերը, բարելավել ճկունությունը և կառուցել գործնական կայունության ճանապարհային քարտեզ՝ առաջընթացի հետևումով և հստակ առաջնահերթություններով։|| **Ինչպես է աշխատում Կլիմայի գործողությունների պլանավորողը**|| **1.\tԳրանցվեք/մուտք գործեք՝** «Կառուցեք կլիմայի գործողությունների ծրագիր» էջից, որտեղ ձեզ տանում է հղումը, սեղմեք «Access Climate Action Planner»-ը, երբ վայրէջք կատարեք էջին, այնուհետև սեղմեք «Մուտք գործել»: Որպես նոր օգտվող, ստեղծեք անվճար հաշիվ՝ սեղմելով «Գրանցվել» և ընտրեք գրանցվել որպես «Գործիքների օգտատեր» կամ «պարտավոր բիզնես»:  Լրացրեք դաշտերը ձեր անունով, էլ.փոստով և սահմանեք գաղտնաբառ: Եթե ​​արդեն ունեք հաշիվ, փոխարենը կարող եք մուտք գործել: || **2.\tԻնքնագնահատում. ** Պատասխանեք խորը սուզված հարցաշարի, որը ներառում է էներգիայի օգտագործումը, մատակարարման շղթաները, աշխատակիցների ներգրավվածությունը և թափոնների կառավարումը: Արտանետումների նախնական չափումներ չեն պահանջվում: || **3.\tՎերանայեք առաջարկությունները.** Գործիքը դուրս է բերվում 750+ գործողությունների գրադարանից և ընդգրկում է այնպիսի գործողություն, որը հարմարեցված է ձեր ոլորտին, նպատակներին և հիմնական արտանետումների ոլորտներին: || **4.\tԳործողությունների կարճ ցուցակ.** Համեմատեք ռազմավարությունները, կարդացեք մանրամասներ յուրաքանչյուրի վերաբերյալ (բիզնեսի դեպք և հնարավոր ազդեցություն) և ընտրեք ձեր հնարավորություններին և ժամանակացույցին համապատասխանող գործողությունները: || **5.\tԿառավարեք ձեր պլանը.** Ձեր հատուկ գործողությունների ծրագիրը տեղադրվում է վահանակում, որտեղ կարող եք հետևել առաջընթացին, դիտել հետագա գործողությունների վերաբերյալ ավելի շատ մանրամասներ և ներբեռնել հաշվետվություն:"
+        hy: "SME Climate Hub Climate Action Planner-ը անվճար առցանց գործիք է, որն օգնում է ՓՄՁ-ներին ստեղծել հարմարեցված կլիմայի գործողությունների ծրագիր: Պատասխանելով կարճ ինքնագնահատման՝ ձեռնարկությունները ստանում են համապատասխան առաջարկություններ՝ նվազեցնելու արտանետումները, կրճատել ծախսերը, բարելավել ճկունությունը և կառուցել գործնական կայունության ճանապարհային քարտեզ՝ առաջընթացի հետևումով և հստակ առաջնահերթություններով։|| **Ինչպես է աշխատում Կլիմայի գործողությունների պլանավորողը**|| **1. Գրանցվեք/մուտք գործեք՝** «Կառուցեք կլիմայի գործողությունների ծրագիր» էջից, որտեղ ձեզ տանում է հղումը, սեղմեք «Access Climate Action Planner»-ը, երբ վայրէջք կատարեք էջին, այնուհետև սեղմեք «Մուտք գործել»: Որպես նոր օգտվող, ստեղծեք անվճար հաշիվ՝ սեղմելով «Գրանցվել» և ընտրեք գրանցվել որպես «Գործիքների օգտատեր» կամ «պարտավոր բիզնես»: Լրացրեք դաշտերը ձեր անունով, էլ.փոստով և սահմանեք գաղտնաբառ: Եթե ​​արդեն ունեք հաշիվ, փոխարենը կարող եք մուտք գործել։ || **2. Ինքնագնահատում.** Պատասխանեք խորը սուզված հարցաշարի, որը ներառում է էներգիայի օգտագործումը, մատակարարման շղթաները, աշխատակիցների ներգրավվածությունը և թափոնների կառավարումը: Արտանետումների նախնական չափումներ չեն պահանջվում։ || **3. Վերանայեք առաջարկությունները.** Գործիքը դուրս է բերվում 750+ գործողությունների գրադարանից և ընդգրկում է այնպիսի գործողություն, որը հարմարեցված է ձեր ոլորտին, նպատակներին և հիմնական արտանետումների ոլորտներին։ || **4. Գործողությունների կարճ ցուցակ.** Համեմատեք ռազմավարությունները, կարդացեք մանրամասներ յուրաքանչյուրի վերաբերյալ (բիզնեսի դեպք և հնարավոր ազդեցություն) և ընտրեք ձեր հնարավորություններին և ժամանակացույցին համապատասխանող գործողությունները։ || **5. Կառավարեք ձեր պլանը.** Ձեր հատուկ գործողությունների ծրագիրը տեղադրվում է վահանակում, որտեղ կարող եք հետևել առաջընթացին, դիտել հետագա գործողությունների վերաբերյալ ավելի շատ մանրամասներ և ներբեռնել հաշվետվություն։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -287,7 +287,7 @@ const toolCatalogue = [
         en: "A practical set of canvases designed to help businesses move from early circular action to intentional, long-term change.",
         uk: "Практичний набір шаблонів, створений для того, щоб допомогти бізнесу перейти від перших кроків у сфері циркулярної економіки до цілеспрямованих, довгострокових змін.",
         ro: "Un set practic de instrumente de tip canvas, concepute pentru a ajuta companiile să treacă de la acțiunea circulară timpurie la schimbarea intenționată, pe termen lung.",
-        hy: "Գործնական աշխատանքային ձևանմուշների հավաքածու, որը նախատեսված է օգնելու բիզնեսներին սկզբնական շրջանաձև նախաձեռնություններից անցում կատարել դեպի նպատակային և երկարաժամկետ փոփոխություններ։"
+        hy: "Գործնական ձևանմուշների հավաքածու, որը նախատեսված է օգնելու բիզնեսներին սկզբնական շրջանաձև նախաձեռնություններից անցնել նպատակային և երկարաժամկետ փոփոխությունների։"
       },
     about:
       {
@@ -428,14 +428,14 @@ const toolCatalogue = [
         en: "Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) template, sticky notes, real-time team editing, and voting tools for a structured online workshop.",
         uk: "Безкоштовна онлайн-дошка для спільної роботи з готовим шаблоном аналізу сильних і слабких сторін, можливостей та загроз (SWOT), стікерами, можливістю редагування командою в режимі реального часу та інструментами голосування для структурованого онлайн-семінару.",
         ro: "Tablă albă colaborativă online gratuită cu șablon SWOT (puncte forte, puncte slabe, oportunități și amenințări), note lipicioase, editare în timp real în echipă și instrumente de vot pentru un atelier online structurat.",
-        hy: "Անվճար առցանց համատեղ աշխատանքային գրատախտակ, որն առաջարկում է պատրաստի SWOT վերլուծության (ուժեղ և թույլ կողմեր, հնարավորություններ և սպառնալիքներ) ձևանմուշ, կպչուն նշումներ, թիմի անդամների կողմից իրական ժամանակում համատեղ խմբագրման և քվեարկության գործիքներ՝ առցանց աշխատաժողովների կառուցվածքային կազմակերպման համար։"
+        hy: "Անվճար առցանց համագործակցային գրատախտակ՝ ուժեղ և թույլ կողմերի, հնարավորությունների ու սպառնալիքների (SWOT) վերլուծության պատրաստի ձևանմուշով, կպչուն գրառումներով, իրական ժամանակում թիմային խմբագրման և քվեարկության գործիքներով՝ կառուցվածքային առցանց աշխատաժողով անցկացնելու համար։"
       },
     about:
       {
         en: "A Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis applied to circular business models examines four dimensions to build a clear strategic picture. Strengths identify what your organisation already does well, weaknesses expose internal gaps, opportunities look outward at favourable conditions, and threats capture external risks. The real value comes from using these dimensions dynamically to reveal priorities and vulnerabilities. To access Miro templates, you frist need a user. You can create a free user to access the templates, if you do not have a Miro account. Once you can access the templates, you can follow the instructions to use them. || **Step by step guide** || **1.\tSet the objective:** Define what you're analysing and keep the scope specific so the analysis stays focused. ||**2.\tGather the right people:** Pull in a small group with different perspectives (ops, sales, finance, etc.). || **3.\tList Strengths:** Internal, positive factors: what you do well, unique resources, etc. || **4.\tList Weaknesses:** Internal, negative factors: gaps, resource constraints, etc.|| **5.\tList Opportunities:** External, positive factors: market trends, gaps you could exploit, emerging needs.|| **6.\tList Threats:** External, negative factors: competition, regulatory shifts, etc. || **7.\tRank items** by impact and likelihood so you're not treating everything as equally urgent.|| **8.\tMatch strengths to opportunities** to see where you can go on offense, and weaknesses to threats to see where you're most exposed. || **9.\tPick two or three priorities** per quadrant and assign owners and next steps.",
         uk: "SWOT-аналіз у застосуванні до циркулярних бізнес-моделей розглядає чотири виміри для формування чіткої стратегічної картини. Сильні сторони визначають те, що Ваша організація вже робить якісно; слабкі сторони виявляють внутрішні прогалини; можливості спрямовані назовні та відображають сприятливі зовнішні умови; а загрози охоплюють зовнішні ризики. Справжня цінність полягає в динамічному зіставленні цих факторів для виявлення пріоритетів та вразливих місць. Щоб отримати доступ до шаблонів Miro, спершу необхідно мати обліковий запис. Якщо у Вас немає акаунта Miro, Ви можете безкоштовно зареєструватися. Отримавши доступ до шаблонів, дотримуйтесь інструкцій щодо їхнього використання. || **Покрокова інструкція:** || 1. **Визначте мету:** чітко окресліть об’єкт аналізу та не розширюйте межі без потреби, щоб зберегти фокус. || 2. **Зберіть профільну команду:** залучіть невелику групу представників із різних напрямів (виробництво/операційна діяльність, продажі, фінанси тощо). || 3. **Визначте сильні сторони:** внутрішні позитивні чинники – Ваші переваги, унікальні ресурси тощо. || 4. **Визначте слабкі сторони:** внутрішні негативні чинники – прогалини, дефіцит ресурсів тощо. || 5. **Визначте можливості:** зовнішні позитивні чинники – тенденції ринку, перспективні ніші, нові потреби клієнтів. || 6. **Визначте загрози:** зовнішні негативні чинники – конкуренція, регуляторні зміни тощо. || 7. **Проранжуйте пункти** за рівнем впливу та ймовірністю, щоб не вважати всі фактори однаково терміновими. || 8. **Зіставте сильні сторони з можливостями**, щоб визначити напрями для активного розвитку, а слабкі сторони – із загрозами, щоб побачити найбільш уразливі місця. || 9. **Виберіть по два-три пріоритети** для кожного квадранта, закріпіть відповідальних і сплануйте наступні кроки.",
         ro: "O analiză SWOT (Strengths, Weaknesses, Opportunities and Threats) aplicată modelelor circulare de afaceri examinează patru dimensiuni pentru a construi o imagine strategică clară. Punctele forte identifică ceea ce organizația dvs. face deja bine, punctele slabe expun lacune interne, oportunitățile privesc spre exterior condiții favorabile, iar amenințările captează riscurile externe. Valoarea reală provine din utilizarea dinamică a acestor dimensiuni pentru a dezvălui prioritățile și vulnerabilitățile. Pentru a accesa șabloanele Miro, mai întâi aveți nevoie de un utilizator. Puteți crea un utilizator gratuit pentru a accesa șabloanele, dacă nu aveți un cont Miro. Odată ce puteți accesa șabloanele, puteți urma instrucțiunile pentru a le folosi. || **Ghid pas cu pas** || **1.\tStabiliți obiectivul:** Definiți ceea ce analizați și mențineți domeniul de aplicare specific, astfel încât analiza să rămână concentrată. ||**2.\tAdunați oamenii potriviți:** Atrageți un grup mic cu perspective diferite (operații, vânzări, finanțe etc.). || **3.\tListează punctele forte:** Factori interni, pozitivi: ceea ce faci bine, resurse unice etc. || **4.\tListați punctele slabe:** Factori interni, negativi: lacune, constrângeri de resurse etc.|| **5.\tLista de oportunitati:** Factori externi, pozitivi: tendintele pietei, lacunele pe care le-ati putea exploata, nevoile emergente.|| **6.\tLista amenințărilor:** Factori externi, negativi: concurență, schimbări de reglementare etc. || **7.\tClasifică articolele** după impact și probabilitate, astfel încât să nu tratezi totul ca la fel de urgent.|| **8.\tPotriviți punctele forte cu oportunitățile** pentru a vedea unde puteți ajunge în atac și punctele slabe cu amenințările pentru a vedea unde ești cel mai expus. || **9.\tAlegeți două sau trei priorități** pe cadran și atribuiți proprietari și pașii următori.",
-        hy: "Ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծությունը, որը կիրառվում է շրջանաձև բիզնես մոդելների համար, ուսումնասիրում է չորս հարթություն՝ հստակ ռազմավարական պատկեր ստեղծելու համար: Ուժեղ կողմերը բացահայտում են այն, ինչ ձեր կազմակերպությունն արդեն լավ է անում, թույլ կողմերը բացահայտում են ներքին բացերը, հնարավորությունները արտաքինից են նայում բարենպաստ պայմաններին, իսկ սպառնալիքները գրավում են արտաքին ռիսկերը: Իրական արժեքը գալիս է առաջնահերթություններն ու խոցելիությունները բացահայտելու համար այս չափումները դինամիկ կերպով օգտագործելուց: Miro-ի կաղապարներ մուտք գործելու համար նախ անհրաժեշտ է օգտատեր: Դուք կարող եք ստեղծել անվճար օգտվող՝ կաղապարներին մուտք գործելու համար, եթե չունեք Miro հաշիվ: Երբ դուք կարող եք մուտք գործել ձևանմուշներ, կարող եք հետևել դրանք օգտագործելու հրահանգներին։ || **Քայլ առ քայլ ուղեցույց** || **1.\tՍահմանեք նպատակը.** Սահմանեք, թե ինչ եք վերլուծում և կոնկրետ պահեք շրջանակը, որպեսզի վերլուծությունը մնա կենտրոնացված: ||**2.\tՀավաքեք ճիշտ մարդկանց.** Քաշեք փոքր խմբի մեջ՝ տարբեր հեռանկարներով (օպերացիա, վաճառք, ֆինանսներ և այլն): || **3.\tՑանկի ուժեղ կողմեր.** Ներքին, դրական գործոններ՝ ինչ եք անում լավ, յուրահատուկ ռեսուրսներ և այլն: || **4.\tԹվարկեք թույլ կողմերը.** Ներքին, բացասական գործոններ՝ բացեր, ռեսուրսների սահմանափակումներ և այլն:|| **5.\tԹվարկեք հնարավորությունները.** Արտաքին, դրական գործոններ. շուկայի միտումներ, բացեր, որոնք դուք կարող եք օգտագործել, առաջացող կարիքներ:|| **6.\tԹվարկեք սպառնալիքները.** Արտաքին, բացասական գործոններ՝ մրցակցություն, կարգավորող փոփոխություններ և այլն: || **7.\tԴասակարգեք տարրերը** ըստ ազդեցության և հավանականության, որպեսզի ամեն ինչ նույնքան հրատապ չհամարեք:|| **8.\tՀամեմատեք ուժեղ կողմերը հնարավորությունների հետ**՝ տեսնելու, թե որտեղ կարող եք վիրավորվել, իսկ թույլ կողմերը՝ սպառնալիքներին, որպեսզի տեսնեք, թե որտեղ եք ամենաշատը ենթարկվում: || **9.\tԸնտրեք երկու կամ երեք առաջնահերթություն** յուրաքանչյուր քառորդի համար և նշանակեք սեփականատերերին և հաջորդ քայլերը:"
+        hy: "Ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծությունը, որը կիրառվում է շրջանաձև բիզնես մոդելների համար, ուսումնասիրում է չորս հարթություն՝ հստակ ռազմավարական պատկեր ստեղծելու համար: Ուժեղ կողմերը բացահայտում են այն, ինչ ձեր կազմակերպությունն արդեն լավ է անում, թույլ կողմերը բացահայտում են ներքին բացերը, հնարավորությունները արտաքինից են նայում բարենպաստ պայմաններին, իսկ սպառնալիքները գրավում են արտաքին ռիսկերը: Իրական արժեքը գալիս է առաջնահերթություններն ու խոցելիությունները բացահայտելու համար այս չափումները դինամիկ կերպով օգտագործելուց: Miro-ի կաղապարներ մուտք գործելու համար նախ անհրաժեշտ է օգտատեր: Դուք կարող եք ստեղծել անվճար օգտվող՝ կաղապարներին մուտք գործելու համար, եթե չունեք Miro հաշիվ: Երբ դուք կարող եք մուտք գործել ձևանմուշներ, կարող եք հետևել դրանք օգտագործելու հրահանգներին։ || **Քայլ առ քայլ ուղեցույց** || **1. Սահմանեք նպատակը.** Սահմանեք, թե ինչ եք վերլուծում և կոնկրետ պահեք շրջանակը, որպեսզի վերլուծությունը մնա կենտրոնացված։ ||**2. Հավաքեք ճիշտ մարդկանց.** Քաշեք փոքր խմբի մեջ՝ տարբեր հեռանկարներով (օպերացիա, վաճառք, ֆինանսներ և այլն)։ || **3. Ցանկի ուժեղ կողմեր.** Ներքին, դրական գործոններ՝ ինչ եք անում լավ, յուրահատուկ ռեսուրսներ և այլն։ || **4. Թվարկեք թույլ կողմերը.** Ներքին, բացասական գործոններ՝ բացեր, ռեսուրսների սահմանափակումներ և այլն։|| **5. Թվարկեք հնարավորությունները.** Արտաքին, դրական գործոններ. շուկայի միտումներ, բացեր, որոնք դուք կարող եք օգտագործել, առաջացող կարիքներ։|| **6. Թվարկեք սպառնալիքները.** Արտաքին, բացասական գործոններ՝ մրցակցություն, կարգավորող փոփոխություններ և այլն։ || **7. Դասակարգեք տարրերը** ըստ ազդեցության և հավանականության, որպեսզի ամեն ինչ նույնքան հրատապ չհամարեք։|| **8. Համեմատեք ուժեղ կողմերը հնարավորությունների հետ** ՝ տեսնելու, թե որտեղ կարող եք վիրավորվել, իսկ թույլ կողմերը՝ սպառնալիքներին, որպեսզի տեսնեք, թե որտեղ եք ամենաշատը ենթարկվում։ || **9. Ընտրեք երկու կամ երեք առաջնահերթություն** յուրաքանչյուր քառորդի համար և նշանակեք սեփականատերերին և հաջորդ քայլերը։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -497,7 +497,7 @@ const toolCatalogue = [
         en: "Online assessment that quantifies circular performance across material flows, waste, and resource use, with guidance to improve results and set SMART targets.",
         uk: "Онлайн-оцінювання, яке дає змогу кількісно оцінити рівень циркулярності матеріальних потоків, поводження з відходами та використання ресурсів, а також містить рекомендації щодо покращення результатів і встановлення SMART-цілей.",
         ro: "Evaluare online care cuantifică performanța circulară în fluxurile de materiale, deșeurile și utilizarea resurselor, cu îndrumări pentru îmbunătățirea rezultatelor și stabilirea obiectivelor SMART.",
-        hy: "Առցանց գնահատման գործիք, որը քանակապես գնահատում է շրջանաձևության ցուցանիշները՝ նյութական հոսքերի, թափոնների և ռեսուրսների օգտագործման տեսանկյունից, ինչպես նաև տրամադրում է արդյունքների բարելավման և SMART նպատակների սահմանման ուղեցույց։"
+        hy: "Առցանց գնահատման գործիք, որը քանակապես գնահատում է շրջանաձևության ցուցանիշները՝ նյութական հոսքերի, թափոնների և ռեսուրսների օգտագործման տեսանկյունից, ինչպես նաև տրամադրում է արդյունքների բարելավման և SMART թիրախների սահմանման ուղեցույց։"
       },
     about:
       {
@@ -534,7 +534,7 @@ const toolCatalogue = [
         en: "Circular performance score; risk and opportunity analysis; prioritised actions and SMART improvement targets.",
         uk: "Оцінювання рівня циркулярності; аналіз ризиків і можливостей; пріоритетні заходи та SMART-цілі для вдосконалення",
         ro: "Scorul de performanță circular; analiza riscurilor și oportunităților; acțiunile prioritizate și obiectivele de îmbunătățire SMART.",
-        hy: "Շրջանաձև կատարման միավոր; ռիսկերի և հնարավորությունների վերլուծություն; առաջնահերթ գործողություններ և SMART բարելավման նպատակներ։"
+        hy: "Շրջանաձև կատարողականի միավոր; ռիսկերի և հնարավորությունների վերլուծություն; առաջնահերթ գործողություններ և SMART բարելավման նպատակներ։"
       },
     bestFor: {
       en: "All small-medium enterprises (SMEs)",
@@ -703,14 +703,14 @@ const toolCatalogue = [
         en: "Online calculator that builds a data-backed business case for circular investment by computing financial return, payback time, and emissions impact using discounted cash flow logic.",
         uk: "Онлайн-калькулятор, що формує обґрунтований даними бізнес-кейс для циркулярних інвестицій шляхом розрахунку фінансової вигоди, періоду окупності та впливу на викиди з використанням логіки дисконтованих грошових потоків.",
         ro: "Calculator online care construiește un caz de afaceri bazat pe date pentru investiții circulare, calculând randamentul financiar, timpul de rambursare și impactul emisiilor folosind logica fluxului de numerar redus.",
-        hy: "Առցանց հաշվիչ, որը զեղչված դրամական հոսքերի մեթոդաբանության կիրառմամբ գնահատում է շրջանաձև տնտեսությանն ուղղված ներդրումների ֆինանսական հիմնավորվածությունը՝ հաշվարկելով ներդրումների ֆինանսական եկամտաբերությունը, հետգնման ժամկետը և արտանետումների վրա ազդեցությունը՝ հիմնվելով փաստացի տվյալների վրա։"
+        hy: "Առցանց հաշվիչ, որն օգնում է գնահատել շրջանաձև ներդրումների տնտեսական հիմնավորվածությունը՝ հաշվարկելով ներդրման ֆինանսական եկամտաբերությունը, հետգնման ժամկետը և արտանետումների վրա ազդեցությունը՝ զեղչված դրամական հոսքերի մեթոդի կիրառմամբ։"
       },
     about:
       {
         en: "Calculate your sustainability Return on Investment (ROI). Build your business case and prove the value of your sustainability work. See the financial return, payback period, and emissions impact of sustainability investments based on your inputs and real business drivers. Model real business scenarios, test cost and savings drivers, quantify financial and carbon impact, and export a decision-ready summary.",
         uk: "Розрахуйте окупність інвестицій у сталий розвиток. Сформуйте переконливий бізнес-кейс і доведіть цінність заходів у сфері сталого розвитку. Оцініть фінансову вигоду, період окупності та вплив інвестицій на обсяги викидів на основі Ваших вхідних даних і реальних рушійних факторів бізнесу. Моделюйте реальні бізнес-сценарії, тестуйте фактори витрат і заощаджень, кількісно визначайте фінансовий і вуглецевий вплив, а також експортуйте підсумкові звіти, готові для ухвалення рішень.",
         ro: "Calculați-vă rentabilitatea investiției (ROI) pentru sustenabilitate. Construiește-ți cazul de afaceri și dovedește valoarea muncii tale în domeniul durabilității. Vedeți rentabilitatea financiară, perioada de rambursare și impactul asupra emisiilor de investiții în sustenabilitate pe baza contribuțiilor dvs. și a factorilor de afaceri reali. Modelați scenarii de afaceri reale, testați factorii de cost și economii, cuantificați impactul financiar și de carbon și exportați un rezumat gata de decizie.",
-        hy: "Հաշվարկեք ձեր կայուն ներդրումների վերադարձը (ROI): Կառուցեք ձեր բիզնեսի գործը և ապացուցեք ձեր կայուն աշխատանքի արժեքը: Տեսեք կայունության ներդրումների ֆինանսական եկամտաբերությունը, վերադարձի ժամկետը և արտանետումների ազդեցությունը՝ հիմնված ձեր ներդրումների և բիզնեսի իրական դրդապատճառների վրա: Մոդել իրական բիզնեսի սցենարներ, փորձարկեք ծախսերի և խնայողությունների դրդապատճառները, քանակականացրեք ֆինանսական և ածխածնի ազդեցությունը և արտահանեք որոշումների համար պատրաստ ամփոփագիր։"
+        hy: "Հաշվարկեք ձեր կայուն ներդրումների վերադարձը (ROI): Կառուցեք ձեր բիզնեսի գործը և ապացուցեք ձեր կայուն աշխատանքի արժեքը: Տեսեք կայունության ներդրումների ֆինանսական եկամտաբերությունը, հետգնման ժամկետը և արտանետումների ազդեցությունը՝ հիմնված ձեր ներդրումների և բիզնեսի իրական դրդապատճառների վրա: Մոդել իրական բիզնեսի սցենարներ, փորձարկեք ծախսերի և խնայողությունների դրդապատճառները, քանակականացրեք ֆինանսական և ածխածնի ազդեցությունը և արտահանեք որոշումների համար պատրաստ ամփոփագիր։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -774,14 +774,14 @@ const toolCatalogue = [
         en: "Provides you with an overview of the current trends and key questions in the circular economy space with the aim of inspiring discussions and brainstorms.",
         uk: "Цей інструмент надає огляд актуальних трендів і ключових питань у сфері циркулярної економіки з метою стимулювання обговорень і мозкових штурмів.",
         ro: "Vă oferă o imagine de ansamblu asupra tendințelor actuale și a întrebărilor cheie din domeniul economiei circulare, cu scopul de a inspira discuții și brainstorming.",
-        hy: "Ներկայացնում է շրջանաձև տնտեսության ոլորտի արդի միտումների և առանցքային հարցերի համապարփակ ակնարկ՝ նպատակ ունենալով ոգեշնչել քննարկումներ և մտքերի համատեղ գեներացում (բրեյնսթորմինգ)։"
+        hy: "Ներկայացնում է շրջանաձև տնտեսության արդի միտումների և առանցքային հարցերի ընդհանուր պատկերը՝ նպաստելով քննարկումներին և նոր գաղափարների ձևավորմանը։"
       },
     about:
       {
         en: "Printable or digital cards covering key circular economy trends, opportunities, and threats. Designed to facilitate team discussions and feed into Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis. Prompts strategic thinking about which circular options are relevant given market and regulatory trends. Freely available and easy to use in a workshop setting. For best use, it can be combined with a SWOT Matrix template or other circular business model ideation tools. Depending on the amount of people to include in the workshop to discuss the questions and trends in the cards, it can take 1-3 hours to complete a facilitated exercise.",
         uk: "Роздруковані або цифрові картки, які охоплюють ключові тенденції, можливості та загрози циркулярної економіки. Вони розроблені для фасилітації командних обговорень та наповнення SWOT-аналізу (аналізу сильних і слабких сторін, можливостей і загроз). Інструмент спонукає до стратегічного мислення щодо того, які саме циркулярні рішення є актуальними з урахуванням ринкових і регуляторних трендів. Картки загальнодоступні та зручні для застосування у форматі семінару. Для максимальної ефективності їх можна поєднувати з шаблоном матриці SWOT або іншими інструментами генерації ідей для циркулярних бізнес-моделей. Залежно від кількості учасників семінару, залучених до обговорення питань і тенденцій на картках, виконання фасилітованої вправи триває від 1 до 3 годин.",
         ro: "Carduri imprimabile sau digitale care acoperă tendințele, oportunitățile și amenințările cheie ale economiei circulare. Conceput pentru a facilita discuțiile în echipă și pentru a alimenta analiza punctelor forte, punctelor slabe, oportunităților și amenințărilor (SWOT). Determină o gândire strategică asupra opțiunilor circulare relevante, având în vedere tendințele pieței și ale reglementărilor. Disponibil gratuit și ușor de utilizat într-un cadru de atelier. Pentru o utilizare optimă, poate fi combinat cu un șablon SWOT Matrix sau cu alte instrumente circulare de ideare a modelelor de afaceri. În funcție de numărul de persoane care trebuie incluse în atelier pentru a discuta întrebările și tendințele din carduri, poate dura 1-3 ore pentru a finaliza un exercițiu facilitat.",
-        hy: "Տպագրվող կամ թվային քարտեր, որոնք ընդգրկում են շրջանաձև տնտեսության հիմնական միտումները, հնարավորությունները և սպառնալիքները: Նախագծված է թիմային քննարկումները հեշտացնելու և ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծության համար: Առաջարկում է ռազմավարական մտածել այն մասին, թե որ շրջանաձև տարբերակներն են տեղին շուկայական և կարգավորող միտումների առկայության դեպքում: Ազատ հասանելի և հեշտ օգտագործման համար սեմինարի միջավայրում: Լավագույն օգտագործման համար այն կարող է համակցվել SWOT Matrix ձևանմուշի կամ բիզնես մոդելի գաղափարի այլ շրջանաձև գործիքների հետ: Կախված այն մարդկանց քանակից, որոնք պետք է ընդգրկվեն սեմինարին՝ քարտերի հարցերն ու միտումները քննարկելու համար, հեշտացված վարժությունն ավարտելու համար կարող է տևել 1-3 ժամ:"
+        hy: "Տպագրվող կամ թվային քարտեր, որոնք ընդգրկում են շրջանաձև տնտեսության հիմնական միտումները, հնարավորությունները և սպառնալիքները: Նախագծված է թիմային քննարկումները հեշտացնելու և ուժեղ կողմերի, թույլ կողմերի, հնարավորությունների և սպառնալիքների (SWOT) վերլուծության համար: Առաջարկում է ռազմավարական մտածել այն մասին, թե որ շրջանաձև տարբերակներն են տեղին շուկայական և կարգավորող միտումների առկայության դեպքում: Ազատ հասանելի և հեշտ օգտագործման համար սեմինարի միջավայրում: Լավագույն օգտագործման համար այն կարող է համակցվել Ուժեղ և թույլ կողմերի, հնարավորությունների ու սպառնալիքների վերլուծություն (SWOT) մատրիցայի ձևանմուշի կամ բիզնես մոդելի գաղափարի այլ շրջանաձև գործիքների հետ: Կախված այն մարդկանց քանակից, որոնք պետք է ընդգրկվեն սեմինարին՝ քարտերի հարցերն ու միտումները քննարկելու համար, հեշտացված վարժությունն ավարտելու համար կարող է տևել 1-3 ժամ։"
       },
     journeyPhases: ['Explore', 'Evaluate'],
     placements: {
@@ -844,7 +844,7 @@ const toolCatalogue = [
         en: "Helps companies identify suitable circular design strategies for their products through a guided decision process.",
         uk: "Інструмент допомагає підприємствам визначити відповідні стратегії циркулярного дизайну для своєї продукції за допомогою покрокового процесу ухвалення рішень.",
         ro: "Ajută companiile să identifice strategii adecvate de proiectare circulară pentru produsele lor printr-un proces de decizie ghidat.",
-        hy: "Օգնում է ընկերություններին ուղղորդվող որոշումների կայացման գործընթացի միջոցով բացահայտել իրենց արտադրանքի համար առավել համապատասխան շրջանաձև դիզայնի ռազմավարությունները։"
+        hy: "Օգնում է ընկերություններին որոշել իրենց արտադրանքի համար հարմար շրջանաձև նախագծման ռազմավարությունները՝ որոշումների կայացման ուղղորդվող գործընթացի միջոցով։"
       },
     about:
       {
@@ -878,7 +878,7 @@ const toolCatalogue = [
         en: "Users should have basic knowledge of their product, materials, lifecycle, and business model.",
         uk: "Користувачі повинні мати базові знання про свій продукт, матеріали, життєвий цикл і бізнес-модель",
         ro: "Utilizatorii ar trebui să aibă cunoștințe de bază despre produsul lor, materialele, ciclul de viață și modelul de afaceri.",
-        hy: "Օգտագործողները պետք է ունենան հիմնական գիտելիքներ իրենց արտադրանքի, նյութերի, կյանքի ցիկլի և բիզնես մոդելի մասին։"
+        hy: "Օգտագործողները պետք է ունենան հիմնական գիտելիքներ իրենց արտադրանքի, նյութերի, կենսապտույտի և բիզնես մոդելի մասին։"
       },
     output:
       {
@@ -980,7 +980,7 @@ const toolCatalogue = [
         en: "Assists you in self evaluating your current standing in their circular journey by asking simple questions and providing insights based on answers.",
         uk: "Інструмент допомагає самостійно оцінити Ваш поточний стан на шляху до циркулярності шляхом надання відповідей на прості запитання та отримання аналітичних висновків.",
         ro: "Te ajută să îți evaluezi situația actuală în procesul de tranziție către economia circulară, prin întrebări simple și recomandări bazate pe răspunsurile oferite.",
-        hy: "Օգնում է ինքնագնահատման միջոցով որոշել, թե շրջանաձև տնտեսությանն անցման գործընթացի որ փուլում է գտնվում ձեր ձեռնարկությունը՝ տալով պարզ հարցեր և պատասխանների հիման վրա տրամադրելով համապատասխան վերլուծություններ ու առաջարկություններ։"
+        hy: "Պարզ հարցերի միջոցով օգնում է ինքնուրույն գնահատել շրջանաձև տնտեսությանն անցնելու գործընթացում ձեր ներկայիս փուլը և պատասխանների հիման վրա տրամադրում համապատասխան գնահատական ու առաջարկություններ։"
       },
     about:
       {
@@ -1048,7 +1048,7 @@ const toolCatalogue = [
       en: "Helps you benchmark your current Circular Economy level and understand key gaps.",
       uk: "Допомагає визначити поточний базовий рівень циркулярної економіки на Вашому підприємстві та виявити ключові прогалини.",
       ro: "Te ajută să evaluezi nivelul actual de aplicare a principiilor economiei circulare și să identifici principalele lacune.",
-      hy: "Օգնում է գնահատել ձեր ձեռնարկության շրջանաձև տնտեսության զարգացման ներկայիս մակարդակը և բացահայտել հիմնական բացերն ու բարելավման ենթակա ուղղությունները։"
+      hy: "Օգնում է գնահատել ձեր ընթացիկ շրջանաձև տնտեսության մակարդակը և հասկանալ հիմնական բացերը։"
     },
     about:
       {
@@ -1116,7 +1116,7 @@ const toolCatalogue = [
       en: "Assesses organisational readiness for resource efficiency and circularity.",
       uk: "Оцінює організаційну готовність підприємства до ресурсоефективності та циркулярності.",
       ro: "Evaluează gradul de pregătire organizațional pentru eficiența resurselor și circularitate.",
-      hy: "Գնահատում է կազմակերպության պատրաստվածությունը ռեսուրսների արդյունավետ օգտագործման և շրջանաձև տնտեսության սկզբունքների ներդրման համար։"
+      hy: "Գնահատում է կազմակերպչական պատրաստվածությունը ռեսուրսների արդյունավետության և շրջանաձևության համար։"
     },
     about:
       {
@@ -1192,7 +1192,7 @@ const toolCatalogue = [
         en: "Material Flow Analysis (MFA) gives a quantitative overview of the flow of materials in a defined system which for instance can be the flow of materials in a manufacturing company. An MFA always consists of a system boundary, one or more processes, material flows and stocks of materials within processes.",
         uk: "Аналіз матеріальних потоків забезпечує кількісний огляд руху матеріалів у визначеній системі, якою, наприклад, може бути потік матеріалів на виробничому підприємстві. АПМ завжди включає межі системи, один або кілька процесів, матеріальні потоки та запаси (накопичення) матеріалів у межах цих процесів.",
         ro: "Analiza fluxului de materiale (MFA) oferă o imagine de ansamblu cantitativă a fluxului de materiale într-un sistem definit, care, de exemplu, poate fi fluxul de materiale într-o companie de producție. Un MFA constă întotdeauna dintr-o limită de sistem, unul sau mai multe procese, fluxuri de materiale și stocuri de materiale în cadrul proceselor.",
-        hy: "Նյութերի հոսքի վերլուծությունը (MFA) տալիս է որոշակի համակարգում նյութերի հոսքի քանակական ակնարկ, որը, օրինակ, կարող է լինել նյութերի հոսքը արտադրական ընկերությունում: MFA-ն միշտ բաղկացած է համակարգի սահմանից, մեկ կամ մի քանի գործընթացներից, նյութերի հոսքերից և գործընթացներում նյութերի պաշարներից։"
+        hy: "Նյութական հոսքի վերլուծությունը (MFA) տալիս է որոշակի համակարգում նյութերի հոսքի քանակական ակնարկ, որը, օրինակ, կարող է լինել նյութերի հոսքը արտադրական ընկերությունում: MFA-ն միշտ բաղկացած է համակարգի սահմանից, մեկ կամ մի քանի գործընթացներից, նյութերի հոսքերից և գործընթացներում նյութերի պաշարներից։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1261,7 +1261,7 @@ const toolCatalogue = [
         en: "STAN allows users to create graphical Material Flow Analysis (MFA) models using predefined elements such as processes, flows, system boundaries, and text fields. Users can input or import data like mass flows, stocks, concentrations, and transfer coefficients across different layers (materials, substances, energy) and time periods. The software can calculate unknown values automatically and visualize results as Sankey diagrams, where flow widths represent quantities. Models can also be printed or exported, and Microsoft Excel is used for importing and exporting data.",
         uk: "Програмне забезпечення STAN дає змогу створювати графічні моделі аналізу матеріальних потоків за допомогою попередньо визначених елементів, як-от процеси, потоки, межі системи та текстові поля. Користувачі можуть вводити або імпортувати дані щодо масових потоків, запасів, концентрацій і коефіцієнтів перенесення на різних рівнях (матеріали, речовини, енергія) та за різні проміжки часу. Програма здатна автоматично розраховувати невідомі значення та візуалізувати результати у вигляді діаграм Сенкі, де ширина стрілок потоку відображає його обсяг. Моделі також можна виводити на друк або експортувати, а для імпорту та експорту даних використовується Microsoft Excel.",
         ro: "STAN permite utilizatorilor să creeze modele grafice de analiză a fluxului de materiale (MFA) folosind elemente predefinite, cum ar fi procese, fluxuri, limite de sistem și câmpuri de text. Utilizatorii pot introduce sau importa date precum fluxuri de masă, stocuri, concentrații și coeficienți de transfer pe diferite straturi (materiale, substanțe, energie) și perioade de timp. Software-ul poate calcula automat valori necunoscute și poate vizualiza rezultatele ca diagrame Sankey, unde lățimile debitului reprezintă cantități. Modelele pot fi, de asemenea, imprimate sau exportate, iar Microsoft Excel este utilizat pentru importarea și exportul de date.",
-        hy: "STAN-ը թույլ է տալիս օգտվողներին ստեղծել նյութի հոսքի վերլուծության (MFA) գրաֆիկական մոդելներ՝ օգտագործելով նախապես սահմանված տարրեր, ինչպիսիք են գործընթացները, հոսքերը, համակարգի սահմանները և տեքստային դաշտերը: Օգտագործողները կարող են մուտքագրել կամ ներմուծել տվյալներ, ինչպիսիք են զանգվածային հոսքերը, պաշարները, կոնցենտրացիաները և փոխանցման գործակիցները տարբեր շերտերով (նյութեր, նյութեր, էներգիա) և ժամանակաշրջաններում: Ծրագիրը կարող է ավտոմատ կերպով հաշվարկել անհայտ արժեքները և պատկերացնել արդյունքները որպես Sankey դիագրամներ, որտեղ հոսքի լայնությունները ներկայացնում են քանակություններ: Մոդելները կարող են նաև տպվել կամ արտահանվել, իսկ Microsoft Excel-ն օգտագործվում է տվյալների ներմուծման և արտահանման համար։"
+        hy: "STAN-ը թույլ է տալիս օգտվողներին ստեղծել նյութական հոսքի վերլուծության (MFA) գրաֆիկական մոդելներ՝ օգտագործելով նախապես սահմանված տարրեր, ինչպիսիք են գործընթացները, հոսքերը, համակարգի սահմանները և տեքստային դաշտերը: Օգտագործողները կարող են մուտքագրել կամ ներմուծել տվյալներ, ինչպիսիք են զանգվածային հոսքերը, պաշարները, կոնցենտրացիաները և փոխանցման գործակիցները տարբեր շերտերով (նյութեր, նյութեր, էներգիա) և ժամանակաշրջաններում: Ծրագիրը կարող է ավտոմատ կերպով հաշվարկել անհայտ արժեքները և պատկերացնել արդյունքները որպես Sankey դիագրամներ, որտեղ հոսքի լայնությունները ներկայացնում են քանակություններ: Մոդելները կարող են նաև տպվել կամ արտահանվել, իսկ Microsoft Excel-ն օգտագործվում է տվյալների ներմուծման և արտահանման համար։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1322,14 +1322,14 @@ const toolCatalogue = [
       en: "The tool provides a range of sustainable consumption and production indicators for identifying unsustainable hotspots at country and sector level, pointing to where policy action is needed.",
       uk: "Надає низку показників сталого споживання та виробництва для виявлення «гарячих точок» нераціонального природокористування на рівні країн і галузей, вказуючи на сфери, що потребують регуляторних і політичних рішень.",
       ro: "Instrumentul oferă o serie de indicatori durabili de consum și producție pentru identificarea punctelor fierbinți nesustenabile la nivel de țară și de sector, indicând unde este nevoie de acțiuni politice.",
-      hy: "Գործիքն առաջարկում է կայուն սպառման և արտադրության մի շարք ցուցանիշներ, որոնք հնարավորություն են տալիս երկրի և ոլորտի մակարդակներում բացահայտելու անկայուն գործելակերպի հիմնական խնդիրներն ու ռիսկային ուղղությունները՝ մատնանշելով այն ոլորտները, որտեղ անհրաժեշտ է քաղաքականության համապատասխան միջոցառումների իրականացում։"
+      hy: "Գործիքը ներկայացնում է կայուն սպառման և արտադրության մի շարք ցուցանիշներ, որոնք օգնում են երկրի և ոլորտի մակարդակով բացահայտել կայունության տեսանկյունից խնդրահարույց կետերը և հասկանալ, թե որտեղ է անհրաժեշտ միջամտություն քաղաքականության միջոցով։"
     },
     about:
       {
         en: "The Sustainable Consumption and Production Hotspots Analysis Tool (SCP-HAT) Country Profile tool provides an overview of a country's environmental performance across key sustainable consumption and production policy areas, including materials use, climate change, energy, water, and pollution. It helps policymakers, NGOs, and the public identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis. For you as an SMEs, it can be used to identify the most relevant sustainability hotspots for your sector and country, helping you prioritise actions and investments to improve environmental performance. The tool contains data for Ukraine, Moldova, Georgia, Armenia, and Azerbaijan and data can be compared across countries.",
         uk: "Модуль «Профіль країни» в інструменті аналізу гарячих точок сталого споживання та виробництва (SCP-HAT Country Profile) забезпечує комплексний огляд екологічної результативності країни за ключовими напрямами політики сталого споживання та виробництва, зокрема щодо використання матеріалів, зміни клімату, енергетики, водних ресурсів і забруднення довкілля. Інструмент допомагає представникам органів влади, неурядовим організаціям та громадськості виявляти проблемні екологічні точки й відстежувати тенденції за допомогою індикаторів, візуалізації даних і порівняльного аналізу на рівні держав. Для підприємств МСП інструмент корисний можливістю визначати найбільш актуальні екологічні пріоритети для своєї галузі й країни, що дозволяє раціонально планувати заходи та інвестиції для зменшення негативного впливу на довкілля. Платформа містить дані щодо України, Молдови, Грузії, Вірменії та Азербайджану з можливістю їх міждержавного порівняння.",
         ro: "Instrumentul de analiză a punctelor fierbinți de consum și producție durabilă (SCP-HAT) Instrumentul Profilul țării oferă o privire de ansamblu asupra performanței de mediu a unei țări în domeniile cheie de politică de consum și producție durabile, inclusiv utilizarea materialelor, schimbările climatice, energie, apă și poluare. Acesta ajută factorii de decizie, ONG-urile și publicul să identifice punctele critice de sustenabilitate și să urmărească tendințele de mediu prin indicatori, vizualizări de date și analize la nivel de țară. Pentru dvs., în calitate de IMM, poate fi folosit pentru a identifica cele mai relevante puncte fierbinți de sustenabilitate pentru sectorul și țara dvs., ajutându-vă să prioritizați acțiunile și investițiile pentru îmbunătățirea performanței de mediu. Instrumentul conține date pentru Ucraina, Moldova, Georgia, Armenia și Azerbaidjan, iar datele pot fi comparate între țări.",
-        hy: "Կայուն սպառման և արտադրության թեժ կետերի վերլուծության գործիքը (SCP-HAT) Երկրի պրոֆիլի գործիքը տրամադրում է երկրի բնապահպանական գործունեության ակնարկը կայուն սպառման և արտադրության քաղաքականության հիմնական ոլորտներում, ներառյալ նյութերի օգտագործումը, կլիմայի փոփոխությունը, էներգիան, ջուրը և աղտոտումը: Այն օգնում է քաղաքականություն մշակողներին, ՀԿ-ներին և հանրությանը բացահայտել կայունության խնդրահարույց ուղղությունները և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով: Ձեզ՝ որպես ՓՄՁ-ների, այն կարող է օգտագործվել ձեր ոլորտի և երկրի համար կայունության առավել համապատասխան խնդրահարույց ուղղությունները բացահայտելու համար՝ օգնելով ձեզ առաջնահերթություն տալ գործողություններին և ներդրումներին՝ բարելավելու բնապահպանական արդյունավետությունը: Գործիքը պարունակում է տվյալներ Ուկրաինայի, Մոլդովայի, Վրաստանի, Հայաստանի և Ադրբեջանի համար, և տվյալները կարելի է համեմատել տարբեր երկրների միջև։"
+        hy: "Կայուն սպառման և արտադրության  խնդրահարույց կետերի վերլուծության գործիքը (SCP-HAT) Երկրի պրոֆիլի գործիքը տրամադրում է երկրի բնապահպանական գործունեության ակնարկը կայուն սպառման և արտադրության քաղաքականության հիմնական ոլորտներում, ներառյալ նյութերի օգտագործումը, կլիմայի փոփոխությունը, էներգիան, ջուրը և աղտոտումը: Այն օգնում է քաղաքականություն մշակողներին, ՀԿ-ներին և հանրությանը բացահայտել կայունության խնդրահարույց կետերը և հետևել բնապահպանական միտումներին՝ ցուցանիշների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով: Ձեզ՝ որպես ՓՄՁ-ների, այն կարող է աջակցել ձեր ոլորտի և երկրի համար կայունության առավել համապատասխան խնդրահարույց կետերը բացահայտելու համար՝ օգնելով ձեզ առաջնահերթություն տալ գործողություններին և ներդրումներին՝ բարելավելու բնապահպանական արդյունավետությունը: Գործիքը պարունակում է տվյալներ Ուկրաինայի, Մոլդովայի, Վրաստանի, Հայաստանի և Ադրբեջանի համար, և տվյալները կարելի է համեմատել տարբեր երկրների միջև։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -1362,7 +1362,7 @@ const toolCatalogue = [
         en: "Users can identify sustainability hotspots and track environmental trends through indicators, data visualisations, and country-level analysis.",
         uk: "Виявлені пріоритетні екологічні «критичні точки» та відстеження тенденцій у сфері захисту довкілля за допомогою індикаторів, візуалізацій і поглибленого аналізу на рівні країни",
         ro: "Utilizatorii pot identifica punctele critice de sustenabilitate și pot urmări tendințele de mediu prin indicatori, vizualizări de date și analize la nivel de țară.",
-        hy: "Օգտագործողները կարող են բացահայտել կայունության խնդրահարույց ուղղությունները և հետևել բնապահպանական միտումներին՝ ցուցիչների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով։"
+        hy: "Օգտագործողները կարող են բացահայտել կայունության խնդրահարույց կետերը և հետևել բնապահպանական միտումներին՝ ցուցանիշների, տվյալների վիզուալիզացիայի և երկրի մակարդակով վերլուծության միջոցով։"
       },
     bestFor: {
       en: "All SMEs across all sectors interested in data at national and sector levels.",
@@ -1392,7 +1392,7 @@ const toolCatalogue = [
         en: "Displays carbon footprint and eco-cost results by lifecycle stage, with additional Life Cycle Impact Assessment (LCIA) insights to identify the most impactful processes",
         uk: "Відображає результати оцінки вуглецевого сліду та екологічних витрат за стадіями життєвого циклу з додатковими висновками оцінки впливу на життєвий цикл для виявлення процесів із найбільшим впливом.",
         ro: "Afișează rezultatele amprentei de carbon și ale costurilor ecologice pe etapele ciclului de viață, cu informații suplimentare privind evaluarea impactului ciclului de viață (LCIA) pentru a identifica procesele cu cel mai mare impact.",
-        hy: "Ներկայացնում է ածխածնային հետքի և էկոլոգիական ծախսերի գնահատման արդյունքներն ըստ կենսափուլերի փուլերի, ինչպես նաև կյանքի ցիկլի ազդեցության գնահատման (LCIA) լրացուցիչ տվյալներ՝ շրջակա միջավայրի վրա առավել մեծ ազդեցություն ունեցող գործընթացները բացահայտելու համար։"
+        hy: "Ներկայացնում է ածխածնային հետքի և բնապահպանական ծախսերի գնահատման արդյունքներն ըստ կենսապտույտի փուլերի, ինչպես նաև կենսապտույտի ազդեցության գնահատման (LCIA) լրացուցիչ տվյալներ՝ շրջակա միջավայրի վրա առավել մեծ ազդեցություն ունեցող գործընթացները բացահայտելու համար։"
       },
     about:
       {
@@ -1431,7 +1431,7 @@ const toolCatalogue = [
       en: "Carbon footprint and eco-cost results by lifecycle stage.",
       uk: "Показники вуглецевого сліду та екологічних витрат за стадіями життєвого циклу",
       ro: "Amprenta de carbon și rezultatele eco-costurilor pe etapele ciclului de viață.",
-      hy: "Ածխածնի հետքը և էկոլոգիական ծախսերի արդյունքներն ըստ կյանքի ցիկլի փուլի։"
+      hy: "Ածխածնային հետքը և բնապահպանական ծախսերի արդյունքներն ըստ կենսապտույտի փուլի։"
     },
     bestFor: {
       en: "Manufacturing SMEs with physical products",
@@ -1461,7 +1461,7 @@ const toolCatalogue = [
         en: "Supports circularity and identifies strategies for extending product life while reducing environmental impact.",
         uk: "Підтримує циркулярність та визначає стратегії подовження терміну служби продукції за умови зменшення впливу на довкілля.",
         ro: "Sprijină circularitatea și identifică strategii pentru prelungirea duratei de viață a produsului, reducând în același timp impactul asupra mediului.",
-        hy: "Աջակցում է շրջանաձև տնտեսության սկզբունքների ներդրմանը և օգնում բացահայտել արտադրանքի ծառայության ժամկետը երկարաձգելու՝ միաժամանակ շրջակա միջավայրի վրա բացասական ազդեցությունը նվազեցնելու ռազմավարությունները։"
+        hy: "Աջակցում է շրջանաձևությանը և բացահայտում է արտադրանքի կյանքը երկարացնելու ռազմավարությունները՝ միաժամանակ նվազեցնելով շրջակա միջավայրի վրա ազդեցությունը։"
       },
     about:
       {
@@ -1500,7 +1500,7 @@ const toolCatalogue = [
       en: "Design-focused hotspots; adaptation opportunities for circularity.",
       uk: "Ключові пріоритетні напрями (критичні точки), орієнтовані на дизайн; можливості для адаптації в напрямі циркулярності",
       ro: "Hotspot-uri axate pe design; oportunități de adaptare pentru circularitate.",
-      hy: "Դիզայնի վրա կենտրոնացած թեժ կետեր; հարմարվողականության հնարավորություններ շրջանաձևության համար։"
+      hy: "Դիզայնի վրա կենտրոնացած խնդրահարույց կետեր; հարմարվողականության հնարավորություններ շրջանաձևության համար։"
     },
     bestFor: {
       en: "SMEs working with product or process design for circular business models.",
@@ -1590,14 +1590,14 @@ const toolCatalogue = [
         en: "To help teams visually map and design closed material loops for their business, sketching how materials, products, and processes flow between actors in a circular system, and identifying which parties need to be involved at each stage",
         uk: "Інструмент допомагає командам візуально моделювати та проєктувати замкнені матеріальні цикли для свого бізнесу, відображаючи схеми руху матеріалів, продукції та процесів між учасниками в циркулярній системі, а також визначати сторони, які мають бути залучені на кожному етапі.",
         ro: "Pentru a ajuta echipele să mapeze vizual și să proiecteze bucle de materiale închise pentru afacerea lor, schițând modul în care materialele, produsele și procesele circulă între actori într-un sistem circular și identificând părțile care trebuie implicate în fiecare etapă",
-        hy: "Օգնում է թիմերին տեսողականորեն քարտեզագրել և նախագծել իրենց բիզնեսի համար նյութերի փակ շրջանառության համակարգեր՝ պատկերելով, թե ինչպես են նյութերը, արտադրանքը և գործընթացները շրջանառվում շրջանաձև համակարգի տարբեր մասնակիցների միջև, ինչպես նաև բացահայտելով, թե որ շահագրգիռ կողմերն են անհրաժեշտ յուրաքանչյուր փուլում։"
+        hy: "Օգնում է թիմերին տեսողականորեն քարտեզագրել և նախագծել բիզնեսի նյութական փակ շրջափուլերը՝ ցույց տալով նյութերի, արտադրանքի և գործընթացների շարժը շրջանաձև համակարգի տարբեր մասնակիցների միջև և սահմանելով, թե յուրաքանչյուր փուլում որ կողմերը պետք է ներգրավվեն։"
       },
     about:
       {
         en: "The Circular Loop Designer is a browser-based drawing tool that lets teams sketch closed material loops using a purpose-built library of icons and arrows. Users can start from an empty canvas or select from a range of pre-built examples, covering four types of circular loop logic: closing a material loop as completely as possible; keeping materials in circulation for as long as possible; sourcing and retaining materials as locally as possible; and radically reducing material use across the loop. Arrows are colour-coded to distinguish sustainable flows (green), traditional flows (red), and flows still under development (blue), making it easy to show the current state alongside the desired future state. Parties and roles can be added at each stage of the loop, turning the diagram into a stakeholder map as well as a material flow map.",
         uk: "«The Circular Loop Designer» – це онлайн-інструмент для візуального моделювання у браузері, який дає змогу командам створювати схеми замкнених матеріальних циклів за допомогою спеціальної бібліотеки піктограм і стрілок. Користувачі можуть почати з чистого аркуша або обрати один із готових прикладів, що охоплюють чотири типи логіки циркулярних циклів: максимально повне замикання матеріального циклу; утримання матеріалів у циркуляції якомога довше; постачання та збереження матеріалів на максимально локальному рівні; а також радикальне зменшення використання матеріалів уздовж усього циклу. Стрілки мають кольорове маркування для розмежування сталих потоків (зелений), традиційних потоків (червоний) і потоків, що перебувають на стадії розроблення (синій), що дозволяє наочно зіставити поточний стан із бажаним цільовим станом. На кожному етапі циклу можна додавати залучені сторони та їхні ролі, перетворюючи діаграму не лише на карту матеріальних потоків, а й на карту зацікавлених сторін (стейкголдерів).",
         ro: "Circular Loop Designer este un instrument de desen bazat pe browser care permite echipelor să schițeze bucle închise de material folosind o bibliotecă special creată de pictograme și săgeți. Utilizatorii pot începe de la o pânză goală sau pot selecta dintr-o gamă de exemple pre-construite, acoperind patru tipuri de logică a buclei circulare: închiderea unei bucle de material cât mai complet posibil; menținerea materialelor în circulație cât mai mult timp posibil; aprovizionarea și păstrarea materialelor cât mai local posibil; și reducerea radicală a utilizării materialelor de-a lungul buclei. Săgețile sunt codificate cu culori pentru a distinge fluxurile durabile (verde), fluxurile tradiționale (roșu) și fluxurile încă în curs de dezvoltare (albastru), ceea ce face mai ușor să afișați starea actuală alături de starea viitoare dorită. Partidele și rolurile pot fi adăugate la fiecare etapă a buclei, transformând diagrama într-o hartă a părților interesate, precum și într-o hartă a fluxului de materiale.",
-        hy: "The Circular Loop Designer-ը բրաուզերի վրա հիմնված գծագրման գործիք է, որը թիմերին թույլ է տալիս ուրվագծել փակ նյութերի օղակները՝ օգտագործելով սրբապատկերների և սլաքների հատուկ կառուցված գրադարանը: Օգտատերերը կարող են սկսել դատարկ ձևանմուշից կամ ընտրել մի շարք նախապես պատրաստված օրինակներից, որոնք ներառում են չորս տեսակի շրջանաձև օղակի տրամաբանություն. նյութերը հնարավորինս երկար պահել շրջանառության մեջ. հնարավորինս տեղական նյութերի մատակարարում և պահպանում. և արմատապես նվազեցնելով նյութի օգտագործումը ամբողջ օղակում: Սլաքները գունավոր կոդավորված են՝ տարբերակելու կայուն հոսքերը (կանաչ), ավանդական հոսքերը (կարմիր) և հոսքերը դեռ մշակման փուլում են (կապույտ), ինչը հեշտացնում է ներկայիս վիճակը ցանկալի ապագա վիճակի կողքին ցուցադրելու համար: Կողմերն ու դերերը կարող են ավելացվել օղակի յուրաքանչյուր փուլում՝ դիագրամը վերածելով շահագրգիռ կողմերի քարտեզի, ինչպես նաև նյութի հոսքի քարտեզի։"
+        hy: "The Circular Loop Designer-ը բրաուզերի վրա հիմնված գծագրման գործիք է, որը թիմերին թույլ է տալիս ուրվագծել նյութական փակ  շրջափուլերը՝ օգտագործելով սրբապատկերների և սլաքների հատուկ կառուցված գրադարանը: Օգտատերերը կարող են սկսել դատարկ ձևանմուշից կամ ընտրել մի շարք նախապես պատրաստված օրինակներից, որոնք ներառում են չորս տեսակի շրջանաձև օղակի տրամաբանություն. նյութերը հնարավորինս երկար պահել շրջանառության մեջ. հնարավորինս տեղական նյութերի մատակարարում և պահպանում. և արմատապես նվազեցնելով նյութի օգտագործումը ամբողջ օղակում: Սլաքները գունավոր կոդավորված են՝ տարբերակելու կայուն հոսքերը (կանաչ), ավանդական հոսքերը (կարմիր) և հոսքերը դեռ մշակման փուլում են (կապույտ), ինչը հեշտացնում է ներկայիս վիճակը ցանկալի ապագա վիճակի կողքին ցուցադրելու համար: Կողմերն ու դերերը կարող են ավելացվել օղակի յուրաքանչյուր փուլում՝ դիագրամը վերածելով շահագրգիռ կողմերի քարտեզի, ինչպես նաև նյութի հոսքի քարտեզի։"
       },
     journeyPhases: ['Evaluate'],
     placements: {
@@ -1734,7 +1734,7 @@ const toolCatalogue = [
         en: "openLCA is a modular tool for sustainability assessment and life cycle modelling. It is open source, customisable, and can be used to create models at different levels of complexity.",
         uk: "openLCA – це модульний інструмент для оцінки сталого розвитку та моделювання життєвого циклу. Він має відкритий вихідний код, легко налаштовується та може використовуватися для побудови моделей різного рівня складності.",
         ro: "openLCA este un instrument modular pentru evaluarea durabilității și modelarea ciclului de viață. Este open source, personalizabil și poate fi folosit pentru a crea modele la diferite niveluri de complexitate.",
-        hy: "openLCA-ն մոդուլային գործիք է կայունության գնահատման և կյանքի ցիկլի մոդելավորման համար: Այն բաց կոդով է, կարգավորելի և կարող է օգտագործվել բարդության տարբեր մակարդակների մոդելներ ստեղծելու համար։"
+        hy: "openLCA-ն մոդուլային գործիք է կայունության գնահատման և կենսապտույտի մոդելավորման համար: Այն բաց կոդով է, կարգավորելի և կարող է օգտագործվել բարդության տարբեր մակարդակների մոդելներ ստեղծելու համար։"
       },
     journeyPhases: ['Assess', 'Evaluate', 'Monitor'],
     sector: 'Cross-sector',
@@ -1757,13 +1757,13 @@ const toolCatalogue = [
       en: "You will need the emissions data of your company to make your own assessments and some skills to apply Life Cycle Assessment (LCA) methodology.",
       uk: "Для виконання власних оцінювань знадобляться дані про викиди Вашого підприємства, а також певні навички застосування методології оцінки життєвого циклу",
       ro: "Veți avea nevoie de datele privind emisiile companiei dvs. pentru a vă face propriile evaluări și de unele abilități pentru a aplica metodologia de evaluare a ciclului de viață (LCA).",
-      hy: "Ձեզ անհրաժեշտ կլինեն ձեր ընկերության արտանետումների տվյալները՝ ձեր սեփական գնահատումներն անելու և կյանքի ցիկլի գնահատման (LCA) մեթոդաբանությունը կիրառելու որոշ հմտություններ։"
+      hy: "Ձեզ անհրաժեշտ կլինեն ձեր ընկերության արտանետումների տվյալները՝ ձեր սեփական գնահատումներն անելու և կենսապտույտի գնահատման (LCA) մեթոդաբանությունը կիրառելու որոշ հմտություններ։"
     },
     output: {
       en: "A wide range of options depending on the use, however most important for SMEs this tool can support a Life Cycle Assessment (LCA) model of your company's carbon footprint, based on existing databases and resulting in models that support your LCA reporting.",
       uk: "Широкий спектр можливостей залежно від цілей використання; найважливішим для МСП є те, що інструмент дозволяє побудувати модель оцінки життєвого циклу для розрахунку вуглецевого сліду підприємства на основі наявних баз даних, формуючи моделі на підтримку звітності з ОЖЦ",
       ro: "O gamă largă de opțiuni în funcție de utilizare, dar cel mai important pentru IMM-uri, acest instrument poate susține un model de evaluare a ciclului de viață (LCA) a amprentei de carbon a companiei dvs., bazat pe bazele de date existente și care rezultă în modele care sprijină raportarea dvs. LCA.",
-      hy: "Ընտրանքների լայն շրջանակ՝ կախված կիրառությունից, սակայն ամենակարևորը ՓՄՁ-ների համար այս գործիքը կարող է աջակցել ձեր ընկերության ածխածնի հետքի կյանքի ցիկլի գնահատման (LCA) մոդելին, որը հիմնված է առկա տվյալների բազաների վրա և հանգեցնում է մոդելների, որոնք աջակցում են ձեր LCA հաշվետվություններին։"
+      hy: "Ընտրանքների լայն շրջանակ՝ կախված կիրառությունից, սակայն ամենակարևորը ՓՄՁ-ների համար այս գործիքը կարող է աջակցել ձեր ընկերության ածխածնային հետքի կենսապտույտի գնահատման (LCA) մոդելին, որը հիմնված է առկա տվյալների բազաների վրա և հանգեցնում է մոդելների, որոնք աջակցում են ձեր LCA հաշվետվություններին։"
     },
     bestFor: {
       en: "All SMEs concerned with climate and emissions reduction",
@@ -1800,7 +1800,7 @@ const toolCatalogue = [
         en: "The BPF Eco Tool Finder is a searchable directory from the British Plastics Federation for sustainable packaging design resources. It lets users filter by resource type (interactive tools, recyclability guides, Life Cycle Assessment (LCA) tools, recycled content, eLearning), plastic material (Polyethylene Terephthalate (PET), High-Density Polyethylene (HDPE), Polyvinyl Chloride (PVC), etc.), and product type (bottles, caps, trays, films, and more).",
         uk: "BPF Eco Tool Finder – це онлайн-каталог ресурсів для сталого дизайну паковання від Британської федерації пластмас. Він дає змогу користувачам фільтрувати матеріали за типом ресурсу (інтерактивні інструменти, посібники з придатності до вторинного перероблення, інструменти оцінки життєвого циклу, вміст вторинної сировини, електронне навчання), видом пластику (поліетилентерефталат (ПЕТ / PET), поліетилен високої щільності (HDPE), полівінілхлорид (ПВХ) тощо) та категорією продукції (пляшки, кришки, лотки, плівки та інше).",
         ro: "BPF Eco Tool Finder este un director care poate fi căutat de la British Plastics Federation pentru resurse de design durabil al ambalajelor. Permite utilizatorilor să filtreze după tipul de resursă (instrumente interactive, ghiduri de reciclare, instrumente de evaluare a ciclului de viață (LCA), conținut reciclat, eLearning), material plastic (polietilen tereftalat (PET), polietilenă de înaltă densitate (HDPE), clorură de polivinil (PVC), etc.) și tip de produs (sticle, capace și altele).",
-        hy: "BPF Eco Tool Finder-ը Բրիտանական Պլաստիկ Ֆեդերացիայի կողմից որոնելի գրացուցակ է՝ կայուն փաթեթավորման նախագծման ռեսուրսների համար: Այն թույլ է տալիս օգտատերերին զտել ըստ ռեսուրսի տեսակի (ինտերակտիվ գործիքներ, վերամշակման ուղեցույցներ, կյանքի ցիկլի գնահատման (LCA) գործիքներ, վերամշակված բովանդակություն, էլեկտրոնային ուսուցում), պլաստիկ նյութեր (Պոլիէթիլենային տերեֆտալատ (PET), բարձր խտության պոլիէթիլեն (HDPE), պոլիվինիլ քլորիդ (PVC) և այլն) և թաղանթներ, թաղանթներ և այլն։"
+        hy: "BPF Eco Tool Finder-ը Բրիտանական Պլաստիկ Ֆեդերացիայի կողմից որոնելի գրացուցակ է՝ կայուն փաթեթավորման նախագծման ռեսուրսների համար: Այն թույլ է տալիս օգտատերերին զտել ըստ ռեսուրսի տեսակի (ինտերակտիվ գործիքներ, վերամշակման ուղեցույցներ, կենսապտույտի գնահատման (LCA) գործիքներ, վերամշակված բովանդակություն, էլեկտրոնային ուսուցում), պլաստիկ նյութեր (Պոլիէթիլենային տերեֆտալատ (PET), բարձր խտության պոլիէթիլեն (HDPE), պոլիվինիլ քլորիդ (PVC) և այլն) և թաղանթներ, թաղանթներ և այլն։"
       },
     journeyPhases: ['Assess'],
     sector: 'Plastics',
@@ -1925,7 +1925,7 @@ const toolCatalogue = [
         en: "A data-driven planning tool that calculates the circularity of plastic packaging and helps companies model reduction, reuse, redesign and substitution solutions.",
         uk: "Інструмент планування на основі даних, який розраховує циркулярність пластикового паковання та допомагає підприємствам моделювати рішення щодо скорочення використання, повторного застосування, редизайну та заміщення матеріалів.",
         ro: "Un instrument de planificare bazat pe date care calculează circularitatea ambalajelor din plastic și ajută companiile să modeleze soluții de reducere, reutilizare, reproiectare și înlocuire.",
-        hy: "Տվյալների վրա հիմնված պլանավորման գործիք, որը հաշվարկում է պլաստիկ փաթեթավորման շրջանաձևությունը և օգնում ընկերություններին մոդելավորել կրճատման, վերաօգտագործման, վերանախագծման և փոխարինման լուծումներ։"
+        hy: "Տվյալահեն պլանավորման գործիք, որը հաշվարկում է պլաստիկ փաթեթավորման շրջանաձևությունը և օգնում ընկերություններին մոդելավորել կրճատման, վերաօգտագործման, վերանախագծման և փոխարինման լուծումներ։"
       },
     about:
       {
@@ -1991,7 +1991,7 @@ const toolCatalogue = [
         en: "A practical toolbox divided into 13 topics that match Green Key criteria and help tourism SMEs prepare for circular and environmental improvements.",
         uk: "Практичний інструментарій, розділений на 13 тем, що відповідають критеріям програми «Зелений ключ» (Green Key) та допомагають туристичним МСП підготуватися до впровадження циркулярних та екологічних покращень.",
         ro: "Un set de instrumente practice, structurat în 13 teme care reflectă principalele criterii verzi și sprijină IMM-urile din turism în implementarea unor practici circulare și de mediu.",
-        hy: "Գործնական գործիքակազմ, որը բաժանված է 13 թեմաների, որոնք համապատասխանում են Green Key չափանիշներին և օգնում են զբոսաշրջության ոլորտի  ՓՄՁ-ներին նախապատրաստվել շրջանաձև և բնապահպանական բարելավմանը։"
+        hy: "Գործնական գործիքակազմ, որը բաժանված է 13 թեմաների, որոնք համապատասխանում են Green Key չափանիշներին և օգնում են զբոսաշրջային ՓՄՁ-ներին նախապատրաստվել շրջանաձև և բնապահպանական բարելավմանը։"
       },
     about:
       {
@@ -2061,14 +2061,14 @@ const toolCatalogue = [
         en: "A free standardised methodology and tool for hotels to calculate the carbon footprint of stays and meetings.",
         uk: "Безоплатна стандартизована методологія та інструмент для готелів, що дає змогу розраховувати вуглецевий слід від проживання гостей та проведення заходів",
         ro: "O metodologie și un instrument standardizat gratuit pentru hoteluri pentru a calcula amprenta de carbon a sejururilor și întâlnirilor.",
-        hy: "Անվճար, ստանդարտացված մեթոդաբանություն և գործիք հյուրանոցների համար՝ հյուրերի կեցության և հանդիպումների ածխածնային հետքը հաշվարկելու նպատակով։"
+        hy: "Անվճար ստանդարտացված մեթոդաբանություն և գործիք հյուրանոցների համար՝ կացության և հանդիպումների ածխածնային հետքը հաշվարկելու համար։"
       },
     about:
       {
         en: "The Hotel Carbon Measurement Initiative (HCMI) is a globally recognised carbon measurement tool for the hospitality industry, giving hotels standardised data to track emissions, benchmark against peers and meet corporate buyer requirements. The tool provides guides on how to use the templates to calculate carbon footprint for guestrooms and meetings, among others, on energy and consumption data. The offline excel sheet provides a structure approach to carbon accounting, and the guides together with the excel example provide a clear method to follow. As a result, you can generate a report with essential information to support your sustainability strategy and communicate your progress to stakeholders.",
         uk: "Hotel Carbon Measurement Initiative (HCMI) – це всесвітньо визнаний інструмент вимірювання викидів вуглецю для туристичної індустрії, який забезпечує готелі стандартизованими даними для відстеження викидів, порівняльного аналізу з конкурентами та виконання вимог корпоративних клієнтів. Інструмент містить настанови щодо використання шаблонів для розрахунку вуглецевого сліду номерного фонду та конференц-залів, зокрема на основі даних про споживання енергії та ресурсів. Офлайн-таблиця Excel пропонує структурований підхід до обліку викидів вуглецю, а посібники разом зі зразком в Excel дають чітку й зрозумілу методику дій. У результаті Ви можете сформувати звіт із ключовою інформацією для підтримки Вашої стратегії сталого розвитку та інформування зацікавлених сторін про досягнутий прогрес.",
         ro: "Hotel Carbon Measurement Initiative (HCMI) este un instrument de măsurare a carbonului recunoscut la nivel mondial pentru industria ospitalității, oferind hotelurilor date standardizate pentru a urmări emisiile, a compara cu echivalentul și pentru a îndeplini cerințele cumpărătorilor corporativi. Instrumentul oferă ghiduri despre cum să utilizați șabloanele pentru a calcula amprenta de carbon pentru camere de oaspeți și întâlniri, printre altele, privind datele de energie și consum. Fișa excel offline oferă o abordare structurală a contabilității carbonului, iar ghidurile împreună cu exemplul excel oferă o metodă clară de urmat. Ca rezultat, puteți genera un raport cu informații esențiale pentru a vă sprijini strategia de durabilitate și pentru a comunica progresul dvs. părților interesate.",
-        hy: "Հյուրանոցային ածխածնի չափման նախաձեռնությունը (HCMI) հյուրընկալության ոլորտի համար ածխածնի չափման գլոբալ ճանաչված գործիք է, որը հյուրանոցներին տալիս է ստանդարտացված տվյալներ՝ արտանետումները հետևելու, հասակակիցների համեմատ համեմատության և կորպորատիվ գնորդների պահանջները բավարարելու համար: Գործիքը ուղեցույցներ է տալիս այն մասին, թե ինչպես օգտագործել ձևանմուշները հյուրերի սենյակների և հանդիպումների համար ածխածնի հետքը հաշվարկելու համար, ի թիվս այլոց, էներգիայի և սպառման տվյալների վերաբերյալ: Օֆլայն excel թերթիկը տրամադրում է ածխածնի հաշվառման կառուցվածքային մոտեցում, իսկ ուղեցույցները excel օրինակի հետ միասին ապահովում են հստակ մեթոդ, որը պետք է հետևել: Որպես արդյունք, դուք կարող եք ստեղծել հաշվետվություն, որը պարունակում է կարևոր տեղեկատվություն՝ աջակցելու ձեր կայունության ռազմավարությանը և ձեր առաջընթացը շահագրգիռ կողմերին հաղորդելու համար։"
+        hy: "Հյուրանոցային ածխածնի չափման նախաձեռնությունը (HCMI) հյուրընկալության ոլորտի համար ածխածնի չափման գլոբալ ճանաչված գործիք է, որը հյուրանոցներին տալիս է ստանդարտացված տվյալներ՝ արտանետումները հետևելու, հասակակիցների համեմատ համեմատության և կորպորատիվ գնորդների պահանջները բավարարելու համար: Գործիքը ուղեցույցներ է տալիս այն մասին, թե ինչպես օգտագործել ձևանմուշները հյուրերի սենյակների և հանդիպումների համար ածխածնային հետքը հաշվարկելու համար, ի թիվս այլոց, էներգիայի և սպառման տվյալների վերաբերյալ: Օֆլայն excel թերթիկը տրամադրում է ածխածնի հաշվառման կառուցվածքային մոտեցում, իսկ ուղեցույցները excel օրինակի հետ միասին ապահովում են հստակ մեթոդ, որը պետք է հետևել: Որպես արդյունք, դուք կարող եք ստեղծել հաշվետվություն, որը պարունակում է կարևոր տեղեկատվություն՝ աջակցելու ձեր կայունության ռազմավարությանը և ձեր առաջընթացը շահագրգիռ կողմերին հաղորդելու համար։"
       },
     journeyPhases: ['Monitor'],
     placements: {
@@ -2131,7 +2131,7 @@ const toolCatalogue = [
         en: "A diagnostic tool for tourism SMEs that profiles progress towards digital and green transformation and identifies opportunities to improve competitiveness.",
         uk: "Діагностичний інструмент для туристичних МСП, який формує профіль прогресу на шляху до цифрової та «зеленої» трансформації й визначає можливості для підвищення конкурентоспроможності.",
         ro: "Un instrument de diagnosticare pentru IMM-urile din turism care profilează progresul către transformarea digitală și ecologică și identifică oportunități de îmbunătățire a competitivității.",
-        hy: "Ախտորոշիչ գործիք զբոսաշրջության ոլորտի ՓՄՁ-ների համար, որը գնահատում է թվային և կանաչ վերափոխման ուղղությամբ գրանցված առաջընթացը և բացահայտում մրցունակության բարձրացման հնարավորությունները։"
+        hy: "Զբոսաշրջության ՓՄՁ-ների համար ախտորոշիչ գործիք, որը բնութագրում է առաջընթացը դեպի թվային և կանաչ փոխակերպում և բացահայտում մրցունակությունը բարելավելու հնարավորությունները։"
       },
     about:
       {
@@ -2271,14 +2271,14 @@ const toolCatalogue = [
         en: "A cloud-based construction waste and sustainability tracking platform for waste, materials, carbon, water and transport emissions.",
         uk: "Хмарна платформа для відстеження будівельних відходів і показників сталого розвитку, що охоплює відходи, матеріали, викиди вуглецю, використання води та транспортні викиди.",
         ro: "O platformă de urmărire a deșeurilor din construcții și a durabilității bazată pe cloud pentru deșeuri, materiale, emisii de carbon, apă și transport.",
-        hy: "Ամպային տեխնոլոգիաների վրա հիմնված հարթակ՝ շինարարական թափոնների և կայունության ցուցանիշների մշտադիտարկման համար, որը հնարավորություն է տալիս հետևել թափոնների, նյութերի, ածխածնի արտանետումների, ջրի սպառման և տրանսպորտի հետ կապված արտանետումների ցուցանիշներին։"
+        hy: "Թափոնների, նյութերի, ածխածնի, ջրի և տրանսպորտի արտանետումների համար  ամպային տեխնոլոգիաների վրա հիմնված հիմնված շինարարական թափոնների և կայունության հետագծման հարթակ։"
       },
     about:
       {
         en: "SMARTWaste helps construction SMEs track waste and carbon data in real time, reduce disposal costs and generate audit-quality Building Research Establishment Environmental Assessment Method (BREEAM) compliance evidence.",
         uk: "SMARTWaste допомагає малим та середнім підприємствам будівельної галузі відстежувати дані щодо відходів і викидів вуглецю в режимі реального часу, зменшувати витрати на утилізацію та формувати документальні підтвердження відповідності стандарту BREEAM аудиторської якості.",
         ro: "SMARTWaste ajută IMM-urile din construcții să urmărească datele privind deșeurile și emisiile de carbon în timp real, să reducă costurile de eliminare și să genereze dovezi de conformitate cu metoda de evaluare a mediului pentru instituțiile de cercetare a clădirilor (BREEAM) de calitate de audit.",
-        hy: "SMARTWaste-ն օգնում է շինարարական ՓՄՁ-ներին իրական ժամանակում հետևել թափոնների և ածխածնի տվյալներին, նվազեցնել հեռացման ծախսերը և ստեղծել աուդիտի որակի Շենքերի հետազոտական ​​հաստատությունների շրջակա միջավայրի գնահատման մեթոդի (BREEAM) համապատասխանության ապացույցներ:"
+        hy: "SMARTWaste-ն օգնում է շինարարական ՓՄՁ-ներին իրական ժամանակում հետևել թափոնների և ածխածնի տվյալներին, նվազեցնել հեռացման ծախսերը և ստեղծել աուդիտի որակի Շենքերի հետազոտական ​​հաստատությունների շրջակա միջավայրի գնահատման մեթոդի (BREEAM) համապատասխանության ապացույցներ։"
       },
     journeyPhases: ['Monitor'],
     placements: {
@@ -2341,14 +2341,14 @@ const toolCatalogue = [
         en: "An EU framework for assessing and reporting building sustainability performance across the full lifecycle.",
         uk: "Рамкова структура ЄС для оцінювання та звітування щодо показників сталого розвитку будівель протягом повного життєвого циклу.",
         ro: "Un cadru UE pentru evaluarea și raportarea performanței în domeniul sustenabilității clădirii pe întreg ciclul de viață.",
-        hy: "ԵՄ շրջանակ՝ շենքերի կայունության ցուցանիշները դրանց ողջ կենսացիկլի ընթացքում գնահատելու և հաշվետվություններ ներկայացնելու համար։"
+        hy: "ԵՄ շրջանակ՝ ողջ կյանքի ընթացքում կայունության կառուցման կատարողականը գնահատելու և զեկուցելու համար։"
       },
     about:
       {
         en: "Level(s) helps construction SMEs measure and report building sustainability across carbon, materials, water, health and life-cycle cost, supporting alignment with EU sustainability requirements. It is an assessment and reporting tool with guidance, templates and e-learning modules to support building sustainability across the full lifecycle, from design to construction, operation and end-of-life. The framework contributes and supports alignment across other EU directives and standards, including the Sustainable Finance, Energy Performance of Buildings Directive (EPBD), Sustainable Development Goals (SDGs) and the European Green Deal. Depending on the manual, elearning module or ressource you choose, the time required, language and access can vary.",
         uk: "Level(s) допомагає малим та середнім підприємствам будівельної галузі вимірювати та звітувати про сталість будівель за такими параметрами, як викиди вуглецю, матеріали, використання води, здоров'я та вартість життєвого циклу, забезпечуючи відповідність вимогам ЄС у сфері сталого розвитку. Це інструмент оцінювання та звітності, що містить посібники, шаблони та модулі електронного навчання для підтримки сталості будівель на всіх етапах життєвого циклу: від проєктування та будівництва до експлуатації й завершення експлуатації. Структура сприяє гармонізації та узгодженню з іншими директивами та стандартами ЄС, зокрема у сфері сталого фінансування, Директивою про енергетичну результативність будівель (EPBD), Цілями сталого розвитку та Європейським зеленим курсом. Залежно від обраного посібника, навчального модуля чи ресурсу необхідний час, мова та умови доступу можуть варіюватися.",
         ro: "Level(s) ajută IMM-urile din construcții să măsoare și să raporteze durabilitatea clădirii în ceea ce privește carbonul, materialele, apă, sănătatea și costurile ciclului de viață, susținând alinierea la cerințele UE de durabilitate. Este un instrument de evaluare și raportare cu îndrumări, șabloane și module de e-learning pentru a sprijini sustenabilitatea clădirii pe întreg ciclul de viață, de la proiectare la construcție, operare și sfârșitul vieții. Cadrul contribuie și sprijină alinierea la alte directive și standarde ale UE, inclusiv Finanțarea durabilă, Directiva privind performanța energetică a clădirilor (EPBD), Obiectivele de dezvoltare durabilă (ODD) și Pactul ecologic european. În funcție de manualul, modulul de elearning sau resursa pe care o alegeți, timpul necesar, limba și accesul pot varia.",
-        hy: "Մակարդակ(ներ)ը օգնում է շինարարական ՓՄՁ-ներին չափել և զեկուցել շինարարության կայունությունը ածխածնի, նյութերի, ջրի, առողջության և կյանքի ցիկլի ծախսերի առումով՝ աջակցելով ԵՄ կայունության պահանջներին համապատասխանեցմանը: Այն գնահատման և հաշվետվության գործիք է՝ ուղեցույցներով, ձևանմուշներով և էլեկտրոնային ուսուցման մոդուլներով՝ աջակցելու շենքի կայունությանը ողջ կյանքի ընթացքում՝ նախագծումից մինչև շինարարություն, շահագործում և ժամկետի ավարտ: Շրջանակը նպաստում և աջակցում է ԵՄ այլ դիրեկտիվների և ստանդարտների համապատասխանեցմանը, ներառյալ Կայուն ֆինանսավորումը, Շենքերի էներգետիկ արդյունավետության հրահանգը (EPBD), Կայուն զարգացման նպատակները (SDGs) և Եվրոպական կանաչ գործարքը: Կախված ձեր ընտրած ձեռնարկից, էլեկտրոնային ուսուցման մոդուլից կամ ռեսուրսից, պահանջվող ժամանակը, լեզուն և հասանելիությունը կարող են տարբեր լինել։"
+        hy: "Մակարդակ(ներ)ը օգնում է շինարարական ՓՄՁ-ներին չափել և զեկուցել շինարարության կայունությունը ածխածնի, նյութերի, ջրի, առողջության և կենսապտույտի ծախսերի առումով՝ աջակցելով ԵՄ կայունության պահանջներին համապատասխանեցմանը: Այն գնահատման և հաշվետվության գործիք է՝ ուղեցույցներով, ձևանմուշներով և էլեկտրոնային ուսուցման մոդուլներով՝ աջակցելու շենքի կայունությանը ողջ կյանքի ընթացքում՝ նախագծումից մինչև շինարարություն, շահագործում և ժամկետի ավարտ: Շրջանակը նպաստում և աջակցում է ԵՄ այլ դիրեկտիվների և ստանդարտների համապատասխանեցմանը, ներառյալ Կայուն ֆինանսավորումը, Շենքերի էներգետիկ արդյունավետության հրահանգը (EPBD), Կայուն զարգացման նպատակները (SDGs) և Եվրոպական կանաչ գործարքը: Կախված ձեր ընտրած ձեռնարկից, էլեկտրոնային ուսուցման մոդուլից կամ ռեսուրսից, պահանջվող ժամանակը, լեզուն և հասանելիությունը կարող են տարբեր լինել։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2375,7 +2375,7 @@ const toolCatalogue = [
       en: "None for basic use; building data for full Life Cycle Assessment (LCA).",
       uk: "Не потрібна для базового використання; для повноцінної оцінки життєвого циклу необхідні дані щодо будівлі.",
       ro: "Niciuna pentru utilizare de bază; date de construcție pentru evaluarea completă a ciclului de viață (LCA).",
-      hy: "Հիմնական օգտագործման համար չկա; Կառուցման տվյալներ կյանքի ցիկլի ամբողջական գնահատման համար (LCA)։"
+      hy: "Հիմնական օգտագործման համար չկա; Կառուցման տվյալներ կենսապտույտի ամբողջական գնահատման համար (LCA)։"
     },
     output: {
       en: "Lifecycle sustainability assessment and compliance report",
@@ -2411,14 +2411,14 @@ const toolCatalogue = [
         en: "A carbon calculator for farms and growers that produces carbon output reports for farm, product and supply-chain emissions work.",
         uk: "Калькулятор вуглецевого сліду для фермерських господарств, який формує звіти про викиди вуглецю на рівні ферми, окремої продукції та ланцюга постачання.",
         ro: "Un calculator de carbon pentru fermele și cultivatorii care produce rapoarte de producție de carbon pentru lucrările de emisii ale fermelor, ale produselor și ale lanțului de aprovizionare.",
-        hy: "Ածխածնի արտանետումների հաշվիչ ֆերմերային տնտեսությունների և գյուղատնտեսական արտադրողների համար, որը կազմում է ածխածնային արտանետումների հաշվետվություններ՝ տնտեսության, արտադրանքի և մատակարարման շղթայի մակարդակներում։"
+        hy: "Ածխածնի հետքի հաշվիչ ֆերմերների և գյուղատնտեսական արտադրողների համար, որը կազմում է ֆերմերային տնտեսությունների, արտադրանքի և մատակարարման շղթայի արտանետումների վերաբերյալ հաշվետվություններ։"
       },
     about:
       {
         en: "The Farm Carbon Toolkit calculator is designed for farmers and growers, and can also support researchers, agricultural professionals and consultants delivering carbon footprints.",
         uk: "Калькулятор Farm Carbon Toolkit розроблено для фермерів та виробників сільськогосподарської продукції; він також може використовуватися дослідниками, фахівцями аграрної галузі та консультантами, які розраховують показники вуглецевого сліду.",
         ro: "Calculatorul Farm Carbon Toolkit este conceput pentru fermieri și cultivatori și poate sprijini, de asemenea, cercetătorii, profesioniștii în agricultură și consultanții care livrează amprenta de carbon.",
-        hy: "Farm Carbon Toolkit հաշվիչը նախատեսված է ֆերմերների և աճեցողների համար և կարող է նաև աջակցել հետազոտողներին, գյուղատնտեսության ոլորտի մասնագետներին և խորհրդատուներին, որոնք առաքում են ածխածնի հետքեր։"
+        hy: "Farm Carbon Toolkit հաշվիչը նախատեսված է ֆերմերների և աճեցողների համար և կարող է նաև աջակցել հետազոտողներին, գյուղատնտեսության ոլորտի մասնագետներին և խորհրդատուներին, որոնք առաքում են ածխածնային հետքեր։"
       },
     journeyPhases: ['Assess'],
     placements: {
@@ -2481,7 +2481,7 @@ const toolCatalogue = [
         en: "A circularity self-assessment tool designed to help food companies understand their circular economy maturity level.",
         uk: "Інструмент самооцінювання циркулярності, розроблений для того, щоб допомогти компаніям харчової галузі зрозуміти свій рівень зрілості в циркулярній економіці.",
         ro: "Un instrument de autoevaluare a circularității conceput pentru a ajuta companiile alimentare să înțeleagă nivelul de maturitate al economiei circulare.",
-        hy: "Շրջանաձևության ինքնագնահատման գործիք, որը նախատեսված է սննդի ոլորտի ընկերություններին օգնելու հասկանալ շրջանաձև տնտեսության սկզբունքների ներդրման իրենց հասունության մակարդակը։"
+        hy: "Շրջանաձևության ինքնագնահատման գործիք, որը նախատեսված է սննդամթերքի ընկերություններին օգնելու հասկանալ իրենց շրջանաձև տնտեսության հասունության մակարդակը։"
       },
     about:
       {
@@ -2551,7 +2551,7 @@ const toolCatalogue = [
         en: "A set of six practical tools for agri-SMEs, entrepreneur support organisations and practitioners working with circular agribusinesses.",
         uk: "Комплекс із шести практичних інструментів для аграрних МСП, організацій підтримки підприємництва та практиків, які співпрацюють із циркулярним агробізнесом.",
         ro: "Un set de șase instrumente practice pentru IMM-uri agricole, organizații de sprijinire a antreprenorilor și practicieni care lucrează cu agro-afacerile circulare.",
-        hy: "Գործնական վեց գործիքից բաղկացած փաթեթ՝ նախատեսված գյուղատնտեսության ոլորտի ՓՄՁ-ների, ձեռնարկատիրությանն աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի ոլորտում աշխատող մասնագետների համար։"
+        hy: "Վեց գործնական գործիքների հավաքածու ագրոՓՄՁ-ների, ձեռնարկատերերին աջակցող կազմակերպությունների և շրջանաձև ագրոբիզնեսի հետ աշխատող մասնագետների համար։"
       },
     about:
       {
@@ -2621,7 +2621,7 @@ const toolCatalogue = [
         en: "Practical measurement and tracking tools for agri-food businesses to quantify food waste, identify hotspots and set reduction targets.",
         uk: "Практичні інструменти вимірювання та відстеження для агропродовольчих підприємств, що дозволяють кількісно оцінити обсяги харчових відходів, виявити «критичні точки» та встановити цілі щодо їхнього скорочення.",
         ro: "Instrumente practice de măsurare și urmărire pentru întreprinderile agroalimentare pentru a cuantifica risipa alimentară, a identifica punctele fierbinți și a stabili obiective de reducere.",
-        hy: "Գործնական չափման և մշտադիտարկման գործիքներ ագրոպարենային ոլորտի ընկերությունների համար՝ սննդի կորուստների և թափոնների ծավալը քանակապես գնահատելու, դրանց առաջացման հիմնական աղբյուրները բացահայտելու և կրճատման թիրախներ սահմանելու նպատակով։"
+        hy: "Գործնական չափման և հետևելու գործիքներ ագրոպարենային բիզնեսի համար՝ սննդամթերքի թափոնները քանակականացնելու, խնդրահարույց կետերը բացահայտելու և կրճատման թիրախներ սահմանելու համար։"
       },
     about:
       {
@@ -2691,7 +2691,7 @@ const toolCatalogue = [
         en: "A step-by-step toolbox that helps apparel brands adopt circular business models and independently drive circular innovation.",
         uk: "Покроковий інструментарій, який допомагає брендам одягу впроваджувати циркулярні бізнес-моделі та самостійно стимулювати циркулярні інновації.",
         ro: "Un set de instrumente structurat pas cu pas, care ajută producătorii de îmbrăcăminte să adopte modele de afaceri circulare și să conducă independent inovația circulară.",
-        hy: "Քայլ առ քայլ գործիքակազմ, որն օգնում է հագուստի բրենդներին ներդնել շրջանաձև բիզնես մոդելներ և ինքնուրույն խթանել շրջանաձև նորարարությունը։"
+        hy: "Քայլ առ քայլ գործիքակազմ, որն օգնում է հագուստի ապրանքանիշերին ընդունել շրջանաձև բիզնես մոդելներ և ինքնուրույն առաջ մղել շրջանաձև նորարարություն։"
       },
     about:
       {
@@ -2761,14 +2761,14 @@ const toolCatalogue = [
         en: "An EU mapping tool and network for textile collection, sorting and recycling infrastructure.",
         uk: "Інструмент картування та мережа ЄС для інфраструктури збору, сортування й переробленн текстилю.",
         ro: "Un instrument de cartografiere a UE și o rețea pentru infrastructura de colectare, sortare și reciclare a textilelor.",
-        hy: "ԵՄ գործիք և ցանց՝ տեքստիլի հավաքման, տեսակավորման և վերամշակման ենթակառուցվածքների քարտեզագրման համար։"
+        hy: "ԵՄ քարտեզագրման գործիք և ցանց տեքստիլի հավաքման, տեսակավորման և վերամշակման ենթակառուցվածքների համար։"
       },
     about:
       {
         en: "Re.Hub connects businesses to Europe's textile recycling network and helps identify local collection, sorting and recycling partners to close textile material loops.",
         uk: "Re.Hub об'єднує підприємства з європейською мережею перероблення текстилю та допомагає знаходити місцевих партнерів зі збору, сортування й перероблення для замкнення циклів текстильних матеріалів.",
         ro: "Re.Hub conectează întreprinderile la rețeaua europeană de reciclare a textilelor și ajută la identificarea partenerilor locali de colectare, sortare și reciclare pentru a închide buclele de materiale textile.",
-        hy: "Re.Hub-ը միացնում է բիզնեսները Եվրոպայի տեքստիլի վերամշակման ցանցին և օգնում է բացահայտել տեղական հավաքման, տեսակավորման և վերամշակման գործընկերներին՝ փակելու տեքստիլ նյութերի օղակները։"
+        hy: "Re.Hub-ը միացնում է բիզնեսները Եվրոպայի տեքստիլի վերամշակման ցանցին և օգնում է բացահայտել տեղական հավաքման, տեսակավորման և վերամշակման գործընկերներին՝ փակելու տեքստիլ նյութական շրջափուլերը ։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -2831,7 +2831,7 @@ const toolCatalogue = [
         en: "A fibre traceability platform using embedded tracers and blockchain to authenticate sustainability claims from raw material to finished garment.",
         uk: "Інструмент «Fibretrace» – це платформа простежуваності волокна, яка використовує вбудовані маркери та блокчейн для підтвердження заяв про сталість на всьому шляху – від сировини до готового виробу.",
         ro: "O platformă de trasabilitate a fibrelor care utilizează trasoare încorporate și blockchain pentru a autentifica afirmațiile de sustenabilitate de la materia primă până la îmbrăcămintea finită.",
-        hy: "Մանրաթելերի հետագծելիության հարթակ, որն օգտագործում է ներկառուցված հետագծիչներ և բլոկչեյն տեխնոլոգիա՝ հումքից մինչև պատրաստի հագուստ արտադրանքի կայունության վերաբերյալ պնդումների իսկությունը հաստատելու համար։"
+        hy: "Օպտիկամանրաթելային հետագծելիության հարթակ, որն օգտագործում է ներկառուցված հետագծեր և բլոկչեյն՝ հաստատելու կայունության պահանջները հումքից մինչև պատրաստի հագուստ։"
       },
     about:
       {
@@ -2971,14 +2971,14 @@ const toolCatalogue = [
         en: "A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.",
         uk: "Чотириетапна модель «Плануй–Роби–Перевіряй–Дій», яка допомагає малим та середнім підприємствам інтерпретувати результати, виявляти першопричини та планувати цільові вдосконалення.",
         ro: "Un cadru în patru etape care ajută IMM-urile să analizeze rezultatele, să identifice cauzele principale ale problemelor și să planifice măsuri specifice de îmbunătățire.",
-        hy: "Չորս փուլից բաղկացած «Պլանավորել–Իրականացնել–Ստուգել–Գործել» (Plan-Do-Check-Act) շրջանակ, որն օգնում է ՓՄՁ-ներին մեկնաբանել արդյունքները, բացահայտել խնդիրների հիմնական պատճառները և պլանավորել նպատակային բարելավման միջոցառումներ։"
+        hy: "Չորս քայլ` Պլանավորում-Կատարում-Ստուգում-Գործողություն (Plan-Do-Check-Act) շրջանակ, որն օգնում է ՓՄՁ-ներին մեկնաբանել արդյունքները, բացահայտել խորքային պատճառները և պլանավորել նպատակային բարելավումներ։"
       },
     about:
       {
         en: "The Plan, Do, Check, Act (PDCA) cycle is a continuous improvement framework that works well for circular economy implementation. You can use as an overall project management tool to review results of implemented actions, decide what to adjust, set new targets and implement improvements. The framework is simple yet powerful, and is essential in systematic reviews. || The tool provider also offers templates with more advanced versions of the PDCA framework, including problem solving templates with more detailed fields and other formats such as Excel sheets and google sheets. If the template is too simplified for your use-case, review the more detailed templates in their website: [HERE](https://www.smartsheet.com/content/pdca-templates). These templates can also be utilised to inform your own review document frameworks, wherever these are located for best follow-up.",
         uk: "Цикл «Плануй–Роби–Перевіряй–Дій» – це методологія безперервного вдосконалення, яка чудово підходить для впровадження принципів циркулярної економіки. Ви можете використовувати її як загальний інструмент управління проєктами для аналізу результатів реалізованих дій, прийняття рішень щодо необхідних коригувань, встановлення нових цілей та впровадження покращень. Ця модель проста, але водночас ефективна та незамінна для проведення систематичного перегляду результатів. || Розробник інструменту також пропонує шаблони з розширеними версіями моделі «Плануй–Роби–Перевіряй–Дій», включно з шаблонами для вирішення проблем із деталізованішими полями та в інших форматах, як-от таблиці Excel і Google Таблиці. Якщо цей шаблон занадто спрощений для Ваших завдань, ознайомтеся з більш детальними шаблонами на сайті розробника: [ТУТ](https://www.smartsheet.com/content/pdca-templates). Ці матеріали можна також використовувати для формування власних внутрішніх форм перегляду звітних документів у зручному для подальшого відстеження місці.",
         ro: "Ciclul Planificați, faceți, verificați, acționați (PDCA) este un cadru de îmbunătățire continuă care funcționează bine pentru implementarea economiei circulare. Puteți utiliza ca instrument general de management de proiect pentru a revizui rezultatele acțiunilor implementate, a decide ce să ajusteze, a stabili noi obiective și a implementa îmbunătățiri. Cadrul este simplu, dar puternic și este esențial în revizuirile sistematice. || Furnizorul de instrumente oferă, de asemenea, șabloane cu versiuni mai avansate ale cadrului PDCA, inclusiv șabloane de rezolvare a problemelor cu câmpuri mai detaliate și alte formate, cum ar fi foile Excel și foile Google. Dacă șablonul este prea simplificat pentru cazul dvs. de utilizare, examinați șabloanele mai detaliate de pe site-ul lor: [HERE](https://www.smartsheet.com/content/pdca-templates). Aceste șabloane pot fi, de asemenea, utilizate pentru a vă informa propriile cadre ale documentelor de revizuire, oriunde se află acestea, pentru o urmărire optimă.",
-        hy: "Գործիքի մատակարարը նաև առաջարկում է ձևանմուշներ PDCA շրջանակի ավելի առաջադեմ տարբերակներով, ներառյալ խնդիրների լուծման ձևանմուշներ ավելի մանրամասն դաշտերով և այլ ձևաչափերով, ինչպիսիք են Excel թերթերը և google թերթերը: Եթե ձևանմուշը չափազանց պարզեցված է ձեր օգտագործման դեպքում, վերանայեք ավելի մանրամասն ձևանմուշները իրենց կայքում.  [HERE](https://www.smartsheet.com/content/pdca-templates). Այս ձևանմուշները կարող են օգտագործվել նաև ձեր սեփական վերանայման փաստաթղթերի շրջանակները տեղեկացնելու համար, որտեղ էլ որ դրանք գտնվում են լավագույն հետևելու համար։"
+        hy: "Պլան, արա, ստուգում, ակտ (PDCA) ցիկլը շարունակական բարելավման շրջանակ է, որը լավ է աշխատում շրջանաձև տնտեսության իրականացման համար: Դուք կարող եք օգտագործել որպես ծրագրի կառավարման ընդհանուր գործիք՝ իրականացված գործողությունների արդյունքները վերանայելու, որոշելու, թե ինչ հարմարեցնել, սահմանել նոր նպատակներ և իրականացնել բարելավումներ: Շրջանակը պարզ է, բայց հզոր և կարևոր է համակարգված վերանայումների համար։ || Գործիքի մատակարարը նաև առաջարկում է ձևանմուշներ PDCA շրջանակի ավելի առաջադեմ տարբերակներով, ներառյալ խնդիրների լուծման ձևանմուշներ ավելի մանրամասն դաշտերով և այլ ձևաչափերով, ինչպիսիք են Excel թերթերը և google թերթերը: Եթե ​​ձևանմուշը չափազանց պարզեցված է ձեր օգտագործման դեպքում, վերանայեք ավելի մանրամասն ձևանմուշները իրենց կայքում. [HERE](https://www.smartsheet.com/content/pdca-templates). Այս ձևանմուշները կարող են օգտագործվել նաև ձեր սեփական վերանայման փաստաթղթերի շրջանակները տեղեկացնելու համար, որտեղ էլ որ դրանք գտնվում են լավագույն հետևելու համար։"
       },
     journeyPhases: ['Explore', 'Evaluate', 'Monitor'],
     placements: {
@@ -3040,7 +3040,7 @@ const toolCatalogue = [
         en: "A visual canvas tool to map circular ecosystems, review what is and is not working, and redesign a circular business model from real results.",
         uk: "Інструмент «Канва бізнес-екосистеми Circulab» – це візуальний інструмент-канва для картування циркулярних екосистем, аналізу дієвих та неефективних елементів і редизайну циркулярної бізнес-моделі на основі реальних результатів.",
         ro: "Un instrument de tip canvas vizual pentru a mapa ecosistemele circulare, a revizui ceea ce funcționează sau nu și a reproiecta un model de afaceri circular din rezultate reale.",
-        hy: "Տեսողական աշխատանքային գործիք՝ շրջանաձև էկոհամակարգերը քարտեզագրելու, գործող մոդելի արդյունավետ և անարդյունավետ կողմերը գնահատելու և փաստացի արդյունքների հիման վրա շրջանաձև բիզնես մոդելը վերանախագծելու համար։"
+        hy: "Վիզուալ ձևանմուշ գործիք՝ շրջանաձև էկոհամակարգերը քարտեզագրելու, վերանայելու, թե ինչն է աշխատում և ինչ չէ, և վերանախագծում է շրջանաձև բիզնես մոդել իրական արդյունքներից։"
       },
     about:
       {
@@ -3109,7 +3109,7 @@ const toolCatalogue = [
         en: "A canvas for mapping concrete, actionable steps for putting a circular strategy into practice once solutions have been identified.",
         uk: "Канва для визначення конкретних практичних кроків щодо реалізації циркулярної стратегії після того, як рішення вже знайдено.",
         ro: "Instrumente de tip canvas pentru cartografierea pașilor concreți, acționabili, pentru punerea în practică a unei strategii circulare odată ce soluțiile au fost identificate.",
-        hy: "Աշխատանքային ձևանմուշ (canvas)՝ շրջանաձև ռազմավարության իրականացման համար կոնկրետ և գործնական քայլերը քարտեզագրելու նպատակով՝ արդեն իսկ համապատասխան լուծումները բացահայտելուց հետո։"
+        hy: "Ձևանմուշ՝ կոնկրետ, գործող քայլերի քարտեզագրման համար՝ լուծումների հայտնաբերումից հետո շրջանաձև ռազմավարությունը գործնականում կիրառելու համար։"
       },
     about:
       {
@@ -3178,7 +3178,7 @@ const toolCatalogue = [
         en: "A template for shortlisting circular options and assigning responsibility for reviewing feasibility.",
         uk: "Інструмент пропонує шаблон для формування короткого списку циркулярних варіантів та закріплення відповідальності за оцінку їхньої здійсненності.",
         ro: "Un șablon pentru selectarea opțiunilor circulare pe lista scurtă și atribuirea responsabilității pentru revizuirea fezabilității.",
-        hy: "Ձևանմուշ՝ շրջանաձև լուծումների տարբերակները նախնական ընտրության ենթարկելու և դրանց իրագործելիության գնահատման պատասխանատուներին նշանակելու համար։"
+        hy: "Շրջանաձև տարբերակների կարճ ցուցակում ընտրելու և իրագործելիության վերանայման պատասխանատվությունը վերապահելու ձևանմուշ։"
       },
     about:
       {
@@ -3247,7 +3247,7 @@ const toolCatalogue = [
         en: "A toolkit for identifying inefficiencies, customer pain points and circular business model opportunities.",
         uk: "Інструментарій для виявлення неефективностей, больових точок клієнтів і можливостей для циркулярних бізнес-моделей.",
         ro: "Un set de instrumente pentru identificarea ineficiențelor, punctelor critice ale clienților și oportunităților de model de afaceri circular.",
-        hy: "Գործիքակազմ, որն օգնում է բացահայտել անարդյունավետությունները, հաճախորդների խնդիրներն ու դժգոհությունները, ինչպես նաև շրջանաձև բիզնես մոդելների ներդրման հնարավորությունները։"
+        hy: "Գործիքակազմ՝ անարդյունավետությունները, հաճախորդների հիմնական խնդիրները և բիզնես մոդելի շրջանաձև հնարավորությունները բացահայտելու համար։"
       },
     about:
       {
@@ -3316,14 +3316,14 @@ const toolCatalogue = [
         en: "A scoring matrix for assessing design flaws in a product lifecycle and identifying circular design improvement suggestions.",
         uk: "Бальна матриця для оцінки недоліків дизайну на різних етапах життєвого циклу продукції та напрацювання пропозицій щодо покращення циркулярного дизайну.",
         ro: "O matrice de punctaj pentru evaluarea defectelor de design în ciclul de viață al unui produs și identificarea sugestiilor de îmbunătățire a designului circular.",
-        hy: "Գնահատման մատրիցա՝ արտադրանքի կենսացիկլի տարբեր փուլերում նախագծային թերությունները բացահայտելու և շրջանաձև դիզայնի բարելավման առաջարկություններ մշակելու համար։"
+        hy: "Գնահատման մատրիցա՝ արտադրանքի կենսապտույտի նախագծման թերությունները գնահատելու և դիզայնի բարելավման շրջանաձև առաջարկները բացահայտելու համար։"
       },
     about:
       {
         en: "The Design for X (DfX) scoring matrix builds on hotspot analysis and helps teams evaluate resource-intensive products to identify where design changes could improve circularity.",
         uk: "Матриця оцінювання Design for X (DfX) ґрунтується на аналізі проблемних зон («критичних точок») та допомагає командам оцінити ресурсомістку продукцію, щоб визначити, де саме зміни в дизайні можуть підвищити рівень циркулярності.",
         ro: "Matricea de punctaj Design for X (DfX) se bazează pe analiza hotspot-ului și ajută echipele să evalueze produsele care necesită mult resurse pentru a identifica locurile în care modificările de proiectare ar putea îmbunătăți circularitatea.",
-        hy: "Դիզայն X-ի համար (DfX) գնահատման մատրիցը հիմնված է թեժ կետերի վերլուծության վրա և թիմերին օգնում է գնահատել ռեսուրսներով ինտենսիվ արտադրանքները՝ պարզելու, թե դիզայնի փոփոխությունները որտեղ կարող են բարելավել շրջանաձևությունը։"
+        hy: "Դիզայն X-ի համար (DfX) գնահատման մատրիցան հիմնված է խնդրահարույց կետերի վերլուծության վրա և թիմերին օգնում է գնահատել ռեսուրսներով ինտենսիվ արտադրանքները՝ պարզելու, թե դիզայնի փոփոխությունները որտեղ կարող են բարելավել շրջանաձևությունը։"
       },
     journeyPhases: ['Explore'],
     placements: {
@@ -3385,7 +3385,7 @@ const toolCatalogue = [
         en: "Reframe problem insights as open-ended How Might We questions, turning challenges into opportunities and creating a productive launchpad for brainstorming.",
         uk: "Переформулювання висновків про проблему у відкриті запитання на кшталт «Як ми можемо...?», що перетворює виклики на можливості та створює продуктивний плацдарм для проведення мозкового штурму.",
         ro: "Reformulați problemele și provocările identificate sub forma unor întrebări deschise de tip „Cum am putea...?”, pentru a le transforma în oportunități și a crea un punct de plecare clar pentru generarea de idei.",
-        hy: "Վերաձևակերպում է խնդրի վերլուծության արդյունքում ստացված եզրահանգումները բաց հարցերի տեսքով՝ «Ինչպե՞ս կարող ենք…», վերածելով առկա մարտահրավերները հնարավորությունների և ստեղծելով արդյունավետ հիմք գաղափարների համատեղ մշակման ու քննարկման համար։"
+        hy: "Խնդիրների վերլուծական տվյալները վերակառուցեք որպես բաց հարցադրումներ «Ինչպես կարող ենք մենք»՝ մարտահրավերները վերածելով հնարավորությունների և ստեղծելով արդյունավետ գործարկման հարթակ ուղեղային փոթորկի համար։"
       },
     about:
       {
@@ -3454,7 +3454,7 @@ const toolCatalogue = [
         en: "A method for moving from a large volume of individual ideas to a smaller set of robust composite solutions.",
         uk: "Інструмент «Bundle Ideas» – це метод для переходу від великої кількості окремих ідей до меншого набору надійних комплексних рішень.",
         ro: "O metodă de trecere de la un volum mare de idei individuale la un set mai mic de soluții compozite robuste.",
-        hy: "Մեթոդ, որը հնարավորություն է տալիս բազմաթիվ առանձին գաղափարներից անցում կատարել դեպի ավելի փոքր թվով ամբողջական, համադրված և հիմնավորված լուծումներ։"
+        hy: "Անհատական ​​գաղափարների մեծ ծավալից դեպի ամուր կոմպոզիտային լուծումների ավելի փոքր շարք անցնելու մեթոդ։"
       },
     about:
       {
@@ -3523,7 +3523,7 @@ const toolCatalogue = [
         en: "A method for developing bundled ideas into polished, testable concepts that address the original design challenge.",
         uk: "Метод перетворення згрупованих ідей на вивірені концепції, придатні для тестування, які відповідають на початковий дизайнерський виклик.",
         ro: "O metodă de dezvoltare a ideilor grupate în concepte șlefuite, testabile, care abordează provocarea originală de proiectare.",
-        hy: "Մեթոդ՝ համադրված գաղափարները մշակելու և վերածելու հստակ ձևակերպված, փորձարկման ենթակա հայեցակարգերի, որոնք լուծում են սկզբնական նախագծային մարտահրավերը։"
+        hy: "Համակցված գաղափարները զարգացնելու մեթոդ՝ հղկված, փորձարկվող գաղափարների մեջ, որոնք լուծում են սկզբնական դիզայնի մարտահրավերը։"
       },
     about:
       {
@@ -3592,7 +3592,7 @@ const toolCatalogue = [
         en: "A workshop that challenges participants to redesign a commercial carpet tile to be safe and circular.",
         uk: "Семінар, де учасникам пропонується вирішити завдання з редизайну комерційної килимової плитки, зробивши її безпечною та циркулярною.",
         ro: "Un atelier care provoacă participanții să reproiecteze o placă de covor comercială pentru a fi sigură și circulară.",
-        hy: "Աշխատաժողով, որի ընթացքում մասնակիցներին առաջարկվում է վերանախագծել առևտրային տարածքների համար նախատեսված գորգային սալիկը՝ այն դարձնելով անվտանգ և շրջանաձև տնտեսության սկզբունքներին համապատասխան։"
+        hy: "Սեմինար, որը մարտահրավեր է նետում մասնակիցներին վերանախագծել առևտրային գորգի սալիկը՝ անվտանգ և շրջանաձև լինելու համար։"
       },
     about:
       {
@@ -3800,14 +3800,14 @@ const toolCatalogue = [
         en: "Software for building Life Cycle Assessment (LCA)-based Digital Product Passports for fashion and apparel products.",
         uk: "Це програмне забезпечення для створення цифрових паспортів продукції на основі оцінки життєвого циклу для виробів індустрії моди та одягу.",
         ro: "Software pentru crearea pașapoartelor digitale ale produselor, bazate pe evaluarea ciclului de viață (LCA), destinat produselor din industria modei și articolelor de îmbrăcăminte.",
-        hy: "Ծրագրային ապահովում՝ նորաձևության և հագուստի արտադրանքի համար կենսափուլի գնահատման (LCA) վրա հիմնված թվային արտադրանքի անձնագրեր ստեղծելու նպատակով։"
+        hy: "Նորաձևության և հագուստի ապրանքների համար կենսապտույտի գնահատման (LCA) վրա հիմնված թվային արտադրանքի անձնագրեր ստեղծելու ծրագրակազմ։"
       },
     about:
       {
         en: "Carbonfact runs product-level life cycle assessments across a brand catalogue and publishes the results as consumer-facing Digital Product Passports with Quick Response (QR) codes. It covers 16 Product Environmental Footprint (PEF) environmental indicators and the French Eco-Score, helping brands and suppliers prepare for upcoming EU textile Digital Product Passport (DPP) requirements.",
         uk: "Carbonfact виконує оцінку життєвого циклу на рівні окремих продуктів за каталогом бренду та публікує результати у вигляді орієнтованих на споживача цифрових паспортів продукції із QR-кодами. Воно охоплює 16 екологічних показників екологічного сліду продукції та французький екорейтинг Eco-Score, допомагаючи брендам і постачальникам підготуватися до майбутніх вимог ЄС щодо цифрових паспортів для текстильної продукції.",
         ro: "Carbonfact efectuează evaluări ale ciclului de viață la nivel de produs într-un catalog de marcă și publică rezultatele ca pașapoarte digitale pentru produse cu coduri QR (Quick Response) destinate consumatorilor. Acesta acoperă 16 indicatori de mediu privind amprenta ecologică a produsului (PEF) și Scorul Ecologic al francez, ajutând mărcile și furnizorii să se pregătească pentru viitoarele cerințe ale UE pentru produse textile digitale (DPP).",
-        hy: "Carbonfact-ն իրականացնում է արտադրանքի մակարդակի կյանքի ցիկլի գնահատումներ ապրանքանիշի կատալոգում և արդյունքները հրապարակում է որպես սպառողների համար նախատեսված թվային արտադրանքի անձնագրեր՝ արագ արձագանքման (QR) կոդերով: Այն ընդգրկում է 16 Ապրանքի շրջակա միջավայրի հետքի (PEF) բնապահպանական ցուցիչները և ֆրանսիական էկո գնահատականը՝ օգնելով ապրանքանիշերին և մատակարարներին նախապատրաստվել ԵՄ տեքստիլ արտադրանքի թվային անձնագրի (DPP) առաջիկա պահանջներին։"
+        hy: "Carbonfact-ն իրականացնում է արտադրանքի մակարդակի կենսապտույտի գնահատումներ ապրանքանիշի կատալոգում և արդյունքները հրապարակում է որպես սպառողների համար նախատեսված թվային արտադրանքի անձնագրեր՝ արագ արձագանքման (QR) կոդերով: Այն ընդգրկում է 16 Ապրանքի շրջակա միջավայրի հետքի (PEF) բնապահպանական ցուցիչները և ֆրանսիական էկո գնահատականը՝ օգնելով ապրանքանիշերին և մատակարարներին նախապատրաստվել ԵՄ տեքստիլ արտադրանքի թվային անձնագրի (DPP) առաջիկա պահանջներին։"
       },
     journeyPhases: ['Implement'],
     placements: {
@@ -4134,7 +4134,7 @@ const toolCatalogue = [
         en: "Supports reuse of building materials salvaged from damaged buildings.",
         uk: "Інструмент підтримує повторне використання будівельних матеріалів, врятованих зі зруйнованих та пошкоджених будівель.",
         ro: "Sprijină reutilizarea materialelor de construcție recuperate din clădirile deteriorate.",
-        hy: "Աջակցում է վնասված շենքերից ապամոնտաժված շինանյութերի վերօգտագործմանը։"
+        hy: "Աջակցում է վնասված շենքերից փրկված շինանյութերի վերաօգտագործմանը։"
       },
     about:
       {
@@ -4472,7 +4472,7 @@ const toolCatalogue = [
         en: "Provides direct access to sorting bins and recyclable pickup for Armenian organisations.",
         uk: "Забезпечує прямий доступ до контейнерів для сортування та вивезення вторинної сировини для вірменських організацій.",
         ro: "Oferă acces direct la coșurile de sortare și la colectarea reciclabile organizațiilor armene.",
-        hy: "Հայկական կազմակերպություններին ապահովում է ուղղակի մուտք դեպի տեսակավորման աղբամաններ և վերամշակվող պիկապ։"
+        hy: "Հայկական կազմակերպություններին ապահովում է ուղղակի մուտք դեպի տեսակավորման աղբամաններ և վերամշակվող նյութերի հավաքման ծառայություն։"
       },
     about:
       {
@@ -4879,7 +4879,7 @@ const toolCatalogue = [
         en: "The RecyClass Aluminium Tool is a free online self-assessment platform, published by RecyClass with CIRCPACK (Veolia), that lets brands evaluate aluminium packaging recyclability against the RecyClass recyclability methodology, aligned with EN 13430. Users work through five steps: describing the packaging, confirming eligibility (mainly aluminium by weight, accepted in household collection), selecting packaging type and characteristics (cans, bottles, foil, thickness, sortability), and entering total versus aluminium net weight to calculate a mass-balance ratio. || The tool then assigns a class: A (95%+ recyclable content), B (80 to 95%), C (70 to 80%), or Not Recyclable (below 70%). It's meant as a design and screening aid, not certification. RecyClass notes the output can support evidence for the EU's PPWR (Regulation 2025/40) but isn't sufficient proof of conformity on its own; independent third-party certification is still required.",
         uk: "Інструмент RecyClass Aluminium – це безкоштовна онлайн-платформа для самооцінювання, опублікована RecyClass спільно з CIRCPACK (Veolia), яка дозволяє брендам оцінювати придатність алюмінієвого паковання до перероблення відповідно до методології придатності до перероблення RecyClass, узгодженої зі стандартом EN 13430. Користувачі проходять п’ять кроків: опис паковання, підтвердження відповідності критеріям (переважно алюміній за масою, приймається під час роздільного збирання побутових відходів), вибір типу та характеристик паковання (банки, пляшки, фольга, товщина, сортованість), а також введення загальної маси та чистої маси алюмінію для розрахунку матеріального балансу. || Після цього інструмент присвоює клас: A (понад 95% матеріалу, придатного до перероблення), B (від 80 до 95%), C (від 70 до 80%) або «Не придатне до перероблення» (менше 70%). Інструмент призначений для допомоги в проєктуванні та первинній перевірці, а не для сертифікації. RecyClass зазначає, що отримані результати можуть слугувати підтвердженням відповідності вимогам Регламенту ЄС щодо паковання та відходів паковання (PPWR, Регламент 2025/40), проте не є самодостатнім підтвердженням відповідності; для цього обов'язковою залишається незалежна сертифікація третьою стороною.",
         ro: "Instrumentul RecyClass Aluminium este o platformă online gratuită de autoevaluare, publicată de RecyClass cu CIRCPACK (Veolia), care permite mărcilor să evalueze reciclabilitatea ambalajelor din aluminiu în raport cu metodologia de reciclare RecyClass, aliniată cu EN 13430. Utilizatorii parcurg cinci pași: descrierea ambalajului, confirmarea eligibilității ambalajului, confirmarea eligibilității în casă, acceptarea greutății aluminiului în gospodărie. tipul și caracteristicile (cutii, sticle, folie, grosime, sortabilitate) și introducerea greutății totale în raport cu greutatea netă a aluminiului pentru a calcula un raport masă-bilanț. || Instrumentul atribuie apoi o clasă: A (95% + conținut reciclabil), B (80 până la 95%), C (70 până la 80%) sau Nereciclabil (sub 70%). Este conceput ca un ajutor de proiectare și screening, nu de certificare. RecyClass observă că rezultatul poate susține dovezi pentru PPWR al UE (Regulamentul 2025/40), dar nu reprezintă o dovadă suficientă a conformității în sine; este încă necesară certificarea independentă de la terți.",
-        hy: "RecyClass Aluminum Tool-ը անվճար առցանց ինքնագնահատման հարթակ է, որը հրապարակվել է RecyClass-ի կողմից CIRCPACK-ով (Veolia), որը թույլ է տալիս բրենդներին գնահատել ալյումինե փաթեթավորման վերամշակելիությունը RecyClass վերամշակման մեթոդաբանության հետ՝ համահունչ EN 13430-ին: Օգտագործողները աշխատում են հինգ քայլով. փաթեթավորման տեսակը և բնութագրերը (բանկաներ, շշեր, փայլաթիթեղ, հաստություն, տեսակավորելիություն) և մուտքագրելով ընդհանուր և ալյումինի զուտ քաշը՝ զանգված-բալանսի հարաբերակցությունը հաշվարկելու համար։ || Այնուհետև գործիքը նշանակում է դաս՝ A (95%+ վերամշակելի բովանդակություն), B (80-ից 95%), C (70-ից 80%) կամ Not Recyclable (70%-ից ցածր): Այն նախատեսված է որպես նախագծման և զննման օգնություն, այլ ոչ թե հավաստագրում: RecyClass-ը նշում է, որ արդյունքը կարող է աջակցել ԵՄ-ի PPWR-ի (Կանոնակարգ 2025/40) ապացույցներին, սակայն ինքնին համապատասխանության բավարար ապացույց չէ. անկախ երրորդ կողմի հավաստագրումը դեռևս պահանջվում է։:"
+        hy: "RecyClass Aluminum Tool-ը անվճար առցանց ինքնագնահատման հարթակ է, որը հրապարակվել է RecyClass-ի կողմից CIRCPACK-ով (Veolia), որը թույլ է տալիս բրենդներին գնահատել ալյումինե փաթեթավորման վերամշակելիությունը RecyClass վերամշակման մեթոդաբանության հետ՝ համահունչ EN 13430-ին: Օգտագործողները աշխատում են հինգ քայլով. փաթեթավորման տեսակը և բնութագրերը (բանկաներ, շշեր, փայլաթիթեղ, հաստություն, տեսակավորելիություն) և մուտքագրելով ընդհանուր և ալյումինի զուտ քաշը՝ զանգված-բալանսի հարաբերակցությունը հաշվարկելու համար։ || Այնուհետև գործիքը նշանակում է դաս՝ A (95%+ վերամշակելի բովանդակություն), B (80-ից 95%), C (70-ից 80%) կամ Not Recyclable (70%-ից ցածր): Այն նախատեսված է որպես նախագծման և զննման օգնություն, այլ ոչ թե հավաստագրում: RecyClass-ը նշում է, որ արդյունքը կարող է աջակցել ԵՄ-ի PPWR-ի (Կանոնակարգ 2025/40) ապացույցներին, սակայն ինքնին համապատասխանության բավարար ապացույց չէ. անկախ երրորդ կողմի հավաստագրումը դեռևս պահանջվում է։"
       },
     journeyPhases: ['Assess'],
     sector: 'Cross-sector',
@@ -5017,7 +5017,7 @@ const toolCatalogue = [
         en: "The PROTEUS Product-Service System Tool Book helps teams explore how products and services can be combined into new value propositions. Rather than focusing only on selling more physical products, product-service systems focus on the outcome or value a customer needs and consider which combination of products, services and relationships can deliver it. || The workbook brings together 11 tools covering areas such as the business ecosystem, user activities, product lifecycles, service design, total cost of ownership and concept evaluation. The tools can be used individually or combined within a structured process moving from analysing the current situation, to defining priorities, developing concepts and evaluating the most promising options.",
         uk: "PROTEUS Product-Service System Tool Book допомагає командам дослідити, як поєднувати товари та послуги у нові ціннісні пропозиції. Замість зосередження виключно на продажу більшої кількості матеріальних продуктів, системи «продукт-послуга» фокусуються на результаті або цінності, якої потребує клієнт, і визначають, яка саме комбінація виробів, послуг і взаємовідносин здатна це забезпечити. || Робочий зошит містить 11 інструментів, що охоплюють такі сфери, як бізнес-екосистема, діяльність користувачів, життєві цикли продукції, проєктування послуг, сукупна вартість володіння та оцінювання концепцій. Інструменти можна використовувати окремо або комбінувати в межах структурованого процесу: від аналізу поточної ситуації до визначення пріоритетів, розроблення концепцій та оцінювання найбільш перспективних варіантів",
         ro: "Cartea de instrumente PROTEUS Product-Service System ajută echipele să exploreze modul în care produsele și serviciile pot fi combinate în noi propuneri de valoare. În loc să se concentreze doar pe vânzarea mai multor produse fizice, sistemele de produse-servicii se concentrează pe rezultatul sau valoarea de care are nevoie clientul și iau în considerare ce combinație de produse, servicii și relații o poate oferi. || Caietul de lucru reunește 11 instrumente care acoperă domenii precum ecosistemul de afaceri, activitățile utilizatorilor, ciclurile de viață ale produselor, proiectarea serviciilor, costul total de proprietate și evaluarea conceptului. Instrumentele pot fi utilizate individual sau combinate în cadrul unui proces structurat trecând de la analiza situației actuale, la definirea priorităților, dezvoltarea conceptelor și evaluarea celor mai promițătoare opțiuni.",
-        hy: "PROTEUS Product-Service System Tool Book-ն օգնում է թիմերին բացահայտել, թե ինչպես կարելի է ապրանքներն ու ծառայությունները միավորել նոր արժեքային առաջարկների մեջ: Ավելի շատ ֆիզիկական ապրանքներ վաճառելու վրա կենտրոնանալու փոխարեն՝ ապրանք-ծառայության համակարգերը կենտրոնանում են արդյունքի կամ գնահատելու հաճախորդի կարիքների վրա և հաշվի են առնում, թե ապրանքների, ծառայությունների և հարաբերությունների որ համակցությունը կարող է ապահովել այն։ || Աշխատանքային գրքույկը միավորում է 11 գործիքներ, որոնք ընդգրկում են այնպիսի ոլորտներ, ինչպիսիք են բիզնեսի էկոհամակարգը, օգտագործողների գործունեությունը, արտադրանքի կյանքի ցիկլերը, ծառայության ձևավորումը, սեփականության ընդհանուր արժեքը և հայեցակարգի գնահատումը: Գործիքները կարող են օգտագործվել առանձին կամ համակցված կառուցվածքային գործընթացում, որն անցնում է ներկա իրավիճակի վերլուծությունից, առաջնահերթությունների սահմանմանը, հայեցակարգերի մշակմանը և ամենահեռանկարային տարբերակների գնահատմանը։"
+        hy: "PROTEUS Product-Service System Tool Book-ն օգնում է թիմերին բացահայտել, թե ինչպես կարելի է ապրանքներն ու ծառայությունները միավորել նոր արժեքային առաջարկների մեջ: Ավելի շատ ֆիզիկական ապրանքներ վաճառելու վրա կենտրոնանալու փոխարեն՝ ապրանք-ծառայության համակարգերը կենտրոնանում են արդյունքի կամ գնահատելու հաճախորդի կարիքների վրա և հաշվի են առնում, թե ապրանքների, ծառայությունների և հարաբերությունների որ համակցությունը կարող է ապահովել այն։ || Աշխատանքային գրքույկը միավորում է 11 գործիքներ, որոնք ընդգրկում են այնպիսի ոլորտներ, ինչպիսիք են բիզնեսի էկոհամակարգը, օգտագործողների գործունեությունը, արտադրանքի կենսապտույտերը, ծառայության ձևավորումը, սեփականության ընդհանուր արժեքը և հայեցակարգի գնահատումը: Գործիքները կարող են օգտագործվել առանձին կամ համակցված կառուցվածքային գործընթացում, որն անցնում է ներկա իրավիճակի վերլուծությունից, առաջնահերթությունների սահմանմանը, հայեցակարգերի մշակմանը և ամենահեռանկարային տարբերակների գնահատմանը։"
       },
     journeyPhases: ['Explore', 'Evaluate'],
     sector: 'Manufacturing',
@@ -5049,7 +5049,7 @@ const toolCatalogue = [
         en: "Structured product-service system concepts, supported by a better understanding of customer needs, lifecycle opportunities, stakeholders, value creation and business implications.",
         uk: "Структуровані концепції систем «продукт-послуга», підкріплені глибшим розумінням потреб клієнтів, можливостей життєвого циклу, зацікавлених сторін, створення цінності та бізнес-наслідків",
         ro: "Concepte structurate de sistem produs-serviciu, susținute de o mai bună înțelegere a nevoilor clienților, oportunităților ciclului de viață, părților interesate, crearea de valoare și implicațiile de afaceri.",
-        hy: "Կառուցվածքային արտադրանք-ծառայության համակարգի հայեցակարգեր, որոնք աջակցում են հաճախորդների կարիքների, կյանքի ցիկլի հնարավորությունների, շահագրգիռ կողմերի, արժեքի ստեղծման և բիզնեսի հետևանքների ավելի լավ ըմբռնմամբ:"
+        hy: "Կառուցվածքային արտադրանք-ծառայության համակարգի հայեցակարգեր, որոնք աջակցում են հաճախորդների կարիքների, կենսապտույտի հնարավորությունների, շահագրգիռ կողմերի, արժեքի ստեղծման և բիզնեսի հետևանքների ավելի լավ ըմբռնմամբ։"
       },
     bestFor:
       {
@@ -5080,7 +5080,7 @@ const toolCatalogue = [
         en: "To understand your current value chain and identify where circular opportunities may exist.",
         uk: "Для розуміння Вашого поточного ланцюга створення цінності та визначення потенційних циркулярних можливостей.",
         ro: "Pentru a înțelege lanțul valoric actual și a identifica unde pot exista oportunități circulare.",
-        hy: "Օգնում է հասկանալ ձեր արժեշղթայի ներկայիս կառուցվածքը և բացահայտել այն օղակներն ու ուղղությունները, որտեղ հնարավորություններ կան շրջանաձև տնտեսության սկզբունքների կիրառման համար։"
+        hy: "Հասկանալու ձեր ընթացիկ արժեքային շղթան և պարզելու, թե որտեղ կարող են լինել շրջանաձև հնարավորություններ։"
       },
     about:
       {
@@ -5152,7 +5152,7 @@ const toolCatalogue = [
         en: "To understand user needs, behaviours and barriers before designing circular solutions.",
         uk: "Для розуміння потреб, моделей поведінки та бар'єрів користувачів перед розробленням циркулярних рішень.",
         ro: "Pentru a înțelege nevoile, comportamentele și barierele utilizatorilor înainte de a proiecta soluții circulare.",
-        hy: "Օգնում է բացահայտել օգտատերերի կարիքները, վարքագիծը և առկա խոչընդոտները՝ նախքան շրջանաձև լուծումների մշակումը։"
+        hy: "Օգնում է հասկանալ օգտագործողի կարիքները, վարքագիծը և խոչընդոտները՝ նախքան շրջանաձև լուծումներ մշակելը։"
       },
     about:
       {
@@ -5224,7 +5224,7 @@ const toolCatalogue = [
         en: "To assess the circularity, opportunities and financing risks of a circular project.",
         uk: "Інструмент для оцінювання циркулярності, можливостей та фінансових ризиків циркулярного проєкту.",
         ro: "Pentru a evalua circularitatea, oportunitățile și riscurile de finanțare ale unui proiect circular.",
-        hy: "Օգնում է գնահատել շրջանաձև տնտեսությանն ուղղված նախագծի շրջանաձևության մակարդակը, առկա հնարավորությունները և ֆինանսավորման հետ կապված ռիսկերը։"
+        hy: "Շրջանաձև ծրագրի շրջանակայինությունը, հնարավորությունները և ֆինանսավորման ռիսկերը գնահատելու համար։"
       },
     about:
       {
@@ -5297,7 +5297,7 @@ const toolCatalogue = [
         en: "To turn assumptions about a new solution into clear experiments that can be tested.",
         uk: "Для перетворення припущень щодо нового рішення на чіткі експерименти, які можна перевірити на практиці.",
         ro: "Pentru a transforma ipotezele despre o nouă soluție în experimente clare care pot fi testate.",
-        hy: "Օգնում է նոր լուծման վերաբերյալ ենթադրությունները վերածել հստակ փորձարկումների, որոնց միջոցով հնարավոր է ստուգել դրանց հիմնավորվածությունը։"
+        hy: "Նոր լուծման մասին ենթադրությունները վերածել պարզ փորձերի, որոնք կարող են փորձարկվել։"
       },
     about:
       {
@@ -5370,7 +5370,7 @@ const toolCatalogue = [
         en: "To compare circular concepts and decide which ideas are worth pursuing.",
         uk: "Для порівняння циркулярних концепцій та прийняття рішень щодо доцільності впровадження ідей.",
         ro: "Pentru a compara concepte circulare și a decide ce idei merită urmărite.",
-        hy: "Օգնում է համեմատել շրջանաձև լուծումների հայեցակարգերը և որոշել, թե որ գաղափարներն են նպատակահարմար հետագա մշակման և իրականացման համար։"
+        hy: "Համեմատել շրջանաձև հասկացությունները և որոշել, թե որ գաղափարներն են արժե հետապնդել։"
       },
     about:
       {
@@ -5443,14 +5443,14 @@ const toolCatalogue = [
         en: "To plan a real-world pilot and test whether a circular solution can work in practice.",
         uk: "Для планування реального пілотного проєкту та перевірки життєздатності циркулярного рішення на практиці.",
         ro: "Pentru a planifica un pilot în lumea reală și a testa dacă o soluție circulară poate funcționa în practică.",
-        hy: "Օգնում է պլանավորել իրական պայմաններում իրականացվող փորձնական ծրագիր (պիլոտային ծրագիր) և ստուգել, թե արդյոք շրջանաձև լուծումը գործնականում կենսունակ և կիրառելի է։"
+        hy: "Պլանավորել իրական աշխարհի օդաչու և ստուգել, ​​թե արդյոք շրջանաձև լուծումը կարող է գործնականում աշխատել։"
       },
     about:
       {
         en: "The Circular Pilot Canvas helps your team turn a promising circular concept into a structured real-world pilot. It is designed around three fundamental questions: Is there demand for the solution? Is the circular business model worthwhile? And can the organisations involved actually deliver it? || The canvas brings these questions together across value proposition, circular business model, and feasibility and readiness. The team defines what the pilot will test, who needs to participate, what value the solution creates, how circularity will be measured and how responsibilities are distributed.",
         uk: "Circular Pilot Canvas допомагає Вашій команді перетворити перспективну циркулярну концепцію на структурований реальний пілотний проєкт. Вона побудована навколо трьох засадничих питань: чи існує попит на це рішення? чи доцільна циркулярна бізнес-модель? та чи здатні залучені організації дійсно його реалізувати? || Канва об'єднує ці питання за напрямами ціннісної пропозиції, циркулярної бізнес-моделі, а також здійсненності та готовності. Команда визначає, що саме тестуватиме пілот, хто має взяти участь, яку цінність створює рішення, як вимірюватиметься циркулярність та як розподіляються обов'язки.",
         ro: "Circular Pilot Canvas vă ajută echipa să transforme un concept circular promițător într-un pilot structurat din lumea reală. Este conceput în jurul a trei întrebări fundamentale: Există cerere pentru soluție? Merită modelul de afaceri circular? Și pot organizațiile implicate să-l livreze? || Pânza reunește aceste întrebări prin propunerea de valoare, modelul de afaceri circular și fezabilitate și pregătire. Echipa definește ce va testa pilotul, cine trebuie să participe, ce valoare creează soluția, cum va fi măsurată circularitatea și cum sunt distribuite responsabilitățile.",
-        hy: "Circular Pilot Canvas-ն օգնում է ձեր թիմին խոստումնալից շրջանաձև հայեցակարգը վերածել կառուցվածքային իրական աշխարհի օդաչուի: Այն նախագծված է երեք հիմնարար հարցի շուրջ. կա՞ լուծման պահանջարկ: Արժե՞ արդյոք շրջանաձև բիզնես մոդելը: Իսկ ներգրավված կազմակերպությունները կարո՞ղ են իրականում մատուցել այն։ || Կտավը միավորում է այս հարցերը արժեքային առաջարկի, շրջանաձև բիզնես մոդելի և իրագործելիության և պատրաստակամության վերաբերյալ: Թիմը սահմանում է, թե ինչ է փորձարկելու օդաչուն, ով պետք է մասնակցի, ինչ արժեք է ստեղծում լուծումը, ինչպես է չափվելու շրջանաձևությունը և ինչպես են բաշխվում պարտականությունները։"
+        hy: "Circular Pilot Canvas-ն օգնում է ձեր թիմին խոստումնալից շրջանաձև հայեցակարգը վերածել կառուցվածքային իրական աշխարհի օդաչուի: Այն նախագծված է երեք հիմնարար հարցի շուրջ. կա՞ լուծման պահանջարկ: Արժե՞ արդյոք շրջանաձև բիզնես մոդելը: Իսկ ներգրավված կազմակերպությունները կարո՞ղ են իրականում մատուցել այն։ || Ձևանմուշը միավորում է այս հարցերը արժեքային առաջարկի, շրջանաձև բիզնես մոդելի և իրագործելիության և պատրաստակամության վերաբերյալ: Թիմը սահմանում է, թե ինչ է փորձարկելու օդաչուն, ով պետք է մասնակցի, ինչ արժեք է ստեղծում լուծումը, ինչպես է չափվելու շրջանաձևությունը և ինչպես են բաշխվում պարտականությունները։"
       },
     journeyPhases: ['Evaluate','Implement'],
     placements: {
@@ -5658,7 +5658,7 @@ const toolCatalogue = [
         en: "Webpage introducing circular economy principles and their link to organic agriculture, with a downloadable introductory booklet.",
         uk: "Вебсторінка, що знайомить із принципами циркулярної економіки та їхнім зв’язком з органічним сільським господарством, із буклетом для завантаження.",
         ro: "Pagina web care prezintă principiile economiei circulare și legătura acestora cu agricultura ecologică, cu o broșură introductivă descărcabilă.",
-        hy: "Վեբէջ, որը ներկայացնում է շրջանաձև տնտեսության սկզբունքները և դրանց կապը օրգանական գյուղատնտեսության հետ, ինչպես նաև հնարավորություն է տալիս ներբեռնելու ներածական գրքույկ։"
+        hy: "Վեբ էջ, որը ներկայացնում է շրջանաձև տնտեսության սկզբունքները և դրանց կապը օրգանական գյուղատնտեսության հետ՝ ներբեռնվող ներածական գրքույկով։"
       },
     about:
       {
@@ -5706,7 +5706,7 @@ const toolCatalogue = [
         en: "Farmers, smallholders and agri-businesses new to circular economy concepts, particularly in organic and agricultural value chains.",
         uk: "Фермери, дрібні землевласники та агропідприємства, які тільки починають знайомитися з концепцією циркулярної економіки, особливо в ланцюгах створення вартості органічної та сільськогосподарської продукції",
         ro: "Fermierii, micii fermieri și agro-afacerile nou în conceptele economiei circulare, în special în lanțurile valorice organice și agricole.",
-        hy: "Ֆերմերները, մանր սեփականատերերը և ագրոբիզնեսները նոր են շրջագծային տնտեսության հայեցակարգերում, մասնավորապես օրգանական և գյուղատնտեսական արժեքների շղթաներում:"
+        hy: "Ֆերմերները, մանր սեփականատերերը և ագրոբիզնեսները նոր են շրջագծային տնտեսության հայեցակարգերում, մասնավորապես օրգանական և գյուղատնտեսական արժեքների շղթաներում։"
       },
     format: {
       en: "Downloadable PDF",
@@ -5730,7 +5730,7 @@ const toolCatalogue = [
         en: "Directory of training courses on organic agriculture and circular economy, including a dedicated circular economy course.",
         uk: "Каталог навчальних курсів з органічного сільського господарства та циркулярної економіки, зокрема спеціалізований курс із циркулярної економіки.",
         ro: "Cursuri de formare privind agricultura ecologică și economia circulară, inclusiv un curs dedicat economiei circulare.",
-        hy: "Օրգանական գյուղատնտեսության և շրջանաձև տնտեսության վերաբերյալ վերապատրաստման դասընթացների տեղեկատու, ներառյալ շրջանաձև տնտեսության վերաբեյալ հատուկ դասընթաց։"
+        hy: "Օրգանական գյուղատնտեսության և շրջանաձև տնտեսության վերաբերյալ վերապատրաստման դասընթացների տեղեկատու, ներառյալ շրջանաձև տնտեսության հատուկ դասընթաց։"
       },
     about:
       {
@@ -5802,7 +5802,7 @@ const toolCatalogue = [
         en: "To understand what different stakeholders gain or lose from a circular solution and identify opportunities for creating shared value.",
         uk: "Для розуміння того, що різні зацікавлені сторони отримують або втрачають від циркулярного рішення, та визначення можливостей для створення спільної цінності.",
         ro: "Pentru a înțelege ce câștigă sau pierde diferitele părți interesate dintr-o soluție circulară și să identifice oportunități de creare a valorii comune.",
-        hy: "Օգնում է հասկանալ, թե տարբեր շահագրգիռ կողմերն ինչ օգուտներ կամ կորուստներ կարող են ունենալ շրջանաձև լուծումների ներդրման արդյունքում, ինչպես նաև բացահայտել ընդհանուր արժեք ստեղծելու հնարավորությունները։"
+        hy: "Հասկանալ, թե տարբեր շահագրգիռ կողմեր ​​ինչ են շահում կամ կորցնում շրջանաձև լուծումից և բացահայտել ընդհանուր արժեք ստեղծելու հնարավորությունները։"
       },
     about:
       {
@@ -5875,7 +5875,7 @@ const toolCatalogue = [
         en: "To understand the stakeholders, relationships and flows surrounding your business.",
         uk: "Для розуміння зацікавлених сторін, взаємозв'язків і потоків навколо Вашого бізнесу.",
         ro: "Pentru a înțelege părțile interesate, relațiile și fluxurile din jurul afacerii.",
-        hy: "Օգնում է բացահայտել և հասկանալ ձեր բիզնեսը շրջապատող շահագրգիռ կողմերին, նրանց միջև փոխհարաբերությունները և ռեսուրսների ու տեղեկատվության հոսքերը։"
+        hy: "Հասկանալու շահագրգիռ կողմերին, հարաբերություններն ու հոսքերը, որոնք շրջապատում են ձեր բիզնեսը։"
       },
     about:
       {
@@ -5948,7 +5948,7 @@ const toolCatalogue = [
         en: "To turn a circular idea into a tangible prototype and test it with users before investing in full development.",
         uk: "Для перетворення циркулярної ідеї на відчутний прототип і його тестування з користувачами перед інвестуванням у повномасштабне розроблення.",
         ro: "Pentru a transforma o idee circulară într-un prototip tangibil și a o testa cu utilizatorii înainte de a investi în dezvoltarea completă.",
-        hy: "Օգնում է շրջանաձև գաղափարը վերածել շոշափելի նախատիպի և փորձարկել այն օգտատերերի հետ՝ նախքան ամբողջական մշակման գործընթացում ներդրումներ կատարելը։"
+        hy: "Շրջանաձև գաղափարը շոշափելի նախատիպի վերածելու և այն օգտատերերի հետ փորձարկելու համար նախքան ամբողջական զարգացման մեջ ներդրումներ կատարելը։"
       },
     about:
       {
@@ -6021,14 +6021,14 @@ const toolCatalogue = [
         en: "Life Cycle Assessment (LCA)-based environmental impact measurement platform for textiles and apparel products.",
         uk: "Платформа для вимірювання впливу на довкілля текстильних виробів та одягу на основі оцінювання життєвого циклу.",
         ro: "Platformă de măsurare a impactului asupra mediului bazată pe evaluarea ciclului de viață (LCA) pentru textile și produse de îmbrăcăminte.",
-        hy: "Տեքստիլ և հագուստի արտադրանքի շրջակա միջավայրի վրա ազդեցության գնահատման հարթակ՝ հիմնված կենսափուլի գնահատման (LCA) մեթոդաբանության վրա։"
+        hy: "Կյանքի ցիկլի գնահատման (LCA) վրա հիմնված շրջակա միջավայրի վրա ազդեցության չափման հարթակ տեքստիլի և հագուստի արտադրանքի համար։"
       },
     about:
       {
         en: "bAwear Score is a platform for measuring environmental impacts in textiles and apparel. It calculates product-level results using Life Cycle Assessment (LCA), based on the ReCiPe 2016 Midpoint method and aligned with International Organization for Standardization (ISO) 14040/14044. The platform can be used to compare material and process options, identify the life cycle stages with the highest impact, support greenhouse gas reporting and prepare for upcoming EU product information requirements. || The platform includes Quick Score for indicative results and Expert studies for detailed assessments using primary supplier data. Results can be used by product development, sourcing, sustainability, corporate social responsibility and quality teams to make design and sourcing decisions based on measured data rather than assumptions.",
         uk: "bAwear Score – це платформа для вимірювання впливу на довкілля у сфері виробництва текстилю та одягу. Вона розраховує показники на рівні продукції за допомогою методології оцінювання життєвого циклу на основі методу ReCiPe 2016 Midpoint та відповідно до стандартів Міжнародної організації зі стандартизації (ISO) 14040/14044. Платформу можна використовувати для порівняння варіантів матеріалів і процесів, визначення етапів життєвого циклу з найбільшим впливом, підтримки звітності щодо викидів парникових газів та підготовки до майбутніх вимог ЄС щодо надання інформації про продукцію. || Платформа містить модуль швидкого оцінювання Quick Score для отримання орієнтовних результатів та експертні дослідження Expert для детального оцінювання з використанням первинних даних постачальників. Результати можуть застосовуватися командами з розроблення продукції, закупівель, сталого розвитку, корпоративної соціальної відповідальності та контролю якості для ухвалення рішень щодо дизайну та постачання на основі виміряних даних, а не припущень.",
         ro: "bAwear Score este o platformă pentru măsurarea impactului asupra mediului în textile și îmbrăcăminte. Acesta calculează rezultatele la nivel de produs utilizând Evaluarea ciclului de viață (LCA), pe baza metodei ReCiPe 2016 Midpoint și aliniată cu Organizația Internațională pentru Standardizare (ISO) 14040/14044. Platforma poate fi utilizată pentru a compara opțiunile de materiale și proces, pentru a identifica etapele ciclului de viață cu cel mai mare impact, pentru a sprijini raportarea gazelor cu efect de seră și pentru a se pregăti pentru viitoarele cerințe UE privind informațiile despre produse. || Platforma include Quick Score pentru rezultate orientative și studii de experți pentru evaluări detaliate folosind datele furnizorilor primari. Rezultatele pot fi folosite de echipele de dezvoltare a produselor, aprovizionare, sustenabilitate, responsabilitate socială corporativă și calitate pentru a lua decizii de proiectare și aprovizionare bazate mai degrabă pe date măsurate decât pe ipoteze.",
-        hy: "bAwear Score-ը տեքստիլի և հագուստի շրջակա միջավայրի վրա ազդեցությունները չափելու հարթակ է: Այն հաշվարկում է արտադրանքի մակարդակի արդյունքները՝ օգտագործելով Կյանքի ցիկլի գնահատումը (LCA), որը հիմնված է ReCiPe 2016 Midpoint մեթոդի վրա և համապատասխանեցված Ստանդարտացման միջազգային կազմակերպության (ISO) 14040/14044-ին: Պլատֆորմը կարող է օգտագործվել նյութերի և գործընթացների տարբերակները համեմատելու, կյանքի ցիկլի ամենաբարձր ազդեցությունն ունեցող փուլերը բացահայտելու, ջերմոցային գազերի հաշվետվություններին աջակցելու և ԵՄ արտադրանքի վերաբերյալ առաջիկա տեղեկատվության պահանջներին նախապատրաստվելու համար։ || ՊՊլատֆորմը ներառում է Quick Score ցուցիչ արդյունքների համար և Փորձագիտական ուսումնասիրություններ մանրամասն գնահատումների համար՝ օգտագործելով առաջնային մատակարարի տվյալները: Արդյունքները կարող են օգտագործվել արտադրանքի զարգացման, աղբյուրների, կայունության, կորպորատիվ սոցիալական պատասխանատվության և որակի թիմերի կողմից՝ նախագծման և աղբյուրների վերաբերյալ որոշումներ կայացնելու համար՝ հիմնվելով չափված տվյալների վրա, այլ ոչ թե ենթադրությունների վրա։"
+        hy: "bAwear Score-ը տեքստիլի և հագուստի շրջակա միջավայրի վրա ազդեցությունները չափելու հարթակ է: Այն հաշվարկում է արտադրանքի մակարդակի արդյունքները՝ օգտագործելով Կյանքի ցիկլի գնահատումը (LCA), որը հիմնված է ReCiPe 2016 Midpoint մեթոդի վրա և համապատասխանեցված Ստանդարտացման միջազգային կազմակերպության (ISO) 14040/14044-ին: Պլատֆորմը կարող է օգտագործվել նյութերի և գործընթացների տարբերակները համեմատելու, կենսապտույտի ամենաբարձր ազդեցությունն ունեցող փուլերը բացահայտելու, ջերմոցային գազերի հաշվետվություններին աջակցելու և ԵՄ արտադրանքի վերաբերյալ առաջիկա տեղեկատվության պահանջներին նախապատրաստվելու համար։ || Պլատֆորմը ներառում է Quick Score ցուցիչ արդյունքների համար և Փորձագիտական ​​ուսումնասիրություններ մանրամասն գնահատումների համար՝ օգտագործելով առաջնային մատակարարի տվյալները: Արդյունքները կարող են օգտագործվել արտադրանքի զարգացման, աղբյուրների, կայունության, կորպորատիվ սոցիալական պատասխանատվության և որակի թիմերի կողմից՝ նախագծման և աղբյուրների վերաբերյալ որոշումներ կայացնելու համար՝ հիմնվելով չափված տվյալների վրա, այլ ոչ թե ենթադրությունների վրա։"
       },
     journeyPhases: ['Evaluate', 'Monitor'],
     placements: {
@@ -6065,7 +6065,7 @@ const toolCatalogue = [
         en: "Product impact profile across impact categories, results split by life cycle stage, comparison against a reference product and an exportable report.",
         uk: "Профіль впливу продукту за категоріями впливу, результати з розподілом за етапами життєвого циклу, порівняння з еталонним продуктом і звіт для експорту",
         ro: "Profilul de impact al produsului pe categorii de impact, rezultatele împărțite pe etape ciclului de viață, comparație cu un produs de referință și un raport exportabil.",
-        hy: "Արտադրանքի ազդեցության պրոֆիլը ազդեցության կատեգորիաների վրա, արդյունքները բաժանված ըստ կյանքի ցիկլի փուլերի, համեմատություն տեղեկատու արտադրանքի հետ և արտահանվող հաշվետվություն։"
+        hy: "Արտադրանքի ազդեցության պրոֆիլը ազդեցության կատեգորիաների վրա, արդյունքները բաժանված ըստ կենսապտույտի փուլերի, համեմատություն տեղեկատու արտադրանքի հետ և արտահանվող հաշվետվություն։"
       },
     bestFor:
       {
@@ -6096,14 +6096,14 @@ const toolCatalogue = [
         en: "A circularity calculator that measures how effectively a product keeps its materials in use throughout its life cycle.",
         uk: "Калькулятор циркулярності, який вимірює, наскільки ефективно матеріали виробу утримуються у використанні протягом його життєвого циклу.",
         ro: "Un calculator de circularitate care măsoară cât de eficient un produs își menține materialele în uz pe tot parcursul ciclului său de viață.",
-        hy: "Շրջանաձևության հաշվիչ, որը չափում է, թե որքան արդյունավետ է արտադրանքը օգտագործում իր նյութերն իր կենսափուլի  ընթացքում։"
+        hy: "Շրջանաձևության հաշվիչ, որը չափում է, թե որքան արդյունավետ է արտադրանքը օգտագործում իր նյութերն իր կենսապտույտի ընթացքում։"
       },
     about:
       {
         en: "The Material Circularity Indicator (MCI) Calculator helps assess how effectively materials are kept in use throughout a product life cycle. The Material Circularity Indicator (MCI) score runs from 0% for a fully linear product to 100% for a fully circular product. It can support product design decisions, circular economy performance reporting, benchmarking and procurement decisions. || The tool includes a trial version for comparing scenarios, benchmarking performance and testing the concept. A professional version provides expanded functionality for decision-grade results and stronger support for external claims. Editors should note that the source document did not include the tool URL; the link used here is the official Thinkstep ANZ calculator page.",
         uk: "Калькулятор індикатора циркулярності матеріалів допомагає оцінити, наскільки ефективно матеріали утримуються у використанні протягом життєвого циклу виробу. Показник індикатора циркулярності матеріалів варіюється від 0% для повністю лінійного продукту до 100% для повністю циркулярного. Він може підтримувати ухвалення рішень щодо дизайну продукції, звітність про результативність у сфері циркулярної економіки, порівняльний аналіз (бенчмаркінг) та закупівельні рішення. || Інструмент містить пробну версію для порівняння сценаріїв, порівняльного аналізу ефективності та тестування концепції. Професійна версія забезпечує розширену функціональність для отримання результатів експертного рівня, придатних для ухвалення управлінських рішень та надійного підтвердження публічних заяв. Редактори наголошують, що вихідний документ не містив URL-адреси інструмента; наведене тут посилання веде на офіційну сторінку калькулятора Thinkstep ANZ.",
         ro: "Calculatorul indicatorului de circularitate a materialelor (MCI) ajută la evaluarea cât de eficient sunt păstrate materialele în uz pe parcursul ciclului de viață al produsului. Scorul indicatorului de circularitate a materialului (MCI) variază de la 0% pentru un produs complet liniar la 100% pentru un produs complet circular. Poate sprijini deciziile de proiectare a produselor, raportarea performanței economiei circulare, evaluarea comparativă și deciziile de achiziții. || Instrumentul include o versiune de probă pentru compararea scenariilor, evaluarea performanței și testarea conceptului. O versiune profesională oferă funcționalitate extinsă pentru rezultate de grad de decizie și suport mai puternic pentru revendicările externe. Editorii ar trebui să rețină că documentul sursă nu a inclus URL-ul instrumentului; linkul folosit aici este pagina oficială a calculatorului Thinkstep ANZ.",
-        hy: "Նյութերի շրջանաձևության ցուցիչի (MCI) հաշվիչը օգնում է գնահատել, թե որքան արդյունավետ են նյութերը օգտագործվում արտադրանքի կյանքի ցիկլի ընթացքում: Նյութական շրջանաձևության ցուցիչի (MCI) միավորը տատանվում է 0%-ից լրիվ գծային արտադրանքի համար մինչև 100% լրիվ շրջանաձև արտադրանքի համար: Այն կարող է աջակցել արտադրանքի նախագծման որոշումներին, շրջանաձև տնտեսության կատարողականի հաշվետվություններին, չափորոշիչներին և գնումների որոշումներին։ || Գործիքը ներառում է փորձնական տարբերակ՝ սցենարները համեմատելու, կատարողականի չափորոշիչի և հայեցակարգի փորձարկման համար: Պրոֆեսիոնալ տարբերակը ապահովում է ընդլայնված գործունակություն որոշման արդյունքների համար և ավելի ուժեղ աջակցություն արտաքին պահանջների համար: Խմբագիրները պետք է ուշադրություն դարձնեն, որ սկզբնական փաստաթուղթը չի ներառում գործիքի URL-ը. Այստեղ օգտագործվող հղումը Thinkstep ANZ հաշվիչի պաշտոնական էջն է։"
+        hy: "Նյութերի շրջանաձևության ցուցիչի (MCI) հաշվիչը օգնում է գնահատել, թե որքան արդյունավետ են նյութերը օգտագործվում արտադրանքի կենսապտույտի ընթացքում: Նյութական շրջանաձևության ցուցիչի (MCI) միավորը տատանվում է 0%-ից լրիվ գծային արտադրանքի համար մինչև 100% լրիվ շրջանաձև արտադրանքի համար: Այն կարող է աջակցել արտադրանքի նախագծման որոշումներին, շրջանաձև տնտեսության կատարողականի հաշվետվություններին, չափորոշիչներին և գնումների որոշումներին։ || Գործիքը ներառում է փորձնական տարբերակ՝ սցենարները համեմատելու, կատարողականի չափորոշիչի և հայեցակարգի փորձարկման համար: Պրոֆեսիոնալ տարբերակը ապահովում է ընդլայնված գործունակություն որոշման արդյունքների համար և ավելի ուժեղ աջակցություն արտաքին պահանջների համար: Խմբագիրները պետք է ուշադրություն դարձնեն, որ սկզբնական փաստաթուղթը չի ներառում գործիքի URL-ը. Այստեղ օգտագործվող հղումը Thinkstep ANZ հաշվիչի պաշտոնական էջն է։"
       },
     journeyPhases: ['Evaluate', 'Monitor'],
     placements: {
@@ -6124,21 +6124,21 @@ const toolCatalogue = [
         en: "1-3 hours if the bill of materials and product life cycle inputs are ready, including time to interpret the results.",
         uk: "1-3 години за умови готовності відомості матеріалів та вхідних даних щодо життєвого циклу виробу, включно з часом на інтерпретацію результатів",
         ro: "1-3 ore dacă lista de materiale și intrările ciclului de viață al produsului sunt gata, inclusiv timpul pentru interpretarea rezultatelor.",
-        hy: "1-3 ժամ, եթե նյութերի հաշիվը և արտադրանքի կյանքի ցիկլի տվյալները պատրաստ են, ներառյալ արդյունքները մեկնաբանելու ժամանակը։"
+        hy: "1-3 ժամ, եթե նյութերի հաշիվը և արտադրանքի կենսապտույտի տվյալները պատրաստ են, ներառյալ արդյունքները մեկնաբանելու ժամանակը։"
       },
     preparationNeeded:
       {
         en: "Prepare a bill of materials and product life cycle data, including material types, quantities, product destination and relevant inflows and outflows.",
         uk: "Підготуйте відомість матеріалів та дані щодо життєвого циклу виробу, зокрема типи матеріалів, їхню кількість, призначення виробу, а також відповідні вхідні та вихідні матеріальні потоки",
         ro: "Pregătiți o listă de materiale și date despre ciclul de viață al produsului, inclusiv tipurile de materiale, cantitățile, destinația produsului și intrările și ieșirile relevante.",
-        hy: "Պատրաստեք նյութերի և արտադրանքի կյանքի ցիկլի տվյալները, ներառյալ նյութերի տեսակները, քանակը, արտադրանքի նպատակակետը և համապատասխան ներհոսքերը և ելքերը։"
+        hy: "Պատրաստեք նյութերի և արտադրանքի կենսապտույտի տվյալները, ներառյալ նյութերի տեսակները, քանակը, արտադրանքի նպատակակետը և համապատասխան ներհոսքերը և ելքերը։"
       },
     output:
       {
         en: "Material Circularity Indicator (MCI) score, product circularity analysis, scenario comparison and identification of product-level hotspots.",
         uk: "Показник індикатора циркулярності матеріалів, аналіз циркулярності виробу, порівняння сценаріїв та визначення критичних точок (гарячих точок) на рівні продукції",
         ro: "Scorul indicatorului de circularitate material (MCI), analiza circularității produsului, compararea scenariilor și identificarea punctelor fierbinți la nivel de produs.",
-        hy: "Նյութի շրջանաձևության ցուցիչի (MCI) միավոր, արտադրանքի շրջանաձևության վերլուծություն, սցենարների համեմատություն և արտադրանքի մակարդակի թեժ կետերի նույնականացում։"
+        hy: "Նյութի շրջանաձևության ցուցիչի (MCI) միավոր, արտադրանքի շրջանաձևության վերլուծություն, սցենարների համեմատություն և արտադրանքի մակարդակի խնդրահարույց կետերի նույնականացում։"
       },
     bestFor:
       {
