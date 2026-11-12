@@ -8,13 +8,13 @@ export const cookieConsent = {
   title: {
     en: 'We use analytical cookies',
     uk: 'Ми використовуємо аналітичні cookies',
-    ro: 'Folosim cookie-uri de analiză',
+    ro: 'FOLOSIM COOKIE-URI DE ANALIZĂ',
     hy: 'Մենք օգտագործում ենք վերլուծական cookie-ներ'
   },
   text: {
     en: 'We use optional analytics cookies to understand how the Circular Economy Toolbox is used and improve the website. Analytics starts only if you accept. We do not use analytics to identify individual visitors.',
     uk: 'Ми використовуємо необов’язкові аналітичні cookies, щоб зрозуміти, як використовується Інструментарій циркулярної економіки, і покращувати сайт. Аналітика запускається лише після вашої згоди. Ми не використовуємо аналітику для ідентифікації окремих відвідувачів.',
-    ro: 'Folosim cookie-uri opționale de analiză pentru a înțelege cum este utilizat setul de instrumente pentru economia circulară și pentru a îmbunătăți site-ul. Analiza începe numai dacă accepți. Nu folosim analiza pentru a identifica vizitatori individuali.',
+    ro: 'Folosim cookie-uri opționale de analiză pentru a înțelege cum este utilizat Setul de instrumente pentru economia circulară și pentru a îmbunătăți site-ul. Analiza începe numai dacă accepți. Nu folosim analiza pentru a identifica vizitatori individuali.',
     hy: 'Մենք օգտագործում ենք ոչ պարտադիր վերլուծական cookie-ներ՝ հասկանալու համար, թե ինչպես է օգտագործվում Շրջանաձեւ տնտեսության գործիքակազմը եւ բարելավելու կայքը։ Վերլուծությունը սկսվում է միայն ձեր համաձայնությունից հետո։ Մենք վերլուծությունը չենք օգտագործում առանձին այցելուներին նույնականացնելու համար։'
   },
   acceptLabel: {
@@ -33,7 +33,7 @@ export const cookieConsent = {
   settingsLabel: {
     en: 'Cookie settings',
     uk: 'Налаштування cookies',
-    ro: 'Setări cookie',
+    ro: 'Setări cookie-uri',
     hy: 'Cookie կարգավորումներ'
   },
   //This is the yellow button to the left side ogf the page//
