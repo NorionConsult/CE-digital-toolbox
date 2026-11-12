@@ -29,8 +29,8 @@ export const foodAndAgricultureIntroSection = {
 // Recommended: choose one case from Armenia, one from Moldova, and one from Ukraine.
 export const foodAndAgricultureCasesSection = {
   id: 'case-examples',
-  title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Exemple de cazuri', hy: 'Օրինակներ' },
-  intro: { en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.', uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи застосовуються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, відвідайте сторінку «Добірка прикладів» та відфільтруйте матеріали за сектором продовольства та сільського господарства.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și practicile economiei circulare în afaceri reale. Pentru mai multe cazuri, vizitează pagina „Colecția de cazuri” și filtrează după sectorul alimentar și agricol.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ սննդի եւ գյուղատնտեսության ոլորտի։' },
+  title: { en: 'Case examples', uk: 'Приклади кейсів', ro: 'Studii de caz', hy: 'Օրինակներ' },
+  intro: { en: 'The following examples show how circular economy strategies and practices have been applied in real businesses. To explore more cases, visit the “Case Collection” page and filter by the food and agriculture sector to find all relevant cases.', uk: 'Наведені нижче приклади демонструють, як циркулярні стратегії та підходи застосовуються в реальному бізнесі. Щоб ознайомитися з іншими практичними прикладами, відвідайте сторінку «Добірка прикладів» та відфільтруйте матеріали за сектором продовольства та сільського господарства.', ro: 'Exemplele de mai jos arată cum au fost aplicate strategiile și principiile economiei circulare în afaceri reale. Pentru mai multe studii de caz, vizitează pagina „Colecția de cazuri” și filtrează după sectorul alimentar și agricol.', hy: 'Ստորեւ բերված օրինակները ցույց են տալիս, թե ինչպես են շրջանաձեւ տնտեսության ռազմավարություններն ու գործելակերպերը կիրառվել իրական բիզնեսներում։ Այլ օրինակներ դիտելու համար այցելեք «Օրինակների հավաքածու» էջ եւ զտեք ըստ սննդի եւ գյուղատնտեսության ոլորտի։' },
   featuredCaseNames: [
     'Banca de Alimente Moldova',
     'Permaculture in Armenia',
@@ -169,7 +169,7 @@ export const foodAndAgriculture = {
   imageAlt: { en: 'Food and Agriculture sector', uk: 'Сектор харчової промисловості та сільського господарства', ro: 'Sectorul alimentației și agriculturii', hy: 'Սննդի եւ գյուղատնտեսության ոլորտ' },
   navigation: [
     { label: { en: 'Introduction', uk: 'Вступ', ro: 'Introducere', hy: 'Ներածություն' }, sectionId: foodAndAgricultureIntroSection.id },
-    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Cazuri', hy: 'Օրինակներ' }, sectionId: foodAndAgricultureCasesSection.id },
+    { label: { en: 'Cases', uk: 'Практичні приклади', ro: 'Studii de caz', hy: 'Օրինակներ' }, sectionId: foodAndAgricultureCasesSection.id },
     { label: { en: 'Barriers & opportunities', uk: 'Бар´єри та можливості', ro: 'Bariere și oportunități', hy: 'Խոչընդոտներ եւ հնարավորություններ' }, sectionId: foodAndAgricultureBarriersSection.id },
     { label: { en: 'Relevant tools', uk: 'Рекомендовані інструменти', ro: 'Instrumente relevante', hy: 'Համապատասխան գործիքներ' }, sectionId: foodAndAgricultureRelevantToolsSection.id }
   ],

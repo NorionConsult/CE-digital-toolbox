@@ -10,7 +10,7 @@ import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils
 const phaseCard = {
   number: '01',
   slug: 'learn',
-  shortName: { en: 'Phase 1', uk: 'Етап 1', ro: 'Faza 1', hy: 'Փուլ 1' },
+  shortName: { en: 'Phase 1', uk: 'Етап 1', ro: 'Etapa 1', hy: 'Փուլ 1' },
   title: { en: 'Learn', uk: 'Навчання', ro: 'Învață', hy: 'Ծանոթանալ' },
   colourClass: 'phase-card-green',
   description: {
@@ -25,7 +25,7 @@ const hero = {
   intro: {
     en: 'This phase introduces the core concepts behind circular economy and resource efficient cleaner production. It is intended as a starting point for those who need a shared language and overview before selecting specific tools.',
     uk: 'Цей етап знайомить з ключовими концепціями циркулярної економіки та ресурсоефективного й чистого виробництва. Він слугує відправною точкою для тих, кому потрібно розібратися в базових термінах і отримати загальний огляд перед вибором конкретних інструментів.',
-    ro: 'Această fază introduce conceptele de bază ale economiei circulare și ale producției mai curate și eficiente în utilizarea resurselor. Este un punct de plecare pentru cei care au nevoie de un limbaj comun și o privire de ansamblu înainte de a alege instrumente specifice.',
+    ro: 'Această etapă introduce conceptele de bază ale economiei circulare și ale producției mai curate și eficiente în utilizarea resurselor. Este un punct de pornire pentru cei care au nevoie de un limbaj comun și o privire de ansamblu înainte de a alege instrumente specifice.',
     hy: 'Այս փուլը ներկայացնում է շրջանաձեւ տնտեսության եւ ռեսուրսաարդյունավետ մաքուր արտադրության հիմնական գաղափարները։ Այն մեկնարկային կետ է նրանց համար, ովքեր նախքան կոնկրետ գործիքներ ընտրելը կարիք ունեն ընդհանուր լեզվի եւ ակնարկի։'
   },
   icon: '/icons/phase-icons/icon-learn.png',
@@ -66,7 +66,7 @@ const pathwaySection = {
     {
       en: 'Afterwards, you can explore the practical tools and resources available to support your circular economy journey by following to the next phase in this Circular Economy Toolbox, exploring relevant sectors or accessing the tools and resources directly. The phases are designed to be flexible, allowing you to navigate through the content based on your specific needs and interests. Before you start, review your understanding of circular economy vs. linear economy.',
       uk: 'Після цього Ви зможете перейти до практичних інструментів і ресурсів для підтримки вашого циркулярного переходу: перейти до наступного етапу в цьому цифровому інструментарії, переглянути матеріали для вашої галузі або відкрити потрібні рішення безпосередньо в каталозі. Етапи розроблені гнучкими, що дає змогу обирати траєкторію відповідно до ваших потреб та інтересів. Перед початком пропонуємо порівняти принципи циркулярної та лінійної економіки.',
-      ro: 'Apoi poți explora instrumentele și resursele practice care sprijină parcursul tău către economia circulară: mergând la faza următoare, explorând sectoarele relevante sau accesând direct catalogul de instrumente. Fazele sunt flexibile, astfel încât să poți naviga în funcție de nevoile și interesele tale. Înainte de a începe, revizuiește diferența dintre economia circulară și economia liniară.',
+      ro: 'Apoi poți explora instrumentele și resursele practice care sprijină parcursul tău către economia circulară: mergând la etapa următoare, explorând sectoarele relevante sau accesând direct catalogul de instrumente. Etapele sunt flexibile, astfel încât să poți naviga în funcție de nevoile și interesele tale. Înainte de a începe, analizează diferența dintre economia circulară și economia liniară.',
       hy: 'Այնուհետեւ կարող եք ուսումնասիրել գործնական գործիքներն ու ռեսուրսները՝ անցնելով հաջորդ փուլին, դիտելով համապատասխան ոլորտները կամ անմիջապես բացելով գործիքների կատալոգը։ Փուլերը ճկուն են, որպեսզի կարողանաք շարժվել ձեր կարիքներին եւ հետաքրքրություններին համապատասխան։ Սկսելուց առաջ վերանայեք շրջանաձեւ եւ գծային տնտեսության տարբերությունը։'
     }
   ],
@@ -81,7 +81,7 @@ const pathwaySection = {
         {
           en: 'In contrast to a linear economy, which follows a “take, make, dispose” model, a circular economy aims to keep resources in use for as long as possible and minimise waste, environmental degradation, and climate impacts.',
           uk: 'На відміну від лінійної економіки, що працює за принципом «Візьми–зроби–викинь», циркулярна економіка прагне утримувати ресурси в обігу якомога довше та звести до мінімуму утворення відходів, навантаження на довкілля і вплив на клімат.',
-          ro: 'Spre deosebire de economia liniară, care urmează modelul „extrage, produce, aruncă”, economia circulară urmărește menținerea resurselor în uz cât mai mult timp și reducerea deșeurilor, degradării mediului și impacturilor climatice.',
+          ro: 'Spre deosebire de economia liniară, care urmează modelul „extrage, produce, aruncă”, economia circulară urmărește menținerea resurselor și materialelor în circuit cât mai mult timp, reducând în același timp generarea de deșeuri, presiunea asupra mediului și impactul asupra climei.',
           hy: 'Ի տարբերություն գծային տնտեսության, որը հետեւում է «վերցնել, արտադրել, թափել» մոդելին, շրջանաձեւ տնտեսությունը ձգտում է ռեսուրսները հնարավորինս երկար պահել օգտագործման մեջ եւ նվազեցնել թափոնները, շրջակա միջավայրի դեգրադացիան ու կլիմայական ազդեցությունները։'
         },
         {
@@ -136,12 +136,12 @@ const pathwaySection = {
 */
 const LearningresourcesSection = {
   id: 'learning-resources',
-  title: { en: 'E-courses and learning resources', uk: 'Онлайн-курси та навчальні ресурси', ro: 'Cursuri online și resurse de învățare', hy: 'Էլեկտրոնային դասընթացներ եւ ուսումնական ռեսուրսներ' },
+  title: { en: 'E-courses and learning resources', uk: 'Онлайн-курси та навчальні ресурси', ro: 'Resurse de învățare', hy: 'Էլեկտրոնային դասընթացներ եւ ուսումնական ռեսուրսներ' },
   paragraphs: [
     {
       en: 'Use this section to introduce the learning resources that can help you build a basic understanding before you continue into the more practical journey phases.',
       uk: 'У цьому розділі зібрано навчальні матеріали, які допоможуть сформувати базове розуміння теми, перш ніж переходити до суто практичних етапів шляху.',
-      ro: 'Folosește această secțiune pentru a descoperi resursele de învățare care te pot ajuta să construiești o înțelegere de bază înainte de a continua cu fazele mai practice.',
+      ro: 'Folosește această secțiune pentru a explora resursele de învățare care te pot ajuta să înțelegi conceptele de bază înainte de a trece la etapele practice.',
       hy: 'Օգտագործեք այս բաժինը՝ ծանոթանալու ուսումնական ռեսուրսներին, որոնք կօգնեն կազմել հիմնական պատկերացում նախքան ավելի գործնական փուլերին անցնելը։'
     }
   ],
@@ -189,15 +189,15 @@ const LearningresourcesSection = {
           {
             en: 'A free, bite-sized video collection that introduces the circular economy concept including the well-known explainer narrated by Dame Ellen MacArthur herself, which uses her solo round-the-world sailing experience to illustrate the difference between a linear "take-make-waste" model and a circular one.',
             uk: 'Безкоштовна серія коротких відео, що знайомлять з основами циркулярної економіки. Серед них – відоме пояснювальне відео від самої дами Еллен Макартур: на прикладі власного досвіду одиночного навколосвітнього плавання вона показує різницю між лінійною моделлю «Візьми–зроби-викинь» та циркулярним підходом.',
-            ro: 'O colecție gratuită de videoclipuri scurte care introduce conceptul de economie circulară, inclusiv cunoscutul material explicativ narat chiar de Dame Ellen MacArthur, care folosește experiența sa de navigație solo în jurul lumii pentru a ilustra diferența dintre modelul liniar "take-make-waste" și unul circular.',
+            ro: 'O colecție gratuită de videoclipuri scurte care introduce conceptul de economie circulară, inclusiv cunoscutul material explicativ prezentat de Dame Ellen MacArthur, care folosește experiența sa de navigație solo în jurul lumii pentru a ilustra diferența dintre modelul liniar „extrage, produce, aruncă” și unul circular.',
             hy: 'Անվճար, կարճ տեսանյութերի հավաքածու, որը ներկայացնում է շրջանաձեւ տնտեսության գաղափարը, ներառյալ հայտնի բացատրական տեսանյութը՝ Dame Ellen MacArthur-ի ձայնավորմամբ, որտեղ նա իր շուրջերկրյա միայնակ նավարկության փորձով ցույց է տալիս գծային "take-make-waste" մոդելի եւ շրջանաձեւ մոդելի տարբերությունը։'
           }
         ],
         /* Define the learning goals for the course */
         learningGoals: [
           { en: 'Understand the basic difference between a linear and a circular economy', uk: 'Зрозумієте базову відмінність між лінійною та циркулярною економікою.', ro: 'Înțelege diferența de bază dintre economia liniară și cea circulară', hy: 'Հասկանալ գծային եւ շրջանաձեւ տնտեսության հիմնական տարբերությունը' },
-          { en: 'Understand why finite resources make the current "take-make-waste" model unsustainable', uk: 'Дізнаєтеся, чому вичерпність ресурсів робить сучасну лінійну модель нестабільною та безперспективною.', ro: 'Înțelege de ce resursele finite fac actualul model "take-make-waste" nesustenabil', hy: 'Հասկանալ, թե ինչու են սահմանափակ ռեսուրսները ներկայիս "take-make-waste" մոդելը դարձնում անկայուն' },
-          { en: 'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms', uk: 'Побачите реальні практичні приклади збереження цінності (зокрема повторне виготовлення і каскадне використання матеріалів), пояснені простими словами', ro: 'Vezi exemple reale de păstrare a valorii, precum remanufacturarea și utilizarea în cascadă a materialelor, explicate simplu', hy: 'Տեսնել արժեքի պահպանման իրական օրինակներ, օրինակ՝ վերարտադրություն եւ նյութերի կասկադային օգտագործում, պարզ լեզվով' }
+          { en: 'Understand why finite resources make the current "take-make-waste" model unsustainable', uk: 'Дізнаєтеся, чому вичерпність ресурсів робить сучасну лінійну модель нестабільною та безперспективною.', ro: 'Înțelege de ce resursele finite fac actualul model „extrage, produce, aruncă” nesustenabil', hy: 'Հասկանալ, թե ինչու են սահմանափակ ռեսուրսները ներկայիս "take-make-waste" մոդելը դարձնում անկայուն' },
+          { en: 'See real-world examples of value retention, such as remanufacturing and cascading material use, in everyday terms', uk: 'Побачите реальні практичні приклади збереження цінності (зокрема повторне виготовлення і каскадне використання матеріалів), пояснені простими словами', ro: 'Descoperă exemple reale de păstrare a valorii, precum remanufacturarea și utilizarea în cascadă a materialelor, explicate simplu', hy: 'Տեսնել արժեքի պահպանման իրական օրինակներ, օրինակ՝ վերարտադրություն եւ նյութերի կասկադային օգտագործում, պարզ լեզվով' }
         ],
         /* Define the reasons why someone should take this course. This text appears in the "Why should I take this course?" section of the course card.*/
         whyTakeCourse: [
@@ -235,14 +235,14 @@ const LearningresourcesSection = {
           {
             en: 'A structured, modular e-learning course that progresses from the economic foundations of the circular economy through to applied industrial topics: circular design, value retention strategies such as remanufacturing, reconditioning and refurbishing, recycling processes, circularity in use and consumption, the circular bioeconomy, trade and environment linkages, and the role of renewable energy in circular, low-carbon industrial systems.',
             uk: 'Структурований модульний онлайн-курс, що веде від економічних основ циркулярної економіки до прикладних промислових тем: циркулярного дизайну, стратегій збереження цінності (зокрема повторного виготовлення, капітального ремонту й модернізації виробів), процесів вторинного перероблення, циркулярності на етапах використання та споживання, циркулярної біоекономіки, взаємозвʼязку торгівлі й довкілля, а також ролі відновлюваної енергетики в циркулярних низьковуглецевих промислових системах.',
-            ro: 'Un curs e-learning structurat și modular care pornește de la fundamentele economice ale economiei circulare și ajunge la teme industriale aplicate: design circular, strategii de păstrare a valorii precum remanufacturarea, recondiționarea și refurbishing-ul, procese de reciclare, circularitate în utilizare și consum, bioeconomia circulară, legături între comerț și mediu și rolul energiei regenerabile în sistemele industriale circulare cu emisii reduse de carbon.',
+            ro: 'Un curs e-learning structurat și modular care pornește de la fundamentele economiei circulare și ajunge la teme industriale aplicate: design circular, strategii de păstrare a valorii precum remanufacturarea, recondiționarea și refurbishing-ul, procese de reciclare, circularitate în utilizare și consum, bioeconomia circulară, legături între comerț și mediu și rolul energiei regenerabile în sistemele industriale circulare cu emisii reduse de carbon.',
             hy: 'Կառուցվածքային, մոդուլային էլեկտրոնային դասընթաց, որը սկսվում է շրջանաձեւ տնտեսության տնտեսական հիմքերից եւ անցնում կիրառական արդյունաբերական թեմաների՝ շրջանաձեւ դիզայն, արժեքի պահպանման ռազմավարություններ, ինչպիսիք են վերարտադրությունը, վերականգնումը եւ թարմացումը, վերամշակման գործընթացներ, շրջանաձեւություն օգտագործման եւ սպառման մեջ, շրջանաձեւ կենսատնտեսություն, առեւտրի եւ շրջակա միջավայրի կապեր, ինչպես նաեւ վերականգնվող էներգիայի դերը շրջանաձեւ եւ ցածր ածխածնային արդյունաբերական համակարգերում։'
           }
         ],
         learningGoals: [
-          { en: 'Build a solid conceptual and economic foundation in circular economy principles', uk: 'Сформуєте ґрунтовну концептуальну й економічну базу знань щодо принципів циркулярної економіки.', ro: 'Construiește o bază conceptuală și economică solidă în principiile economiei circulare', hy: 'Ձեւավորել շրջանաձեւ տնտեսության սկզբունքների ամուր հայեցակարգային եւ տնտեսական հիմք' },
-          { en: 'Learn how circular design and value-retention strategies, such as remanufacturing, refurbishing and recycling, apply across industrial value chains', uk: 'Дізнаєтеся, як циркулярний дизайн і стратегії збереження цінності (повторне виробництво, відновлення та перероблення) впроваджуються в промислових ланцюгах створення вартості.', ro: 'Învață cum se aplică designul circular și strategiile de păstrare a valorii, precum remanufacturarea, recondiționarea și reciclarea, în lanțurile valorice industriale', hy: 'Սովորել, թե ինչպես են շրջանաձեւ դիզայնը եւ արժեքի պահպանման ռազմավարությունները, օրինակ՝ վերարտադրությունը, վերականգնումը եւ վերամշակումը, կիրառվում արդյունաբերական արժեքի շղթաներում' },
-          { en: 'Understand how circularity connects to broader systems such as the bioeconomy, trade, and renewable energy', uk: 'Зрозумієте, як циркулярність повʼязана із ширшими системами – біоекономікою, міжнародною торгівлею та відновлюваною енергетикою.', ro: 'Înțelege cum se conectează circularitatea la sisteme mai largi precum bioeconomia, comerțul și energia regenerabilă', hy: 'Հասկանալ, թե ինչպես է շրջանաձեւությունը կապվում ավելի լայն համակարգերի հետ, ինչպիսիք են կենսատնտեսությունը, առեւտուրը եւ վերականգնվող էներգիան' }
+          { en: 'Build a solid conceptual and economic foundation in circular economy principles', uk: 'Сформуєте ґрунтовну концептуальну й економічну базу знань щодо принципів циркулярної економіки.', ro: 'Înțelege fundamentele conceptuale și economice ale economiei circulare.', hy: 'Ձեւավորել շրջանաձեւ տնտեսության սկզբունքների ամուր հայեցակարգային եւ տնտեսական հիմք' },
+          { en: 'Learn how circular design and value-retention strategies, such as remanufacturing, refurbishing and recycling, apply across industrial value chains', uk: 'Дізнаєтеся, як циркулярний дизайн і стратегії збереження цінності (повторне виробництво, відновлення та перероблення) впроваджуються в промислових ланцюгах створення вартості.', ro: 'Descoperă modul în care designul circular și strategiile de menținere a valorii, precum remanufacturarea, recondiționarea și reciclarea, pot fi aplicate în lanțurile valorice industriale.', hy: 'Սովորել, թե ինչպես են շրջանաձեւ դիզայնը եւ արժեքի պահպանման ռազմավարությունները, օրինակ՝ վերարտադրությունը, վերականգնումը եւ վերամշակումը, կիրառվում արդյունաբերական արժեքի շղթաներում' },
+          { en: 'Understand how circularity connects to broader systems such as the bioeconomy, trade, and renewable energy', uk: 'Зрозумієте, як циркулярність повʼязана із ширшими системами – біоекономікою, міжнародною торгівлею та відновлюваною енергетикою.', ro: 'Înțelege legătura dintre economia circulară și sisteme mai largi, precum bioeconomia, comerțul și energia regenerabilă.', hy: 'Հասկանալ, թե ինչպես է շրջանաձեւությունը կապվում ավելի լայն համակարգերի հետ, ինչպիսիք են կենսատնտեսությունը, առեւտուրը եւ վերականգնվող էներգիան' }
         ],
         whyTakeCourse: [
           {
@@ -303,7 +303,7 @@ const LearningresourcesSection = {
 
 /* 5. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul etapei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     {
       en: 'Use this checklist to confirm that you have a basic understanding of the key circular economy principles.',
@@ -314,7 +314,7 @@ const phaseSummary = {
     {
       en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.',
       uk: 'Щоб перейти до наступного етапу, натисніть кнопку, яка з’явиться після контрольного списку, якщо ви позначили всі пункти, або поверніться на головну сторінку, щоб знайти наступний відповідний етап чи галузевий інструмент або переглянути сторінку з усіма інструментами.',
-      ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul care apare după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumentele sectoriale ori catalogul de instrumente.',
+      ro: 'Pentru a trece la etapa următoare, bifează toate căsuțele și apasă butonul care apare după listă sau revino la pagina principală pentru a găsi etapa potrivită, instrumentele sectoriale sau catalogul de instrumente.',
       hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ գտնելու համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը։'
     }
   ],

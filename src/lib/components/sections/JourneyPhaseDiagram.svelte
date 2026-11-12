@@ -41,7 +41,7 @@
       ro: 'Închide descrierea fazei selectate',
       hy: 'Փակել ընտրված փուլի նկարագրությունը'
     },
-    viewPhase: { en: 'View phase', uk: 'Переглянути етап', ro: 'Vezi faza', hy: 'Դիտել փուլը' }
+    viewPhase: { en: 'View phase', uk: 'Переглянути етап', ro: 'Vezi etapa', hy: 'Դիտել փուլը' }
   };
 
   /** @type {JourneyPhaseStep[]} */

@@ -14,7 +14,7 @@ export const contactPage = {
   intro: {
     en: 'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, implementation stories or to request a certificate of contribution. Complete the form below to share your feedback or contribution.',
     uk: 'На цій сторінці Ви можете зв’язатися з командою платформи «Інструментарій циркулярної економіки»: залишити відгук, повідомити про технічні проблеми, запропонувати новий інструмент, розповісти про власний досвід упровадження або подати заявку на сертифікат за внесок у проєкт. Заповніть форму нижче, щоб поділитися відгуком або зробити внесок у проєкт.',
-    ro: 'Folosește această pagină pentru a contacta echipa Setului de instrumente pentru economia circulară cu feedback, probleme tehnice, sugestii de instrumente, povești de implementare sau pentru a solicita un certificat de contribuție. Completează formularul de mai jos pentru a trimite feedback sau o contribuție.',
+    ro: 'Folosește această pagină pentru a contacta echipa responsabilă de resursele pentru economia circulară. Ne poți transmite feedback, semnala probleme tehnice, propune resurse noi, împărtăși exemple de implementare sau solicita un certificat de contribuție. Completează formularul de mai jos pentru a trimite feedback sau o contribuție.',
     hy: 'Օգտագործեք այս էջը՝ Շրջանաձեւ տնտեսության գործիքակազմի թիմին հետադարձ կապ, տեխնիկական խնդիրներ, գործիքների առաջարկներ, իրականացման պատմություններ ուղարկելու կամ ներդրման վկայական խնդրելու համար։ Լրացրեք ստորեւ ներկայացված ձեւը՝ ձեր կարծիքը հայտնելու կամ ծրագրում ներդրում ունենալու համար։'
   },
   contactDetailsTitle: { en: 'Contact us', uk: 'Зв’язатися з нами', ro: 'Contactează-ne', hy: 'Կապվեք մեզ հետ' },

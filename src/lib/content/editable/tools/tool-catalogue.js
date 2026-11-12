@@ -286,7 +286,7 @@ const toolCatalogue = [
       {
         en: "A practical set of canvases designed to help businesses move from early circular action to intentional, long-term change.",
         uk: "Практичний набір шаблонів, створений для того, щоб допомогти бізнесу перейти від перших кроків у сфері циркулярної економіки до цілеспрямованих, довгострокових змін.",
-        ro: "Un set practic de pânze concepute pentru a ajuta companiile să treacă de la acțiunea circulară timpurie la schimbarea intenționată, pe termen lung.",
+        ro: "Un set practic de instrumente de tip canvas, concepute pentru a ajuta companiile să treacă de la acțiunea circulară timpurie la schimbarea intenționată, pe termen lung.",
         hy: "Գործնական ձևանմուշների հավաքածու, որը նախատեսված է օգնելու բիզնեսներին սկզբնական շրջանաձև նախաձեռնություններից անցնել նպատակային և երկարաժամկետ փոփոխությունների։"
       },
     about:
@@ -427,7 +427,7 @@ const toolCatalogue = [
       {
         en: "Free online collaborative whiteboard with ready-made Strengths, Weaknesses, Opportunities and Threats (SWOT) template, sticky notes, real-time team editing, and voting tools for a structured online workshop.",
         uk: "Безкоштовна онлайн-дошка для спільної роботи з готовим шаблоном аналізу сильних і слабких сторін, можливостей та загроз (SWOT), стікерами, можливістю редагування командою в режимі реального часу та інструментами голосування для структурованого онлайн-семінару.",
-        ro: "Tablă albă colaborativă online gratuită cu șablon SWOT (Strengths, Weaknesses, Opportunities and Threats), note lipicioase, editare în timp real în echipă și instrumente de vot pentru un atelier online structurat.",
+        ro: "Tablă albă colaborativă online gratuită cu șablon SWOT (puncte forte, puncte slabe, oportunități și amenințări), note lipicioase, editare în timp real în echipă și instrumente de vot pentru un atelier online structurat.",
         hy: "Անվճար առցանց համագործակցային գրատախտակ՝ ուժեղ և թույլ կողմերի, հնարավորությունների ու սպառնալիքների (SWOT) վերլուծության պատրաստի ձևանմուշով, կպչուն գրառումներով, իրական ժամանակում թիմային խմբագրման և քվեարկության գործիքներով՝ կառուցվածքային առցանց աշխատաժողով անցկացնելու համար։"
       },
     about:
@@ -472,7 +472,7 @@ const toolCatalogue = [
     bestFor: {
       en: "small-medium enterprises (SMEs) running the transition readiness workshop from Phase 4 with their team.",
       uk: "Малі та середні підприємства, які проводять із власною командою семінар з оцінювання готовності до переходу (в межах Етапу 4)",
-      ro: "întreprinderi mici și mijlocii (IMM-uri) care desfășoară împreună cu echipa atelierul de pregătire pentru tranziție din Faza 4.",
+      ro: "întreprinderi mici și mijlocii (IMM-uri) care desfășoară împreună cu echipa atelierul de pregătire pentru tranziție din Etapa 4.",
       hy: "փոքր-միջին ձեռնարկությունները (ՓՄՁ) իրենց թիմի հետ անցումային պատրաստության սեմինարն անցկացնում են 4-րդ փուլից։"
     },
     format: {
@@ -631,7 +631,7 @@ const toolCatalogue = [
       {
         en: "Helps you rapidly assess which circular business models best fit their situation using a scored matrix approach.",
         uk: "Інструмент допомагає швидко оцінити, які циркулярні бізнес-моделі найкраще підходять для конкретної ситуації, за допомогою матричного підходу з бальною системою.",
-        ro: "Vă ajută să evaluați rapid care modele de afaceri circulare se potrivesc cel mai bine cu situația lor, folosind o abordare cu matrice cu punctaj.",
+        ro: "Vă ajută să evaluați rapid care modele de afaceri circulare se potrivesc cel mai bine, folosind o abordare cu matrice cu punctaj.",
         hy: "Օգնում է ձեզ արագ գնահատել, թե որ շրջանաձև բիզնես մոդելներն են լավագույնս համապատասխանում իրենց իրավիճակին՝ օգտագործելով գնահատված մատրիցային մոտեցումը։"
       },
     about:
@@ -773,7 +773,7 @@ const toolCatalogue = [
       {
         en: "Provides you with an overview of the current trends and key questions in the circular economy space with the aim of inspiring discussions and brainstorms.",
         uk: "Цей інструмент надає огляд актуальних трендів і ключових питань у сфері циркулярної економіки з метою стимулювання обговорень і мозкових штурмів.",
-        ro: "Vă oferă o imagine de ansamblu asupra tendințelor actuale și a întrebărilor cheie din spațiul economiei circulare, cu scopul de a inspira discuții și brainstorming.",
+        ro: "Vă oferă o imagine de ansamblu asupra tendințelor actuale și a întrebărilor cheie din domeniul economiei circulare, cu scopul de a inspira discuții și brainstorming.",
         hy: "Ներկայացնում է շրջանաձև տնտեսության արդի միտումների և առանցքային հարցերի ընդհանուր պատկերը՝ նպաստելով քննարկումներին և նոր գաղափարների ձևավորմանը։"
       },
     about:
@@ -979,7 +979,7 @@ const toolCatalogue = [
       {
         en: "Assists you in self evaluating your current standing in their circular journey by asking simple questions and providing insights based on answers.",
         uk: "Інструмент допомагає самостійно оцінити Ваш поточний стан на шляху до циркулярності шляхом надання відповідей на прості запитання та отримання аналітичних висновків.",
-        ro: "Vă ajută să vă autoevaluați situația actuală în călătoria lor circulară punând întrebări simple și oferind perspective bazate pe răspunsuri.",
+        ro: "Te ajută să îți evaluezi situația actuală în procesul de tranziție către economia circulară, prin întrebări simple și recomandări bazate pe răspunsurile oferite.",
         hy: "Պարզ հարցերի միջոցով օգնում է ինքնուրույն գնահատել շրջանաձև տնտեսությանն անցնելու գործընթացում ձեր ներկայիս փուլը և պատասխանների հիման վրա տրամադրում համապատասխան գնահատական ու առաջարկություններ։"
       },
     about:
@@ -1047,7 +1047,7 @@ const toolCatalogue = [
     description: {
       en: "Helps you benchmark your current Circular Economy level and understand key gaps.",
       uk: "Допомагає визначити поточний базовий рівень циркулярної економіки на Вашому підприємстві та виявити ключові прогалини.",
-      ro: "Vă ajută să evaluați nivelul actual de economie circulară și să înțelegeți lacunele cheie.",
+      ro: "Te ajută să evaluezi nivelul actual de aplicare a principiilor economiei circulare și să identifici principalele lacune.",
       hy: "Օգնում է գնահատել ձեր ընթացիկ շրջանաձև տնտեսության մակարդակը և հասկանալ հիմնական բացերը։"
     },
     about:
@@ -1184,7 +1184,7 @@ const toolCatalogue = [
       {
         en: "Maps materials used in production and helps to showcase material flows of your products",
         uk: "Інструмент «Аналіз матеріальних потоків» картує матеріали, що використовуються у виробництві, та допомагає наочно відобразити матеріальні потоки Вашої продукції.",
-        ro: "Mapează materialele utilizate în producție și ajută la prezentarea fluxurilor de materiale ale produselor dvs",
+        ro: "Mapează materialele utilizate în producție și ajută la prezentarea fluxurilor de materiale ale produselor",
         hy: "Քարտեզագրում է արտադրության մեջ օգտագործվող նյութերը և տեսողականորեն ներկայացնում արտադրանքի նյութական հոսքերը։"
       },
     about:
@@ -1253,7 +1253,7 @@ const toolCatalogue = [
     description: {
       en: "Visualises the material flow data of your products/services",
       uk: "Інструмент «STAN» (Візуалізація даних матеріальних потоків) візуалізує дані матеріальних потоків для Вашої продукції чи послуг.",
-      ro: "Vizualizează datele fluxului de materiale ale produselor/serviciilor dvs",
+      ro: "Vizualizează datele fluxului de materiale ale produselor/serviciilor",
       hy: "Պատկերում է ձեր արտադրանքի կամ ծառայությունների նյութական հոսքերի տվյալները։"
     },
     about:
@@ -1391,7 +1391,7 @@ const toolCatalogue = [
       {
         en: "Displays carbon footprint and eco-cost results by lifecycle stage, with additional Life Cycle Impact Assessment (LCIA) insights to identify the most impactful processes",
         uk: "Відображає результати оцінки вуглецевого сліду та екологічних витрат за стадіями життєвого циклу з додатковими висновками оцінки впливу на життєвий цикл для виявлення процесів із найбільшим впливом.",
-        ro: "Afișează rezultatele amprentei de carbon și ale costurilor ecologice pe etapele ciclului de viață, cu informații suplimentare privind evaluarea impactului ciclului de viață (LCIA) pentru a identifica procesele cu cel mai mare impact",
+        ro: "Afișează rezultatele amprentei de carbon și ale costurilor ecologice pe etapele ciclului de viață, cu informații suplimentare privind evaluarea impactului ciclului de viață (LCIA) pentru a identifica procesele cu cel mai mare impact.",
         hy: "Ներկայացնում է ածխածնային հետքի և էկոլոգիական ծախսերի գնահատման արդյունքներն ըստ կյանքի ցիկլի փուլերի, ինչպես նաև կյանքի ցիկլի ազդեցության գնահատման (LCIA) լրացուցիչ տվյալներ՝ շրջակա միջավայրի վրա առավել մեծ ազդեցություն ունեցող գործընթացները բացահայտելու համար։"
       },
     about:
@@ -1990,7 +1990,7 @@ const toolCatalogue = [
       {
         en: "A practical toolbox divided into 13 topics that match Green Key criteria and help tourism SMEs prepare for circular and environmental improvements.",
         uk: "Практичний інструментарій, розділений на 13 тем, що відповідають критеріям програми «Зелений ключ» (Green Key) та допомагають туристичним МСП підготуватися до впровадження циркулярних та екологічних покращень.",
-        ro: "O cutie de instrumente practice împărțită în 13 subiecte care se potrivesc criteriilor cheie verde și ajută IMM-urile din turism să se pregătească pentru îmbunătățiri circulare și de mediu.",
+        ro: "Un set de instrumente practice, structurat în 13 teme care reflectă principalele criterii verzi și sprijină IMM-urile din turism în implementarea unor practici circulare și de mediu.",
         hy: "Գործնական գործիքակազմ, որը բաժանված է 13 թեմաների, որոնք համապատասխանում են Green Key չափանիշներին և օգնում են զբոսաշրջային ՓՄՁ-ներին նախապատրաստվել շրջանաձև և բնապահպանական բարելավմանը։"
       },
     about:
@@ -2690,7 +2690,7 @@ const toolCatalogue = [
       {
         en: "A step-by-step toolbox that helps apparel brands adopt circular business models and independently drive circular innovation.",
         uk: "Покроковий інструментарій, який допомагає брендам одягу впроваджувати циркулярні бізнес-моделі та самостійно стимулювати циркулярні інновації.",
-        ro: "O cutie de instrumente pas cu pas care ajută mărcile de îmbrăcăminte să adopte modele de afaceri circulare și să conducă independent inovația circulară.",
+        ro: "Un set de instrumente structurat pas cu pas, care ajută producătorii de îmbrăcăminte să adopte modele de afaceri circulare și să conducă independent inovația circulară.",
         hy: "Քայլ առ քայլ գործիքակազմ, որն օգնում է հագուստի ապրանքանիշերին ընդունել շրջանաձև բիզնես մոդելներ և ինքնուրույն առաջ մղել շրջանաձև նորարարություն։"
       },
     about:
@@ -2900,7 +2900,7 @@ const toolCatalogue = [
       {
         en: "An industry measurement suite for environmental and social sustainability across textile supply chains.",
         uk: "Галузевий комплекс інструментів оцінювання екологічної та соціальної сталості в ланцюгах постачання текстильної промисловості.",
-        ro: "O suită de măsurare a industriei pentru sustenabilitatea socială și de mediu în lanțurile de aprovizionare cu textile.",
+        ro: "O suită de instrumente de evaluare utilizate în industria textilă pentru măsurarea performanței de mediu și sociale de-a lungul lanțului de aprovizionare.",
         hy: "Արդյունաբերության չափման հավաքածու՝ բնապահպանական և սոցիալական կայունության համար տեքստիլ մատակարարման շղթաներում։"
       },
     about:
@@ -2970,7 +2970,7 @@ const toolCatalogue = [
       {
         en: "A four-step Plan-Do-Check-Act framework that helps SMEs interpret results, identify root causes and plan targeted improvements.",
         uk: "Чотириетапна модель «Плануй–Роби–Перевіряй–Дій», яка допомагає малим та середнім підприємствам інтерпретувати результати, виявляти першопричини та планувати цільові вдосконалення.",
-        ro: "Un cadru în patru etape Planificați-Efectuați-Verificați-Acționați, care ajută IMM-urile să interpreteze rezultatele, să identifice cauzele fundamentale și să planifice îmbunătățiri vizate.",
+        ro: "Un cadru în patru etape care ajută IMM-urile să analizeze rezultatele, să identifice cauzele principale ale problemelor și să planifice măsuri specifice de îmbunătățire.",
         hy: "Չորս քայլ Plan-Do-Check-Act շրջանակ, որն օգնում է ՓՄՁ-ներին մեկնաբանել արդյունքները, բացահայտել հիմնական պատճառները և պլանավորել նպատակային բարելավումներ։"
       },
     about:
@@ -3039,7 +3039,7 @@ const toolCatalogue = [
       {
         en: "A visual canvas tool to map circular ecosystems, review what is and is not working, and redesign a circular business model from real results.",
         uk: "Інструмент «Канва бізнес-екосистеми Circulab» – це візуальний інструмент-канва для картування циркулярних екосистем, аналізу дієвих та неефективних елементів і редизайну циркулярної бізнес-моделі на основі реальних результатів.",
-        ro: "Un instrument de pânză vizuală pentru a mapa ecosistemele circulare, a revizui ceea ce funcționează sau nu și a reproiecta un model de afaceri circular din rezultate reale.",
+        ro: "Un instrument de tip canvas vizual pentru a mapa ecosistemele circulare, a revizui ceea ce funcționează sau nu și a reproiecta un model de afaceri circular din rezultate reale.",
         hy: "Վիզուալ ձևանմուշ գործիք՝ շրջանաձև էկոհամակարգերը քարտեզագրելու, վերանայելու, թե ինչն է աշխատում և ինչ չէ, և վերանախագծում է շրջանաձև բիզնես մոդել իրական արդյունքներից։"
       },
     about:
@@ -3108,7 +3108,7 @@ const toolCatalogue = [
       {
         en: "A canvas for mapping concrete, actionable steps for putting a circular strategy into practice once solutions have been identified.",
         uk: "Канва для визначення конкретних практичних кроків щодо реалізації циркулярної стратегії після того, як рішення вже знайдено.",
-        ro: "O pânză pentru cartografierea pașilor concreti, acționabili, pentru punerea în practică a unei strategii circulare odată ce soluțiile au fost identificate.",
+        ro: "Instrumente de tip canvas pentru cartografierea pașilor concreți, acționabili, pentru punerea în practică a unei strategii circulare odată ce soluțiile au fost identificate.",
         hy: "Կտավ՝ կոնկրետ, գործող քայլերի քարտեզագրման համար՝ լուծումների հայտնաբերումից հետո շրջանաձև ռազմավարությունը գործնականում կիրառելու համար։"
       },
     about:
@@ -3377,14 +3377,14 @@ const toolCatalogue = [
     title: {
       en: 'How Might We',
       uk: '',
-      ro: '',
+      ro: 'How Might We/„Cum am putea...?”',
       hy: ''
     },
     description:
       {
         en: "Reframe problem insights as open-ended How Might We questions, turning challenges into opportunities and creating a productive launchpad for brainstorming.",
         uk: "Переформулювання висновків про проблему у відкриті запитання на кшталт «Як ми можемо...?», що перетворює виклики на можливості та створює продуктивний плацдарм для проведення мозкового штурму.",
-        ro: "Reîncadrați perspectivele problemei ca întrebări deschise How Might We, transformând provocările în oportunități și creând o platformă de lansare productivă pentru brainstorming.",
+        ro: "Reformulați problemele și provocările identificate sub forma unor întrebări deschise de tip „Cum am putea...?”, pentru a le transforma în oportunități și a crea un punct de plecare clar pentru generarea de idei.",
         hy: "Խնդիրների վերլուծական տվյալները վերակառուցեք որպես բաց հարցադրումներ «Ինչպես կարող ենք մենք»՝ մարտահրավերները վերածելով հնարավորությունների և ստեղծելով արդյունավետ գործարկման հարթակ ուղեղային փոթորկի համար։"
       },
     about:
@@ -3660,7 +3660,7 @@ const toolCatalogue = [
       {
         en: "A collection of canvas-based tools for assessing, ideating, developing and communicating circular economy strategies.",
         uk: "Колекція інструментів на основі канв для оцінювання, генерування ідей, розроблення та комунікації стратегій циркулярної економіки.",
-        ro: "O colecție de instrumente bazate pe pânză pentru evaluarea, ideea, dezvoltarea și comunicarea strategiilor de economie circulară.",
+        ro: "O colecție de instrumente vizuale, de tip canvas, concepute pentru evaluarea, generarea de idei, dezvoltarea și comunicarea strategiilor de economie circulară.",
         hy: "Շրջանաձև տնտեսության ռազմավարությունների գնահատման, վերլուծական տվյալների, մշակման և հաղորդակցման համար ձևանմուշների վրա հիմնված գործիքների հավաքածու։"
       },
     about:
@@ -3799,7 +3799,7 @@ const toolCatalogue = [
       {
         en: "Software for building Life Cycle Assessment (LCA)-based Digital Product Passports for fashion and apparel products.",
         uk: "Це програмне забезпечення для створення цифрових паспортів продукції на основі оцінки життєвого циклу для виробів індустрії моди та одягу.",
-        ro: "Software pentru construirea de pașapoarte pentru produse digitale bazate pe evaluarea ciclului de viață (LCA) pentru produse de modă și îmbrăcăminte.",
+        ro: "Software pentru crearea pașapoartelor digitale ale produselor, bazate pe evaluarea ciclului de viață (LCA), destinat produselor din industria modei și articolelor de îmbrăcăminte.",
         hy: "Նորաձևության և հագուստի ապրանքների համար կյանքի ցիկլի գնահատման (LCA) վրա հիմնված թվային արտադրանքի անձնագրեր ստեղծելու ծրագրակազմ։"
       },
     about:
@@ -4269,7 +4269,7 @@ const toolCatalogue = [
       {
         en: "Estimates the volume of waste generated by war-related building damage.",
         uk: "Інструмент розраховує обсяги відходів, що утворилися внаслідок пошкодження будівель під час війни.",
-        ro: "Estimează volumul de deșeuri generate de daunele clădirilor cauzate de război.",
+        ro: "Estimează volumul de deșeuri generate în urma avarierii clădirilor cauzate de război.",
         hy: "Գնահատում է պատերազմի պատճառով շենքերի վնասման արդյունքում առաջացած թափոնների ծավալը։"
       },
     about:
@@ -5729,7 +5729,7 @@ const toolCatalogue = [
       {
         en: "Directory of training courses on organic agriculture and circular economy, including a dedicated circular economy course.",
         uk: "Каталог навчальних курсів з органічного сільського господарства та циркулярної економіки, зокрема спеціалізований курс із циркулярної економіки.",
-        ro: "Director de cursuri de formare privind agricultura ecologică și economia circulară, inclusiv un curs dedicat economiei circulare.",
+        ro: "Cursuri de formare privind agricultura ecologică și economia circulară, inclusiv un curs dedicat economiei circulare.",
         hy: "Օրգանական գյուղատնտեսության և շրջանաձև տնտեսության վերաբերյալ վերապատրաստման դասընթացների տեղեկատու, ներառյալ շրջանաձև տնտեսության հատուկ դասընթաց։"
       },
     about:
@@ -5874,7 +5874,7 @@ const toolCatalogue = [
       {
         en: "To understand the stakeholders, relationships and flows surrounding your business.",
         uk: "Для розуміння зацікавлених сторін, взаємозв'язків і потоків навколо Вашого бізнесу.",
-        ro: "Pentru a înțelege părțile interesate, relațiile și fluxurile din jurul afacerii dvs.",
+        ro: "Pentru a înțelege părțile interesate, relațiile și fluxurile din jurul afacerii.",
         hy: "Հասկանալու շահագրգիռ կողմերին, հարաբերություններն ու հոսքերը, որոնք շրջապատում են ձեր բիզնեսը։"
       },
     about:

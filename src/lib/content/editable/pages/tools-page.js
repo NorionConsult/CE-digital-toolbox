@@ -19,7 +19,7 @@ export const toolsPage = {
   searchLabel: { en: 'Search', uk: 'Пошук', ro: 'Caută', hy: 'Որոնում' },
   searchPlaceholder: { en: 'Search by title, purpose, provider or access', uk: 'Шукайте за назвою, призначенням, постачальником або доступом', ro: 'Caută după titlu, scop, furnizor sau acces', hy: 'Որոնել ըստ վերնագրի, նպատակի, տրամադրողի կամ հասանելիության' },
   filtersLabel: { en: 'Tools filters', uk: 'Фільтри інструментів', ro: 'Filtre pentru instrumente', hy: 'Գործիքների զտիչներ' },
-  phaseLabel: { en: 'Journey phase', uk: 'Етапи шляху', ro: 'Faza parcursului', hy: 'Անցման փուլ' },
+  phaseLabel: { en: 'Journey phase', uk: 'Етапи шляху', ro: 'Etapa parcursului', hy: 'Անցման փուլ' },
   disabledPhaseTitle: { en: 'No tools available for this filter combination.', uk: 'Для цієї комбінації фільтрів немає інструментів.', ro: 'Nu există instrumente pentru această combinație de filtre.', hy: 'Այս զտիչների համակցության համար գործիքներ չկան։' },
   sectorLabel: { en: 'Sector', uk: 'Галузь', ro: 'Sector', hy: 'Ոլորտ' },
   languageLabel: { en: 'Language', uk: 'Мова', ro: 'Limbă', hy: 'Լեզու' },

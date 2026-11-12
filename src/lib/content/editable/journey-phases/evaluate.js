@@ -11,7 +11,7 @@ import { defineJourneyPhasePage } from '../../technical/journey-phase-page-utils
 const phaseCard = {
   number: '04',
   slug: 'evaluate',
-  shortName: { en: 'Phase 4', uk: 'Етап 4', ro: 'Faza 4', hy: 'Փուլ 4' },
+  shortName: { en: 'Phase 4', uk: 'Етап 4', ro: 'Etapa 4', hy: 'Փուլ 4' },
   title: { en: 'Evaluate', uk: 'Пріоритизація', ro: 'Evaluează', hy: 'Գնահատել' },
   colourClass: 'phase-card-blue',
   description: {
@@ -26,7 +26,7 @@ const hero = {
   intro: {
     en: 'This phase focuses on prioritizing circular economy opportunities by clarifying their feasibility, benefits, risks, barriers and potential value creation.',
     uk: "Цей етап присвячений пріоритезації можливостей циркулярної економіки через з’ясування їхньої практичної здійсненності, переваг, ризиків, бар’єрів та потенціалу створення доданої вартості.",
-    ro: 'Această fază se concentrează pe prioritizarea oportunităților de economie circulară prin clarificarea fezabilității, beneficiilor, riscurilor, barierelor și potențialului de creare a valorii.',
+    ro: 'Această etapă se concentrează pe prioritizarea oportunităților de economie circulară prin clarificarea fezabilității, beneficiilor, riscurilor, barierelor și potențialului de creare a valorii.',
     hy: 'Այս փուլը կենտրոնանում է շրջանաձեւ տնտեսության հնարավորությունների առաջնահերթեցման վրա՝ հստակեցնելով դրանց իրագործելիությունը, օգուտները, ռիսկերը, խոչընդոտները եւ արժեք ստեղծելու ներուժը։'
   },
   icon: '/icons/phase-icons/icon-evaluate.png',
@@ -44,7 +44,7 @@ const sectionButtons = [
 const pathwaySection = {
   title: { en: 'Evaluating a circular opportunity', uk: 'Оцінка циркулярної можливості', ro: 'Evaluarea unei oportunități circulare', hy: 'Շրջանաձեւ հնարավորության գնահատում' },
   paragraphs: [
-    { en: 'Before choosing a direction, you need to know which circular options make sense for your business financially, operationally and strategically. This phase helps you identify the right circular option, assess how it will affect your business opportunities, and understand a path forward.', uk: 'Перш ніж обрати остаточний напрям, необхідно зрозуміти, які саме циркулярні рішення доцільні для вашого бізнесу з фінансової, операційної та стратегічної точок зору. Цей етап допомагає визначити оптимальний варіант, оцінити його вплив на комерційні перспективи підприємства та намітити чіткий шлях подальших дій.', ro: 'Înainte de a alege o direcție, trebuie să știi ce opțiuni circulare au sens pentru afacerea ta din punct de vedere financiar, operațional și strategic. Această fază te ajută să identifici opțiunea circulară potrivită, să evaluezi cum îți poate influența oportunitățile de afaceri și să înțelegi drumul înainte.', hy: 'Ուղղություն ընտրելուց առաջ պետք է հասկանալ, թե որ շրջանաձեւ տարբերակներն են իմաստալից ձեր բիզնեսի համար ֆինանսական, գործառնական եւ ռազմավարական տեսանկյունից։ Այս փուլը օգնում է գտնել ճիշտ շրջանաձեւ տարբերակը, գնահատել դրա ազդեցությունը բիզնես հնարավորությունների վրա եւ հասկանալ առաջ շարժվելու ուղին։' }
+    { en: 'Before choosing a direction, you need to know which circular options make sense for your business financially, operationally and strategically. This phase helps you identify the right circular option, assess how it will affect your business opportunities, and understand a path forward.', uk: 'Перш ніж обрати остаточний напрям, необхідно зрозуміти, які саме циркулярні рішення доцільні для вашого бізнесу з фінансової, операційної та стратегічної точок зору. Цей етап допомагає визначити оптимальний варіант, оцінити його вплив на комерційні перспективи підприємства та намітити чіткий шлях подальших дій.', ro: 'Înainte de a alege o direcție, trebuie să știi ce opțiuni circulare au sens pentru afacerea ta din punct de vedere financiar, operațional și strategic. Această etapă te ajută să identifici opțiunea circulară potrivită, să evaluezi cum îți poate influența oportunitățile de afaceri și să înțelegi pașii ce urmează a fi parcurși.', hy: 'Ուղղություն ընտրելուց առաջ պետք է հասկանալ, թե որ շրջանաձեւ տարբերակներն են իմաստալից ձեր բիզնեսի համար ֆինանսական, գործառնական եւ ռազմավարական տեսանկյունից։ Այս փուլը օգնում է գտնել ճիշտ շրջանաձեւ տարբերակը, գնահատել դրա ազդեցությունը բիզնես հնարավորությունների վրա եւ հասկանալ առաջ շարժվելու ուղին։' }
   ],
   cards: [
     {
@@ -73,7 +73,7 @@ const pathwaySection = {
         hy: 'Հասկացեք խոչընդոտները, նպաստող գործոնները եւ ռիսկերը, որոնք անհրաժեշտ է հաշվի առնել գաղափարից ավելի ուժեղ շրջանաձեւ բիզնես հիմնավորման անցնելու համար։'
       },
       keyOutputs: [
-        { en: 'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis', uk: 'Аналіз бар´єрів та SWOT-аналіз (сильні й слабкі сторони, можливості та загрози)', ro: 'Analiza barierelor și Strengths, Weaknesses, Opportunities and Threats (SWOT)', hy: 'Խոչընդոտների եւ Strengths, Weaknesses, Opportunities and Threats (SWOT) վերլուծություն' },
+        { en: 'Barrier and Strengths, Weaknesses, Opportunities and Threats (SWOT) analysis', uk: 'Аналіз бар´єрів та SWOT-аналіз (сильні й слабкі сторони, можливості та загрози)', ro: 'Analiza barierelor și analiza SWOT (puncte forte, puncte slabe, oportunități și amenințări)', hy: 'Խոչընդոտների եւ Strengths, Weaknesses, Opportunities and Threats (SWOT) վերլուծություն' },
         { en: 'A shortlist of one to three priority strategies', uk: 'Скорочений список із 1-3 пріоритетних стратегій', ro: 'O listă scurtă de una-trei strategii prioritare', hy: 'Մեկից երեք առաջնահերթ ռազմավարությունների կարճ ցուցակ' }
       ]
     },
@@ -151,7 +151,7 @@ const shortlistStrategiesSection = {
     pdfDisclaimer: {
       en: 'These are guiding questions part of Phase 4: Evaluate of the Circular Economy Toolbox. The results do not guarantee a correct assessment, as these are only for indicative use and for learning purposes and should always be used together with other assessment tools and business context.',
       uk: 'Ці орієнтовні запитання є частиною Етапу 4 (Пріоритизація) платформи Circular Economy Toolbox. Отримані результати не гарантують вичерпного висновку: вони мають суто орієнтовний і навчальний характер та завжди повинні застосовуватися в поєднанні з іншими інструментами оцінювання й реальним бізнес-контекстом вашого підприємства.',
-      ro: 'Acestea sunt întrebări orientative din Faza 4: Evaluare a Circular Economy Toolbox. Rezultatele nu garantează o evaluare corectă, deoarece sunt doar orientative și pentru învățare și ar trebui folosite întotdeauna împreună cu alte instrumente de evaluare și cu contextul afacerii.',
+      ro: 'Acestea sunt întrebări orientative din Etapa 4: Evaluare a Circular Economy Toolbox. Rezultatele nu garantează o evaluare corectă, deoarece sunt doar orientative și pentru învățare și ar trebui folosite întotdeauna împreună cu alte instrumente de evaluare și cu contextul afacerii.',
       hy: 'Սրանք Circular Economy Toolbox-ի 4-րդ փուլի՝ Գնահատման, ուղղորդող հարցեր են։ Արդյունքները չեն երաշխավորում ճիշտ գնահատում, քանի որ դրանք միայն ցուցիչ եւ ուսուցողական նպատակ ունեն եւ միշտ պետք է օգտագործվեն այլ գնահատման գործիքների ու բիզնես համատեքստի հետ միասին։'
     },
     incompleteText: { en: 'Answer every question to see your result.', uk: 'Дайте відповідь на всі запитання, щоб побачити результат.', ro: 'Răspunde la toate întrebările pentru a vedea rezultatul.', hy: 'Պատասխանեք բոլոր հարցերին՝ արդյունքը տեսնելու համար։' },
@@ -247,7 +247,7 @@ const verifyPotentialSection = {
     {
       en: "A strong business case considers not only potential benefits, but also the organisational, operational and market changes required to realise them. It is important to identify what hidden barriers could come into effect for each of the strategies, ideas and concepts you have identified. || Use the tools below to evaluate the business case you selected in Step 1 of this section or the ideas you developed in the Explore phase.",
       uk: 'Переконливе техніко-економічне обґрунтування бізнес-кейсу враховує не лише потенційні переваги, а й організаційні, операційні та ринкові зміни, необхідні для їх досягнення. Важливо заздалегідь визначити, які приховані бар´єри можуть виникнути на шляху впровадження кожної з напрацьованих стратегій, ідей та концепцій. || Скористайтеся наведеними нижче інструментами, щоб оцінити бізнес-кейс, обраний на Кроці 1 цього розділу, або ідеї, розроблені на етапі пошуку рішень (Дослідження).',
-      ro: 'Un caz de afaceri solid ia în considerare nu doar beneficiile potențiale, ci și schimbările organizaționale, operaționale și de piață necesare pentru a le realiza. Este important să identifici ce bariere ascunse ar putea apărea pentru fiecare strategie, idee și concept identificat. || Folosește instrumentele de mai jos pentru a evalua cazul de afaceri selectat la pasul 1 al acestei secțiuni sau ideile dezvoltate în faza Explore.',
+      ro: 'Un model de afaceri solid ia în considerare nu doar beneficiile potențiale, ci și schimbările organizaționale, operaționale și de piață necesare pentru a le realiza. Este important să identifici ce bariere ascunse ar putea apărea pentru fiecare strategie, idee și concept identificat. || Folosește instrumentele de mai jos pentru a evalua cazul de afaceri selectat la pasul 1 al acestei secțiuni sau ideile dezvoltate în etapa de explorare.',
       hy: 'Ուժեղ բիզնես հիմնավորումը հաշվի է առնում ոչ միայն հնարավոր օգուտները, այլ նաեւ կազմակերպական, գործառնական եւ շուկայական փոփոխությունները, որոնք անհրաժեշտ են դրանք իրագործելու համար։ Կարեւոր է բացահայտել, թե ինչ թաքնված խոչընդոտներ կարող են առաջանալ ձեր բացահայտած յուրաքանչյուր ռազմավարության, գաղափարի եւ հայեցակարգի համար։ || Օգտագործեք ստորեւ ներկայացված գործիքները՝ գնահատելու այս բաժնի 1-ին քայլում ընտրված բիզնես հիմնավորումը կամ Explore փուլում մշակված գաղափարները։'
     }
   ]
@@ -270,10 +270,10 @@ const testPilotSection = {
 
 /* 7. PHASE SUMMARY */
 const phaseSummary = {
-  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul fazei', hy: 'Փուլի ամփոփում' },
+  title: { en: 'Phase Summary', uk: 'Підсумок етапу', ro: 'Rezumatul etapei', hy: 'Փուլի ամփոփում' },
   paragraphs: [
     { en: 'Use this checklist to confirm that you have shortlisted strategies, verified their potential and defined a clear pilot focus for your selected circular opportunity.', uk: 'Скористайтеся цим чеклістом, щоб переконатися, що Ви відібрали пріоритетні стратегії, перевірили їхній потенціал і визначили чіткий фокус пілотного проєкту для обраної циркулярної можливості.', ro: 'Folosește această listă pentru a confirma că ai selectat strategiile, le-ai verificat potențialul și ai definit un focus pilot clar pentru oportunitatea circulară aleasă.', hy: 'Օգտագործեք այս ստուգաթերթը՝ հաստատելու համար, որ զտել եք ռազմավարությունները, ստուգել դրանց ներուժը եւ սահմանել հստակ պիլոտային ուղղություն ընտրված շրջանաձեւ հնարավորության համար։' },
-    { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a continua la faza următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi faza potrivită, instrumente sectoriale ori catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
+    { en: 'To continue to the next phase, click the button that appears after the checklist if you have checked all boxes, or go back to the home page to find the next suitable phase, sector tool, or explore the tools page.', uk: 'Щоб перейти до наступного етапу, позначте всі пункти та натисніть кнопку, яка з´явиться під чеклістом. Також Ви можете повернутися на головну сторінку, щоб обрати інший відповідний етап, галузеві інструменти або відкрити каталог інструментів.', ro: 'Pentru a trece la etapa următoare, bifează toate căsuțele și apasă butonul de după listă sau revino la pagina principală pentru a găsi etapa potrivită, instrumente sectoriale sau catalogul de instrumente.', hy: 'Հաջորդ փուլին անցնելու համար նշեք բոլոր կետերը եւ սեղմեք ստուգաթերթից հետո հայտնվող կոճակը, կամ վերադարձեք գլխավոր էջ՝ համապատասխան փուլը, ոլորտային գործիքը կամ գործիքների էջը գտնելու համար։' }
   ],
   checklist: [
     { en: 'Selected one or more circular opportunities to screen through the shortlist strategies step', uk: 'Обрано одну або декілька циркулярних можливостей для попереднього відбору на кроці оцінки стратегій', ro: 'Ai selectat una sau mai multe oportunități circulare pentru analiză în pasul de selecție a strategiilor', hy: 'Ընտրվել է մեկ կամ մի քանի շրջանաձեւ հնարավորություն՝ ռազմավարությունների զտման քայլում դիտարկելու համար' },

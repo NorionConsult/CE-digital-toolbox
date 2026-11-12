@@ -47,14 +47,14 @@ export const guidedPathways = {
     text: {
       en: 'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contains selected tools and practical guidance. Although this journey is depicted in a linear way, in reality you will often move back and forth between phases. Therefore, start where it makes more sense at your current moment.',
       uk: 'Дорожня карта для МСП відображає типовий процес, який проходять малі та середні підприємства під час переходу до практик циркулярної економіки. Вона допоможе зʼясувати, на якому етапі Ви перебуваєте, і які інструменти будуть доречними саме зараз. Кожен етап містить дібрані цифрові рішення та практичні поради. Хоча цей шлях зображено лінійним, на практиці Ви часто будете повертатися назад або перескакувати між етапами. Тож починайте з того кроку, який найбільш актуальний для вас на цей момент.',
-      ro: 'Parcursul IMM reprezintă un proces tipic pe care întreprinderile îl urmează când trec la practici de economie circulară. Te ajută să identifici unde te afli și ce instrumente pot fi relevante. Fiecare fază include instrumente selectate și îndrumare practică. Deși parcursul este prezentat liniar, în realitate te vei deplasa adesea înainte și înapoi între faze. De aceea, începe acolo unde are cel mai mult sens pentru situația ta actuală.',
+      ro: 'Parcursul IMM reprezintă un proces tipic pe care întreprinderile îl urmează când trec la practici de economie circulară. Te ajută să identifici unde te afli și ce instrumente pot fi relevante. Fiecare etapă include instrumente selectate și îndrumare practică. Deși parcursul este prezentat într-o succesiune liniară, în practică este posibil să revii la etape anterioare sau să avansezi între ele. De aceea, începe cu etapa care se potrivește cel mai bine situației tale actuale.',
       hy: 'ՓՄՁ-ների անցման ուղին ներկայացնում է այն բնորոշ գործընթացը, որով ձեռնարկություններն անցնում են շրջանաձև տնտեսության գործելակերպերին։ Այն օգնում է հասկանալ, թե անցման որ փուլում եք գտնվում և որ գործիքները կարող են առավել օգտակար լինել։ Յուրաքանչյուր փուլ ներառում է ընտրված գործիքներ և գործնական ուղղորդում։ Թեև գործընթացը ներկայացված է գծային ձևով, իրականում հաճախ անհրաժեշտ է վերադառնալ նախորդ փուլերին կամ կրկին առաջ շարժվել։ Ուստի սկսեք այն փուլից, որն առավել համապատասխանում է ձեր ներկա իրավիճակին։'
     },
     callToAction: {
       text: {
         en: '**Where are you on the SME journey?** || Use this interactive diagram to understand which phase is most suitable for you to start with.',
         uk: '**Де ви перебуваєте на шляху МСП?** || Скористайтеся цією інтерактивною схемою, щоб визначити, з якого саме етапу вам найдоцільніше розпочати.',
-        ro: '**Unde te afli în parcursul IMM?** || Folosește această diagramă interactivă pentru a înțelege care fază este cea mai potrivită pentru început.',
+        ro: '**Unde te afli în parcursul IMM?**',
         hy: '**ՓՄՁ-ների անցման գործընթացի ո՞ր փուլում եք գտնվում։** || Օգտագործեք այս ինտերակտիվ գծապատկերը՝ հասկանալու համար, թե որ փուլից է առավել հարմար սկսել։'
       }
     }
@@ -85,7 +85,7 @@ export const guidedPathways = {
       description: {
         en: 'This sector guide provides tools, cases and practical guidance for construction small-medium enterprises (SMEs) adopting circular economy practices.',
         uk: 'Цей посібник містить інструменти, приклади та практичні рекомендації для малих і середніх підприємств у будівельній галузі, які впроваджують практики циркулярної економіки.',
-        ro: 'Acest ghid sectorial oferă instrumente, cazuri și îndrumare practică pentru IMM-urile din construcții care adoptă practici de economie circulară.',
+        ro: 'Acest ghid sectorial oferă instrumente, studii de caz și îndrumare practică pentru IMM-urile din construcții care adoptă practici de economie circulară.',
         hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղղորդում շինարարության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։'
       },
       image: '/images/sectors/construction.jpg',
@@ -98,7 +98,7 @@ export const guidedPathways = {
       description: {
         en: 'This sector guide provides tools, cases and practical guidance for food and agriculture small-medium enterprises (SMEs) adopting circular economy practices.',
         uk: 'Цей посібник містить інструменти, прилади та практичні рекомендації для підприємств малого та середнього бізнесу у сфері продовольства й сільського господарства, які переходять до практик циркулярної економіки.',
-        ro: 'Acest ghid sectorial oferă instrumente, cazuri și îndrumare practică pentru IMM-urile din alimentație și agricultură care adoptă practici de economie circulară.',
+        ro: 'Acest ghid sectorial oferă instrumente, studii de caz și îndrumare practică pentru IMM-urile din alimentație și agricultură care adoptă practici de economie circulară.',
         hy: 'Այս ոլորտային ուղեցույցը տրամադրում է գործիքներ, օրինակներ եւ գործնական ուղղորդում սննդամթերքի եւ գյուղատնտեսության ՓՄՁ-ների համար, որոնք կիրառում են շրջանաձեւ տնտեսության գործելակերպեր։'
       },
       image: '/images/sectors/agriculture.jpg',
