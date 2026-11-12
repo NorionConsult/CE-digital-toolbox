@@ -193,7 +193,7 @@ const identifyOptionsSection = {
       ],
       listTitle: { en: 'You will need:', uk: 'Вам знадобляться:', ro: 'Vei avea nevoie de:', hy: 'Ձեզ պետք կլինի՝' },
       items: [
-        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Шаблон «Колесо циркулярних стратегій», роздрукований у форматі A1 та розміщений у зручному для спільної роботи місці', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Circular Strategies Wheel ձևանմուշը՝ տպված A1 չափով եւ տեղադրված բոլորի համար հասանելի վայրում' },
+        { en: 'Circular Strategies Wheel canvas, printed at A1 and placed where everyone can reach it', uk: 'Шаблон «Колесо циркулярних стратегій», роздрукований у форматі A1 та розміщений у зручному для спільної роботи місці', ro: 'Canvasul Circular Strategies Wheel, tipărit la A1 și amplasat unde toți îl pot accesa', hy: 'Շրջանաձև ռազմավարությունների անիվի աշխատանքային ձևանմուշ՝ տպագրված A1 չափսով և տեղադրված բոլորի համար հասանելի վայրում։' },
         { en: 'Post-its in three colours: green for opportunities, yellow for curiosities and pink for challenges', uk: 'Стікери трьох кольорів: зелені – для можливостей, жовті – для відкритих питань і цікавих ідей, рожеві – для викликів та обмежень', ro: 'Post-it-uri în trei culori: verde pentru oportunități, galben pentru curiozități și roz pentru provocări', hy: 'Post-it նշումներ երեք գույնով՝ կանաչը հնարավորությունների, դեղինը հետաքրքրությունների, վարդագույնը մարտահրավերների համար' },
         { en: 'Pens for everyone', uk: 'Ручки або маркери для кожного учасника', ro: 'Pixuri pentru toți', hy: 'Գրիչներ բոլորի համար' }
       ],

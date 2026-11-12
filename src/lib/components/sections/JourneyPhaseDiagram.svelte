@@ -135,7 +135,7 @@
       number: '6',
       panelSide: 'right',
       edgePhase: true,
-      phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկել' },
+      phaseName: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկում' },
       formerLabel: { en: 'Track and keep improving', uk: 'Відстежуйте й покращуйте', ro: 'Urmărește și îmbunătățește continuu', hy: 'Հետեւեք եւ շարունակ բարելավեք' },
       shortDescription: { en: 'Review and track progress', uk: 'Перегляд і відстеження прогресу', ro: 'Revizuiește și urmărește progresul', hy: 'Վերանայեք եւ հետեւեք առաջընթացին' },
       popUpText: {

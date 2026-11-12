@@ -22,11 +22,11 @@ export const guidedPathways = {
       en: 'The toolbox is organised into journey phases, sector guides, a case study collection, and a tool catalogue. It is recommended to start with the journey phases in the SME journey or explore the tools by sectors in the selected sector guides. Both routes lead to tool examples and practical steps to guide you in your transition.',
       uk: 'Інструментарій структуровано за етапами шляху, галузевими посібниками, добіркою практичних прикладів і каталогом інструментів. Рекомендуємо почати з етапів дорожньої карти для МСП або ознайомитися з інструментами за напрямами у вибраних галузевих посібниках. Обидва шляхи містять приклади інструментів і практичні кроки, які допоможуть вам здійснити перехід до циркулярної економіки.',
       ro: 'Setul de instrumente este organizat în faze ale parcursului, ghiduri sectoriale, o colecție de studii de caz și un catalog de instrumente. Este recomandat să începi cu fazele parcursului IMM sau să explorezi instrumentele pe sectoare în ghidurile sectoriale selectate. Ambele rute duc la exemple de instrumente și pași practici pentru tranziția ta.',
-      hy: 'Գործիքակազմը կառուցված է անցման փուլերի, ոլորտային ուղեցույցների, օրինակների հավաքածուի և գործիքների կատալոգի շուրջ։ Խորհուրդ է տրվում սկսել ՓՄՁ-ների անցման փուլերից կամ ընտրված ոլորտային ուղեցույցներում ուսումնասիրել գործիքներն ըստ ոլորտների։ Երկու ուղիներն էլ ներկայացնում են գործիքների օրինակներ և գործնական քայլեր, որոնք կօգնեն շրջանաձև տնտեսությանն անցնելու գործընթացում։'
+      hy: 'Գործիքակազմը կառուցված է մի քանի հիմնական բաժիններից՝ անցումային գործընթացի փուլեր, ոլորտային ուղեցույցներ, հաջողված փորձի ուսումնասիրություններ և գործիքների կատալոգ։ Խորհուրդ է տրվում սկսել ՓՄՁ-ների անցումային գործընթացի փուլերի ուսումնասիրությունից կամ ընտրված ոլորտների ուղեցույցների միջոցով ծանոթանալ տվյալ ոլորտին համապատասխան գործիքներին։ Երկու տարբերակներն էլ ներկայացնում են գործիքների օրինակներ և գործնական քայլեր, որոնք կուղղորդեն ձեզ դեպի շրջանաձև տնտեսության սկզբունքներին անցման գործընթացում։'
     },
     buttons: [
       {
-        label: { en: 'Follow journey phases', uk: 'Перейти до етапів шляху', ro: 'Urmează fazele parcursului', hy: 'Հետևել անցման փուլերին' },
+        label: { en: 'Follow journey phases', uk: 'Перейти до етапів шляху', ro: 'Urmează fazele parcursului', hy: 'Հետևել զարգացման անցման փուլերին' },
         href: '#journey-phases',
         style: 'primary',
         icon: 'connection-point-two'
@@ -43,19 +43,19 @@ export const guidedPathways = {
   /* 2. JOURNEY PHASES SECTION INTRO */
   journeyPhasesSection: {
     eyebrow: { en: 'For a structured approach', uk: 'Для послідовного впровадження', ro: 'Pentru o abordare structurată', hy: 'Կառուցվածքային մոտեցման համար' },
-    title: { en: 'The SME journey', uk: 'Шлях МСП', ro: 'Parcursul IMM', hy: 'ՓՄՁ-ների անցման ուղին' },
+    title: { en: 'The SME journey', uk: 'Шлях МСП', ro: 'Parcursul IMM', hy: 'ՓՄՁ-ների զարգացման  ուղին' },
     text: {
       en: 'The SME journey represents a typical process that SMEs follow when transitioning to circular economy practices, to help you identify where you might be and from there which tools can be relevant to use. Each journey phase contains selected tools and practical guidance. Although this journey is depicted in a linear way, in reality you will often move back and forth between phases. Therefore, start where it makes more sense at your current moment.',
       uk: 'Дорожня карта для МСП відображає типовий процес, який проходять малі та середні підприємства під час переходу до практик циркулярної економіки. Вона допоможе зʼясувати, на якому етапі Ви перебуваєте, і які інструменти будуть доречними саме зараз. Кожен етап містить дібрані цифрові рішення та практичні поради. Хоча цей шлях зображено лінійним, на практиці Ви часто будете повертатися назад або перескакувати між етапами. Тож починайте з того кроку, який найбільш актуальний для вас на цей момент.',
       ro: 'Parcursul IMM reprezintă un proces tipic pe care întreprinderile îl urmează când trec la practici de economie circulară. Te ajută să identifici unde te afli și ce instrumente pot fi relevante. Fiecare etapă include instrumente selectate și îndrumare practică. Deși parcursul este prezentat într-o succesiune liniară, în practică este posibil să revii la etape anterioare sau să avansezi între ele. De aceea, începe cu etapa care se potrivește cel mai bine situației tale actuale.',
-      hy: 'ՓՄՁ-ների անցման ուղին ներկայացնում է այն բնորոշ գործընթացը, որով ձեռնարկություններն անցնում են շրջանաձև տնտեսության գործելակերպերին։ Այն օգնում է հասկանալ, թե անցման որ փուլում եք գտնվում և որ գործիքները կարող են առավել օգտակար լինել։ Յուրաքանչյուր փուլ ներառում է ընտրված գործիքներ և գործնական ուղղորդում։ Թեև գործընթացը ներկայացված է գծային ձևով, իրականում հաճախ անհրաժեշտ է վերադառնալ նախորդ փուլերին կամ կրկին առաջ շարժվել։ Ուստի սկսեք այն փուլից, որն առավել համապատասխանում է ձեր ներկա իրավիճակին։'
+      hy: 'ՓՄՁ-ների անցումային գործընթացը ներկայացնում է այն բնորոշ քայլերի հաջորդականությունը, որոնցով փոքր և միջին ձեռնարկություններն անցնում են շրջանաձև տնտեսության սկզբունքներին համապատասխան գործելակերպերի ներդրման ճանապարհին։ Այն օգնում է հասկանալ, թե գործընթացի որ փուլում եք գտնվում և այդ փուլում որ գործիքները կարող են առավել օգտակար լինել։ Անցումային գործընթացի յուրաքանչյուր փուլ ներառում է ընտրված գործիքներ և գործնական ուղեցույցներ։ Թեև գործընթացը ներկայացված է գծային հաջորդականությամբ, իրականում հնարավոր է փուլերի միջև վերադառնալ նախորդ քայլերին կամ կրկին անցնել որոշակի փուլերով։ Հետևաբար, խորհուրդ է տրվում սկսել այն փուլից, որն առավել համապատասխանում է ձեր ձեռնարկության ներկա իրավիճակին։'
     },
     callToAction: {
       text: {
         en: '**Where are you on the SME journey?** || Use this interactive diagram to understand which phase is most suitable for you to start with.',
         uk: '**Де ви перебуваєте на шляху МСП?** || Скористайтеся цією інтерактивною схемою, щоб визначити, з якого саме етапу вам найдоцільніше розпочати.',
         ro: '**Unde te afli în parcursul IMM?**',
-        hy: '**ՓՄՁ-ների անցման գործընթացի ո՞ր փուլում եք գտնվում։** || Օգտագործեք այս ինտերակտիվ գծապատկերը՝ հասկանալու համար, թե որ փուլից է առավել հարմար սկսել։'
+        hy: '**Որտե՞ղ եք գտնվում ՓՄՁ-ների անցումային գործընթացում։** || Օգտագործեք այս ինտերակտիվ գծապատկերը՝ հասկանալու համար, թե որ փուլից է առավել հարմար սկսել։'
       }
     }
   },

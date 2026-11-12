@@ -4,7 +4,7 @@
   src/lib/content/editable/journey-phases/.
 */
 export const journeyPhasePage = {
-  backLink: { en: 'Back to journey phases', uk: 'Назад до етапів шляху', ro: 'Înapoi la etape', hy: 'Վերադառնալ անցման փուլերին' },
+  backLink: { en: 'Back to journey phases', uk: 'Назад до етапів шляху', ro: 'Înapoi la etape', hy: 'Վերադառնալ զարգացման գործընթացի  փուլերին' },
   summaryBackLink: { en: 'Back to all journey phases', uk: 'Назад до всіх етапів шляху', ro: 'Înapoi la toate etapele', hy: 'Վերադառնալ բոլոր փուլերին' },
   keyOutputs: { en: 'Key outputs:', uk: 'Основні результати:', ro: 'Rezultate principale:', hy: 'Հիմնական արդյունքներ․' },
   start: { en: 'Start', uk: 'Розпочати', ro: 'Începe', hy: 'Սկսել' },

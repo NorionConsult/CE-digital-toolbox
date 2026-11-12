@@ -11,7 +11,7 @@ const phaseCard = {
   number: '06',
   slug: 'monitor',
   shortName: { en: 'Phase 6', uk: 'Етап 6', ro: 'Etapa 6', hy: 'Փուլ 6' },
-  title: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկել' },
+  title: { en: 'Monitor', uk: 'Моніторинг', ro: 'Monitorizează', hy: 'Մշտադիտարկում' },
   colourClass: 'phase-card-outline',
   description: {
     en: 'Selected tools for ongoing monitoring of solutions, including data gathering, selection of relevant indicators, and reassessment after implementation.',
@@ -41,7 +41,7 @@ const sectionButtons = [
 
 /* 3. PATHWAY OVERVIEW AND PATHWAY CARDS */
 const pathwaySection = {
-  title: { en: 'Monitoring', uk: 'Моніторинг', ro: 'Monitorizare', hy: 'Մշտադիտարկել' },
+  title: { en: 'Monitoring', uk: 'Моніторинг', ro: 'Monitorizare', hy: 'Մշտադիտարկում' },
   paragraphs: [
     { en: 'To improve circularity in practice, you need to track progress and learn from results over time. Feedback loops make it possible to learn from data, customers, partners, and day-to-day experience. Monitoring supports decision-making and communicate progress to internal and external stakeholders. || This phase focuses on choosing indicators for your circular activities in a simple and useful way, how to measure success to track what should be improved and how to interpret and review your results', uk: 'Щоб підвищувати рівень циркулярності на практиці, необхідно регулярно відстежувати динаміку та робити висновки з отриманих результатів. Налагоджений зворотний зв´язок дає змогу вчитися на основі даних, відгуків клієнтів, досвіду партнерів і щоденної практики. Моніторинг допомагає ухвалювати зважені рішення та звітувати про досягнутий прогрес внутрішнім і зовнішнім зацікавленим сторонам (стейкголдерам). || Цей етап зосереджений на простому та зручному виборі показників для ваших циркулярних заходів, методиці вимірювання успіху для виявлення зон розвитку, а також на тому, як інтерпретувати й переглядати отримані результати.', ro: 'Pentru a îmbunătăți circularitatea în practică, trebuie să urmărești progresul și să înveți din rezultate în timp. Buclele de feedback permit învățarea din date, clienți, parteneri și experiența de zi cu zi. Monitorizarea sprijină luarea deciziilor și comunicarea progresului către părți interesate interne și externe. || Această etapă se concentrează pe alegerea unor indicatori simpli și utili pentru activitățile circulare, măsurarea succesului și interpretarea rezultatelor.', hy: 'Շրջանաձեւությունը գործնականում բարելավելու համար պետք է հետեւել առաջընթացին եւ ժամանակի ընթացքում սովորել արդյունքներից։ Հետադարձ կապի շրջափուլերը հնարավորություն են տալիս սովորել տվյալներից, հաճախորդներից, գործընկերներից եւ առօրյա փորձից։ Մոնիթորինգը աջակցում է որոշումների կայացմանը եւ առաջընթացի հաղորդակցմանը ներքին ու արտաքին շահագրգիռ կողմերին։ || Այս փուլը կենտրոնանում է շրջանաձեւ գործողությունների համար պարզ եւ օգտակար ցուցանիշներ ընտրելու, հաջողությունը չափելու եւ արդյունքները մեկնաբանելու վրա։' }
   ],

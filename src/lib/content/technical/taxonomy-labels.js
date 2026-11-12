@@ -44,7 +44,7 @@ const taxonomyLabels = {
       en: 'Monitor',
       uk: 'Моніторинг',
       ro: 'Monitorizare',
-      hy: 'Մշտադիտարկել'
+      hy: 'Մշտադիտարկում'
     },
     None: {
       en: 'None',
