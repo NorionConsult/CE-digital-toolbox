@@ -47,10 +47,10 @@ export const contactPage = {
     }
   ],
   feedbackForm: {
-    title: { en: 'Feedback and contributions', uk: 'Відгуки та внесок у проєкт', ro: 'FEEDBACK ȘI CONTRIBUȚII', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
+    title: { en: 'Feedback and contributions', uk: 'ВІДГУКИ ТА ПРОПОЗИЦІЇ', ro: 'FEEDBACK ȘI CONTRIBUȚII', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
     text: {
       en: 'Have you encountered an issue, have suggestions for improving the Toolbox, or know of a tool we should include? You can also share your experiences using our tools, submit an implementation story or case, and request a certificate of contribution.',
-      uk: 'Ви зіткнулися з проблемою, маєте пропозиції щодо вдосконалення Інструментарію або знаєте інструмент, який варто додати? Ви також можете поділитися досвідом використання наших інструментів, надіслати історію впровадження чи практичний кейс і подати заявку на сертифікат за внесок у проєкт.',
+      uk: 'Помітили проблему, маєте пропозиції щодо вдосконалення Інструментарію або знаєте про корисне рішення, яке варто до нього додати? Ви також можете поділитися досвідом використання наших інструментів, запропонувати практичний приклад їх застосування або повідомити про використання Інструментарію, щоб отримати сертифікат.',
       ro: 'Ai întâmpinat o problemă, ai sugestii pentru îmbunătățirea setului de instrumente sau cunoști un instrument pe care ar trebui să îl includem? Poți, de asemenea, să împărtășești experiența ta de utilizare a instrumentelor noastre, să trimiți o poveste de implementare sau un studiu de caz și să soliciți un certificat de contribuție.',
       hy: 'Հարթակից օգտվելիս խնդրի հանդիպե՞լ եք, ունե՞ք գործիքակազմը բարելավելու առաջարկներ կամ գիտե՞ք որեւէ գործիք, որը պետք է ներառենք։ Կարող եք նաեւ կիսվել մեր գործիքների օգտագործման ձեր փորձով, ներկայացնել իրականացման պատմություն կամ գործնական օրինակ եւ խնդրել ծրագրում ձեր ներդրումը հաստատող վկայական։'
     },
