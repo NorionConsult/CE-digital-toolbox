@@ -23,6 +23,21 @@
 
   let menuOpen = false;
   let selectedLanguage = 'en';
+  let homeTooltipDismissed = false;
+  let homeTooltipFollowsPointer = false;
+  let homeTooltipX = 0;
+  let homeTooltipY = 0;
+  /** @type {HTMLSpanElement | undefined} */
+  let homeTooltipElement;
+
+  /** @param {MouseEvent} event */
+  function positionHomeTooltip(event) {
+    const width = homeTooltipElement?.offsetWidth ?? 0;
+    const height = homeTooltipElement?.offsetHeight ?? 0;
+    homeTooltipX = Math.max(8, Math.min(event.clientX + 12, window.innerWidth - width - 8));
+    homeTooltipY = Math.max(8, Math.min(event.clientY + 18, window.innerHeight - height - 8));
+    homeTooltipFollowsPointer = true;
+  }
 
   const menuLabels = {
     open: {
@@ -105,6 +120,10 @@
   });
 </script>
 
+<svelte:window on:keydown={(event) => {
+  if (event.key === 'Escape') homeTooltipDismissed = true;
+}} />
+
 <header class="site-header">
   {#if currentSite.headerPartnerLogos?.enabled}
     <div class="partner-logo-bar">
@@ -131,10 +150,32 @@
 
   <div class="main-menu-bar">
     <div class="container header-content">
-      <a href={getLocalizedHref('/')} class="site-brand">
-        <img class="site-logo-image" src="{base}{currentSite.headerLogo.src}" alt={currentSite.headerLogo.alt} />
-        <span class="site-logo">{currentSite.name}</span>
-      </a>
+      <div class="site-brand-container" class:home-tooltip-dismissed={homeTooltipDismissed}>
+        <a
+          href={getLocalizedHref('/')}
+          class="site-brand"
+          aria-describedby="site-home-tooltip"
+          on:mouseenter={(event) => {
+            homeTooltipDismissed = false;
+            positionHomeTooltip(event);
+          }}
+          on:mousemove={positionHomeTooltip}
+          on:mouseleave={() => (homeTooltipFollowsPointer = false)}
+          on:focus={() => (homeTooltipDismissed = false)}
+        >
+          <img class="site-logo-image" src="{base}{currentSite.headerLogo.src}" alt={currentSite.headerLogo.alt} />
+          <span class="site-logo">{currentSite.name}</span>
+        </a>
+        <span
+          bind:this={homeTooltipElement}
+          id="site-home-tooltip"
+          class="site-home-tooltip"
+          class:home-tooltip-follows-pointer={homeTooltipFollowsPointer}
+          style:--home-tooltip-x={`${homeTooltipX}px`}
+          style:--home-tooltip-y={`${homeTooltipY}px`}
+          role="tooltip"
+        >{currentSite.labels.home}</span>
+      </div>
 
       <button
         type="button"
@@ -251,6 +292,12 @@
     gap: 12px 20px;
   }
 
+  .site-brand-container {
+    position: relative;
+    display: flex;
+    min-width: 0;
+  }
+
   .site-brand {
     display: inline-flex;
     align-items: center;
@@ -258,6 +305,47 @@
     text-decoration: none;
     padding-left: 0;
     min-width: 0;
+  }
+
+  .site-brand:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+
+  .site-home-tooltip {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 8px);
+    left: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* Mouse coordinates use the viewport; keyboard focus keeps the link-based position. */
+  .site-home-tooltip.home-tooltip-follows-pointer {
+    position: fixed;
+    top: var(--home-tooltip-y);
+    left: var(--home-tooltip-x);
+  }
+
+  .site-brand-container:not(.home-tooltip-dismissed) .site-brand:focus-visible + .site-home-tooltip {
+    visibility: visible;
+  }
+
+  @media (hover: hover) {
+    .site-brand-container:not(.home-tooltip-dismissed) .site-brand:hover + .site-home-tooltip {
+      visibility: visible;
+    }
   }
 
   .site-logo-image {

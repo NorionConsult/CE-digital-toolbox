@@ -7,6 +7,7 @@
   If a translation is missing, the website automatically falls back to English.
 */
 export const buttonLabels = {
+  home: { en: 'Go to home', uk: 'Перейти на головну', ro: 'Mergi la pagina principală', hy: 'Անցնել գլխավոր էջ' },
   viewPhase: { en: 'View phase', uk: 'Переглянути етап', ro: 'Vezi etapa', hy: 'Դիտել փուլը' },
   viewTools: { en: 'View tools', uk: 'Переглянути інструменти', ro: 'Vezi instrumentele', hy: 'Դիտել գործիքները' },
   viewSector: { en: 'View sector tools', uk: 'Переглянути галузеві інструменти', ro: 'Vezi instrumentele sectoriale', hy: 'Դիտել ոլորտային գործիքները' },
