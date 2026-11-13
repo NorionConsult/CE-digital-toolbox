@@ -1,7 +1,8 @@
 /*
   Edit this file for the Contact page.
-  Set feedbackForm.url once the combined feedback and contributions form is ready.
-  Leave it empty to display the button without opening a form.
+  Edit feedbackForm.url below to set the contact form link for each language.
+  The English (en) URL is the shared default. Empty language values use that URL.
+  Add or replace a language's URL to send its visitors to a different form.
   To update contact email links, edit only the "email" value below.
   The Contact page automatically turns each email into a clickable mailto link.
   The country flag icons are local SVG files in static/icons/circle-flags/.
@@ -55,6 +56,12 @@ export const contactPage = {
       hy: 'Հարթակից օգտվելիս խնդրի հանդիպե՞լ եք, ունե՞ք գործիքակազմը բարելավելու առաջարկներ կամ գիտե՞ք որեւէ գործիք, որը պետք է ներառենք։ Կարող եք նաեւ կիսվել մեր գործիքների օգտագործման ձեր փորձով, ներկայացնել իրականացման պատմություն կամ գործնական օրինակ եւ խնդրել ծրագրում ձեր ներդրումը հաստատող վկայական։'
     },
     buttonLabel: { en: 'Go to form', uk: 'Перейти до форми', ro: 'Mergi la formular', hy: 'Անցնել ձեւին' },
-    url: 'https://forms.cloud.microsoft/pages/responsepage.aspx?id=MUlqQlzsy0-dEDNj69-SgMNG0Zn1xb1LuR1JCdCDGdZURVZKMEVOSzkzSlQ3Tlg4R0YwNTg5MlZUMS4u&route=shorturl'
+    url: {
+      // Shared form for English and any language left empty below.
+      en: 'https://forms.cloud.microsoft/pages/responsepage.aspx?id=MUlqQlzsy0-dEDNj69-SgMNG0Zn1xb1LuR1JCdCDGdZURVZKMEVOSzkzSlQ3Tlg4R0YwNTg5MlZUMS4u&route=shorturl',
+      uk: '', // Ukrainian: use the shared form until a separate URL is added.
+      ro: '', // Romanian: use the shared form until a separate URL is added.
+      hy: 'https://forms.cloud.microsoft/e/nhVPNb13d4' // Armenian-specific form.
+    }
   }
 };
