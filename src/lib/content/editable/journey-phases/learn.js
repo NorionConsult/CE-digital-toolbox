@@ -133,6 +133,10 @@ const pathwaySection = {
   text on the right.
   `courseTitle` and `provider` have `en`, `uk`, `ro` and `hy` translation slots.
   Leave a translation as '' to keep showing the original English name.
+  Each card's `url` also has `en`, `uk`, `ro` and `hy` slots.
+  Keep the default course link in `en`. Leave another language as '' to use it.
+  To link one course to translated materials, edit only that card's matching
+  language URL. The other cards and languages will keep their default links.
 */
 const LearningresourcesSection = {
   id: 'learning-resources',
@@ -152,7 +156,7 @@ const LearningresourcesSection = {
       badge: { en: 'Online course', uk: 'Онлайн-курс', ro: 'Curs online', hy: 'Առցանց դասընթաց' },
       about: { en: 'What is this?', uk: 'Що це за курс?', ro: 'Ce este acesta?', hy: 'Ի՞նչ է սա։' },
       learningGoals: { en: 'Learning goals', uk: 'Чого Ви навчитеся', ro: 'Obiective de învățare', hy: 'Ուսումնական նպատակներ' },
-      whyTakeCourse: { en: 'Why should I take this course?', uk: 'ЧЧому варто переглянути цей курс?', ro: 'De ce să urmez acest curs?', hy: 'Ինչո՞ւ անցնել այս դասընթացը։' }
+      whyTakeCourse: { en: 'Why should I take this course?', uk: 'Чому варто переглянути цей курс?', ro: 'De ce să urmez acest curs?', hy: 'Ինչո՞ւ անցնել այս դասընթացը։' }
     },
     /* The course containers are controlled by the `cards` array below. Add more courses by copying one object and changing the values of each card property*/
     cards: [
@@ -180,8 +184,13 @@ const LearningresourcesSection = {
           ro: '',
           hy: ''
         },
-        /* Add the URL link that leads to the course materials*/
-        url: 'https://www.ellenmacarthurfoundation.org/playlist-circular-economy-explained',
+        /* Course links by language. Empty values use the English (en) URL. */
+        url: {
+          en: 'https://www.ellenmacarthurfoundation.org/playlist-circular-economy-explained',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         /* Specify the button label for the course card. This is the text that appears on the button that opens the course URL. */
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         /* Add a description of the course here keep it short and concise. This text appears in the "What is this?" section of the course card. */
@@ -229,7 +238,13 @@ const LearningresourcesSection = {
           ro: '',
           hy: ''
         },
-        url: 'https://www.unido.org/learning-resources/circular-economy-industry',
+        /* Course links by language. Empty values use the English (en) URL. */
+        url: {
+          en: 'https://www.unido.org/learning-resources/circular-economy-industry',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
           {
@@ -273,7 +288,13 @@ const LearningresourcesSection = {
           ro: '',
           hy: ''
         },
-        url: 'https://switch.circle-economy.com/',
+        /* Course links by language. Empty values use the English (en) URL. */
+        url: {
+          en: 'https://switch.circle-economy.com/',
+          uk: '',
+          ro: '',
+          hy: ''
+        },
         buttonLabel: { en: 'Open resource', uk: 'Відкрити ресурс', ro: 'Deschide resursa', hy: 'Բացել ռեսուրսը' },
         aboutCourse: [
           {
