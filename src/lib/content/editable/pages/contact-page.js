@@ -11,19 +11,19 @@
 export const contactPage = {
   pageTitle: { en: 'Contact | Circular Economy Toolbox', uk: 'Зв´язатися з нами  | Інструментарій циркулярної економіки', ro: 'Contact | Set de instrumente pentru economia circulară', hy: 'Կապ | Շրջանաձեւ տնտեսության գործիքակազմ' },
   eyebrow: { en: 'Contact', uk: 'Зв´язатися з нами ', ro: 'Contact', hy: 'Կապ' },
-  title: { en: 'Share feedback', uk: 'Поділитися відгуком', ro: 'Trimite feedback', hy: 'Կիսվել կարծիքով' },
+  title: { en: 'Feedback and contributions', uk: 'Відгуки та пропозиції', ro: 'Feedback și contribuții', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
   intro: {
-    en: 'Use this page to reach the Circular Economy Toolbox team with feedback, technical issues, tool suggestions, implementation stories or to request a certificate of contribution. Complete the form below to share your feedback or contribution.',
-    uk: 'На цій сторінці Ви можете зв’язатися з командою платформи «Інструментарій циркулярної економіки»: залишити відгук, повідомити про технічні проблеми, запропонувати новий інструмент, розповісти про власний досвід упровадження або подати заявку на сертифікат за внесок у проєкт. Заповніть форму нижче, щоб поділитися відгуком або зробити внесок у проєкт.',
-    ro: 'Folosește această pagină pentru a contacta echipa responsabilă de resursele pentru economia circulară. Ne poți transmite feedback, semnala probleme tehnice, propune resurse noi, împărtăși exemple de implementare sau solicita un certificat de contribuție. Completează formularul de mai jos pentru a trimite feedback sau o contribuție.',
-    hy: 'Օգտագործեք այս էջը՝ Շրջանաձեւ տնտեսության գործիքակազմի թիմին հետադարձ կապ, տեխնիկական խնդիրներ, գործիքների առաջարկներ, իրականացման պատմություններ ուղարկելու կամ ներդրման վկայական խնդրելու համար։ Լրացրեք ստորեւ ներկայացված ձեւը՝ ձեր կարծիքը հայտնելու կամ ծրագրում ներդրում ունենալու համար։'
+    en: 'Do you have any feedback, ideas or questions about the Circular Economy Toolbox? Use the form below to get in touch with our team, or contact your local focal point by email. We welcome your suggestions, experiences and requests for support.',
+    uk: 'Маєте відгуки, ідеї або запитання щодо Інструментарію циркулярної економіки? Скористайтеся формою нижче, щоб зв’язатися з нашою командою, або напишіть Вашій місцевій контактній особі на електронну пошту. Будемо раді Вашим пропозиціям, розповідям про досвід і запитам на підтримку.',
+    ro: 'Ai feedback, idei sau întrebări despre Setul de instrumente pentru economia circulară? Folosește formularul de mai jos pentru a lua legătura cu echipa noastră sau contactează prin e-mail persoana de contact locală. Așteptăm cu interes sugestiile tale, experiențele împărtășite și solicitările de sprijin.',
+    hy: 'Ունե՞ք կարծիքներ, գաղափարներ կամ հարցեր Շրջանաձեւ տնտեսության գործիքակազմի վերաբերյալ։ Օգտագործեք ստորեւ ներկայացված ձեւը՝ մեր թիմի հետ կապ հաստատելու համար, կամ էլեկտրոնային փոստով դիմեք ձեր տեղական համակարգողին։ Սպասում ենք ձեր առաջարկներին, փորձի մասին պատմություններին եւ աջակցության հարցումներին։'
   },
   contactDetailsTitle: { en: 'Contact us', uk: 'Зв’язатися з нами', ro: 'Contactează-ne', hy: 'Կապվեք մեզ հետ' },
   contactDetails: {
-    en: 'For other questions about the toolbox that are not covered by the form, contact the project team by email.',
-    uk: 'Якщо у Вас є інші запитання щодо Інструментарію, які не охоплює форма, напишіть команді проєкту на електронну пошту.',
-    ro: 'Pentru alte întrebări despre setul de instrumente care nu sunt acoperite de formular, contactează echipa proiectului prin e-mail.',
-    hy: 'Գործիքակազմի վերաբերյալ այլ հարցերի դեպքում, որոնք չեն ընդգրկվում ձեւում, կապվեք ծրագրի թիմի հետ էլ. փոստով։'
+    en: 'For general questions or inquiries not covered by the form, please contact your relevant focal point or the UNIDO project team.',
+    uk: 'Із загальними запитаннями або зверненнями, які не охоплює форма, будь ласка, звертайтеся до відповідної контактної особи або команди проєкту ЮНІДО.',
+    ro: 'Pentru întrebări generale sau solicitări care nu sunt acoperite de formular, contactează persoana de contact relevantă sau echipa de proiect UNIDO.',
+    hy: 'Ընդհանուր հարցերի կամ ձեւում չընդգրկված հարցումների դեպքում խնդրում ենք դիմել համապատասխան համակարգողին կամ UNIDO-ի ծրագրի թիմին։'
   },
   contactEmails: [
     {
@@ -48,12 +48,13 @@ export const contactPage = {
     }
   ],
   feedbackForm: {
-    title: { en: 'Feedback and contributions', uk: 'ВІДГУКИ ТА ПРОПОЗИЦІЇ', ro: 'FEEDBACK ȘI CONTRIBUȚII', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
+    title: { en: 'Get in touch and share your experience', uk: 'Зв’яжіться з нами та поділіться своїм досвідом', ro: 'Contactează-ne și împărtășește-ți experiența', hy: 'Կապվեք մեզ հետ եւ կիսվեք ձեր փորձով' },
+    // Use || between paragraphs or list items, and start each bullet with "- ".
     text: {
-      en: 'Have you encountered an issue, have suggestions for improving the Toolbox, or know of a tool we should include? You can also share your experiences using our tools, submit an implementation story or case, and request a certificate of contribution.',
-      uk: 'Помітили проблему, маєте пропозиції щодо вдосконалення Інструментарію або знаєте про корисне рішення, яке варто до нього додати? Ви також можете поділитися досвідом використання наших інструментів, запропонувати практичний приклад їх застосування або повідомити про використання Інструментарію, щоб отримати сертифікат.',
-      ro: 'Ai întâmpinat o problemă, ai sugestii pentru îmbunătățirea setului de instrumente sau cunoști un instrument pe care ar trebui să îl includem? Poți, de asemenea, să împărtășești experiența ta de utilizare a instrumentelor noastre, să trimiți o poveste de implementare sau un studiu de caz și să soliciți un certificat de contribuție.',
-      hy: 'Հարթակից օգտվելիս խնդրի հանդիպե՞լ եք, ունե՞ք գործիքակազմը բարելավելու առաջարկներ կամ գիտե՞ք որեւէ գործիք, որը պետք է ներառենք։ Կարող եք նաեւ կիսվել մեր գործիքների օգտագործման ձեր փորձով, ներկայացնել իրականացման պատմություն կամ գործնական օրինակ եւ խնդրել ծրագրում ձեր ներդրումը հաստատող վկայական։'
+      en: 'Use the form to: || - Request guidance on selecting tools or planning circular economy actions || - Share your progress and apply for a certificate || - Submit a success story or good practice || - Suggest new tools and resources || - Report technical issues and translation errors. || Your input helps us improve the Toolbox and make it more useful for your context.',
+      uk: 'Скористайтеся формою, щоб: || - Отримати рекомендації щодо вибору інструментів або планування заходів із циркулярної економіки || - Поділитися своїм прогресом і подати заявку на сертифікат || - Надіслати історію успіху або приклад належної практики || - Запропонувати нові інструменти та ресурси || - Повідомити про технічні проблеми й помилки перекладу. || Ваші відгуки допомагають нам удосконалювати Інструментарій і робити його кориснішим для Ваших потреб.',
+      ro: 'Folosește formularul pentru a: || - Solicita îndrumare în alegerea instrumentelor sau planificarea acțiunilor de economie circulară || - Împărtăși progresele tale și solicita un certificat || - Trimite o poveste de succes sau un exemplu de bună practică || - Propune instrumente și resurse noi || - Raporta probleme tehnice și erori de traducere. || Contribuția ta ne ajută să îmbunătățim setul de instrumente și să îl adaptăm mai bine contextului tău.',
+      hy: 'Ձեւի միջոցով կարող եք՝ || - Ստանալ խորհրդատվություն գործիքների ընտրության կամ շրջանաձեւ տնտեսության գործողությունների պլանավորման վերաբերյալ || - Կիսվել ձեր առաջընթացով եւ դիմել վկայական ստանալու համար || - Ներկայացնել հաջողության պատմություն կամ լավ գործելակերպի օրինակ || - Առաջարկել նոր գործիքներ եւ ռեսուրսներ || - Հաղորդել տեխնիկական խնդիրների եւ թարգմանական սխալների մասին։ || Ձեր ներդրումն օգնում է մեզ բարելավել գործիքակազմը եւ այն ավելի օգտակար դարձնել ձեր պայմաններում։'
     },
     buttonLabel: { en: 'Go to form', uk: 'Перейти до форми', ro: 'Mergi la formular', hy: 'Անցնել ձեւին' },
     url: {

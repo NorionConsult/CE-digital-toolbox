@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import InlineText from '$lib/components/formatting/InlineText.svelte';
+  import RichText from '$lib/components/formatting/RichText.svelte';
   import { trackFormLinkClick } from '$lib/analytics.js';
   import { contactPage } from '$lib/content/editable/pages/contact-page.js';
   import { getLanguageFromPathname, localizeContent, translate } from '$lib/translation-helper.js';
@@ -76,7 +77,7 @@
   <div class="container contact-layout">
     <article class="contact-action-card">
       <h2>{currentContactPage.feedbackForm.title}</h2>
-      <p><InlineText text={currentContactPage.feedbackForm.text} /></p>
+      <div class="contact-action-text"><RichText text={currentContactPage.feedbackForm.text} /></div>
       <a
         class="primary-button"
         href={getButtonHref(currentContactPage.feedbackForm.url)}
@@ -118,7 +119,7 @@
 <style>
   .contact-hero h1,
   .contact-hero .subpage-intro,
-  .contact-action-card p {
+  .contact-action-text {
     max-width: 980px;
   }
 
@@ -155,7 +156,7 @@
   }
 
   .contact-details p,
-  .contact-action-card p {
+  .contact-action-text {
     margin: 0 0 16px;
   }
 
