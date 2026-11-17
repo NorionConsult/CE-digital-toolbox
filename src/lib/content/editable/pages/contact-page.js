@@ -9,19 +9,19 @@
   Editors normally only need to update the label and email, not the flagIcon value.
 */
 export const contactPage = {
-  pageTitle: { en: 'Contact | Circular Economy Toolbox', uk: 'Зв´язатися з нами  | Інструментарій циркулярної економіки', ro: 'Contact | Set de instrumente pentru economia circulară', hy: 'Կապ | Շրջանաձեւ տնտեսության գործիքակազմ' },
-  eyebrow: { en: 'Contact', uk: 'Зв´язатися з нами ', ro: 'Contact', hy: 'Կապ' },
+  pageTitle: { en: 'Contact | Circular Economy Toolbox', uk: 'Контакти | Інструментарій циркулярної економіки', ro: 'Contact | Set de instrumente pentru economia circulară', hy: 'Կապ | Շրջանաձեւ տնտեսության գործիքակազմ' },
+  eyebrow: { en: 'Contact', uk: 'Контакти', ro: 'Contact', hy: 'Կապ' },
   title: { en: 'Feedback and contributions', uk: 'Відгуки та пропозиції', ro: 'Feedback și contribuții', hy: 'Հետադարձ կապ եւ ներդրում ծրագրում' },
   intro: {
     en: 'Do you have any feedback, ideas or questions about the Circular Economy Toolbox? Use the form below to get in touch with our team, or contact your local focal point by email. We welcome your suggestions, experiences and requests for support.',
-    uk: 'Маєте відгуки, ідеї або запитання щодо Інструментарію циркулярної економіки? Скористайтеся формою нижче, щоб зв’язатися з нашою командою, або напишіть Вашій місцевій контактній особі на електронну пошту. Будемо раді Вашим пропозиціям, розповідям про досвід і запитам на підтримку.',
+    uk: 'Маєте відгуки, ідеї або запитання щодо Інструментарію циркулярної економіки? Скористайтеся формою нижче, щоб зв’язатися з нашою командою, або напишіть електронного листа відповідній контактній особі у Вашій країні. Ми будемо раді Вашим пропозиціям, досвіду, яким Ви поділитеся, та запитам на підтримку.',
     ro: 'Ai feedback, idei sau întrebări despre Setul de instrumente pentru economia circulară? Folosește formularul de mai jos pentru a lua legătura cu echipa noastră sau contactează prin e-mail persoana de contact locală. Așteptăm cu interes sugestiile tale, experiențele împărtășite și solicitările de sprijin.',
     hy: 'Ունե՞ք կարծիքներ, գաղափարներ կամ հարցեր Շրջանաձեւ տնտեսության գործիքակազմի վերաբերյալ։ Օգտագործեք ստորեւ ներկայացված ձեւը՝ մեր թիմի հետ կապ հաստատելու համար, կամ էլեկտրոնային փոստով դիմեք ձեր տեղական համակարգողին։ Սպասում ենք ձեր առաջարկներին, փորձի մասին պատմություններին եւ աջակցության հարցումներին։'
   },
   contactDetailsTitle: { en: 'Contact us', uk: 'Зв’язатися з нами', ro: 'Contactează-ne', hy: 'Կապվեք մեզ հետ' },
   contactDetails: {
     en: 'For general questions or inquiries not covered by the form, please contact your relevant focal point or the UNIDO project team.',
-    uk: 'Із загальними запитаннями або зверненнями, які не охоплює форма, будь ласка, звертайтеся до відповідної контактної особи або команди проєкту ЮНІДО.',
+    uk: 'Якщо у Вас виникли загальні запитання або питання, на які немає відповідей у цій формі, зверніться до відповідного національного координатора у Вашій країні або до команди проєкту ЮНІДО.',
     ro: 'Pentru întrebări generale sau solicitări care nu sunt acoperite de formular, contactează persoana de contact relevantă sau echipa de proiect UNIDO.',
     hy: 'Ընդհանուր հարցերի կամ ձեւում չընդգրկված հարցումների դեպքում խնդրում ենք դիմել համապատասխան համակարգողին կամ UNIDO-ի ծրագրի թիմին։'
   },
@@ -42,7 +42,13 @@ export const contactPage = {
       flagIcon: '/icons/circle-flags/circle-flags-ua.svg'
     },
     {
-      label: 'UNIDO',
+      // Edit each language's label here. Empty values use the English label.
+      label: {
+        en: 'UNIDO',
+        uk: 'ЮНІДО',
+        ro: '',
+        hy: ''
+      },
       email: 'ce-digitool@unido.org',
       featured: true
     }
@@ -52,7 +58,7 @@ export const contactPage = {
     // Use || between paragraphs or list items, and start each bullet with "- ".
     text: {
       en: 'Use the form to: || - Request guidance on selecting tools or planning circular economy actions || - Share your progress and apply for a certificate || - Submit a success story or good practice || - Suggest new tools and resources || - Report technical issues and translation errors. || Your input helps us improve the Toolbox and make it more useful for your context.',
-      uk: 'Скористайтеся формою, щоб: || - Отримати рекомендації щодо вибору інструментів або планування заходів із циркулярної економіки || - Поділитися своїм прогресом і подати заявку на сертифікат || - Надіслати історію успіху або приклад належної практики || - Запропонувати нові інструменти та ресурси || - Повідомити про технічні проблеми й помилки перекладу. || Ваші відгуки допомагають нам удосконалювати Інструментарій і робити його кориснішим для Ваших потреб.',
+      uk: 'Скористайтеся формою, щоб: || - Отримати рекомендації щодо вибору інструментів або планування заходів із циркулярної економіки || - Поділитися досвідом використання Інструментарію та подати заявку на отримання сертифіката || - Поділитися успішним досвідом або прикладом вдалої практики || - Запропонувати нові інструменти та корисні матеріали || - Повідомити про технічні проблеми та помилки в перекладі. || Ваші відгуки та пропозиції допомагають нам удосконалювати Інструментарій, щоб він був якомога кориснішим для Вас',
       ro: 'Folosește formularul pentru a: || - Solicita îndrumare în alegerea instrumentelor sau planificarea acțiunilor de economie circulară || - Împărtăși progresele tale și solicita un certificat || - Trimite o poveste de succes sau un exemplu de bună practică || - Propune instrumente și resurse noi || - Raporta probleme tehnice și erori de traducere. || Contribuția ta ne ajută să îmbunătățim setul de instrumente și să îl adaptăm mai bine contextului tău.',
       hy: 'Ձեւի միջոցով կարող եք՝ || - Ստանալ խորհրդատվություն գործիքների ընտրության կամ շրջանաձեւ տնտեսության գործողությունների պլանավորման վերաբերյալ || - Կիսվել ձեր առաջընթացով եւ դիմել վկայական ստանալու համար || - Ներկայացնել հաջողության պատմություն կամ լավ գործելակերպի օրինակ || - Առաջարկել նոր գործիքներ եւ ռեսուրսներ || - Հաղորդել տեխնիկական խնդիրների եւ թարգմանական սխալների մասին։ || Ձեր ներդրումն օգնում է մեզ բարելավել գործիքակազմը եւ այն ավելի օգտակար դարձնել ձեր պայմաններում։'
     },
